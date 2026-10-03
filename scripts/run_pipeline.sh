@@ -9,7 +9,7 @@ MAX_PAGES="${MAX_PAGES:-10000}"
 
 python src/crawler.py --out "$INVENTORY_DIR" --max-pages "$MAX_PAGES"
 python src/downloader.py --inventory "$INVENTORY_DIR" --out "$RAW_DIR"
-python src/app_collector.py --inventory "$INVENTORY_DIR" --out "$APPS_DIR"
+python src/app_collector.py --inventory "$INVENTORY_DIR" --out "$APPS_DIR" --workers 6 --skip-images
 python src/pairing_engine.py --corpus "$RAW_DIR" --apps "$APPS_DIR" --out "$ALIGNED_DIR"
 
 echo "Pipeline complete"

@@ -33,8 +33,10 @@ import json
 import mimetypes
 import os
 import re
+import threading
 import time
 from collections import Counter, deque
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
@@ -55,6 +57,8 @@ MEDIA_EXTS = {
 }
 OTHER_STATIC_EXTS = {".woff", ".woff2", ".ttf", ".eot", ".ico", ".pdf", ".zip"}
 STATIC_EXTS = TEXT_EXTS | MEDIA_EXTS | OTHER_STATIC_EXTS
+IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"}
+TEXT_KINDS = {"html", "javascript", "json", "xml", "css", "text"}
 
 # ISO-ish URL codes observed/expected in IPS app paths.
 PATH_LANGUAGE_CODES = {
@@ -250,107 +254,140 @@ class Seed:
 
 class Collector:
     def __init__(self, out: Path, timeout: float, delay: float, max_files: int, max_file_bytes: int | None,
-                 session: requests.Session):
+                 session_factory, workers: int = 1, skip_images: bool = False):
         self.out = out
         self.timeout = timeout
         self.delay = delay
         self.max_files = max_files
         self.max_file_bytes = max_file_bytes
-        self.session = session
+        self.session_factory = session_factory
+        self.workers = max(1, workers)
+        self.skip_images = skip_images
+        self._local = threading.local()
         self.rows: list[dict[str, str]] = []
         self.errors: list[dict[str, str]] = []
+
+    @property
+    def session(self) -> requests.Session:
+        # requests.Session is not guaranteed thread-safe: one per worker thread.
+        if not hasattr(self._local, "session"):
+            self._local.session = self.session_factory()
+        return self._local.session
+
+    def fetch(self, url: str, referer: str, root: str, prefix: str, app_id: str, base_row: dict[str, str]
+              ) -> tuple[dict[str, str], str, str]:
+        """Download (or reuse) one file. Returns (row, kind, text for link discovery)."""
+        row = dict(base_row, url=url, referer=referer, extension=ext_from_url(url))
+        # Resume: files are written via .part + rename, so an existing file is complete.
+        existing = self.out / local_rel_path(app_id, url, prefix)
+        if existing.is_file():
+            kind = kind_from(existing.suffix.lower())
+            row.update(local_path=existing.relative_to(self.out).as_posix(), kind=kind,
+                       extension=existing.suffix.lower(), bytes=str(existing.stat().st_size),
+                       sha256=sha256_file(existing), status="already_present", downloaded_at=utcnow())
+            text = existing.read_text(encoding="utf-8", errors="replace") if kind in TEXT_KINDS else ""
+            return row, kind, text
+        part = None
+        try:
+            with self.session.get(url, stream=True, timeout=self.timeout, allow_redirects=True) as resp:
+                row["http_status"] = str(resp.status_code)
+                ctype = resp.headers.get("content-type", "")
+                row["content_type"] = ctype
+                resp.raise_for_status()
+                clen = resp.headers.get("content-length")
+                if clen and self.max_file_bytes is not None and int(clen) > self.max_file_bytes:
+                    row.update(status="skipped_too_large", error=f"content-length {clen} > max")
+                    return row, "", ""
+                rel = local_rel_path(app_id, resp.url, prefix, ctype)
+                dest = self.out / rel
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                part = dest.with_suffix(dest.suffix + f".{threading.get_ident()}.part")
+                total = 0
+                with part.open("wb") as f:
+                    for chunk in resp.iter_content(1024 * 512):
+                        if not chunk:
+                            continue
+                        total += len(chunk)
+                        if self.max_file_bytes is not None and total > self.max_file_bytes:
+                            raise ValueError(f"stream exceeded max file size ({total} bytes)")
+                        f.write(chunk)
+                os.replace(part, dest)
+                kind = kind_from(dest.suffix.lower(), ctype)
+                row.update(
+                    local_path=rel.as_posix(), kind=kind, extension=dest.suffix.lower(),
+                    bytes=str(dest.stat().st_size), sha256=sha256_file(dest),
+                    status="downloaded", downloaded_at=utcnow(),
+                )
+                text = dest.read_text(encoding="utf-8", errors="replace") if kind in TEXT_KINDS else ""
+                # Children resolve against the final URL after redirects.
+                row["_base"] = resp.url
+                return row, kind, text
+        except Exception as exc:
+            try:
+                if part is not None and part.exists():
+                    part.unlink()
+            except Exception:
+                pass
+            row.update(status="error", error=f"{type(exc).__name__}: {exc}")
+            self.errors.append({"app_url": root, "url": url, "error": row["error"]})
+            return row, "", ""
+        finally:
+            if self.delay:
+                time.sleep(self.delay)
 
     def crawl_seed(self, seed: Seed) -> None:
         root = clean_url(seed.url)
         prefix = app_prefix(root)
         app_id = sha1(root)
         lang = seed.language or infer_language_from_url(root)
+        base_row = {
+            "app_id": app_id, "app_url": root, "language": lang,
+            "variant": seed.variant, "collection": seed.collection,
+            "source_page": seed.source_page, "url": "", "referer": "",
+            "local_path": "", "kind": "", "extension": "",
+            "content_type": "", "http_status": "", "bytes": "", "sha256": "",
+            "status": "", "downloaded_at": "", "error": "",
+        }
         q = deque([(root, "")])
         queued = {root}
         visited: set[str] = set()
 
-        while q and (self.max_files <= 0 or len(visited) < self.max_files):
-            url, referer = q.popleft()
-            if url in visited:
-                continue
-            visited.add(url)
-            ext = ext_from_url(url)
-            base_row = {
-                "app_id": app_id, "app_url": root, "language": lang,
-                "variant": seed.variant, "collection": seed.collection,
-                "source_page": seed.source_page, "url": url, "referer": referer,
-                "local_path": "", "kind": "", "extension": ext,
-                "content_type": "", "http_status": "", "bytes": "", "sha256": "",
-                "status": "", "downloaded_at": "", "error": "",
-            }
-            try:
-                with self.session.get(url, stream=True, timeout=self.timeout, allow_redirects=True) as resp:
-                    base_row["http_status"] = str(resp.status_code)
-                    ctype = resp.headers.get("content-type", "")
-                    base_row["content_type"] = ctype
-                    resp.raise_for_status()
-                    clen = resp.headers.get("content-length")
-                    if clen and self.max_file_bytes is not None and int(clen) > self.max_file_bytes:
-                        base_row.update(status="skipped_too_large", error=f"content-length {clen} > max")
-                        self.rows.append(base_row)
-                        continue
-                    rel = local_rel_path(app_id, resp.url, prefix, ctype)
-                    dest = self.out / rel
-                    dest.parent.mkdir(parents=True, exist_ok=True)
-                    part = dest.with_suffix(dest.suffix + ".part")
-                    total = 0
-                    with part.open("wb") as f:
-                        for chunk in resp.iter_content(1024 * 512):
-                            if not chunk:
-                                continue
-                            total += len(chunk)
-                            if self.max_file_bytes is not None and total > self.max_file_bytes:
-                                raise ValueError(f"stream exceeded max file size ({total} bytes)")
-                            f.write(chunk)
-                    os.replace(part, dest)
-                    kind = kind_from(dest.suffix.lower(), ctype)
-                    base_row.update(
-                        local_path=rel.as_posix(), kind=kind, extension=dest.suffix.lower(),
-                        bytes=str(dest.stat().st_size), sha256=sha256_file(dest),
-                        status="downloaded", downloaded_at=utcnow(),
-                    )
-                    self.rows.append(base_row)
-
+        with ThreadPoolExecutor(max_workers=self.workers) as pool:
+            while q and (self.max_files <= 0 or len(visited) < self.max_files):
+                # Breadth-first in waves; each wave is fetched concurrently.
+                room = self.workers * 4 if self.max_files <= 0 else min(self.workers * 4, self.max_files - len(visited))
+                batch = []
+                while q and len(batch) < room:
+                    url, referer = q.popleft()
+                    if url not in visited:
+                        visited.add(url)
+                        batch.append((url, referer))
+                results = pool.map(lambda ur: self.fetch(ur[0], ur[1], root, prefix, app_id, base_row), batch)
+                for (url, _), (row, kind, text) in zip(batch, results):
+                    base = row.pop("_base", url)
+                    self.rows.append(row)
                     # Discover children only from text-like app files.
-                    if kind in {"html", "javascript", "json", "xml", "css", "text"}:
-                        try:
-                            text = dest.read_text(encoding="utf-8", errors="replace")
-                        except Exception:
-                            text = ""
-                        refs = extract_refs_from_html(text, resp.url) if kind == "html" else extract_refs_from_text(text, resp.url)
-                        for child in refs:
-                            cext = ext_from_url(child)
-                            same_host = urlparse(child).netloc.lower() == urlparse(prefix).netloc.lower()
-                            inside = within_prefix(child, prefix)
-                            # HTML/routes are sandboxed to the app directory so we never crawl the entire host.
-                            # Static assets/data discovered by the app may live in shared parent directories.
-                            if not inside:
-                                if not same_host or cext not in STATIC_EXTS or cext in {".html", ".htm"}:
-                                    continue
-                            if cext and cext not in STATIC_EXTS:
+                    if kind not in TEXT_KINDS or not text:
+                        continue
+                    refs = extract_refs_from_html(text, base) if kind == "html" else extract_refs_from_text(text, base)
+                    for child in refs:
+                        cext = ext_from_url(child)
+                        same_host = urlparse(child).netloc.lower() == urlparse(prefix).netloc.lower()
+                        inside = within_prefix(child, prefix)
+                        # HTML/routes are sandboxed to the app directory so we never crawl the entire host.
+                        # Static assets/data discovered by the app may live in shared parent directories.
+                        if not inside:
+                            if not same_host or cext not in STATIC_EXTS or cext in {".html", ".htm"}:
                                 continue
-                            if child not in queued and child not in visited:
-                                q.append((child, url))
-                                queued.add(child)
-            except Exception as exc:
-                try:
-                    if 'part' in locals() and part.exists():
-                        part.unlink()
-                except Exception:
-                    pass
-                base_row.update(status="error", error=f"{type(exc).__name__}: {exc}")
-                self.rows.append(base_row)
-                self.errors.append({"app_url": root, "url": url, "error": base_row["error"]})
-            finally:
-                if self.delay:
-                    time.sleep(self.delay)
+                        if cext and cext not in STATIC_EXTS:
+                            continue
+                        if self.skip_images and cext in IMAGE_EXTS:
+                            continue
+                        if child not in queued and child not in visited:
+                            q.append((child, url))
+                            queued.add(child)
 
-        print(f"app={root} files={len(visited)} queued_remaining={len(q)}")
+        print(f"app={root} files={len(visited)} queued_remaining={len(q)}", flush=True)
 
 
 def collect_seeds(inventory: Path | None, explicit_urls: list[str], language: str) -> list[Seed]:
@@ -398,6 +435,8 @@ def main() -> None:
     ap.add_argument("--max-files-per-app", type=int, default=10000, help="0 = unlimited")
     ap.add_argument("--max-file-mb", type=float, default=0.0, help="0 = unlimited")
     ap.add_argument("--user-agent", default="AI-KING-LanguageCorpus/1.1")
+    ap.add_argument("--workers", type=int, default=1, help="Concurrent downloads per app")
+    ap.add_argument("--skip-images", action="store_true", help="Do not download image files")
     args = ap.parse_args()
 
     out = Path(args.out)
@@ -409,23 +448,28 @@ def main() -> None:
 
     max_bytes = None if args.max_file_mb <= 0 else int(args.max_file_mb * 1024 * 1024)
     collector = Collector(out, args.timeout, args.delay, args.max_files_per_app, max_bytes,
-                          make_session(args.user_agent, args.retries))
-    for i, seed in enumerate(seeds, 1):
-        print(f"[{i}/{len(seeds)}] {seed.url} language={seed.language or '?'} collection={seed.collection or '?'}")
-        collector.crawl_seed(seed)
+                          lambda: make_session(args.user_agent, args.retries),
+                          workers=args.workers, skip_images=args.skip_images)
 
-    collector.rows.sort(key=lambda r: (r["app_url"], r["url"]))
-    write_csv(out / "app_manifest.csv", collector.rows, MANIFEST_FIELDS)
-    with (out / "app_manifest.jsonl").open("w", encoding="utf-8") as f:
-        for r in collector.rows:
-            f.write(json.dumps(r, ensure_ascii=False) + "\n")
-    write_csv(out / "errors.csv", collector.errors, ["app_url", "url", "error"])
+    def write_manifests() -> None:
+        rows = sorted(collector.rows, key=lambda r: (r["app_url"], r["url"]))
+        write_csv(out / "app_manifest.csv", rows, MANIFEST_FIELDS)
+        with (out / "app_manifest.jsonl").open("w", encoding="utf-8") as f:
+            for r in rows:
+                f.write(json.dumps(r, ensure_ascii=False) + "\n")
+        write_csv(out / "errors.csv", collector.errors, ["app_url", "url", "error"])
+
+    for i, seed in enumerate(seeds, 1):
+        print(f"[{i}/{len(seeds)}] {seed.url} language={seed.language or '?'} collection={seed.collection or '?'}", flush=True)
+        collector.crawl_seed(seed)
+        # Rewrite after every app so an interrupted run keeps a usable manifest.
+        write_manifests()
 
     summary = {
         "generated_at": utcnow(),
         "apps": len(seeds),
         "items": len(collector.rows),
-        "downloaded": sum(r["status"] == "downloaded" for r in collector.rows),
+        "downloaded": sum(r["status"] in {"downloaded", "already_present"} for r in collector.rows),
         "errors": len(collector.errors),
         "bytes": sum(int(r["bytes"] or 0) for r in collector.rows),
         "by_kind": dict(Counter(r["kind"] or "(unknown)" for r in collector.rows).most_common()),

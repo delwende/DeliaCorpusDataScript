@@ -72,7 +72,7 @@ python src/downloader.py --inventory inventory --out data/raw
 ### 3. Applications interactives IPS
 
 ```bash
-python src/app_collector.py --inventory inventory --out data/apps
+python src/app_collector.py --inventory inventory --out data/apps --workers 6 --skip-images
 ```
 
 ### 4. Alignement
@@ -106,3 +106,7 @@ Une ressource téléchargée n'est pas automatiquement considérée comme align�
 - **Lexique Pro (SIL)** : pages `lexicon/*.htm`. Une ligne par sens avec `headword`, `part_of_speech`, gloses `translation_fr` / `translation_en`, et dans `translations_json` l'allemand, la phonétique, les dialectes et la catégorie. L'enregistrement de prononciation, s'il existe, est dans `audio`. Les pages d'index inversé sont ignorées (doublons).
 
 La langue d'une application est déduite du code de dossier (`mos`, `dyu`, `fuh`, `fra`…), sauf si le nom du fichier audio indique une autre langue.
+
+### Collecte des applications : reprise et vitesse
+
+`app_collector.py` reprend une collecte interrompue : les fichiers déjà présents sont réutilisés sans nouveau téléchargement, et `app_manifest.csv` est réécrit après chaque application. `--workers N` télécharge N fichiers en parallèle par application ; `--skip-images` ignore les images (inutiles pour le corpus texte/audio).

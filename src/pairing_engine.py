@@ -641,7 +641,8 @@ def app_language(meta: dict[str, str], media_name: str = "") -> str:
     m = FILENAME_LANG_RE.search(unquote(media_name or ""))
     if m:
         return canon_lang(m.group(1).replace("ç", "c"))
-    first = urlparse(meta.get("app_url", "")).path.strip("/").split("/")[0].split("-")[0]
+    # Folder codes look like "dyu", "dyu-audio" or "mos2".
+    first = urlparse(meta.get("app_url", "")).path.strip("/").split("/")[0].split("-")[0].rstrip("0123456789")
     if first.lower() in LANG_CANON:
         return LANG_CANON[first.lower()]
     return canon_lang(meta.get("language", ""))

@@ -1,8 +1,8 @@
-# MooreCorpusDataScript
+# DeliaCorpusDataScript
 
 Pipeline de collecte et de structuration de données linguistiques à partir de MooreBurkina.
 
-> Le nom du dépôt est provisoire. Le pipeline est déjà multi-langue.
+> Le pipeline est multi-langue et le nom du dépôt peut encore évoluer sans impact sur l'architecture.
 
 ## Objectif
 
@@ -32,8 +32,8 @@ requirements.txt
 ## Installation
 
 ```bash
-git clone https://github.com/delwende/MooreCorpusDataScript.git
-cd MooreCorpusDataScript
+git clone https://github.com/delwende/DeliaCorpusDataScript.git
+cd DeliaCorpusDataScript
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt

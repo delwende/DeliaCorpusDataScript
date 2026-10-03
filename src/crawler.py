@@ -84,7 +84,14 @@ def normalize_url(url: str, base: str | None = None) -> str:
     if base:
         url = urljoin(base, url)
     url, _frag = urldefrag(url)
-    return url.strip()
+    url = url.strip()
+    # Drupal serves every path both with and without an "/index.php" prefix; relative links on
+    # "/index.php/..." pages then resolve to dead "/index.php/sites/..." asset URLs. Collapse
+    # the prefix so pages are not crawled twice and assets resolve to their real location.
+    parsed = urlparse(url)
+    if parsed.netloc.lower() in BASE_HOSTS and (parsed.path == "/index.php" or parsed.path.startswith("/index.php/")):
+        url = parsed._replace(path=parsed.path[len("/index.php"):] or "/").geturl()
+    return url
 
 
 def host(url: str) -> str:

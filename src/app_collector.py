@@ -98,7 +98,13 @@ def clean_url(url: str, base: str | None = None) -> str:
     if base:
         url = urljoin(base, url)
     url, _ = urldefrag(url)
-    return url.strip()
+    url = url.strip()
+    # Seeds like ".../vol4//" would otherwise make the app prefix "/vol4//", which no real
+    # page path starts with, so every page was treated as outside the app and skipped.
+    p = urlparse(url)
+    if "//" in p.path:
+        url = p._replace(path=re.sub(r"/{2,}", "/", p.path)).geturl()
+    return url
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:

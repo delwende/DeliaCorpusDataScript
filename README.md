@@ -99,3 +99,10 @@ Le crawler est multi-langue et reconnaît notamment Mooré, Dioula/Jula, Fulfuld
 ## Qualité des alignements
 
 Une ressource téléchargée n'est pas automatiquement considérée comme alignée. Les correspondances explicites sont gardées comme données fortes ; les associations heuristiques sont routées vers `needs_review`.
+
+### Formats d'applications IPS reconnus
+
+- **Reading App Builder (SIL)** : pages avec table de synchronisation `var timings`. Chaque segment produit une ligne `speech.csv` avec `audio`, `audio_start` et `audio_end` (secondes) : extrait audio ↔ transcription au niveau de la phrase.
+- **Lexique Pro (SIL)** : pages `lexicon/*.htm`. Une ligne par sens avec `headword`, `part_of_speech`, gloses `translation_fr` / `translation_en`, et dans `translations_json` l'allemand, la phonétique, les dialectes et la catégorie. L'enregistrement de prononciation, s'il existe, est dans `audio`. Les pages d'index inversé sont ignorées (doublons).
+
+La langue d'une application est déduite du code de dossier (`mos`, `dyu`, `fuh`, `fra`…), sauf si le nom du fichier audio indique une autre langue.

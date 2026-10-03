@@ -37,6 +37,7 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 import re
 import unicodedata
 import xml.etree.ElementTree as ET
@@ -67,7 +68,16 @@ LANG_CANON = {
     "dagbani": "dag", "dag": "dag",
     "kusaal": "kus", "kus": "kus",
     "mampruli": "maw", "maw": "maw",
+    # ISO 639-3 folder codes used on media.ipsapps.org.
+    "fuh": "ful", "fra": "fr", "eng": "en",
 }
+
+# SIL Reading App Builder pages: Popcorn.js timing table + one element per timed phrase.
+TIMING_RE = re.compile(r'label:\s*"([^"]+)"\s*,\s*start:\s*([\d.]+)\s*,\s*end:\s*([\d.]+)')
+# Bundled third-party libraries carry no language data.
+VENDOR_JS_RE = re.compile(r"(jquery|popcorn|tooltipster|bootstrap|modernizr|\.min\.js$|^sw\.js$|^pwa-main\.js$)", re.I)
+# A language named in a media filename beats the app folder code (e.g. English audio under /fra/).
+FILENAME_LANG_RE = re.compile(r"(english|anglais|fran[cç]ais|french|moor[eé]|dioula|jula|fulfulde)", re.I)
 
 GENERIC_UI_RE = re.compile(
     r"^(play|pause|stop|next|previous|suivant|précédent|precedent|écouter|ecouter|audio|"
@@ -93,7 +103,7 @@ DEF_KEYS = {"definition", "définition", "meaning", "sens"}
 MASTER_FIELDS = [
     "unit_id", "language", "variant", "collection", "record_order", "headword", "part_of_speech",
     "text", "translation_fr", "translation_en", "translation_ar", "translations_json", "definition",
-    "audio", "image", "video", "speaker", "author", "source_page", "app_url", "source_file",
+    "audio", "audio_start", "audio_end", "image", "video", "speaker", "author", "source_page", "app_url", "source_file",
     "evidence", "confidence", "review_status", "notes",
 ]
 
@@ -177,6 +187,8 @@ class Unit:
     translations_json: str = ""
     definition: str = ""
     audio: str = ""
+    audio_start: str = ""
+    audio_end: str = ""
     image: str = ""
     video: str = ""
     speaker: str = ""
@@ -203,7 +215,7 @@ class Unit:
                 setattr(self, attr, "")
         payload = "|".join([
             self.language, self.variant, self.collection, self.text, self.translation_fr, self.translation_en,
-            self.audio, self.image, self.source_file, self.record_order,
+            self.audio, self.audio_start, self.image, self.source_file, self.record_order,
         ])
         self.unit_id = self.unit_id or sha1(payload)
         self.review_status = "aligned" if self.confidence >= 0.85 else "needs_review"
@@ -624,8 +636,121 @@ def parse_html_ordered_pairing(soup: BeautifulSoup, meta: dict[str, str], idx: A
     ).finalize() for (n, text), audio in zip(texts, audios)]
 
 
+def app_language(meta: dict[str, str], media_name: str = "") -> str:
+    """Language of an IPS app file: filename hint, then app folder code, then crawler guess."""
+    m = FILENAME_LANG_RE.search(unquote(media_name or ""))
+    if m:
+        return canon_lang(m.group(1).replace("ç", "c"))
+    first = urlparse(meta.get("app_url", "")).path.strip("/").split("/")[0].split("-")[0]
+    if first.lower() in LANG_CANON:
+        return LANG_CANON[first.lower()]
+    return canon_lang(meta.get("language", ""))
+
+
+def parse_timed_audio_page(html: str, meta: dict[str, str], idx: AssetIndex, rel_source: str) -> list[Unit]:
+    """One unit per timed phrase: transcript text + audio file + start/end seconds."""
+    soup = BeautifulSoup(html, "html.parser")
+    srcs = [str(s.get("src") or "") for s in soup.select("audio source, audio[src]") if s.get("src")]
+    if not srcs:
+        return []
+    src = next((x for x in srcs if x.lower().split("?")[0].endswith(".mp3")), srcs[0])
+    audio = idx.resolve(src, rel_source)
+    lang = app_language(meta, src)
+    title = ""
+    sel = soup.find(id="book-selector")
+    if sel:
+        title = norm_space(sel.get_text(" "))
+    units = []
+    for order, (label, start, end) in enumerate(TIMING_RE.findall(html), 1):
+        node = soup.find(id=f"T{label}")
+        if node is None:
+            continue
+        # Phrases are split into styling spans mid-word, so join without separators.
+        text = norm_space(node.get_text(""))
+        if not text:
+            continue
+        units.append(Unit(
+            language=lang, variant=meta.get("variant", ""), collection=meta.get("collection", ""),
+            record_order=str(order), text=text, audio=audio, audio_start=start, audio_end=end,
+            source_page=meta.get("source_page", ""), app_url=meta.get("app_url", ""), source_file=rel_source,
+            evidence="timed_audio_segment", confidence=0.95, notes=title,
+        ).finalize())
+    return units
+
+
+def _gloss(span: Tag) -> str:
+    return norm_space(span.get_text(" ")).rstrip(" ;.,")
+
+
+def parse_lexique_pro_page(html: str, meta: dict[str, str], rel_source: str) -> list[Unit]:
+    """SIL Lexique Pro HTML export: one unit per sense with French/English/German glosses.
+
+    Entries may carry a pronunciation recording (<a href="../audio/x.mp3">) and dialect codes.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    lang = app_language(meta)
+    units: list[Unit] = []
+    entry: dict[str, str] = {}
+
+    def emit(sense: dict[str, str]) -> None:
+        if not entry.get("headword") or not (sense.get("fr") or sense.get("en") or sense.get("de")):
+            return
+        extra = {k: v for k, v in (("de", sense.get("de", "")), ("phonetic", entry.get("phonetic", "")),
+                                   ("dialects", entry.get("dialects", "")),
+                                   ("category", ", ".join(entry.get("categories", [])))) if v}
+        units.append(Unit(
+            language=lang, variant=meta.get("variant", ""), collection="dictionary",
+            record_order=str(len(units) + 1), headword=entry["headword"], part_of_speech=entry.get("pos", ""),
+            text=entry["headword"], translation_fr=sense.get("fr", ""), translation_en=sense.get("en", ""),
+            translations_json=json.dumps(extra, ensure_ascii=False) if extra else "",
+            audio=entry.get("audio", ""),
+            source_page=meta.get("source_page", ""), app_url=meta.get("app_url", ""), source_file=rel_source,
+            evidence="lexique_pro_entry", confidence=0.95,
+        ).finalize())
+
+    for p in soup.find_all("p", class_=["lpLexEntryPara", "lpLexEntryPara2", "lpLexSubEntryPara"]):
+        classes = p.get("class") or []
+        if "lpLexEntryPara2" not in classes:
+            name = p.find(class_=re.compile(r"^lpLex(Sub)?EntryName"))
+            if name is None:
+                continue
+            entry = {"headword": norm_space(name.get_text(" ")), "categories": []}
+            ph = p.find(class_="lpPhonetic")
+            if ph:
+                entry["phonetic"] = norm_space(ph.get_text(" "))
+            dia = p.find(class_="lpCustomField_Dialects")
+            if dia:
+                entry["dialects"] = norm_space(dia.get_text(" "))
+            link = p.find("a", href=re.compile(r"\.(mp3|wav|ogg|m4a)$", re.I))
+            if link:
+                # Hrefs are relative to the entry page; store the app-root-relative path.
+                entry["audio"] = os.path.normpath(os.path.join(os.path.dirname(rel_source), unquote(link["href"])))
+        sense: dict[str, str] = {}
+        for span in p.find_all("span"):
+            cls = (span.get("class") or [""])[0]
+            if cls == "lpSenseNumber" and sense:
+                emit(sense)
+                sense = {}
+            elif cls == "lpPartOfSpeech":
+                entry["pos"] = _gloss(span)
+            elif cls == "lpCategory":
+                entry.setdefault("categories", []).append(_gloss(span))
+            elif cls in ("lpGlossFrench", "lpGlossEnglish", "lpGlossGerman"):
+                key = {"lpGlossFrench": "fr", "lpGlossEnglish": "en", "lpGlossGerman": "de"}[cls]
+                sense[key] = "; ".join(filter(None, [sense.get(key, ""), _gloss(span)]))
+        emit(sense)
+    return units
+
+
 def parse_html_file(path: Path, meta: dict[str, str], idx: AssetIndex, rel_source: str) -> list[Unit]:
     text = path.read_text(encoding="utf-8", errors="replace")
+    if "var timings" in text:
+        return parse_timed_audio_page(text, meta, idx, rel_source)
+    if "lpLexEntryPara" in text:
+        return parse_lexique_pro_page(text, meta, rel_source)
+    if "lpLexEntryName" in text:
+        # Lexique Pro index/category pages only point back to entries parsed above.
+        return []
     soup = BeautifulSoup(text, "html.parser")
     for x in soup.find_all(["script", "style", "noscript", "nav", "footer"]):
         # Keep scripts outside DOM extraction; JS files are handled separately.
@@ -673,7 +798,7 @@ def dedupe_units(units: list[Unit]) -> list[Unit]:
         u.finalize()
         key = "|".join([
             u.language, norm_space(u.text).casefold(), norm_space(u.translation_fr).casefold(),
-            norm_space(u.translation_en).casefold(), u.audio, u.image, u.video,
+            norm_space(u.translation_en).casefold(), u.audio, u.audio_start, u.image, u.video,
         ])
         if not key.strip("|"):
             continue
@@ -702,7 +827,7 @@ def collect_app_units(apps: Path, idx: AssetIndex) -> list[Unit]:
             elif ext == ".json":
                 got = parse_json_file(p, meta, idx, rel)
             elif ext == ".js":
-                got = parse_js_objects(p, meta, idx, rel)
+                got = [] if VENDOR_JS_RE.search(p.name) else parse_js_objects(p, meta, idx, rel)
             elif ext == ".xml":
                 got = parse_xml_file(p, meta, idx, rel)
             else:
@@ -782,7 +907,8 @@ def enrich_by_exact_stem(units: list[Unit], idx: AssetIndex) -> None:
             u.audio = comps["audio"]; changed = True
         if not u.image and comps["image"]:
             u.image = comps["image"]; changed = True
-        if not u.video and comps["video"]:
+        # Audio-only .webm files sit in VIDEO_EXTS; never re-add the audio itself as video.
+        if not u.video and comps["video"] and comps["video"] != u.audio:
             u.video = comps["video"]; changed = True
         if changed:
             u.evidence += "+exact_stem_companion"

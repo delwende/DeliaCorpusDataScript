@@ -5,8 +5,30 @@ venv/
 .env
 .DS_Store
 
-# Generated data (raw media stays local; inventory, manifests and aligned tables are committed)
+# Generated data. Committed: inventory, manifests, page text, PDFs, app text + audio,
+# aligned tables. Kept local only: video, images, APKs, fonts/styles.
 data/raw/*
 !data/raw/metadata/
-data/apps/
+!data/raw/pages/
+!data/raw/assets/
+data/raw/assets/**
+!data/raw/assets/**/
+!data/raw/assets/**/*.pdf
+data/apps/**
+!data/apps/**/
+!data/apps/*.csv
+!data/apps/*.json
+!data/apps/*.jsonl
+!data/apps/**/*.mp3
+!data/apps/**/*.m4a
+!data/apps/**/*.ogg
+!data/apps/**/*.wav
+!data/apps/**/*.html
+!data/apps/**/*.htm
+!data/apps/**/*.js
+!data/apps/**/*.json
+!data/apps/**/*.xml
+!data/apps/**/*.txt
+!data/apps/**/*.vtt
+!data/apps/**/*.srt
 *.log

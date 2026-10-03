@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#083F0E">
+<title>262 Moapienciangu kan 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.76, end: 10.45 },
+    { label: "1b", start: 10.7, end: 14.16 },
+    { label: "1c", start: 14.41, end: 20.45 },
+    { label: "1d", start: 20.7, end: 27.54 },
+    { label: "1e", start: 27.79, end: 34.12 },
+    { label: "1f", start: 34.37, end: 38.21 },
+    { label: "1g", start: 38.46, end: 45.44 },
+    { label: "1h", start: 45.69, end: 53.74 },
+    { label: "1i", start: 53.99, end: 59 },
+    { label: "1j", start: 59.25, end: 62.33 },
+    { label: "1k", start: 62.58, end: 70.7 },
+    { label: "1l", start: 70.95, end: 78.93 },
+    { label: "1m", start: 79.18, end: 83.01 },
+    { label: "1n", start: 83.26, end: 87.81 },
+    { label: "1o", start: 88.06, end: 91.5 },
+    { label: "1p", start: 91.75, end: 97.72 },
+    { label: "1q", start: 97.97, end: 101.76 },
+    { label: "1r", start: 102.01, end: 109.61 },
+    { label: "1s", start: 109.86, end: 117.08 },
+    { label: "1t", start: 117.33, end: 121.22 },
+    { label: "1u", start: 121.47, end: 127.69 },
+    { label: "1v", start: 127.94, end: 136.36 },
+    { label: "1w", start: 136.61, end: 141.54 },
+    { label: "1x", start: 141.79, end: 148.63 },
+    { label: "1y", start: 148.88, end: 156.82 },
+    { label: "1z", start: 157.07, end: 163.31 },
+    { label: "1aa", start: 163.56, end: 167.83 },
+    { label: "1ab", start: 168.08, end: 179.28 },
+    { label: "1ac", start: 179.53, end: 182.48 },
+    { label: "1ad", start: 182.73, end: 189.97 },
+    { label: "1ae", start: 190.22, end: 196.7 },
+    { label: "1af", start: 196.95, end: 203.38 },
+    { label: "1ag", start: 203.62, end: 214.19 },
+    { label: "1ah", start: 214.44, end: 219.56 },
+    { label: "1ai", start: 219.81, end: 226.46 },
+    { label: "1aj", start: 226.71, end: 233.94 },
+    { label: "1ak", start: 234.19, end: 241.75 },
+    { label: "1al", start: 242, end: 244.81 },
+    { label: "1am", start: 245.06, end: 248.68 },
+    { label: "1an", start: 248.93, end: 252.73 },
+    { label: "1ao", start: 252.98, end: 256.74 },
+    { label: "1aq", start: 263.62, end: 270.54 },
+    { label: "1ar", start: 270.79, end: 275.5 },
+    { label: "1as", start: 275.75, end: 279.65 },
+    { label: "1at", start: 279.9, end: 287.11 },
+    { label: "1au", start: 287.36, end: 294.25 },
+    { label: "1av", start: 294.5, end: 298.24 },
+    { label: "1aw", start: 298.49, end: 305.25 },
+    { label: "1ax", start: 305.5, end: 310.78 },
+    { label: "1ay", start: 311.03, end: 317.78 },
+    { label: "1az", start: 318.03, end: 325.56 },
+    { label: "1ba", start: 325.81, end: 329.42 },
+    { label: "1bb", start: 329.67, end: 339.76 },
+    { label: "1bc", start: 340.01, end: 343.13 },
+    { label: "1bd", start: 343.38, end: 348.57 },
+    { label: "1be", start: 348.82, end: 358.82 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 3.76;
+var stopTime  = 358.82;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "08-B008-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='07-B007-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;262 Moapienciangu kan&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B008-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">262 </span><span class="bd">Moapienciangu</span><span class="bd"> kan </span><span class="bd">bolini</span><span class="bd"> </span><span class="bd">luomo</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">La grande herbe ne peut faire disparaitre l'éléphant.</div></div>
+<div class="m"><div id="T1c" class="txs">Sens et emploi : si quelqu'un veut montrer qu'il est supérieur aux autres, il pourra dire ce proverbe et se donner ce surnom.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Moapienciangu</span><span class="bd"> kan </span><span class="bd">bolini</span><span class="bd"> </span><span class="bd">luomo</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">263 Ba i </span><span class="bd">biga</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> mua o nan bua o </span><span class="bd">naa</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs">Même si l'enfant ne pleure pas, il a besoin de sa mère.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">Ba i </span><span class="bd">biga</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> mua o nan bua o </span><span class="bd">naa</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">264 A </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">muani</span><span class="bd"> </span><span class="bd">leni</span><span class="bd"> o </span><span class="bd">namuno</span><span class="bd"> </span><span class="bd">aa</span><span class="bd"> </span><span class="bd">baani</span><span class="bd"> o </span><span class="bd">paalu</span><span class="bd"> n </span><span class="bd">daa</span><span class="bd"> </span><span class="bd">maama</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs">Si tu n'as pas lutté avec l'hyène tu ne sais pas à quoi sa force est égale.</div></div>
+<div class="m"><div id="T1j" class="txs">Sens : l'expérience est maîtresse de vie.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">A </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">muani</span><span class="bd"> </span><span class="bd">leni</span><span class="bd"> o </span><span class="bd">namuno</span><span class="bd"> </span><span class="bd">aa</span><span class="bd"> </span><span class="bd">baani</span><span class="bd"> o </span><span class="bd">paalu</span><span class="bd"> n </span><span class="bd">daa</span><span class="bd"> </span><span class="bd">maama</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">265a Li </span><span class="bd">muarili</span><span class="bd"> tie </span><span class="bd">ŋ</span><span class="bd">unbo</span><span class="bd">, a </span><span class="bd">yaa</span><span class="bd"> pua o </span><span class="bd">o</span><span class="bd"> kan </span><span class="bd">cuoni</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">265b Li </span><span class="bd">muasili</span><span class="bd"> te </span><span class="bd">ŋ</span><span class="bd">unbo</span><span class="bd"> a </span><span class="bd">yaam</span><span class="bd"> pua o </span><span class="bd">o</span><span class="bd"> kan </span><span class="bd">cuoni</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs">Le mossi est un âne, si tu ne le frappes pas, il ne marchera pas.</div></div>
+<div class="m"><div id="T1o" class="txs">Sens et emploi : se dit à quelqu'un qui a la tête dure comme un mossi.</div></div>
+<div class="m"><div id="T1p" class="txs">Celui qui est incompréhensible, si tu n'insistes pas, tu ne sauras pas la vérité.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">Li </span><span class="bd">muarili</span><span class="bd"> tie </span><span class="bd">ŋ</span><span class="bd">unbo</span><span class="bd">, a </span><span class="bd">yaa</span><span class="bd"> pua o </span><span class="bd">o</span><span class="bd"> kan </span><span class="bd">cuoni</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">Li </span><span class="bd">muasili</span><span class="bd"> te </span><span class="bd">ŋ</span><span class="bd">unbo</span><span class="bd"> a </span><span class="bd">yaam</span><span class="bd"> pua o </span><span class="bd">o</span><span class="bd"> kan </span><span class="bd">cuoni</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">266 </span><span class="bd">Muasi</span><span class="bd"> </span><span class="bd">yendi</span><span class="bd"> </span><span class="bd">ba</span><span class="bd"> </span><span class="bd">teni</span><span class="bd"> ban </span><span class="bd">sugi</span><span class="bd"> </span><span class="bd">moasa</span><span class="bd"> </span><span class="bd">kuli</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs">Un seul mossi fera qu'on insulte tous les mossis.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">Muasi</span><span class="bd"> </span><span class="bd">yendi</span><span class="bd"> </span><span class="bd">ba</span><span class="bd"> </span><span class="bd">teni</span><span class="bd"> ban </span><span class="bd">sugi</span><span class="bd"> </span><span class="bd">moasa</span><span class="bd"> </span><span class="bd">kuli</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">267 </span><span class="bd">Ke</span><span class="bd"> </span><span class="bd">muriga</span><span class="bd"> </span><span class="bd">moandi</span><span class="bd"> </span><span class="bd">gurili</span><span class="bd">, o kan </span><span class="bd">fidii</span><span class="bd"> </span><span class="bd">cuo</span><span class="bd"> o</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1w" class="txs">Le chat regarde d'un mauvais œil le hérisson, il ne peut pas l’attraper.</div></div>
+<div class="m"><div id="T1x" class="txs">Sens et emploi : si quelqu'un est fâché contre un autre, et ne sait pas quoi lui dire, on pourra lui dire ce proverbe.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">Ke</span><span class="bd"> </span><span class="bd">muriga</span><span class="bd"> </span><span class="bd">moandi</span><span class="bd"> </span><span class="bd">gurili</span><span class="bd">, o kan </span><span class="bd">fidii</span><span class="bd"> </span><span class="bd">cuo</span><span class="bd"> o</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1z" class="txs"><span class="bd">268 Bua n </span><span class="bd">gbanu</span><span class="bd"> kan </span><span class="bd">ñani</span><span class="bd"> </span><span class="bd">mutuoli</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aa" class="txs">Aimer mon corps n'enlèvera pas le ressentiment.</div></div>
+<div class="m"><div id="T1ab" class="txs">Sens : celui qui n'aime pas travailler (qui ne veut pas fatiguer son corps) il n'aura jamais ce qu'il veut et il va gêner, embêter les autres qui ont travaillé pour avoir quelque chose.</div></div>
+<div class="m"><div id="T1ac" class="txs">Emploi : se dit à quelqu'un qui ne veut pas travailler.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">Bua n </span><span class="bd">gbanu</span><span class="bd"> kan </span><span class="bd">ñani</span><span class="bd"> </span><span class="bd">mutuoli</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">269 </span><span class="bd">Ñiidi</span><span class="bd"> </span><span class="bd">ke</span><span class="bd"> a </span><span class="bd">ñi</span><span class="bd"> mu </span><span class="bd">muwalu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1af" class="txs">Si l'on dit à quelqu'un cesse d'appuyer sur le feu, c'est que c'est une petite braise.</div></div>
+<div class="m"><div id="T1ag" class="txs">Sens et emploi : Si quelqu'un fait une chose qui peut lui faire du mal, on n'a pas besoin de le conseiller parce que s'il voit que ça va s'aggraver il va cesser de le faire.</div></div>
+<div class="m"><div id="T1ah" class="txs">Emploi : se dit à quelqu'un à qui on va faire quelque chose et lui nuire.</div></div>
+<div class="m"><div id="T1ai" class="txs">Par exemple : si tu aimes la femme de quelqu'un qui t'est supérieur on n'a pas besoin de te conseiller car il va te frapper.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">Ñiidi</span><span class="bd"> </span><span class="bd">ke</span><span class="bd"> a </span><span class="bd">ñi</span><span class="bd"> mu </span><span class="bd">muwalu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">270</span><span class="bd">a</span><span class="bd"> </span><span class="bd">Foliga</span><span class="bd"> </span><span class="bd">ya</span><span class="bd"> </span><span class="bd">joa</span><span class="bd"> o </span><span class="bd">bani</span><span class="bd"> </span><span class="bd">ke</span><span class="bd"> </span><span class="bd">mi </span><span class="bd">na</span><span class="bd">ŋ</span><span class="bd">anma</span><span class="bd"> </span><span class="bd">pieni</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1al" class="txs"><span class="bd">270b </span><span class="bd">Bi kan </span><span class="bd">waani</span><span class="bd"> </span><span class="bd">foliga</span><span class="bd"> </span><span class="bd">ke</span><span class="bd"> </span><span class="bd">na</span><span class="bd">ŋ</span><span class="bd">anma</span><span class="bd"> </span><span class="bd">pieni</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1am" class="txs">Si un peul est aveugle il sait que le lait est blanc.</div></div>
+<div class="m"><div id="T1an" class="txs">Sens et emploi : on n'apprend pas à quelqu'un une chose qu'il connait déjà.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ao" class="txs"><span class="bd">Foliga</span><span class="bd"> </span><span class="bd">ya</span><span class="bd"> </span><span class="bd">joa</span><span class="bd"> o </span><span class="bd">bani</span><span class="bd"> </span><span class="bd">ke</span><span class="bd"> </span><span class="bd">mi </span><span class="bd">na</span><span class="bd">ŋ</span><span class="bd">anma</span><span class="bd"> </span><span class="bd">pieni</span><span class="bd">.</span></div></div>
+<div class="m"><span class="bd">Bi kan </span><span class="bd">waani</span><span class="bd"> </span><span class="bd">foliga</span><span class="bd"> </span><span class="bd">ke</span><span class="bd"> </span><span class="bd">na</span><span class="bd">ŋ</span><span class="bd">anma</span><span class="bd"> </span><span class="bd">pieni</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aq" class="txs"><span class="bd">271 </span><span class="bd">Naali</span><span class="bd"> n </span><span class="bd">fidi</span><span class="bd"> </span><span class="bd">yaala</span><span class="bd"> </span><span class="bd">tuoli</span><span class="bd"> kan </span><span class="bd">fidi</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ar" class="txs">Ce que peut faire la pierre à écraser le mil, le mortier ne le peut pas.</div></div>
+<div class="m"><div id="T1as" class="txs">Sens : ce que peut faire le riche, le pauvre ne le peut pas.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1at" class="txs"><span class="bd">Naali</span><span class="bd"> n </span><span class="bd">fidi</span><span class="bd"> </span><span class="bd">yaala</span><span class="bd"> </span><span class="bd">tuoli</span><span class="bd"> kan </span><span class="bd">fidi</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1au" class="txs"><span class="bd">272 </span><span class="bd">Utienu</span><span class="bd"> </span><span class="bd">ke</span><span class="bd"> puni </span><span class="bd">nabiado</span><span class="bd"> </span><span class="bd">yinli</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1av" class="txs">Dieu ne donne pas des cornes a un zébu méchant.</div></div>
+<div class="m"><div id="T1aw" class="txs">Sens et emploi : se dit à quelqu'un qui est méchant, alors qu'il n'a rien (ni femmes, ni enfants, ni argent).</div></div>
+<div class="m"><div id="T1ax" class="txs">Se dit à un méchant qui n'a pas la possibilité physique de nuire.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ay" class="txs"><span class="bd">Utienu</span><span class="bd"> </span><span class="bd">ke</span><span class="bd"> puni </span><span class="bd">nabiado</span><span class="bd"> </span><span class="bd">yinli</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1az" class="txs"><span class="bd">273 </span><span class="bd">Nafanu</span><span class="bd"> kan pua </span><span class="bd">luodo</span><span class="bd">, se </span><span class="bd">yua</span><span class="bd"> </span><span class="bd">n </span><span class="bd">pia</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ba" class="txs">Un malheur ne frappe pas un pauvre mais un riche.</div></div>
+<div class="m"><div id="T1bb" class="txs">Sens : se dit à un riche (celui qui possède) qui se plaint d'avoir perdu quelque chose, parce que s'il n'avait rien, il n'aurait rien perdu.</div> <div id="T1bc" class="txs">Le pauvre qui n'a rien ne perd rien.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bd" class="txs"><span class="bd">Nafanu</span><span class="bd"> kan pua </span><span class="bd">luodo</span><span class="bd">, se </span><span class="bd">yua</span><span class="bd"> </span><span class="bd">n </span><span class="bd">pia</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1be" class="txs">.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/08 prov gul vol2.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

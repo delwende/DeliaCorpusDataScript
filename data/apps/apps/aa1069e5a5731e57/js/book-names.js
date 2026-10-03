@@ -1,0 +1,16 @@
+var books = [
+  { name: "1 A ka zɛt ned nin bãaneg", ref: "01-B001-001.html" },
+  { name: "20 B kʋʋ wãamb la wãamb", ref: "02-B002-001.html" },
+  { name: "40 Baag ka wʋmd a zugẽ", ref: "03-B003-001.html" },
+  { name: "60 Beoog bao a rẽnda", ref: "04-B004-001.html" },
+  { name: "80 Bõang mi yarga", ref: "05-B005-001.html" },
+  { name: "100 Bũmb ning sẽn wẽg", ref: "06-B006-001.html" },
+  { name: "120 Doaag noaag pa", ref: "07-B007-001.html" },
+  { name: "140 F sã n dat biig ma", ref: "08-B008-001.html" },
+  { name: "160 F sã n pa na n ning", ref: "09-B009-001.html" },
+  { name: "180 F sã n wa tɩ lubd", ref: "10-B010-001.html" },
+  { name: "200 Gãngãad lima lʋmse", ref: "11-B012-001.html" },
+  { name: "220 Ka nif yãab la rɩɩb", ref: "12-B011-001.html" },
+  { name: "240 Katr na ki t'a ka", ref: "13-B013-001.html" },
+  { name: "260 Kɩpar zabda nin la a", ref: "14-B014-001.html" },
+];

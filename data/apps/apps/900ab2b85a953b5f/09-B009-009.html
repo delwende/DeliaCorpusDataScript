@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Gabatarwa 9</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "09-B009-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='08-B008-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-008.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Gabatarwa&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;9&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-010.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B009-image9.jpg" />
+
+<div class="m"><span class="bd">Hikima da hankali</span></div>
+<div class="m"><span class="it">Eh, Allah ya azurtamu da alkhairinsa. Ya ba mu duka hikima da </span><span class="it">fahimta.</span>(Afisawa 1, 8).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Menene hikima da fahimta?</span></div>
+<div class="m">Tushen hikima da hankali shine ilimi, wato tarin bayanan da ake samu ta hanyar ilimi ko gogewa. Akwai masu rudar ilimi da hankali da hikima. Suna tunanin cewa ilimi kai tsaye yana kaiwa ga hankali har ma da hikima. Amma don a yi la’akari da shi mai hankali, bai isa kawai tara ilimi ba; kuma dole ne ku fahimce shi kuma ku san yadda ake amfani da shi. Hankali kenan. Hikima ta kara gaba. Kasance mai hikima yana nufin sanin lokacin da yadda za a yi amfani da ilimin da ka samu, da kuma iya isar da iliminka da fahimtarka ga wasu. Maganar Allah tana koya mana cewa Allah zai iya kuma zai ba mu hankali da hikima AMMA da nufin sanin shi, Allah Rayayye, na sanin shirinsa na ceto da wadata da ya tanadar mana (dubi kuma Afisawa 1, 17 zuwa 20).</div>
+<div class="m"><span class="bd">Ayyuka don juya hikima da hankali zuwa wadata a rayuwar ku:</span></div>
+<div class="m"><span class="it">- </span><span class="it">Addu'a:</span>Godiya ga Allah da hikima da fahimtar da ya riga ya yi muku. Ka tambaye shi ya nuna maka yadda za ka yi amfani da ilimin da ka samu a makarantar Littafi Mai Tsarki, coci, taro da nazari na kai don ɗaukaka shi. Ka roƙi Allah ya ƙara maka hazaka domin ka ƙara fahimtar Kalmarsa kuma ka isar da iliminka ga wasu.</div>
+<div class="m"><span class="it">- Karatun Littafi Mai </span><span class="it">Tsarki:</span>Karanta 1 Korinthiyawa 1, 18 zuwa 25. Waɗannan kalmomi na manzo Bulus sun tuna mana cewa hikimar Allah ta bambanta da ta duniyarmu.</div>
+<div class="m"><span class="it">- tunani na </span><span class="it">sirri:</span>Hankali da hikima ana girmama su sosai kuma ana neman su a duniyarmu. Amma ku kiyayi: ba daidai yake da Allah ba. Ka bincika zuciyarka da taimakon Ruhu Mai Tsarki don gano abin da ke motsa ka a cikin ƙoƙarinka na faɗaɗa iliminka. Ka tuna cewa Allah yana so ka fara neman saninsa.</div>
+<div class="m"><span class="it">- Zuwa ga wasu</span>: Ka yi tunani a kan abin da ka koya a ’yan makonnin da suka gabata a coci ko kuma lokacin wasu koyarwa. Ka rubuta wani muhimmin darasi da ya kawo sauyi a rayuwarka kuma ka raba shi da dangi ko aboki.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

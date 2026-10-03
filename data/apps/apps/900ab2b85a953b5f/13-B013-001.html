@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Seensa 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "13-B013-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='12-B012-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-015.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Seensa&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B013-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">Seensa</span></div>
+<div class="b">&nbsp;</div>
+<div class="m">Ergaan warra Efesoon Kiristaanota "kuusaa nyaataa fi meeshaalee hafuuraa guddaa harka isaaniitti qabanitti waan hin fayyadamneef, hanqina nyaataa hafuuraatiin rakkachuuf balaa irra jiraniif. Ergaan warra Efesoonif barreeffame the" jedhamee waamamee jira baankii amantootaa, kitaaba cheeki, kutaa qabeenya Macaafa Qulqulluu Xalayaan dinqisiisaa kun waa'ee qabeenya guddaa, dhaala, fi guutummaa isaan Yesus Kiristoosii fi waldaa isaa keessatti qaban ni hima ." (John MACARTHUR) jedhu.</div>
+<div class="m">Kun qabeenya qaamaa osoo hin taane, qabeenya hafuuraati. Efesoon magaalaa baayyee barbaachisaa turte, magaalota ijoo 5 Impaayera Roomaa keessaa tokko ture. Magaalaa guddittii (Roomaa irraa kan hafe) Phaawulos daawwate ta'uun ishee hin oolu. Baay'ee badhaadhaa waan tureef "Baankii Eeshiyaa" jedhamee waamame. Daldaltoonni meeshaalee isaanii bitachuu fi gurguruuf bakka hunda irraa dhufan. Akkasumas turistoonni mana qulqullummaa waaqayyittii Arxeemisiif kan kenname dinqisiifachuuf daawwatan, isheen yeroo sanatti dinqiiwwan addunyaa 7 keessaa tokko taate. Ergamaan Phaawuloos ergaa isaatiin gammachuu fi quufinsi Kiristaana tokkoo meeshaa irratti kan hundaa’e akka hin taane miseensota waldaa Efesoon qabeenya qabeenya guddaadhaan marfamaniitti agarsiisuu akka barbaade beekamaadha. Badhaadhina dhugaa Kiristoos keessatti qabnu, badhaadhina hin balleessinee fi eenyullee hatuu hin dandeenye isaan yaadachiisuu barbaade!</div>
+<div class="m">Mata dureen kun har’as barbaachisaa dha. Addunyaan har'aa qarshiin gammachuu akka fidu akka amannu barbaada ture! Dubbiin Waaqayyoo garuu kun soba akka ta'e nutti hima. Dhugaadha, qarshiin wantoota jireenya keenya guyyaa guyyaa salphisan nuuf bituu danda’a, garuu maallaqni rakkina, gidiraa fi qormaata guddaa jireenya keenya lafa irratti nu mudatu irratti humna hin qabu.</div>
+<div class="m">Caqasni ijoo Efesoon jalqaba irratti sirrii dha: Waaqayyo fi Abbaan Gooftaa keenya Iyyasuus Kiristoos inni eebba hafuuraa hundumaa iddoowwan samii irratti Kiristoosiin nu eebbise haa eebbifamu. Efesoon 1, 3</div>
+<div class="m"><span class="bd">Yesus keessatti eebba hafuuraa HUNDA qabna! Akkasumas caqasoota itti aanan keessatti Phaawuloos waa’ee eebbawwan kanaa bal’inaan nuuf kenneera. Macaafa Qulqulluu Afaan Giriikii isa jalqabaa keessatti, lakkoofsi 3 hanga 14 boqonnaa jalqabaa Efesoon hima tokkicha! Akka Phaawuloos jedhutti, tarreen badhaadhummaa hafuuraa warra "Kiristoos keessa jiraniif" dheeraa dha: </span><span class="bd">filannoo fi dursee murtee; guddifachaa fudhachuu; jaalala; baraaruu; dhiifama gochuu; ayyaana; ogummaa fi hubannoo; dhaala; hafuura qulqulluu; aangoo; abdii fi waldaa.</span></div>
+<div class="m">Fuula muraasa itti aanan keessatti dhugaawwan macaafa qulqulluu kana ni qoranna, garuu akka barumsa ykn beekumsa mataa keenyaatti qofa miti. Kanaa mannaa, akkamitti gocha guyyaa guyyaatiin jireenya keenya guyyaa guyyaadhaaf badhaadhina dhugaa ta'uu akka danda'an baruuf ilaalla.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

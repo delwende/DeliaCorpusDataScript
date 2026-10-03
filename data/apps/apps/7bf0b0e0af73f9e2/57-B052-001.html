@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Mediation 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.31 },
+    { label: "1b", start: 1.56, end: 5.83 },
+    { label: "1c", start: 6.08, end: 7.23 },
+    { label: "1d", start: 7.48, end: 8.35 },
+    { label: "1e", start: 8.6, end: 9.67 },
+    { label: "1f", start: 9.92, end: 12.91 },
+    { label: "1g", start: 13.16, end: 15.57 },
+    { label: "1h", start: 15.82, end: 17.57 },
+    { label: "1i", start: 17.82, end: 20.03 },
+    { label: "1j", start: 20.28, end: 22.59 },
+    { label: "1k", start: 22.84, end: 24.17 },
+    { label: "1l", start: 24.42, end: 27.53 },
+    { label: "1m", start: 27.78, end: 31.77 },
+    { label: "1n", start: 32.02, end: 33.73 },
+    { label: "1o", start: 33.98, end: 36.03 },
+    { label: "1p", start: 36.28, end: 39.87 },
+    { label: "1q", start: 40.12, end: 42.39 },
+    { label: "1r", start: 42.64, end: 45.87 },
+    { label: "1s", start: 46.12, end: 47.73 },
+    { label: "1t", start: 47.98, end: 50.73 },
+    { label: "1u", start: 50.98, end: 54.97 },
+    { label: "1v", start: 55.22, end: 59.23 },
+    { label: "1w", start: 59.48, end: 66.19 },
+    { label: "1x", start: 66.44, end: 69.23 },
+    { label: "1y", start: 69.48, end: 73.37 },
+    { label: "1z", start: 73.62, end: 76.73 },
+    { label: "1aa", start: 76.98, end: 81.29 },
+    { label: "1ab", start: 81.54, end: 84.29 },
+    { label: "1ac", start: 84.54, end: 85.77 },
+    { label: "1ad", start: 86.02, end: 88.41 },
+    { label: "1ae", start: 88.66, end: 90.93 },
+    { label: "1af", start: 91.18, end: 94.15 },
+    { label: "1ag", start: 94.4, end: 95.83 },
+    { label: "1ah", start: 96.08, end: 101.39 },
+    { label: "1ai", start: 101.64, end: 105.21 },
+    { label: "1aj", start: 105.46, end: 106.69 },
+    { label: "1ak", start: 106.94, end: 108.21 },
+    { label: "1al", start: 108.46, end: 110.59 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 110.59;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "57-B052-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='56-B061-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='56-B061-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Mediation&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='58-B062-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='58-B062-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B052-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Mediation</span></div></div>
+<div class="m"><div id="T1b" class="txs">How to resolve conflicts when you don't know the culture from the inside?</div> <div id="T1c" class="txs">Fortunately,</div> <div id="T1d" class="txs">there is a way:</div> <div id="T1e" class="txs"><span class="bd">mediation</span>.</div></div>
+<div class="m"><div id="T1f" class="txs">What are the characteristics of a good mediator?</div> <div id="T1g" class="txs">He must have the trust of both parties,</div> <div id="T1h" class="txs">or at least be respected.</div> <div id="T1i" class="txs">And he must understand the problem,</div> <div id="T1j" class="txs">without being too directly involved.</div></div>
+<div class="m"><div id="T1k" class="txs">For a European,</div> <div id="T1l" class="txs">all this requires revising one's conceptions.</div> <div id="T1m" class="txs">Europeans assume that the guilty party must ask for forgiveness.</div> <div id="T1n" class="txs">In a context of honor,</div> <div id="T1o" class="txs">this seems insolent and hurtful.</div> <div id="T1p" class="txs">“<span class="it">He dares to appear before me after everything that happened?</span>»</div> <div id="T1q" class="txs">The culprit shows that he regrets,</div> <div id="T1r" class="txs">precisely by the fact that he resorts to a mediator.</div> <div id="T1s" class="txs">This is not a loophole,</div> <div id="T1t" class="txs">as one might think from a European perspective.</div></div>
+<div class="m"><div id="T1u" class="txs">Involving a mediator greatly relieves the person in difficulty.</div> <div id="T1v" class="txs">The disadvantage of this procedure is that it is time consuming.</div> <div id="T1w" class="txs">But isn't it better to waste a little time at the start to avoid ending up in discord after a direct confrontation?</div></div>
+<div class="m"><div id="T1x" class="txs">Where can we find capable mediators?</div> <div id="T1y" class="txs">The circle of people who have intercultural experience is widening:</div> <div id="T1z" class="txs">these are people who have spent a fairly long time abroad,</div> <div id="T1aa" class="txs">or first or second-generation migrants who are comfortable in both cultures,</div> <div id="T1ab" class="txs">or even people who have knowledge of mediation.</div> <div id="T1ac" class="txs">All can learn,</div> <div id="T1ad" class="txs">by not avoiding intercultural tensions,</div> <div id="T1ae" class="txs">but by seeking constructive solutions,</div> <div id="T1af" class="txs">and thus they qualify as possible mediators.</div></div>
+<div class="m"><div id="T1ag" class="txs">Without mediation,</div> <div id="T1ah" class="txs">there is a risk that each party will seek affirmation and harmony in the most welcoming social group,</div> <div id="T1ai" class="txs">and this is often the group with a similar cultural background.</div> <div id="T1aj" class="txs">With each failure,</div> <div id="T1ak" class="txs">frustration increases,</div> <div id="T1al" class="txs">and the gap between the groups widens.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/29 Welcome Man voice.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/29 Welcome Man voice.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/29 Welcome Man voice.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

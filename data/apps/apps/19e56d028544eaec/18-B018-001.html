@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>d) Le développement du 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 5.05 },
+    { label: "1b", start: 5.3, end: 9.27 },
+    { label: "1c", start: 9.52, end: 13.61 },
+    { label: "1d", start: 13.86, end: 16.99 },
+    { label: "1e", start: 17.24, end: 19.59 },
+    { label: "1f", start: 19.84, end: 24.11 },
+    { label: "1g", start: 24.36, end: 27.51 },
+    { label: "1h", start: 27.76, end: 30.01 },
+    { label: "1i", start: 30.26, end: 33.19 },
+    { label: "1j", start: 33.44, end: 40.47 },
+    { label: "1k", start: 40.72, end: 42.91 },
+    { label: "1l", start: 43.16, end: 51.21 },
+    { label: "1m", start: 51.46, end: 57.71 },
+    { label: "1n", start: 57.96, end: 65.35 },
+    { label: "1o", start: 65.6, end: 71.15 },
+    { label: "1p", start: 71.4, end: 76.01 },
+    { label: "1q", start: 76.26, end: 78.19 },
+    { label: "1r", start: 78.44, end: 79.97 },
+    { label: "1s", start: 80.22, end: 82.67 },
+    { label: "1t", start: 82.92, end: 87.57 },
+    { label: "1u", start: 87.82, end: 93.05 },
+    { label: "1v", start: 93.3, end: 97.37 },
+    { label: "1w", start: 97.62, end: 108.75 },
+    { label: "1x", start: 109, end: 112.01 },
+    { label: "1y", start: 112.26, end: 117.79 },
+    { label: "1z", start: 118.04, end: 118.65 },
+    { label: "1aa", start: 118.9, end: 124.07 },
+    { label: "1ab", start: 124.32, end: 129.53 },
+    { label: "1ac", start: 129.78, end: 131.11 },
+    { label: "1ad", start: 131.36, end: 133.45 },
+    { label: "1ae", start: 133.7, end: 134.59 },
+    { label: "1af", start: 134.84, end: 137.47 },
+    { label: "1ag", start: 137.72, end: 141.19 },
+    { label: "1ah", start: 141.44, end: 144.19 },
+    { label: "1ai", start: 144.44, end: 150.55 },
+    { label: "1aj", start: 150.8, end: 153.13 },
+    { label: "1ak", start: 153.38, end: 155.57 },
+    { label: "1al", start: 155.82, end: 158.17 },
+    { label: "1am", start: 158.42, end: 160.19 },
+    { label: "1an", start: 160.44, end: 164.53 },
+    { label: "1ao", start: 164.78, end: 167.07 },
+    { label: "1ap", start: 167.32, end: 173.05 },
+    { label: "1aq", start: 173.3, end: 178.31 },
+    { label: "1ar", start: 178.56, end: 180.91 },
+    { label: "1as", start: 181.16, end: 184.03 },
+    { label: "1at", start: 184.28, end: 189.15 },
+    { label: "1au", start: 189.4, end: 191.05 },
+    { label: "1av", start: 191.3, end: 192.71 },
+    { label: "1aw", start: 192.96, end: 198.51 },
+    { label: "1ax", start: 198.76, end: 202.89 },
+    { label: "1ay", start: 203.14, end: 207.07 },
+    { label: "1az", start: 207.32, end: 215.61 },
+    { label: "1ba", start: 215.86, end: 220.67 },
+    { label: "1bb", start: 220.92, end: 222.57 },
+    { label: "1bc", start: 222.82, end: 226.81 },
+    { label: "1bd", start: 227.06, end: 235.27 },
+    { label: "1be", start: 235.52, end: 238.25 },
+    { label: "1bf", start: 238.5, end: 239.67 },
+    { label: "1bg", start: 239.92, end: 240.93 },
+    { label: "1bh", start: 241.18, end: 246.35 },
+    { label: "1bi", start: 246.6, end: 249.69 },
+    { label: "1bj", start: 249.94, end: 254.11 },
+    { label: "1bk", start: 254.36, end: 258.97 },
+    { label: "1bl", start: 259.22, end: 265.13 },
+    { label: "1bm", start: 265.38, end: 269.93 },
+    { label: "1bn", start: 270.18, end: 274.97 },
+    { label: "1bo", start: 275.22, end: 281.83 },
+    { label: "1bp", start: 282.08, end: 284.71 },
+    { label: "1bq", start: 284.96, end: 288.01 },
+    { label: "1br", start: 288.26, end: 294.71 },
+    { label: "1bs", start: 294.96, end: 298.45 },
+    { label: "1bt", start: 298.7, end: 301.03 },
+    { label: "1bu", start: 301.28, end: 307.39 },
+    { label: "1bv", start: 307.64, end: 310.33 },
+    { label: "1bw", start: 310.58, end: 312.99 },
+    { label: "1bx", start: 313.24, end: 315.77 },
+    { label: "1by", start: 316.02, end: 317.29 },
+    { label: "1bz", start: 317.54, end: 320.75 },
+    { label: "1ca", start: 321, end: 324.37 },
+    { label: "1cb", start: 324.62, end: 333.91 },
+    { label: "1cc", start: 334.16, end: 337.79 },
+    { label: "1cd", start: 338.04, end: 347.39 },
+    { label: "1ce", start: 347.64, end: 351.35 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 351.35;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "18-B018-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='17-B017-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='17-B017-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;d) Le développement du&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B019-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B019-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B018-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">d) </span><span class="bd">Le développement du corps d’un garçon qui devient un homme</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Le garçon est déjà bien équipé au niveau de son corps.</div> <div id="T1c" class="txs">Il commence à se développer vers 12-14 ans.</div> <div id="T1d" class="txs">Un changement se produit :</div> <div id="T1e" class="txs">Les poils commencent à pousser sous les bras,</div> <div id="T1f" class="txs">sur la poitrine et au niveau du sexe (poils pubiens).</div> <div id="T1g" class="txs">La voix change et devient plus grave,</div> <div id="T1h" class="txs">les organes sexuels se réveillent,</div> <div id="T1i" class="txs">se développent et deviennent actifs.</div></div>
+<div class="m"><div id="T1j" class="txs">Mais les organes sexuels d’un garçon ne se trouvent pas à l’intérieur de son corps comme la fille,</div> <div id="T1k" class="txs">ils se trouvent à l’extérieur.</div></div>
+<div class="m"><div id="T1l" class="txs">Nous parlons du pénis et du scrotum (ou bourses) qui se trouvent entre les jambes du garçon.</div></div>
+<div class="m"><div id="T1m" class="txs">On peut s’imaginer que le scrotum est comparable à un petit sac ridé,</div> <div id="T1n" class="txs">il y a deux petites maisons identiques dans chacune desquelles se trouvent deux chambres.</div> <div id="T1o" class="txs">Elles sont inactives jusqu’à ce que le garçon commence à devenir un homme.</div></div>
+<div class="m"><div id="T1p" class="txs">En même temps que les signes extérieurs de transformation du corps,</div> <div id="T1q" class="txs">dans l’intérieur de ces chambres,</div> <div id="T1r" class="txs">un changement commence.</div> <div id="T1s" class="txs">Dans une des chambres (<span class="bd">le testicule</span>),</div> <div id="T1t" class="txs">les semences (<span class="bd">les spermatozoïdes</span>) commencent à être produites,</div> <div id="T1u" class="txs">et l’autre chambre (<span class="bd">l’épididyme</span>) sert à garder ces semences.</div></div>
+<div class="m"><div id="T1v" class="txs">Pour avoir assez de place pour la nouvelle production,</div> <div id="T1w" class="txs">régulièrement un nombre de semences quittent leur chambre et se mettent en route par un tuyau (<span class="bd">canal déférant</span>) vers la sortie qui est le pénis.</div></div>
+<div class="m"><div id="T1x" class="txs">Pour que les semences puissent bien se déplacer,</div> <div id="T1y" class="txs">elles sont besoin d'un liquide bien glissant (<span class="bd">le sperme</span>).</div> <div id="T1z" class="txs">En passant,</div> <div id="T1aa" class="txs">une glande (la prostate) verse ce liquide dans le canal déférant.</div> <div id="T1ab" class="txs">Le liquide emballe bien les spermatozoïdes qui se déplacent vers le pénis.</div></div>
+<div class="m"><div id="T1ac" class="txs">A ce moment,</div> <div id="T1ad" class="txs">le pénis qui est normalement mou,</div> <div id="T1ae" class="txs">se dresse,</div> <div id="T1af" class="txs">grandit et devient dur.</div> <div id="T1ag" class="txs">Le sperme contenant les spermatozoïdes est poussé dehors.</div> <div id="T1ah" class="txs">On dit que l’homme éjacule.</div> <div id="T1ai" class="txs">L’<span class="bd">éjaculation</span> peut se faire de temps en temps pendant la nuit quand le jeune homme dort.</div> <div id="T1aj" class="txs">Il peut alors se sentir mouillé.</div> <div id="T1ak" class="txs">Dès sa première éjaculation,</div> <div id="T1al" class="txs">le jeune homme peut devenir père.</div></div>
+<div class="m"><div id="T1am" class="txs">A chaque éjaculation,</div> <div id="T1an" class="txs">ce sont des millions de spermatozoïdes qui sont envoyés.</div> <div id="T1ao" class="txs">Pendant le rapport sexuel,</div> <div id="T1ap" class="txs">ces semences peuvent féconder l’ovule de la femme afin qu’elle devienne enceinte.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aq" class="txs"><span class="bd">e) </span><span class="bd">Comment le sperme retrouve-t-il l’ovule pour le féconder&nbsp;?</span></div></div>
+<div class="m"><div id="T1ar" class="txs">Pour que le sperme retrouve l’ovule,</div> <div id="T1as" class="txs">il faut que l’homme couche avec sa femme.</div> <div id="T1at" class="txs">On appelle cela avoir des rapports sexuels ou «&nbsp;faire l’amour&nbsp;».</div> <div id="T1au" class="txs">Pendant cet événement,</div> <div id="T1av" class="txs">les spermatozoïdes,</div> <div id="T1aw" class="txs">transportés par le sperme quittent le pénis et entrent dans le vagin de la femme.</div> <div id="T1ax" class="txs">Les spermatozoïdes se déplacent en traversant le col de l’utérus,</div> <div id="T1ay" class="txs">puis l’utérus et remontent vers les trompes.</div></div>
+<div class="m"><div id="T1az" class="txs">La fécondation n’est possible qu’au moment où un ovule a quitté l’ovaire et se met en route vers l’utérus.</div> <div id="T1ba" class="txs">Lorsque les semences rencontrent cet ovule dans une des trompes,</div> <div id="T1bb" class="txs">ils le fécondent.</div> <div id="T1bc" class="txs">C’est le moment pendant lequel la grossesse commence.</div></div>
+<div class="m"><div id="T1bd" class="txs">L’ovule fécondé continue sa route vers l’utérus où il sera accueilli dans la muqueuse utérine,</div> <div id="T1be" class="txs">dans laquelle il s’installe comme dans un nid.</div> <div id="T1bf" class="txs">Dans cet abri,</div> <div id="T1bg" class="txs">l’embryon,</div> <div id="T1bh" class="txs">qui deviendra un fœtus puis un bébé peut se bien développer.</div> <div id="T1bi" class="txs">S’il n’y a pas d’ovule en route vers l’utérus,</div> <div id="T1bj" class="txs">il n’y a pas de fécondation et donc pas de grossesse.</div></div>
+<div class="m"><div id="T1bk" class="txs">Après la fécondation (ou même s’il n’y a pas eu de fécondation),</div> <div id="T1bl" class="txs">le sperme est évacué vers le vagin et il sort de la femme petit à petit.</div> <div id="T1bm" class="txs">C’est l’humidité que la femme ressent le lendemain après le rapport.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bn" class="txs"><span class="bd">f) </span><span class="bd">Le sperme de l’homme détermine le sexe d’un bébé</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1bo" class="txs">C’est l’homme qui détermine le sexe d’un bébé à cause du type de ses spermatozoïdes.</div> <div id="T1bp" class="txs">Les ovules de la femme sont neutres,</div> <div id="T1bq" class="txs">mais l’homme a deux types des spermatozoïdes :</div> <div id="T1br" class="txs">XX (féminin) et XY (masculin).</div> <div id="T1bs" class="txs">Si <span class="bd">un spermatozoïde féminin</span> rencontre <span class="bd">l’ovule</span>,</div> <div id="T1bt" class="txs">il en résultera <span class="bd">une fille</span>.</div> <div id="T1bu" class="txs">Mais si <span class="bd">un spermatozoïde masculin</span> rencontre <span class="bd">l’ovule</span> il en résultera <span class="bd">un fils</span>.</div> <div id="T1bv" class="txs">On ne peut donc jamais dire à sa femme :</div> <div id="T1bw" class="txs">«&nbsp;<span class="it">Tu ne m’a pas donné un fils&nbsp;!</span></div><div id="T1bx" class="txs">&nbsp;» Si un couple n’a que des filles,</div> <div id="T1by" class="txs">ou que des garçons,</div> <div id="T1bz" class="txs">c’est la responsabilité des spermatozoïdes de l’homme&nbsp;!</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ca" class="txs"><span class="bd">g) </span><span class="bd">Comment les jumeaux naissent&nbsp;?</span></div></div>
+<div class="m"><div id="T1cb" class="txs"><span class="bd">Les faux jumeaux</span> naissent quand deux ovules quittent l’ovaire en même temps et que deux spermatozoïdes les fécondent séparément.</div> <div id="T1cc" class="txs">Les deux se nichent dans l’utérus et commencent à grandir.</div></div>
+<div class="m"><div id="T1cd" class="txs"><span class="bd">Les vrais jumeaux naissent</span> quand un seul ovule se divise en deux après avoir été fécondé par le même spermatozoïde.</div> <div id="T1ce" class="txs">Les deux se nichent dans l’utérus et commencent à grandir.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/14 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/14 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/14 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

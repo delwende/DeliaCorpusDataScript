@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>9 a) Sujets divers 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.23 },
+    { label: "1b", start: 2.48, end: 5.21 },
+    { label: "1c", start: 5.46, end: 7.01 },
+    { label: "1d", start: 7.26, end: 10.11 },
+    { label: "1e", start: 10.36, end: 13.13 },
+    { label: "1f", start: 13.38, end: 21.01 },
+    { label: "1g", start: 21.26, end: 23.71 },
+    { label: "1h", start: 23.96, end: 33.11 },
+    { label: "1i", start: 33.36, end: 34.01 },
+    { label: "1j", start: 34.26, end: 38.17 },
+    { label: "1k", start: 38.42, end: 40.17 },
+    { label: "1l", start: 40.42, end: 45.17 },
+    { label: "1m", start: 45.42, end: 47.69 },
+    { label: "1n", start: 47.94, end: 51.05 },
+    { label: "1o", start: 51.3, end: 52.43 },
+    { label: "1p", start: 52.68, end: 56.85 },
+    { label: "1q", start: 57.1, end: 63.61 },
+    { label: "1r", start: 63.86, end: 66.95 },
+    { label: "1s", start: 67.2, end: 69.67 },
+    { label: "1t", start: 69.92, end: 71.19 },
+    { label: "1u", start: 71.44, end: 75.03 },
+    { label: "1v", start: 75.28, end: 76.99 },
+    { label: "1w", start: 77.24, end: 79.89 },
+    { label: "1x", start: 80.14, end: 83.27 },
+    { label: "1y", start: 83.52, end: 85.97 },
+    { label: "1z", start: 86.22, end: 88.21 },
+    { label: "1aa", start: 88.46, end: 90.59 },
+    { label: "1ab", start: 90.84, end: 93.35 },
+    { label: "1ac", start: 93.6, end: 97.03 },
+    { label: "1ad", start: 97.28, end: 100.67 },
+    { label: "1ae", start: 100.92, end: 107.11 },
+    { label: "1af", start: 107.36, end: 109.27 },
+    { label: "1ag", start: 109.52, end: 110.55 },
+    { label: "1ah", start: 110.8, end: 112.55 },
+    { label: "1ai", start: 112.8, end: 116.39 },
+    { label: "1aj", start: 116.64, end: 118.15 },
+    { label: "1ak", start: 118.4, end: 121.49 },
+    { label: "1al", start: 121.74, end: 123.43 },
+    { label: "1am", start: 123.68, end: 124.95 },
+    { label: "1an", start: 125.2, end: 131.49 },
+    { label: "1ao", start: 131.74, end: 135.21 },
+    { label: "1ap", start: 135.46, end: 139.73 },
+    { label: "1aq", start: 139.98, end: 141.81 },
+    { label: "1ar", start: 142.06, end: 145.11 },
+    { label: "1as", start: 145.36, end: 149.29 },
+    { label: "1at", start: 149.54, end: 150.99 },
+    { label: "1au", start: 151.24, end: 154.35 },
+    { label: "1av", start: 154.6, end: 157.77 },
+    { label: "1aw", start: 158.02, end: 158.61 },
+    { label: "1ax", start: 158.86, end: 159.33 },
+    { label: "1ay", start: 159.58, end: 161.45 },
+    { label: "1az", start: 161.7, end: 163.91 },
+    { label: "1ba", start: 164.16, end: 167.15 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 167.15;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "39-B039-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='38-B038-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='38-B038-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;9 a) Sujets divers&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='40-B040-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='40-B040-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B039-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="ul"><span class="bdit">9</span></span><span class="ul"><span class="bdit"> </span></span><span class="ul"><span class="bdit">a)</span></span><span class="ul"><span class="bdit"> Sujets divers</span></span><span class="ul"><span class="bdit">.</span></span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Une lettre de la plus haute importance</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs">Quand Saïd avait 2 ans,</div> <div id="T1d" class="txs">ses parents sont morts dans un accident de voiture,</div> <div id="T1e" class="txs">lui laissant en héritage une vaste propriété.</div> <div id="T1f" class="txs">Son oncle Ibrahim a été chargé de veiller sur le domaine jusqu’à ce que l’enfant puisse prendre possession des biens qui lui revenaient.</div> <div id="T1g" class="txs">Mais Ibrahim était un homme méchant.</div> <div id="T1h" class="txs">Il a envoyé le petit Saïd chez d’autres membres de la famille qui habitaient dans un endroit éloigné et a fait courir le bruit que le jeune garçon était mort.</div> <div id="T1i" class="txs">Puis,</div> <div id="T1j" class="txs">il a vendu la propriété et a utilisé l’argent pour lui-même.</div> <div id="T1k" class="txs">Durant toute son enfance,</div> <div id="T1l" class="txs">Saïd a pensé qu’il n’était qu’un pauvre orphelin contraint de travailler dur dans les champs.</div> <div id="T1m" class="txs">Il savait à peine lire et écrire,</div> <div id="T1n" class="txs">car il ne pouvait pas vraiment suivre une scolarité.</div></div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">Mais un jour</span>,</div> <div id="T1p" class="txs">il a reçu une étrange lettre de la part d’un autre de ses oncles prénommé Omar,</div> <div id="T1q" class="txs">qui lui racontait toute l’histoire et qui expliquait comment l’héritage de ses parents lui avait été dérobé par Ibrahim.</div> <div id="T1r" class="txs">Profondément attristé de ce qui était arrivé,</div> <div id="T1s" class="txs">l’oncle Omar voulait rectifier les choses.</div> <div id="T1t" class="txs">Pour ce faire,</div> <div id="T1u" class="txs">il avait travaillé dur pendant une longue période et avait pu racheter,</div> <div id="T1v" class="txs">au nom de l’héritier légitime,</div> <div id="T1w" class="txs">la propriété qui avait été vendue à tort.</div> <div id="T1x" class="txs">Saïd n’avait plus qu’à en prendre possession.</div> <div id="T1y" class="txs">Sa surprise était grande&nbsp;!</div> <div id="T1z" class="txs">Que devait-il faire&nbsp;?</div> <div id="T1aa" class="txs">Omar disait-il vrai&nbsp;?</div> <div id="T1ab" class="txs">Pouvait-il se fier à sa lettre&nbsp;?</div> <div id="T1ac" class="txs">Il en a parlé à son maître et à d’autres anciens du village,</div> <div id="T1ad" class="txs">mais tous ont tenté de le dissuader d’entreprendre le voyage.</div> <div id="T1ae" class="txs">Car que se passerait-il s’il partait aussi loin pour se rendre compte qu’on lui avait joué un mauvais tour&nbsp;?</div> <div id="T1af" class="txs">Saïd doutait aussi.</div> <div id="T1ag" class="txs">Finalement,</div> <div id="T1ah" class="txs">contre la volonté de son maître,</div> <div id="T1ai" class="txs">il est parti avec la lettre contenant les précieuses indications.</div> <div id="T1aj" class="txs">Et plus il la lisait,</div> <div id="T1ak" class="txs">plus l’espoir et la confiance remplissaient son cœur.</div></div>
+<div class="m"><div id="T1al" class="txs"><span class="bd">Une fois sur place</span>,</div> <div id="T1am" class="txs">il s’est rendu chez le juge,</div> <div id="T1an" class="txs">et celui-ci a pu lui confirmer que la lettre disait vrai et qu’il était bien le riche propriétaire d’un vaste domaine.</div> <div id="T1ao" class="txs">Inutile de dire que le jeune Saïd était comblé&nbsp;!</div> <div id="T1ap" class="txs">Il était émerveillé de voir tous les biens qui étaient désormais siens&nbsp;!</div> <div id="T1aq" class="txs">Rempli de reconnaissance,</div> <div id="T1ar" class="txs">il a promis qu’il en prendrait particulièrement soin.</div> <div id="T1as" class="txs">Et il était pressé de pouvoir remercier son oncle Omar&nbsp;!</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1at" class="txs"><span class="bdit">Conclusion</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T1au" class="txs"><span class="it">Cette histoire nous rappelle ce que dit la Bible.</span></div> <div id="T1av" class="txs"><span class="it">Dieu a un merveilleux héritage en réserve pour nous,</span></div> <div id="T1aw" class="txs"><span class="it">mais l’ennemi,</span></div> <div id="T1ax" class="txs"><span class="it">Satan,</span></div> <div id="T1ay" class="txs"><span class="it">fait tout pour nous en détourner.</span></div> <div id="T1az" class="txs"><span class="it">Quelle sera notre décision</span><span class="it"> </span><span class="it">?</span></div> <div id="T1ba" class="txs"><span class="it">A qui choisirons-nous de faire confiance</span><span class="it"> </span><span class="it">?</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/39 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

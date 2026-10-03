@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 L’AVEUGLE VOLEUR 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.23 },
+    { label: "1b", start: 2.48, end: 6.59 },
+    { label: "1c", start: 6.84, end: 13.63 },
+    { label: "1d", start: 13.88, end: 18.75 },
+    { label: "1e", start: 19, end: 25.91 },
+    { label: "1f", start: 26.16, end: 33.31 },
+    { label: "1g", start: 33.56, end: 36.39 },
+    { label: "1h", start: 36.64, end: 47.99 },
+    { label: "1i", start: 48.24, end: 53.75 },
+    { label: "1j", start: 54, end: 57.27 },
+    { label: "1k", start: 57.52, end: 63.51 },
+    { label: "1l", start: 63.76, end: 70.39 },
+    { label: "1m", start: 70.64, end: 89.67 },
+    { label: "1n", start: 89.92, end: 96.59 },
+    { label: "1o", start: 96.84, end: 107.15 },
+    { label: "1p", start: 107.4, end: 114.07 },
+    { label: "1q", start: 114.32, end: 119.59 },
+    { label: "1r", start: 119.84, end: 122.19 },
+    { label: "1s", start: 122.44, end: 128.31 },
+    { label: "1t", start: 128.56, end: 130.99 },
+    { label: "1u", start: 131.24, end: 142.95 },
+    { label: "1v", start: 143.2, end: 148.39 },
+    { label: "1w", start: 148.64, end: 149.39 },
+    { label: "1x", start: 149.64, end: 150.27 },
+    { label: "1y", start: 150.52, end: 155.83 },
+    { label: "1z", start: 156.08, end: 162.51 },
+    { label: "1aa", start: 162.76, end: 164.19 },
+    { label: "1ab", start: 164.44, end: 169.31 },
+    { label: "1ac", start: 169.56, end: 173.03 },
+    { label: "1ad", start: 173.28, end: 177.43 },
+    { label: "1ae", start: 177.68, end: 182.45 },
+    { label: "1af", start: 182.7, end: 183.91 },
+    { label: "1ag", start: 184.16, end: 189.67 },
+    { label: "1ah", start: 189.92, end: 194.15 },
+    { label: "1ai", start: 194.4, end: 197.31 },
+    { label: "1aj", start: 197.56, end: 198.63 },
+    { label: "1ak", start: 198.88, end: 202.59 },
+    { label: "1al", start: 202.84, end: 213.27 },
+    { label: "1am", start: 213.52, end: 219.83 },
+    { label: "1an", start: 220.08, end: 227.11 },
+    { label: "1ao", start: 227.36, end: 233.55 },
+    { label: "1ap", start: 233.8, end: 251.91 },
+    { label: "1aq", start: 252.16, end: 258.27 },
+    { label: "1ar", start: 258.52, end: 265.59 },
+    { label: "1as", start: 265.84, end: 275.39 },
+    { label: "1at", start: 275.64, end: 277.83 },
+    { label: "1au", start: 278.08, end: 284.03 },
+    { label: "1av", start: 284.28, end: 291.75 },
+    { label: "1aw", start: 292, end: 299.67 },
+    { label: "1ax", start: 299.92, end: 306.43 },
+    { label: "1ay", start: 306.68, end: 313.47 },
+    { label: "1az", start: 313.72, end: 320.07 },
+    { label: "1ba", start: 320.32, end: 322.83 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 322.83;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "10-B010-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='09-B009-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;10 L’AVEUGLE VOLEUR&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B010-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">10 L’AVEUGLE VOLEUR</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Aucun homme n’est sans défauts, a-t-on l’habitude de dire.</div> <div id="T1c" class="txs">Seulement, quand on vient à en accumuler beaucoup, cela devient diabolique.</div> <div id="T1d" class="txs">Dans un village vivait un aveugle très égoïste qui se prenait pour le plus malin.</div> <div id="T1e" class="txs">Pour lui, toute belle chose, tout objet de valeur ne devrait revenir qu’a lui et à lui seul.</div></div>
+<div class="m"><div id="T1f" class="txs">Avec ce comportement antisocial, il n’avait aucun ami ni de compagnons puisqu’il trompait tout le monde.</div></div>
+<div class="m"><div id="T1g" class="txs">En clair, l’aveugle volait.</div> <div id="T1h" class="txs">Il volait honteusement ses amis et même les inconnus qui se présentaient à lui pourvu qu’ils aient à leur possession des objets de convoitises.</div> <div id="T1i" class="txs">Ne nous demandez pas comment quelqu’un qui ne voit pas pourrait voler.</div> <div id="T1j" class="txs">Nous ne vous en dirons pas plus.</div> <div id="T1k" class="txs">Simplement, il volait et il était très habile dans cette vilaine et ignoble pratique qu’est le vol.</div> <div id="T1l" class="txs">Dans ce même village vivait aussi un homme honnête, loyal, travailleur, courageux et bon.</div></div>
+<div class="m"><div id="T1m" class="txs">«&nbsp;<span class="it">Comme celui qui a froid et celui qui souffre des maux d’yeux ne peuvent et ne doivent pas rester ensemble dans une même case</span>&nbsp;», l’honnête homme, indigne entreprit d’infliger à l’aveugle une correction à la hauteur de sa malhonnêteté.</div> <div id="T1n" class="txs">L’objectif était de pouvoir exorciser ce mal qui habitait ce dernier afin de le réintégrer utilement dans la société.</div></div>
+<div class="m"><div id="T1o" class="txs">C’est ainsi qu’un soir l’honnête homme se déguisa en un aveugle étranger perdu dans ses courses et sollicitant de l’aide.</div> <div id="T1p" class="txs">Il rencontra l’aveugle qui revenait du marché, guidé par sa canne et tenant solidement sa besace.</div> <div id="T1q" class="txs">Il cria alors au secours en titubant et en tapant dans tous les sens avec sa canne :</div> <div id="T1r" class="txs">«&nbsp;<span class="it">Y’</span><span class="it">a</span><span class="it">-</span><span class="it">t-il un</span><span class="it"> h</span><span class="it">omme </span><span class="it">à</span><span class="it"> côte</span><span class="it"> </span><span class="it">pour m</span><span class="it">’</span><span class="it">aider</span><span class="it"> ?</span></div><div id="T1s" class="txs"><span class="it"> </span><span class="it">J</span><span class="it">e suis aveugle, je</span><span class="it"> </span><span class="it">reviens de ma </span><span class="it">mendicité</span><span class="it"> qui a très bien marche d'ailleurs.</span></div><div id="T1t" class="txs"><span class="it">M</span><span class="it">ais je</span><span class="it"> </span><span class="it">suis en train de me perdre.</span></div> <div id="T1u" class="txs"><span class="it">Aidez-moi</span><span class="it">,</span><span class="it"> aidez-moi dignes</span><span class="it"> fi</span><span class="it">ls de ce</span><span class="it"> </span><span class="it">village ; descendants du </span><span class="it">b</span><span class="it">oa de la colline sacrée</span><span class="it">…</span>&nbsp;» À ces propos, le vrai aveugle n’entendit que l’écho de ses propres intérêts :</div> <div id="T1v" class="txs">«&nbsp;<span class="it">M</span><span class="it">endicité qui a bien marc</span><span class="it">hé&nbsp;»</span><span class="it"> (un coq </span><span class="it">à</span><span class="it"> </span><span class="it">déplumer</span>).</div></div>
+<div class="m"><div id="T1w" class="txs">Il répondit :</div> <div id="T1x" class="txs">«&nbsp;<span class="it">C</span><span class="it">'est qui</span><span class="it"> ?</span></div><div id="T1y" class="txs"><span class="it"> Venez vers moi</span><span class="it">,</span><span class="it"> vous avez de la</span><span class="it"> </span><span class="it">chance car moi je suis l</span><span class="it">à</span><span class="it">.</span></div> <div id="T1z" class="txs"><span class="it">Même si moi aussi je suis aveugle comme</span><span class="it"> </span><span class="it">vous, je connais mieux la route et je vous </span><span class="it">c</span><span class="it">onduirai</span>&nbsp;».</div> <div id="T1aa" class="txs">Il continua :</div> <div id="T1ab" class="txs">«<span class="it"> </span><span class="it">I</span><span class="it">l est dit qu'un aveugle ne conduit</span><span class="it"> </span><span class="it">pas un autre</span><span class="it">,</span><span class="it"> mais</span><span class="it"> j</span><span class="it">e crois que</span><span class="it"> ç</span><span class="it">a</span><span class="it"> </span><span class="it">ira </span>».</div> <div id="T1ac" class="txs">Les deux hommes se rapprochèrent et se présentèrent rapidement.</div></div>
+<div class="m"><div id="T1ad" class="txs">Sans trop traîner, le vrai aveugle demanda :</div> <div id="T1ae" class="txs">«&nbsp;<span class="it">M</span><span class="it">on ami</span><span class="it"> </span><span class="it">qu'as-tu eu lors de ta sortie&nbsp;?</span></div><div id="T1af" class="txs">&nbsp;», l’autre répondit :</div> <div id="T1ag" class="txs">«&nbsp;<span class="it">Dieu merci, les</span><span class="it"> h</span><span class="it">ommes de ce village sont très bons de </span><span class="it">cœur</span><span class="it">, ils sont miséricordieux.</span></div><div id="T1ah" class="txs"><span class="it"> </span><span class="it">Un </span><span class="it">h</span><span class="it">omme m'a </span><span class="it">offert </span><span class="it">une grosse barre de sel.</span></div> <div id="T1ai" class="txs"><span class="it">Elle me su</span><span class="it">ff</span><span class="it">ira pour</span><span class="it"> </span><span class="it">toute la saison </span>».</div> <div id="T1aj" class="txs">L’aveugle demanda :</div> <div id="T1ak" class="txs">«&nbsp;<span class="it">Puis-je conte</span><span class="it">mp</span><span class="it">ler ta</span><span class="it"> </span><span class="it">barre de sel, comme je ne vois pas</span>&nbsp;».</div></div>
+<div class="m"><div id="T1al" class="txs">Il l'a prise dans ses bras, la pesa et la soupesa maintes et une fois et l’idée lui vient de la dérober.</div> <div id="T1am" class="txs">Il courut se cacher derrière les buissons qui se trouvaient dans les environs avec la barre de sel de l’autre.</div></div>
+<div class="m"><div id="T1an" class="txs">Quelques minutes plus tard, le faux aveugle réclama en criant et en suppliant en vain, sa barre de sel.</div> <div id="T1ao" class="txs">C’est ainsi qu’il prit un gros caillou et prononça quelques incantations en ces termes :</div> <div id="T1ap" class="txs">«&nbsp;<span class="it">S</span><span class="it">i </span><span class="it">c’</span><span class="it">est </span><span class="it">vrai </span><span class="it">que moi je</span><span class="it"> </span><span class="it">suis n</span><span class="it">é</span><span class="it"> de la lignée pure de mes </span><span class="it">aïeux ; </span><span class="it">que </span><span class="it">j</span><span class="it">e ne dois rien </span><span class="it">à</span><span class="it"> mes</span><span class="it"> ancêtres,</span><span class="it"> que</span><span class="it"> j</span><span class="it">e suis honnête, mais que c'est tout simple</span><span class="it">m</span><span class="it">ent parce que</span><span class="it"> </span><span class="it">je suis un </span><span class="it">pauvre </span><span class="it">et </span><span class="it">misérable</span><span class="it"> aveugle, que le caillou </span><span class="it">déniche</span><span class="it"> pour moi</span><span class="it"> </span><span class="it">le voleu</span><span class="it">r</span><span class="it"> de mon sel</span><span class="it"> </span><span class="it">par la puissance de Dieu.</span></div><div id="T1aq" class="txs">&nbsp;» Il regarda bien où était couché le voleur aveugle et l’assomma fort sur le dos.</div> <div id="T1ar" class="txs">Ce dernier se déplaça de nouveau dans d’autres buissons avec la barre qu’il tenait solidement.</div> <div id="T1as" class="txs">Une fois de plus, l’autre prit encore un autre caillou, fit de nouvelles incantations et assomma l’aveugle de plus bel.</div></div>
+<div class="m"><div id="T1at" class="txs">La scène se répéta plusieurs fois de suite.</div> <div id="T1au" class="txs">Ne supportant plus les coups, l’aveugle sortit de sa cachette et dit :</div> <div id="T1av" class="txs">«&nbsp;<span class="it">M</span><span class="it">on ami, viens prendre ta barre de se</span><span class="it">l</span><span class="it">, je sais bien que tu n’es pas aveugle car tu es adroit dans tes lancées </span>».</div> <div id="T1aw" class="txs">Alors, il comprit qu’on voulait le sanctionner et il jura de ne plus jamais tenter de voler tout le restant de sa vie.</div> <div id="T1ax" class="txs">Il resta sage au village et se contentait de ce que les gens lui donnaient comme aumône.</div> <div id="T1ay" class="txs">Le vol est un acte très ignoble, prendre ce qui ne t’appartient pas est le pire des crimes.</div> <div id="T1az" class="txs">La fin du voleur est toujours douloureuse car il paie ses actes d’une forte monnaie :</div> <div id="T1ba" class="txs">celle de la mort violente.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 10 l'aveugle voleur.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

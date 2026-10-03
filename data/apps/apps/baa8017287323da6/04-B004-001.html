@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>351 Hunnduko ni bonni 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 2.13, end: 13.68 },
+    { label: "1b", start: 13.93, end: 21.94 },
+    { label: "1c", start: 22.19, end: 30.8 },
+    { label: "1d", start: 31.05, end: 45.29 },
+    { label: "1e", start: 45.54, end: 58.24 },
+    { label: "1f", start: 58.49, end: 69.82 },
+    { label: "1g", start: 70.07, end: 81.47 },
+    { label: "1h", start: 81.72, end: 96.06 },
+    { label: "1i", start: 96.31, end: 107.84 },
+    { label: "1j", start: 108.09, end: 121.08 },
+    { label: "1k", start: 121.33, end: 130.64 },
+    { label: "1l", start: 130.89, end: 142.56 },
+    { label: "1m", start: 142.81, end: 154.04 },
+    { label: "1n", start: 154.29, end: 165.22 },
+    { label: "1o", start: 165.47, end: 177.46 },
+    { label: "1p", start: 177.71, end: 191.85 },
+    { label: "1q", start: 192.1, end: 202.1 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 2.13;
+var stopTime  = 202.1;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;351 Hunnduko ni bonni&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">351 Hunnduko ni bonni mboddi.</div></div>
+<div class="m"><div id="T1b" class="txs">352 Hunnduko yo malfa.</div></div>
+<div class="m"><div id="T1c" class="txs">353 Huunde fayataa ɓura nguru muuɗum.</div></div>
+<div class="m"><div id="T1d" class="txs">355 Huyre e heeyre, hoore e luwal keydataa nder hunnduko.</div></div>
+<div class="m"><div id="T1e" class="txs">356 Iɓe anndi waandu na woodi daande de ɓe kaɓɓi ɗum kataare.</div></div>
+<div class="m"><div id="T1f" class="txs">358 Iilel gaño na ɓuri niɓel muuɗum.</div></div>
+<div class="m"><div id="T1g" class="txs">360 Ina ŋata ŋatataa fuh, woɗɗita ɓuri.</div></div>
+<div class="m"><div id="T1h" class="txs">361 Ina teeŋa tawa taƴaay, ina taƴa tawa teeŋaay.</div></div>
+<div class="m"><div id="T1i" class="txs">362 Inan cobbal lallungal, ɗuum woowaa.</div></div>
+<div class="m"><div id="T1j" class="txs">363 Inna fuh, ɓokki jaasi : kam rimata hokka faɗɗooɓe.</div></div>
+<div class="m"><div id="T1k" class="txs">364 Inna jam baaba weleende.</div></div>
+<div class="m"><div id="T1l" class="txs">365 Inna muumo anndi ko muumo haalata.</div></div>
+<div class="m"><div id="T1m" class="txs">366 Iro-irongal na anndi ɗo irotoo ko wanaa suudu esum.</div></div>
+<div class="m"><div id="T1n" class="txs">367 Itti waandu watti rawaandu, soppunde dillaay.</div></div>
+<div class="m"><div id="T1o" class="txs">368 Ittu jaaɓe de njoppidaa njaaɓi e ji'e muuɗum.</div></div>
+<div class="m"><div id="T1p" class="txs">369 Jaasi e baaba fuh, wo wi'eede baaba jiimtu e loonde.</div></div>
+<div class="m"><div id="T1q" class="txs">370 Jaasi e diina fuh, wo diina ndontoori : kañum noddinta de juulataa.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/04 prov fulf vol2.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

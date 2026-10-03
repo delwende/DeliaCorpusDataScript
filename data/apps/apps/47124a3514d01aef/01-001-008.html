@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prov 41-80 8</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "8a", start: 169.33, end: 172.1 },
+    { label: "8b", start: 172.35, end: 174.94 },
+    { label: "8c", start: 175.19, end: 179.49 },
+    { label: "8d", start: 179.74, end: 182.52 },
+    { label: "8e", start: 182.77, end: 184.08 },
+    { label: "8f", start: 184.33, end: 186.73 },
+    { label: "8g", start: 186.98, end: 195.49 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 169.33;
+var stopTime  = 195.49;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-007.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Prov 41-80&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;8&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-009.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 41 a 80-image8.jpg" />
+
+<div class="m"><div id="T8a" class="txs"><span class="bd">48 </span><span class="bd">K</span><span class="bd">atr sã n tẽeg a sẽn dɩ zaamẽ,</span></div> <div id="T8b" class="txs"><span class="bd">a kẽeda tẽng ne wĩntoogo.</span></div></div>
+<div class="m"><div id="T8c" class="txs"><span class="bdit">(Si l’hyène se rappelle de ce qu’elle a mangé la veille,</span></div> <div id="T8d" class="txs"><span class="bdit">elle fonce en plein</span><span class="bdit"> jour dans le village,</span></div> <div id="T8e" class="txs"><span class="bdit">pourtant </span><span class="bdit">oooo</span><span class="bdit">).</span></div></div>
+<div class="m"><div id="T8f" class="txs"><span class="bd">K</span><span class="bd">atr sã n tẽeg a sẽn dɩ zaamẽ,</span></div> <div id="T8g" class="txs"><span class="bd">a kẽeda tẽng ne wĩntoogo.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 41 a 80 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

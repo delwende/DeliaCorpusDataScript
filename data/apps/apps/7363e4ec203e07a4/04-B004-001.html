@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°3 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.77 },
+    { label: "1b", start: 2.02, end: 4.41 },
+    { label: "1c", start: 4.66, end: 5.51 },
+    { label: "1d", start: 5.76, end: 8.99 },
+    { label: "1e", start: 9.24, end: 10.61 },
+    { label: "1f", start: 10.86, end: 14.89 },
+    { label: "1g", start: 15.14, end: 16.13 },
+    { label: "1h", start: 16.38, end: 18.09 },
+    { label: "1i", start: 18.34, end: 20.01 },
+    { label: "1j", start: 20.26, end: 22.39 },
+    { label: "1k", start: 22.64, end: 24.07 },
+    { label: "1l", start: 24.32, end: 26.79 },
+    { label: "1m", start: 27.04, end: 28.61 },
+    { label: "1n", start: 28.86, end: 31.27 },
+    { label: "1o", start: 31.52, end: 34.11 },
+    { label: "1p", start: 34.36, end: 37.73 },
+    { label: "1q", start: 37.98, end: 43.49 },
+    { label: "1r", start: 43.74, end: 47.87 },
+    { label: "1s", start: 48.12, end: 49.93 },
+    { label: "1t", start: 50.18, end: 53.11 },
+    { label: "1u", start: 53.36, end: 55.77 },
+    { label: "1v", start: 56.02, end: 59.87 },
+    { label: "1w", start: 60.12, end: 61.71 },
+    { label: "1x", start: 61.96, end: 67.15 },
+    { label: "1y", start: 67.4, end: 72.95 },
+    { label: "1z", start: 73.2, end: 74.97 },
+    { label: "1aa", start: 75.22, end: 77.43 },
+    { label: "1ab", start: 77.68, end: 82.67 },
+    { label: "1ac", start: 82.92, end: 84.39 },
+    { label: "1ad", start: 84.64, end: 87.11 },
+    { label: "1ae", start: 87.36, end: 89.11 },
+    { label: "1af", start: 89.36, end: 92.87 },
+    { label: "1ag", start: 93.12, end: 99.05 },
+    { label: "1ah", start: 99.3, end: 103.83 },
+    { label: "1ai", start: 104.08, end: 109.97 },
+    { label: "1aj", start: 110.22, end: 111.69 },
+    { label: "1ak", start: 111.94, end: 117.53 },
+    { label: "1al", start: 117.78, end: 121.23 },
+    { label: "1am", start: 121.48, end: 125.45 },
+    { label: "1an", start: 125.7, end: 127.69 },
+    { label: "1ao", start: 127.94, end: 129.85 },
+    { label: "1ap", start: 130.1, end: 138.93 },
+    { label: "1aq", start: 139.18, end: 143.35 },
+    { label: "1ar", start: 143.6, end: 144.19 },
+    { label: "1as", start: 144.44, end: 145.29 },
+    { label: "1at", start: 145.54, end: 146.29 },
+    { label: "1au", start: 146.54, end: 147.39 },
+    { label: "1av", start: 147.64, end: 148.95 },
+    { label: "1aw", start: 149.2, end: 149.79 },
+    { label: "1ax", start: 150.04, end: 151.21 },
+    { label: "1ay", start: 151.46, end: 152.29 },
+    { label: "1az", start: 152.54, end: 158.91 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 158.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°3&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°3 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Apprenez à connaître vos dépenses.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="bdit">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Le mari d’Aminata doit s’absenter pour une semaine.</span></div> <div id="T1e" class="txs"><span class="it">Avant son départ,</span></div> <div id="T1f" class="txs"><span class="it">il laisse à sa femme une grosse somme pour les dépenses de la famille.</span></div> <div id="T1g" class="txs"><span class="it">Chaque jour,</span></div> <div id="T1h" class="txs"><span class="it">Aminata va au marché,</span></div> <div id="T1i" class="txs"><span class="it">paie les condiments.</span></div> <div id="T1j" class="txs"><span class="it">Elle prend du temps pour visiter ses amis,</span></div> <div id="T1k" class="txs"><span class="it">faire des salutations,</span></div> <div id="T1l" class="txs"><span class="it">elle amène son enfant malade chez le médecin.</span></div> <div id="T1m" class="txs"><span class="it">Quand son mari rentre,</span></div> <div id="T1n" class="txs"><span class="it">il lui demande</span><span class="it"> </span><span class="it">si</span><span class="it"> </span><span class="it">il</span><span class="it"> </span><span class="it">reste</span><span class="it"> </span><span class="it">de</span><span class="it"> </span><span class="it">l’argent.</span></div><div id="T1o" class="txs"><span class="it"> </span><span class="it">Aminata</span><span class="it"> </span><span class="it">dit</span><span class="it"> </span><span class="it">qu’elle</span><span class="it"> </span><span class="it">a</span><span class="it"> </span><span class="it">tout</span><span class="it"> </span><span class="it">utilisé.</span></div><div id="T1p" class="txs"><span class="it"> </span><span class="it">Son mari lui demande à quoi elle a dépensé l’argent.</span></div> <div id="T1q" class="txs"><span class="it">Aminata sait qu’elle n’a plus d’argent et que l’argent ne lui a même pas suffi pour la semaine,</span></div> <div id="T1r" class="txs"><span class="it">mais elle ne peut pas dire à son mari comment elle a dépensé l’argent.</span></div> <div id="T1s" class="txs"><span class="it">Elle sait que l’argent est parti,</span></div> <div id="T1t" class="txs"><span class="it">mais elle ne sait pas où est parti</span><span class="it"> </span><span class="it">l’argent.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1u" class="txs"><span class="it">Êtes-vous parfois comme Aminata,</span></div> <div id="T1v" class="txs"><span class="it">à ne pas vraiment savoir à quoi vous avez dépensé votre argent?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1w" class="txs"><span class="bdit">Très </span>souvent,</div> <div id="T1x" class="txs">on ne sait pas précisément à quoi a été dépensé l’argent que nous avons eu dans notre porte-monnaie.</div> <div id="T1y" class="txs">C’est facile de dépenser de l’argent sans savoir vraiment à quoi on a dépensé cet argent.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1aa" class="txs">Apprenez à mieux connaître vos dépenses.</div> <div id="T1ab" class="txs">C’est une étape indispensable si vous voulez mieux gérer votre argent.</div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="ul">Exercice à</span><span class="ul"> </span><span class="ul">faire:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ad" class="txs">Réfléchissez à vos dépenses habituelles.</div> <div id="T1ae" class="txs">Cherchez à calculer :</div></div>
+<ul>
+  <li class="zuli1">combien vous dépensez pour la sauce pour un repas?</li>
+  <li class="zuli1">combien vous avez besoin de mesures de riz pour nourrir votre famille chaque jour?</li>
+  <li class="zuli1">combien vous dépensez pour les unités de téléphone chaque semaine?</li>
+  <li class="zuli1">combien vous dépensez pour le transport chaque semaine pour vos visites?</div> <div id="T1af" class="txs">pour aller au marché?</li></div>
+  <li class="zuli1">combien vous payez pour les petits cadeaux et bonbons offerts chaque semaine à vos enfants?</li>
+  <li class="zuli1">combien vous donnez chaque mois à l’église?</li>
+  <li class="zuli1">combien vous donnez en général pour les cas sociaux?</div> <div id="T1ag" class="txs">Pensez à toutes les dépenses,</div> <div id="T1ah" class="txs">même les plus petites.</li>
+</ul></div>
+<div class="p_Corpsdetexte"><div id="T1ai" class="txs">Ceux et celles qui savent écrire peuvent noter leurs dépenses dans un cahier pendant trois mois pour mieux savoir à quoi l’argent est dépensé.</div> <div id="T1aj" class="txs">Séparer les dépenses selon leur catégorie (nourriture,</div> <div id="T1ak" class="txs">habits,</div> <div id="T1al" class="txs">transport,</div> <div id="T1am" class="txs">écolage,</div> <div id="T1an" class="txs">cas sociaux,</div> <div id="T1ao" class="txs">dîme et offrande,</div> <div id="T1ap" class="txs">cadeau,</div> <div id="T1aq" class="txs">frais médicaux,</div> <div id="T1ar" class="txs">etc.)</div> <div id="T1as" class="txs">Cela vous aidera à connaître vos dépenses avec plus de précision.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/012_Conseil_n3.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>53 Monnde Ndarja 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 7.28, end: 9.35 },
+    { label: "1b", start: 9.6, end: 11.17 },
+    { label: "1c", start: 11.42, end: 13.47 },
+    { label: "1d", start: 13.72, end: 16.03 },
+    { label: "1e", start: 16.28, end: 18.31 },
+    { label: "1f", start: 18.56, end: 19.43 },
+    { label: "1g", start: 19.68, end: 23.11 },
+    { label: "1h", start: 23.36, end: 25.45 },
+    { label: "1i", start: 25.7, end: 28.53 },
+    { label: "1j", start: 28.78, end: 29.91 },
+    { label: "1k", start: 30.16, end: 32.69 },
+    { label: "1l", start: 32.94, end: 35.71 },
+    { label: "1m", start: 35.96, end: 39.57 },
+    { label: "1n", start: 39.82, end: 42.33 },
+    { label: "1o", start: 42.58, end: 45.59 },
+    { label: "1p", start: 45.84, end: 47.51 },
+    { label: "1q", start: 47.76, end: 48.45 },
+    { label: "1r", start: 48.7, end: 50.35 },
+    { label: "1s", start: 50.6, end: 52.77 },
+    { label: "1t", start: 53.02, end: 53.79 },
+    { label: "1u", start: 54.04, end: 55.31 },
+    { label: "1v", start: 55.56, end: 57.95 },
+    { label: "1w", start: 58.2, end: 59.35 },
+    { label: "1x", start: 59.6, end: 60.79 },
+    { label: "1y", start: 61.04, end: 62.99 },
+    { label: "1z", start: 63.24, end: 64.71 },
+    { label: "1aa", start: 64.96, end: 69.61 },
+    { label: "1ab", start: 69.86, end: 70.59 },
+    { label: "1ac", start: 70.84, end: 75.45 },
+    { label: "1ad", start: 75.7, end: 76.83 },
+    { label: "1ae", start: 77.08, end: 81.65 },
+    { label: "1af", start: 81.9, end: 84.77 },
+    { label: "1ag", start: 85.02, end: 88.15 },
+    { label: "1ah", start: 88.4, end: 88.95 },
+    { label: "1ai", start: 89.2, end: 91.45 },
+    { label: "1aj", start: 91.7, end: 93.79 },
+    { label: "1ak", start: 94.04, end: 97.07 },
+    { label: "1al", start: 97.32, end: 99.61 },
+    { label: "1am", start: 99.86, end: 103.27 },
+    { label: "1an", start: 103.52, end: 105.95 },
+    { label: "1ao", start: 106.2, end: 109.39 },
+    { label: "1ap", start: 109.64, end: 114.89 },
+    { label: "1aq", start: 115.14, end: 118.79 },
+    { label: "1ar", start: 119.04, end: 121.41 },
+    { label: "1as", start: 121.66, end: 127.03 },
+    { label: "1at", start: 127.28, end: 129.89 },
+    { label: "1au", start: 130.14, end: 132.15 },
+    { label: "1av", start: 132.4, end: 133.79 },
+    { label: "1aw", start: 134.04, end: 135.55 },
+    { label: "1ax", start: 135.8, end: 140.79 },
+    { label: "1ay", start: 141.04, end: 146.87 },
+    { label: "1az", start: 147.12, end: 149.61 },
+    { label: "1ba", start: 149.86, end: 154.25 },
+    { label: "1bb", start: 154.5, end: 156.71 },
+    { label: "1bc", start: 156.96, end: 158.13 },
+    { label: "1bd", start: 158.38, end: 160.03 },
+    { label: "1be", start: 160.28, end: 163.33 },
+    { label: "1bf", start: 163.58, end: 164.81 },
+    { label: "1bg", start: 165.06, end: 166.25 },
+    { label: "1bh", start: 166.5, end: 168.65 },
+    { label: "1bi", start: 168.9, end: 171.23 },
+    { label: "1bj", start: 171.48, end: 174.95 },
+    { label: "1bk", start: 175.2, end: 177.69 },
+    { label: "1bl", start: 177.94, end: 179.69 },
+    { label: "1bm", start: 179.94, end: 182.91 },
+    { label: "1bn", start: 183.16, end: 183.93 },
+    { label: "1bo", start: 184.18, end: 186.03 },
+    { label: "1bp", start: 186.28, end: 188.65 },
+    { label: "1bq", start: 188.9, end: 190.39 },
+    { label: "1br", start: 190.64, end: 193.91 },
+    { label: "1bs", start: 194.16, end: 195.03 },
+    { label: "1bt", start: 195.28, end: 196.95 },
+    { label: "1bu", start: 197.2, end: 199.17 },
+    { label: "1bv", start: 199.42, end: 202.21 },
+    { label: "1bw", start: 202.46, end: 203.97 },
+    { label: "1bx", start: 204.22, end: 205.11 },
+    { label: "1by", start: 205.36, end: 208.49 },
+    { label: "1bz", start: 208.74, end: 210.93 },
+    { label: "1ca", start: 211.18, end: 214.77 },
+    { label: "1cb", start: 215.02, end: 218.11 },
+    { label: "1cc", start: 218.36, end: 221.01 },
+    { label: "1cd", start: 221.26, end: 223.23 },
+    { label: "1ce", start: 223.48, end: 225.15 },
+    { label: "1cf", start: 225.4, end: 229.09 },
+    { label: "1cg", start: 229.34, end: 232.25 },
+    { label: "1ch", start: 232.5, end: 235.59 },
+    { label: "1ci", start: 235.84, end: 238.03 },
+    { label: "1cj", start: 238.28, end: 240.11 },
+    { label: "1ck", start: 240.36, end: 241.55 },
+    { label: "1cl", start: 241.8, end: 243.19 },
+    { label: "1cm", start: 243.44, end: 245.35 },
+    { label: "1cn", start: 245.6, end: 249.19 },
+    { label: "1co", start: 249.44, end: 251.57 },
+    { label: "1cp", start: 251.82, end: 257.59 },
+    { label: "1cq", start: 257.84, end: 261.09 },
+    { label: "1cr", start: 261.34, end: 264.43 },
+    { label: "1cs", start: 264.68, end: 266.59 },
+    { label: "1ct", start: 266.84, end: 267.55 },
+    { label: "1cu", start: 267.8, end: 270.69 },
+    { label: "1cv", start: 270.94, end: 272.79 },
+    { label: "1cw", start: 273.04, end: 275.53 },
+    { label: "1cx", start: 275.78, end: 277.89 },
+    { label: "1cy", start: 278.14, end: 280.31 },
+    { label: "1cz", start: 280.56, end: 285.13 },
+    { label: "1da", start: 285.38, end: 287.41 },
+    { label: "1db", start: 287.66, end: 288.71 },
+    { label: "1dc", start: 288.96, end: 289.83 },
+    { label: "1dd", start: 290.08, end: 291.43 },
+    { label: "1de", start: 291.68, end: 292.95 },
+    { label: "1df", start: 293.2, end: 294.71 },
+    { label: "1dg", start: 294.96, end: 297.99 },
+    { label: "1dh", start: 298.24, end: 299.75 },
+    { label: "1di", start: 300, end: 301.47 },
+    { label: "1dj", start: 301.72, end: 304.13 },
+    { label: "1dk", start: 304.38, end: 306.13 },
+    { label: "1dl", start: 306.38, end: 308.61 },
+    { label: "1dm", start: 308.86, end: 312.03 },
+    { label: "1dn", start: 312.28, end: 318.95 },
+    { label: "1do", start: 319.2, end: 321.03 },
+    { label: "1dp", start: 321.28, end: 323.03 },
+    { label: "1dq", start: 323.28, end: 325.05 },
+    { label: "1dr", start: 325.3, end: 328.05 },
+    { label: "1ds", start: 328.3, end: 330.27 },
+    { label: "1dt", start: 330.52, end: 332.91 },
+    { label: "1du", start: 333.16, end: 334.33 },
+    { label: "1dv", start: 334.58, end: 336.41 },
+    { label: "1dw", start: 336.66, end: 338.71 },
+    { label: "1dx", start: 338.96, end: 341.07 },
+    { label: "1dy", start: 341.32, end: 342.97 },
+    { label: "1dz", start: 343.22, end: 344.63 },
+    { label: "1ea", start: 344.88, end: 346.23 },
+    { label: "1eb", start: 346.48, end: 349.59 },
+    { label: "1ec", start: 349.84, end: 351.99 },
+    { label: "1ed", start: 352.24, end: 355.65 },
+    { label: "1ee", start: 355.9, end: 357.99 },
+    { label: "1ef", start: 358.24, end: 359.63 },
+    { label: "1eg", start: 359.88, end: 363.31 },
+    { label: "1eh", start: 363.56, end: 366.39 },
+    { label: "1ei", start: 366.64, end: 371.63 },
+    { label: "1ej", start: 371.88, end: 373.77 },
+    { label: "1ek", start: 374.02, end: 376.25 },
+    { label: "1el", start: 376.5, end: 376.91 },
+    { label: "1em", start: 377.16, end: 378.51 },
+    { label: "1en", start: 378.76, end: 382.43 },
+    { label: "1eo", start: 382.68, end: 385.31 },
+    { label: "1ep", start: 385.56, end: 386.77 },
+    { label: "1eq", start: 387.02, end: 390.21 },
+    { label: "1er", start: 390.46, end: 398.43 },
+    { label: "1es", start: 398.68, end: 399.71 },
+    { label: "1et", start: 399.96, end: 403.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 7.28;
+var stopTime  = 403.23;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "10-B010-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='09-B009-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;53 Monnde Ndarja&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B010-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">53 Monnde Ndarja</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Waɗiino e jamaanuuji,</div> <div id="T1c" class="txs">ɓii-laamu cattuɗo sanne,</div> <div id="T1d" class="txs">cuuso sanne.</div> <div id="T1e" class="txs">Na o jogii waayiyo.</div> <div id="T1f" class="txs">Waayiiko o,</div> <div id="T1g" class="txs">wi'i so o suusu ni o hoɗowa monnde Ndarja.</div></div>
+<div class="m"><div id="T1h" class="txs">Neɗɗo fu na hoɗowi monnde Ndarja,</div> <div id="T1i" class="txs">watta balɗe jeɗɗi de na'im fu tummba.</div> <div id="T1j" class="txs">E bada,</div> <div id="T1k" class="txs">duroowo hoɗoway monnde Ndarja.</div> <div id="T1l" class="txs">Ɓii-laamu wi'i toon hoɗoyta.</div> <div id="T1m" class="txs">Toon burdaanu na wi'ee Konkaana woni.</div> <div id="T1n" class="txs">E bada hawray konɗo fillitowii.</div></div>
+<div class="m"><div id="T1o" class="txs">Ɓii-laamu fini wi'i eggan hoɗowa monnde Ndarja.</div> <div id="T1p" class="txs">Wuro hawriti sawrini o.</div> <div id="T1q" class="txs">O salii.</div> <div id="T1r" class="txs">O haalani maccuɗo makko.</div> <div id="T1s" class="txs">Kamɓe ndimdaa nyannde wootere,</div> <div id="T1t" class="txs">kamɓe pijidi,</div> <div id="T1u" class="txs">kamɓe ngondi e bada.</div> <div id="T1v" class="txs">Maccuɗo wi'i ɗo o yaata fu yahan.</div> <div id="T1w" class="txs">Ɓe ndewndiri,</div> <div id="T1x" class="txs">ɓe mbaynowii kaananke.</div> <div id="T1y" class="txs">Kanko tan kaananke rimi.</div> <div id="T1z" class="txs">Kanko tan inniiko du rimi.</div></div>
+<div class="m"><div id="T1aa" class="txs">Ɓe njottinoo heɓa ɓe mbaynoo kaananke ni ɗum wi'i ɓe njooɗoo.</div> <div id="T1ab" class="txs">Ɓe njooɗii.</div> <div id="T1ac" class="txs">Kaananke ƴami salle na ɓe anndi koo njawɗo monnde Ndarja wartataa&nbsp;?</div> <div id="T1ad" class="txs">Ɓe mbi'i na ɓe anndi.</div> <div id="T1ae" class="txs">Kaananke ƴami ko saabii ndelle de na ɓe kaɗowa monnde Ndarja&nbsp;?</div> <div id="T1af" class="txs">Ɓe mbi'i na'i tummbuɗi ɓe kaajaa.</div></div>
+<div class="m"><div id="T1ag" class="txs">Kaananke holli ɓe mboɗa eggooɓe.</div> <div id="T1ah" class="txs">O wi'i so on njehi,</div> <div id="T1ai" class="txs">ta konnee ɗakkol duppannde kaata,</div> <div id="T1aj" class="txs">ta konnee gorgal tiirey.</div> <div id="T1ak" class="txs">Huunde fu na metti hoɗande e aduna,</div> <div id="T1al" class="txs">ɗe ɗiɗi metti hoɗande.</div> <div id="T1am" class="txs">Ni ɓii-laamu e maccuɗom ummii kooti.</div></div>
+<div class="m"><div id="T1an" class="txs">Kujje tati ɓuri bonde e adunaaru:</div> <div id="T1ao" class="txs">puccu tabaawu saaju,</div> <div id="T1ap" class="txs">debbo daneejo daaliijo e duroowo mulɓo.</div> <div id="T1aq" class="txs">Ɗe kujje tati du ɓii-laamu hawrondini.</div> <div id="T1ar" class="txs">Deekiiko yo debbo daneejo daaliijo,</div> <div id="T1as" class="txs">puccu makko yo puccu tabaawu saaju,</div> <div id="T1at" class="txs">duroowo makko yo duroowo mulɓo.</div> <div id="T1au" class="txs">O noddi maccuɗo makko,</div> <div id="T1av" class="txs">o noddi duroowo makko,</div> <div id="T1aw" class="txs">o noddi deekiiko.</div> <div id="T1ax" class="txs">O wi'i ɓe keɓinoo ko so Alla jaɓii ɓe koɗowan monnde Ndarja.</div> <div id="T1ay" class="txs">Konkaana na toon moorim mooridaaɗi e kanŋe na cammba beccem.</div> <div id="T1az" class="txs">E bada yi'ay mo hunngii warude.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ba" class="txs">Heddii na'i ɓii-laamu konnowi monnde Ndarja.</div> <div id="T1bb" class="txs">Ɗi mbaali ɗoon.</div> <div id="T1bc" class="txs">Weeti.</div> <div id="T1bd" class="txs">Duroowo weetowi ɗi.</div> <div id="T1be" class="txs">O hawri njeyaaɗo Konkaana.</div> <div id="T1bf" class="txs">Joomum ƴami o,</div> <div id="T1bg" class="txs">toy ƴuurataa?</div> <div id="T1bh" class="txs">O wi'i monnde Ndarja koɗum.</div> <div id="T1bi" class="txs">O wi'i aan kay a maayii.</div> <div id="T1bj" class="txs">Gorko hoɗay moonde Ndarja e bada de hooti fillitowi.</div> <div id="T1bk" class="txs">O wi'i kanko o ɗu'nay haala.</div> <div id="T1bl" class="txs">Monnde Ndarja ni o hoɗi.</div> <div id="T1bm" class="txs">Njeyaaɗo Konkaana wi'i kam du ɗu'nay haala,</div> <div id="T1bn" class="txs">ko anndi nih,</div> <div id="T1bo" class="txs">bone finan jaango.</div></div>
+<div class="m"><div id="T1bp" class="txs">Njeyaaɗo Konkaana wellii hooti,</div> <div id="T1bq" class="txs">haalanowi Konkaana.</div> <div id="T1br" class="txs">O wi'i pullo ɓii-laamu warii hoɗii monnde Ndarja.</div> <div id="T1bs" class="txs">Konkaana wi'i,</div> <div id="T1bt" class="txs">wanaa pullo hoɗi monnde Ndarja,</div> <div id="T1bu" class="txs">yo mayɗo hoɗi monnde Ndarja.</div> <div id="T1bv" class="txs">So Alla jaɓii jam finii jaango,</div> <div id="T1bw" class="txs">ni mi warowan o.</div></div>
+<div class="m"><div id="T1bx" class="txs">Weeti.</div> <div id="T1by" class="txs">Pucel tabawel saajel na haɓɓii.</div> <div id="T1bz" class="txs">Duroowel mulɓel orii na'i,</div> <div id="T1ca" class="txs">walaa fu ko waawi so wanaa huuɓude e halɓude.</div> <div id="T1cb" class="txs">Kam du heddii na ɓuurti pucel ngel.</div> <div id="T1cc" class="txs">Ngel ƴakkataa ko heewi,</div> <div id="T1cd" class="txs">ngel doggataa ko heewi,</div> <div id="T1ce" class="txs">ngel waawaa ko heewi. </div></div>
+<div class="m"><div id="T1cf" class="txs">Ɓii laamu haɓɓiti pucel tabawel saajel waɗɗii.</div> <div id="T1cg" class="txs">Illa woɗɗaaki de hawri Konkaana,</div> <div id="T1ch" class="txs">na wondi e geeloobi hemnde e capanɗe joy.</div> <div id="T1ci" class="txs">Ngeelooba fu e baɗɗom.</div> <div id="T1cj" class="txs">E kaɓitirɗem.</div> <div id="T1ck" class="txs">Ɓe memondiri.</div> <div id="T1cl" class="txs">Ta fiw ɗo piwnoo-mi.</div> <div id="T1cm" class="txs">Wari ɓii-laamu tuufini ɓe.</div></div>
+<div class="m"><div id="T1cn" class="txs">Nde ɓii-laamu e yimɓe Konkaana njoppondirnoo fu,</div> <div id="T1co" class="txs">ɗum ɓoylitanii wuro.</div> <div id="T1cp" class="txs">O yottii o tawi pulel deel daaliingel na woni lettugal suudu na woya,</div> <div id="T1cq" class="txs">koyɗem na ƴeewa Alla faa dow.</div> <div id="T1cr" class="txs">Na o nyonoroo mi bonii hannde.</div> <div id="T1cs" class="txs">Min wari bonngol.</div> <div id="T1ct" class="txs">Hey!</div> <div id="T1cu" class="txs">yo Alla senndam e o pullo gorko!</div> <div id="T1cv" class="txs">O haɓɓi puccu makko.</div> <div id="T1cw" class="txs">Pulel deel ƴooɓodii o e hamnde.</div> <div id="T1cx" class="txs">Tawi maccuɗo makko ɗoon wonnoo.</div> <div id="T1cy" class="txs">Heddii o sawrini pulel deel.</div></div>
+<div class="m"><div id="T1cz" class="txs">Ɓii laamu fillanii maccuɗom ko kam e Konkaana ngaɗondiri.</div> <div id="T1da" class="txs">Maccuɗo makko wi'i anen ndimdaa,</div> <div id="T1db" class="txs">anen nyaamdata,</div> <div id="T1dc" class="txs">anen njardata.</div> <div id="T1dd" class="txs">Gootum tan senndi en:</div> <div id="T1de" class="txs">deeka yo pul-debbo.</div> <div id="T1df" class="txs">Deekam yo korɗo-debbo.</div> <div id="T1dg" class="txs">Tinna ta kaɓeɗaa mi tawaaka.</div> <div id="T1dh" class="txs">Ɗuum welataa kam.</div></div>
+<div class="m"><div id="T1di" class="txs">Watti weeti.</div> <div id="T1dj" class="txs">Burdaani yottii.</div> <div id="T1dk" class="txs">Wi'i mi yiɗaanaa egaa.</div> <div id="T1dl" class="txs">Ɓii laamu wi'i waɗii haynde.</div> <div id="T1dm" class="txs">Neɗɗo naggem na dunya de wi'ee egga!</div> <div id="T1dn" class="txs">Tawi Konkaana na tonngondiri kaɓooɓe ngaɓɓe hemnde e capanɗe njoyo.</div> <div id="T1do" class="txs">Mono fu dow ngeeloobam,</div> <div id="T1dp" class="txs">na sanjii ɗi kaɓitirɗi,</div> <div id="T1dq" class="txs">na wakkii ɗi to kaɓitirɗi.</div> <div id="T1dr" class="txs">Maccuɗo gorko ummii naatondiri e maɓɓe.</div> <div id="T1ds" class="txs">Mono fu ta fii to piinoo-mi.</div> <div id="T1dt" class="txs">Faa ɗo maccuɗo warowi jaaltii ɓe.</div></div>
+<div class="m"><div id="T1du" class="txs">Ni watti weeti.</div> <div id="T1dv" class="txs">Tawi mulɓel oorii na'im.</div> <div id="T1dw" class="txs">Konkaana yottodii yimɓem.</div> <div id="T1dx" class="txs">Nyanndem fu ɓe ɓuri nyanngude.</div> <div id="T1dy" class="txs">Konkaana wi'i ɓii-laamu egga.</div> <div id="T1dz" class="txs">Ɓii-laamu wi'i eggataa.</div> <div id="T1ea" class="txs">Naggem rimii hanki,</div> <div id="T1eb" class="txs">kam le eggataa so wuddu ɓi-naggem solay.</div> <div id="T1ec" class="txs">Ni ɓe ngatti ɓe naatondiri.</div> <div id="T1ed" class="txs">Ɓii-laamu ɓuri nyanngude naa maccuɗom ɓuri nyanngude.</div> <div id="T1ee" class="txs">Ɓe tappondiri faa naange saami.</div> <div id="T1ef" class="txs">Ɓii laamu jaaltii.</div> <div id="T1eg" class="txs">Yimɓe Konkaana ndoggi nyoppi mayɓe na mbaalii ba buubi.</div></div>
+<div class="m"><div id="T1eh" class="txs">Watti weeti.</div> <div id="T1ei" class="txs">Konkaana hawrondi haɓooɓe faa ɓuri ko arande ɗum.</div> <div id="T1ej" class="txs">Ummaninoo ɓii- laamu fu,</div> <div id="T1ek" class="txs">o hawri mulɓel na weeta na'im.</div> <div id="T1el" class="txs">O wi'i:</div> <div id="T1em" class="txs">" On eggay faa hannden?"</div> <div id="T1en" class="txs">Mulɓel wi'i min eggataa so wanaa na'i amin tummbidi.</div> <div id="T1eo" class="txs">Heddii Konkaana wi'i yimɓem ɓoylitoo.</div> <div id="T1ep" class="txs">Ɓeen ƴami ko saabii.</div> <div id="T1eq" class="txs">O wi'i pullo yo gaɗa nagge maayata.</div> <div id="T1er" class="txs">En njoppa o hoɗa monnde Ndarja fa nde welowi o,</div> <div id="T1es" class="txs">de o egga.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1et" class="txs">Pilliiɗo anndaaka</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/10 ful cont vol3.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) ¡Bienvenido 18</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "94-B095-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='93-B094-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='94-B095-017.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) ¡Bienvenido&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;18&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='94-B095-019.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='95-B096-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B095-image18.jpeg" />
+
+<div class="m"><span class="bd">18) ¿QUÉ SIGNIFICAN ESTOS SÍMBOLOS?</span></div>
+<div class="m">El signo superior 1) significa hospital. Cada hospital también cuenta con un departamento de emergencias que está abierto en todo momento para casos urgentes. Si ya no puede conducir hasta el hospital, llame al número de emergencia (por ejemplo, 112) y acudirá una ambulancia.</div>
+<div class="m">El signo 2) significa farmacia. Aquí podrá obtener la medicación adecuada, por ejemplo, para un simple resfriado, o consejos sobre cómo tratar una herida.</div>
+<div class="m">Señal 3): Las plazas de aparcamiento y los asientos del autobús con esta señal están reservados para usuarios de sillas de ruedas y otras personas con discapacidad y deben dejarse libres. También se hace espacio para mujeres embarazadas y personas mayores.</div>
+<div class="m">Señal 4): Aquí hay un baño, pero no una ducha. Los hombres van al baño de hombres y las mujeres al de mujeres. Orinar y defecar en público se considera vergonzoso y puede ser sancionado. Al inodoro sólo se tira papel higiénico y el resto de la basura (incluidas compresas y tampones) al contenedor de al lado.</div>
+<div class="m">El cartel 5): ¡Está prohibido fumar! En los restaurantes sólo se permite fumar en determinadas zonas designadas. Tampoco se permite fumar en todas partes de las estaciones de tren. No fumar cerca de niños, mujeres embarazadas y no fumadores por respeto. Las colillas de cigarrillos deben estar en un cenicero.</div>
+<div class="m">El cartel 6): El agua del grifo normalmente es segura para beber en Europa porque no contiene gérmenes. Sin embargo, conviene abstenerse de beber agua de los grifos que tengan este cartel.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

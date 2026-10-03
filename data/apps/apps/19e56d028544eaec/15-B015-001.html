@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>Projet de communication 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 5.39 },
+    { label: "1b", start: 5.64, end: 12.47 },
+    { label: "1c", start: 12.72, end: 15.65 },
+    { label: "1d", start: 15.9, end: 24.75 },
+    { label: "1e", start: 25, end: 32.67 },
+    { label: "1f", start: 32.92, end: 43.35 },
+    { label: "1g", start: 43.6, end: 47.11 },
+    { label: "1h", start: 47.36, end: 53.13 },
+    { label: "1i", start: 53.38, end: 60.83 },
+    { label: "1j", start: 61.08, end: 66.61 },
+    { label: "1k", start: 66.86, end: 70.43 },
+    { label: "1l", start: 70.68, end: 77.93 },
+    { label: "1m", start: 78.18, end: 83.85 },
+    { label: "1n", start: 84.1, end: 87.19 },
+    { label: "1o", start: 87.44, end: 90.67 },
+    { label: "1p", start: 90.92, end: 96.47 },
+    { label: "1q", start: 96.72, end: 97.47 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 97.47;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "15-B015-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Projet de communication&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B015-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Projet de communication (</span><span class="bd">4</span><span class="bd">)</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">1)</span><span class="bd"> </span><span class="bd">Qui est le plus grand communicateur&nbsp;?</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">2)</span><span class="bd"> </span><span class="bd">Qu’est-ce que la communication&nbsp;?</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">3)</span><span class="bd"> </span><span class="bd">Montrez la démarche à suivre pour arriver au niveau 3 de la communication.</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">4)</span><span class="bd"> </span><span class="bd">Quels sont les obstacles à la communication&nbsp;?</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">5)</span><span class="bd"> </span><span class="bd">Qu’est qu’il faut faire pour éliminer ces obstacles&nbsp;?</span></div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">6)</span><span class="bd"> </span><span class="bd">Quels sont les secrets,</span></div> <div id="T1h" class="txs"><span class="bd">les tabous ou les mensonges qui empêchent la confiance dans le mariage&nbsp;?</span></div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">7)</span><span class="bd"> </span><span class="bd">Qu’est-ce qu’il faut faire pour améliorer la confiance&nbsp;?</span></div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">8)</span><span class="bd"> </span><span class="bd">Lisez ensemble Proverbes 16</span><span class="bd">,</span></div><div id="T1k" class="txs"><span class="bd">24.</span></div> <div id="T1l" class="txs"><span class="bd">Qu’est-ce que vous apprenez de ce verset&nbsp;?</span></div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">9)</span><span class="bd"> </span><span class="bd">Lisez Proverbes 15</span><span class="bd">,</span></div><div id="T1n" class="txs"><span class="bd">1.</span></div> <div id="T1o" class="txs"><span class="bd">Qu’est-ce que ce verset nous enseigne&nbsp;?</span></div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">10)</span><span class="bd"> </span><span class="bd">La communication dans la famille :</span></div> <div id="T1q" class="txs"><span class="bd">pour améliorer votre situation familiale, comment peut-on inclure les enfants dans la communication&nbsp;?</span></div></div>
+<div class="m">.</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/11a Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/11a Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/11a Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

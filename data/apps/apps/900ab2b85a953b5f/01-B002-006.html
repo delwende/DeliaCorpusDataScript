@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 6</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "6a", start: 790.84, end: 792.43 },
+    { label: "6b", start: 792.68, end: 797.39 },
+    { label: "6c", start: 797.64, end: 798.97 },
+    { label: "6d", start: 799.22, end: 800.05 },
+    { label: "6e", start: 800.3, end: 805.07 },
+    { label: "6f", start: 805.32, end: 806.49 },
+    { label: "6g", start: 806.74, end: 808.27 },
+    { label: "6h", start: 808.52, end: 809.61 },
+    { label: "6i", start: 809.86, end: 811.81 },
+    { label: "6j", start: 812.06, end: 813.27 },
+    { label: "6k", start: 813.52, end: 814.51 },
+    { label: "6l", start: 814.76, end: 817.33 },
+    { label: "6m", start: 817.58, end: 820.73 },
+    { label: "6n", start: 820.98, end: 822.35 },
+    { label: "6o", start: 822.6, end: 827.89 },
+    { label: "6p", start: 828.14, end: 830.03 },
+    { label: "6q", start: 830.28, end: 833.55 },
+    { label: "6r", start: 833.8, end: 836.81 },
+    { label: "6s", start: 837.06, end: 838.45 },
+    { label: "6t", start: 838.7, end: 841.39 },
+    { label: "6u", start: 841.64, end: 846.93 },
+    { label: "6v", start: 847.18, end: 850.27 },
+    { label: "6w", start: 850.52, end: 853.15 },
+    { label: "6x", start: 853.4, end: 855.41 },
+    { label: "6y", start: 855.66, end: 857.97 },
+    { label: "6z", start: 858.22, end: 859.35 },
+    { label: "6aa", start: 859.6, end: 861.09 },
+    { label: "6ab", start: 861.34, end: 863.83 },
+    { label: "6ac", start: 864.08, end: 865.89 },
+    { label: "6ad", start: 866.14, end: 867.39 },
+    { label: "6ae", start: 867.64, end: 871.15 },
+    { label: "6af", start: 871.4, end: 876.89 },
+    { label: "6ag", start: 877.14, end: 878.19 },
+    { label: "6ah", start: 878.44, end: 882.23 },
+    { label: "6ai", start: 882.48, end: 883.25 },
+    { label: "6aj", start: 883.5, end: 884.61 },
+    { label: "6ak", start: 884.86, end: 886.29 },
+    { label: "6al", start: 886.54, end: 889.13 },
+    { label: "6am", start: 889.38, end: 893.13 },
+    { label: "6an", start: 893.38, end: 897.57 },
+    { label: "6ao", start: 897.82, end: 901.49 },
+    { label: "6ap", start: 901.74, end: 903.53 },
+    { label: "6aq", start: 903.78, end: 906.95 },
+    { label: "6ar", start: 907.2, end: 910.07 },
+    { label: "6as", start: 910.32, end: 912.87 },
+    { label: "6at", start: 913.12, end: 919.99 },
+    { label: "6au", start: 920.24, end: 924.35 },
+    { label: "6av", start: 924.6, end: 925.79 },
+    { label: "6aw", start: 926.04, end: 930.31 },
+    { label: "6ax", start: 930.56, end: 936.31 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 790.84;
+var stopTime  = 936.31;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-005.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;6&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-007.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image6.jpg" />
+
+<div class="m"><div id="T6a" class="txs"><span class="bd">La rédemption</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T6b" class="txs"><span class="it">En Jésus nous avons </span><span class="bdit">la rédemption</span><span class="it"> par son sang</span> (Ephésiens 1, 7)</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T6c" class="txs"><span class="bd">La rédemption,</span></div> <div id="T6d" class="txs"><span class="bd">c’est quoi&nbsp;?</span></div></div>
+<div class="m"><div id="T6e" class="txs">Le mot " <span class="it">rédemption</span> " fait partie d'un ensemble de termes qui décrivent le salut.</div> <div id="T6f" class="txs">Littéralement,</div> <div id="T6g" class="txs">il signifie " <span class="it">délier au loin</span> ",</div> <div id="T6h" class="txs">" <span class="it">délivrance</span> ".</div> <div id="T6i" class="txs">Il évoque la notion de rachat,</div> <div id="T6j" class="txs">à l'image d'un esclave,</div> <div id="T6k" class="txs">lié à un maître,</div> <div id="T6l" class="txs">et libéré par le paiement d'une somme d'argent.</div> <div id="T6m" class="txs">L'homme est esclave du péché et de ses conséquences,</div> <div id="T6n" class="txs">c'est-à-dire la mort.</div> <div id="T6o" class="txs">La rédemption le délivre de la puissance du péché et de ses conséquences légales.</div></div>
+<div class="m"><div id="T6p" class="txs">Dans son œuvre de rédemption,</div> <div id="T6q" class="txs">Christ a payé le prix du rachat pour toute l'humanité.</div> <div id="T6r" class="txs">Le prix est clairement indiqué quant à sa nature :</div> <div id="T6s" class="txs">c'est le sang de Christ.</div> <div id="T6t" class="txs">Comme nous avons été rachetés à ce prix,</div> <div id="T6u" class="txs">nous devons servir celui qui l'a payé (1 Corinthiens 7, 22 à 23).</div></div>
+<div class="m"><div id="T6v" class="txs">On peut résumer la rédemption en trois idées de base :</div> <div id="T6w" class="txs">(1) les êtres humains sont <span class="bd">rachetés de</span> quelque chose,</div> <div id="T6x" class="txs">à savoir de l'esclavage du péché ;</div> <div id="T6y" class="txs">(2) ils sont <span class="bd">rachetés par</span> quelque chose,</div> <div id="T6z" class="txs">par le paiement d'un prix,</div> <div id="T6aa" class="txs">à savoir le sang de Christ ;</div> <div id="T6ab" class="txs">(3) ils sont <span class="bd">rachetés pour</span> quelque chose,</div> <div id="T6ac" class="txs">à savoir pour être libres.</div> <div id="T6ad" class="txs">Une fois libérés,</div> <div id="T6ae" class="txs">ils sont invités à se rendre esclaves du Seigneur qui les a rachetés.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T6af" class="txs"><span class="bd">Actions pour que le salut</span><span class="bd"> ou </span><span class="bd">la rédemption devienne une richesse dans ta vie</span> :</div></div>
+<div class="m"><div id="T6ag" class="txs"><span class="ul">-</span><span class="ul"> la prière</span> :</div> <div id="T6ah" class="txs">Dans ta prière quotidienne tu peux remercier Dieu qu’il t’a sauvé du péché,</div> <div id="T6ai" class="txs">de la mort,</div> <div id="T6aj" class="txs">de la débauche…</div></div>
+<div class="m"><div id="T6ak" class="txs"><span class="ul">-</span><span class="ul"> la lecture biblique</span> :</div> <div id="T6al" class="txs">Lis régulièrement les récits de la mort de Jésus,</div> <div id="T6am" class="txs">par exemple Luc 23, 33 à 49.</div> <div id="T6an" class="txs">Imagine-toi dans la foule en train d’observer la crucifixion.</div> <div id="T6ao" class="txs">Rappelle-toi ainsi du sacrifice énorme de Jésus.</div></div>
+<div class="m"><div id="T6ap" class="txs"><span class="ul">-</span><span class="ul"> réflexion personnelle</span> :</div> <div id="T6aq" class="txs">Tu as profité de la rédemption de son fils Jésus.</div></div>
+<div class="m"><div id="T6ar" class="txs">Il t’a libéré de l’esclavage de Satan.</div> <div id="T6as" class="txs">Mais est-ce que tu es vraiment libre&nbsp;?</div> <div id="T6at" class="txs">Examine ta vie avec l’aide du Saint-Esprit pour découvrir si tu es encore «&nbsp;esclave&nbsp;» de Satan.</div> <div id="T6au" class="txs">Est-ce que tu as encore des mauvaises habitudes qui ne glorifient pas Dieu&nbsp;?</div></div>
+<div class="m"><div id="T6av" class="txs"><span class="ul">-</span><span class="ul"> envers les autres</span> :</div> <div id="T6aw" class="txs">Le salut devient encore plus précieux quand il est partagé avec d’autres.</div> <div id="T6ax" class="txs">Annonce le salut de Jésus au moins une fois par semaine à quelqu’un qui ne le connait pas encore.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6 LE VIEIL HOMME 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.23 },
+    { label: "1b", start: 2.48, end: 6.79 },
+    { label: "1c", start: 7.04, end: 10.11 },
+    { label: "1d", start: 10.36, end: 13.47 },
+    { label: "1e", start: 13.72, end: 24.67 },
+    { label: "1f", start: 24.92, end: 36.75 },
+    { label: "1g", start: 37, end: 41.63 },
+    { label: "1h", start: 41.88, end: 56.07 },
+    { label: "1i", start: 56.32, end: 61.07 },
+    { label: "1j", start: 61.32, end: 69.91 },
+    { label: "1k", start: 70.16, end: 75.43 },
+    { label: "1l", start: 75.68, end: 85.27 },
+    { label: "1m", start: 85.52, end: 90.19 },
+    { label: "1n", start: 90.44, end: 98.07 },
+    { label: "1o", start: 98.32, end: 110.07 },
+    { label: "1p", start: 110.32, end: 111.59 },
+    { label: "1q", start: 111.84, end: 113.87 },
+    { label: "1r", start: 114.12, end: 119.07 },
+    { label: "1s", start: 119.32, end: 125.79 },
+    { label: "1t", start: 126.04, end: 138.79 },
+    { label: "1u", start: 139.04, end: 148.07 },
+    { label: "1v", start: 148.32, end: 157.43 },
+    { label: "1w", start: 157.68, end: 174.35 },
+    { label: "1x", start: 174.6, end: 185.23 },
+    { label: "1y", start: 185.48, end: 194.59 },
+    { label: "1z", start: 194.84, end: 202.63 },
+    { label: "1aa", start: 202.88, end: 210.71 },
+    { label: "1ab", start: 210.96, end: 223.15 },
+    { label: "1ac", start: 223.4, end: 227.47 },
+    { label: "1ad", start: 227.72, end: 231.99 },
+    { label: "1ae", start: 232.24, end: 241.91 },
+    { label: "1af", start: 242.16, end: 253.71 },
+    { label: "1ag", start: 253.96, end: 260.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 260.23;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;6 LE VIEIL HOMME&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">6 LE VIEIL HOMME</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Un vieil homme honnête et courageux vivait dans un village.</div> <div id="T1c" class="txs">Sa seule activité était les travaux champêtres.</div> <div id="T1d" class="txs">Il était fatigué par le poids de l’âge.</div></div>
+<div class="m"><div id="T1e" class="txs">À sa jeunesse il était un colporteur intrépide qui bravait les vicissitudes des forêts denses pour parcourir des milliers de kilomètres vers les pays étrangers.</div> <div id="T1f" class="txs">Maintenant, le vieux Relba passait la moitié de son temps dans son champ qui justement prenait ses limites avec celui de Mibamba.</div></div>
+<div class="m"><div id="T1g" class="txs">Cette voisine était une veuve et mère de deux grands garçons.</div> <div id="T1h" class="txs">Conscient de la nécessité d’être en bons termes avec le voisinage, moralité et sagesse exigent, Relba a toujours fait de son mieux pour préserver les bonnes relations avec sa voisine.</div> <div id="T1i" class="txs">Celle-ci aussi semblait partager les mêmes vertus que Relba.</div> <div id="T1j" class="txs">Elle lui apportait de temps en temps une calebasse de «&nbsp;<span class="it">Zom-Kom</span>&nbsp;» (boisson faite à base de petit mil).</div></div>
+<div class="m"><div id="T1k" class="txs">Le vieil homme était resté solitaire pendant une longue partie de sa vie.</div> <div id="T1l" class="txs">La nature lui ayant refusé sa générosité, il n’avait jamais eu la chance de jouir des fleurs de la paternité.</div> <div id="T1m" class="txs">Alors sa femme avait résolu de le quitter.</div> <div id="T1n" class="txs">Mais cet état des choses n’avait pas affecté son comportement dans sa relation avec les autres.</div> <div id="T1o" class="txs">Relba et Mibamba, deux personnes pétries d’expériences de la vie, vivaient en bons termes.</div></div>
+<div class="m"><div id="T1p" class="txs">Mais comme disait Einstein :</div> <div id="T1q" class="txs">«&nbsp;<span class="it">S</span><span class="it">ur l’homme, je ne dirai rien :</span></div> <div id="T1r" class="txs"><span class="it">il est inconstant</span>&nbsp;», un jour, une idée diabolique traversa l’esprit de Mibamba.</div> <div id="T1s" class="txs">Elle décida alors de mettre un terme à la vie de son vieux voisin Relba.</div> <div id="T1t" class="txs">C’est ainsi qu’au lendemain de sa décision, avant d’apporter la calebasse destinée à consolider les forces de Relba, elle prit soin d’y plonger un poison.</div> <div id="T1u" class="txs">Elle alla ensuite déposer la boisson au pied de l’arbre comme à l’accoutumée et invita le vieux de venir se donner des forces.</div></div>
+<div class="m"><div id="T1v" class="txs">Celui-ci, la remerciant infiniment, laissait entendre qu’il s’en occupera.</div> <div id="T1w" class="txs">Après le retour de Mibamba dans son champ et avant que le vieux Relba n’arrête le travail pour reprendre ses forces, deux garçons qui revenaient de la pêche le saluèrent poliment et lui demandèrent de quoi étancher leur soif.</div> <div id="T1x" class="txs">Plein de générosité et sans même chercher à savoir d’où ils venaient, il leur indiqua la calebasse qui trônait avec son contenu mortel.</div> <div id="T1y" class="txs">Ceux-ci, qui n’en demandaient pas mieux, se ruèrent sur la calebasse et la vidèrent de tout son contenu.</div> <div id="T1z" class="txs">À peine qu’ils déposèrent la calebasse vide, ils commencèrent à se tordre de maux de ventre.</div></div>
+<div class="m"><div id="T1aa" class="txs">Relba accourut et constata que les deux garçons moribonds étaient les enfants de la voisine.</div> <div id="T1ab" class="txs">Au même moment, Mibamba, avertie par les cris, se rendit sur les lieux et comprit tout de suite qu’elle venait elle-même de se planter un couteau au cœur.</div> <div id="T1ac" class="txs">Elle venait de commettre sur ses propres enfants un crime irréparable.</div> <div id="T1ad" class="txs">Les garçons ont ainsi succombé sous les yeux de leur propre mère sorcière.</div> <div id="T1ae" class="txs">Alors, savez-vous maintenant la meilleure façon de faire de votre vie le comble des malheurs :</div> <div id="T1af" class="txs">c’est fouler aux pieds les vertus cardinales tels l'honnêteté, la gentillesse, la probité et l’amour du prochain.</div> <div id="T1ag" class="txs">Évitons la jalousie et la méchanceté, car elles vous paient toujours en monnaie de singe.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 06 le vieil homme.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

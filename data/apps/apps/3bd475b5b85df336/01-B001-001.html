@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>1 L’oiseau, le poisson et 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 0;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1 L’oiseau, le poisson et&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">1</span><span class="bd"> L’oiseau, le poisson et le rat</span>.</div>
+<div class="m">C'était un petit oiseau tout gris, tout rond. Pas rond comme une orange, mais rond quand même. Ce fut un jour exceptionnel, le jour où il vint au monde, car à peine avait-il mis les pieds dans le nid qu'il commença à bavarder. Le petit oiseau tout rond, tout gris, bavardait, bavardait : il parlait de tout et de rien, se plaignait de son frère jumeau et même de son père, reprochait à ses parents que le nid était trop étroit et pas assez mou. Il piaillait vraiment et de tout son cœur.</div>
+<div class="m">A longueur de journée, il trouvait quelque chose de mauvais. Sa mère n'y tenant plus, le surnomma Petit Griot . Il mangeait les 3/4 de ce que le père apportait, les 2/3 de ce que la mère apportait. Son frère en maigrissait. Petit Griot était incorrigible.</div>
+<div class="m">Un matin, ils firent leur premier vol d'essai. Résultat : réussite totale. La mère était très contente, mais le frère de Petit Griot retourna seul à la maison. Lui-même continua à l'aventure et se retrouva dans un champ de mil. Il mangea, mangea, mangea, puis mangea encore. A son arrivée au nid il s'écria :</div>
+<div class="m">- Venez tâter mon ventre. Voyez comme il est plein&nbsp;! Demain, je vais quitter le nid. Je veux vivre comme bon me semble, comme ceux qui ont la vie plus facile que nous, les oiseaux&nbsp;!</div>
+<div class="m">Sa mère le supplia, mais en vain.</div>
+<div class="m">Petit Griot s’en alla et trouva le poisson :</div>
+<div class="m">- Poisson&nbsp;! dit-il, ta vie est bien meilleure que la mienne. J 'aimerais vivre comme toi, loin des ennuis</div>
+<div class="m">de la vie.</div>
+<div class="m">- 0h&nbsp;! Petit Griot, notre vie à nous poissons n'est pas agréable. Nous souffrons beaucoup. Quand nous allons au fond de l’eau, les gros poissons nous font la guerre. Quand nous venons en surface, nous avons affaire aux pêcheurs.</div>
+<div class="m">Petit Griot s'en alla voir le rat.</div>
+<div class="m">- O Rat, mon ami, j'aimerais vivre ta vie. Comment dois-je m'y prendre&nbsp;?</div>
+<div class="m">- Bah&nbsp;! Petit Griot, ça n'est pas un problème&nbsp;! Il suffit d'enlever tes plumes, puis d’attendre qu'il te pousse un pelage comme le mien&nbsp;!</div>
+<div class="m">- D'accord&nbsp;! dit l’oiseau. A peine avait-il fini de prononcer le mot «d'accord›› que le rat et ses associés tombèrent sur lui et le déplumèrent complètement. Petit Griot se retint de crier. Il entra dans le trou du rat, mais vraiment c’était dur. Il s’écorcha la peau. Il mit une semaine pour se rétablir, mais le pelage promis ne venait pas et il faisait froid.</div>
+<div class="m">Petit Griot, pour la première fois de sa vie, regretta son foyer. Il se souvint des multiples appels que sa mère lui avait lancés : Petit Griot, reviens&nbsp;! Ne va pas là-bas&nbsp;! Tu mangeras beaucoup mais tu n'auras pas de paix. Tu n'auras que des ennuis.</div>
+<div class="m">En effet, Petit Griot avait beaucoup d'ennuis. Bien</div>
+<div class="m">sûr qu'il mangeait bien et était, si on peut le dire, bien logé. Mais son cœur souffrait terriblement. Il avait la nostalgie de sa vie ancienne, de sa vie véritable, sa vie d’oiseau. Le rat voulu le rassurer :</div>
+<div class="m">- Ecoute, Petit Griot, un peu de patience et tout ira bien. Tu vas devenir grand et fort.</div>
+<div class="m">Mais là n’était pas le problème de Petit Griot. Le problème de Petit Griot était plutôt d'ordre moral. Oui, il souffrait de s'être éloigné de sa vraie nature. Mais les conseils du rat finirent par rassurer Petit Griot. Après tout, se dit-il, je me tirerai bien d'affaire, ça va aller.</div>
+<div class="m">Mais un jour les villageois firent un feu qui mit toute la brousse sens dessus dessous. Les parents de Petit Griot s'enfuirent dans le ciel bleu et calme et se cachèrent dans le feuillage vert des arbres qui se trouvaient au bord du fleuve. Le rat, ne pouvant plus tenir à cause de la chaleur et de la fumée, quitta son trou.</div>
+<div class="m">Mais deux enfants se rendirent maître de lui, le rouèrent de coups et l’emportèrent. Quant à Petit Griot, accablé par la chaleur du feu, il fit une ultime prière de désespoir pour implorer le pardon de sa famille, puis il mourut.</div>
+<div class="m">Ainsi finit Petit Griot, le petit oiseau tout gris, tout rond, pas rond comme une orange, mais rond quand même.</div>
+<div class="m">Oui, ainsi finit Petit Griot&nbsp;! Mais ainsi finira aussi l’enfant de Dieu qui décide un jour qu'il veut vivre libre, comme bon lui semble l Tout ce que son Père céleste lui donne lui paraît bien peu à côté de tout ce qu’offre le monde et son prince, Satan. Un jour il rompt tous les liens, et quitte son Père et sa famille spirituelle pour chercher fortune ailleurs. Parfois, il l'obtient, mais après s’être soumis à de pénibles commandements (imposés par son nouveau maître, mais cela il l'ignore souvent) et avoir employé des moyens pas toujours très honnêtes&nbsp;! Mais au milieu de ses richesses, et malgré son prestige, il est là seul, malheureux. Au plus profond de son cœur, de son âme, il a soif de quelque chose qu'on ne peut acquérir avec de l’argent : la présence de Dieu.</div>
+<div class="m">Tu es libre de faire ce que tu veux de ta vie. Dieu ne t'obligera jamais à rester près de lui. Mais, de même que l'oiseau n'est heureux que dans le ciel bleu, de même l’homme ne peut être heureux que près de son Créateur.</div>
+<div class="m">«&nbsp;Quel est l'homme qui craint l’Éternel&nbsp;? (qui le respecte, l'aime et obéit à ses lois). L'Eternel lui montre la voie qu'il doit choisir. Son âme reposera dans le bonheur&nbsp;» (Psaume 25.12,13).</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

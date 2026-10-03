@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ɓoccooɗe Buugalel 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.39 },
+    { label: "1b", start: 1.64, end: 10.77 },
+    { label: "1c", start: 11.02, end: 15.89 },
+    { label: "1d", start: 16.14, end: 19.39 },
+    { label: "1e", start: 19.64, end: 23.03 },
+    { label: "1f", start: 23.28, end: 29.57 },
+    { label: "1g", start: 29.82, end: 33.53 },
+    { label: "1h", start: 33.78, end: 35.95 },
+    { label: "1i", start: 36.2, end: 43.07 },
+    { label: "1j", start: 43.32, end: 45.21 },
+    { label: "1k", start: 45.46, end: 54.41 },
+    { label: "1l", start: 54.66, end: 58.87 },
+    { label: "1m", start: 59.12, end: 68.31 },
+    { label: "1n", start: 68.56, end: 71.35 },
+    { label: "1o", start: 71.6, end: 75.13 },
+    { label: "1p", start: 75.38, end: 78.11 },
+    { label: "1q", start: 78.36, end: 82.11 },
+    { label: "1r", start: 82.36, end: 90.39 },
+    { label: "1s", start: 90.64, end: 94.55 },
+    { label: "1t", start: 94.8, end: 100.25 },
+    { label: "1u", start: 100.5, end: 102.15 },
+    { label: "1v", start: 102.4, end: 104.29 },
+    { label: "1w", start: 104.54, end: 107.23 },
+    { label: "1x", start: 107.48, end: 111.09 },
+    { label: "1y", start: 111.34, end: 121.39 },
+    { label: "1z", start: 121.64, end: 122.07 },
+    { label: "1aa", start: 122.32, end: 127.19 },
+    { label: "1ab", start: 127.44, end: 138.01 },
+    { label: "1ac", start: 138.26, end: 139.15 },
+    { label: "1ad", start: 139.4, end: 140.05 },
+    { label: "1ae", start: 140.3, end: 142.27 },
+    { label: "1af", start: 142.52, end: 144.27 },
+    { label: "1ag", start: 144.52, end: 155.79 },
+    { label: "1ah", start: 156.04, end: 160.55 },
+    { label: "1ai", start: 160.8, end: 161.71 },
+    { label: "1aj", start: 161.96, end: 164.23 },
+    { label: "1ak", start: 164.48, end: 165.47 },
+    { label: "1al", start: 165.72, end: 168.53 },
+    { label: "1am", start: 168.78, end: 169.87 },
+    { label: "1an", start: 170.12, end: 180.13 },
+    { label: "1ao", start: 180.38, end: 185.31 },
+    { label: "1ap", start: 185.56, end: 187.71 },
+    { label: "1aq", start: 187.96, end: 190.43 },
+    { label: "1ar", start: 190.68, end: 201.15 },
+    { label: "1as", start: 201.4, end: 206.05 },
+    { label: "1at", start: 206.3, end: 208.31 },
+    { label: "1au", start: 208.56, end: 211.17 },
+    { label: "1av", start: 211.42, end: 218.97 },
+    { label: "1aw", start: 219.22, end: 227.51 },
+    { label: "1ax", start: 227.76, end: 228.55 },
+    { label: "1ay", start: 228.8, end: 229.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 229.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "08-B008-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='07-B007-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Ɓoccooɗe Buugalel&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B008-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetitre"><div id="T1a" class="txs">Ɓoccooɗe Buugalel</div></div>
+<div class="p_contetexte"><div id="T1b" class="txs">Sukaaɓe ɗiɗo, ɓe njaadan, faa ɓe ngari ɓe tawi ɓoccooɗe buugaali.</div> <div id="T1c" class="txs">Nde ɓe ngarnoo fu, gooto o wi'i: "Hey!</div> <div id="T1d" class="txs">en kooƴan ɓoccokoy pooli na?"</div> <div id="T1e" class="txs">Ɓe mbi'i ɓe kooƴan.</div> <div id="T1f" class="txs">Gooto wi'i ta en kooƴa, gooto wi'i wallay en kooƴan.</div> <div id="T1g" class="txs">O wi'i min ya, mi hooƴataa.</div> <div id="T1h" class="txs">Mbiinooɗo hooƴan oo kay hooƴi.</div> <div id="T1i" class="txs">Nde hooƴunoo fu, yehi juɗoy, ƴakki.</div></div>
+<div class="p_contetexte"><div id="T1j" class="txs">Goonga!</div> <div id="T1k" class="txs">Buugalel du warowi na filoo ɓoccokoy muuɗum.</div> <div id="T1l" class="txs">Tawi hooƴaama; ni na fiiloo.</div> <div id="T1m" class="txs">Wari yi'i sukaaɓe ɗiɗo, ƴami ɗum en, wi'i: "Sukaaɓe yalla wanaa onon kooƴi ɓoccokoy am na&nbsp;?"</div> <div id="T1n" class="txs">Mon fu wi'i hooƴaay.</div></div>
+<div class="p_contetexte"><div id="T1o" class="txs">Buugalel wi'i on penii, gooto mon ni hooƴi.</div> <div id="T1p" class="txs">Ɓe fu ɓe mbi'i ɓe kooƴaay.</div> <div id="T1q" class="txs">Buugalel wi'i ndelle si on kooƴaay fu, min ya mi yiitan kooƴuɗo.</div> <div id="T1r" class="txs">Ngaree mi holla on; ngaree mi yaara on to ɓunndu, penɗo fu faamete.</div> <div id="T1s" class="txs">Sukaaɓe ɓeen ndu tokki wuugaandu faa njottii nokkuure gooɗom.</div> <div id="T1t" class="txs">Tawi ɓunndu ɓoldu, ndiyam fu walaa ton.</div> <div id="T1u" class="txs">O wi'i gooto mon naata.</div> <div id="T1v" class="txs">Mbiiɗo hooƴaay fu naata.</div> <div id="T1w" class="txs">Mo hooƴaay on artii naati.</div> <div id="T1x" class="txs">Nde naatunoo fu, o wi'i ɗum wi'a:</div></div>
+<div class="p_contetexte"><div id="T1y" class="txs"><span class="it">Si ni min hooƴi ɓoccokoy taarabiinndi</span><span class="it"><br/></span><span class="it">Ɓunndu ɓulooru ɓula kam faa e daande</span><span class="it"><br/></span><span class="it">Pooloy biidi nyaama kam faa ta keddu.</span></div></div>
+<div class="p_contetexte"><div id="T1z" class="txs">Goonga!</div> <div id="T1aa" class="txs">tan suka on naati, darii ley ɓunndu ton, wi'i:</div></div>
+<div class="p_contetexte"><div id="T1ab" class="txs"><span class="it">Si ni min hooƴi ɓoccokoy taarabiinndi</span><span class="it"><br/></span><span class="it">Ɓunndu ɓulooru ɓula kam faa e daande</span><span class="it"><br/></span><span class="it">Pooloy biidi nyaama kam faa ta keddu.</span></div></div>
+<div class="p_contetexte"><div id="T1ac" class="txs">Goonga!</div> <div id="T1ad" class="txs">o wi'i noon.</div> <div id="T1ae" class="txs">Wuugaandu na won dow lekki na ndaara.</div> <div id="T1af" class="txs">Wi'i o wi'a gatin: </div></div>
+<div class="p_contetexte"><div id="T1ag" class="txs"><span class="it">Si ni min hooƴi ɓoccokoy taarabiinndi</span><span class="it"><br/></span><span class="it">Ɓunndu ɓulooru ɓula kam faa e daande</span><span class="it"><br/></span><span class="it">Pooloy biidi nyaama kam faa ta keddu.</span></div></div>
+<div class="p_contetexte"><div id="T1ah" class="txs">O wi'i non gati; ni huunde fu waɗaay, tan wungaandu wi'i o wurtoo.</div> <div id="T1ai" class="txs">O wurtii.</div> <div id="T1aj" class="txs">Gaɗa oo to wurtoke ni wi'aa ɗiɗaɓo o, naata.</div> <div id="T1ak" class="txs">Wi'i jaadiiko du naata.</div> <div id="T1al" class="txs">Oon du naati; o wi'i ɗum wi'a non.</div> <div id="T1am" class="txs">Kam du wi'i:</div></div>
+<div class="p_contetexte"><div id="T1an" class="txs"><span class="it">Si ni min hooƴi ɓoccokoy taarabiinndi</span><span class="it"><br/></span><span class="it">Ɓunndu ɓulooru ɓula kam faa e daande</span><span class="it"><br/></span><span class="it">Pooloy biidi nyaama kam faa ta keddu.</span></div></div>
+<div class="p_contetexte"><div id="T1ao" class="txs">Tan ndiyam fuɗɗi na wurtoo ley ɓunndu ton faa yottii koyɗe muuɗum.</div> <div id="T1ap" class="txs">O ndaari, o hulaay ginan.</div> <div id="T1aq" class="txs">Wuugaandu wi'i o wi'a non gatin; o wi'i:</div></div>
+<div class="p_contetexte"><div id="T1ar" class="txs"><span class="it">Si ni min hooƴi ɓoccokoy taarabiinndi</span><span class="it"><br/></span><span class="it">Ɓunndu ɓulooru ɓula kam faa e daande</span><span class="it"><br/></span><span class="it">Pooloy biidi nyaama kam faa ta keddu.</span></div></div>
+<div class="p_contetexte"><div id="T1as" class="txs">Suka gorko yimidinnoo fu, ndiyam wurtii ley ɓunndu ton gadin faa yottii mo koppi.</div> <div id="T1at" class="txs">Wuugaandu wi'i o yima gatin.</div> <div id="T1au" class="txs">O yiman tan ndiyam na ɓeydoo.</div> <div id="T1av" class="txs">Na, o yima tan ndiyam na ɓeydoo fa, fa, faa ndiyam yottii mo daande.</div> <div id="T1aw" class="txs">O yoolii tan pooloy fu, ngonnookoy ɗon, pooloy taarabiindi, ngari cuppiti mo, cuppiti mo fa, fa, faa kedday mo fay gootum.</div> <div id="T1ax" class="txs">Non faa o maayi.</div></div>
+<div class="p_Conteur"><div id="T1ay" class="txs">Tijjaani Ba</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/08_Boccood_bugaali.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

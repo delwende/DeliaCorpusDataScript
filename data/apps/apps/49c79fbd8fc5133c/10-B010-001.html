@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jamalenngu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.93 },
+    { label: "1b", start: 1.18, end: 7.53 },
+    { label: "1c", start: 7.78, end: 9.21 },
+    { label: "1d", start: 9.46, end: 12.55 },
+    { label: "1e", start: 12.8, end: 22.55 },
+    { label: "1f", start: 22.8, end: 24.95 },
+    { label: "1g", start: 25.2, end: 27.95 },
+    { label: "1h", start: 28.2, end: 35.49 },
+    { label: "1i", start: 35.74, end: 42.79 },
+    { label: "1j", start: 43.04, end: 46.77 },
+    { label: "1k", start: 47.02, end: 51.43 },
+    { label: "1l", start: 51.68, end: 54.05 },
+    { label: "1m", start: 54.3, end: 62.27 },
+    { label: "1n", start: 62.52, end: 64.75 },
+    { label: "1o", start: 65, end: 66.39 },
+    { label: "1p", start: 66.64, end: 67.43 },
+    { label: "1q", start: 67.68, end: 72.15 },
+    { label: "1r", start: 72.4, end: 78.15 },
+    { label: "1s", start: 78.4, end: 80.63 },
+    { label: "1t", start: 80.88, end: 81.91 },
+    { label: "1u", start: 82.16, end: 85.59 },
+    { label: "1v", start: 85.84, end: 98.85 },
+    { label: "1w", start: 99.1, end: 107.13 },
+    { label: "1x", start: 107.38, end: 117.29 },
+    { label: "1y", start: 117.54, end: 126.69 },
+    { label: "1z", start: 126.94, end: 131.83 },
+    { label: "1aa", start: 132.08, end: 141.03 },
+    { label: "1ab", start: 141.28, end: 153.03 },
+    { label: "1ac", start: 153.28, end: 155.35 },
+    { label: "1ad", start: 155.6, end: 166.93 },
+    { label: "1ae", start: 167.18, end: 168.27 },
+    { label: "1af", start: 168.52, end: 168.77 },
+    { label: "1ag", start: 169.02, end: 170.33 },
+    { label: "1ah", start: 170.58, end: 171.27 },
+    { label: "1ai", start: 171.52, end: 183.21 },
+    { label: "1aj", start: 183.46, end: 185.01 },
+    { label: "1ak", start: 185.26, end: 186.63 },
+    { label: "1al", start: 186.88, end: 192.41 },
+    { label: "1am", start: 192.66, end: 194.71 },
+    { label: "1an", start: 194.96, end: 196.51 },
+    { label: "1ao", start: 196.76, end: 197.49 },
+    { label: "1ap", start: 197.74, end: 209.77 },
+    { label: "1aq", start: 210.02, end: 212.95 },
+    { label: "1ar", start: 213.2, end: 213.2 },
+    { label: "1as", start: 213.32, end: 218.23 },
+    { label: "1at", start: 218.48, end: 220.71 },
+    { label: "1au", start: 220.96, end: 221.89 },
+    { label: "1av", start: 222.14, end: 223.83 },
+    { label: "1aw", start: 224.08, end: 225.31 },
+    { label: "1ax", start: 225.56, end: 226.05 },
+    { label: "1ay", start: 226.3, end: 229.23 },
+    { label: "1az", start: 229.48, end: 229.95 },
+    { label: "1ba", start: 230.2, end: 241.17 },
+    { label: "1bb", start: 241.42, end: 242.07 },
+    { label: "1bc", start: 242.32, end: 243.01 },
+    { label: "1bd", start: 243.26, end: 252.67 },
+    { label: "1be", start: 252.92, end: 253.87 },
+    { label: "1bf", start: 254.12, end: 257.73 },
+    { label: "1bg", start: 257.98, end: 265.47 },
+    { label: "1bh", start: 265.72, end: 271.81 },
+    { label: "1bi", start: 272.06, end: 273.93 },
+    { label: "1bj", start: 274.18, end: 274.99 },
+    { label: "1bk", start: 275.24, end: 280.97 },
+    { label: "1bl", start: 281.22, end: 285.71 },
+    { label: "1bm", start: 285.96, end: 290.03 },
+    { label: "1bn", start: 290.28, end: 300.55 },
+    { label: "1bo", start: 300.8, end: 304.03 },
+    { label: "1bp", start: 304.28, end: 309.15 },
+    { label: "1bq", start: 309.4, end: 309.75 },
+    { label: "1br", start: 310, end: 311.47 },
+    { label: "1bs", start: 311.72, end: 315.53 },
+    { label: "1bt", start: 315.78, end: 319.39 },
+    { label: "1bu", start: 319.64, end: 324.67 },
+    { label: "1bv", start: 324.92, end: 326.27 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 326.27;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "10-B010-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='09-B009-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Jamalenngu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B010-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetexte"><div id="T1a" class="txs">Jamalenngu</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_contetexte"><div id="T1b" class="txs">Puccu gooɗom na woni ley wuro na wi'ee Jamalenngu.</div> <div id="T1c" class="txs">Ayyo!</div> <div id="T1d" class="txs">Joomiraaɓe puccu ɓen na njogii cukalel.</div> <div id="T1e" class="txs">Suka on mawni dey koreeji muuɗum en na mbi'a ɗum wawtu fu tinnoo e puccu ngun, sabu na yiɗi puccu sanne.</div> <div id="T1f" class="txs">O tinnoo taa o waɗɗoo puccu ngun.</div> <div id="T1g" class="txs">Puccu ngu wi'a taakenaa Jamalenngu.</div> <div id="T1h" class="txs">Kanko le pucci ɗi o waɗɗotoo ɗi fu, ngu koreeji makko kaɗɗi o ngun tan o horannta.</div> <div id="T1i" class="txs">Koreeji makko le fu, na kakkilani ngu, na anndi ngu wooɗaa.</div></div>
+<div class="p_contetexte"><div id="T1j" class="txs">Nyannde gom le koreeji makko fay gooto walaa ɗon.</div> <div id="T1k" class="txs">Kanko du o wi'i o ndaaran ko saabi ko ɓen mbi'i ta o waɗɗoo puccu ngun.</div><div id="T1l" class="txs">Tan o fiirti puccu o waɗɗii.</div> <div id="T1m" class="txs">Nde o waɗɗinoo ɗum ko o wurtii fu jogi na doggida mo, na doggida mo, na doggida mo fa, fa, faa o anndaa fu to o woni&nbsp;?</div> <div id="T1n" class="txs">O tefi ooncude ɗum fa o warta wuro.</div> <div id="T1o" class="txs">O tefi, fey!</div> <div id="T1p" class="txs">Puccu salii.</div> <div id="T1q" class="txs">Si wanaa o yehi fa, fa, faa wuro gooɗom, o anndaa fu ton.</div> <div id="T1r" class="txs">Abada, o yahaay ton.</div> <div id="T1s" class="txs">Nde o yottinoo fu yimɓe ɓen njottii kurmiti mo.</div> <div id="T1t" class="txs">Puccu ngun darii ɗon.</div></div>
+<div class="p_contetexte"><div id="T1u" class="txs">Jaka wuro ngon, wuro sukunyaaɓe.</div> <div id="T1v" class="txs">Mo yottoo, ɓen na nannga mo; nanngunoo mo fu, ngatti ley suudu coki, ommbi.</div> <div id="T1w" class="txs">Njehi kaɓɓowi puccu makko yaasin.</div> <div id="T1x" class="txs">Nde kaɓɓunoo puccu ngun yaasin fu, kanko kay ommbi mo ley suudu, kalfini mo dem-mawɗo.</div> <div id="T1y" class="txs">Kalfinnoo mo dem-mawɗo fu, mbi'i fa njaha jon kay pilowoo leɗɗe, fa ngara njuɗa mo.</div> <div id="T1z" class="txs">O faamii kanko du ko ɓen sukunyaaɓe.</div> <div id="T1aa" class="txs">Ngattunoo mo ley suudu kalfini dem-mawɗo fu, kaɓɓi puccu makko yaasin, dem-mawɗo na jooɗii dammbugal.</div> <div id="T1ab" class="txs">Nde sukunyaaɓe ɓe ndillunoo njehi fa pilowoo jon kay leɗɗe ngara fa njuɗa mo nyaama fu, dem-mawɗo on wi'i: "Suka, ko foti waddude ma ɗo&nbsp;?"</div> <div id="T1ac" class="txs">Tan o wi'i dem-mawɗo:</div></div>
+<div class="p_contetexte"><div id="T1ad" class="txs"><span class="it">Ɗum ni inna am wiinoo kam</span><span class="it"><br/></span><span class="it">Ɗum ni baaba am wiinoo kam</span><span class="it"><br/></span><span class="it">Ta mi waɗɗoo jamalenngu</span><span class="it"><br/></span><span class="it">Jamalenngu doggi dartaako</span><span class="it"><br/></span><span class="it">Say say dammbugal sukunyaaɓe.</span></div></div>
+<div class="p_contetexte"><div id="T1ae" class="txs">Jimol ngol weli dem-mawɗo.</div> <div id="T1af" class="txs">O wi'i noy&nbsp;?</div> <div id="T1ag" class="txs">Yimanam gadin suka.</div> <div id="T1ah" class="txs">O wi'i ɗum:</div></div>
+<div class="p_contetexte"><div id="T1ai" class="txs"><span class="it">Ɗum ni inna am wiinoo kam</span><span class="it"><br/></span><span class="it">Ɗum ni baaba am wiinoo kam</span><span class="it"><br/></span><span class="it">Ta mi waɗɗoo jamalenngu</span><span class="it"><br/></span><span class="it">Jamalenngu doggi dartaako</span><span class="it"><br/></span><span class="it">Say say dammbugal sukunyaaɓe.</span></div></div>
+<div class="p_contetexte"><div id="T1aj" class="txs">Dem-mawɗo wi'i: "Haan!</div> <div id="T1ak" class="txs">yimanam gatin.</div> <div id="T1al" class="txs">O wi'i, demmawɗo accu ndelle mi wurtoo yaasin kay mi ndaara puccu am, sabu nyaamaay.</div> <div id="T1am" class="txs">Dem-mawɗo omti o wurtii.</div> <div id="T1an" class="txs">O wi'i yimanam ndelle.</div> <div id="T1ao" class="txs">O wi'i: </div></div>
+<div class="p_contetexte"><div id="T1ap" class="txs"><span class="it">Ɗum ni inna am wiinoo kam</span><span class="it"><br/></span><span class="it">Ɗum ni baaba am wiinoo kam</span><span class="it"><br/></span><span class="it">Ta mi waɗɗoo jamalenngu</span><span class="it"><br/></span><span class="it">Jamalenngu doggi dartaako</span><span class="it"><br/></span><span class="it">Say say dammbugal sukunyaaɓe.</span></div></div>
+<div class="p_contetexte"><div id="T1aq" class="txs">Dem-mawɗo wi'i wallay a wonnii, dey noy mbiiɗa gatin&nbsp;?</div> <div id="T1ar" class="txs">Yimou!</div> <div id="T1as" class="txs">o wi'i accu ndelle mi huumta puccu am ngu mi yarnowaa ɗum sabu yaraay ndiyam.</div> <div id="T1at" class="txs">Debbo mawɗo wi'i hey suka, a doggataa na&nbsp;?</div> <div id="T1au" class="txs">O wi'i toy njaham-mi ?</div> <div id="T1av" class="txs">Fay si njaa-mi ɗo mi wartan.</div> <div id="T1aw" class="txs">Dem-mawɗo wi'i wooɗii.</div> <div id="T1ax" class="txs">O haɓɓitaa.</div> <div id="T1ay" class="txs">Nde o haɓɓitainnoo fu, dem-mawɗo wi'i o yima ginan.</div> <div id="T1az" class="txs">O wi'i:</div></div>
+<div class="p_contetexte"><div id="T1ba" class="txs"><span class="it">Ɗum ni inna am wiinoo kam</span><span class="it"><br/></span><span class="it">Ɗum ni baaba am wiinoo kam</span><span class="it"><br/></span><span class="it">Ta mi waɗɗoo jamalenngu</span><span class="it"><br/></span><span class="it">Jamalenngu doggi dartaako</span><span class="it"><br/></span><span class="it">Say say dammbugal sukunyaaɓe.</span></div></div>
+<div class="p_contetexte"><div id="T1bb" class="txs">Timmii!</div> <div id="T1bc" class="txs">O waɗɗii.</div> <div id="T1bd" class="txs">Nde o waɗɗinoo fu, o fiyi puccu makko, nanaa na yaha; o heɓi o oonci ɗum jon kay yaade wuro.</div> <div id="T1be" class="txs">O ummani wuro. </div></div>
+<div class="p_contetexte"><div id="T1bf" class="txs">Dem-mawɗo doomi faa sawti yi'aay, anndaa fu no watta.</div> <div id="T1bg" class="txs">Tan yehi ndaarowi nokkuwel nyaande to yimɓe cokkata na ƴaroo.</div> <div id="T1bh" class="txs">Dem-mawɗo yehi, ley nyaande suuɗowi jon kay sabu na anndi sukanyaaɓe ngartii fu mbaran ɗum.</div> <div id="T1bi" class="txs">O yehi ley nyaande o uwowii ton. </div></div>
+<div class="p_contetexte"><div id="T1bj" class="txs">Timmii!</div> <div id="T1bk" class="txs">Sukunyaaɓe ngartunoo fu, ndaari: tawaay puccu, tawaay jom puccu.</div> <div id="T1bl" class="txs">Pilii, njiitaay dem-mawɗo du.</div> <div id="T1bm" class="txs">Tawi wuugaandu warii fa filoo gabbe, na soppa.</div> <div id="T1bn" class="txs">Na sankitannoo nyaande fu, tawi dem-mawɗo na irii ton, tan hoɗi dow leggal na waɗa: “Wukkutu wukkutu, wurtin dem-mawɗo ley nyaande."</div> <div id="T1bo" class="txs">Tan yimɓe mbi'i ɗum e wuugaandu ndu wiita nih?</div> <div id="T1bp" class="txs">"Wukkutu wukkutu, wurtin dem-mawɗo ley nyaande."</div> <div id="T1bq" class="txs">Wi'aa hey!</div> <div id="T1br" class="txs">Ɗume wuugaandu ndu haali nih?</div> <div id="T1bs" class="txs">Ɓe kettinii faa ɓooyi, ɓe nani ko wuugaandu wiita.</div> <div id="T1bt" class="txs">Ɓe njehi ɓe ndarowi ley nyannde ɓe tawi dem-mawɗo.</div> <div id="T1bu" class="txs">Kam ni yaa ɓe kooƴowi ɓe ngari ɓe luttini jom Jamalenngu, ɓe nduppi ɗum, ɓe nyaam-mi.</div></div>
+<div class="p_Conteur"><div id="T1bv" class="txs">Tijjaani Ba</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/10_Jamalenngu.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

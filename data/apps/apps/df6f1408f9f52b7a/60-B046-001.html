@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>30. Deux hommes et un 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = -0;
+var stopTime  = 0;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "60-B046-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='59-B045-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='59-B045-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;30. Deux hommes et un&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B046-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">30. Deux hommes et un </span><span class="bd">python /boa</span><span class="bd">.</span></div>
+<div class="m">Deux hommes partirent ensemble aller chercher des œufs. Après avoir longtemps marché, ils avaient passé toute la journée sans avoir trouvé un seul œuf. Mais l'un des deux vit un serpent boa / python couché dans son trou. Il ne dit pas à son ami qu'i| avait vu quelque chose. Il lui dit au contraire qu'il valait mieux qu'ils rentrent chez eux parce qu'ils n'avaient rien trouvé. Il avait pensé que, son ami une fois salué, il serait reparti seul pour tuer le serpent et prendre tous ses œufs. Telle était sa pensée, mais son ami avait compris qu'il y avait quelque chose de louche. Les deux rentrèrent au village. Arrivé chez lui, celui qui avait été trompé, décida d'aller chez l’autre pour voir s'il était là.</div>
+<div class="m">Il arriva chez son ami et naturellement il n'était pas la parce qu'il était parti chercher le serpent boa ; il décida alors de suivre ses traces.</div>
+<div class="m">L'autre, cependant, était arrivé jusqu'au trou du serpent, mais il n'avait pas su le tuer. Bien au contraire, le serpent l'avait saisi et le trainait vers la rivière. L'ami, qui arrivait juste à ce moment-là, vit tout de suite ce qui était en train de se passer; il se mit à courir et chaque fois que son ami attrapait un ramage ou un arbuste, l’autre avec sa hache en coupait les racines, pour se venger. Le serpent poursuivit ainsi son chemin avec sa proie pour aller dans l'eau la manger. La victime attrapa la branche d'un arbre, celui qui le poursuivait le rejoignit et coupa la branche. La victime attrapa un arbrisseau, et l'autre arriva et coupa cet arbrisseau. Et le serpent put ainsi continuer sa marche jusqu'au bord de la rivière.</div>
+<div class="m">Alors, l'homme trompé se rendit compte que le serpent allait entrer dans l’eau et qu'il aurait pu facilement tuer son ami. Il prit alors son arme et attaqua le serpent. Et il réussit à le tuer&nbsp;; son</div>
+<div class="m">ami était sauvé.</div>
+<div class="m">Voilà donc une belle leçon pour ce dernier, qui, depuis, n'a plus fait de choses pareilles. Il voulait tromper son ami pour gagner. L'autre, au contraire, ne l'a pas abandonné et, après lui avoir assuré une belle épouvante, l'a sauvé à la dernière minute. C’est ce qu'on appelle «&nbsp;donner la lumière à l’autre&nbsp;».</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

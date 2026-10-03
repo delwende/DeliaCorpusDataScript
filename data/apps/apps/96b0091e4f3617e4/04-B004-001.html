@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pages 31b à 32 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.79 },
+    { label: "1b", start: 4.04, end: 6.49 },
+    { label: "1c", start: 6.74, end: 9.03 },
+    { label: "1d", start: 9.28, end: 10.19 },
+    { label: "1e", start: 10.44, end: 11.87 },
+    { label: "1f", start: 12.12, end: 13.29 },
+    { label: "1g", start: 13.54, end: 15.51 },
+    { label: "1h", start: 15.76, end: 17.51 },
+    { label: "1i", start: 17.76, end: 18.89 },
+    { label: "1j", start: 19.14, end: 20.41 },
+    { label: "1k", start: 20.66, end: 22.39 },
+    { label: "1l", start: 22.64, end: 24.79 },
+    { label: "1m", start: 25.04, end: 26.37 },
+    { label: "1n", start: 26.62, end: 27.99 },
+    { label: "1o", start: 28.24, end: 29.53 },
+    { label: "1p", start: 29.78, end: 31.23 },
+    { label: "1q", start: 31.48, end: 33.43 },
+    { label: "1r", start: 33.68, end: 38.31 },
+    { label: "1s", start: 38.56, end: 40.51 },
+    { label: "1t", start: 40.76, end: 41.69 },
+    { label: "1u", start: 41.94, end: 43.49 },
+    { label: "1v", start: 43.74, end: 45.05 },
+    { label: "1w", start: 45.3, end: 46.51 },
+    { label: "1x", start: 46.76, end: 48.75 },
+    { label: "1y", start: 49, end: 51.57 },
+    { label: "1z", start: 51.82, end: 52.85 },
+    { label: "1aa", start: 53.1, end: 55.39 },
+    { label: "1ab", start: 55.64, end: 58.67 },
+    { label: "1ac", start: 58.92, end: 60.03 },
+    { label: "1ad", start: 60.28, end: 62.63 },
+    { label: "1ae", start: 62.88, end: 65.31 },
+    { label: "1af", start: 65.56, end: 66.85 },
+    { label: "1ag", start: 67.1, end: 68.31 },
+    { label: "1ah", start: 68.56, end: 69.83 },
+    { label: "1ai", start: 70.08, end: 71.83 },
+    { label: "1aj", start: 72.08, end: 72.91 },
+    { label: "1ak", start: 73.16, end: 76.79 },
+    { label: "1al", start: 77.04, end: 79.19 },
+    { label: "1am", start: 79.44, end: 81.23 },
+    { label: "1an", start: 81.48, end: 84.73 },
+    { label: "1ao", start: 84.98, end: 87.93 },
+    { label: "1ap", start: 88.18, end: 89.37 },
+    { label: "1aq", start: 89.62, end: 92.25 },
+    { label: "1ar", start: 92.5, end: 95.83 },
+    { label: "1as", start: 96.08, end: 96.85 },
+    { label: "1at", start: 97.1, end: 99.51 },
+    { label: "1au", start: 99.76, end: 104.47 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 104.47;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Pages 31b à 32&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">Pages 31b à 32.</div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Moussa salue Thérèse.</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">1</span><span class="bd">re</span><span class="bd"> possibilité</span><span class="bd">.</span></div></div>
+<div class="p_Fuzeile"><div id="T1d" class="txs">Moussa :</div>  <div id="T1e" class="txs"><span class="bd">í ní sɔ̀gɔ́mà</span><span class="bd">.</span></div>                <div id="T1f" class="txs">«&nbsp;<span class="it">bonjour</span>&nbsp;».</div></div>
+<div class="m"><div id="T1g" class="txs">Thérèse :</div>  <div id="T1h" class="txs"><span class="bd">nsée, í ní sɔ̀gɔ́mà</span><span class="bd">.</span></div>      <div id="T1i" class="txs"><span class="it">«&nbsp;bonjour&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1j" class="txs">Moussa :</div>  <div id="T1k" class="txs"><span class="bd">sómɔ́gɔ́ẁ do?</span></div>  <div id="T1l" class="txs">«&nbsp;<span class="it">comment va ta famille</span>&nbsp;»?</div></div>
+<div class="m"><div id="T1m" class="txs">Thérèse :</div>   <div id="T1n" class="txs"><span class="bd">o ká kɛ́nɛ</span><span class="bd">.</span></div><div id="T1o" class="txs">«&nbsp;<span class="it">elle va bien</span>&nbsp;».</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">Vocabulaire</span><span class="bd"> </span><span class="bd">:</span></div></div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">sɔ̀gɔ́mà</span><span class="bd"> </span>«&nbsp;<span class="it">matin&nbsp;matinée</span>&nbsp;»</div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">sómɔ́gɔ́ẁ</span><span class="bd"> </span>«&nbsp;<span class="it">les gens de la famille</span>&nbsp;»</div></div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">2</span><span class="bd">e</span><span class="bd"> possibilité</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1t" class="txs">Moussa :</div> <div id="T1u" class="txs"><span class="bd">í ní sɔ̀gɔ́mà</span><span class="bd">.</span></div><div id="T1v" class="txs">«&nbsp;<span class="it">bonjour</span><span class="it"> </span>».</div></div>
+<div class="m"><div id="T1w" class="txs">Thérèse :</div> <div id="T1x" class="txs"><span class="bd">nsée, hɛ́ɛrɛ sirá wà</span>?</div> <div id="T1y" class="txs">«&nbsp;<span class="it">bonjour comment ça va</span><span class="it">&nbsp;»</span><span class="it">?</span></div></div>
+<div class="p_Fuzeile"><div id="T1z" class="txs">Moussa :</div> <div id="T1aa" class="txs"><span class="bd">hɛ́ɛrɛ, sómɔ́gɔ́ẁ do?</span></div><div id="T1ab" class="txs">«&nbsp;<span class="it">ça va, comment va ta famille</span><span class="it">&nbsp;»</span><span class="it">?</span></div></div>
+<div class="p_Fuzeile"><div id="T1ac" class="txs">Thérèse :</div> <div id="T1ad" class="txs"><span class="bd">o ká kɛ́nɛ, dénmísɛ́nẁ do?</span></div><div id="T1ae" class="txs"><span class="bd"> </span>«<span class="it">ça va, comment vont les enfants</span><span class="it">&nbsp;» </span><span class="it">?</span></div></div>
+<div class="p_Fuzeile"><div id="T1af" class="txs">Moussa :</div> <div id="T1ag" class="txs"><span class="bd">ò ká kɛ́nɛ</span><span class="bd">.</span></div><div id="T1ah" class="txs">  «&nbsp;<span class="it">ils vont bien</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ai" class="txs"><span class="bd">3</span><span class="bd">e</span><span class="bd"> possibilité</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1aj" class="txs">Moussa :</div> <div id="T1ak" class="txs"><span class="bd">í ní sɔ̀gɔ́mà, Tɛ̀rɛ́zì</span><span class="bd">.</span></div>  <div id="T1al" class="txs">«&nbsp;<span class="it">bonjour Thérèse</span>&nbsp;».</div></div>
+<div class="m"><div id="T1am" class="txs">Thérèse :</div> <div id="T1an" class="txs"><span class="bd">nsée, Músà í ká kɛ́nɛ wà</span><span class="bd">.</span></div> <div id="T1ao" class="txs">«&nbsp;<span class="it">bonjour Musa, comment vas-tu </span><span class="it">»</span><span class="it">?</span></div></div>
+<div class="m"><div id="T1ap" class="txs">Moussa :</div> <div id="T1aq" class="txs"><span class="bd">hɛ́ɛrɛ, sómɔ́gɔ́ẁ do?</span></div> <div id="T1ar" class="txs">«&nbsp;<span class="it">ça va comment va ta famille</span><span class="it">» </span><span class="it">?</span></div></div>
+<div class="m"><div id="T1as" class="txs">Thérèse :</div> <div id="T1at" class="txs"><span class="bd">o ká kɛ́nɛ; dénmísɛ́nẁ do?</span></div> <div id="T1au" class="txs">«&nbsp;<span class="it">ça va, comment vont les enfants</span><span class="it">&nbsp;» </span><span class="it">?</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/04 pages31b-32.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

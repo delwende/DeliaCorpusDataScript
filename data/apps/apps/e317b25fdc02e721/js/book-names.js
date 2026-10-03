@@ -1,0 +1,15 @@
+var books = [
+  { name: "1 A liɓataa kam, mi", ref: "01-B001-001.html" },
+  { name: "21 Alla haɗi juula yecco", ref: "02-B002-001.html" },
+  { name: "41 Araawa koɗa na weli", ref: "03-B003-001.html" },
+  { name: "61 Ɓeerɗe kettuɗe, na", ref: "04-B004-001.html" },
+  { name: "81 Ɓii-yaran kosam ƴakkan", ref: "05-B005-001.html" },
+  { name: "101 Ɓuure goɗɗo wojjan", ref: "06-B006-001.html" },
+  { name: "121 Ɗaaniiɗo ndunngu", ref: "07-B007-001.html" },
+  { name: "141 Debbo na muuya gorko", ref: "08-B008-001.html" },
+  { name: "161 Ɗiggundi haalii", ref: "09-B009-001.html" },
+  { name: "181 Ɗoo woni tuppal", ref: "10-B010-001.html" },
+  { name: "201 Duroowo ñiibi hulataa", ref: "11-B011-001.html" },
+  { name: "221 Fala njehen wanaa", ref: "12-B012-001.html" },
+  { name: "241 Fijirde gabuuje wanaa", ref: "13-B013-001.html" },
+];

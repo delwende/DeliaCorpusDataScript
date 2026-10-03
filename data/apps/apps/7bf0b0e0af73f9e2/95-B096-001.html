@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Karibu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "95-B096-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='94-B095-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='94-B095-033.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Karibu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='95-B096-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='96-B097-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B096-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">1) Karibu!</span></div>
+<div class="m">Gundua jinsi Wazungu wanaishi na kile wanachoamini.</div>
+<div class="m">Programu hii ni ofa. Iliundwa kwa sababu watu kutoka nchi zingine ni muhimu kwetu hapa. Tunataka kukupa maarifa kuhusu tamaduni za Uropa, kwa sababu baadhi ya mambo kuhusu utamaduni wetu yanaweza kukuletea maswali. Hii haishangazi, kwa sababu katika kila tamaduni, mambo mengi hutokea kulingana na sheria ambazo wenyeji wanajua ndani nje, lakini ambazo hazijaandikwa kwa uwazi popote. Sheria na maadili kama haya yapo kila mahali. Tungependa kuelezea baadhi yao kutoka Ulaya katika programu hii. Bila shaka, baadhi ya Wazungu wana tabia tofauti. Lakini hapa kuna mifumo kadhaa ya tabia ya kawaida. Watu kutoka nchi zingine pia wameshiriki maoni kadhaa nasi.</div>
+<div class="m">Kama waandishi tunafikiria kuwa wewe na sisi tumekutana kwenye gari moshi au kwenye mkahawa - au labda tumeketi kwenye mlo na kuzungumza, na bila shaka tumeketi mezani na watu kutoka nchi tofauti sana na kusikiliza na kuzungumza. Tunachapisha programu hii kwa uangalifu kama Wakristo, kama watu wanaomfuata Yesu. Pia tunaandika kitu kuhusu hili katika programu hii. Kwa sababu pia tumesikia maswali mengi kuhusu imani yetu kwenye meza ya chakula cha jioni. Wazungu wengi pia wanatarajia kukutana na wewe. Wanatazamia kupata kujua jambo fulani kuhusu utamaduni wako. Kwa mfano, wengi huthamini hali ya ukarimu na familia ambayo watu kutoka nchi nyingine huleta Ulaya. Tunatazamia kuishi pamoja vizuri.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

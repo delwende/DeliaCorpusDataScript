@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°23 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.29 },
+    { label: "1b", start: 2.54, end: 4.57 },
+    { label: "1c", start: 4.82, end: 5.83 },
+    { label: "1d", start: 6.08, end: 10.87 },
+    { label: "1e", start: 11.12, end: 13.49 },
+    { label: "1f", start: 13.74, end: 15.81 },
+    { label: "1g", start: 16.06, end: 19.51 },
+    { label: "1h", start: 19.76, end: 20.31 },
+    { label: "1i", start: 20.56, end: 21.15 },
+    { label: "1j", start: 21.4, end: 23.21 },
+    { label: "1k", start: 23.46, end: 24.79 },
+    { label: "1l", start: 25.04, end: 27.15 },
+    { label: "1m", start: 27.4, end: 33.43 },
+    { label: "1n", start: 33.68, end: 41.11 },
+    { label: "1o", start: 41.36, end: 44.11 },
+    { label: "1p", start: 44.36, end: 46.65 },
+    { label: "1q", start: 46.9, end: 47.71 },
+    { label: "1r", start: 47.96, end: 51.81 },
+    { label: "1s", start: 52.06, end: 57.87 },
+    { label: "1t", start: 58.12, end: 65.95 },
+    { label: "1u", start: 66.2, end: 68.29 },
+    { label: "1v", start: 68.54, end: 75.09 },
+    { label: "1w", start: 75.34, end: 81.13 },
+    { label: "1x", start: 81.38, end: 83.79 },
+    { label: "1y", start: 84.04, end: 85.37 },
+    { label: "1z", start: 85.62, end: 87.07 },
+    { label: "1aa", start: 87.32, end: 89.47 },
+    { label: "1ab", start: 89.72, end: 90.93 },
+    { label: "1ac", start: 91.18, end: 93.59 },
+    { label: "1ad", start: 93.84, end: 97.81 },
+    { label: "1ae", start: 98.06, end: 101.97 },
+    { label: "1af", start: 102.22, end: 103.99 },
+    { label: "1ag", start: 104.24, end: 108.15 },
+    { label: "1ah", start: 108.4, end: 111.49 },
+    { label: "1ai", start: 111.74, end: 114.85 },
+    { label: "1aj", start: 115.1, end: 117.91 },
+    { label: "1ak", start: 118.16, end: 121.51 },
+    { label: "1al", start: 121.76, end: 128.27 },
+    { label: "1am", start: 128.52, end: 131.31 },
+    { label: "1an", start: 131.56, end: 134.41 },
+    { label: "1ao", start: 134.66, end: 139.33 },
+    { label: "1ap", start: 139.58, end: 143.09 },
+    { label: "1aq", start: 143.34, end: 145.95 },
+    { label: "1ar", start: 146.2, end: 148.23 },
+    { label: "1as", start: 148.48, end: 149.57 },
+    { label: "1at", start: 149.82, end: 153.31 },
+    { label: "1au", start: 153.56, end: 157.73 },
+    { label: "1av", start: 157.98, end: 159.91 },
+    { label: "1aw", start: 160.16, end: 162.15 },
+    { label: "1ax", start: 162.4, end: 162.67 },
+    { label: "1ay", start: 162.92, end: 163.87 },
+    { label: "1az", start: 164.12, end: 167.63 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 167.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "24-B024-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='23-B023-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='23-B023-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°23&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='25-B025-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='25-B025-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B024-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°23 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Soyez fidèle et juste.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs">Histoire:</div></div>
+<div class="p"><div id="T1d" class="txs"><span class="it">Marceline et Aimée se connaissent bien car elles fréquentent la même église.</span></div> <div id="T1e" class="txs"><span class="it">Elles sont toutes les deux commerçantes.</span></div> <div id="T1f" class="txs"><span class="it">Marceline est honnête et juste.</span></div> <div id="T1g" class="txs"><span class="it">Jamais elle ne va tromper les gens sur la marchandise.</span></div> <div id="T1h" class="txs"><span class="it">Aimée,</span></div> <div id="T1i" class="txs"><span class="it">par contre,</span></div> <div id="T1j" class="txs"><span class="it">est souvent un peu malhonnête,</span></div> <div id="T1k" class="txs"><span class="it">mais un peu seulement.</span></div> <div id="T1l" class="txs"><span class="it">Elle vend des œufs.</span></div> <div id="T1m" class="txs"><span class="it">Elle dit au client qu’ils sont nouveaux alors que cela fait plusieurs semaines qu’elle les a achetés.</span></div> <div id="T1n" class="txs"><span class="it">Elle vend du poisson qui n’est plus toujours frais et triche toujours un peu sur les mesures pour diminuer la quantité.</span></div> <div id="T1o" class="txs"><span class="it">Si une cliente ne sait pas calculer,</span></div> <div id="T1p" class="txs"><span class="it">elle ne lui rend pas toujours la monnaie exacte.</span></div> <div id="T1q" class="txs"><span class="it">Un jour,</span></div> <div id="T1r" class="txs"><span class="it">Marceline dit à Aimée que ce n’est pas bien d’agir ainsi.</span></div> <div id="T1s" class="txs"><span class="it">Aimée lui répond qu’il faut bien se débrouiller pour vivre et que tout le monde fait comme elle.</span></div> <div id="T1t" class="txs"><span class="it">Elle lui explique qu’elle arrange seulement les petites choses à sa manière mais qu’elle ne trompe jamais les gens sur des grandes</span><span class="it"> </span><span class="it">choses.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1u" class="txs">Que pensez-vous de cette histoire?</div> <div id="T1v" class="txs">Peut-on être fidèle dans les grandes choses si on est un peu malhonnête sur des petites choses?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1w" class="txs">La Bible nous dit clairement de ne pas utiliser des mauvais moyens pour nous enrichir.</div> <div id="T1x" class="txs">Il n’y a pas de petit péché devant Dieu;</div> <div id="T1y" class="txs">soit on est honnête,</div> <div id="T1z" class="txs">soit on ne l’est pas!</div></div>
+<div class="p_Corpsdetexte"><div id="T1aa" class="txs">Il est très tentant dans notre monde,</div> <div id="T1ab" class="txs">et parfois facile,</div> <div id="T1ac" class="txs">de s’enrichir de façon malhonnête.</div> <div id="T1ad" class="txs">Certaines personnes malhonnêtes réussissent très bien dans la vie.</div> <div id="T1ae" class="txs">Mais nous devons choisir la fidélité et la justice.</div></div>
+<div class="m"><div id="T1af" class="txs"><span class="ul">Versets </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1ag" class="txs"><span class="it">«&nbsp;Quand on peut faire confiance à quelqu’un pour une toute petite chose,</span></div> <div id="T1ah" class="txs"><span class="it">on peut lui faire confiance aussi pour une grande.</span></div> <div id="T1ai" class="txs"><span class="it">Et quand on est malhonnête pour une toute petite chose,</span></div> <div id="T1aj" class="txs"><span class="it">on est malhonnête aussi pour une grande.</span></div><div id="T1ak" class="txs"><span class="it">&nbsp;» </span>(Luc 16, 10)</div></div>
+<div class="p"><div id="T1al" class="txs"><span class="it">«&nbsp;Mieux vaut peu de biens gagnés honnêtement que beaucoup de richesses obtenues de façon malhonnête.</span></div><div id="T1am" class="txs"><span class="it">&nbsp;» </span>(Proverbes 16, 8)</div></div>
+<div class="m"><div id="T1an" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ao" class="txs">Pensez à une activité dans laquelle vous gagnez un peu d’argent.</div> <div id="T1ap" class="txs">Dans quelle situation c’est difficile d’être honnête?</div> <div id="T1aq" class="txs">Comment être fidèle et juste,</div> <div id="T1ar" class="txs">même dans les petites choses?</div></div>
+<div class="m"><div id="T1as" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1at" class="txs">Cherchez à honorer Dieu dans toutes vos activités.</div> <div id="T1au" class="txs">Il faut se souvenir que Dieu voit tout ce que nous faisons.</div> <div id="T1av" class="txs">Cherchez à Lui être fidèle,</div> <div id="T1aw" class="txs">même dans les petites choses.</div> <div id="T1ax" class="txs">Dieu,</div> <div id="T1ay" class="txs">qui est fidèle,</div> <div id="T1az" class="txs">prendra soin de vous.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/032_Conseil_n23.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

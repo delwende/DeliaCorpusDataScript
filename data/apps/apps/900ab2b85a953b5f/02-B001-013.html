@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 13</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "13a", start: 1686.9, end: 1688.05 },
+    { label: "13b", start: 1688.3, end: 1695.11 },
+    { label: "13c", start: 1695.36, end: 1697.33 },
+    { label: "13d", start: 1697.58, end: 1704.19 },
+    { label: "13e", start: 1704.44, end: 1706.97 },
+    { label: "13f", start: 1707.22, end: 1708.07 },
+    { label: "13g", start: 1708.32, end: 1710.61 },
+    { label: "13h", start: 1710.86, end: 1712.49 },
+    { label: "13i", start: 1712.74, end: 1713.35 },
+    { label: "13j", start: 1713.6, end: 1717.17 },
+    { label: "13k", start: 1717.42, end: 1722.77 },
+    { label: "13l", start: 1723.02, end: 1724.03 },
+    { label: "13m", start: 1724.28, end: 1726.05 },
+    { label: "13n", start: 1726.3, end: 1727.23 },
+    { label: "13o", start: 1727.48, end: 1729.39 },
+    { label: "13p", start: 1729.64, end: 1733.61 },
+    { label: "13q", start: 1733.86, end: 1735.51 },
+    { label: "13r", start: 1735.76, end: 1742.51 },
+    { label: "13s", start: 1742.76, end: 1745.43 },
+    { label: "13t", start: 1745.68, end: 1746.65 },
+    { label: "13u", start: 1746.9, end: 1748.37 },
+    { label: "13v", start: 1748.62, end: 1750.51 },
+    { label: "13w", start: 1750.76, end: 1752.01 },
+    { label: "13x", start: 1752.26, end: 1755.37 },
+    { label: "13y", start: 1755.62, end: 1756.49 },
+    { label: "13z", start: 1756.74, end: 1762.33 },
+    { label: "13aa", start: 1762.58, end: 1764.57 },
+    { label: "13ab", start: 1764.82, end: 1765.55 },
+    { label: "13ac", start: 1765.8, end: 1768.23 },
+    { label: "13ad", start: 1768.48, end: 1770.49 },
+    { label: "13ae", start: 1770.74, end: 1775.61 },
+    { label: "13af", start: 1775.86, end: 1779.13 },
+    { label: "13ag", start: 1779.38, end: 1782.27 },
+    { label: "13ah", start: 1782.52, end: 1783.61 },
+    { label: "13ai", start: 1783.86, end: 1786.95 },
+    { label: "13aj", start: 1787.2, end: 1790.81 },
+    { label: "13ak", start: 1791.06, end: 1792.61 },
+    { label: "13al", start: 1792.86, end: 1796.25 },
+    { label: "13am", start: 1796.5, end: 1800.07 },
+    { label: "13an", start: 1800.32, end: 1802.89 },
+    { label: "13ao", start: 1803.14, end: 1804.65 },
+    { label: "13ap", start: 1804.9, end: 1807.97 },
+    { label: "13aq", start: 1808.22, end: 1810.17 },
+    { label: "13ar", start: 1810.42, end: 1811.59 },
+    { label: "13as", start: 1811.84, end: 1817.63 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1686.9;
+var stopTime  = 1817.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-012.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;13&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-014.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image13.jpg" />
+
+<div class="m"><div id="T13a" class="txs"><span class="bd">The power</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T13b" class="txs"><span class="it">You will know the extraordinary </span><span class="bdit">power</span><span class="it"> God has shown for us who believe in him </span>(Ephesians 1, 19).</div></div>
+<div class="m"><div id="T13c" class="txs"><span class="bd">What is the power of God?</span></div></div>
+<div class="m"><div id="T13d" class="txs">A power is a means or a strength that enables you to do great things or to dominate over other people or things.</div> <div id="T13e" class="txs">It is much sought-after in our world.</div> <div id="T13f" class="txs">WARNING:</div> <div id="T13g" class="txs">when the Bible speaks of the power of God,</div> <div id="T13h" class="txs">it's not the same thing.</div> <div id="T13i" class="txs">Firstly,</div> <div id="T13j" class="txs">God's power is greater than anything we can imagine.</div> <div id="T13k" class="txs">He is the creator of our world and has power over the life and death of everything that exists.</div> <div id="T13l" class="txs">Secondly,</div> <div id="T13m" class="txs">he uses his power for good,</div> <div id="T13n" class="txs">not for evil,</div> <div id="T13o" class="txs">as is the case in our world.</div> <div id="T13p" class="txs">God showed his power in the death and resurrection of his son Jesus,</div> <div id="T13q" class="txs">who brought us salvation.</div> <div id="T13r" class="txs">This power is also shown in the ascension and exaltation of Jesus and in his supreme position over the church.</div></div>
+<div class="m"><div id="T13s" class="txs">It is this power that is available to us.</div> <div id="T13t" class="txs">Unlimited,</div> <div id="T13u" class="txs">unimaginable power,</div> <div id="T13v" class="txs">but always with the aim of saving,</div> <div id="T13w" class="txs">not destroying!</div></div>
+<div class="m"><div id="T13x" class="txs"><span class="bd">Actions to make power a richness in your life:</span></div></div>
+<div class="m"><div id="T13y" class="txs"><span class="it">- Prayer:</span></div> <div id="T13z" class="txs">Thank God for his acts in the past which have shown that he is all-powerful and which are still visible today,</div> <div id="T13aa" class="txs">for example the creation of the world,</div> <div id="T13ab" class="txs">your creation,</div> <div id="T13ac" class="txs">the death and resurrection of Jesus...</div> <div id="T13ad" class="txs">(Complete the list yourself).</div></div>
+<div class="m"><div id="T13ae" class="txs">If you find yourself in a situation or facing a problem that seems impossible,</div> <div id="T13af" class="txs">tell yourself that nothing is impossible for the living God,</div> <div id="T13ag" class="txs">and entrust the situation into his hands.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T13ah" class="txs"><span class="it">- Bible reading</span>:</div> <div id="T13ai" class="txs">Read Isaiah 40, 18 to 31.</div> <div id="T13aj" class="txs">What do these verses teach you about God's omnipotence?</div></div>
+<div class="m"><div id="T13ak" class="txs"><span class="it">- personal reflection:</span></div> <div id="T13al" class="txs">Do you really rely on God's power in your everyday life?</div> <div id="T13am" class="txs">Or is it your own efforts and strength that you're looking for?</div> <div id="T13an" class="txs">Are you seeking God's power for YOURSELF,</div> <div id="T13ao" class="txs">to glorify yourself,</div> <div id="T13ap" class="txs">to seek advancement for yourself and your family alone,</div> <div id="T13aq" class="txs">or to help and save others?</div></div>
+<div class="m"><div id="T13ar" class="txs"><span class="it">- towards others:</span></div> <div id="T13as" class="txs">Examine your relationships with others to see if you're really using the power God has given you for their good.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

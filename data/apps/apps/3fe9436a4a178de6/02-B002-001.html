@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 L’HYÈNE ET LE LIÈVRE 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.51 },
+    { label: "1b", start: 1.76, end: 14.35 },
+    { label: "1c", start: 14.6, end: 23.03 },
+    { label: "1d", start: 23.28, end: 29.17 },
+    { label: "1e", start: 29.42, end: 38.31 },
+    { label: "1f", start: 38.56, end: 48.29 },
+    { label: "1g", start: 48.54, end: 59.19 },
+    { label: "1h", start: 59.44, end: 72.81 },
+    { label: "1i", start: 73.06, end: 86.45 },
+    { label: "1j", start: 86.7, end: 99.51 },
+    { label: "1k", start: 99.76, end: 110.39 },
+    { label: "1l", start: 110.64, end: 113.51 },
+    { label: "1m", start: 113.76, end: 139.55 },
+    { label: "1n", start: 139.8, end: 146.67 },
+    { label: "1o", start: 146.92, end: 160.03 },
+    { label: "1p", start: 160.28, end: 178.03 },
+    { label: "1q", start: 178.28, end: 194.91 },
+    { label: "1r", start: 195.16, end: 206.11 },
+    { label: "1s", start: 206.36, end: 213.83 },
+    { label: "1t", start: 214.08, end: 216.31 },
+    { label: "1u", start: 216.56, end: 221.43 },
+    { label: "1v", start: 221.68, end: 228.95 },
+    { label: "1w", start: 229.2, end: 234.67 },
+    { label: "1x", start: 234.92, end: 239.11 },
+    { label: "1y", start: 239.36, end: 241.27 },
+    { label: "1z", start: 241.52, end: 248.83 },
+    { label: "1aa", start: 249.08, end: 254.23 },
+    { label: "1ab", start: 254.48, end: 262.67 },
+    { label: "1ac", start: 262.92, end: 266.23 },
+    { label: "1ad", start: 266.48, end: 276.35 },
+    { label: "1ae", start: 276.6, end: 279.55 },
+    { label: "1af", start: 279.8, end: 293.55 },
+    { label: "1ag", start: 293.8, end: 301.83 },
+    { label: "1ah", start: 302.08, end: 306.99 },
+    { label: "1ai", start: 307.24, end: 317.35 },
+    { label: "1aj", start: 317.6, end: 325.59 },
+    { label: "1ak", start: 325.84, end: 332.43 },
+    { label: "1al", start: 332.68, end: 344.03 },
+    { label: "1am", start: 344.28, end: 351.95 },
+    { label: "1an", start: 352.2, end: 359.79 },
+    { label: "1ao", start: 360.04, end: 363.75 },
+    { label: "1ap", start: 364, end: 378.47 },
+    { label: "1aq", start: 378.72, end: 384.59 },
+    { label: "1ar", start: 384.84, end: 396.51 },
+    { label: "1as", start: 396.76, end: 401.51 },
+    { label: "1at", start: 401.76, end: 407.83 },
+    { label: "1au", start: 408.08, end: 423.43 },
+    { label: "1av", start: 423.68, end: 431.81 },
+    { label: "1aw", start: 432.06, end: 440.55 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 440.55;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2 L’HYÈNE ET LE LIÈVRE&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">2 </span><span class="bd">L’HYÈNE ET LE LIÈVRE</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">L’hyène et le lièvre sont deux amis inséparables mais chacune de leurs aventures est parsemée de ruses et de pièges.</div> <div id="T1c" class="txs">En ces périodes-là, les pluies étaient abondantes et les terres fertiles.</div> <div id="T1d" class="txs">Il n'y avait pas cette calamité naturelle appelée désertiﬁcation.</div></div>
+<div class="m"><div id="T1e" class="txs">Un tout petit effort dans les travaux champêtres suffisait pour récolter assez pour s'alimenter.</div> <div id="T1f" class="txs">Pour se mettre à l'abri de la famine, lièvre alla voir son amie hyène et lui proposa ceci :</div> <div id="T1g" class="txs"><span class="it">«&nbsp;</span><span class="it">C</span><span class="it">h</span><span class="it">è</span><span class="it">r</span><span class="it">e</span><span class="it"> parent</span><span class="it">e</span><span class="it"> et ami</span><span class="it">e</span><span class="it">, on dit généralement que seul le travail libère l’homme et le préserve du vice.</span></div> <div id="T1h" class="txs"><span class="it">Viens avec moi, nous all</span><span class="it">o</span><span class="it">ns unir nos forces dans un champ commun et je suis sûr que nous réussirons mieux que les autres&nbsp;»</span>.</div></div>
+<div class="m"><div id="T1i" class="txs">L’hyène ne trouva pas d’inconvénients mais connaissant les ruses de son ami lièvre, pensait déjà à la distribution de la récolte.</div> <div id="T1j" class="txs">C’était vraiment vendre la peau de l'ours avant de l’avoir tué ou autrement, manger son blé en herbe.</div> <div id="T1k" class="txs">Mais qui connaît vraiment comment se terminent toujours les projets communs de ces deux amis.</div> <div id="T1l" class="txs">Cette réserve était bien vue de la part de l'hyène.</div></div>
+<div class="m"><div id="T1m" class="txs">Cette fois-ci, le lièvre clama et jura sa bonne volonté à l'hyène et pour la lui témoigner, il donna le loisir à son amie Hyène de choisir entre les fruits d'en haut et ceux d’en bas.</div> <div id="T1n" class="txs">L’hyène réclama ceux d’en haut et demanda au lièvre de proposer l’espèce à semer pour cette saison.</div> <div id="T1o" class="txs">Celui-ci eut l’aubaine de tromper l’hyène et c’est ainsi qu’il décida qu’ils cultiveront le manioc.</div> <div id="T1p" class="txs">Cela fut fait et quand le moment des récoltes fut venu, et comme convenu, lièvre alla déterrer tous les tubercules et laissa l’hyène qui ne se contenta pas que des inutiles feuilles.</div></div>
+<div class="m"><div id="T1q" class="txs">Constatant sa défaite, l’hyène s’en pressa de réclamer pour les prochaines récoltes les produits d’en bas afin de pouvoir bénéficier des fruits de leur dur labeur.</div> <div id="T1r" class="txs">Seulement son manque d’imagination féconde et d’initiative fait d’elle une proie facile des ruses de son ami lièvre.</div> <div id="T1s" class="txs">Ce dernier fut encore supplié par l'hyène de proposer ce qu’ils vont cultiver.</div></div>
+<div class="m"><div id="T1t" class="txs">Lièvre proposa le mil.</div> <div id="T1u" class="txs">La saison fut très bonne et l’heure des récoltes sonna.</div> <div id="T1v" class="txs">Lièvre alla couper les émis de mil (produits d'en haut) et l’hyène déterra les racines.</div> <div id="T1w" class="txs">Pour une deuxième fois, l’hyène venait de perdre la partie.</div></div>
+<div class="m"><div id="T1x" class="txs">Elle perdit ainsi totalement confiance à son ami.</div> <div id="T1y" class="txs">Comme l’a dit un vieillard :</div> <div id="T1z" class="txs"><span class="it">«&nbsp;</span><span class="it">I</span><span class="it">l n’y a pas deux </span><span class="it">co</span><span class="it">nfiances</span><span class="it">, quand</span><span class="it"> l</span><span class="it">a</span><span class="it"> première</span><span class="it"> est </span><span class="it">t</span><span class="it">ra</span><span class="it">hi</span><span class="it">e, la seconde </span><span class="it">devient de la méfiance&nbsp;»</span>.</div></div>
+<div class="m"><div id="T1aa" class="txs">Ils rompirent le contrat mais restèrent grands amis.</div> <div id="T1ab" class="txs">Un jour, le lièvre a perdu son beau-père et demanda à l’hyène de l’accompagner à l'enterrement.</div> <div id="T1ac" class="txs">Ils prirent ensemble le chemin du village.</div> <div id="T1ad" class="txs">Chemin faisant, l’hyène vit un être vivant de couleur bizarre et étrange qui déambulait sur la voie.</div> <div id="T1ae" class="txs">Elle demanda au lièvre ce que c’était.</div> <div id="T1af" class="txs">Celui-ci répondit que c’est un être très méchant qui pique les gens avec un venin mortel ou dans le meilleur des cas te fait pleurer de toutes les larmes du corps.</div> <div id="T1ag" class="txs">Il conclut en invitant son amie à ne pas chercher des problèmes avec cet être bizarre.</div> <div id="T1ah" class="txs">Ils continuèrent leur chemin mais à quelques kilomètres, l’hyène réfléchit :</div> <div id="T1ai" class="txs">«&nbsp;<span class="it">Mon </span><span class="it">ami ne me d</span><span class="it">it jamais</span><span class="it"> la</span><span class="it"> vérité,</span><span class="it"> peut</span><span class="it">-</span><span class="it">ê</span><span class="it">t</span><span class="it">re que </span><span class="it">l</span><span class="it">'</span><span class="it">être</span><span class="it"> bizarre </span><span class="it">qu’on </span><span class="it">a</span><span class="it"> vu est une bonne proie et </span><span class="it">mon am</span><span class="it">i</span><span class="it"> veu</span><span class="it">t</span><span class="it"> me </span><span class="it">t</span><span class="it">r</span><span class="it">o</span><span class="it">mper e</span><span class="it">nco</span><span class="it">re</span>&nbsp;».</div></div>
+<div class="m"><div id="T1aj" class="txs">Aussitôt pensé, elle rebroussa chemin tout en donnant l’ordre à son ami de l’attendre sous l’ombre.</div></div>
+<div class="m"><div id="T1ak" class="txs">L’hyène retrouva son être bizarre qui était en réalité un scorpion noir.</div> <div id="T1al" class="txs">La gourmande posa ses narines pour sentir l’être et c’est avec un grand plaisir que le scorpion envoya tout son venin dans sa cervelle.</div> <div id="T1am" class="txs">Celle-ci a failli perdre connaissance mais vite elle retint sa douleur et rejoignit son compagnon.</div> <div id="T1an" class="txs">Pour le reste du chemin, le lièvre remarqua que l’hyène était devenue moins loquace :</div> <div id="T1ao" class="txs">c'était la douleur qu'elle essayait de retenir.</div></div>
+<div class="m"><div id="T1ap" class="txs">À un certain moment, ne pouvant plus supporter, l’hyène commença à pleurer et quand son ami lui demanda pourquoi elle pleurait ; elle répondit comme pour donner raison à son attitude :</div> <div id="T1aq" class="txs">«&nbsp;<span class="it">S</span><span class="it">e</span><span class="it">l</span><span class="it">on </span><span class="it">l</span><span class="it">es coutumes de mon et</span><span class="it">hn</span><span class="it">ie, on ne doit pas</span><span class="it"> aller</span><span class="it"> aux </span><span class="it">funérailles</span><span class="it"> </span><span class="it">s</span><span class="it">ans </span><span class="it">pl</span><span class="it">eurer.</span></div> <div id="T1ar" class="txs"><span class="it">E</span><span class="it">t</span><span class="it"> puis ton beau</span><span class="it">-père</span><span class="it"> a </span><span class="it">été</span><span class="it"> un</span><span class="it"> homme </span><span class="it">bien et </span><span class="it">quand </span><span class="it">je pense un peu </span><span class="it">à</span><span class="it"> </span><span class="it">l</span><span class="it">ui et me rends </span><span class="it">compte</span><span class="it"> que</span><span class="it"> </span><span class="it">nous </span><span class="it">allons à ses funérailles, </span><span class="it">je ne peux que pleurer</span>&nbsp;».</div></div>
+<div class="m"><div id="T1as" class="txs">Mais très vite, le lièvre se rendit compte de la vérité.</div> <div id="T1at" class="txs">Car même dans la maison mortuaire, l’hyène ne put s’empêcher de crier.</div> <div id="T1au" class="txs">Les beaux-parents du lièvre furent étonnés de cet étranger pleurnichard au point de menacer leur beau fils d’expulser son compagnon s'il n'arrivait pas à le faire taire.</div></div>
+<div class="m"><div id="T1av" class="txs">Excédée par la douleur, elle prit la clef des champs et continua ses pleurs, seule dans la forêt.</div> <div id="T1aw" class="txs">Il n'y a vraiment pas deux confiances et un abus de confiance nuit toujours aux relations sociales.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 02 l'hyene et le lievre.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

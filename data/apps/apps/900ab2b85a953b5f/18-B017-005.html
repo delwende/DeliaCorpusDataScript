@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Hordhac 5</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "18-B017-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='17-B016-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-004.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Hordhac&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;5&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-006.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B018-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B017-image5.jpg" />
+
+<div class="m"><span class="bd">Jacayl</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Ilaahay</span><span class="it"> </span><span class="it">wuu</span><span class="it"> </span><span class="it">ina</span><span class="it"> </span><span class="it">jecel</span><span class="it"> </span><span class="it">yahayoo</span><span class="it"> </span><span class="it">wuxuu</span><span class="it"> had </span><span class="it">iyo</span><span class="it"> jeer </span><span class="it">doonayay</span><span class="it"> </span><span class="it">inaannu</span><span class="it"> </span><span class="it">wiilashiisa</span><span class="it"> </span><span class="it">ku</span><span class="it"> </span><span class="it">noqonno</span><span class="it"> </span><span class="it">Ciise</span><span class="it"> </span><span class="it">Masiix</span><span class="it"> </span>(Efesos 1, 4 ilaa 5).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Waa </span><span class="bd">maxay</span><span class="bd"> </span><span class="bd">jacaylka</span><span class="bd"> </span><span class="bd">Ilaah</span><span class="bd">?</span></div>
+<div class="m">Jacaylka Ilaahay waa kaamil, aan xad lahayn oo daahir ah. Dareen kaliya maaha. Ilaah wuxuu ina tusay jacaylkiisa fal aad iyo aad muhiim u ah: wuxuu ina siiyay wiilkiisii ​​keliya ee ina badbaadiya (Yooxanaa 3, 16).</div>
+<div class="m">- Jacaylka Ilaah waa shuruud la'aan: isagu igama baryo inaan hagaajiyo noloshayda ka hor inta uusan i badbaadin! Dabeecadda jacaylka Ilaah ee aan shuruudda lahayn weligii ma isbeddelo. Ilaahay wuu ina jecel yahay xataa haddaynu dembi galno, xataa haddaynu isaga ka tagno. Jacaylka uu inoo qabo waa sidii hore. Ma yaraynayso.</div>
+<div class="m">- Jacaylka Ilaah waa naf-hurid, yacni, wuxuu diiradda saarayaa annaga. Intuu wiilkiisa siinayay, isuma uu fikirin, laakiin annaga! Oo isna wuu sii waday inuu ina caawiyo, si uu noogu adeego.</div>
+<div class="m">- Jacaylka Ilaah waa mid aad u weyn: Ilaah aad buu inoo jecel yahay oo wuxuu siiyey hadiyaddiisa ugu qaalisan, oo ah wiilkiisa keliya. Wax ka weyn oo uu noo qaban karay ma jiro.</div>
+<div class="m"><span class="bd">Tallaabooyinka</span><span class="bd"> </span><span class="bd">jacaylka</span><span class="bd"> </span><span class="bd">Ilaah</span><span class="bd"> </span><span class="bd">looga</span><span class="bd"> </span><span class="bd">dhigo</span><span class="bd"> </span><span class="bd">hodantinimada</span><span class="bd"> </span><span class="bd">noloshaada</span><span class="bd">: </span></div>
+<div class="m"><span class="it">- </span><span class="it">Ducada</span><span class="it">: </span>Ilaah ku mahad naq maalin walba jacaylka uu kuu qabo. U fiirso calaamadaha yaryar ee jacaylka Ilaah inta lagu jiro maalinta. Dhammaadka maalinta, ku qor dhacdooyinka muujinaya jacaylka Eebbe buug xusuus-qor ah oo isaga ku mahadsan.</div>
+<div class="m">Akhriska Kitaabka Quduuska ah: Akhri Efesos 3, 17 ilaa 19.</div>
+<div class="m"><span class="it">- </span><span class="it">milicsiga</span><span class="it"> </span><span class="it">shakhsi</span><span class="it"> </span><span class="it">ahaaneed</span>: Tuducan, Rasuul Bawlos wuxuu adeegsaday 2 sawir si uu ugu dhiirrigeliyo akhristayaashiisa inay ku raaxaystaan ​​jacaylka Ilaah: </div>
+<div class="m">- Jacaylkan xidid ku yeelo: sida geedku dhulka xididkiisa u kala bixiyo si aanu dabayshu u qaadin oo uu nafaqo u helo...</div>
+<div class="m">Ku dhis jacaylkan: jacaylka Ilaahay waa aasaas adag, oo inoo suurtageliya inaan dhisno oo aan hore ugu soconno nolosheenna ruuxiga ah.</div>
+<div class="m">Ka fakar sida labadan sawir ay kuugu caawin karaan inaad u noolaato oo aad u hesho jacaylka Ilaah nolol maalmeedka.</div>
+<div class="m"><span class="it">Ku </span><span class="it">wajahan</span><span class="it"> </span><span class="it">kuwa</span><span class="it"> kale</span><span class="it">: </span>La wadaag markhaatigaaga ku saabsan jacaylka Ilaah ee noloshaada saaxiibbadaa, naagtaada ama ninkaaga ama walaalaha kaniisaddaada. Falimahaagana ku tus in Ilaah iyaga jecel yahay.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

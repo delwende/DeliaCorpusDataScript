@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>10 Les types d’excision 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.33 },
+    { label: "1b", start: 2.58, end: 3.87 },
+    { label: "1c", start: 4.12, end: 6.25 },
+    { label: "1d", start: 6.5, end: 9.59 },
+    { label: "1e", start: 9.84, end: 15.19 },
+    { label: "1f", start: 15.44, end: 17.27 },
+    { label: "1g", start: 17.52, end: 19.47 },
+    { label: "1h", start: 19.72, end: 21.55 },
+    { label: "1i", start: 21.8, end: 24.11 },
+    { label: "1j", start: 24.36, end: 27.25 },
+    { label: "1k", start: 27.5, end: 33.37 },
+    { label: "1l", start: 33.62, end: 38.11 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 38.11;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;10 Les types d’excision&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">10 Les types d’excision (2).</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="it">Questions:</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="it">- Que voyez-vous sur </span><span class="it">l’image</span><span class="it">?</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">- Quel est le deuxième type d’excision?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs">L’image montrent le sexe d’une femme qui subit l’excision de type 2.</div></div>
+<div class="m"><div id="T1f" class="txs">Type 2 :</div> <div id="T1g" class="txs">Le clitoris et les lèvres sont coupés,</div> <div id="T1h" class="txs">complètement ou en partie.</div></div>
+<div class="m"><div id="T1i" class="txs">Dans ce type d’excision,</div> <div id="T1j" class="txs">l’exciseuse coupe non seulement le clitoris,</div> <div id="T1k" class="txs">mais aussi les lèvres (les petites lèvres et parfois aussi les grandes lèvres).</div></div>
+<div class="m"><div id="T1l" class="txs">Il n’y a plus de protection contre l’entrée des microbes dans le vagin.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/10AUD-20230320-WA0031.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

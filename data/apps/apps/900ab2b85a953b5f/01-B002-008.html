@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 8</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "8a", start: 1080.54, end: 1081.81 },
+    { label: "8b", start: 1082.06, end: 1084.71 },
+    { label: "8c", start: 1084.96, end: 1086.11 },
+    { label: "8d", start: 1086.36, end: 1090.59 },
+    { label: "8e", start: 1090.84, end: 1092.25 },
+    { label: "8f", start: 1092.5, end: 1093.37 },
+    { label: "8g", start: 1093.62, end: 1099.87 },
+    { label: "8h", start: 1100.12, end: 1102.95 },
+    { label: "8i", start: 1103.2, end: 1106.37 },
+    { label: "8j", start: 1106.62, end: 1108.57 },
+    { label: "8k", start: 1108.82, end: 1109.69 },
+    { label: "8l", start: 1109.94, end: 1111.53 },
+    { label: "8m", start: 1111.78, end: 1112.79 },
+    { label: "8n", start: 1113.04, end: 1117.87 },
+    { label: "8o", start: 1118.12, end: 1123.31 },
+    { label: "8p", start: 1123.56, end: 1125.99 },
+    { label: "8q", start: 1126.24, end: 1129.49 },
+    { label: "8r", start: 1129.74, end: 1134.73 },
+    { label: "8s", start: 1134.98, end: 1139.17 },
+    { label: "8t", start: 1139.42, end: 1141.77 },
+    { label: "8u", start: 1142.02, end: 1146.85 },
+    { label: "8v", start: 1147.1, end: 1152.49 },
+    { label: "8w", start: 1152.74, end: 1154.99 },
+    { label: "8x", start: 1155.24, end: 1159.43 },
+    { label: "8y", start: 1159.68, end: 1163.39 },
+    { label: "8z", start: 1163.64, end: 1164.71 },
+    { label: "8aa", start: 1164.96, end: 1167.93 },
+    { label: "8ab", start: 1168.18, end: 1169.65 },
+    { label: "8ac", start: 1169.9, end: 1172.99 },
+    { label: "8ad", start: 1173.24, end: 1177.45 },
+    { label: "8ae", start: 1177.7, end: 1179.65 },
+    { label: "8af", start: 1179.9, end: 1182.47 },
+    { label: "8ag", start: 1182.72, end: 1184.75 },
+    { label: "8ah", start: 1185, end: 1186.51 },
+    { label: "8ai", start: 1186.76, end: 1195.71 },
+    { label: "8aj", start: 1195.96, end: 1197.77 },
+    { label: "8ak", start: 1198.02, end: 1202.89 },
+    { label: "8al", start: 1203.14, end: 1208.95 },
+    { label: "8am", start: 1209.2, end: 1211.61 },
+    { label: "8an", start: 1211.86, end: 1215.07 },
+    { label: "8ao", start: 1215.32, end: 1217.03 },
+    { label: "8ap", start: 1217.28, end: 1221.07 },
+    { label: "8aq", start: 1221.32, end: 1226.25 },
+    { label: "8ar", start: 1226.5, end: 1227.75 },
+    { label: "8as", start: 1228, end: 1238.27 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1080.54;
+var stopTime  = 1238.27;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-007.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;8&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-009.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image8.jpg" />
+
+<div class="m"><div id="T8a" class="txs"><span class="bd">La grâce</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T8b" class="txs"><span class="it">En lui nous avons la rédemption par son sang,</span></div> <div id="T8c" class="txs"><span class="it">la rémission des péchés,</span></div> <div id="T8d" class="txs"><span class="it">selon la richesse de </span><span class="bdit">sa grâce</span> (Ephésiens 1, 4 à 5)</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T8e" class="txs"><span class="bd">La grâce de Dieu,</span></div> <div id="T8f" class="txs"><span class="bd">c’est quoi&nbsp;?</span></div></div>
+<div class="m"><div id="T8g" class="txs">Grâce signifie recevoir le salut de Dieu complètement en dehors de tout mérite ou acte de notre part.</div> <div id="T8h" class="txs">Dieu a fait tout au nom de Jésus pour nous.</div> <div id="T8i" class="txs">Le salut est un don non une récompense.</div> <div id="T8j" class="txs">Le salut est une œuvre de Dieu,</div> <div id="T8k" class="txs">une œuvre achevée,</div> <div id="T8l" class="txs">nous ne pouvons rien y ajouter,</div> <div id="T8m" class="txs">ni en ôter.</div> <div id="T8n" class="txs">Nous sommes sauvés par la grâce (Ephésiens 2, 5 et versets 8 à 9),</div> <div id="T8o" class="txs">ET nous vivons et servons par la grâce (Ephésiens 3, 2 et versets 7 à 8).</div> <div id="T8p" class="txs">La grâce de Dieu ne s’arrête pas au salut,</div> <div id="T8q" class="txs">mais elle continue d’agir dans notre vie de tous les jours.</div> <div id="T8r" class="txs">Les bénédictions de Dieu dans notre vie ne sont pas des récompenses pour notre obéissance,</div> <div id="T8s" class="txs">pour nos bonnes œuvres ou notre participation active à la vie de l’église.</div> <div id="T8t" class="txs">Dieu nous bénit par pure grâce.</div></div>
+<div class="m"><div id="T8u" class="txs">L’obéissance à Dieu et les bonnes œuvres ont une place importante dans notre vie.</div> <div id="T8v" class="txs">MAIS si j’agis tout en pensant dans mon cœur seulement à ce que je peux «&nbsp;<span class="it">gagner</span>&nbsp;» avec Dieu,</div> <div id="T8w" class="txs">je suis en train de faire fausse route.</div> <div id="T8x" class="txs">La motivation que Dieu cherche est vouloir lui faire plaisir.</div></div>
+<div class="m"><div id="T8y" class="txs"><span class="bd">Actions pour que la grâce devienne une richesse dans ta vie :</span></div></div>
+<div class="m"><div id="T8z" class="txs"><span class="ul">-</span><span class="ul"> la prière</span> :</div> <div id="T8aa" class="txs">Fais une liste de tout ce que Dieu t’a donné par pure grâce,</div> <div id="T8ab" class="txs">sans que tu le mérites.</div> <div id="T8ac" class="txs">Remercie Dieu pour chaque chose sur la liste.</div> <div id="T8ad" class="txs">Fais une deuxième liste de tout ce que tu souhaites avoir ou faire.</div> <div id="T8ae" class="txs">Confie la liste à Dieu.</div> <div id="T8af" class="txs">Dis-lui que tu ne mérites aucune de ces choses,</div> <div id="T8ag" class="txs">mais que tu comptes sur sa grâce&nbsp;!</div></div>
+<div class="m"><div id="T8ah" class="txs"><span class="ul">-</span><span class="ul"> la lecture biblique</span> :</div> <div id="T8ai" class="txs">Lis 1 Corinthiens 15, 8 à 10 et 2 Corinthiens 12, 8 à 10 et découvre comment l’apôtre Paul a expérimenté la grâce de Dieu dans sa vie.</div></div>
+<div class="m"><div id="T8aj" class="txs"><span class="ul">-</span><span class="ul"> réflexion personnelle</span> :</div> <div id="T8ak" class="txs">Nous somme influencés par notre monde qui nous dit "<span class="it">Tu mérites ceci parce que tu as fait cela</span>",</div> <div id="T8al" class="txs">"<span class="it">Tu es bien parce que tu es qualifié</span>"… MAIS Dieu nous dit "<span class="it">Tout ce que tu as je t'ai donné.</span></div> <div id="T8am" class="txs"><span class="it">Tu n'as rien fait pour le mériter.</span></div> <div id="T8an" class="txs"><span class="it">Je ne t'ai pas donné ce poste parce que tu es qualifié,</span></div> <div id="T8ao" class="txs"><span class="it">mais parce que je t'aime</span>."</div> <div id="T8ap" class="txs">Réfléchis si tu vis vraiment pleinement de la grâce de Dieu.</div> <div id="T8aq" class="txs">Est-ce que tu obéis à Dieu pour lui faire plaisir ou pour gagner quelque chose de lui&nbsp;?</div></div>
+<div class="m"><div id="T8ar" class="txs"><span class="ul">-</span><span class="ul"> envers les autres :</span></div> <div id="T8as" class="txs">Partage cette signification de la grâce de Dieu avec des frères et sœurs qui sont découragés parce qu’ils ont échoué dans un examen ou manqué d’obtenir quelque chose qu’ils désiraient ardemment.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

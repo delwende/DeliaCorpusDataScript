@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golle Nulaaɓe 15</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 8.43 },
+    { label: "1b", start: 8.68, end: 12.51 },
+    { label: "2a", start: 12.76, end: 17.69 },
+    { label: "2b", start: 17.94, end: 27.07 },
+    { label: "3a", start: 27.32, end: 30.95 },
+    { label: "3b", start: 31.2, end: 37.77 },
+    { label: "3c", start: 38.02, end: 40.99 },
+    { label: "4a", start: 41.24, end: 47.91 },
+    { label: "4b", start: 48.16, end: 51.05 },
+    { label: "5a", start: 51.3, end: 55.77 },
+    { label: "5b", start: 56.02, end: 60.21 },
+    { label: "6", start: 60.46, end: 64.03 },
+    { label: "7a", start: 64.28, end: 68.13 },
+    { label: "7b", start: 68.38, end: 73.61 },
+    { label: "7c", start: 73.86, end: 81.71 },
+    { label: "8", start: 81.96, end: 89.67 },
+    { label: "9", start: 89.92, end: 95.69 },
+    { label: "10a", start: 95.94, end: 99.57 },
+    { label: "10b", start: 99.82, end: 105.73 },
+    { label: "11a", start: 105.98, end: 106.63 },
+    { label: "11b", start: 106.88, end: 111.15 },
+    { label: "11c", start: 111.4, end: 113.53 },
+    { label: "12", start: 113.78, end: 125.09 },
+    { label: "13a", start: 125.34, end: 130.67 },
+    { label: "13b", start: 130.92, end: 133.63 },
+    { label: "14", start: 133.88, end: 140.97 },
+    { label: "15", start: 141.22, end: 145.57 },
+    { label: "16a", start: 145.82, end: 147.11 },
+    { label: "16b", start: 147.36, end: 149.17 },
+    { label: "16c", start: 149.42, end: 151.79 },
+    { label: "16d", start: 152.04, end: 154.03 },
+    { label: "16e", start: 154.28, end: 155.81 },
+    { label: "17a", start: 156.06, end: 159.47 },
+    { label: "17b", start: 159.72, end: 163.23 },
+    { label: "18", start: 163.48, end: 168.85 },
+    { label: "19", start: 169.1, end: 175.29 },
+    { label: "20", start: 175.54, end: 183.81 },
+    { label: "21", start: 184.06, end: 193.13 },
+    { label: "22a", start: 193.38, end: 204.99 },
+    { label: "22b", start: 205.24, end: 208.85 },
+    { label: "22c", start: 209.1, end: 212.57 },
+    { label: "23a", start: 212.82, end: 214.97 },
+    { label: "23b", start: 215.22, end: 224.17 },
+    { label: "24a", start: 224.42, end: 230.95 },
+    { label: "24b", start: 231.2, end: 233.35 },
+    { label: "25", start: 233.6, end: 241.95 },
+    { label: "26", start: 242.2, end: 246.43 },
+    { label: "27", start: 246.68, end: 253.41 },
+    { label: "28", start: 253.66, end: 260.01 },
+    { label: "29a", start: 260.26, end: 265.95 },
+    { label: "29b", start: 266.2, end: 269.65 },
+    { label: "29c", start: 269.9, end: 271.57 },
+    { label: "30a", start: 271.82, end: 275.23 },
+    { label: "30b", start: 275.48, end: 281.57 },
+    { label: "31", start: 281.82, end: 287.09 },
+    { label: "32a", start: 287.34, end: 289.59 },
+    { label: "32b", start: 289.84, end: 294.69 },
+    { label: "33", start: 294.94, end: 302.21 },
+    { label: "34", start: 302.46, end: 304.91 },
+    { label: "35a", start: 305.16, end: 308.05 },
+    { label: "35b", start: 308.3, end: 313.25 },
+    { label: "36a", start: 313.5, end: 316.69 },
+    { label: "36b", start: 316.94, end: 325.07 },
+    { label: "37", start: 325.32, end: 328.67 },
+    { label: "38", start: 328.92, end: 336.59 },
+    { label: "39a", start: 336.84, end: 339.25 },
+    { label: "39b", start: 339.5, end: 341.77 },
+    { label: "39c", start: 342.02, end: 346.53 },
+    { label: "40a", start: 346.78, end: 349.19 },
+    { label: "40b", start: 349.44, end: 353.25 },
+    { label: "41", start: 353.5, end: 360.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+
+// Footnotes and Cross-references
+var footnotes = {
+    "F-0": "<div class=\"footnote-p\"><span class=\"fr\">15:26 </span><span class=\"ft\"><span class=\"bdit\">Farritaade </span> wo rafi reenude yonki muuɗum. </span></div>",
+    "F-1": "<div class=\"footnote-p\"><span class=\"fr\">15:34 </span><span class=\"ft\">E ɗereeji ɓooyɗi, goɗɗi ngalaa aaya 34.</span></div>",
+    "F-2": "<div class=\"footnote-p\"><span class=\"fr\">15:39 </span><span class=\"fk\">Ruunde </span><span class=\"ft\">wo leydi tummbiindi hakkunde maayo manngo.</span></div>"
+};
+
+initFootnotes(footnotes);
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 28 }];
+var hasIntro = false;
+var baseRef  = "fu-18-ACT-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='fu-17-JHN-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='fu-18-ACT-014.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Golle Nulaaɓe&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;15&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-18-ACT-016.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-19-ROM-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="s1">Haala kawrital gaɗaangal Urusaliima</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">15</div> <div id="T1a" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Yimɓe woɓɓe ƴuuri Yahuudiya ngari Antiyoki, ina njanngina sakiraaɓe ɓeen, ina mbi'a:</div></div>
+<div class="p"><div id="T1b" class="txs">— Si on taadiraaka hono no Muusaa wi'iri noon fu, on kisataa.</div><span id="bookmarks1"></span></div><span id="bookmarks1"></span><a id="v2"></a>
+<div class="p"><div id="T2a" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>Pool e Barnabas pooɗunduri e maɓɓe, ndukidi e maɓɓe faa tiiɗi.</div> <div id="T2b" class="txs">Ndelle ɓe tabintini nelde Pool e Barnabas e yimɓe woɓɓe faa Urusaliima, ɓe kaaldowa e nulaaɓe e mawɓe goonɗinɓe ɓeen dow majjum.</div><span id="bookmarks2"></span> <a id="v3"></a><div id="T3a" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>Ndelle kawrital goonɗinɓe ngaal neli ɓe.</div> <div id="T3b" class="txs">Ɓe peƴƴiti leyɗe Finisi e Samariya, iɓe kaalana goonɗinɓe toon haala tuubugol yimɓe ɓe nganaa Alhuudiyankooɓe.</div> <div id="T3c" class="txs">Ɗum laatanii sakiraaɓe ɓeen fuu seyo manngo.</div><span id="bookmarks3"></span> <a id="v4"></a><div id="T4a" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>Nde ɓe njottinoo Urusaliima ndeen, kawrital goonɗinɓe ngaal e nulaaɓe e mawɓe ɓeen njaɓɓii ɓe.</div> <div id="T4b" class="txs">Ɓe kaalani ɗum'en ko Laamɗo gollitiri ɓe.</div><span id="bookmarks4"></span></div><span id="bookmarks4"></span><a id="v5"></a>
+<div class="p"><div id="T5a" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Ammaa woɓɓe ley goonɗinɓe jeyaaɓe e fedde Farisa'en ummii, mbi'i:</div></div>
+<div class="p"><div id="T5b" class="txs">— Waajibi ɓe taadee, ɓe njamiree jokkude Tawreeta Muusaa.</div><span id="bookmarks5"></span></div><span id="bookmarks5"></span><a id="v6"></a>
+<div class="p"><div id="T6" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>Nulaaɓe e mawɓe ɓeen kawriti faa ndaara haala kaan.</div><span id="bookmarks6"></span> <a id="v7"></a><div id="T7a" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>Caggal ko haalaaji ɗiin keewii, Piyeer ummii, wi'i ɓe:</div></div>
+<div class="p"><div id="T7b" class="txs">— Sakiraaɓe, oɗon anndi Laamɗo suɓake kam e ley mooɗon gilla ko ɓooyi.</div> <div id="T7c" class="txs">O suɓake kam faa mi waajoo Kabaaru Lobbo oon hakkunde yimɓe ɓe nganaa Alhuudiyankooɓe, faa ɓe nana, ɓe ngoonɗina.</div><span id="bookmarks7"></span> <a id="v8"></a><div id="T8" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>Laamɗo annduɗo ɓerɗe oon hollii jaɓanii ɓe, nde hokkunoo ɓe Ruuhu Ceniiɗo hono no meeɗen ni.</div><span id="bookmarks8"></span> <a id="v9"></a><div id="T9" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>Walaa fuu ko o senndiri en e maɓɓe, e ley ko o laaɓiniri ɓerɗe maɓɓe e goonɗinal.</div><span id="bookmarks9"></span> <a id="v10"></a><div id="T10a" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Joonin, ko waɗi de oɗon ndaartindoo Laamɗo?</div> <div id="T10b" class="txs">Oɗon njowa e taalibaaɓe ɓeen donngal ngal enen e maamiraaɓe meeɗen fuu en mbaawaay ronndaade.</div><span id="bookmarks10"></span> <a id="v11"></a><div id="T11a" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>A'aa.</div> <div id="T11b" class="txs">Wo moƴƴere Joomiraaɗo meeɗen Iisaa de tannyorɗen hisineede.</div> <div id="T11c" class="txs">Hono noon kamɓe du.</div><span id="bookmarks11"></span></div><span id="bookmarks11"></span><a id="v12"></a>
+<div class="p"><div id="T12" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>Kawrital ngaal fuu deƴƴinii siw, ina hettinii ko Barnabas e Pool pillotoo no Laamɗo hokkiri ɗum'en waɗude maandeeji kaayniiɗi e kaayeefiiji hakkunde lenyi goɗɗi.</div><span id="bookmarks12"></span> <a id="v13"></a><div id="T13a" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Nde ɓe kettinnoo haalaaji ɗiin faa wooɗi fu, Yaakuuba ɓeydi haala, wi'i:</div></div>
+<div class="p"><div id="T13b" class="txs">— Sakiraaɓe, kettinanee kam!</div><span id="bookmarks13"></span> <a id="v14"></a><div id="T14" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>Simon humpitii en no Laamɗo artorii hakkilande yimɓe ɓe nganaa Alhuudiyankooɓe, faa waɗa ɗum'en yimɓe muuɗum.</div><span id="bookmarks14"></span> <a id="v15"></a><div id="T15" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>Ɗum hawrii e haalaaji annabaaɓe ɗiin, hono no winndiraa ni:</div><span id="bookmarks15"></span></div><span id="bookmarks15"></span><a id="v16"></a>
+<div class="q-vv top-spacing"><div id="T16a" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>«Joomiraaɗo wi'i:</div></div>
+<div class="q"><div id="T16b" class="txs">Caggal ɗuum, mi wartan,</div></div>
+<div class="q2"><div id="T16c" class="txs">mi nyiɓtoo suudu Daawda saamundu nduun,</div></div>
+<div class="q"><div id="T16d" class="txs">mi fonndita ko boni e mayru,</div></div>
+<div class="q2"><div id="T16e" class="txs">mi darna ndu katin,</div><span id="bookmarks16"></span></div><span id="bookmarks16"></span><a id="v17"></a>
+<div class="q-vv"><div id="T17a" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>faa yimɓe heddiiɓe fuu tewta Joomiraaɗo,</div></div>
+<div class="q2"><div id="T17b" class="txs">lenyi ɗi noddammi fuu, faa laatoo yimɓe am.</div><span id="bookmarks17"></span></div><span id="bookmarks17"></span><a id="v18"></a>
+<div class="q-vv"><div id="T18" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>Joomiraaɗo tabintinɗo kulle ɗe anndunoo waɗan gilla arande, kam wi'i noon.»</div><span id="bookmarks18"></span></div><span id="bookmarks18"></span><a id="v19"></a>
+<div class="m"><div id="T19" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>Ɗum saabii miin kaa ko nji'umi, taa tiiɗinanen lenyi goɗɗi tuubuɗi ngarti e Laamɗo ɗiin.</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>Ammaa mbinndanen ɓe ɓe ndeentoo e ko tooruuji tuunini e jeenu e nyaamude ko saaɗi e nyaamude ƴiiƴam.</div><span id="bookmarks20"></span> <a id="v21"></a><div id="T21" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Gilla e jamaanuuji ɓooyɗi, Tawreeta Muusaa ina jannginee ley gure ɗeen fuu, iɓe njannga ɗum nyalaande fowteteende fuu ley cuuɗi baajorɗi.</div><span id="bookmarks21"></span></div>
+
+<div class="s"><div id="s2">Haala ɓataaki yaade to goonɗinɓe ɓe nganaa Alhuudiyankooɓe</div></div><span id="bookmarks21"></span><a id="v22"></a>
+<div class="p"><div id="T22a" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>Ndeen nulaaɓe ɓeen e mawɓe e kawrital goonɗinɓe ngaal fuu paamiri faa cuɓoo worɓe e ley muɓɓen faa nela ɗum'en Antiyoki, ɓe njaada e Pool e Barnabas.</div> <div id="T22b" class="txs">Ɓe cuɓii Yahuuda bi'eteeɗo Barasaba, kam e Silas.</div> <div id="T22c" class="txs">Ɗiɗo ɓeen fuu wo ardiiɓe ley sakiraaɓe goonɗinɓe.</div><span id="bookmarks22"></span> <a id="v23"></a><div id="T23a" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>Inan ɓataaki ki ɓe kokki ɗum'en:</div></div>
+<div class="b">&nbsp;</div>
+<div class="mi"><div id="T23b" class="txs">Minen sakiraaɓe mooɗon nulaaɓe e mawɓe, miɗen njowta on, onon sakiraaɓe amin lenyi goɗɗi gonɗi Antiyoki e Siiriya e Silisi.</div><span id="bookmarks23"></span></div><span id="bookmarks23"></span><a id="v24"></a>
+<div class="pi"><div id="T24a" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>Min nanii yimɓe ƴuuruɓe to amin mettinirii ɓerɗe mooɗon haalaaji, njiiɓii hakkillooji mooɗon.</div> <div id="T24b" class="txs">Minen le, min njamiraay ɓe.</div><span id="bookmarks24"></span> <a id="v25"></a><div id="T25" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>Min ndawridii, min paamiri min cuɓoo worɓe faa min nela ɗum'en to mooɗon, ɓe njaada e yigiraaɓe amin horsuɓe Barnabas e Pool,</div><span id="bookmarks25"></span> <a id="v26"></a><div id="T26" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>farritinɓe<span class="footnote selectable" id="F-0"><sup>a</sup></span> yonkiiji muɓɓen saabe Joommen Iisaa Almasiihu.</div><span id="bookmarks26"></span> <a id="v27"></a><div id="T27" class="txs"><span class="v">27</span><span class="vsp">&nbsp;</span>Ɗum waɗi de min neli Yahuuda e Silas, paamina on ko min mbinndi e mooɗon ɗuum hunnduko e hunnduko.</div><span id="bookmarks27"></span> <a id="v28"></a><div id="T28" class="txs"><span class="v">28</span><span class="vsp">&nbsp;</span>Minen e Ruuhu Ceniiɗo, min anniyake taa min njowa on doŋle tedduɗe si wanaa ko tilsi ɗuum:</div><span id="bookmarks28"></span> <a id="v29"></a><div id="T29a" class="txs"><span class="v">29</span><span class="vsp">&nbsp;</span>ndeentoɗon e kirsanaaɗi tooruuji e ƴiiƴam e ko saaɗi e jeenu.</div> <div id="T29b" class="txs">Si on ndeenii ko'e mooɗon e kujje ɗe, on ngaɗii ko wooɗi.</div> <div id="T29c" class="txs">Laamɗo reena en!</div><span id="bookmarks29"></span></div><span id="bookmarks29"></span><a id="v30"></a>
+<div class="p"><div id="T30a" class="txs"><span class="v">30</span><span class="vsp">&nbsp;</span>Wooɗi, ɓe kokkaa laawol, ɓe njehi Antiyoki.</div> <div id="T30b" class="txs">Nde ɓe njottinoo ndeen, ɓe kawrunduri kawrital goonɗinɓe ngaal, ɓe kokki ngal ɓataaki kiin.</div><span id="bookmarks30"></span> <a id="v31"></a><div id="T31" class="txs"><span class="v">31</span><span class="vsp">&nbsp;</span>Nde ɓeen janngunoo ki ndeen, ceyii sabo haalaaji ɗiin cemmbinii ɓerɗe muɓɓen.</div><span id="bookmarks31"></span> <a id="v32"></a><div id="T32a" class="txs"><span class="v">32</span><span class="vsp">&nbsp;</span>Yahuuda e Silas wo annabaaɓe.</div> <div id="T32b" class="txs">Ɓe mbaaltiniri ɓerɗe sakiraaɓe e haalaaji keewɗi, ɓe cemmbini ɗum'en.</div><span id="bookmarks32"></span> <a id="v33"></a><div id="T33" class="txs"><span class="v">33</span><span class="vsp">&nbsp;</span>Nde ɓe ɓooytunoo toon seeɗa fu, ɓe ceedi e sakiraaɓe ɓeen e dow jam, ɓe njeccii to nelnooɓe ɓe toon. [</div><span id="bookmarks33"></span> <a id="v34"></a><div id="T34" class="txs"><span class="v">34</span><span class="vsp">&nbsp;</span>De Silas, kam kaa, heddii toon.]<span class="footnote selectable" id="F-1"><sup>b</sup></span></div><span id="bookmarks34"></span></div><span id="bookmarks34"></span><a id="v35"></a>
+<div class="p"><div id="T35a" class="txs"><span class="v">35</span><span class="vsp">&nbsp;</span>Pool e Barnabas keddii ley Antiyoki ɗoon.</div> <div id="T35b" class="txs">Kam'en e woɓɓe heewɓe ina njanngina ina mbaajoo konngol Joomiraaɗo.</div><span id="bookmarks35"></span></div>
+<div class="ms"><div id="ms1">Jahaangal Pool ɗiɗaɓal</div></div>
+
+<div class="s"><div id="s3">No Pool e Barnabas ceediri</div></div><span id="bookmarks35"></span><a id="v36"></a>
+<div class="p"><div id="T36a" class="txs"><span class="v">36</span><span class="vsp">&nbsp;</span>Caggal balɗe seeɗa, Pool wi'i Barnabas:</div></div>
+<div class="p"><div id="T36b" class="txs">— Njeccoɗen e gure ɗe mbaajinoɗen konngol Joomiraaɗo ɗeen fuu, njippanoɗen sakiraaɓe meeɗen ɓeen, ndaaren no ɓe ngorri.</div><span id="bookmarks36"></span></div><span id="bookmarks36"></span><a id="v37"></a>
+<div class="p"><div id="T37" class="txs"><span class="v">37</span><span class="vsp">&nbsp;</span>Barnabas ina yiɗi ɓe njaada e Yuhanna bi'eteeɗo Marku.</div><span id="bookmarks37"></span> <a id="v38"></a><div id="T38" class="txs"><span class="v">38</span><span class="vsp">&nbsp;</span>De Pool kaa muuyaay ɓe njaada e gorko oon, sabo oon seediino e maɓɓe Pamfiliya, yaadaay e maɓɓe faa gollida e maɓɓe.</div><span id="bookmarks38"></span> <a id="v39"></a><div id="T39a" class="txs"><span class="v">39</span><span class="vsp">&nbsp;</span>Barnabas e Pool luuri faa ceedi.</div> <div id="T39b" class="txs">Mono e maɓɓe fuu suɓii neɗɗo goɗɗo.</div> <div id="T39c" class="txs">Barnabas yaadi e Marku, naati laana maayo, fonndii ruunde<span class="footnote selectable" id="F-2"><sup>c</sup></span> Kipirus.</div><span id="bookmarks39"></span> <a id="v40"></a><div id="T40a" class="txs"><span class="v">40</span><span class="vsp">&nbsp;</span>Pool du suɓii yaadude e Silas.</div> <div id="T40b" class="txs">Sakiraaɓe ɓeen kalfinii ɓe e hinney Joomiraaɗo de ɓe ndilli.</div><span id="bookmarks40"></span> <a id="v41"></a><div id="T41" class="txs"><span class="v">41</span><span class="vsp">&nbsp;</span>Ɓe ndewi leyɗe Siiriya e Silisi, iɓe cemmbina kawrite goonɗinɓe ɗeen.</div><span id="bookmarks41"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/FUHSIMN1DA/B05___15_Actes_______FUHSIMN1DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

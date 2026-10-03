@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-015.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">introduzione</span></div>
+<div class="b">&nbsp;</div>
+<div class="m">L'epistola agli Efesini è indirizzata ai cristiani che «<span class="it">corrono il pericolo di soffrire di malnutrizione spirituale, perché non approfittano dell'enorme riserva di cibo e di beni spirituali di cui dispongono. L'epistola agli Efesini è stata chiamata la banca del credente, il libretto degli assegni, il tesoro della Bibbia. Questa meravigliosa lettera racconta ai cristiani le grandi ricchezze, l'eredità e la pienezza che possiedono in Gesù Cristo e nella sua chiesa. Dice loro cosa possiedono e cosa devono fare per </span><span class="it">appropriarsene.</span>" (Giovanni MACARTURO).</div>
+<div class="m">Questa non è ricchezza materiale, ma ricchezza spirituale. Efeso era una città molto importante, una delle 5 città chiave dell'Impero Romano. Era sicuramente la città più grande (a parte Roma) visitata da Paolo. Era così ricca che veniva chiamata la "Banca dell'Asia". I commercianti venivano da ogni parte per comprare e vendere le loro merci. E i turisti visitavano per ammirare un tempio dedicato alla dea Artemide, all'epoca una delle 7 meraviglie del mondo. Con la sua lettera l'apostolo Paolo voleva certamente mostrare ai membri della chiesa di Efeso, circondati da grandi ricchezze materiali, che la gioia e la contentezza del cristiano non si basano sul materiale. Voleva ricordare loro le vere ricchezze che abbiamo in Cristo, ricchezze che non si deteriorano e che nessuno può rubare!</div>
+<div class="m">Questo tema è ancora attuale oggi. Il mondo di oggi vorrebbe farci credere che il denaro porta la felicità! Ma la Parola di Dio ci dice che questa è una bugia. È vero, il denaro può comprarci cose che semplificano la nostra vita quotidiana, ma il denaro è impotente contro le difficoltà, le sofferenze e le grandi sfide della nostra vita sulla terra.</div>
+<div class="m">Il versetto chiave in Efesini è proprio all'inizio: Benedetto sia il Dio e Padre del nostro Signore Gesù Cristo, che ci ha benedetti con ogni benedizione spirituale nei luoghi celesti in Cristo. Efesini 1, 3</div>
+<div class="m">In Gesù abbiamo TUTTA la benedizione spirituale! E nei versetti che seguono Paolo ci fornisce maggiori dettagli su queste benedizioni. Nella versione greca originale della Bibbia, i versetti da 3 a 14 del primo capitolo degli Efesini sono un'unica frase! Secondo Paolo l'elenco delle ricchezze spirituali per chi è “<span class="it">in Cristo</span>” è lungo: <span class="bd">elezione e predestinazione; adozione; </span><span class="bd">a</span><span class="bd">more; redenzione; perdono; </span><span class="bd">grazia di Dio</span><span class="bd">; saggezza e comprensione; eredità; lo </span><span class="bd">S</span><span class="bd">pirito Santo; energia</span><span class="bd"> (il potere)</span><span class="bd">; speranza e chiesa</span>.</div>
+<div class="m">Nelle prossime pagine studieremo queste verità bibliche, ma non semplicemente come dottrine o conoscenze per la nostra testa. Cercheremo invece di scoprire come, con i gesti di ogni giorno, possano diventare vere e proprie ricchezze per la nostra vita quotidiana.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

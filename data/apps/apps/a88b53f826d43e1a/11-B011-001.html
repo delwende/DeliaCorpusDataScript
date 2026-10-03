@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000B63">
+<title>141 Baa de len ba ki nan 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 4.53, end: 12.35 },
+    { label: "1b", start: 12.6, end: 18.02 },
+    { label: "1c", start: 18.27, end: 24.54 },
+    { label: "1d", start: 24.79, end: 33.71 },
+    { label: "1e", start: 33.96, end: 40.38 },
+    { label: "1f", start: 40.63, end: 44.12 },
+    { label: "1g", start: 44.37, end: 46.89 },
+    { label: "1h", start: 47.14, end: 53.39 },
+    { label: "1i", start: 53.64, end: 60.19 },
+    { label: "1j", start: 60.44, end: 64.72 },
+    { label: "1k", start: 64.97, end: 69.66 },
+    { label: "1l", start: 69.91, end: 73.81 },
+    { label: "1m", start: 74.06, end: 77.26 },
+    { label: "1n", start: 77.51, end: 83.76 },
+    { label: "1o", start: 84.01, end: 90.45 },
+    { label: "1p", start: 90.7, end: 95.24 },
+    { label: "1q", start: 95.49, end: 101.45 },
+    { label: "1r", start: 101.7, end: 108.94 },
+    { label: "1s", start: 109.19, end: 116.37 },
+    { label: "1t", start: 116.62, end: 121.23 },
+    { label: "1u", start: 121.48, end: 133.26 },
+    { label: "1v", start: 133.51, end: 139.89 },
+    { label: "1w", start: 140.14, end: 148.04 },
+    { label: "1x", start: 148.29, end: 152.35 },
+    { label: "1y", start: 152.6, end: 159.76 },
+    { label: "1z", start: 160.01, end: 167.49 },
+    { label: "1aa", start: 167.74, end: 173.71 },
+    { label: "1ab", start: 173.96, end: 176.69 },
+    { label: "1ac", start: 176.94, end: 184.12 },
+    { label: "1ad", start: 184.37, end: 191.92 },
+    { label: "1ae", start: 192.17, end: 197.48 },
+    { label: "1af", start: 197.73, end: 202.76 },
+    { label: "1ag", start: 203.01, end: 210.69 },
+    { label: "1ah", start: 210.94, end: 217.45 },
+    { label: "1ai", start: 217.7, end: 220.4 },
+    { label: "1aj", start: 220.65, end: 224.07 },
+    { label: "1ak", start: 224.32, end: 232.92 },
+    { label: "1al", start: 233.17, end: 239 },
+    { label: "1am", start: 239.25, end: 245.95 },
+    { label: "1an", start: 246.2, end: 249.93 },
+    { label: "1ao", start: 250.18, end: 255.02 },
+    { label: "1ap", start: 255.27, end: 262.57 },
+    { label: "1aq", start: 262.82, end: 269.46 },
+    { label: "1ar", start: 269.71, end: 275.27 },
+    { label: "1as", start: 275.52, end: 282.45 },
+    { label: "1at", start: 282.7, end: 291.03 },
+    { label: "1au", start: 291.28, end: 296.66 },
+    { label: "1av", start: 296.91, end: 304.58 },
+    { label: "1aw", start: 304.83, end: 312.19 },
+    { label: "1ax", start: 312.44, end: 321.33 },
+    { label: "1ay", start: 321.58, end: 326.5 },
+    { label: "1az", start: 326.75, end: 333.33 },
+    { label: "1ba", start: 333.58, end: 343.68 },
+    { label: "1bb", start: 343.93, end: 348.34 },
+    { label: "1bc", start: 348.59, end: 357.52 },
+    { label: "1bd", start: 357.77, end: 364.64 },
+    { label: "1be", start: 364.89, end: 368.29 },
+    { label: "1bf", start: 368.54, end: 371.52 },
+    { label: "1bg", start: 371.77, end: 381.77 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 4.53;
+var stopTime  = 381.77;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;141 Baa de len ba ki nan&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">141 Baa de len ba ki nan goarii goangi bi ba ni</span><span class="bd"> wani</span>.</div></div>
+<div class="m"><div id="T1b" class="txs">Ils ne sont pas égaux et font le malin en marchant, ils vont chier.</div></div>
+<div class="m"><div id="T1c" class="txs">Sens : si quelqu'un est orgueilleux avec celui qui lui est supérieur, le supérieur lui dira ce proverbe.</div></div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Baa de len ba ki nan goarii goangi bi ba ni</span><span class="bd"> wani</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">142 A mani guandi leni mi j</span><span class="bd">i</span><span class="bd">ama</span>.</div></div>
+<div class="m"><div id="T1f" class="txs">Tu as l'habitude de l'oseille et de la cendre.</div></div>
+<div class="m"><div id="T1g" class="txs">Sens&nbsp;: Tu as l'habitude de mal manger.</div></div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">A mani guandi leni mi j</span><span class="bd">i</span><span class="bd">ama</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">143 Gudibiga kan pua nikuli</span>.</div></div>
+<div class="m"><div id="T1j" class="txs">Un petit hérisson ne sera pas frappé avec le poing.</div></div>
+<div class="m"><div id="T1k" class="txs">Sens : on ne frappe pas l'enfant du chef, parce qu'on a peur du chef.</div></div>
+<div class="m"><div id="T1l" class="txs">Emploi : Peut se dire à quelqu'un qui veut frapper l'enfant de son supérieur.</div> <div id="T1m" class="txs">Il n'a pas peur de l'enfant mais du père.</div></div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">Gudibiga kan pua nikuli</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">144 Mudiga moandi gudili o kan cuo o</span>.</div></div>
+<div class="m"><div id="T1p" class="txs">Le chat veut attraper le hérisson et il ne l'attrapera pas.</div></div>
+<div class="m"><div id="T1q" class="txs">Sens : Si quelqu'un est fâché contre moi et ne sait pas quoi me dire, je pourrai lui dire ce proverbe.</div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">Mudiga moandi gudili o kan cuo o</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">145 Gulmance kuli cie </span><span class="bd">yaarga</span><span class="bd"> fuod</span><span class="bd">il</span><span class="bd">i</span>.</div></div>
+<div class="m"><div id="T1t" class="txs">Le tombeau d'un gurmance vaut mieux qu'un Yaarga vivant.</div></div>
+<div class="m"><div id="T1u" class="txs">Sens et emploi : Il vaut mieux avoir confiance à un homme d'une autre race qu'à un mossi / yaarga, car tôt ou tard le mossi va te trahir.</div></div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">Gulmance kuli cie </span><span class="bd">yaarga</span><span class="bd"> fuod</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">146 Li muarili kpienli pendi li muarili fuodili</span>.</div></div>
+<div class="m"><div id="T1x" class="txs">Le cadavre d'un mossi est plus qu'un mossi vivant.</div></div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">Li muarili kpienli pendi li muarili fuodili</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1z" class="txs"><span class="bd">147 Belibeli kan cuo naacua se leni li gunbili</span>.</div></div>
+<div class="m"><div id="T1aa" class="txs">La précipitation ne fait pas attraper la sauterelle sauf le fait d'agir doucement.</div></div>
+<div class="m"><div id="T1ab" class="txs">Sens : Il ne faut pas agir sans réfléchir.</div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">Belibeli kan cuo naacua se leni li gunbili</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">148 Guoncimundi ki banda gari a wogidi.</span></div></div>
+<div class="m"><div id="T1ae" class="txs">On ne connait ce qu'il y a dans le fruit d'un nénuphar que si on l'ouvre.</div></div>
+<div class="m"><div id="T1af" class="txs">Sens : On ne peut connaitre le caractère de quelqu'un que si l'on demeure avec lui.</div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="bd">Guoncimundi ki banda gari a wogidi</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">149 Jabida lie penkpa yenli</span>.</div></div>
+<div class="m"><div id="T1ai" class="txs">Deux cordonniers, un seul poinçon.</div></div>
+<div class="m"><div id="T1aj" class="txs">Sens et emploi : Deux ouvriers ne travaillent pas avec un seul outil.</div></div>
+<div class="m"><div id="T1ak" class="txs">Se dit alors que deux ouvriers demandent un seul outil, l'un travaillera; l'autre ne fera rien pendant ce temps-là.</div></div>
+<div class="m"><div id="T1al" class="txs"><span class="bd">Jabida lie penkpa yenli</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1am" class="txs"><span class="bd">150 Jagbenyendi kan </span><span class="bd">gbieni</span><span class="bd"> d</span><span class="bd">a</span><span class="bd">aga</span>.</div></div>
+<div class="m"><div id="T1an" class="txs">Un seul homme gros ne peut pas remplir le marché.</div></div>
+<div class="m"><div id="T1ao" class="txs">Sens et emploi : se dit à quelqu'un qui veut faire quelque chose et dont il n'a pas la force.</div></div>
+<div class="m"><div id="T1ap" class="txs"><span class="bd">Jagbenyendi kan </span><span class="bd">gbieni</span><span class="bd"> d</span><span class="bd">a</span><span class="bd">aga</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aq" class="txs"><span class="bd">151 ŋmanjagu yaabia o kan budi ti diadi</span>.</div></div>
+<div class="m"><div id="T1ar" class="txs">Même si un gros singe mâle est méchant, il ne déterrera pas les poquets.</div></div>
+<div class="m"><div id="T1as" class="txs"><span class="bd">ŋmanjagu yaabia o kan budi ti diadi</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1at" class="txs"><span class="bd">152 Jakpagili ya puogi kpaabu o naa baa lingi n jiema.</span></div></div>
+<div class="m"><div id="T1au" class="txs">Si un célibataire demande la culture, sa mère va chercher de la nourriture.</div></div>
+<div class="m"><div id="T1av" class="txs">Sens et emploi : Ce proverbe se dit quand un célibataire demande la culture pour ses fiançailles, sa mère va avoir beaucoup de travail.</div></div>
+<div class="m"><div id="T1aw" class="txs"><span class="bd">Jakpagili ya puogi kpaabu o naa baa lingi n jiema</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ax" class="txs"><span class="bd">153a A yaa ca o siagu li jakpagili deni po a ca o kokora po</span>.</div></div>
+<div class="m"><div id="T1ay" class="txs"><span class="bd">153b Al a ca suagu jakpagili </span><span class="bd">k</span><span class="bd">ain o kokodi nunboana po.</span></div></div>
+<div class="m"><div id="T1az" class="txs">Si tu vas pendant l'hivernage chez un célibataire, tu y vas à cause de ses épis de maïs.</div></div>
+<div class="m"><div id="T1ba" class="txs">Sens et emploi : Si tu vas chez quelqu'un et qu'il ne te reçoit pas bien en croyant que tu es venu pour lui demander quelque chose, alors que ce n’est pas vrai, tu pourras lui dire ce proverbe.</div></div>
+<div class="m"><div id="T1bb" class="txs"><span class="bd">A yaa ca o siagu li jakpagili deni po a ca o kokora po</span>.</div></div>
+<div class="m"><div id="T1bc" class="txs"><span class="bd">Al a ca suagu jakpagili </span><span class="bd">k</span><span class="bd">ain o kokodi nunboana po</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bd" class="txs"><span class="bd">154 Jakpeliga kan gbengi ki cie o gbangu</span>.</div></div>
+<div class="m"><div id="T1be" class="txs">Le lièvre ne sera jamais plus gros que sa peau.</div></div>
+<div class="m"><div id="T1bf" class="txs">Sens : Tu ne peux faire que ce dont tu es capable.</div></div>
+<div class="m"><div id="T1bg" class="txs"><span class="bd">Jakpeliga kan gbengi ki cie o gbangu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/11 prov bonny vol1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

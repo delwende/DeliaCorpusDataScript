@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pages 28 à 29 première 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "2a", start: 44.76, end: 50.07 },
+    { label: "2b", start: 50.32, end: 53.85 },
+    { label: "2c", start: 54.1, end: 58.89 },
+    { label: "2d", start: 59.14, end: 64.05 },
+    { label: "2e", start: 64.3, end: 68.71 },
+    { label: "2f", start: 68.96, end: 73.31 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 44.76;
+var stopTime  = 73.31;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 2 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Pages 28 à 29 première&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image2.png" />
+
+<div class="m"><div id="T2a" class="txs">Au delà de 18 heures (crépuscule) à 23 heures :</div></div>
+<div class="m"><div id="T2b" class="txs"><span class="bd">súfɛ̀</span>  «&nbsp;<span class="it">nuit</span>&nbsp;».</div></div>
+<div class="m"><div id="T2c" class="txs">Au delà de 23heures à 0 heure :</div></div>
+<div class="m"><div id="T2d" class="txs"><span class="bd">dùgùtílámà/dugutíla</span>  «&nbsp;<span class="it">tard la nuit</span>&nbsp;» .</div></div>
+<div class="m"><div id="T2e" class="txs">au delà de 01 heure à 05 heures :</div></div>
+<div class="m"><div id="T2f" class="txs"><span class="bd">sɔgɔmadajóona</span><span class="bd"> </span> «&nbsp;<span class="it">très tôt le matin</span>&nbsp;».</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/02 page28-29a.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

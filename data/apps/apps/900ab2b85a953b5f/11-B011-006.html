@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 6</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-005.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;6&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-007.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image6.jpg" />
+
+<div class="m"><span class="bd">Redenzione</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">In Gesù abbiamo la redenzione attraverso il suo sangue</span><span class="it"> </span>(Efesini 1, 7).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Cos'è la redenzione?</span></div>
+<div class="m">La parola "<span class="it">redenzione</span>" fa parte di un insieme di termini che descrivono la salvezza. Letteralmente significa “<span class="it">sciogliere lontano</span>”, “<span class="it">liberazione</span>”. Evoca l'idea di redenzione, come uno schiavo, legato a un padrone e liberato mediante il pagamento di una somma di denaro. L'uomo è schiavo del peccato e delle sue conseguenze, cioè della morte. La redenzione lo libera dal potere del peccato e dalle sue conseguenze legali.</div>
+<div class="m">Nella Sua opera di redenzione, Cristo ha pagato il prezzo della redenzione per tutta l’umanità. Il prezzo è chiaramente indicato nella sua natura: è il sangue di Cristo. Poiché siamo stati redenti a questo prezzo, dobbiamo servire Colui che lo ha pagato (1 Corinzi 7, 22 a 23).</div>
+<div class="m">La redenzione può essere riassunta in tre idee fondamentali: (1) gli esseri umani sono redenti da qualcosa, vale a dire dalla schiavitù del peccato; (2) vengono redenti da qualcosa, attraverso il pagamento di un prezzo, vale a dire il sangue di Cristo; (3) sono riscattati per qualcosa, cioè per essere liberi. Una volta liberati, sono invitati a farsi schiavi del Signore che li ha redenti.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Azioni per rendere la salvezza o la redenzione una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera</span>: Nella tua preghiera quotidiana, puoi ringraziare Dio per averti salvato dal peccato, dalla morte, dalla dissolutezza...</div>
+<div class="m"><span class="it">- Lettura della Bibbia</span>: leggi regolarmente i resoconti della morte di Gesù, ad esempio Luca 23, da 33 a 49. Immagina di essere tra la folla mentre assisti alla crocifissione. Ricorda a te stesso l'enorme sacrificio di Gesù.</div>
+<div class="m"><span class="it">- Riflessione personale</span>: Hai beneficiato della redenzione di suo figlio Gesù.</div>
+<div class="m">Ti ha liberato dalla schiavitù di Satana. Ma sei davvero libero? Esamina la tua vita con l'aiuto dello Spirito Santo per scoprire se sei ancora uno "<span class="it">schiavo</span>" di Satana. Hai ancora cattive abitudini che non glorificano Dio?</div>
+<div class="m"><span class="it">-verso gli altri</span>: La salvezza diventa ancora più preziosa se condivisa con gli altri. Annunciare la salvezza di Gesù almeno una volta alla settimana a qualcuno che ancora non lo conosce.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

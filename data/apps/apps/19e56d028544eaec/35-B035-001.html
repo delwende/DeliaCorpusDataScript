@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title> Le fondement : amour 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.43 },
+    { label: "1b", start: 2.68, end: 3.29 },
+    { label: "1c", start: 3.54, end: 5.71 },
+    { label: "1d", start: 5.96, end: 14.55 },
+    { label: "1e", start: 14.8, end: 17.43 },
+    { label: "1f", start: 17.68, end: 21.43 },
+    { label: "1g", start: 21.68, end: 23.93 },
+    { label: "1h", start: 24.18, end: 26.25 },
+    { label: "1i", start: 26.5, end: 35.75 },
+    { label: "1j", start: 36, end: 41.25 },
+    { label: "1k", start: 41.5, end: 43.51 },
+    { label: "1l", start: 43.76, end: 46.23 },
+    { label: "1m", start: 46.48, end: 49.49 },
+    { label: "1n", start: 49.74, end: 51.35 },
+    { label: "1o", start: 51.6, end: 52.77 },
+    { label: "1p", start: 53.02, end: 56.15 },
+    { label: "1q", start: 56.4, end: 58.55 },
+    { label: "1r", start: 58.8, end: 62.97 },
+    { label: "1s", start: 63.22, end: 68.67 },
+    { label: "1t", start: 68.92, end: 73.23 },
+    { label: "1u", start: 73.48, end: 76.89 },
+    { label: "1v", start: 77.14, end: 78.69 },
+    { label: "1w", start: 78.94, end: 81.35 },
+    { label: "1x", start: 81.6, end: 83.85 },
+    { label: "1y", start: 84.1, end: 86.21 },
+    { label: "1z", start: 86.46, end: 88.31 },
+    { label: "1aa", start: 88.56, end: 89.81 },
+    { label: "1ab", start: 90.06, end: 94.89 },
+    { label: "1ac", start: 95.14, end: 96.37 },
+    { label: "1ad", start: 96.62, end: 102.03 },
+    { label: "1ae", start: 102.28, end: 104.29 },
+    { label: "1af", start: 104.54, end: 105.51 },
+    { label: "1ag", start: 105.76, end: 106.35 },
+    { label: "1ah", start: 106.6, end: 107.61 },
+    { label: "1ai", start: 107.86, end: 108.93 },
+    { label: "1aj", start: 109.18, end: 109.67 },
+    { label: "1ak", start: 109.92, end: 110.71 },
+    { label: "1al", start: 110.96, end: 112.19 },
+    { label: "1am", start: 112.44, end: 113.37 },
+    { label: "1an", start: 113.62, end: 114.37 },
+    { label: "1ao", start: 114.62, end: 115.45 },
+    { label: "1ap", start: 115.7, end: 117.45 },
+    { label: "1aq", start: 117.7, end: 121.19 },
+    { label: "1ar", start: 121.44, end: 123.43 },
+    { label: "1as", start: 123.68, end: 124.47 },
+    { label: "1at", start: 124.72, end: 126.05 },
+    { label: "1au", start: 126.3, end: 127.23 },
+    { label: "1av", start: 127.48, end: 130.57 },
+    { label: "1aw", start: 130.82, end: 136.01 },
+    { label: "1ax", start: 136.26, end: 140.01 },
+    { label: "1ay", start: 140.26, end: 141.43 },
+    { label: "1az", start: 141.68, end: 143.15 },
+    { label: "1ba", start: 143.4, end: 145.25 },
+    { label: "1bb", start: 145.5, end: 146.39 },
+    { label: "1bc", start: 146.64, end: 147.55 },
+    { label: "1bd", start: 147.8, end: 150.25 },
+    { label: "1be", start: 150.5, end: 157.11 },
+    { label: "1bf", start: 157.36, end: 161.47 },
+    { label: "1bg", start: 161.72, end: 163.45 },
+    { label: "1bh", start: 163.7, end: 165.29 },
+    { label: "1bi", start: 165.54, end: 167.01 },
+    { label: "1bj", start: 167.26, end: 168.55 },
+    { label: "1bk", start: 168.8, end: 171.29 },
+    { label: "1bl", start: 171.54, end: 174.37 },
+    { label: "1bm", start: 174.62, end: 178.71 },
+    { label: "1bn", start: 178.96, end: 182.39 },
+    { label: "1bo", start: 182.64, end: 188.17 },
+    { label: "1bp", start: 188.42, end: 192.61 },
+    { label: "1bq", start: 192.86, end: 195.33 },
+    { label: "1br", start: 195.58, end: 197.91 },
+    { label: "1bs", start: 198.16, end: 199.77 },
+    { label: "1bt", start: 200.02, end: 203.59 },
+    { label: "1bu", start: 203.84, end: 208.41 },
+    { label: "1bv", start: 208.66, end: 213.77 },
+    { label: "1bw", start: 214.02, end: 221.33 },
+    { label: "1bx", start: 221.58, end: 224.49 },
+    { label: "1by", start: 224.74, end: 227.19 },
+    { label: "1bz", start: 227.44, end: 228.43 },
+    { label: "1ca", start: 228.68, end: 230.37 },
+    { label: "1cb", start: 230.62, end: 231.75 },
+    { label: "1cc", start: 232, end: 233.91 },
+    { label: "1cd", start: 234.16, end: 235.29 },
+    { label: "1ce", start: 235.54, end: 236.57 },
+    { label: "1cf", start: 236.82, end: 238.87 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 238.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "35-B035-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='34-B034-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='34-B034-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp; Le fondement : amour&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='36-B036-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='36-B036-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B035-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">1)</span><span class="bd"> </span><span class="bd">Le fondement :</span></div> <div id="T1b" class="txs"><span class="bd">amour,</span></div> <div id="T1c" class="txs"><span class="bd">sécurité et respect</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Voir Esaïe 49, 15 et </span><span class="bd">Esaïe </span><span class="bd">66, 11</span><span class="bd"> à </span><span class="bd">13.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">La base d’une bonne éducation</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1f" class="txs">Par quoi commence-t-on la construction d’une maison&nbsp;?</div> <div id="T1g" class="txs">On commence par le fondement :</div> <div id="T1h" class="txs">L’amour inconditionnel,</div> <div id="T1i" class="txs">la sécurité et le respect devant Dieu et devant chaque membre de la famille (Luc 15, 11 à 32).</div></div>
+<div class="m"><div id="T1j" class="txs">Dieu lui-même se compare à une mère dans sa relation avec ses enfants :</div> <div id="T1k" class="txs">fidèle dans son amour,</div> <div id="T1l" class="txs">compatissant et très attentionné.</div> <div id="T1m" class="txs">Comme un enfant sur les genoux de sa mère,</div> <div id="T1n" class="txs">nous trouvons l’accueil,</div> <div id="T1o" class="txs">le contentement,</div> <div id="T1p" class="txs">la protection et la paix auprès de lui.</div> <div id="T1q" class="txs">Dieu nous appelle ses enfants.</div> <div id="T1r" class="txs">Il veut que nous nous adressions à lui comme «&nbsp;notre Père&nbsp;».</div></div>
+<div class="m"><div id="T1s" class="txs">Les parents humains sont chargés de pourvoir à plusieurs des besoins de leurs enfants,</div> <div id="T1t" class="txs">de la même façon que Dieu le fait pour toutes ses créatures :</div> <div id="T1u" class="txs">pourvoir à la nourriture et à l’habillement,</div> <div id="T1v" class="txs">les protéger du mal,</div> <div id="T1w" class="txs">les éduquer et les avertir,</div> <div id="T1x" class="txs">les corriger en tant qu’autorité,</div> <div id="T1y" class="txs">les aider à former leur identité,</div> <div id="T1z" class="txs">les encourager et les soutenir.</div></div>
+<div class="m"><div id="T1aa" class="txs">En tant que parents,</div> <div id="T1ab" class="txs">nous avons la responsabilité de refléter Dieu dans nos relations avec nos enfants.</div> <div id="T1ac" class="txs">Avant d’agir,</div> <div id="T1ad" class="txs">il est bien de réfléchir à comment notre Père céleste nous traite dans une telle situation.</div></div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quel est le caractère de Dieu&nbsp;?</span></div></div>
+<div class="m"><div id="T1af" class="txs"><span class="it">L’amour,</span></div> <div id="T1ag" class="txs"><span class="it">la patience,</span></div> <div id="T1ah" class="txs"><span class="it">la générosité.</span></div> <div id="T1ai" class="txs"><span class="it">Il est juste,</span></div> <div id="T1aj" class="txs"><span class="it">honnête,</span></div> <div id="T1ak" class="txs"><span class="it">fidèle,</span></div> <div id="T1al" class="txs"><span class="it">miséricordieux,</span></div> <div id="T1am" class="txs"><span class="it">compréhensif,</span></div> <div id="T1an" class="txs"><span class="it">encourageant,</span></div> <div id="T1ao" class="txs"><span class="it">etc.</span></div></div>
+<div class="m"><div id="T1ap" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que Dieu fait pour nous&nbsp;?</span></div></div>
+<div class="m"><div id="T1aq" class="txs"><span class="it">Il nous protège du mal et pourvoit à nos besoins.</span></div> <div id="T1ar" class="txs"><span class="it">Il nous aime sans condition,</span></div> <div id="T1as" class="txs"><span class="it">nous pardonne,</span></div> <div id="T1at" class="txs"><span class="it">nous éduque et nous bénit,</span></div> <div id="T1au" class="txs"><span class="it">etc.</span></div></div>
+<div class="m"><div id="T1av" class="txs">Dieu nous demande de faire tout cela pour nos enfants.</div> <div id="T1aw" class="txs">Nous avons la responsabilité d’imiter Dieu pour réussir à bien éduquer les enfants.</div> <div id="T1ax" class="txs">Cette réussite nécessite la connaissance de leurs besoins.</div> <div id="T1ay" class="txs">Et ensuite,</div> <div id="T1az" class="txs">il faut y pourvoir.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ba" class="txs"><span class="bd">Pour réussir dans l’éducation,</span></div> <div id="T1bb" class="txs"><span class="bd">il faut :</span></div></div>
+<ol start="1">
+  <li class="zoli1"><span class="bd"> </span><span class="bd">Aimer ses enfants sans condition</span><span class="bd">.</span></li>
+</ol>
+<div class="m"><div id="T1bc" class="txs">C’est l’exemple de l’amour de Dieu pour le fils prodigue dans Luc 15, 11 à 32.</div></div>
+<div class="m"><div id="T1bd" class="txs">L’enfant mérite être aimé non pas pour ce qu’il peut faire,</div> <div id="T1be" class="txs">mais pour ce qu’il est&nbsp;!</div> <div id="T1bf" class="txs">Quoi qu’il arrive&nbsp;!</div> <div id="T1bg" class="txs">Quoi qu’il fasse&nbsp;!</div> <div id="T1bh" class="txs">Quoi qu’il en coûte,</div> <div id="T1bi" class="txs">nous devons décider d'aimer notre enfant&nbsp;!</div></div>
+<div class="m"><div id="T1bj" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Il faut aussi aimer les enfants «&nbsp;adoptés&nbsp;»</span><span class="bd"> </span><span class="bd">!</span></div></div>
+<div class="m"><div id="T1bk" class="txs">Pour qu’un enfant puisse développer une bonne confiance en soi,</div> <div id="T1bl" class="txs">il a besoin de cet amour inconditionnel de ses parents.</div> <div id="T1bm" class="txs">Et un tel enfant va mieux gérer sa vie qu’un enfant qui se sent de valeur inférieure.</div> <div id="T1bn" class="txs">Même s’il fait une faute ou si son comportement n’est pas bon,</div> <div id="T1bo" class="txs">il doit toujours savoir que ses parents l’aiment.</div></div>
+<div class="m"><div id="T1bp" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que cela veut dire en pratique&nbsp;?</span></div> <div id="T1bq" class="txs"><span class="bd">Chercher des exemples</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1br" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Est-ce qu’on peut gâter ses enfants en leur donnant trop d’affection&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<ol start="2">
+  <li class="zoli1"><span class="bd"> </span><span class="bd">Pourvoir à leurs besoins matériels et physiques</span><span class="bd">.</span></li>
+</ol>
+<div class="m"><div id="T1bs" class="txs">Les parents doivent pourvoir aux besoins de leurs enfants d’une manière responsable.</div> <div id="T1bt" class="txs">(Matthieu 7, 9. 2 Corinthiens 12, 14)</div></div>
+<div class="m"><div id="T1bu" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quels sont des besoins physiques des enfants&nbsp;?</span></div></div>
+<div class="m"><div id="T1bv" class="txs"><span class="it">Assez de nourriture équilibrée,</span></div> <div id="T1bw" class="txs"><span class="it">l’habillement,</span></div> <div id="T1bx" class="txs"><span class="it">une habitation agréable,</span></div> <div id="T1by" class="txs"><span class="it">une bonne hygiène,</span></div> <div id="T1bz" class="txs"><span class="it">le traitement médical adapté,</span></div> <div id="T1ca" class="txs"><span class="it">l’occupation,</span></div> <div id="T1cb" class="txs"><span class="it">aller à l’école,</span></div> <div id="T1cc" class="txs"><span class="it">les amis,</span></div> <div id="T1cd" class="txs"><span class="it">…</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/30 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/30 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/30 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

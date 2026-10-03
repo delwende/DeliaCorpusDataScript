@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>Annexe 1 Les arguments de 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 5.95 },
+    { label: "1b", start: 6.2, end: 9.89 },
+    { label: "1c", start: 10.14, end: 14.21 },
+    { label: "1d", start: 14.46, end: 18.45 },
+    { label: "1e", start: 18.7, end: 22.89 },
+    { label: "1f", start: 23.14, end: 28.93 },
+    { label: "1g", start: 29.18, end: 35.97 },
+    { label: "1h", start: 36.22, end: 41.79 },
+    { label: "1i", start: 42.04, end: 46.23 },
+    { label: "1j", start: 46.48, end: 48.37 },
+    { label: "1k", start: 48.62, end: 51.87 },
+    { label: "1l", start: 52.12, end: 55.77 },
+    { label: "1m", start: 56.02, end: 61.31 },
+    { label: "1n", start: 61.56, end: 68.13 },
+    { label: "1o", start: 68.38, end: 74.63 },
+    { label: "1p", start: 74.88, end: 77.51 },
+    { label: "1q", start: 77.76, end: 83.13 },
+    { label: "1r", start: 83.38, end: 90.49 },
+    { label: "1s", start: 90.74, end: 94.11 },
+    { label: "1t", start: 94.36, end: 103.59 },
+    { label: "1u", start: 103.84, end: 105.75 },
+    { label: "1v", start: 106, end: 111.73 },
+    { label: "1w", start: 111.98, end: 115.95 },
+    { label: "1x", start: 116.2, end: 123.31 },
+    { label: "1y", start: 123.56, end: 127.49 },
+    { label: "1z", start: 127.74, end: 135.63 },
+    { label: "1aa", start: 135.88, end: 137.83 },
+    { label: "1ab", start: 138.08, end: 139.51 },
+    { label: "1ac", start: 139.76, end: 144.53 },
+    { label: "1ad", start: 144.78, end: 146.09 },
+    { label: "1ae", start: 146.34, end: 149.29 },
+    { label: "1af", start: 149.54, end: 156.17 },
+    { label: "1ag", start: 156.42, end: 162.23 },
+    { label: "1ah", start: 162.48, end: 165.73 },
+    { label: "1ai", start: 165.98, end: 168.33 },
+    { label: "1aj", start: 168.58, end: 174.71 },
+    { label: "1ak", start: 174.96, end: 179.87 },
+    { label: "1al", start: 180.12, end: 182.85 },
+    { label: "1am", start: 183.1, end: 189.69 },
+    { label: "1an", start: 189.94, end: 193.91 },
+    { label: "1ao", start: 194.16, end: 198.71 },
+    { label: "1ap", start: 198.96, end: 201.85 },
+    { label: "1aq", start: 202.1, end: 207.91 },
+    { label: "1ar", start: 208.16, end: 216.57 },
+    { label: "1as", start: 216.82, end: 220.57 },
+    { label: "1at", start: 220.82, end: 227.47 },
+    { label: "1au", start: 227.72, end: 233.79 },
+    { label: "1av", start: 234.04, end: 235.93 },
+    { label: "1aw", start: 236.18, end: 248.23 },
+    { label: "1ax", start: 248.48, end: 251.97 },
+    { label: "1ay", start: 252.22, end: 255.77 },
+    { label: "1az", start: 256.02, end: 257.71 },
+    { label: "1ba", start: 257.96, end: 262.47 },
+    { label: "1bb", start: 262.72, end: 264.63 },
+    { label: "1bc", start: 264.88, end: 269.85 },
+    { label: "1bd", start: 270.1, end: 276.87 },
+    { label: "1be", start: 277.12, end: 278.49 },
+    { label: "1bf", start: 278.74, end: 280.21 },
+    { label: "1bg", start: 280.46, end: 284.57 },
+    { label: "1bh", start: 284.82, end: 291.61 },
+    { label: "1bi", start: 291.86, end: 295.05 },
+    { label: "1bj", start: 295.3, end: 301.91 },
+    { label: "1bk", start: 302.16, end: 303.99 },
+    { label: "1bl", start: 304.24, end: 308.59 },
+    { label: "1bm", start: 308.84, end: 309.99 },
+    { label: "1bn", start: 310.24, end: 319.71 },
+    { label: "1bo", start: 319.96, end: 326.73 },
+    { label: "1bp", start: 326.98, end: 331.05 },
+    { label: "1bq", start: 331.3, end: 333.73 },
+    { label: "1br", start: 333.98, end: 338.29 },
+    { label: "1bs", start: 338.54, end: 342.19 },
+    { label: "1bt", start: 342.44, end: 350.13 },
+    { label: "1bu", start: 350.38, end: 354.87 },
+    { label: "1bv", start: 355.12, end: 361.79 },
+    { label: "1bw", start: 362.04, end: 365.59 },
+    { label: "1bx", start: 365.84, end: 370.01 },
+    { label: "1by", start: 370.26, end: 372.13 },
+    { label: "1bz", start: 372.38, end: 379.79 },
+    { label: "1ca", start: 380.04, end: 381.33 },
+    { label: "1cb", start: 381.58, end: 387.15 },
+    { label: "1cc", start: 387.4, end: 391.17 },
+    { label: "1cd", start: 391.42, end: 396.87 },
+    { label: "1ce", start: 397.12, end: 398.97 },
+    { label: "1cf", start: 399.22, end: 402.77 },
+    { label: "1cg", start: 403.02, end: 406.01 },
+    { label: "1ch", start: 406.26, end: 418.31 },
+    { label: "1ci", start: 418.56, end: 421.97 },
+    { label: "1cj", start: 422.22, end: 426.13 },
+    { label: "1ck", start: 426.38, end: 432.59 },
+    { label: "1cl", start: 432.84, end: 437.29 },
+    { label: "1cm", start: 437.54, end: 439.93 },
+    { label: "1cn", start: 440.18, end: 444.37 },
+    { label: "1co", start: 444.62, end: 449.91 },
+    { label: "1cp", start: 450.16, end: 452.59 },
+    { label: "1cq", start: 452.84, end: 456.53 },
+    { label: "1cr", start: 456.78, end: 459.13 },
+    { label: "1cs", start: 459.38, end: 465.99 },
+    { label: "1ct", start: 466.24, end: 471.97 },
+    { label: "1cu", start: 472.22, end: 476.71 },
+    { label: "1cv", start: 476.96, end: 482.33 },
+    { label: "1cw", start: 482.58, end: 486.71 },
+    { label: "1cx", start: 486.96, end: 491.19 },
+    { label: "1cy", start: 491.44, end: 494.85 },
+    { label: "1cz", start: 495.1, end: 498.29 },
+    { label: "1da", start: 498.54, end: 502.95 },
+    { label: "1db", start: 503.2, end: 506.99 },
+    { label: "1dc", start: 507.24, end: 509.97 },
+    { label: "1dd", start: 510.22, end: 519.41 },
+    { label: "1de", start: 519.66, end: 526.45 },
+    { label: "1df", start: 526.7, end: 534.51 },
+    { label: "1dg", start: 534.76, end: 539.29 },
+    { label: "1dh", start: 539.54, end: 543.61 },
+    { label: "1di", start: 543.86, end: 545.95 },
+    { label: "1dj", start: 546.2, end: 552.95 },
+    { label: "1dk", start: 553.2, end: 557.05 },
+    { label: "1dl", start: 557.3, end: 561.71 },
+    { label: "1dm", start: 561.96, end: 566.31 },
+    { label: "1dn", start: 566.56, end: 570.15 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 570.15;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "29-B032-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='28-B028-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='28-B028-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Annexe 1 Les arguments de&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='30-B030-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='30-B030-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B032-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Annexe 1 Les arguments de ceux qui pratiquent l’excision</span>.</div></div>
+<div class="m"><div id="T1b" class="txs">Beaucoup de fausses-croyances sont liées à l’excision.</div></div>
+<div class="m"><div id="T1c" class="txs">Il est important de les connaître pour pouvoir les corriger.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Quels sont les arguments de ceux qui pratiquent l’excision</span><span class="it"> </span><span class="it">?</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">Que pouvez-vous répondre à ceux qui défendent l’excision&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs">Vous trouverez ici des arguments souvent entendus et des pistes de réponses.</div></div>
+<div class="m"><div id="T1g" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1h" class="txs"><span class="it">«&nbsp;L’excision est bonne car elle fait partie de nos traditions.</span></div> <div id="T1i" class="txs"><span class="it">Nous devons donc la maintenir&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1j" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1k" class="txs">L’excision fait partie de nos traditions,</div> <div id="T1l" class="txs">mais toutes nos traditions ne sont pas forcément bonnes!</div> <div id="T1m" class="txs">Il faut garder les bonnes traditions et renoncer aux mauvaises.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1o" class="txs"><span class="it">«&nbsp;L’excision puri</span><span class="it">fi</span><span class="it">e la femme aux yeux de Dieu&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1p" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1q" class="txs">L’excision n'est pas un acte de purification mais un acte de mutilation.</div> <div id="T1r" class="txs">Aucune prescription divine n’en fait obligation.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1t" class="txs"><span class="it">«&nbsp;Le clitoris ne permet pas à la fille d’avoir une bonne éducation et le respect des personnes âgées&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1u" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1v" class="txs">L’éducation de la fille et le respect des personnes âgées ne dépendent pas de l’excision,</div> <div id="T1w" class="txs">mais de l’enseignement de la fille et de l’exemple de ses parents.</div> <div id="T1x" class="txs">La fille peut apprendre tout cela sans être excisée.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="it">«&nbsp;L’excision est nécessaire pour éviter la sexualité prématurée&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1aa" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1ab" class="txs">C’est faux.</div> <div id="T1ac" class="txs">La sexualité prématurée est fréquente malgré l’excision.</div> <div id="T1ad" class="txs">Pour l’éviter,</div> <div id="T1ae" class="txs">il faut bien éduquer filles et garçons.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1af" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="it">«&nbsp;L’excision est la même chose que la circoncision chez les garçons&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1ah" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1ai" class="txs">Lors de la circoncision,</div> <div id="T1aj" class="txs">on ne coupe pas l’organe sexuel du garçon mais seulement la peau qui recouvre le gland.</div> <div id="T1ak" class="txs">Si on devait couper les organes équivalents chez l’homme et chez la femme,</div> <div id="T1al" class="txs">on devrait couper le pénis de l’homme.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1am" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1an" class="txs"><span class="it">«&nbsp;Le clitoris rend l’homme impuissant&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1ao" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1ap" class="txs">Le clitoris ne peut pas rendre un homme impuissant.</div> <div id="T1aq" class="txs">Les hommes des communautés qui ne pratiquent pas l’excision n’ont pas plus de problèmes d’impuissance.</div> <div id="T1ar" class="txs">Le clitoris en contact avec le sexe de l’homme pendant les rapports sexuels procure du plaisir à l’homme et à femme.</div> <div id="T1as" class="txs">Il ne constitue aucun danger pour le sexe de l’homme.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1at" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1au" class="txs"><span class="it">«&nbsp;Le clitoris amène le manque d’amour du mari&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1av" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1aw" class="txs">Un mari qui aime sa femme préfère qu’elle ne soit pas mutilée et qu’elle jouisse pleinement du contact sexuel avec lui.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ax" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1ay" class="txs"><span class="it">«&nbsp;Le clitoris rend la femme inféconde.</span></div> <div id="T1az" class="txs"><span class="it">Sans excision,</span></div> <div id="T1ba" class="txs"><span class="it">il n’y a pas de conception&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1bb" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1bc" class="txs">Le clitoris n’a rien à voir avec la fécondité de la femme.</div> <div id="T1bd" class="txs">Il est un organe sexuel et ne fait pas partie des organes de reproduction de la femme.</div> <div id="T1be" class="txs">Chez la femme,</div> <div id="T1bf" class="txs">ce sont les ovaires,</div> <div id="T1bg" class="txs">les trompes et l’utérus qui permettent qu’un fœtus se développe.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bh" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1bi" class="txs"><span class="it">«&nbsp;Le clitoris tue l’enfant à la naissance.</span></div> <div id="T1bj" class="txs"><span class="it">L’accouchement est difficile si le clitoris n’est pas enlevé&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1bk" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1bl" class="txs">Le clitoris ne peut pas tuer le bébé lors de l’accouchement.</div> <div id="T1bm" class="txs">Au contraire,</div> <div id="T1bn" class="txs">les cicatrices de l’excision rendent l’accouchement plus difficile parce que la peau est moins élastique et empêche l’enfant de sortir facilement.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bo" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1bp" class="txs"><span class="it">«&nbsp;Il n’est tout simplement pas bon que le clitoris reste.</span></div> <div id="T1bq" class="txs"><span class="it">Tout le monde l’enlève&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1br" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1bs" class="txs">Nous n’avons rien à changer à la création de Dieu.</div> <div id="T1bt" class="txs">La plupart des tribus africaines ne pensent pas que le clitoris est mauvais et elles ne pratiquent pas l’excision.</div> <div id="T1bu" class="txs">Seulement une petite partie de l’Afrique pratique l’excision.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bv" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1bw" class="txs"><span class="it">«&nbsp;Si l’excision est faite par un agent de santé,</span></div> <div id="T1bx" class="txs"><span class="it">c’est une bonne pratique&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1by" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1bz" class="txs">Une «&nbsp;excision médicalisée&nbsp;» reste une mutilation et a les mêmes risques et complications possibles.</div> <div id="T1ca" class="txs">Dans ce sens,</div> <div id="T1cb" class="txs">il n’existe pas de «&nbsp;bonne excision&nbsp;».</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cc" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1cd" class="txs"><span class="it">«&nbsp;Le clitoris contient des vers&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1ce" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1cf" class="txs">Le clitoris est un organe vivant et sain.</div> <div id="T1cg" class="txs">Il ne peut pas contenir des vers.</div> <div id="T1ch" class="txs">Ce sont des sécrétions vaginales blanchâtres normales qui s’y déposent si la femme n’observe pas souvent des toilettes intimes.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ci" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1cj" class="txs"><span class="it">«&nbsp;Une femme non excisée est infidèle à son mari.</span></div> <div id="T1ck" class="txs"><span class="it">L’excision est nécessaire pour diminuer le plaisir sexuel de la femme et son infidélité&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1cl" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1cm" class="txs">Si on enlève le clitoris,</div> <div id="T1cn" class="txs">cela diminue effectivement le plaisir sexuel de la femme.</div> <div id="T1co" class="txs">Cette frustration peut même la pousser à chercher des contacts hors mariage.</div> <div id="T1cp" class="txs">Le contraire est donc vrai.</div> <div id="T1cq" class="txs">La fidélité dans le couple ne dépend pas de l’excision,</div> <div id="T1cr" class="txs">mais de la relation des conjoints.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cs" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1ct" class="txs"><span class="it">«&nbsp;L’excision permet à la femme d’être bien intégrée dans sa famille et son clan&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1cu" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1cv" class="txs">Une partie de cette intégration au clan est une alliance avec les morts.</div> <div id="T1cw" class="txs">Les chrétiens concluent une alliance avec Dieu,</div> <div id="T1cx" class="txs">pas avec les morts.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cy" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1cz" class="txs"><span class="it">«&nbsp;Le clitoris boit le sang de la fille&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1da" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1db" class="txs">Le clitoris ne peut pas boire le sang de la fille:</div> <div id="T1dc" class="txs">il est un organe comme les autres.</div> <div id="T1dd" class="txs">Ce sont plutôt des maladies telles que les parasitoses intestinales et le paludisme qui peuvent provoquer l’anémie chez les filles.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1de" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1df" class="txs"><span class="it">«&nbsp;L’excision est nécessaire pour que la femme ne soit pas un sujet de moquerie des autres femmes et de son mari&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1dg" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1dh" class="txs">Si l’excision n’est plus demandée par les hommes ou les femmes,</div> <div id="T1di" class="txs">personne ne se moquera.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dj" class="txs">Argument de ceux qui pratiquent l'excision&nbsp;:</div></div>
+<div class="m"><div id="T1dk" class="txs"><span class="it">«&nbsp;L’excision est une obligation religieuse&nbsp;»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1dl" class="txs">Réponse&nbsp;:</div></div>
+<div class="m"><div id="T1dm" class="txs">Les écritures saintes ne font aucune mention de l’excision.</div> <div id="T1dn" class="txs">La Bible et le Coran ne parlent pas d’excision.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/28revAUD-20230320-WA0018rev.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

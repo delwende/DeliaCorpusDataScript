@@ -24,6 +24,7 @@ src/
   downloader.py
   app_collector.py
   pairing_engine.py
+  export_corpus.py
 scripts/
   run_pipeline.sh
 requirements.txt
@@ -53,6 +54,7 @@ data/
   raw/
   apps/
   aligned/
+corpus/
 ```
 
 ## Étapes
@@ -91,6 +93,14 @@ Le moteur produit notamment :
 - `multimodal.csv`
 - `text_only.csv`
 - `needs_review.csv`
+
+### 5. Corpus d'entraînement
+
+```bash
+python src/export_corpus.py --aligned data/aligned --raw data/raw --apps data/apps --out corpus
+```
+
+Produit `corpus/`, limité aux langues du Burkina (le français et l'anglais ne servent que de langue cible) : segments audio ↔ transcription par langue (`speech/<lang>/segments.csv` + `audio/`), mots enregistrés, paires de traduction, lexiques et texte monolingue. Les lignes françaises lues dans les applications de proverbes sont détectées et retirées des données audio locales ; sur les pages strictement alternées, elles deviennent des paires de traduction. Voir `corpus/README.md` pour les volumes par langue.
 
 ## Langues
 

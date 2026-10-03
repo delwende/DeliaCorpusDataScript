@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>e) Problèmes provoqués 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.59 },
+    { label: "1b", start: 3.84, end: 11.79 },
+    { label: "1c", start: 12.04, end: 13.17 },
+    { label: "1d", start: 13.42, end: 14.83 },
+    { label: "1e", start: 15.08, end: 21.59 },
+    { label: "1f", start: 21.84, end: 22.51 },
+    { label: "1g", start: 22.76, end: 25.47 },
+    { label: "1h", start: 25.72, end: 26.39 },
+    { label: "1i", start: 26.64, end: 27.47 },
+    { label: "1j", start: 27.72, end: 32.55 },
+    { label: "1k", start: 32.8, end: 33.41 },
+    { label: "1l", start: 33.66, end: 35.91 },
+    { label: "1m", start: 36.16, end: 37.21 },
+    { label: "1n", start: 37.46, end: 43.13 },
+    { label: "1o", start: 43.38, end: 48.29 },
+    { label: "1p", start: 48.54, end: 49.11 },
+    { label: "1q", start: 49.36, end: 51.43 },
+    { label: "1r", start: 51.68, end: 52.65 },
+    { label: "1s", start: 52.9, end: 53.93 },
+    { label: "1t", start: 54.18, end: 57.03 },
+    { label: "1u", start: 57.28, end: 59.77 },
+    { label: "1v", start: 60.02, end: 60.73 },
+    { label: "1w", start: 60.98, end: 64.95 },
+    { label: "1x", start: 65.2, end: 66.25 },
+    { label: "1y", start: 66.5, end: 70.69 },
+    { label: "1z", start: 70.94, end: 71.63 },
+    { label: "1aa", start: 71.88, end: 76.19 },
+    { label: "1ab", start: 76.44, end: 77.45 },
+    { label: "1ac", start: 77.7, end: 80.93 },
+    { label: "1ad", start: 81.18, end: 81.83 },
+    { label: "1ae", start: 82.08, end: 85.47 },
+    { label: "1af", start: 85.72, end: 86.63 },
+    { label: "1ag", start: 86.88, end: 92.13 },
+    { label: "1ah", start: 92.38, end: 95.39 },
+    { label: "1ai", start: 95.64, end: 100.03 },
+    { label: "1aj", start: 100.28, end: 100.83 },
+    { label: "1ak", start: 101.08, end: 104.49 },
+    { label: "1al", start: 104.74, end: 105.75 },
+    { label: "1am", start: 106, end: 107.31 },
+    { label: "1an", start: 107.56, end: 112.27 },
+    { label: "1ao", start: 112.52, end: 117.95 },
+    { label: "1ap", start: 118.2, end: 118.87 },
+    { label: "1aq", start: 119.12, end: 122.89 },
+    { label: "1ar", start: 123.14, end: 123.75 },
+    { label: "1as", start: 124, end: 126.75 },
+    { label: "1at", start: 127, end: 127.97 },
+    { label: "1au", start: 128.22, end: 128.31 },
+    { label: "1av", start: 128.56, end: 129.59 },
+    { label: "1aw", start: 129.84, end: 131.55 },
+    { label: "1ax", start: 131.8, end: 135.65 },
+    { label: "1ay", start: 135.9, end: 136.49 },
+    { label: "1az", start: 136.74, end: 140.13 },
+    { label: "1ba", start: 140.38, end: 141.51 },
+    { label: "1bb", start: 141.76, end: 146.95 },
+    { label: "1bc", start: 147.2, end: 150.65 },
+    { label: "1bd", start: 150.9, end: 151.45 },
+    { label: "1be", start: 151.7, end: 155.43 },
+    { label: "1bf", start: 155.68, end: 156.65 },
+    { label: "1bg", start: 156.9, end: 159.75 },
+    { label: "1bh", start: 160, end: 164.87 },
+    { label: "1bi", start: 165.12, end: 165.59 },
+    { label: "1bj", start: 165.84, end: 166.65 },
+    { label: "1bk", start: 166.9, end: 170.69 },
+    { label: "1bl", start: 170.94, end: 173.47 },
+    { label: "1bm", start: 173.72, end: 174.35 },
+    { label: "1bn", start: 174.6, end: 176.73 },
+    { label: "1bo", start: 176.98, end: 178.01 },
+    { label: "1bp", start: 178.26, end: 180.13 },
+    { label: "1bq", start: 180.38, end: 182.15 },
+    { label: "1br", start: 182.4, end: 185.15 },
+    { label: "1bs", start: 185.4, end: 186.17 },
+    { label: "1bt", start: 186.42, end: 186.93 },
+    { label: "1bu", start: 187.18, end: 191.05 },
+    { label: "1bv", start: 191.3, end: 192.23 },
+    { label: "1bw", start: 192.48, end: 200.05 },
+    { label: "1bx", start: 200.3, end: 207.53 },
+    { label: "1by", start: 207.78, end: 214.41 },
+    { label: "1bz", start: 214.66, end: 220.11 },
+    { label: "1ca", start: 220.36, end: 224.73 },
+    { label: "1cb", start: 224.98, end: 227.67 },
+    { label: "1cc", start: 227.92, end: 229.41 },
+    { label: "1cd", start: 229.66, end: 230.47 },
+    { label: "1ce", start: 230.72, end: 231.57 },
+    { label: "1cf", start: 231.82, end: 235.43 },
+    { label: "1cg", start: 235.68, end: 239.63 },
+    { label: "1ch", start: 239.88, end: 241.75 },
+    { label: "1ci", start: 242, end: 249.19 },
+    { label: "1cj", start: 249.44, end: 252.45 },
+    { label: "1ck", start: 252.7, end: 255.25 },
+    { label: "1cl", start: 255.5, end: 259.23 },
+    { label: "1cm", start: 259.48, end: 260.19 },
+    { label: "1cn", start: 260.44, end: 264.39 },
+    { label: "1co", start: 264.64, end: 268.01 },
+    { label: "1cp", start: 268.26, end: 272.59 },
+    { label: "1cq", start: 272.84, end: 278.35 },
+    { label: "1cr", start: 278.6, end: 283.31 },
+    { label: "1cs", start: 283.56, end: 285.81 },
+    { label: "1ct", start: 286.06, end: 288.67 },
+    { label: "1cu", start: 288.92, end: 292.79 },
+    { label: "1cv", start: 293.04, end: 293.99 },
+    { label: "1cw", start: 294.24, end: 295.05 },
+    { label: "1cx", start: 295.3, end: 296.71 },
+    { label: "1cy", start: 296.96, end: 305.07 },
+    { label: "1cz", start: 305.32, end: 307.89 },
+    { label: "1da", start: 308.14, end: 314.31 },
+    { label: "1db", start: 314.56, end: 320.23 },
+    { label: "1dc", start: 320.48, end: 325.79 },
+    { label: "1dd", start: 326.04, end: 327.09 },
+    { label: "1de", start: 327.34, end: 335.87 },
+    { label: "1df", start: 336.12, end: 337.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 337.23;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "28-B028-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='27-B027-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='27-B027-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;e) Problèmes provoqués&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='29-B029-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='29-B029-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B028-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">e) </span><span class="bd">Problèmes provoqués par l’excision</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Le clitoris est un organe très sensible qui joue un rôle important pour donner du plaisir à la femme pendant l'acte sexuel.</div> <div id="T1c" class="txs">En réalité,</div> <div id="T1d" class="txs">en supprimant le clitoris,</div> <div id="T1e" class="txs">on blesse inutilement la fille et on crée beaucoup de problèmes sur le moment et pour le reste de sa vie :</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1g" class="txs">L’excision met la vie de la fille en danger.</div></div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1i" class="txs">Chaque année,</div> <div id="T1j" class="txs">plusieurs jeunes filles meurent d'hémorragie ou du tétanos à cause du manque d’hygiène.</div></div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1l" class="txs">L’excision peut rendre la fille stérile.</div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1n" class="txs">L’excision est faite par des matrones qui assez souvent n'observent pas suffisamment les règles d'hygiène,</div> <div id="T1o" class="txs">et cela cause souvent des infections graves qui peuvent même entraîner la stérilité de la fille.</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1q" class="txs">L’excision peut transmettre le SIDA.</div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1s" class="txs">Pendant l’excision,</div> <div id="T1t" class="txs">le sang d’une fille peut passer à une autre,</div> <div id="T1u" class="txs">et ainsi le SIDA peut contaminer plusieurs filles.</div></div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1w" class="txs">Ce mal peut agir sur la santé de la fille avec des problèmes urinaires.</div></div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1y" class="txs">Des problèmes pour uriner qui causent une infection ou une fuite des urines.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1aa" class="txs">Ce mal peut agir sur la santé de la fille avec des problèmes mensuels.</div></div>
+<div class="m"><div id="T1ab" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1ac" class="txs">Les problèmes créés par l'infection et par les cicatrices.</div></div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1ae" class="txs">Une femme excisée a plus de problèmes durant l’accouchement.</div></div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1ag" class="txs">Les cicatrices suite à l’excision peuvent rendre les accouchements pénibles et douloureux,</div> <div id="T1ah" class="txs">et cela met la vie de femme et de l’enfant en danger.</div> <div id="T1ai" class="txs">(Les cicatrices ne s’étirent pas et le bébé a des troubles de naissance).</div></div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1ak" class="txs">L’excision empêche l’épanouissement émotionnel de la femme.</div></div>
+<div class="m"><div id="T1al" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1am" class="txs">En coupant le clitoris,</div> <div id="T1an" class="txs">on prive la femme d'un organe que Dieu lui a donné pour sa joie dans le mariage.</div> <div id="T1ao" class="txs">Elle ne peut plus vivre l’union avec son mari comme un épanouissement profond de son amour.</div> <div id="T1ap" class="txs">Souvent,</div> <div id="T1aq" class="txs">l’acte sexuel est accompagné de douleurs chez la femme excisée.</div></div>
+<div class="m"><div id="T1ar" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1as" class="txs">L’excision peut provoquer la frigidité de la femme.</div></div>
+<div class="m"><div id="T1at" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1au" class="txs">Si,</div> <div id="T1av" class="txs">durant l’acte sexuel,</div> <div id="T1aw" class="txs">la femme ne vit pas de plaisir,</div> <div id="T1ax" class="txs">elle peut même développer un dégoût du contact physique avec son mari.</div></div>
+<div class="m"><div id="T1ay" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1az" class="txs">L’excision crée l’insatisfaction sexuelle du mari.</div></div>
+<div class="m"><div id="T1ba" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1bb" class="txs">Si la femme n’expérimente pas beaucoup de plaisir durant le contact sexuel avec son mari,</div> <div id="T1bc" class="txs">lui-même n’éprouve pas non plus la même joie.</div></div>
+<div class="m"><div id="T1bd" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1be" class="txs">L’excision peut causer l’infidélité du mari ou de la femme.</div></div>
+<div class="m"><div id="T1bf" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1bg" class="txs">Si la femme n’a pas de joie durant le contact sexuel,</div> <div id="T1bh" class="txs">le mari peut se sentir repoussé et chercher le plaisir avec une autre femme.</div></div>
+<div class="m"><div id="T1bi" class="txs">La femme,</div> <div id="T1bj" class="txs">de son côté,</div> <div id="T1bk" class="txs">peut aussi penser que l’absence de plaisir est la faute de son mari,</div> <div id="T1bl" class="txs">et elle cherche le contact avec un autre homme.</div></div>
+<div class="m"><div id="T1bm" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1bn" class="txs">L’excision provoque la pauvreté.</div></div>
+<div class="m"><div id="T1bo" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1bp" class="txs">L’excision coûte cher à la famille :</div> <div id="T1bq" class="txs">le salaire de l’exciseuse,</div> <div id="T1br" class="txs">la nourriture de la fille et des instructrices,</div> <div id="T1bs" class="txs">la fête.</div></div>
+<div class="m"><div id="T1bt" class="txs"><span class="bd">Problèmes&nbsp;:</span></div></div>
+<div class="m"><div id="T1bu" class="txs">L’excision soumet la fille à des liens féticheurs et occultes.</div></div>
+<div class="m"><div id="T1bv" class="txs"><span class="bd">Explications&nbsp;:</span></div></div>
+<div class="m"><div id="T1bw" class="txs">Les vieilles femmes peuvent garder les parties coupées pour exercer un pouvoir féticheur sur les filles et jeunes femmes.</div> <div id="T1bx" class="txs">Plusieurs rites qui accompagnent l’excision mettent aussi la fille en contact direct avec les morts et les fétiches.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1by" class="txs">Quand on se rend compte de tous ces problèmes et des conséquences parfois graves des mutilations génitales féminines,</div> <div id="T1bz" class="txs">on comprend pourquoi seulement une petite partie de l’Afrique adhère à la pratique de l’excision.</div> <div id="T1ca" class="txs">(L’excision se pratique surtout en Egypte et dans la corne de l’Afrique,</div> <div id="T1cb" class="txs">et dans une petite bande en Afrique de l’ouest,</div> <div id="T1cc" class="txs">y compris la Guinée.</div> <div id="T1cd" class="txs">Par contre,</div> <div id="T1ce" class="txs">le Nord-ouest,</div> <div id="T1cf" class="txs">l’Afrique centrale et australe ne pratiquent pas du tout l’excision).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cg" class="txs"><span class="bd">f) </span><span class="bd">Quelle doit être l'attitude d'un chrétien face à cette coutume</span><span class="bd"> </span><span class="bd">?</span></div></div>
+<div class="m"><div id="T1ch" class="txs">A partir de ces passages,</div> <div id="T1ci" class="txs">nous voyons que l’excision est contraire à l’enseignement de la Bible au sujet du corps et au sujet des pratiques liées aux morts.</div> <div id="T1cj" class="txs">Les chrétiens ne doivent donc pas pratiquer l’excision.</div></div>
+<div class="m"><div id="T1ck" class="txs">Bien que la Bible ne parle pas de l’excision,</div> <div id="T1cl" class="txs">nous avons vu que cette coutume est opposée à l’enseignement biblique.</div> <div id="T1cm" class="txs">De plus,</div> <div id="T1cn" class="txs">elle crée beaucoup de problèmes au moment de la procédure et par la suite.</div> <div id="T1co" class="txs">La famille chrétienne ne doit donc plus faire exciser ses filles.</div> <div id="T1cp" class="txs">Et la jeune fille chrétienne ne doit pas craindre les moqueries de ses camarades.</div> <div id="T1cq" class="txs">Elle ne doit pas croire aux paroles des gens qui disent qu'une fille non excisée est sale,</div> <div id="T1cr" class="txs">qu'elle ne pourra pas avoir de relations sexuelles normales avec son futur mari,</div> <div id="T1cs" class="txs">qu'elle sera stérile etc.</div> <div id="T1ct" class="txs">Tous ces points qu’on a entendus sont faux.</div> <div id="T1cu" class="txs">Les païens voient dans l'excision un moyen d'assurer la fécondité,</div> <div id="T1cv" class="txs">mais cette idée,</div> <div id="T1cw" class="txs">elle aussi,</div> <div id="T1cx" class="txs">est entièrement fausse.</div></div>
+<div class="m"><div id="T1cy" class="txs">Un chrétien doit rejeter l'excision pour ses jeunes filles et travailler à faire disparaître cette coutume de son village et de sa région.</div> <div id="T1cz" class="txs">– En attendant que cette coutume disparaisse,</div> <div id="T1da" class="txs">ayons beaucoup de finesse pour convaincre les chrétiens et la société à ne plus exciser les filles.</div></div>
+<div class="m"><div id="T1db" class="txs">L’Eglise Protestante Evangélique de Guinée prend clairement position contre l’excision.</div> <div id="T1dc" class="txs">Elle a décidé de mettre sous discipline les pasteurs qui continuent à pratiquer cette coutume.</div></div>
+<div class="m"><div id="T1dd" class="txs">(<span class="it">Références :</span></div> <div id="T1de" class="txs"><span class="it">«&nbsp;L’excision à la lumière de la foi chrétienne&nbsp;» Pasteur Robert Iffono</span><span class="it"> </span><span class="it">«&nbsp;La famille chrétienne&nbsp;» Formation des aides pasteurs,</span></div> <div id="T1df" class="txs"><span class="it">Cycle 1.)</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/24 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/24 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/24 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

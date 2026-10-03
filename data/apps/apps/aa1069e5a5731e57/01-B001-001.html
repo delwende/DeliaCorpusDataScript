@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#083F0E">
+<title>1 A ka zɛt ned nin bãaneg 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 2.77, end: 11.1 },
+    { label: "1b", start: 11.35, end: 18.43 },
+    { label: "1c", start: 18.68, end: 27.6 },
+    { label: "1d", start: 27.85, end: 36.76 },
+    { label: "1e", start: 37.01, end: 45.39 },
+    { label: "1f", start: 45.64, end: 54.88 },
+    { label: "1g", start: 55.13, end: 63.6 },
+    { label: "1h", start: 63.85, end: 73.1 },
+    { label: "1i", start: 73.35, end: 84.73 },
+    { label: "1j", start: 84.98, end: 92.57 },
+    { label: "1k", start: 92.82, end: 102.64 },
+    { label: "1l", start: 102.89, end: 112.09 },
+    { label: "1m", start: 112.34, end: 121.64 },
+    { label: "1n", start: 121.89, end: 130.13 },
+    { label: "1o", start: 130.38, end: 138.42 },
+    { label: "1p", start: 138.67, end: 147.89 },
+    { label: "1q", start: 148.14, end: 156.64 },
+    { label: "1r", start: 156.89, end: 165.57 },
+    { label: "1s", start: 165.82, end: 175.82 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 2.77;
+var stopTime  = 175.82;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1 A ka zɛt ned nin bãaneg&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">1</span><span class="bd"> A ka zɛt ned nin bãaneg ye.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">2</span><span class="bd"> A lɩkr n bao a korbo.</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">3</span><span class="bd"> A "nin-zabd" ne a "pʋg n pid" pa tũud taab ye.</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">4</span><span class="bd"> A pẽ naab n ning a zãr naab wĩiri.</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">5</span><span class="bd"> A pẽ naab n tʋkd a zãr-naab waooga.</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">6</span><span class="bd"> A "saam-y" ne a "wõd-y" yaa nug-raoogo.</span></div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">7</span><span class="bd"> "A zagl" ne "a zagl" yaa peoog a ye ki.</span></div></div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">8</span><span class="bd"> A zagl sã n kʋ waafo, bɩ f ra gãndg-a ye.</span></div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">9</span><span class="bd"> A zagl wõba a naafã nemd yʋʋm a tãabo, yaa a sẽn kʋ a naafã n yãk n pʋɩ.</span></div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">10</span><span class="bd"> A zagl yaa wẽlg zʋʋre.</span></div></div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">11</span><span class="bd"> A zug yaa wa kãoog zugu: a pa zaeed yamsem wʋmb ye.</span></div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">12</span><span class="bd"> Ad paoor pa yɩɩd "Fo me waa raag la?"</span></div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">13</span><span class="bd"> Ad yaa ned kʋɩɩm sẽn ya wa ba-raoog kʋɩɩm.</span></div></div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">14</span><span class="bd"> Ad yaa wed-dʋʋd n zao kẽgre.</span></div></div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">15</span><span class="bd"> Ad yaa yã kom n zãms bagre.</span></div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">16</span><span class="bd"> Ãnda n sãad naab pʋʋgẽ tɩ ka bẽdenga.</span></div></div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">17</span><span class="bd"> Ãnda n tõe n bãng ba-bi ba-gae?</span></div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">18</span><span class="bd"> Ãnda n tõe n bãng põeer lamboaama?</span></div></div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">19</span><span class="bd"> Ãnda n tõe n bãng kobessi korgẽ?</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/mos/mosora-audio/01 Sissao a-k avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

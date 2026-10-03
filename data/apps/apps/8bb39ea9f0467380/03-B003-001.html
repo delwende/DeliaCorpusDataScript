@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>3) Bu telin tabu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 10.67 },
+    { label: "1b", start: 10.92, end: 18.53 },
+    { label: "1c", start: 18.78, end: 27.19 },
+    { label: "1d", start: 27.44, end: 55.61 },
+    { label: "1e", start: 55.86, end: 66.35 },
+    { label: "1f", start: 66.6, end: 87.61 },
+    { label: "1g", start: 87.86, end: 98.67 },
+    { label: "1h", start: 98.92, end: 112.23 },
+    { label: "1i", start: 112.48, end: 143.03 },
+    { label: "1j", start: 143.28, end: 163.37 },
+    { label: "1k", start: 163.62, end: 225.13 },
+    { label: "1l", start: 225.38, end: 276.11 },
+    { label: "1m", start: 276.36, end: 297.43 },
+    { label: "1n", start: 297.68, end: 313.47 },
+    { label: "1o", start: 313.72, end: 326.15 },
+    { label: "1p", start: 326.4, end: 350.43 },
+    { label: "1q", start: 350.68, end: 371.07 },
+    { label: "1r", start: 371.32, end: 390.83 },
+    { label: "1s", start: 391.08, end: 402.95 },
+    { label: "1t", start: 403.2, end: 412.35 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 412.35;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;3) Bu telin tabu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">3)</span><span class="bd"> Bu </span><span class="bd">telin</span><span class="bd"> </span><span class="bd">tabu</span></div></div>
+<div class="m"><div id="T1b" class="txs">O luomo o moanua o gmamo o poando leni ki wonga n den ye.</div></div>
+<div class="m"><div id="T1c" class="txs">Lanwani bi taani ki ta u sanu yuakuli n wani o tuomi.</div> <div id="T1d" class="txs">Ban cuoni bi cua sua ke pociamo baani n ko  ban yedi bilieba ke o ba kuli n da waani bi tuomi o pociamo yeni .</div> <div id="T1e" class="txs">bi kuli n fuondi o pociamo ki ban gbeni wan tuo bi po.</div></div>
+<div class="m"><div id="T1f" class="txs">Jaa ban kaa wani o paciamo bi danba tuoni yeni li koani ki wonga ban ban ba ban bili bi tiadi nani kani li wonli n lindi o lieba puoli ki cua buali o pociamo.</div></div>
+<div class="m"><div id="T1g" class="txs">Yaba n mibidi yeni a bani baa,, wan ye a yo mii bani ba wan ta bi kuli yela leni bi tuomi ki ban gbeni.</div></div>
+<div class="m"><div id="T1h" class="txs">Wani leni o lieba n ban goani a ki fuondi o paciamo wan ga ki ta yuakuli danbi tuomi.</div></div>
+<div class="m"><div id="T1i" class="txs">O luomo wan yedi ki baan tidi ; moanua wan ye ti goangoansabidi  ; gmamo wan yedi tancagiyibalimo ; kunkuli li jinlinsanli  ; poando wan yedi hakpadobili; wani jakpeliga wan yedi bannaanici hanbo.</div></div>
+<div class="m"><div id="T1j" class="txs">Ban ye jo gme n waani o pociamo nne ti danba donda; lan tie yuakuli ti ya pundi li ñinbuli kani ti ba bandi li dano n tie yua.</div> <div id="T1k" class="txs">Ban ban pundi li ñinbuli kani ban cedi luomo n kpa gedi ki yiini dondi bi kuli ki yugi kandi o ya puoli moanua, moanua puoli gmamo , o ya puoli kunkuli ƙunkuli ya puoli poando li ban juodi jakpeliga wan dondi gbeni ki yugi gbali ba u fuanu nni o lieba n yedi yi la bii ki sani ke bi ba hoadi o wan mia u kpenu yeni nni ki ban kadini ñabo leni o bila ki yedi ke ñabo n ta o wan tua o biyualo o ñabo n ta  o ki teni wan gudi o po o bila.</div> <div id="T1l" class="txs">O den ye yeni kali o ñabo ya gedi a goada wan ta bi yenga ki kodi gmani hali ki ban gma gbeni bi kuli ki han yula bebe li bi yukuoli  dali n pundi wan yedi jakpeliga ta a bila nne tin kuoba wan kua ta a kpacala ki fini kigani bi yula ki gnani ban kuo a yula yeni kelima lani  fini yeni oba kuli na fidi bandi.</div></div>
+<div class="m"><div id="T1m" class="txs">Ban ban kuo gbeni ke bi biyukuoba kuni jakpeliga n sani ɲ̌abo wani kua yo ki sua ke bila na go ye ke jakpeliga mo teli o kani.</div></div>
+<div class="m"><div id="T1n" class="txs">Wan sani ki banle luomo ki yedi o yi soani ya tuonli n yeni yo  yi den teni nni jakpeliga wan gnani n bila yo.</div> <div id="T1o" class="txs">Lani luomo n yedi o ke ñabo sanu nne o kan bia ba ke bi ba cuo li gninbuli kani wan ye a yo.</div></div>
+<div class="m"><div id="T1p" class="txs">Lani yo jakpeliga n gaani ki ban le ki fuayanga ke o bili ki kpe bedi wan pundi li gbanli ki mani o ba po.</div></div>
+<div class="m"><div id="T1q" class="txs">Ki cua li ñinbuli kani ko ba ño ; ñabo n yedi na kanbi ka wan yedi o min dagoli yeni aa mua n nihima ke ti solindi hoadi nni hali  mi gmani a bila a laa ngbanu n tie mama.</div> <div id="T1r" class="txs">gnabo mo n gna yo  wan pendi ki pundi luomo kani : luomo n bualo be n tieni wan yedi ke solindi wan yedi gedi ki da puoni a yianu.</div></div>
+<div class="m"><div id="T1s" class="txs">Lani n teni ke a kan le jakpewona ke bi yegi  goli kelima yi janbi po.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs">I tundi yua kuli n jie o kundikundi nilo.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/03 CONTE.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

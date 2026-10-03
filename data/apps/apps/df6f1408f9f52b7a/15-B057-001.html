@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>8 Pondre ne soaamba 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "a", start: 0, end: 2.29 },
+    { label: "b", start: 2.54, end: 3.63 },
+    { label: "c", start: 3.88, end: 4.83 },
+    { label: "d", start: 5.08, end: 10.23 },
+    { label: "e", start: 10.48, end: 13.85 },
+    { label: "f", start: 14.1, end: 14.71 },
+    { label: "g", start: 14.96, end: 15.63 },
+    { label: "h", start: 15.88, end: 18.69 },
+    { label: "i", start: 18.94, end: 20.83 },
+    { label: "j", start: 21.08, end: 22.39 },
+    { label: "k", start: 22.64, end: 24.65 },
+    { label: "l", start: 24.9, end: 29.27 },
+    { label: "m", start: 29.52, end: 31.21 },
+    { label: "n", start: 31.46, end: 34.17 },
+    { label: "o", start: 34.42, end: 37.17 },
+    { label: "p", start: 37.42, end: 40.41 },
+    { label: "q", start: 40.66, end: 41.89 },
+    { label: "r", start: 42.14, end: 44.03 },
+    { label: "s", start: 44.28, end: 46.07 },
+    { label: "t", start: 46.32, end: 48.53 },
+    { label: "u", start: 48.78, end: 50.35 },
+    { label: "v", start: 50.6, end: 52.37 },
+    { label: "w", start: 52.62, end: 54.87 },
+    { label: "x", start: 55.12, end: 58.31 },
+    { label: "y", start: 58.56, end: 61.27 },
+    { label: "z", start: 61.52, end: 66.55 },
+    { label: "aa", start: 66.8, end: 67.95 },
+    { label: "ab", start: 68.2, end: 69.69 },
+    { label: "ac", start: 69.94, end: 71.91 },
+    { label: "ad", start: 72.16, end: 73.99 },
+    { label: "ae", start: 74.24, end: 76.23 },
+    { label: "af", start: 76.48, end: 78.57 },
+    { label: "ag", start: 78.82, end: 80.49 },
+    { label: "ah", start: 80.74, end: 82.99 },
+    { label: "ai", start: 83.24, end: 86.01 },
+    { label: "aj", start: 86.26, end: 88.83 },
+    { label: "ak", start: 89.08, end: 91.25 },
+    { label: "al", start: 91.5, end: 93.53 },
+    { label: "am", start: 93.78, end: 95.53 },
+    { label: "an", start: 95.78, end: 100.45 },
+    { label: "ao", start: 100.7, end: 105.33 },
+    { label: "ap", start: 105.58, end: 106.55 },
+    { label: "aq", start: 106.8, end: 110.73 },
+    { label: "ar", start: 110.98, end: 113.33 },
+    { label: "as", start: 113.58, end: 116.69 },
+    { label: "at", start: 116.94, end: 119.27 },
+    { label: "au", start: 119.52, end: 121.21 },
+    { label: "av", start: 121.46, end: 123.01 },
+    { label: "aw", start: 123.26, end: 125.87 },
+    { label: "ax", start: 126.12, end: 127.65 },
+    { label: "ay", start: 127.9, end: 129.89 },
+    { label: "az", start: 130.14, end: 133.07 },
+    { label: "ba", start: 133.32, end: 134.41 },
+    { label: "bb", start: 134.66, end: 135.23 },
+    { label: "bc", start: 135.48, end: 136.85 },
+    { label: "bd", start: 137.1, end: 138.11 },
+    { label: "be", start: 138.36, end: 139.15 },
+    { label: "bf", start: 139.4, end: 140.91 },
+    { label: "bg", start: 141.16, end: 144.21 },
+    { label: "bh", start: 144.46, end: 146.55 },
+    { label: "bi", start: 146.8, end: 147.79 },
+    { label: "bj", start: 148.04, end: 149.53 },
+    { label: "bk", start: 149.78, end: 151.57 },
+    { label: "bl", start: 151.82, end: 153.41 },
+    { label: "bm", start: 153.66, end: 156.85 },
+    { label: "bn", start: 157.1, end: 159.57 },
+    { label: "bo", start: 159.82, end: 162.35 },
+    { label: "bp", start: 162.6, end: 164.71 },
+    { label: "bq", start: 164.96, end: 169.13 },
+    { label: "br", start: 169.38, end: 171.43 },
+    { label: "bs", start: 171.68, end: 174.27 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "15-B057-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B056-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='14-B056-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;8 Pondre ne soaamba&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B058-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B058-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B057-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="Ta" class="txs"><span class="bd">8 </span><span class="bd">Pondre</span><span class="bd"> ne </span><span class="bd">soaamba</span></div></div>
+<div class="m"><div id="Tb" class="txs">Daar a yembre,</div> <div id="Tc" class="txs">weoogã pʋga,</div> <div id="Td" class="txs">m ba pondr yãa pʋg-sad ning a sẽn da baood n dat n maan a pagã.</div> <div id="Te" class="txs">M ba soaamb yã-a-la ne pʋg-sadã n sok a pondre :</div> <div id="Tf" class="txs">«&nbsp;Hey,</div> <div id="Tg" class="txs">pondre,</div> <div id="Th" class="txs">yaa bõe la fo maand ne pʋg-sad-kãngã&nbsp;»?</div></div>
+<div class="m"><div id="Ti" class="txs">Tɩ pondr leoke :</div> <div id="Tj" class="txs">«&nbsp;Yaa m arzaka,</div> <div id="Tk" class="txs">a na n lebga mam paga&nbsp;»&nbsp;!</div></div>
+<div class="m"><div id="Tl" class="txs">Tɩ soaamb yeel tɩ yẽnda me rata bi-puglã n maan a paga.</div> <div id="Tm" class="txs">B yiibã sʋka,</div> <div id="Tn" class="txs">bi-puglã ra tõe n datẽ-la a soaamba,</div> <div id="To" class="txs">la pondr n yɩ pipi n wilg a raabo.</div> <div id="Tp" class="txs">Maanda a wãn n welg yel-kãngã&nbsp;?</div></div>
+<div class="m"><div id="Tq" class="txs">«&nbsp;Hey,</div> <div id="Tr" class="txs">yãmb y yiibã&nbsp;!</div> <div id="Ts" class="txs">Sẽn ya woto wã,</div> <div id="Tt" class="txs">mam pa tõe n tõdg ned ba a ye ye,</div> <div id="Tu" class="txs">la m na n kuilame,</div> <div id="Tv" class="txs">n tɩ togs m baaba.</div> <div id="Tw" class="txs">Tɩ beoog yibeoog pĩnda,</div> <div id="Tx" class="txs">bɩ y lebg n wa kelg m nin-kẽemã sẽn na n yeel-yã.</div> <div id="Ty" class="txs">M ba soaamb ne m ba pondr sʋkã,</div> <div id="Tz" class="txs">yaa ned ning sẽn na n yɩ-a pipi n ta mam yirã la m na n kẽ ne kãadem».</div></div>
+<div class="m"><div id="Taa" class="txs">«&nbsp;Ay,</div> <div id="Tab" class="txs">pondre&nbsp;!</div><div id="Tac" class="txs">&nbsp;» Soaamb sẽn yeele,</div> <div id="Tad" class="txs">«&nbsp;fo miime&nbsp;?</div> <div id="Tae" class="txs">Mosã tɛka,</div> <div id="Taf" class="txs">bi-pug-kãngã yaa mam soolem :</div> <div id="Tag" class="txs">fo pa tʋʋl wɛ&nbsp;»&nbsp;!</div></div>
+<div class="m"><div id="Tah" class="txs">«&nbsp;Mam pa tʋʋle&nbsp;?</div> <div id="Tai" class="txs">La m tara roagdb wʋsgo.</div> <div id="Taj" class="txs">M na n maana tẽeb ne m roagdbã,</div> <div id="Tak" class="txs">tɩ f ges m sẽn na n maanega&nbsp;»!</div></div>
+<div class="m"><div id="Tal" class="txs">Zĩig sobgame.</div> <div id="Tam" class="txs">A vẽk-n-beoogã,</div> <div id="Tan" class="txs">nebã a yiibã ra togame n kẽng n tɩ yã bi-puglã roagdba.</div></div>
+<div class="m"><div id="Tao" class="txs">Pondr tigma a zak rãmb fãa n togs-b yellã.</div> <div id="Tap" class="txs">La,</div> <div id="Taq" class="txs">a zakã rãmb zãng tonga taab n tn tãag bi-puglã roog noore.</div></div>
+<div class="m"><div id="Tar" class="txs">M ba soaamb sẽn tʋʋl yĩnga,</div> <div id="Tas" class="txs">a pa tol n tags n na n tigim a zak rãmb ye.</div> <div id="Tat" class="txs">A vẽk-n-beoogã yibeoogo,</div> <div id="Tau" class="txs">a yikame n yeel pondre :</div> <div id="Tav" class="txs">«&nbsp;Pondre&nbsp;!</div><div id="Taw" class="txs">&nbsp;»</div></div>
+<div class="m"><div id="Tax" class="txs">«&nbsp;Naaba&nbsp;» .</div></div>
+<div class="m"><div id="Tay" class="txs">«&nbsp;F beeme bɩ&nbsp;»?</div></div>
+<div class="m"><div id="Taz" class="txs">«&nbsp;N-ye&nbsp;»&nbsp;!</div></div>
+<div class="m"><div id="Tba" class="txs">«&nbsp;Mam loogame&nbsp;»&nbsp;!</div></div>
+<div class="m"><div id="Tbb" class="txs">«&nbsp;Aoo&nbsp;»&nbsp;!</div></div>
+<div class="m"><div id="Tbc" class="txs">La,</div> <div id="Tbd" class="txs">pondr paasame :</div> <div id="Tbe" class="txs">«&nbsp;Kẽnge,</div> <div id="Tbf" class="txs">kẽnge,</div> <div id="Tbg" class="txs">m watame&nbsp;»&nbsp;!</div></div>
+<div class="m"><div id="Tbh" class="txs">M ba soaamb sɩnga zoees a pãng tɛka,</div> <div id="Tbi" class="txs">a wa n tɩ yãkame n yalse :</div> <div id="Tbj" class="txs">«&nbsp;Pondre,</div> <div id="Tbk" class="txs">f bee yɛ&nbsp;»&nbsp;?</div></div>
+<div class="m"><div id="Tbl" class="txs">Tɩ pondr leok-a :</div> <div id="Tbm" class="txs">«&nbsp;Fo taoore&nbsp;».</div></div>
+<div class="m"><div id="Tbn" class="txs">Tɩ soaamb maneg n na n zoe tʋʋlɩ n paase,</div> <div id="Tbo" class="txs">n wa tɩ ta bi-puglã rig-noorẽ.</div> <div id="Tbp" class="txs">La a sẽn wa n dat n ta wã bala,</div> <div id="Tbq" class="txs">ad pondr sẽn be beenẽ.</div> <div id="Tbr" class="txs">Yɩɩ woto tn soaamb pa paam bi-puglã ye.</div></div>
+<div class="m"><div id="Tbs" class="txs">Zak sã n bedma, zu-loees paamda tɩt nana-nana.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/mos/audio/08 conte 08.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

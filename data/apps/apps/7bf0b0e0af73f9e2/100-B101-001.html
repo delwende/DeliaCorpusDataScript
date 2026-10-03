@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Hoş Geldiniz 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "100-B101-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='99-B100-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='99-B100-033.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Hoş Geldiniz&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='100-B101-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='101-B102-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B101-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">1) Hoş Geldiniz!</span></div>
+<div class="m">Avrupalıların nasıl yaşadıklarını ve neye inandıklarını keşfedin.</div>
+<div class="m">Bu uygulama bir tekliftir. Diğer ülkelerden insanlar burada bizim için önemli olduğu için oluşturuldu. Size Avrupa kültürüne dair bir fikir vermek istiyoruz çünkü kültürümüzle ilgili bazı şeyler kafanızda soru işaretleri yaratabilir. Bu şaşırtıcı değil, çünkü her kültürde pek çok şey, yerel halkın bildiği, ancak hiçbir yerde açıkça yazılmayan kurallara göre gerçekleşir. Bu tür kurallar ve değerler her yerde mevcuttur. Bu başvuruda Avrupa'dan bazılarını anlatmak istiyoruz. Elbette bazı Avrupalılar farklı davranıyor. Ancak burada birkaç tipik davranış modeli bulunmaktadır. Diğer ülkelerden insanlar da bizimle bir takım gözlemlerini paylaştılar.</div>
+<div class="m">Yazarlar olarak sizin ve bizim trende ya da bir kafede tanıştığımızı hayal ediyoruz - ya da belki bir yemekte oturup sohbet ediyoruz ve tabii ki aslında çok farklı ülkelerden insanlarla masaya oturup dinleyip konuşuyoruz. Bu uygulamayı Hıristiyanlar olarak, İsa'yı takip eden insanlar olarak bilinçli olarak yayınlıyoruz. Bu uygulamada da bununla ilgili bir şeyler yazıyoruz. Çünkü imanımızla ilgili birçok soruyu yemek masasında da duymuşuzdur. Pek çok Avrupalı ​​da sizinle gerçek karşılaşmaları sabırsızlıkla bekliyor. Kültürünüz hakkında bir şeyler öğrenmeyi sabırsızlıkla bekliyorlar. Örneğin birçok kişi, diğer ülkelerden gelen insanların Avrupa'ya getirdikleri misafirperverlik ve aile duygusunu takdir ediyor. Birlikte iyi yaşamayı sabırsızlıkla bekliyoruz.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

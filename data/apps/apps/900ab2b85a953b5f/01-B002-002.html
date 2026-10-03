@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "2a", start: 179.9, end: 181.39 },
+    { label: "2b", start: 181.64, end: 183.21 },
+    { label: "2c", start: 183.46, end: 185.03 },
+    { label: "2d", start: 185.28, end: 185.71 },
+    { label: "2e", start: 185.96, end: 188.65 },
+    { label: "2f", start: 188.9, end: 190.91 },
+    { label: "2g", start: 191.16, end: 194.83 },
+    { label: "2h", start: 195.08, end: 200.67 },
+    { label: "2i", start: 200.92, end: 206.29 },
+    { label: "2j", start: 206.54, end: 210.55 },
+    { label: "2k", start: 210.8, end: 212.57 },
+    { label: "2l", start: 212.82, end: 216.07 },
+    { label: "2m", start: 216.32, end: 221.33 },
+    { label: "2n", start: 221.58, end: 225.19 },
+    { label: "2o", start: 225.44, end: 231.89 },
+    { label: "2p", start: 232.14, end: 234.47 },
+    { label: "2q", start: 234.72, end: 237.01 },
+    { label: "2r", start: 237.26, end: 239.59 },
+    { label: "2s", start: 239.84, end: 243.67 },
+    { label: "2t", start: 243.92, end: 244.97 },
+    { label: "2u", start: 245.22, end: 248.49 },
+    { label: "2v", start: 248.74, end: 252.57 },
+    { label: "2w", start: 252.82, end: 254.33 },
+    { label: "2x", start: 254.58, end: 257.47 },
+    { label: "2y", start: 257.72, end: 261.95 },
+    { label: "2z", start: 262.2, end: 264.51 },
+    { label: "2aa", start: 264.76, end: 270.55 },
+    { label: "2ab", start: 270.8, end: 275.13 },
+    { label: "2ac", start: 275.38, end: 277.19 },
+    { label: "2ad", start: 277.44, end: 280.81 },
+    { label: "2ae", start: 281.06, end: 282.49 },
+    { label: "2af", start: 282.74, end: 285.45 },
+    { label: "2ag", start: 285.7, end: 289.21 },
+    { label: "2ah", start: 289.46, end: 292.05 },
+    { label: "2ai", start: 292.3, end: 294.09 },
+    { label: "2aj", start: 294.34, end: 296.73 },
+    { label: "2ak", start: 296.98, end: 300.05 },
+    { label: "2al", start: 300.3, end: 303.09 },
+    { label: "2am", start: 303.34, end: 306.07 },
+    { label: "2an", start: 306.32, end: 310.57 },
+    { label: "2ao", start: 310.82, end: 312.11 },
+    { label: "2ap", start: 312.36, end: 314.47 },
+    { label: "2aq", start: 314.72, end: 316.29 },
+    { label: "2ar", start: 316.54, end: 318.27 },
+    { label: "2as", start: 318.52, end: 321.31 },
+    { label: "2at", start: 321.56, end: 326.47 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 179.9;
+var stopTime  = 326.47;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image2.jpg" />
+
+<div class="m"><div id="T2a" class="txs"><span class="bd">L’élection</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T2b" class="txs">Nous sommes <span class="bdit">élus</span> par Dieu,</div> <div id="T2c" class="txs">avant la fondation du monde,</div> <div id="T2d" class="txs">en Christ,</div> <div id="T2e" class="txs">pour être saint (Ephésiens 1, 4)</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T2f" class="txs"><span class="bd">L’élection c’est quoi&nbsp;?</span></div></div>
+<div class="m"><div id="T2g" class="txs">L’élection est une doctrine difficile à comprendre.</div> <div id="T2h" class="txs">Il ne faut surtout pas s’accrocher à savoir pourquoi les uns ont été élus et non les autres.</div> <div id="T2i" class="txs">La souveraineté de Dieu signifie que nous ne pourrions jamais comprendre toutes ses actions.</div></div>
+<div class="m"><div id="T2j" class="txs">Ce qui est important de retenir de cette doctrine :</div></div>
+<div class="m"><div id="T2k" class="txs">- Le salut commence avec Dieu.</div> <div id="T2l" class="txs">C’est lui qui a pris l’initiative de sauver l’homme.</div> <div id="T2m" class="txs">Nous sommes si corrompus par le péché qu’il nous est impossible de faire le premier pas.</div></div>
+<div class="m"><div id="T2n" class="txs">- Il s’agit d’une action que Dieu fait seul et pour lui-même.</div></div>
+<div class="m"><div id="T2o" class="txs">- Il n’utilise pas les mêmes critères que notre monde dans ses choix (1 Corinthiens 1, 26 à 29)</div></div>
+<div class="m"><div id="T2p" class="txs">- L’élection de Dieu a un but.</div> <div id="T2q" class="txs">Il nous a choisi pour le glorifier,</div> <div id="T2r" class="txs">le servir et pour faire des bonnes œuvres.</div></div>
+<div class="m"><div id="T2s" class="txs"><span class="bd">Actions pour que l’élection devienne une richesse dans ta vie :</span></div></div>
+<div class="m"><div id="T2t" class="txs"><span class="it">-</span><span class="it"> la prière</span> :</div> <div id="T2u" class="txs">Remercie Dieu chaque jour que tu es parmi ses élus.</div></div>
+<div class="m"><div id="T2v" class="txs">Demande son aide pour vivre digne d’un élu ou d’une élue de Dieu</div></div>
+<div class="m"><div id="T2w" class="txs"><span class="it">-</span><span class="it"> la lecture biblique</span> :</div> <div id="T2x" class="txs">Lis 1 Corinthiens 1, 26 à 31.</div> <div id="T2y" class="txs">Ces versets nous apprennent que Dieu ne choisit pas comme le monde le fait.</div> <div id="T2z" class="txs">Quels sont ses critères de choix&nbsp;?</div> <div id="T2aa" class="txs">Le fait que Dieu ne choisit pas ce qui est «&nbsp;<span class="it">fort</span>&nbsp;» ne veut pas dire qu’il ne nous considère pas.</div></div>
+<div class="m"><div id="T2ab" class="txs">Lis aussi Esaïe 43, 4 et l’apprend par cœur.</div></div>
+<div class="m"><div id="T2ac" class="txs"><span class="it">-</span><span class="it"> réflexion personnelle</span> :</div> <div id="T2ad" class="txs">Est-ce que tu as le sentiment que les autres – ton mari ou ton épouse,</div> <div id="T2ae" class="txs">tes supérieurs ou collègues,</div> <div id="T2af" class="txs">les membres de ton église – ne te considèrent pas&nbsp;?</div> <div id="T2ag" class="txs">Rappelle-toi que tu es un «<span class="it"> élu</span>&nbsp;» de Dieu.</div> <div id="T2ah" class="txs">Tu es très important pour Dieu.</div> <div id="T2ai" class="txs">Il te considère.</div> <div id="T2aj" class="txs">Tu es précieux dans ses yeux.</div> <div id="T2ak" class="txs">Ton importance ne repose pas sur tes diplômes,</div> <div id="T2al" class="txs">ta position sociale ou tes possessions matérielles,</div> <div id="T2am" class="txs">mais c’est par simple grâce que Dieu t’a choisi.</div> <div id="T2an" class="txs">Si tu fais attention tu le remarqueras dans ta vie de tous les jours&nbsp;!</div></div>
+<div class="m"><div id="T2ao" class="txs"><span class="it">-</span><span class="it"> envers les autres</span> :</div> <div id="T2ap" class="txs">Traite tes frères et sœurs spirituels,</div> <div id="T2aq" class="txs">qui sont aussi les élus de Dieu,</div> <div id="T2ar" class="txs">avec respect et amour&nbsp;!</div> <div id="T2as" class="txs">Ne méprise pas ceux qui sont faibles.</div> <div id="T2at" class="txs">Cherche plutôt à leur montrer qu’ils sont précieux dans les yeux de Dieu et de l’église.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

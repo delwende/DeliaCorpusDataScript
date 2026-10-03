@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matta 24</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1", start: 0, end: 10.07 },
+    { label: "2a", start: 10.32, end: 11.09 },
+    { label: "2b", start: 11.34, end: 13.25 },
+    { label: "2c", start: 13.5, end: 15.03 },
+    { label: "2d", start: 15.28, end: 18.71 },
+    { label: "2e", start: 18.96, end: 20.69 },
+    { label: "3a", start: 20.94, end: 24.91 },
+    { label: "3b", start: 25.16, end: 28.57 },
+    { label: "3c", start: 28.82, end: 30.69 },
+    { label: "3d", start: 30.94, end: 34.71 },
+    { label: "4a", start: 34.96, end: 37.11 },
+    { label: "4b", start: 37.36, end: 40.79 },
+    { label: "5a", start: 41.04, end: 44.37 },
+    { label: "5b", start: 44.62, end: 46.13 },
+    { label: "5c", start: 46.38, end: 48.37 },
+    { label: "6a", start: 48.62, end: 53.33 },
+    { label: "6b", start: 53.58, end: 57.05 },
+    { label: "7a", start: 57.3, end: 61.17 },
+    { label: "7b", start: 61.42, end: 66.39 },
+    { label: "8", start: 66.64, end: 70.91 },
+    { label: "9a", start: 71.16, end: 75.55 },
+    { label: "9b", start: 75.8, end: 78.39 },
+    { label: "10", start: 78.64, end: 85.93 },
+    { label: "11", start: 86.18, end: 89.87 },
+    { label: "12", start: 90.12, end: 93.95 },
+    { label: "13", start: 94.2, end: 97.91 },
+    { label: "14a", start: 98.16, end: 106.27 },
+    { label: "14b", start: 106.52, end: 108.11 },
+    { label: "15a", start: 108.36, end: 115.13 },
+    { label: "15b", start: 115.38, end: 118.83 },
+    { label: "15c", start: 119.08, end: 121.67 },
+    { label: "16", start: 121.92, end: 125.49 },
+    { label: "17", start: 125.74, end: 130.89 },
+    { label: "18", start: 131.14, end: 135.09 },
+    { label: "19", start: 135.34, end: 140.97 },
+    { label: "20", start: 141.22, end: 147.71 },
+    { label: "21", start: 147.96, end: 158.55 },
+    { label: "22a", start: 158.8, end: 163.45 },
+    { label: "22b", start: 163.7, end: 167.43 },
+    { label: "23a", start: 167.68, end: 170.41 },
+    { label: "23b", start: 170.66, end: 171.23 },
+    { label: "23c", start: 171.48, end: 175.61 },
+    { label: "24", start: 175.86, end: 186.87 },
+    { label: "25a", start: 187.12, end: 188.71 },
+    { label: "25b", start: 188.96, end: 191.41 },
+    { label: "26a", start: 191.66, end: 193.23 },
+    { label: "26b", start: 193.48, end: 195.97 },
+    { label: "26c", start: 196.22, end: 197.55 },
+    { label: "26d", start: 197.8, end: 200.51 },
+    { label: "27", start: 200.76, end: 208.01 },
+    { label: "28", start: 208.26, end: 211.79 },
+    { label: "29", start: 212.04, end: 223.89 },
+    { label: "30a", start: 224.14, end: 232.23 },
+    { label: "30b", start: 232.48, end: 238.83 },
+    { label: "31", start: 239.08, end: 251.69 },
+    { label: "32a", start: 251.94, end: 253.99 },
+    { label: "32b", start: 254.24, end: 260.21 },
+    { label: "33", start: 260.46, end: 268.27 },
+    { label: "34a", start: 268.52, end: 270.29 },
+    { label: "34b", start: 270.54, end: 274.43 },
+    { label: "35", start: 274.68, end: 279.73 },
+    { label: "36a", start: 279.98, end: 288.95 },
+    { label: "36b", start: 289.2, end: 292.71 },
+    { label: "37", start: 292.96, end: 298.35 },
+    { label: "38", start: 298.6, end: 309.53 },
+    { label: "39a", start: 309.78, end: 315.01 },
+    { label: "39b", start: 315.26, end: 318.87 },
+    { label: "40a", start: 319.12, end: 322.13 },
+    { label: "40b", start: 322.38, end: 325.31 },
+    { label: "41a", start: 325.56, end: 329.01 },
+    { label: "41b", start: 329.26, end: 332.47 },
+    { label: "42", start: 332.72, end: 337.75 },
+    { label: "43a", start: 338, end: 339.51 },
+    { label: "43b", start: 339.76, end: 347.79 },
+    { label: "44", start: 348.04, end: 353.65 },
+    { label: "45a", start: 353.9, end: 358.31 },
+    { label: "45b", start: 358.56, end: 365.53 },
+    { label: "46", start: 365.78, end: 371.47 },
+    { label: "47a", start: 371.72, end: 373.39 },
+    { label: "47b", start: 373.64, end: 377.25 },
+    { label: "48", start: 377.5, end: 383.05 },
+    { label: "49", start: 383.3, end: 389.13 },
+    { label: "50", start: 389.38, end: 395.09 },
+    { label: "51a", start: 395.34, end: 400.61 },
+    { label: "51b", start: 400.86, end: 405.55 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+
+// Footnotes and Cross-references
+var footnotes = {
+    "F-0": "<div class=\"footnote-p\"><span class=\"fr\">24:15 </span><span class=\"ft\">Ɗo Iisaa haali ko annabi Daniyiila sappinoo: kaananke gooto wattan tooru e ley suudu dewal mawndu Alhuudiyankooɓe. Ko o sappinoo ɗuum waɗii gilla Iisaa rimaaka. Joonin Iisaa wi'i hono majjum wartan katin. </span></div>"
+};
+
+initFootnotes(footnotes);
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 28 }];
+var hasIntro = false;
+var baseRef  = "fu-14-MAT-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='fu-13-JON-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='fu-14-MAT-023.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Matta&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;24&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-14-MAT-025.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-15-MRK-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="s1">Haala halkere suudu dewal e sifaaji timmoode adunaaru</div></div>
+<div class="r"><div id="r1">(<span class="reflink"><a href="fu-15-MRK-013.html#v1">Marku 13:1-13</a></span>; <span class="reflink"><a href="fu-16-LUK-021.html#v5">Lukka 21:5-19</a></span>)</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">24</div> <div id="T1" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Nde Iisaa yaltunoo suudu dewal mawndu ina yaha ndeen, taalibaaɓe muuɗum ɓattitii ɗum, kolli ɗum nyimngo ley galle mayru.</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2a" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>O wi'i ɓe:</div></div>
+<div class="p"><div id="T2b" class="txs">— On nji'ii kujje ɗe fuu naa?</div> <div id="T2c" class="txs">Goonga kaalanammi on:</div> <div id="T2d" class="txs">fay hayre wootere heddataako ina yowii dow wonnde.</div> <div id="T2e" class="txs">Fuu wurjinte.</div><span id="bookmarks2"></span></div><span id="bookmarks2"></span><a id="v3"></a>
+<div class="p"><div id="T3a" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>Caggal ɗuum, Iisaa jooɗowii dow waamnde wi'eteende Jaytun.</div> <div id="T3b" class="txs">Taalibaaɓe muuɗum ngari to muuɗum kam'en tan, mbi'i ɗum:</div></div>
+<div class="p"><div id="T3c" class="txs">— Humpitin min nde ɗum waɗata.</div> <div id="T3d" class="txs">Maande ndeye hollata gartol maa, kam e timmoode adunaaru?</div><span id="bookmarks3"></span></div><span id="bookmarks3"></span><a id="v4"></a>
+<div class="p"><div id="T4a" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>Iisaa jaabii ɓe, wi'i:</div></div>
+<div class="p"><div id="T4b" class="txs">— Ndeentee taa fay gooto wosina on e goonga.</div><span id="bookmarks4"></span> <a id="v5"></a><div id="T5a" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Sabo heewɓe ngardan e innde am, ina mbiitoo:</div> <div id="T5b" class="txs">«Miin woni Almasiihu oon.»</div> <div id="T5c" class="txs">Ɓe mbosinan yimɓe heewɓe.</div><span id="bookmarks5"></span> <a id="v6"></a><div id="T6a" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>On nanan kabaaru bolwole gaɗaaɗe e anniyaaɗe, ammaa taa kulee!</div> <div id="T6b" class="txs">Ina tilsi ɗum waɗa, de ɗum wanaa timmoode tafon.</div><span id="bookmarks6"></span> <a id="v7"></a><div id="T7a" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>Lenyol habdan e lenyol, laamu habdan e laamu.</div> <div id="T7b" class="txs">Rafooji ngaɗan, leydi dimmboto e nokkuuje feere feere.</div><span id="bookmarks7"></span> <a id="v8"></a><div id="T8" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>Ɗum kaa fuu wo hono fuɗɗoode ŋatawere ɓeynoowo ni.</div><span id="bookmarks8"></span></div><span id="bookmarks8"></span><a id="v9"></a>
+<div class="p"><div id="T9a" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>Ndeen, yimɓe njaaran on careɗon faa torreɗon, mbareɗon.</div> <div id="T9b" class="txs">Lenyi ɗiin fuu mbanyan on saabe am.</div><span id="bookmarks9"></span> <a id="v10"></a><div id="T10" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Wakkati oon, heewɓe pergoto njoppa goonɗinal muɓɓen, ina njambundura, ina mbanyunduri.</div><span id="bookmarks10"></span> <a id="v11"></a><div id="T11" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>Annabaaɓe fewreeɓe heewɓe ɓangan, kiila heewɓe.</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>Bonandaaji keewan faa njinngu yimɓe heewɓe ɓuytoo.</div><span id="bookmarks12"></span> <a id="v13"></a><div id="T13" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Ammaa tinnitiiɗo faa yottii timmoode fu, kam hisintee.</div><span id="bookmarks13"></span> <a id="v14"></a><div id="T14a" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>Kabaaru Lobbo haala laamu Laamɗo o gooynete e adunaaru ndu fuu, faa lenyi fuu keɓa seedaaku nguun.</div> <div id="T14b" class="txs">Ndeen adunaaru timmata.</div><span id="bookmarks14"></span></div>
+
+<div class="s"><div id="s2">Haala torra mawɗo e gartol Almasiihu</div></div>
+<div class="r"><div id="r2">(<span class="reflink"><a href="fu-15-MRK-013.html#v14">Marku 13:14-27</a></span>; <span class="reflink"><a href="fu-16-LUK-021.html#v20">Lukka 21:20-28</a></span>)</div></div><span id="bookmarks14"></span><a id="v15"></a>
+<div class="p"><div id="T15a" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>— On nji'an «huunde nyiddiniinde bonnoore» nde annabi Daniyiila haalnoo kabaaru muuɗum.</div> <div id="T15b" class="txs">Huunde ndeen darnete dow nokkuure seniinde ndeen.</div><div id="T15c" class="txs"><span class="footnote selectable" id="F-0"><sup>a</sup></span> (Jannguɗo ɗum fuu, faama maanaa majjum.)</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>Ndeen, tawaaɓe ley Yahuudiya fuu ndoggira baamle.</div><span id="bookmarks16"></span> <a id="v17"></a><div id="T17" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>Tawaaɗo dow suudu, taa wi'a jippoto hooƴa gineeji ley suudu muuɗum.</div><span id="bookmarks17"></span> <a id="v18"></a><div id="T18" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>Tawaaɗo ngesa, taa yeccoo faa hooƴowa saaya muuɗum.</div><span id="bookmarks18"></span> <a id="v19"></a><div id="T19" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>Kay, debereedu'en e musinteeɓe njaran torra ley balɗe ɗeen!</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>Ŋaaree Laamɗo taa doggudu mooɗon laatoo wakkati dabbunde naa nyalaande fowteteende.</div><span id="bookmarks20"></span> <a id="v21"></a><div id="T21" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Sabo ndeen, torra mawɗo waɗan mo hono muuɗum waɗaay gilla fuɗɗoode adunaaru faa joonin, wooɗi du hono muuɗum waɗataa abada katin.</div><span id="bookmarks21"></span> <a id="v22"></a><div id="T22a" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>Sini tawiino balɗe ɗeen ndaɓɓinɗinaaka, fay gooto hisataano.</div> <div id="T22b" class="txs">Ammaa Laamɗo raɓɓinɗinii ɗe saabe suɓaaɓe muuɗum.</div><span id="bookmarks22"></span> <a id="v23"></a><div id="T23a" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>Wakkati oon, si goɗɗo wi'ii on:</div> <div id="T23b" class="txs">«Ndaaree!</div> <div id="T23c" class="txs">Inan Almasiihu ɗo», naa «Inani mo to», taa ngoonɗinee.</div><span id="bookmarks23"></span> <a id="v24"></a><div id="T24" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>Sabo almasiihu'en fewreeɓe e annabaaɓe fewreeɓe ɓangowan, ngaɗa maandeeji mawɗi e kaayeefiiji faa majjina fay suɓaaɓe ɓeen, si na laatoo.</div><span id="bookmarks24"></span> <a id="v25"></a><div id="T25a" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>Paamee wooɗa.</div> <div id="T25b" class="txs">Mi haalanii on gilla ɗum waraay.</div><span id="bookmarks25"></span> <a id="v26"></a><div id="T26a" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>Si yimɓe mbi'ii on:</div> <div id="T26b" class="txs">«Inani mo ley ladde», taa njehee.</div> <div id="T26c" class="txs">Naa si ɓe mbi'ii:</div> <div id="T26d" class="txs">«Inani mo ley cuuɗi toon», taa ngoonɗinee.</div><span id="bookmarks26"></span> <a id="v27"></a><div id="T27" class="txs"><span class="v">27</span><span class="vsp">&nbsp;</span>Si goonga, no maƴƴere yaynirta e kammu gilla lettugal faa gorgal ni, hono noon Ɓii Neɗɗo wardata.</div><span id="bookmarks27"></span> <a id="v28"></a><div id="T28" class="txs"><span class="v">28</span><span class="vsp">&nbsp;</span>To ko saaɗi woni fuu, toon jigaaje kawritata.</div><span id="bookmarks28"></span></div><span id="bookmarks28"></span><a id="v29"></a>
+<div class="p"><div id="T29" class="txs"><span class="v">29</span><span class="vsp">&nbsp;</span>— Wakkati gooto, caggal torra balɗe ɗeen, naange niɓɓan, lewru selan yaynude, koode kammu caaman, kulle gonɗe dow kammu ɗeen ndimmboto.</div><span id="bookmarks29"></span> <a id="v30"></a><div id="T30a" class="txs"><span class="v">30</span><span class="vsp">&nbsp;</span>Wakkati oon, maande Ɓii Neɗɗo oon ɓangan dow kammu, lenyi adunaaru ɗiin fuu mboyan mettorgal.</div> <div id="T30b" class="txs">Ɓe nji'an Ɓii Neɗɗo oon, ina wara e duule, ina warda e baawɗe e teddeengal manngal.</div><span id="bookmarks30"></span> <a id="v31"></a><div id="T31" class="txs"><span class="v">31</span><span class="vsp">&nbsp;</span>Buututal manngal fuufete, de o nula maleyka'en makko lettugal e gorgal, horɗoore e soɓɓiire, kawrundura suɓaaɓe makko ɓeen gilla to adunaaru fuɗɗi faa to haaɗi.</div><span id="bookmarks31"></span></div>
+
+<div class="s"><div id="s3">Banndol dow ƴibbi</div></div>
+<div class="r"><div id="r3">(<span class="reflink"><a href="fu-15-MRK-013.html#v28">Marku 13:28-31</a></span>; <span class="reflink"><a href="fu-16-LUK-021.html#v29">Lukka 21:29-33</a></span>)</div></div><span id="bookmarks31"></span><a id="v32"></a>
+<div class="p"><div id="T32a" class="txs"><span class="v">32</span><span class="vsp">&nbsp;</span>Ekitee ko ƴibbi hollata:</div> <div id="T32b" class="txs">si licce makki keyɗitii, haakorooji makki du mbilitii fu, oɗon anndi ndunngu ɓadake.</div><span id="bookmarks32"></span> <a id="v33"></a><div id="T33" class="txs"><span class="v">33</span><span class="vsp">&nbsp;</span>Noon du, si on nji'ii kulle ɗeen fuu, annditon wakkati oon ɓadake, imo woni e dammbugal galle.</div><span id="bookmarks33"></span> <a id="v34"></a><div id="T34a" class="txs"><span class="v">34</span><span class="vsp">&nbsp;</span>Goonga kaalanammi on:</div> <div id="T34b" class="txs">jamaanu o timmataa tawee kulle ɗeen fuu ngaɗaay.</div><span id="bookmarks34"></span> <a id="v35"></a><div id="T35" class="txs"><span class="v">35</span><span class="vsp">&nbsp;</span>Kammu e leydi timman, de haalaaji am kaa timmataa abada.</div><span id="bookmarks35"></span></div>
+
+<div class="s"><div id="s4">No fay gooto anndiraa timmoode si wanaa Laamɗo</div></div>
+<div class="r"><div id="r4">(<span class="reflink"><a href="fu-15-MRK-013.html#v32">Marku 13:32-37</a></span>; <span class="reflink"><a href="fu-16-LUK-017.html#v26">Lukka 17:26-30</a></span>, <span class="reflink"><a href="fu-16-LUK-017.html#v34">34-36</a></span>)</div></div><span id="bookmarks35"></span><a id="v36"></a>
+<div class="p"><div id="T36a" class="txs"><span class="v">36</span><span class="vsp">&nbsp;</span>— Ammaa nyalaande ndeen e wakkati oon fay gooto anndaa ɗum, wanaa maleyka'en wonɓe dow kammuuli, wanaa Ɓiɗɗo oon.</div> <div id="T36b" class="txs">Walaa annduɗo ɗum si wanaa Baabiiwo oon.</div><span id="bookmarks36"></span> <a id="v37"></a><div id="T37" class="txs"><span class="v">37</span><span class="vsp">&nbsp;</span>Hono no laatorinoo wakkati Nuuhu, noon du laatortoo si Ɓii Neɗɗo warii.</div><span id="bookmarks37"></span> <a id="v38"></a><div id="T38" class="txs"><span class="v">38</span><span class="vsp">&nbsp;</span>E ley nyalaaɗe ɗeen fadde ilam tuufaandu ɗaam warude, yimɓe ina nyaama, ina njara, ina ɓaŋa, ina ɓaŋee, faa nyannde Nuuhu naati laana kaan.</div><span id="bookmarks38"></span> <a id="v39"></a><div id="T39a" class="txs"><span class="v">39</span><span class="vsp">&nbsp;</span>Ɓe paamaay faa'e faa ilam tuufaandu ɗaam wari, yooli ɓe fuu.</div> <div id="T39b" class="txs">Garol Ɓii Neɗɗo du, hono noon laatortoo.</div><span id="bookmarks39"></span> <a id="v40"></a><div id="T40a" class="txs"><span class="v">40</span><span class="vsp">&nbsp;</span>Wakkati oon, worɓe ɗiɗo tawdete ley ngesa.</div> <div id="T40b" class="txs">Gooto muɓɓen hooƴete, gooto du yoppee.</div><span id="bookmarks40"></span> <a id="v41"></a><div id="T41a" class="txs"><span class="v">41</span><span class="vsp">&nbsp;</span>Rewɓe ɗiɗo undooɓe tawete dow unirde.</div> <div id="T41b" class="txs">Gooto muɓɓen hooƴete, gooto du yoppee.</div><span id="bookmarks41"></span> <a id="v42"></a><div id="T42" class="txs"><span class="v">42</span><span class="vsp">&nbsp;</span>Ndelle, kakkilon, sabo on anndaa wakkati mo Joomiraaɗo mon warata.</div><span id="bookmarks42"></span> <a id="v43"></a><div id="T43a" class="txs"><span class="v">43</span><span class="vsp">&nbsp;</span>Paamee ɗum ɗo:</div> <div id="T43b" class="txs">si jom galle ina anndunoo wakkati mo gujjo warata ley jemma, waalan hakkilde, yoppataano o naata suudu muuɗum.</div><span id="bookmarks43"></span> <a id="v44"></a><div id="T44" class="txs"><span class="v">44</span><span class="vsp">&nbsp;</span>Ndelle, onon du cegilee, sabo Ɓii Neɗɗo waran e wakkati mo on miilaaki.</div><span id="bookmarks44"></span></div>
+
+<div class="s"><div id="s5">Haala golloowo koolniiɗo e golloowo bonɗo</div></div>
+<div class="r"><div id="r5">(<span class="reflink"><a href="fu-16-LUK-012.html#v41">Lukka 12:41-48</a></span>)</div></div><span id="bookmarks44"></span><a id="v45"></a>
+<div class="p"><div id="T45a" class="txs"><span class="v">45</span><span class="vsp">&nbsp;</span>— Ndelle, moy woni golloowo koolniiɗo, jom hakkillo?</div> <div id="T45b" class="txs">Oon woni mo joomum halfini gollooɓe muuɗum faa hokka ɗum'en nyaamdu muɓɓen e wakkati kaanɗo.</div><span id="bookmarks45"></span> <a id="v46"></a><div id="T46" class="txs"><span class="v">46</span><span class="vsp">&nbsp;</span>Barke woodanii golloowo mo joomum warti, tawi ina waɗa no yamiraa noon.</div><span id="bookmarks46"></span> <a id="v47"></a><div id="T47a" class="txs"><span class="v">47</span><span class="vsp">&nbsp;</span>Goonga kaalanammi on:</div> <div id="T47b" class="txs">joomiiko oon halfinan mo jawdi muuɗum fuu.</div><span id="bookmarks47"></span> <a id="v48"></a><div id="T48" class="txs"><span class="v">48</span><span class="vsp">&nbsp;</span>Ammaa si golloowo oon wo bonɗo, wi'ii ley ɓernde mum joomum ɓooyan wartaay,</div><span id="bookmarks48"></span> <a id="v49"></a><div id="T49" class="txs"><span class="v">49</span><span class="vsp">&nbsp;</span>de fuɗɗi ina fiya banndiraaɓe muuɗum gollooɓe, ina nyaamda ina yarda e sulotooɓe,</div><span id="bookmarks49"></span> <a id="v50"></a><div id="T50" class="txs"><span class="v">50</span><span class="vsp">&nbsp;</span>ndeen kaa, joomiiko wartan nyalooma mo o anndaa e wakkati mo o miilaaki.</div><span id="bookmarks50"></span> <a id="v51"></a><div id="T51a" class="txs"><span class="v">51</span><span class="vsp">&nbsp;</span>Joomiiko oon jukkoto mo jukkungo naawngo, watta mo hakkunde munaafiki'en.</div> <div id="T51b" class="txs">Toon bojji e ŋerƴundurde nyiiƴe ngoni.</div><span id="bookmarks51"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/FUHSIMN1DA/B01___24_Matthieu____FUHSIMN1DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

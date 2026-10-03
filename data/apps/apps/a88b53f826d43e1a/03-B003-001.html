@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000B63">
+<title>29 Katonjakpeligu mabiadu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.29, end: 13.6 },
+    { label: "1b", start: 13.85, end: 18.12 },
+    { label: "1c", start: 18.37, end: 22.91 },
+    { label: "1d", start: 23.16, end: 32.87 },
+    { label: "1e", start: 33.12, end: 40.55 },
+    { label: "1f", start: 40.8, end: 44.67 },
+    { label: "1g", start: 44.92, end: 49.67 },
+    { label: "1h", start: 49.92, end: 53.16 },
+    { label: "1i", start: 53.41, end: 59.93 },
+    { label: "1j", start: 60.18, end: 67.15 },
+    { label: "1k", start: 67.4, end: 70.51 },
+    { label: "1l", start: 70.76, end: 76.53 },
+    { label: "1m", start: 76.78, end: 81.08 },
+    { label: "1n", start: 81.33, end: 86.3 },
+    { label: "1o", start: 86.55, end: 94.6 },
+    { label: "1p", start: 94.85, end: 101.27 },
+    { label: "1q", start: 101.52, end: 108.41 },
+    { label: "1r", start: 108.66, end: 115.56 },
+    { label: "1s", start: 115.81, end: 127.55 },
+    { label: "1t", start: 127.8, end: 136.28 },
+    { label: "1u", start: 136.53, end: 142.36 },
+    { label: "1v", start: 142.61, end: 150.46 },
+    { label: "1w", start: 150.71, end: 162.74 },
+    { label: "1x", start: 162.99, end: 170.1 },
+    { label: "1y", start: 170.35, end: 175.53 },
+    { label: "1z", start: 175.78, end: 183.13 },
+    { label: "1aa", start: 183.38, end: 194.3 },
+    { label: "1ab", start: 194.55, end: 202.05 },
+    { label: "1ac", start: 202.3, end: 207.42 },
+    { label: "1ad", start: 207.67, end: 217.86 },
+    { label: "1ae", start: 218.11, end: 227.16 },
+    { label: "1af", start: 227.41, end: 233.63 },
+    { label: "1ag", start: 233.88, end: 242.85 },
+    { label: "1ah", start: 243.1, end: 247.12 },
+    { label: "1ai", start: 247.37, end: 256.81 },
+    { label: "1aj", start: 257.06, end: 264.69 },
+    { label: "1ak", start: 264.94, end: 269.16 },
+    { label: "1al", start: 269.41, end: 276.5 },
+    { label: "1am", start: 276.75, end: 284.99 },
+    { label: "1an", start: 285.24, end: 291.39 },
+    { label: "1ao", start: 291.64, end: 295.64 },
+    { label: "1ap", start: 295.89, end: 303.76 },
+    { label: "1aq", start: 304.01, end: 309.93 },
+    { label: "1ar", start: 310.18, end: 316.75 },
+    { label: "1as", start: 317, end: 320.7 },
+    { label: "1at", start: 320.95, end: 327.6 },
+    { label: "1au", start: 327.85, end: 336.71 },
+    { label: "1av", start: 336.96, end: 344.14 },
+    { label: "1aw", start: 344.39, end: 352.16 },
+    { label: "1ax", start: 352.41, end: 362.62 },
+    { label: "1ay", start: 362.87, end: 369.11 },
+    { label: "1az", start: 369.36, end: 373.55 },
+    { label: "1ba", start: 373.8, end: 380.19 },
+    { label: "1bb", start: 380.44, end: 388.25 },
+    { label: "1bc", start: 388.5, end: 395.97 },
+    { label: "1bd", start: 396.22, end: 400.53 },
+    { label: "1be", start: 400.78, end: 406.06 },
+    { label: "1bf", start: 406.31, end: 416.31 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 3.29;
+var stopTime  = 416.31;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;29 Katonjakpeligu mabiadu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">29 </span><span class="bd">Katonjakpeligu</span><span class="bd"> </span><span class="bd">mabiadu</span><span class="bd"> </span><span class="bd">biadi</span><span class="bd"> o </span><span class="bd">kpandi</span>.</div></div>
+<div class="m"><div id="T1b" class="txs">Les paroles méchantes du vieux coq restent dans son gésier.</div></div>
+<div class="m"><div id="T1c" class="txs">Les mauvaises paroles du vieux coq retournent dans ses barbillons.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Katonjakpeligu</span><span class="bd"> </span><span class="bd">mabiadu</span><span class="bd"> </span><span class="bd">biadi</span><span class="bd"> o </span><span class="bd">kpandi</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">30 </span><span class="bd">Ku </span><span class="bd">ñin</span><span class="bd"> </span><span class="bd">biagu</span><span class="bd"> </span><span class="bd">ya</span><span class="bd"> </span><span class="bd">bani</span><span class="bd"> mi </span><span class="bd">ñima</span><span class="bd"> o </span><span class="bd">ñoabo</span><span class="bd"> </span><span class="bd">cie</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs">Si la pirogue connait l'eau, le crocodile encore plus.</div></div>
+<div class="m"><div id="T1g" class="txs">Un père pourra dire ce proverbe à son fils qui prétend tout connaître.</div> <div id="T1h" class="txs">C'est le père qui connait davantage que le fils.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Ku </span><span class="bd">ñin</span><span class="bd"> </span><span class="bd">biagu</span><span class="bd"> </span><span class="bd">ya</span><span class="bd"> </span><span class="bd">bani</span><span class="bd"> mi </span><span class="bd">ñima</span><span class="bd"> o </span><span class="bd">ñoabo</span><span class="bd"> </span><span class="bd">cie</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">31 </span><span class="bd">Bialbiala</span><span class="bd"> </span><span class="bd">gaa</span><span class="bd"> ñ </span><span class="bd">cie</span>.</div></div>
+<div class="m"><div id="T1k" class="txs">Bonjour, prends et bois est mieux </div></div>
+<div class="m"><div id="T1l" class="txs">Sens&nbsp;: l'étranger aime la salutation mais préfère qu'on lui donne à boire.</div><div id="T1m" class="txs">Emploi : il s'agit de bien accueillir même si on n' a rien à donner.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">Bialbiala</span><span class="bd"> </span><span class="bd">gaa</span><span class="bd"> ñ </span><span class="bd">cie</span></div></div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">32 Nu </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">jia</span><span class="bd"> u </span><span class="bd">daani</span><span class="bd"> biali</span>.</div><div id="T1p" class="txs">Si la main n'est pas coupée, c'est qu'elle espère un bracelet.</div><div id="T1q" class="txs">Sens : Si un pauvre va voir un riche qui lui refuse son aide, le pauvre pourra lui dire ce proverbe.</div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">Nu </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">jia</span><span class="bd"> u </span><span class="bd">daani</span><span class="bd"> biali</span></div></div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">33 Nilo </span><span class="bd">yaa</span><span class="bd"> biali a </span><span class="bd">bonŋanla</span><span class="bd"> </span><span class="bd">len</span><span class="bd"> </span><span class="bd">nunmanga</span><span class="bd"> li </span><span class="bd">pia</span><span class="bd"> </span><span class="bd">pamanli</span><span class="bd"> </span><span class="bd">cie</span><span class="bd"> </span><span class="bd">wan</span><span class="bd"> </span><span class="bd">p</span><span class="bd">a</span><span class="bd"> </span><span class="bd">a </span><span class="bd">bonla</span>.</div></div>
+<div class="m"><div id="T1t" class="txs">Si quelqu'un te souhaite la bienvenue avec un visage réjoui, cela te donne plus de joie que s'il te donne un cadeau.</div></div>
+<div class="m"><div id="T1u" class="txs">Sens : Bien recevoir une personne est mieux que de lui donner quelque chose et de rester triste.</div></div>
+<div class="m"><div id="T1v" class="txs">Emploi : celui qui a reçu quelque chose d'un donateur qui lui présente un mauvais visage pourra lui dire cette maxime.</div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">Nilo </span><span class="bd">yaa</span><span class="bd"> biali a </span><span class="bd">bonŋanla</span><span class="bd"> </span><span class="bd">len</span><span class="bd"> </span><span class="bd">nunmanga</span><span class="bd"> li </span><span class="bd">pia</span><span class="bd"> </span><span class="bd">pamanli</span><span class="bd"> </span><span class="bd">cie</span><span class="bd"> </span><span class="bd">wan</span><span class="bd"> </span><span class="bd">p</span><span class="bd">a</span><span class="bd"> </span><span class="bd">a </span><span class="bd">bonl</span><span class="bd">a</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">34 </span><span class="bd">Gaadipua</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">taa</span><span class="bd"> o </span><span class="bd">lielo</span><span class="bd"> biali</span>.</div></div>
+<div class="m"><div id="T1y" class="txs">La folle n'a pas la façon d'une autre de mettre le cache-sexe.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="bd">Gaadipua</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">taa</span><span class="bd"> o </span><span class="bd">lielo</span><span class="bd"> biali</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aa" class="txs"><span class="bd">35 Ki </span><span class="bd">bipiankaaga</span><span class="bd"> n </span><span class="bd">fundi</span><span class="bd"> </span><span class="bd">len</span><span class="bd"> </span><span class="bd">kankagili</span><span class="bd">, o </span><span class="bd">yaa</span><span class="bd">ga</span><span class="bd"> n </span><span class="bd">fundi</span><span class="bd"> </span><span class="bd">len</span><span class="bd"> o </span><span class="bd">nuu</span>.</div></div>
+<div class="m"><div id="T1ab" class="txs">C'est l'enfant confié qui est réveillé avec une tige de mil, son propre enfant l'est avec la main.</div></div>
+<div class="m"><div id="T1ac" class="txs">Sens : Si tu frappes l'enfant d'un autre pour le réveiller tu pourras dire ce proverbe.</div></div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">Ki </span><span class="bd">bipiankaaga</span><span class="bd"> n </span><span class="bd">fundi</span><span class="bd"> </span><span class="bd">len</span><span class="bd"> </span><span class="bd">kankagili</span><span class="bd">, o </span><span class="bd">yaa</span><span class="bd">ga</span><span class="bd"> n </span><span class="bd">fundi</span><span class="bd"> </span><span class="bd">len</span><span class="bd"> o </span><span class="bd">nuu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">36 </span><span class="bd">Biga</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">maadi</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> bi la o </span><span class="bd">ba</span><span class="bd"> ti </span><span class="bd">maadi</span><span class="bd"> ban mua</span>.</div></div>
+<div class="m"><div id="T1af" class="txs">Si un enfant parle et qu'on rit, il parlera un jour et on pleurera.</div></div>
+<div class="m"><div id="T1ag" class="txs">Sens : Si un enfant fait quelque chose de mauvais et qu'on ne lui dit rien, il fera un jour quelque chose de mauvais, et alors on parlera.</div></div>
+<div class="m"><div id="T1ah" class="txs">Emploi : se dit à un enfant qui ne respecte pas les gens.</div></div>
+<div class="m"><div id="T1ai" class="txs"><span class="bd">Biga</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">maadi</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> bi la o </span><span class="bd">ba</span><span class="bd"> ti </span><span class="bd">maadi</span><span class="bd"> ban mua</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">37 Ba </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">biga</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> mua o nan bua o </span><span class="bd">naa</span>.</div></div>
+<div class="m"><div id="T1ak" class="txs">Même si l'enfant ne pleure pas il a besoin de sa mère.</div></div>
+<div class="m"><div id="T1al" class="txs">Emploi : Si quelqu'un garde l'argent de son ami en dépôt, et qu'il vienne lui réclamer, il citera ce proverbe.</div></div>
+<div class="m"><div id="T1am" class="txs"><span class="bd">Ba </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">biga</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> mua o nan bua o </span><span class="bd">naa</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1an" class="txs"><span class="bd">38 </span><span class="bd">Bigbabili</span><span class="bd"> kan </span><span class="bd">deni</span><span class="bd"> </span><span class="bd">caali</span>.</div></div>
+<div class="m"><div id="T1ao" class="txs">L'enfant gâté ne s'appuiera pas contre le puits.</div></div>
+<div class="m"><div id="T1ap" class="txs">Sens : S'il est gâté c'est devant ses parents ; s'il sort, qu'il laisse son mauvais caractère, sinon on va le frapper.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aq" class="txs"><span class="bd">Bigbabili</span><span class="bd"> kan </span><span class="bd">deni</span><span class="bd"> </span><span class="bd">caali</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ar" class="txs"><span class="bd">39 Ki </span><span class="bd">siga</span><span class="bd"> </span><span class="bd">jaandi</span><span class="bd"> o </span><span class="bd">bindaano</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1as" class="txs">La mouche remercie le chieur.</div></div>
+<div class="m"><div id="T1at" class="txs"><span class="bd">Ki </span><span class="bd">siga</span><span class="bd"> </span><span class="bd">jaandi</span><span class="bd"> o </span><span class="bd">bindaano</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1au" class="txs"><span class="bd">40 Ki </span><span class="bd">bituodiga</span><span class="bd"> </span><span class="bd">tubili</span><span class="bd"> </span><span class="bd">ya</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> bi </span><span class="bd">diaa</span><span class="bd"> </span><span class="bd">lindi</span><span class="bd"> o </span><span class="bd">kuanu</span>.</div></div>
+<div class="m"><div id="T1av" class="txs">L'oreille de l'enfant obéissant on la tire pour lui faire faire le tour du champ.</div></div>
+<div class="m"><div id="T1aw" class="txs">Sens et emploi : se dit d'un père qui a un enfant obéissant et qui l'oblige à faire un travail qui le dépasse.</div></div>
+<div class="m"><div id="T1ax" class="txs"><span class="bd">Ki </span><span class="bd">bituodiga</span><span class="bd"> </span><span class="bd">tubili</span><span class="bd"> </span><span class="bd">ya</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> bi </span><span class="bd">diaa</span><span class="bd"> </span><span class="bd">lindi</span><span class="bd"> o </span><span class="bd">kuanu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ay" class="txs"><span class="bd">41 </span><span class="bd">Kagili</span><span class="bd"> a boa, </span><span class="bd">kagili</span><span class="bd"> a </span><span class="bd">yanda</span>.</div></div>
+<div class="m"><div id="T1az" class="txs">Tige tu es courbée, tige tu es dressée.</div></div>
+<div class="m"><div id="T1ba" class="txs">Sens : Celui qui a honte baisse la tête, celui qui n'a pas honte dresse la tête.</div></div>
+<div class="m"><div id="T1bb" class="txs"><span class="bd">Kagili</span><span class="bd"> a boa, </span><span class="bd">kagili</span><span class="bd"> a </span><span class="bd">yanda</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1bc" class="txs"><span class="bd">42 </span><span class="bd">Boaga</span><span class="bd"> n </span><span class="bd">baa</span><span class="bd"> o </span><span class="bd">yua</span><span class="bd"> n </span><span class="bd">baa</span><span class="bd"> o </span><span class="bd">jeligu</span><span class="bd"> </span><span class="bd">mangi</span>.</div></div>
+<div class="m"><div id="T1bd" class="txs">Un chien gagne, son compagnon gagne, l'amusement réjouit.</div></div>
+<div class="m"><div id="T1be" class="txs">Sens : Un service rendu à un ami demande à être rendu.</div></div>
+<div class="m"><div id="T1bf" class="txs">Emploi : Se dit à un ami à qui j'ai rendu service et qui ne me le rend pas.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Boaga</span><span class="bd"> n </span><span class="bd">baa</span><span class="bd"> o </span><span class="bd">yua</span><span class="bd"> n </span><span class="bd">baa</span><span class="bd"> o </span><span class="bd">jeligu</span><span class="bd"> </span><span class="bd">mangi</span><span class="bd">.</span></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/03 prov bonny vol1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

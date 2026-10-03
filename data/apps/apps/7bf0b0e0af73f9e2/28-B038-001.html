@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>14) ADMINISTRATIONS 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.17 },
+    { label: "1b", start: 2.42, end: 3.49 },
+    { label: "1c", start: 3.74, end: 4.63 },
+    { label: "1d", start: 4.88, end: 5.83 },
+    { label: "1e", start: 6.08, end: 8.45 },
+    { label: "1f", start: 8.7, end: 15.03 },
+    { label: "1g", start: 15.28, end: 19.51 },
+    { label: "1h", start: 19.76, end: 23.71 },
+    { label: "1i", start: 23.96, end: 27.73 },
+    { label: "1j", start: 27.98, end: 30.29 },
+    { label: "1k", start: 30.54, end: 35.49 },
+    { label: "1l", start: 35.74, end: 39.17 },
+    { label: "1m", start: 39.42, end: 48.63 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 48.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "28-B038-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='27-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='27-B014-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;14) ADMINISTRATIONS&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='29-B015-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='29-B015-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B038-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">14) ADMINISTRATION</span><span class="bd">S</span><span class="bd"> :</span></div> <div id="T1b" class="txs"><span class="bd">PARFOIS COMPLIQUÉS,</span></div> <div id="T1c" class="txs"><span class="bd">MAIS JUSTES</span></div></div>
+<div class="m"><div id="T1d" class="txs">En Europe,</div> <div id="T1e" class="txs">les administrations ferment à l'heure.</div> <div id="T1f" class="txs">Il est donc préférable de connaître les heures d'ouverture et d'arriver au moins une demi-heure avant la fermeture.</div></div>
+<div class="m"><div id="T1g" class="txs">Les formulaires et les administrations peuvent être très compliqués.</div> <div id="T1h" class="txs">La raison en est que tout se passe selon des procédures bien définies,</div> <div id="T1i" class="txs">afin que tout le monde soit traité de manière égale et équitable.</div> <div id="T1j" class="txs">Cela prend évidemment du temps.</div> <div id="T1k" class="txs">Il est contraire à la loi de faire des cadeaux aux fonctionnaires ou de leur donner de l'argent.</div> <div id="T1l" class="txs">C'est considéré comme de la corruption et c'est puni.</div></div>
+<div class="m"><div id="T1m" class="txs">Cependant il existe différentes organisations qui vous offrent leur aide dans ces procédures administratives (par exemple remplir des formulaires).</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/14 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/14 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/14 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

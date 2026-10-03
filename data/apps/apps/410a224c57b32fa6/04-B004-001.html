@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>3 Les coutumes 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.91 },
+    { label: "1b", start: 2.16, end: 3.31 },
+    { label: "1c", start: 3.56, end: 5.85 },
+    { label: "1d", start: 6.1, end: 9.47 },
+    { label: "1e", start: 9.72, end: 12.39 },
+    { label: "1f", start: 12.64, end: 16.79 },
+    { label: "1g", start: 17.04, end: 20.49 },
+    { label: "1h", start: 20.74, end: 24.73 },
+    { label: "1i", start: 24.98, end: 27.31 },
+    { label: "1j", start: 27.56, end: 30.43 },
+    { label: "1k", start: 30.68, end: 33.03 },
+    { label: "1l", start: 33.28, end: 36.73 },
+    { label: "1m", start: 36.98, end: 39.39 },
+    { label: "1n", start: 39.64, end: 40.75 },
+    { label: "1o", start: 41, end: 42.87 },
+    { label: "1p", start: 43.12, end: 44.11 },
+    { label: "1q", start: 44.36, end: 46.85 },
+    { label: "1r", start: 47.1, end: 48.89 },
+    { label: "1s", start: 49.14, end: 52.03 },
+    { label: "1t", start: 52.28, end: 57.03 },
+    { label: "1u", start: 57.28, end: 59.93 },
+    { label: "1v", start: 60.18, end: 62.63 },
+    { label: "1w", start: 62.88, end: 63.99 },
+    { label: "1x", start: 64.24, end: 65.57 },
+    { label: "1y", start: 65.82, end: 70.59 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 70.59;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;3 Les coutumes&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">3 Les coutumes</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="it">Questions:</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="it">- Que voyez-vous sur le dessin?</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">- Quelles sont les bonnes coutumes que vous connaissez?</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">- Quelles coutumes sont mauvaises?</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="it">- Comment savoir si une coutume est bonne ou mauvaise?</span></div></div>
+<div class="m"><div id="T1g" class="txs"><span class="it">- Que devons-nous faire des mauvaises coutumes?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1h" class="txs">L’image montre une grande famille lors d’une cérémonie.</div> <div id="T1i" class="txs">Ils parlent ensemble.</div></div>
+<div class="m"><div id="T1j" class="txs">Chaque communauté a des coutumes.</div></div>
+<div class="m"><div id="T1k" class="txs">Certaines coutumes sont bonnes.</div> <div id="T1l" class="txs">Elles renforcent nos relations et nos communautés.</div></div>
+<div class="m"><div id="T1m" class="txs">Exemples de bonnes coutumes:</div> <div id="T1n" class="txs">la dot ;</div> <div id="T1o" class="txs">les salutations et visites ;</div> <div id="T1p" class="txs">la cola ;</div> <div id="T1q" class="txs">la cérémonie pour donner le nom de l’enfant ;</div> <div id="T1r" class="txs">les cadeaux aux parents.</div></div>
+<div class="m"><div id="T1s" class="txs">D’autres coutumes sont mauvaises.</div> <div id="T1t" class="txs">Elles font du mal aux personnes qui les pratiquent et à nos communautés.</div> <div id="T1u" class="txs">Exemples de mauvaises coutumes:</div> <div id="T1v" class="txs">certaines pratiques de la forêt sacrée ;</div> <div id="T1w" class="txs">les sacrifices ;</div> <div id="T1x" class="txs">l’excision.</div></div>
+<div class="m"><div id="T1y" class="txs">Nous devons garder les bonnes coutumes et laisser les mauvaises.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/03AUD-20230320-WA0022.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 Nin-kẽem a yembr 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.63 },
+    { label: "1b", start: 2.88, end: 8.75 },
+    { label: "1c", start: 9, end: 14.03 },
+    { label: "1d", start: 14.28, end: 18.27 },
+    { label: "1e", start: 18.52, end: 19.63 },
+    { label: "1f", start: 19.88, end: 25.37 },
+    { label: "1g", start: 25.62, end: 30.47 },
+    { label: "1h", start: 30.72, end: 36.83 },
+    { label: "1i", start: 37.08, end: 41.37 },
+    { label: "1j", start: 41.62, end: 44.83 },
+    { label: "1k", start: 45.08, end: 54.39 },
+    { label: "1l", start: 54.64, end: 60.11 },
+    { label: "1m", start: 60.36, end: 61.57 },
+    { label: "1n", start: 61.82, end: 68.51 },
+    { label: "1o", start: 68.76, end: 75.29 },
+    { label: "1p", start: 75.54, end: 78.97 },
+    { label: "1q", start: 79.22, end: 81.81 },
+    { label: "1r", start: 82.06, end: 87.45 },
+    { label: "1s", start: 87.7, end: 90.71 },
+    { label: "1t", start: 90.96, end: 97.67 },
+    { label: "1u", start: 97.92, end: 103.83 },
+    { label: "1v", start: 104.08, end: 105.69 },
+    { label: "1w", start: 105.94, end: 112.81 },
+    { label: "1x", start: 113.06, end: 120.73 },
+    { label: "1y", start: 120.98, end: 126.71 },
+    { label: "1z", start: 126.96, end: 136.23 },
+    { label: "1aa", start: 136.48, end: 139.99 },
+    { label: "1ab", start: 140.24, end: 144.59 },
+    { label: "1ac", start: 144.84, end: 149.91 },
+    { label: "1ad", start: 150.16, end: 154.13 },
+    { label: "1ae", start: 154.38, end: 160.05 },
+    { label: "1af", start: 160.3, end: 165.75 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 165.75;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1 Nin-kẽem a yembr&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">1 </span><span class="bd">Nin-kẽem a yembr kibare</span><span class="bd">.</span></div></div>
+<div class="p_Textkrper"><div id="T1b" class="txs">Nin-kẽem a yembr n wa n yik a zak pʋgẽ, n na n tɩ gõ weoogẽ.</div> <div id="T1c" class="txs">La, a bi-bilf a yembr yikame, t’a na n tũ-a lame.</div> <div id="T1d" class="txs">La, a ba wã tõdgame, t’a kõn tũ ye.</div> <div id="T1e" class="txs">Tɩ bõe?</div> <div id="T1f" class="txs">A paoodame, weoogã pʋg yaa gõose, koom kae me, n yũud ye.</div> <div id="T1g" class="txs">La, a biigã tõdgame, n tũ-a n looge.</div></div>
+<div class="p"><div id="T1h" class="txs">B sẽn wa n ta we-raoogã pʋga, saag n kʋɩ, tɩ sebgã sɩng yikri.</div> <div id="T1i" class="txs">B zoe n tɩ kẽe tãng bokẽ, n na n sool saagã.</div> <div id="T1j" class="txs">Mik bokã yaa m ba Weoognaab roogo.</div></div>
+<div class="p"><div id="T1k" class="txs">M ba Weoognaab sẽn wa n yi gõob n wa, a mikame t’a roogã pida ne rɩɩbo, t’a na n kɩdem ne sũ-noogo, n pʋd yɩɩll n yetẽ :</div> <div id="T1l" class="txs">«Roog vũuda, roog vũuda, roog vũud tɩ m meng be yɩng n daeeda».</div> <div id="T1m" class="txs">Tɩ biigã leok-a :</div> <div id="T1n" class="txs">«M pa sablem naaba, m pa zẽenem naaba, sã n pa beoogo, tõnd pa kuus ye.»</div></div>
+<div class="p"><div id="T1o" class="txs">M ba Weoognaab sẽn wʋm dẽ, a kɩdmame, n zoe n maan wa kɩlomɛtr a yiibu.</div> <div id="T1p" class="txs">Wakat-kãnga, la biigã yeel a ba wã :</div> <div id="T1q" class="txs">«Yik tao-tao n dɩk yir sore».</div> <div id="T1r" class="txs">La nin-kẽemã yiime, t’a sũurã tar kiu, kiu, la a yetẽ :</div> <div id="T1s" class="txs">«Weoognaab ye n da seg maam sorã zug ye ».</div> <div id="T1t" class="txs">La, m ba Weoognaab lebg n waame, n le sɩng yɩɩl n yetẽ :</div> <div id="T1u" class="txs">«Roog vũuda, roog vũuda, roog vũud tɩ m meng be yɩng n gõodẽ.»</div></div>
+<div class="p"><div id="T1v" class="txs">Tɩ biigã leok-a yasa :</div> <div id="T1w" class="txs">«M pa sablem naaba, m pa zẽenem naaba, sã n pa beoogo, tõnd pa kuus ye ».</div></div>
+<div class="p"><div id="T1x" class="txs">Sũ-noogã yĩnga, a Weoognaab sɩnga kɩdengo, la zoees yasa, n na n gilme.</div> <div id="T1y" class="txs">Tɩ biigã tũnug m ba Weoognaab loogrã, n yi n dɩk sor n zoe n kuili.</div> <div id="T1z" class="txs">M ba Weoognaab sẽn wa n lebg n wa, a ra tẽedame t’a rɩɩbã ketame, t’a le sɩng yɩɩla, la ned ba a ye pa leokd-a ye.</div> <div id="T1aa" class="txs">T’a kolg n na n lɩk n gese, la ned ba a ye ka be ye.</div> <div id="T1ab" class="txs">T’a kẽng ka, n leb ka, a pa yãnd ned ye .</div> <div id="T1ac" class="txs">La, a rɩka sorã, n na n bao rao wã ne a biigã.</div> <div id="T1ad" class="txs">La, wakat-kãng tɩ b taa yiri.</div></div>
+<div class="p_Textkrper"><div id="T1ae" class="txs"><span class="bdit">Yaa woto, la biigã maan n fãag a ba wã, la a menga.</span></div> <div id="T1af" class="txs"><span class="bdit">Bɩ d ra  kɩɩs d kambã noor wakat ning ye, d  mi n kelgd-ba.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte_01_Nikeema.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

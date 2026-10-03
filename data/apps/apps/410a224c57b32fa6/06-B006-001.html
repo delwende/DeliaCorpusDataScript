@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>5 La pratique de 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.49 },
+    { label: "1b", start: 2.74, end: 3.81 },
+    { label: "1c", start: 4.06, end: 6.39 },
+    { label: "1d", start: 6.64, end: 10.87 },
+    { label: "1e", start: 11.12, end: 13.79 },
+    { label: "1f", start: 14.04, end: 16.35 },
+    { label: "1g", start: 16.6, end: 20.13 },
+    { label: "1h", start: 20.38, end: 24.09 },
+    { label: "1i", start: 24.34, end: 31.49 },
+    { label: "1j", start: 31.74, end: 34.15 },
+    { label: "1k", start: 34.4, end: 37.79 },
+    { label: "1l", start: 38.04, end: 42.27 },
+    { label: "1m", start: 42.52, end: 45.83 },
+    { label: "1n", start: 46.08, end: 53.49 },
+    { label: "1o", start: 53.74, end: 60.83 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 60.83;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;5 La pratique de&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">5 La pratique de l’excision</span>.</div></div>
+<div class="m"><div id="T1b" class="txs"><span class="it">Questions:</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="it">- Que voyez-vous sur le </span><span class="it">dessin?</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">- Pourquoi certains choisissent de faire exciser leur </span><span class="it">fi</span><span class="it">lle?</span></div><div id="T1e" class="txs"><span class="it"> Qu’en est-il </span><span class="it">vraiment?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs">L’image montre une scène d’excision.</div> <div id="T1g" class="txs">La jeune fille est tenue au sol par les femmes.</div></div>
+<div class="m"><div id="T1h" class="txs">L’exciseuse se prépare à couper son sexe.</div></div>
+<div class="m"><div id="T1i" class="txs">L’excision n’est pas un acte de purification (de l’infidélité ou pour retrouver la virginité),</div> <div id="T1j" class="txs">mais un acte de mutilation.</div> <div id="T1k" class="txs">Aucune religion n’en fait une obligation.</div> <div id="T1l" class="txs">Les écritures saintes ne font pas mention de l’excision.</div> <div id="T1m" class="txs">C’est une pratique mauvaise et satanique.</div> <div id="T1n" class="txs">L’excision ne va pas rendre la jeune fille plus pure ni lui permettre d’avoir plus facilement des enfants.</div></div>
+<div class="m"><div id="T1o" class="txs">Ceux qui choisissent d’exciser leur fille ne connaissent pas la réalité de cette pratique et ses conséquences.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/05AUD-20230320-WA0008.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

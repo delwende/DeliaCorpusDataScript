@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Table des matières 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "27-B027-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='26-B026-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='26-B026-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Table des matières&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B027-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">Table des matières</span></div>
+<div class="b">&nbsp;</div>
+<div class="m">Leçon 1 :    La Création merveilleuse</div>
+<div class="m">Leçon 2 :    La famille, un don de Dieu</div>
+<div class="m">Leçon 3 :    L’eau, un don de Dieu</div>
+<div class="m">Leçon 4 :    La nourriture, un don de Dieu</div>
+<div class="m">Leçon 5 :    Les amis, un don de Dieu</div>
+<div class="m">Leçon 6 :    Un homme qui dit merci</div>
+<div class="m">Leçon 7 :    Noé remercie Dieu</div>
+<div class="m">Leçon 8 :    Un petit berger chanteur</div>
+<div class="m">Leçon 9 :    Le petit David et le géant</div>
+<div class="m">Leçon 10 :    Le déjeuner du petit garçon</div>
+<div class="m">Leçon 11 :    Une petite fille et un chef d’armée</div>
+<div class="m">Leçon 12 :    Le voyage solitaire de Jacob</div>
+<div class="m">Leçon 13 :    La sortie de l’Égypte</div>
+<div class="m">Leçon 14 :    La brebis perdue et retrouvée</div>
+<div class="m">Leçon 15 :    La bonne nouvelle à Marie</div>
+<div class="m">Leçon 16 :    Le bébé Jésus dans la crèche</div>
+<div class="m">Leçon 17 :    La visite des mages</div>
+<div class="m">Leçon 18 :    Jésus bébé dans la maison de Dieu</div>
+<div class="m">Leçon 19 :    L’enfant Jésus sauvé du danger</div>
+<div class="m">Leçon 20 :    Jésus enseigne la confiance en Dieu</div>
+<div class="m">Leçon 21 :    Jésus, l’ami des enfants</div>
+<div class="m">Leçon 22 :    Jésus aide les pêcheurs</div>
+<div class="m">Leçon 23 :    Jésus guérit un petit garçon malade</div>
+<div class="m">Leçon 24 :    Jésus marche sur les eaux</div>
+<div class="m">Leçon 25 :    Jésus guérit un sourd muet</div>
+<div class="m">Leçon 26 :    Jésus, le meilleur ami</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

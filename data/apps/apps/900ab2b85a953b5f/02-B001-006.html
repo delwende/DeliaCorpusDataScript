@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 6</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "6a", start: 743.88, end: 745.11 },
+    { label: "6b", start: 745.36, end: 750.51 },
+    { label: "6c", start: 750.76, end: 752.35 },
+    { label: "6d", start: 752.6, end: 756.95 },
+    { label: "6e", start: 757.2, end: 758.15 },
+    { label: "6f", start: 758.4, end: 760.15 },
+    { label: "6g", start: 760.4, end: 761.51 },
+    { label: "6h", start: 761.76, end: 763.87 },
+    { label: "6i", start: 764.12, end: 765.09 },
+    { label: "6j", start: 765.34, end: 766.53 },
+    { label: "6k", start: 766.78, end: 769.25 },
+    { label: "6l", start: 769.5, end: 772.39 },
+    { label: "6m", start: 772.64, end: 773.71 },
+    { label: "6n", start: 773.96, end: 778.45 },
+    { label: "6o", start: 778.7, end: 780.47 },
+    { label: "6p", start: 780.72, end: 783.97 },
+    { label: "6q", start: 784.22, end: 787.31 },
+    { label: "6r", start: 787.56, end: 789.27 },
+    { label: "6s", start: 789.52, end: 791.91 },
+    { label: "6t", start: 792.16, end: 797.59 },
+    { label: "6u", start: 797.84, end: 801.03 },
+    { label: "6v", start: 801.28, end: 804.23 },
+    { label: "6w", start: 804.48, end: 806.25 },
+    { label: "6x", start: 806.5, end: 808.83 },
+    { label: "6y", start: 809.08, end: 810.61 },
+    { label: "6z", start: 810.86, end: 812.51 },
+    { label: "6aa", start: 812.76, end: 815.11 },
+    { label: "6ab", start: 815.36, end: 816.79 },
+    { label: "6ac", start: 817.04, end: 818.29 },
+    { label: "6ad", start: 818.54, end: 822.19 },
+    { label: "6ae", start: 822.44, end: 826.53 },
+    { label: "6af", start: 826.78, end: 827.59 },
+    { label: "6ag", start: 827.84, end: 829.03 },
+    { label: "6ah", start: 829.28, end: 831.77 },
+    { label: "6ai", start: 832.02, end: 832.53 },
+    { label: "6aj", start: 832.78, end: 833.87 },
+    { label: "6ak", start: 834.12, end: 835.25 },
+    { label: "6al", start: 835.5, end: 837.99 },
+    { label: "6am", start: 838.24, end: 842.35 },
+    { label: "6an", start: 842.6, end: 846.11 },
+    { label: "6ao", start: 846.36, end: 849.83 },
+    { label: "6ap", start: 850.08, end: 851.63 },
+    { label: "6aq", start: 851.88, end: 855.13 },
+    { label: "6ar", start: 855.38, end: 858.03 },
+    { label: "6as", start: 858.28, end: 860.03 },
+    { label: "6at", start: 860.28, end: 865.69 },
+    { label: "6au", start: 865.94, end: 869.43 },
+    { label: "6av", start: 869.68, end: 870.85 },
+    { label: "6aw", start: 871.1, end: 874.77 },
+    { label: "6ax", start: 875.02, end: 879.75 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 743.88;
+var stopTime  = 879.75;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-005.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;6&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-007.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image6.jpg" />
+
+<div class="m"><div id="T6a" class="txs"><span class="bd">Redemption</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T6b" class="txs"><span class="it">In Jesus we have </span><span class="bdit">redemption</span><span class="it"> through his blood</span> (Ephesians 1, 7).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T6c" class="txs"><span class="bd">What is redemption?</span></div></div>
+<div class="m"><div id="T6d" class="txs">The word "<span class="it">redemption</span>" is part of a set of terms that describe salvation.</div> <div id="T6e" class="txs">Literally,</div> <div id="T6f" class="txs">it means "<span class="it">to untie far off</span>",</div> <div id="T6g" class="txs">"<span class="it">deliverance</span>".</div> <div id="T6h" class="txs">It evokes the notion of redemption,</div> <div id="T6i" class="txs">like a slave,</div> <div id="T6j" class="txs">bound to a master,</div> <div id="T6k" class="txs">and freed by the payment of a sum of money.</div> <div id="T6l" class="txs">Man is a slave to sin and its consequences,</div> <div id="T6m" class="txs">that is death.</div> <div id="T6n" class="txs">Redemption frees him from the power of sin and its legal consequences.</div></div>
+<div class="m"><div id="T6o" class="txs">In His work of redemption,</div> <div id="T6p" class="txs">Christ paid the price of redemption for all mankind.</div> <div id="T6q" class="txs">The price is clearly indicated as to its nature:</div> <div id="T6r" class="txs">it is the blood of Christ.</div> <div id="T6s" class="txs">Since we have been redeemed at this price,</div> <div id="T6t" class="txs">we must serve him who paid it (1 Corinthians 7, 22 to 23).</div></div>
+<div class="m"><div id="T6u" class="txs">Redemption can be summed up in three basic ideas:</div> <div id="T6v" class="txs">(1) human beings are redeemed from something,</div> <div id="T6w" class="txs">namely the slavery of sin;</div> <div id="T6x" class="txs">(2) they are redeemed by something,</div> <div id="T6y" class="txs">through the payment of a price,</div> <div id="T6z" class="txs">namely the blood of Christ;</div> <div id="T6aa" class="txs">(3) they are redeemed for something,</div> <div id="T6ab" class="txs">namely to be free.</div> <div id="T6ac" class="txs">Once set free,</div> <div id="T6ad" class="txs">they are invited to make themselves slaves of the Lord who redeemed them.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T6ae" class="txs"><span class="bd">Actions to make salvation or redemption a richness in your life:</span></div></div>
+<div class="m"><div id="T6af" class="txs"><span class="it">- Prayer</span>:</div> <div id="T6ag" class="txs">In your daily prayer,</div> <div id="T6ah" class="txs">you can thank God for saving you from sin,</div> <div id="T6ai" class="txs">death,</div> <div id="T6aj" class="txs">debauchery...</div></div>
+<div class="m"><div id="T6ak" class="txs"><span class="it">- Bible reading</span>:</div> <div id="T6al" class="txs">regularly read the accounts of Jesus' death,</div> <div id="T6am" class="txs">for example Luke 23, 33 to 49.</div> <div id="T6an" class="txs">Imagine yourself in the crowd watching the crucifixion.</div> <div id="T6ao" class="txs">Remind yourself of Jesus' enormous sacrifice. </div></div>
+<div class="m"><div id="T6ap" class="txs"><span class="it">- Personal reflection</span>:</div> <div id="T6aq" class="txs">You have benefited from the redemption of his son Jesus.</div></div>
+<div class="m"><div id="T6ar" class="txs">He has freed you from Satan's slavery.</div> <div id="T6as" class="txs">But are you really free?</div> <div id="T6at" class="txs">Examine your life with the help of the Holy Spirit to find out if you're still a "slave" to Satan.</div> <div id="T6au" class="txs">Do you still have bad habits that don't glorify God?</div></div>
+<div class="m"><div id="T6av" class="txs"><span class="it">- towards others</span>:</div> <div id="T6aw" class="txs">Salvation becomes even more precious when shared with others.</div> <div id="T6ax" class="txs">Announce Jesus' salvation at least once a week to someone who doesn't yet know him.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zã 6</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1", start: 0, end: 7.31 },
+    { label: "2", start: 7.56, end: 16.79 },
+    { label: "3", start: 17.04, end: 20.63 },
+    { label: "4", start: 20.88, end: 24.03 },
+    { label: "5", start: 24.28, end: 34.51 },
+    { label: "6", start: 34.76, end: 41.55 },
+    { label: "7", start: 41.8, end: 47.47 },
+    { label: "8", start: 47.72, end: 53.83 },
+    { label: "9", start: 54.08, end: 61.71 },
+    { label: "10", start: 61.96, end: 72.91 },
+    { label: "11", start: 73.16, end: 83.67 },
+    { label: "12", start: 83.92, end: 91.07 },
+    { label: "13", start: 91.32, end: 101.31 },
+    { label: "14", start: 101.56, end: 109.51 },
+    { label: "15", start: 109.76, end: 118.91 },
+    { label: "16", start: 119.16, end: 123.59 },
+    { label: "17", start: 123.84, end: 134.11 },
+    { label: "18", start: 134.36, end: 138.55 },
+    { label: "19", start: 138.8, end: 150.95 },
+    { label: "20", start: 151.2, end: 155.51 },
+    { label: "21", start: 155.76, end: 165.93 },
+    { label: "22", start: 166.18, end: 182.07 },
+    { label: "23", start: 182.32, end: 190.35 },
+    { label: "24", start: 190.6, end: 200.65 },
+    { label: "25", start: 200.9, end: 209.63 },
+    { label: "26", start: 209.88, end: 219.63 },
+    { label: "27", start: 219.88, end: 232.87 },
+    { label: "28", start: 233.12, end: 238.91 },
+    { label: "29", start: 239.16, end: 244.79 },
+    { label: "30", start: 245.04, end: 252.63 },
+    { label: "31", start: 252.88, end: 260.87 },
+    { label: "32", start: 261.12, end: 270.87 },
+    { label: "33", start: 271.12, end: 278.27 },
+    { label: "34", start: 278.52, end: 283.71 },
+    { label: "35", start: 283.96, end: 295.27 },
+    { label: "36", start: 295.52, end: 298.99 },
+    { label: "37", start: 299.24, end: 307.67 },
+    { label: "38", start: 307.92, end: 314.95 },
+    { label: "39", start: 315.2, end: 324.67 },
+    { label: "40", start: 324.92, end: 332.91 },
+    { label: "41", start: 333.16, end: 340.59 },
+    { label: "42", start: 340.84, end: 352.55 },
+    { label: "43", start: 352.8, end: 354.59 },
+    { label: "44", start: 354.84, end: 366.83 },
+    { label: "45", start: 367.08, end: 377.39 },
+    { label: "46", start: 377.64, end: 385.03 },
+    { label: "47", start: 385.28, end: 389.59 },
+    { label: "48", start: 389.84, end: 391.75 },
+    { label: "49", start: 392, end: 396.35 },
+    { label: "50", start: 396.6, end: 402.79 },
+    { label: "51", start: 403.04, end: 417.19 },
+    { label: "52", start: 417.44, end: 423.99 },
+    { label: "53", start: 424.24, end: 433.23 },
+    { label: "54", start: 433.48, end: 441.87 },
+    { label: "55", start: 442.12, end: 447.17 },
+    { label: "56", start: 447.42, end: 457.51 },
+    { label: "57", start: 457.76, end: 464.43 },
+    { label: "58", start: 464.68, end: 475.31 },
+    { label: "59", start: 475.56, end: 481.99 },
+    { label: "60", start: 482.24, end: 491.23 },
+    { label: "61", start: 491.48, end: 499.59 },
+    { label: "62", start: 499.84, end: 505.47 },
+    { label: "63", start: 505.72, end: 513.43 },
+    { label: "64", start: 513.68, end: 524.47 },
+    { label: "65", start: 524.72, end: 534.91 },
+    { label: "66", start: 535.16, end: 541.11 },
+    { label: "67", start: 541.36, end: 548.29 },
+    { label: "68", start: 548.54, end: 556.89 },
+    { label: "69", start: 557.14, end: 562.97 },
+    { label: "70", start: 563.22, end: 570.49 },
+    { label: "71", start: 570.74, end: 582.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 21 }];
+var hasIntro = false;
+var baseRef  = "mo-43-JHN-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='mo-42-LUK-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='mo-43-JHN-005.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Zã&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;6&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='mo-43-JHN-007.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='mo-44-ACT-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="s1">A Zezi kɩtame tɩ bur lebg wʋsgo</div></div>
+<div class="r"><div id="r1">= <span class="reflink"><a href="mo-40-MAT-014.html#v13">Mat 14.13-21</a></span>; <span class="reflink"><a href="mo-41-MRK-006.html#v30">Mar 6.30-44</a></span>; <span class="reflink"><a href="mo-42-LUK-009.html#v10">Luk 9.10-17</a></span> =</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">6</div> <div id="T1" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Dẽ poore, a Zezi kẽnga Galile mogrã rʋʋnde, Tiberiyaade.</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>Neb kʋʋng wʋsg tũu bãmba, bãmb sẽn yã bõn-bãnã b sẽn maan ne bãad-dãmbã yĩnga.</div><span id="bookmarks2"></span> <a id="v3"></a><div id="T3" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>A Zezi rʋʋ tãng zugu, la b zĩnda ne b karen-biisã beenẽ.</div><span id="bookmarks3"></span></div><span id="bookmarks3"></span><a id="v4"></a>
+<div class="p"><div id="T4" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>La zʋʋg-n-basã sẽn ya Zuif-rãmbã kibsã kolgame.</div><span id="bookmarks4"></span></div><span id="bookmarks4"></span><a id="v5"></a>
+<div class="p"><div id="T5" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>A Zezi sẽn zẽk b neng n yã neb kʋʋng wʋsgã sẽn wat bãmb nengẽ, b soka a Filip yaa : «&nbsp;tõnd na n daa rɩɩb yɛɛnẽ tɩ sek nin-kãensã fãa rɩɩbo&nbsp;?&nbsp;»</div><span id="bookmarks5"></span> <a id="v6"></a><div id="T6" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>La b yeela woto n dat n mak yẽnda n gese, bala, b meng mii bũmb ning b sẽn na n maane.</div><span id="bookmarks6"></span> <a id="v7"></a><div id="T7" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>A Filip leoka bãmb yaa : «&nbsp;Baa tõnd sãn da bur deniye kobs-yi, kõn sek tɩ ned kam fãa paam bilf ye.&nbsp;»</div><span id="bookmarks7"></span> <a id="v8"></a><div id="T8" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>B karen-biig a Ãndere sẽn yaa a Sɩmo Pɩyɛɛr ba-biigã yeela bãmb yaa :</div><span id="bookmarks8"></span> <a id="v9"></a><div id="T9" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>«&nbsp;Biig a yembr n be ka n tar bur a nu sẽn maan ne orz zom, la zĩm-bãooneg a yiibu. La bãmb yaa be ne neb wʋsg woto&nbsp;?&nbsp;»</div><span id="bookmarks9"></span> <a id="v10"></a><div id="T10" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>A Zezi yeelame yaa : «&nbsp;Bɩ y kɩt tɩ nebã zĩndi.&nbsp;» La mood wʋsg n da be zĩ-kãnga, la raopã zĩndame, la b sor kolga tus a nu.</div><span id="bookmarks10"></span> <a id="v11"></a><div id="T11" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>A Zezi rɩka burã n ning bark n pʋɩ neb nins sẽn zĩ be wã. La bãmb maana woto ne zĩmã me, tɩ b fãa paam b sẽn dat tɛka.</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>Bãmb sẽn dɩ n tɩge, b yeela b karen-biisã yaa : «&nbsp;Bɩ y wʋk bur-gɩrsã sẽn kellã tɩ baa a ye ra menem ye.&nbsp;»</div><span id="bookmarks12"></span> <a id="v13"></a><div id="T13" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Woto yĩnga, bãmb fãa sẽn dɩ n sɛ, b wʋka bur a nu sẽn maan ne orz zomã sẽn kellã bur-gɩrs peoog piig la a yiibu.</div><span id="bookmarks13"></span></div><span id="bookmarks13"></span><a id="v14"></a>
+<div class="p"><div id="T14" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>Nin-kãens sẽn yã a Zezi sẽn maan bõn-bãndã, b yeelame yaa : «&nbsp;Sɩda, bãmb yaa Wẽnnaam no-rɛɛs ning sẽn tog n wa-a dũniyã.&nbsp;»</div><span id="bookmarks14"></span> <a id="v15"></a><div id="T15" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>La a Zezi sẽn mik tɩ bãmb na n wa n modga bãmb tɩ b yɩ rĩma, bãmb leb n kẽnga tãng zug b yembr bala.</div><span id="bookmarks15"></span></div>
+
+<div class="s"><div id="s2">A Zezi kẽnda koom zugu</div></div><span id="bookmarks15"></span><a id="v16"></a>
+<div class="p"><div id="T16" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>La zĩ-sobd sẽn ta, b karen-biisã kẽnga mogrã noore.</div><span id="bookmarks16"></span> <a id="v17"></a><div id="T17" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>Bãmb kẽe koom koglg n na n dʋʋg mogrã n kẽng Kapernawom. Yaa yʋngo, la a Zezi nan ka wa bãmb nengẽ ye.</div><span id="bookmarks17"></span> <a id="v18"></a><div id="T18" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>La sob-kãseng lenga koomã tɩ ko-wiis yiki,</div><span id="bookmarks18"></span> <a id="v19"></a><div id="T19" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>la bãmb sẽn kẽng kilometr a nu bɩ a yoobe, bãmb yã a Zezi sẽn kẽnd koomã zug n kolgd koglgã. La rabeem yoka bãmba.</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>La a Zezi yeela bãmb yaa : «&nbsp;Yaa maam&nbsp;! Da zoe-y rabeem ye.&nbsp;»</div><span id="bookmarks20"></span> <a id="v21"></a><div id="T21" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Woto yĩnga, b ratame t'a Zezi kẽ koom koglgẽ wã, la tao-tao bala, koom koglgã taa zĩig ning bãmb sẽn dabdã.</div><span id="bookmarks21"></span></div>
+
+<div class="s"><div id="s3">Neb baoo a Zezi</div></div><span id="bookmarks21"></span><a id="v22"></a>
+<div class="p"><div id="T22" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>Vẽk-n-beoogo, neb kʋʋng nins sẽn da yɛs mogrã rʋʋndã yãame tɩ yaa koom koglg a ye bal n be be, la a Zezi ka kẽ koom koglg-kãng pʋgẽ ne b karen-biisã ye, la bãmb karen-biisã loogame tɩ bãmb ka be ne-b ye.</div><span id="bookmarks22"></span> <a id="v23"></a><div id="T23" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>Koom kogend a taab yii Tiberiyaad sẽn pẽ zĩig ning Zu-soabã sẽn ning burã bark tɩ nebã rɩ wã.</div><span id="bookmarks23"></span> <a id="v24"></a><div id="T24" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>Neb kʋʋnga sẽn yã t'a Zezi ne b karen-biisã ka be be, bãmb mens kẽe koom kogend-kãens n kẽng Kapernawom na n tɩ bao bãmba.</div><span id="bookmarks24"></span></div>
+
+<div class="s"><div id="s4">Bur sẽn kõt vɩɩm</div></div><span id="bookmarks24"></span><a id="v25"></a>
+<div class="p"><div id="T25" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>La bãmb sẽn yã a Zezi mogrã rʋʋnde, bãmb soka a Zezi yaa : «&nbsp;Karen-saamba, yãmb waa ka rabʋre&nbsp;?&nbsp;»</div><span id="bookmarks25"></span> <a id="v26"></a><div id="T26" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>A Zezi leoka bãmb yaa : «&nbsp;Mam yeta yãmb sɩd-sɩd tɩ yãmb sẽn baood maamã, ka yãmb sẽn yã bõn-bãnã yĩng ye, la yaa yãmb sẽn dɩ burã n tɩgã yĩnga.</div><span id="bookmarks26"></span> <a id="v27"></a><div id="T27" class="txs"><span class="v">27</span><span class="vsp">&nbsp;</span>Da tʋʋm-y rɩɩb ning sẽn sãamdã yĩng ye. Bɩ y tʋm dɩɩb ning sẽn paada, n kõt vɩɩm sẽn kõn sɛ, Ninsaal Biigã sẽn na n kõ yãmbã yĩnga. Bala, Ba a Wẽnnaam yãka yẽnda.&nbsp;»</div><span id="bookmarks27"></span> <a id="v28"></a><div id="T28" class="txs"><span class="v">28</span><span class="vsp">&nbsp;</span>Bãmb soka a Zezi yaa : «&nbsp;tõnd na n maana wãn n maan Wẽnnaam tʋʋmde&nbsp;?&nbsp;»</div><span id="bookmarks28"></span> <a id="v29"></a><div id="T29" class="txs"><span class="v">29</span><span class="vsp">&nbsp;</span>A Zezi leoka bãmb yaa : «&nbsp;Wẽnnaam tʋʋmd yaa tɩ yãmb tẽ bãmb sẽn tʋm-a soabã.&nbsp;»</div><span id="bookmarks29"></span> <a id="v30"></a><div id="T30" class="txs"><span class="v">30</span><span class="vsp">&nbsp;</span>Bãmb soka a Zezi yaa : «&nbsp;Woto yĩnga, yãmb wilgda tõnd be bãnd tɩ d yã n tẽ yãmba&nbsp;? Yãmb maanda be&nbsp;?</div><span id="bookmarks30"></span> <a id="v31"></a><div id="T31" class="txs"><span class="v">31</span><span class="vsp">&nbsp;</span>tõnd ba-rãmbã dag n dɩɩ mann weoog pʋgẽ wa sẽn gʋlsã : ‹Bãmb ko bãmb bur sẽn yi arzãn tɩ b rɩ.›&nbsp;»</div><span id="bookmarks31"></span></div><span id="bookmarks31"></span><a id="v32"></a>
+<div class="p"><div id="T32" class="txs"><span class="v">32</span><span class="vsp">&nbsp;</span>A Zezi yeela bãmb yaa : «&nbsp;Mam yeta yãmb sɩd-sɩd tɩ ka a Moyiiz n kõ yãmb bur sẽn yi arzãnã ye, la m Ba kõta yãmb bur meng-meng sẽn yi arzãnã.</div><span id="bookmarks32"></span> <a id="v33"></a><div id="T33" class="txs"><span class="v">33</span><span class="vsp">&nbsp;</span>Bala, bur ning Wẽnnaam sẽn kõta yaa ned ning sẽn yit arzãn n kõt dũniyã vɩɩmã.&nbsp;»</div><span id="bookmarks33"></span> <a id="v34"></a><div id="T34" class="txs"><span class="v">34</span><span class="vsp">&nbsp;</span>Bãmb yeela a Zezi yaa : «&nbsp;Zu-soaba, bɩ y kõt tõnd bur-kãng daar fãa.&nbsp;»</div><span id="bookmarks34"></span> <a id="v35"></a><div id="T35" class="txs"><span class="v">35</span><span class="vsp">&nbsp;</span>A Zezi yeela bãmb yaa : «&nbsp;Mam yaa bur sẽn kõt vɩɩm. Ned ning sẽn wat mam nengẽ, kom kõn le yõk-a abada ye. La ned ning sẽn tẽed maam, ko-yũud kõn yõk yẽnda abada ye.</div><span id="bookmarks35"></span> <a id="v36"></a><div id="T36" class="txs"><span class="v">36</span><span class="vsp">&nbsp;</span>La mam yeta yãmb tɩ yãmb yãa maam, la yãmb ka tẽ ye.</div><span id="bookmarks36"></span> <a id="v37"></a><div id="T37" class="txs"><span class="v">37</span><span class="vsp">&nbsp;</span>M Ba sẽn kõ maam neb ninsã fãa na n waa mam nengẽ, la ned ning sẽn wat mam nenge, mam ka na n dig yẽnda abada ye,</div><span id="bookmarks37"></span> <a id="v38"></a><div id="T38" class="txs"><span class="v">38</span><span class="vsp">&nbsp;</span>bala, mam ka yi arzãn n na n wa maan m meng ratem ye, la yaa tɩ maan sẽn tʋm-a maamã ratem.</div><span id="bookmarks38"></span> <a id="v39"></a><div id="T39" class="txs"><span class="v">39</span><span class="vsp">&nbsp;</span>La sẽn tʋm-a maamã ratem yaa tɩ m da bas baa a yembr bãmb sẽn kõ maamã tɩ menem ye, la m na n vʋʋga bãmb yaoolem daare.</div><span id="bookmarks39"></span> <a id="v40"></a><div id="T40" class="txs"><span class="v">40</span><span class="vsp">&nbsp;</span>M Ba ratem yaa tɩ ned ning fãa sẽn get b Biigã la a tẽed bãmba, a na paam vɩɩm sẽn kõn sɛ. La mam na n vʋʋga yẽnda yaoolem daare.&nbsp;»</div><span id="bookmarks40"></span></div><span id="bookmarks40"></span><a id="v41"></a>
+<div class="p"><div id="T41" class="txs"><span class="v">41</span><span class="vsp">&nbsp;</span>Zuif-rãmbã yẽgma ne bãmba, bãmb sẽn yeel tɩ bãmb yaa bur sẽn yi arzãnã yĩnga.</div><span id="bookmarks41"></span> <a id="v42"></a><div id="T42" class="txs"><span class="v">42</span><span class="vsp">&nbsp;</span>La bãmb yeelame yaa : «&nbsp;yõwã ka a Zezi ning sẽn yaa a Zozɛf bɩɩga, tõnd sẽn mi a ba ne a ma wã wɛ&nbsp;? La yaa be t'a yetẽ t'a yii arzãnã&nbsp;?&nbsp;»</div><span id="bookmarks42"></span> <a id="v43"></a><div id="T43" class="txs"><span class="v">43</span><span class="vsp">&nbsp;</span>A Zezi leoka bãmb yaa : «&nbsp;Da yẽgem-y ye.</div><span id="bookmarks43"></span> <a id="v44"></a><div id="T44" class="txs"><span class="v">44</span><span class="vsp">&nbsp;</span>Ned ka tõe n wa mam nengẽ tɩ ka m Ba sẽn tʋm-a maamã n bool-a ye, la mam na n vʋʋga yẽnda yaoolem daare.</div><span id="bookmarks44"></span> <a id="v45"></a><div id="T45" class="txs"><span class="v">45</span><span class="vsp">&nbsp;</span>A gʋlsa Wẽnnaam no-rɛɛsdbã sɛbã pʋsẽ yaa : ‹Bãmb fãa na n paama zãmsg Wẽnnaam nengẽ.› Woto yĩnga, ned ning fãa sẽn wʋm m Ba koɛɛgã n deeg bãmb zãmsgã, a wata mam nengẽ.</div><span id="bookmarks45"></span> <a id="v46"></a><div id="T46" class="txs"><span class="v">46</span><span class="vsp">&nbsp;</span>A ka tɩ ned da yãa m Ba ye, yaa ned ning sẽn yi Wẽnnaam nengẽ wã bal n da yã bãmba.</div><span id="bookmarks46"></span> <a id="v47"></a><div id="T47" class="txs"><span class="v">47</span><span class="vsp">&nbsp;</span>Mam yeta yãmb sɩd-sɩd tɩ ned ning sẽn tẽed maam tara vɩɩm sẽn kõn sɛ.</div><span id="bookmarks47"></span></div><span id="bookmarks47"></span><a id="v48"></a>
+<div class="p"><div id="T48" class="txs"><span class="v">48</span><span class="vsp">&nbsp;</span>Mam yaa bur sẽn kõt vɩɩm.</div><span id="bookmarks48"></span> <a id="v49"></a><div id="T49" class="txs"><span class="v">49</span><span class="vsp">&nbsp;</span>Yãmb ba-rãmbã ra rɩɩ mann weoogã pʋgẽ, la b kiime.</div><span id="bookmarks49"></span> <a id="v50"></a><div id="T50" class="txs"><span class="v">50</span><span class="vsp">&nbsp;</span>Bur sẽn yit arzãnã la woto, tɩ ned ning sẽn dɩt-a kõn ki ye.</div><span id="bookmarks50"></span> <a id="v51"></a><div id="T51" class="txs"><span class="v">51</span><span class="vsp">&nbsp;</span>Mam yaa bur sẽn vɩ sẽn yi arzãnã. Ned sãn dɩ bur-kãnga, a na n vɩɩ wakat sẽn kõn sɛ. La bur ninga mam sẽn na kõ wã yaa mam mengã mam sẽn na n kõ tɩ yɩ dũniyã vɩɩma.&nbsp;»</div><span id="bookmarks51"></span></div><span id="bookmarks51"></span><a id="v52"></a>
+<div class="p"><div id="T52" class="txs"><span class="v">52</span><span class="vsp">&nbsp;</span>Woto kɩtame tɩ Zuif-rãmbã wẽ no-koeemd ne taab n sok yaa : «&nbsp;Bãmb na n maana wãn n kõ tõnd b yĩngã tɩ d rɩ&nbsp;?&nbsp;»</div><span id="bookmarks52"></span></div><span id="bookmarks52"></span><a id="v53"></a>
+<div class="p"><div id="T53" class="txs"><span class="v">53</span><span class="vsp">&nbsp;</span>A Zezi yeela bãmb yaa : «&nbsp;Mam yeta yãmb sɩd-sɩd tɩ yãmb sãn ka wãb Ninsaal Biigã nemdo, la y ka yũ a zɩɩm, yãmb ka tar vɩɩm ye.</div><span id="bookmarks53"></span> <a id="v54"></a><div id="T54" class="txs"><span class="v">54</span><span class="vsp">&nbsp;</span>Ned ning sẽn wãbd mam nemd la a yũud mam zɩɩmã tara vɩɩm sẽn kõn sɛ, la mam na n vʋʋga yẽnda yaoolem daare.</div><span id="bookmarks54"></span> <a id="v55"></a><div id="T55" class="txs"><span class="v">55</span><span class="vsp">&nbsp;</span>Bala, mam yĩngã yaa rɩɩb menga, la mam zɩɩmã yaa bõn-yũudl menga.</div><span id="bookmarks55"></span> <a id="v56"></a><div id="T56" class="txs"><span class="v">56</span><span class="vsp">&nbsp;</span>Ned ning sẽn wãbd mam nemd la a yũud mam zɩɩm, a bee ne maam, la mam bee ne yẽnda.</div><span id="bookmarks56"></span> <a id="v57"></a><div id="T57" class="txs"><span class="v">57</span><span class="vsp">&nbsp;</span>A wa m Ba sẽn vɩ n tʋm maam tɩ mam paam vɩɩm bãmb yĩngã, woto, ned ning sẽn wãbd mam nemdo, a na n paama vɩɩm mam yĩnga.</div><span id="bookmarks57"></span> <a id="v58"></a><div id="T58" class="txs"><span class="v">58</span><span class="vsp">&nbsp;</span>Bur sẽn yit arzãnã yaa woto. A ka wẽnd mann yãmb ba-rãmbã sẽn da rɩ n ki wã ye. Ned ning sẽn dɩt bur-kãnga, a na n vɩɩ wakat sẽn kõn sɛ.&nbsp;»</div><span id="bookmarks58"></span> <a id="v59"></a><div id="T59" class="txs"><span class="v">59</span><span class="vsp">&nbsp;</span>A Zezi goma bõn-kãens wakat ning bãmb sẽn zãmsd nebã Kapɛrnawom karen-doogã pʋgẽ wã.</div><span id="bookmarks59"></span></div>
+
+<div class="s"><div id="s5">Vɩɩm sẽn kõn sa goama</div></div><span id="bookmarks59"></span><a id="v60"></a>
+<div class="p"><div id="T60" class="txs"><span class="v">60</span><span class="vsp">&nbsp;</span>Bãmb karen-biis wʋsg sẽn wʋm bãmb goamã, b yeelame yaa : «&nbsp;Gom-kãngã yaa toogo. Ãnda n tõe n deeg yõwã&nbsp;?&nbsp;»</div><span id="bookmarks60"></span> <a id="v61"></a><div id="T61" class="txs"><span class="v">61</span><span class="vsp">&nbsp;</span>A Zezi sẽn bãng b sũur pʋgẽ tɩ b karen-biisã yẽgemda ne yel-kãnga, b soka bãmb yaa : «&nbsp;yõwã rat n yoo yãmb yam laa&nbsp;?</div><span id="bookmarks61"></span> <a id="v62"></a><div id="T62" class="txs"><span class="v">62</span><span class="vsp">&nbsp;</span>Yãmb sãn yã Ninsaal Biigã sẽn dʋʋd n dabd zĩig ning b sẽn da be wã, yãmb na n maana wãna&nbsp;?</div><span id="bookmarks62"></span> <a id="v63"></a><div id="T63" class="txs"><span class="v">63</span><span class="vsp">&nbsp;</span>Yaa Sɩɩg n kõt vɩɩm. Yĩngã ka yod ye. Goam-nins mam sẽn togs yãmbã yaa Sɩɩg la vɩɩm.</div><span id="bookmarks63"></span> <a id="v64"></a><div id="T64" class="txs"><span class="v">64</span><span class="vsp">&nbsp;</span>La keer bee yãmb sʋk n ka tẽed ye.&nbsp;» Bala, a Zezi bãnga neb nins sẽn ka tẽebã hal sɩngrẽ, la ned ning sẽn na zãmb-a bãmbã.</div><span id="bookmarks64"></span> <a id="v65"></a><div id="T65" class="txs"><span class="v">65</span><span class="vsp">&nbsp;</span>La bãmb leb n yeelame yaa : «&nbsp;Yaa woto yĩng la mam yeel yãmb tɩ ned ka tõe n wa mam nengẽ tɩ ka m Ba n bool-a ye.&nbsp;»</div><span id="bookmarks65"></span></div><span id="bookmarks65"></span><a id="v66"></a>
+<div class="p"><div id="T66" class="txs"><span class="v">66</span><span class="vsp">&nbsp;</span>Sẽn sɩng wakat-kãnga, bãmb karen-biis wʋsg leba poorẽ n ka le tũ bãmb ye.</div><span id="bookmarks66"></span></div><span id="bookmarks66"></span><a id="v67"></a>
+<div class="p"><div id="T67" class="txs"><span class="v">67</span><span class="vsp">&nbsp;</span>Woto yĩnga, a Zezi soka piig la a yiibã yaa : «&nbsp;La yãmb me ka rat bas maam laa&nbsp;?&nbsp;»</div><span id="bookmarks67"></span> <a id="v68"></a><div id="T68" class="txs"><span class="v">68</span><span class="vsp">&nbsp;</span>A Sɩmo Pɩyɛɛr leoka bãmb yaa : «&nbsp;Zu-soaba, tõnd na n basa yãmb n kẽng ãnda nengẽ&nbsp;? Yãmb tara vɩɩm sẽn kõn sɛ goamã.</div><span id="bookmarks68"></span> <a id="v69"></a><div id="T69" class="txs"><span class="v">69</span><span class="vsp">&nbsp;</span>La tõnd tẽeme la d miime tɩ yãmb yaa Kirist sẽn ya Wẽnnaam sng Soaba.&nbsp;»</div><span id="bookmarks69"></span> <a id="v70"></a><div id="T70" class="txs"><span class="v">70</span><span class="vsp">&nbsp;</span>A Zezi leoka bãmb yaa : «&nbsp;Ka maam n tũus yãmb piig la a yiibã wɛ&nbsp;? La yãmb ned a ye n yaa zĩna.&nbsp;»</div><span id="bookmarks70"></span> <a id="v71"></a><div id="T71" class="txs"><span class="v">71</span><span class="vsp">&nbsp;</span>A Sɩmo biig a Zudaas Iskariyot yell la bãmb da gomda, bala, yaa yẽ n na n zãmb bãmba, la yẽ yaa piig la a yiibã ned a yembre.</div><span id="bookmarks71"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/MHMBSBN2DA/B04___06_Jean________MHMBSBN2DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

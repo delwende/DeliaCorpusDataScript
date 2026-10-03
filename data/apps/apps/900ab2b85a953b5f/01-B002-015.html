@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 15</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "15a", start: 2101.16, end: 2102.89 },
+    { label: "15b", start: 2103.14, end: 2103.67 },
+    { label: "15c", start: 2103.92, end: 2104.93 },
+    { label: "15d", start: 2105.18, end: 2106.81 },
+    { label: "15e", start: 2107.06, end: 2109.29 },
+    { label: "15f", start: 2109.54, end: 2111.27 },
+    { label: "15g", start: 2111.52, end: 2113.09 },
+    { label: "15h", start: 2113.34, end: 2115.21 },
+    { label: "15i", start: 2115.46, end: 2117.05 },
+    { label: "15j", start: 2117.3, end: 2118.87 },
+    { label: "15k", start: 2119.12, end: 2121.95 },
+    { label: "15l", start: 2122.2, end: 2123.91 },
+    { label: "15m", start: 2124.16, end: 2125.97 },
+    { label: "15n", start: 2126.22, end: 2128.07 },
+    { label: "15o", start: 2128.32, end: 2130.47 },
+    { label: "15p", start: 2130.72, end: 2132.87 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 2101.16;
+var stopTime  = 2132.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-014.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;15&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image15.jpg" />
+
+<div class="m"><div id="T15a" class="txs"><span class="bd">Table de matières</span></div></div>
+<div class="b">&nbsp;</div>
+<ol start="1">
+  <li class="zoli1"> Introduction</li>
+  <li class="zoli1"> L’élection</li>
+  <li class="zoli1"> La prédestination</li>
+  <li class="zoli1"> L’adoption</li>
+  <li class="zoli1"> L’amour</li>
+  <li class="zoli1"> La rédemption</li>
+  <li class="zoli1"> Le pardon</li>
+  <li class="zoli1"> La grâce</li>
+  <li class="zoli1"> La sagesse et l’intelligence</li>
+  <li class="zoli1"> L’héritage</li>
+  <li class="zoli1"> Le Saint-Esprit</li>
+  <li class="zoli1"> L’espérance</li>
+  <li class="zoli1"> La puissance</li>
+  <li class="zoli1"> L’église</li>
+</ol>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

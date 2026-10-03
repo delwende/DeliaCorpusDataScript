@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12 LE FOU ET LE FAUX FOU 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.83 },
+    { label: "1b", start: 4.08, end: 9.03 },
+    { label: "1c", start: 9.28, end: 17.03 },
+    { label: "1d", start: 17.28, end: 35.15 },
+    { label: "1e", start: 35.4, end: 41.29 },
+    { label: "1f", start: 41.54, end: 54.53 },
+    { label: "1g", start: 54.78, end: 59.43 },
+    { label: "1h", start: 59.68, end: 66.09 },
+    { label: "1i", start: 66.34, end: 84.19 },
+    { label: "1j", start: 84.44, end: 97.67 },
+    { label: "1k", start: 97.92, end: 103.93 },
+    { label: "1l", start: 104.18, end: 118.51 },
+    { label: "1m", start: 118.76, end: 140.29 },
+    { label: "1n", start: 140.54, end: 158.63 },
+    { label: "1o", start: 158.88, end: 173.91 },
+    { label: "1p", start: 174.16, end: 177.95 },
+    { label: "1q", start: 178.2, end: 188.31 },
+    { label: "1r", start: 188.56, end: 197.59 },
+    { label: "1s", start: 197.84, end: 210.39 },
+    { label: "1t", start: 210.64, end: 224.47 },
+    { label: "1u", start: 224.72, end: 230.83 },
+    { label: "1v", start: 231.08, end: 239.29 },
+    { label: "1w", start: 239.54, end: 242.63 },
+    { label: "1x", start: 242.88, end: 248.03 },
+    { label: "1y", start: 248.28, end: 256.17 },
+    { label: "1z", start: 256.42, end: 261.31 },
+    { label: "1aa", start: 261.56, end: 268.79 },
+    { label: "1ab", start: 269.04, end: 271.87 },
+    { label: "1ac", start: 272.12, end: 279.87 },
+    { label: "1ad", start: 280.12, end: 283.91 },
+    { label: "1ae", start: 284.16, end: 286.79 },
+    { label: "1af", start: 287.04, end: 291.91 },
+    { label: "1ag", start: 292.16, end: 302.03 },
+    { label: "1ah", start: 302.28, end: 305.19 },
+    { label: "1ai", start: 305.44, end: 316.45 },
+    { label: "1aj", start: 316.7, end: 321.87 },
+    { label: "1ak", start: 322.12, end: 342.19 },
+    { label: "1al", start: 342.44, end: 346.67 },
+    { label: "1am", start: 346.92, end: 354.39 },
+    { label: "1an", start: 354.64, end: 361.23 },
+    { label: "1ao", start: 361.48, end: 367.19 },
+    { label: "1ap", start: 367.44, end: 370.57 },
+    { label: "1aq", start: 370.82, end: 372.89 },
+    { label: "1ar", start: 373.14, end: 377.83 },
+    { label: "1as", start: 378.08, end: 391.51 },
+    { label: "1at", start: 391.76, end: 408.67 },
+    { label: "1au", start: 408.92, end: 415.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 415.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "12-B012-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='11-B011-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;12 LE FOU ET LE FAUX FOU&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B012-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">12 LE F</span><span class="bd">O</span><span class="bd">U ET LE FAUX FOU</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">On dit généralement que «&nbsp;<span class="it">le fou a tout perdu sauf la raison</span>&nbsp;».</div> <div id="T1c" class="txs">C’est peut-être cet excès de raison chez lui qui le met en marge de la société.</div> <div id="T1d" class="txs">Mais quand on observe le comportement des individus vis à vis de certaines situations, on peut se poser la question de savoir s’ils ne se font pas passer pour fous, car souvent ils savent les bonnes méthodes et pratiques de vie en communauté.</div></div>
+<div class="m"><div id="T1e" class="txs">Il y a un fou qui s’était installe dans une forêt loin du village.</div> <div id="T1f" class="txs">Il en avait fait son territoire gardé si bien que personne d’autre que lui n’avait le droit d’y mettre pieds sous peine de rencontrer la foudre de sa colère.</div> <div id="T1g" class="txs">Il n’hésitait pas à faire du mal à tout contrevenant.</div> <div id="T1h" class="txs">Il pouvait même se permettre d’ôter la vie à celui qui violait son territoire.</div></div>
+<div class="m"><div id="T1i" class="txs">Cette dictature a duré pendant une longue période de sorte que l’espace en question portait son nom et les générations montantes avaient été éduquées à respecter la souveraineté de ce fou.</div> <div id="T1j" class="txs">Mais comme «<span class="it">il n’y a pas de soleil sans coucher</span>&nbsp;», un jour, un habitant du village décida de mettre fin à cette appropriation anarchique et autoritaire de la forêt.</div> <div id="T1k" class="txs">Il annonça son intention d’affronter le fou à une date bien précise.</div></div>
+<div class="m"><div id="T1l" class="txs">Face aux risques qu’il courait en voulant s’opposer à ce personnage dont la cruauté remonte depuis fort longtemps, les vieillards et les notables conviennent de le dissuader en lui apportant leurs sages conseils.</div> <div id="T1m" class="txs">Tout en reconnaissant l’attitude sage du collège des sages, il expliqua que c'était quand même nécessaire de le laisser tenter l’expérience pour montrer au fou et autre prétendant à l’anarchie que la vie en société était conditionnée par le respect de la liberté des autres.</div> <div id="T1n" class="txs">Il justifiait son action par l’obligation qu’il avait de libérer la forêt au profit de toute la communauté qui pourrait désormais librement aller faire paître les troupeaux et couper le bois de chauffe etc.</div></div>
+<div class="m"><div id="T1o" class="txs">Les notables, en lui rappelant les dangers auxquels il s’exposait, ont tout de même loué son esprit de défenseur de la communauté et son courage tout en le couvrant de bénédictions.</div> <div id="T1p" class="txs">Tout le village fut informé du duel entre l’homme et le fou.</div> <div id="T1q" class="txs">C’était un événement unique puisque dans l’histoire du village personne n’a osé opposer une résistance à ce roi de la forêt.</div></div>
+<div class="m"><div id="T1r" class="txs">Le jour «&nbsp;j&nbsp;», toutes affaires cessantes, les habitants du village, hommes, femmes, jeunes et enfants se rendirent dans la forêt.</div> <div id="T1s" class="txs">Quand le soleil fut au zénith, l’homme prit à son tour la route du fameux territoire du fou dont les lointains entourages étaient déjà noirs de monde.</div> <div id="T1t" class="txs">Le fou qui ne se doutait de rien, puisqu’il ne pouvait pas voir les spectateurs, se reposait tranquillement sous le néré dont les fruits ne servaient qu’à lui seul comme repas quotidien.</div></div>
+<div class="m"><div id="T1u" class="txs">À l’autre flanc de la colline, l’homme commença la traversée du territoire interdit.</div> <div id="T1v" class="txs">Au moment où sa présence fut remarquée par le fou, ce dernier se mit sur la pointe de ses pieds et vit l’homme qui s’amenait.</div> <div id="T1w" class="txs">Sa réaction fut vive :</div> <div id="T1x" class="txs">«&nbsp;<span class="it">L</span><span class="it">e chien qui marche là, qu’est-ce que tu cherches sur mon </span><span class="it">territoire ?</span></div> <div id="T1y" class="txs"><span class="it">Je t’invite à faire demi-tour, sinon c’est ton cadavre qui ira à la maison car je te tuerai sans pitié </span>».</div></div>
+<div class="m"><div id="T1z" class="txs">Ces menaces n’intimidèrent point notre homme qui avançait droit sur le fou.</div> <div id="T1aa" class="txs">Celui-ci alla rapidement chercher sa hache et sa machette pour aller à la rencontre du provocateur.</div> <div id="T1ab" class="txs">Il lança de nouveau la menace :</div> <div id="T1ac" class="txs">«&nbsp;<span class="it">L’imbécile qui avance là, je t’ordonne de t’arrêter et de disparaître ici sinon</span> …&nbsp;».</div> <div id="T1ad" class="txs">Mais l’homme fit sourde oreille et fonçait sur le fou.</div></div>
+<div class="m"><div id="T1ae" class="txs">Il arriva à quelques mètres du fou.</div> <div id="T1af" class="txs">Là, un gros caïlcédrat séparait les deux adversaires.</div> <div id="T1ag" class="txs">Et l’homme alla se poster au pied de l’arbre et se positionna de manière à donner l’impression qu’il voulait le porter sur sa tête.</div> <div id="T1ah" class="txs">Ensuite, il lança au fou :</div> <div id="T1ai" class="txs">«&nbsp;<span class="it">O</span><span class="it">h, eh-là, l’idiot qui est en face de moi là, viens vite m’aider à porter l’arbre sur ma tête car je veux l’amener chez moi à la maison</span>&nbsp;».</div> <div id="T1aj" class="txs">Le fou ne comprenait plus rien et commença à murmurer :</div> <div id="T1ak" class="txs">«&nbsp;<span class="it">M</span><span class="it">a situation doit être meilleure que celle de celui-là car s’il veut porter l’arbre sur sa tête et l’amener à la maison, c’est que c’est plus grave chez lui et, c’est sûr que si je retourne au village chez les miens j’aurai des soins qui me permettront de guérir</span>&nbsp;».</div></div>
+<div class="m"><div id="T1al" class="txs">Il fit un pas, deux pas et trois pas en arrière.</div> <div id="T1am" class="txs">L’homme comprit qu’il venait de réussir à dissuader le fou et il continua pour l’assommer pour de bon.</div></div>
+<div class="m"><div id="T1an" class="txs">Il tempêta encore et multiplia des menaces qui invitaient l’autre à l’aider à porter l’arbre.</div> <div id="T1ao" class="txs">Le fou ne l’écoutait plus et quitta rapidement le lieu qu’il occupait depuis belle lurette.</div> <div id="T1ap" class="txs">Il fit ses bagages et se retrouva au village.</div> <div id="T1aq" class="txs">La forêt fut ainsi libérée.</div> <div id="T1ar" class="txs">Les habitants désormais pouvaient l’exploiter comme ils l'entendaient.</div> <div id="T1as" class="txs">L’homme avait réussi où les autres avaient échoué pendant des décennies, car non seulement il a libéré la forêt mais il a aussi fait comprendre au fou qu’il pouvait être guéri de son mal.</div></div>
+<div class="m"><div id="T1at" class="txs">C’est certainement une bonne leçon pour tous les hommes de savoir que quelle que soit la situation périlleuse dans laquelle on se trouve, il faut penser qu’il y a de l’espoir car vous en trouverez d’autres qui vivent le pire.</div> <div id="T1au" class="txs">Nul n'est sans problème car comme le dit l’adage «&nbsp;<span class="it">même les roses ont des épines </span>»</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 12 le fou et le faux fou.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

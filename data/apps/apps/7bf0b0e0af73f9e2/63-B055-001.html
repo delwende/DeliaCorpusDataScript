@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>For foreigners 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.27 },
+    { label: "1b", start: 1.52, end: 3.47 },
+    { label: "1c", start: 3.72, end: 5.17 },
+    { label: "1d", start: 5.42, end: 13.55 },
+    { label: "1e", start: 13.8, end: 16.21 },
+    { label: "1f", start: 16.46, end: 19.81 },
+    { label: "1g", start: 20.06, end: 20.87 },
+    { label: "1h", start: 21.12, end: 26.65 },
+    { label: "1i", start: 26.9, end: 29.17 },
+    { label: "1j", start: 29.42, end: 31.07 },
+    { label: "1k", start: 31.32, end: 35.91 },
+    { label: "1l", start: 36.16, end: 45.83 },
+    { label: "1m", start: 46.08, end: 48.93 },
+    { label: "1n", start: 49.18, end: 51.31 },
+    { label: "1o", start: 51.56, end: 54.57 },
+    { label: "1p", start: 54.82, end: 57.75 },
+    { label: "1q", start: 58, end: 61.19 },
+    { label: "1r", start: 61.44, end: 62.19 },
+    { label: "1s", start: 62.44, end: 63.81 },
+    { label: "1t", start: 64.06, end: 66.83 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 66.83;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "63-B055-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='62-B064-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='62-B064-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;For foreigners&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='64-B065-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='64-B065-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B055-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">For foreigners:</span></div> <div id="T1b" class="txs"><span class="bd">understanding Europeans</span></div></div>
+<div class="m"><div id="T1c" class="txs">Among Europeans,</div> <div id="T1d" class="txs">the rule is that the newcomer introduces himself to his neighbors and thus signals his interest in the existing community and his intention to integrate into it.</div></div>
+<div class="m"><div id="T1e" class="txs">Spontaneous visits to them are rare,</div> <div id="T1f" class="txs">outside the immediate neighborhood or between close friends.</div> <div id="T1g" class="txs">Indeed,</div> <div id="T1h" class="txs">the inhabitants of Central Europe appreciate being able to prepare their private sphere for visitors.</div> <div id="T1i" class="txs">If you want to establish contact,</div> <div id="T1j" class="txs">the rule is to invite them.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs">Some Europeans want to make no mistakes in intercultural contacts.</div> <div id="T1l" class="txs">This is why a foreigner who wants to invite them to his home for an event can erase a feeling of insecurity by preparing his guests for the visit and explaining to them what he expects of them.</div></div>
+<div class="m"><div id="T1m" class="txs">Trust is built when we communicate clearly.</div> <div id="T1n" class="txs">If we cannot respect a commitment,</div> <div id="T1o" class="txs">it is better to say so than to remain silent out of shame:</div> <div id="T1p" class="txs">silence would be a sign that we cannot be trusted.</div></div>
+<div class="m"><div id="T1q" class="txs">The frankness of many Europeans can cause hurt.</div> <div id="T1r" class="txs">Often,</div> <div id="T1s" class="txs">they are not intentional,</div> <div id="T1t" class="txs">and sometimes the author is not aware of them.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/32 Welcome Woman.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/32 Welcome Woman.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/32 Welcome Woman.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

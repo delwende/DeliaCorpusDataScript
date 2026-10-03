@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>4) Bu telinabu  1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 10.07 },
+    { label: "1b", start: 10.32, end: 19.79 },
+    { label: "1c", start: 20.04, end: 32.23 },
+    { label: "1d", start: 32.48, end: 46.39 },
+    { label: "1e", start: 46.64, end: 101.75 },
+    { label: "1f", start: 102, end: 132.43 },
+    { label: "1g", start: 132.68, end: 139.67 },
+    { label: "1h", start: 139.92, end: 151.95 },
+    { label: "1i", start: 152.2, end: 219.51 },
+    { label: "1j", start: 219.76, end: 237.75 },
+    { label: "1k", start: 238, end: 251.43 },
+    { label: "1l", start: 251.68, end: 272.95 },
+    { label: "1m", start: 273.2, end: 295.91 },
+    { label: "1n", start: 296.16, end: 303.85 },
+    { label: "1o", start: 304.1, end: 311.47 },
+    { label: "1p", start: 311.72, end: 334.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 334.23;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;4) Bu telinabu &nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">4) <span class="bd">Bu </span><span class="bd">telinabu</span> </div></div>
+<div class="m"><div id="T1b" class="txs">Yi gmami n de ye ki pia bi bado.</div> <div id="T1c" class="txs">Bi ya ña  o pia longa yo ki poa ki yugidi jana.</div></div>
+<div class="m"><div id="T1d" class="txs">O jua mo n den ye likani ki pia  o kuanu  ki buli o tina&nbsp;; gmami n cua le a tina yeni </div></div>
+<div class="m"><div id="T1e" class="txs">Kigbali mibidi kelima o gmamo je buadima n tie a tina&nbsp;; ban habi a tina yeni , li ji den tie yeni daali kuli.</div></div>
+<div class="m"><div id="T1f" class="txs">Hali ke o kuadaano den bongini ki ba cuoba , ki gudiba le mo naani&nbsp;;bi ya cie lipo bi yen do bu tibu yo ki le o ya ye likani bi yaa  ban gedi budi.</div> <div id="T1g" class="txs">O yen kali yene hali u ñinñulu n cuo wan fi kuni.</div></div>
+<div class="m"><div id="T1h" class="txs">O ya fi kuni yeni ban mo nagini ki suani bi tuonli.</div></div>
+<div class="m"><div id="T1i" class="txs">Lani yo wan jagi dayenli ki bobi ti jatiari kpanli napo wan ban pundi o kuanu kani wan pagi yadi ti tiadi yeni ki bili o kpanli ki nagini o ba ki duani, nani o kpe yeni.</div></div>
+<div class="m"><div id="T1j" class="txs">Ban ban nagini ki la ke o dua ban yedi bi lieba dinli o jua nne n dua mama  nne o de fo ka .</div></div>
+<div class="m"><div id="T1k" class="txs">Lani ban kuli li kani bi bado n poadi ki sedi ki baangi o yama nni yua n ye ne ki kpe .</div></div>
+<div class="m"><div id="T1l" class="txs">Yaba n sieni n kua ya budi wan wani n yie ki ya se bugi o longa ki ya yini o yaani.</div></div>
+<div class="m"><div id="T1m" class="txs">Wan pua ki go yini yeni waa suligi ki goa puoli po&nbsp;; o kuadaano mo n ya ba dua nani o kpe yeni hali ban lindi gano.</div> <div id="T1n" class="txs">Lani yo wan yogi  li kpanli ki  kpa bikuli.</div> <div id="T1o" class="txs">O ninfandano wani bebe den cia .</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1p" class="txs">I tundi lan tie yali ya nini kuli han soangi a yama ki kpagi bonhanla ki nan yuandi jagi.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/04 CONTE.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

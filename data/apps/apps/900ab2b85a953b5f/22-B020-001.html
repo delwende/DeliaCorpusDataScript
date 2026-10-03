@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Ifaara 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "22-B020-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='21-B022-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='21-B022-015.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Ifaara&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='22-B020-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B020-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">Ifaara</span></div>
+<div class="b">&nbsp;</div>
+<div class="m">Lẹ́tà náà sí àwọn ará Éfésù ni a kọ sí àwọn Kristẹni tí wọ́n “wà nínú ewu jìyà àìjẹunrekánú nípa tẹ̀mí, nítorí wọn kò jàǹfààní nínú ọ̀pọ̀lọpọ̀ oúnjẹ àti àwọn nǹkan tẹ̀mí tí wọ́n ní ní ìkáwọ́ wọn. báńkì onígbàgbọ́, ìwé àyẹ̀wò, yàrá ìṣúra Bíbélì yìí sọ fún àwọn Kristẹni nípa ọrọ̀ ńláǹlà, ogún, àti ẹ̀kúnrẹ́rẹ́ tí wọ́n ní nínú Jésù Kristi àti ìjọ rẹ̀ ." (John MACARTHUR).</div>
+<div class="m">Eyi kii ṣe ọrọ ti ara, ṣugbọn ọrọ ẹmi. Efesu jẹ ilu pataki pupọ, ọkan ninu awọn ilu pataki 5 ti Ilẹ-ọba Romu. Ó dájú pé ó jẹ́ ìlú tó tóbi jù lọ (yàtọ̀ sí Róòmù) tí Pọ́ọ̀lù ṣèbẹ̀wò sí. O jẹ ọlọrọ tobẹẹ ti wọn pe ni “Bank of Asia”. Onisowo wa lati gbogbo lati ra ati ta ọja wọn. Àwọn arìnrìn-àjò afẹ́ ṣèbẹ̀wò sí láti gbóríyìn fún tẹ́ńpìlì kan tí a yà sí mímọ́ fún ọlọ́run Átẹ́mísì, ọ̀kan lára ​​àwọn ohun àgbàyanu 7 tó wà láyé nígbà yẹn. Pẹ̀lú lẹ́tà rẹ̀, ó dájú pé àpọ́sítélì Pọ́ọ̀lù fẹ́ fi han àwọn mẹ́ńbà ìjọ Éfésù, tí ọrọ̀ àlùmọ́ọ́nì ńláǹlà yí ká, pé ayọ̀ àti ìtẹ́lọ́rùn Kristẹni kan kò sinmi lórí ohun tó wà nínú rẹ̀. Ó fẹ́ rán wọn létí ọrọ̀ tòótọ́ tí a ní nínú Kristi, ọrọ̀ tí kì í bàjẹ́, tí ẹnikẹ́ni kò sì lè jalè!</div>
+<div class="m">Akori yii tun wulo loni. Aye ode oni yoo jẹ ki a gbagbọ pe owo nmu ayọ! Ṣùgbọ́n Ọ̀rọ̀ Ọlọ́run sọ fún wa pé irọ́ ni èyí. Lóòótọ́, owó lè ra àwọn nǹkan tó máa mú kí ìgbésí ayé wa rọrùn lójoojúmọ́, àmọ́ owó ò lágbára láti dojú kọ ìṣòro, ìjìyà àtàwọn ìpèníjà ńláǹlà nínú ìgbésí ayé wa lórí ilẹ̀ ayé.</div>
+<div class="m">Ẹsẹ pataki ninu Efesu jẹ deede ni ibẹrẹ: Olubukun ni fun Ọlọrun ati Baba Oluwa wa Jesu Kristi, ẹniti o ti fi gbogbo ibukun ti ẹmi bukun wa ni awọn aaye ọrun ninu Kristi. Éfésù 1, 3</div>
+<div class="m">Ninu Jesu a ni gbogbo ibukun emi! Podọ to wefọ he bọdego lẹ mẹ, Paulu na mí nudọnamẹ dogọ gando dona ehelẹ go. Nínú Bíbélì ìpilẹ̀ṣẹ̀ lédè Gíríìkì, ẹsẹ 3 sí 14 ti orí kìíní ti Éfésù jẹ́ gbólóhùn kan ṣoṣo! Gẹ́gẹ́ bí Pọ́ọ̀lù ṣe sọ, àtòkọ ọrọ̀ tẹ̀mí fún àwọn wọnnì “nínú Kristi” ti pẹ́: <span class="bd">yíyàn àti kádàrá; isọdọmọ; ife; irapada; idariji; oore-ọfẹ; ọgbọn ati oye; ogún; Ẹmí Mimọ; agbara; ireti ati ijo.</span></div>
+<div class="m">Ni awọn oju-iwe diẹ ti o tẹle, a yoo ṣe iwadi awọn otitọ Bibeli wọnyi, ṣugbọn kii ṣe gẹgẹbi awọn ẹkọ tabi imọ nirọrun fun awọn ori wa. Dipo, a yoo wa lati ṣawari bi wọn ṣe le di ọrọ gidi fun awọn igbesi aye ojoojumọ wa pẹlu awọn iṣe ojoojumọ.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

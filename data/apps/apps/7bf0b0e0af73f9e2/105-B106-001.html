@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Kaabo 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "105-B106-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='104-B105-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='104-B105-033.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Kaabo&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='105-B106-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B106-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">1) Kaabo!</span></div>
+<div class="m">Ṣawari bi awọn ara ilu Yuroopu ṣe n gbe ati ohun ti wọn gbagbọ.</div>
+<div class="m">Ohun elo yii jẹ ipese. A ṣẹda rẹ nitori awọn eniyan lati orilẹ-ede miiran ṣe pataki si wa nibi. A fẹ lati fun ọ ni oye si aṣa Ilu Yuroopu, nitori diẹ ninu awọn nkan nipa aṣa wa le gbe awọn ibeere dide fun ọ. Eyi kii ṣe iyalẹnu, nitori ni gbogbo aṣa, ọpọlọpọ awọn nkan n ṣẹlẹ ni ibamu si awọn ofin ti awọn agbegbe mọ inu, ṣugbọn eyiti a ko kọ ni gbangba nibikibi. Iru awọn ofin ati iye wa nibi gbogbo. A yoo fẹ lati ṣe apejuwe diẹ ninu wọn lati Yuroopu ninu ohun elo yii. Nitoribẹẹ, diẹ ninu awọn ara ilu Yuroopu huwa yatọ. Ṣugbọn nibi ni ọpọlọpọ awọn ilana ihuwasi aṣoju. Awọn eniyan lati orilẹ-ede miiran ti tun ṣe alabapin nọmba awọn akiyesi pẹlu wa.</div>
+<div class="m">Gẹgẹbi awọn onkọwe a fojuinu pe iwọ ati awa ti pade lori ọkọ oju irin tabi ni kafe kan - tabi boya a joko ni ibi ounjẹ ati sisọ, ati pe dajudaju a ti joko ni tabili pẹlu awọn eniyan lati awọn orilẹ-ede oriṣiriṣi pupọ ati tẹtisi ati sọrọ. A consciously jade yi app bi kristeni, bi eniyan ti o tẹle Jesu. A tun kọ nkankan nipa yi ni yi app. Nitoripe a tun ti gbọ ọpọlọpọ ibeere nipa igbagbọ wa ni tabili ounjẹ. Ọpọlọpọ awọn ara ilu Yuroopu tun n reti awọn alabapade gidi pẹlu rẹ. Wọn nireti lati mọ nkan ti aṣa rẹ. Bí àpẹẹrẹ, ọ̀pọ̀ èèyàn ló mọyì ẹ̀mí aájò àlejò àti ìdílé tí àwọn èèyàn láti orílẹ̀-èdè míì máa ń mú wá sí Yúróòpù. A nireti lati gbe daradara papọ.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>1 TELELE DA 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.87 },
+    { label: "1b", start: 2.12, end: 5.13 },
+    { label: "1c", start: 5.38, end: 10.47 },
+    { label: "1d", start: 10.72, end: 12.93 },
+    { label: "1e", start: 13.18, end: 19.01 },
+    { label: "1f", start: 19.26, end: 22.09 },
+    { label: "1g", start: 22.34, end: 30.73 },
+    { label: "1h", start: 30.98, end: 35.51 },
+    { label: "1i", start: 35.76, end: 42.55 },
+    { label: "1j", start: 42.8, end: 47.75 },
+    { label: "1k", start: 48, end: 49.99 },
+    { label: "1l", start: 50.24, end: 52.71 },
+    { label: "1m", start: 52.96, end: 54.99 },
+    { label: "1n", start: 55.24, end: 58.83 },
+    { label: "1o", start: 59.08, end: 62.35 },
+    { label: "1p", start: 62.6, end: 64.87 },
+    { label: "1q", start: 65.12, end: 71.27 },
+    { label: "1r", start: 71.52, end: 76.39 },
+    { label: "1s", start: 76.64, end: 81.25 },
+    { label: "1t", start: 81.5, end: 90.23 },
+    { label: "1u", start: 90.48, end: 93.49 },
+    { label: "1v", start: 93.74, end: 97.67 },
+    { label: "1w", start: 97.92, end: 99.77 },
+    { label: "1x", start: 100.02, end: 105.75 },
+    { label: "1y", start: 106, end: 111.79 },
+    { label: "1z", start: 112.04, end: 114.67 },
+    { label: "1aa", start: 114.92, end: 122.19 },
+    { label: "1ab", start: 122.44, end: 127.59 },
+    { label: "1ac", start: 127.84, end: 130.57 },
+    { label: "1ad", start: 130.82, end: 133.09 },
+    { label: "1ae", start: 133.34, end: 136.03 },
+    { label: "1af", start: 136.28, end: 140.41 },
+    { label: "1ag", start: 140.66, end: 142.03 },
+    { label: "1ah", start: 142.28, end: 144.85 },
+    { label: "1ai", start: 145.1, end: 147.67 },
+    { label: "1aj", start: 147.92, end: 156.23 },
+    { label: "1ak", start: 156.48, end: 159.63 },
+    { label: "1al", start: 159.88, end: 164.37 },
+    { label: "1am", start: 164.62, end: 171.15 },
+    { label: "1an", start: 171.4, end: 173.17 },
+    { label: "1ao", start: 173.42, end: 175.59 },
+    { label: "1ap", start: 175.84, end: 179.41 },
+    { label: "1aq", start: 179.66, end: 185.59 },
+    { label: "1ar", start: 185.84, end: 187.87 },
+    { label: "1as", start: 188.12, end: 189.65 },
+    { label: "1at", start: 189.9, end: 197.45 },
+    { label: "1au", start: 197.7, end: 203.57 },
+    { label: "1av", start: 203.82, end: 207.41 },
+    { label: "1aw", start: 207.66, end: 209.97 },
+    { label: "1ax", start: 210.22, end: 215.71 },
+    { label: "1ay", start: 215.96, end: 220.55 },
+    { label: "1az", start: 220.8, end: 223.33 },
+    { label: "1ba", start: 223.58, end: 226.37 },
+    { label: "1bb", start: 226.62, end: 229.91 },
+    { label: "1bc", start: 230.16, end: 234.49 },
+    { label: "1bd", start: 234.74, end: 238.25 },
+    { label: "1be", start: 238.5, end: 241.01 },
+    { label: "1bf", start: 241.26, end: 243.93 },
+    { label: "1bg", start: 244.18, end: 246.87 },
+    { label: "1bh", start: 247.12, end: 247.12 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 247.12;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1 TELELE DA&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">1</span><span class="bd"> </span><span class="bd">TELELE DA</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">O JAKPELO den ye ki pia biila lie,</div> <div id="T1c" class="txs">o yendo ñden yii hamlidi o lielo haminali.</div> <div id="T1d" class="txs">Bi kuli den ye leni bi ba ki ta koo.</div> <div id="T1e" class="txs">Lawani yoginu n den kaali ke hamlidi den yede o ba ko ba pari o kuanu.</div> <div id="T1f" class="txs">O ba mo den yedo ke kanu na ye po.</div> <div id="T1g" class="txs">Lawani o den yedi o ba ke hali wani fii o na la ke nuli pedi ya tugu yeni,</div> <div id="T1h" class="txs">lani ya po o mo den yedi ke o nan pia u sanu ki ba pedi ku tugu.</div> <div id="T1i" class="txs">O ba den guano ke na bi bani ko tie ya biiga n kan ga tundi.</div> <div id="T1j" class="txs">O den yedi o buali ko den sundi o yelii wan maali ya daali,</div> <div id="T1k" class="txs">ko yii kan ga tundi.</div> <div id="T1l" class="txs">Lani ya po o den pari o kuanu.</div> <div id="T1m" class="txs">O den fii ki ban kili ti pedi.</div> <div id="T1n" class="txs">La tugu mo den tie pola kanu.</div> <div id="T1o" class="txs">Wan kili li poli den bualo ke ⴄmen pee.</div> <div id="T1p" class="txs">O den yedi min kan ga tundi,</div> <div id="T1q" class="txs">n pee li poli den yedi o jawaba n ñaa todi kan ga tundi n pedi o tugu.</div> <div id="T1r" class="txs">O den yedi o ba ko nan pedi ki gbeni o kuanu.</div> <div id="T1s" class="txs">O ba den jaando ki go yedi utienu soagini o tuonli liiga.</div> <div id="T1t" class="txs">Kan ga tundi den fii ki ba kili o fian siali li poli go den bualo ke ñee n siagi ti pedi o den yedi ke wani kan ga tundi,</div> <div id="T1u" class="txs">li poli den yiini o jawaaba ke bi go todi o.</div> <div id="T1v" class="txs">O den ba yedi o ba ko nan sia o fatula,</div> <div id="T1w" class="txs">o ba den pugino i jandii.</div> <div id="T1x" class="txs">Yoginuba ku siagu ya cili  o bado ya puni sanu nilo ba kuli kan buli.</div> <div id="T1y" class="txs">Ki cicili taga den mini a ma o bado den wani ke gi kua ba candi u dogu.</div> <div id="T1z" class="txs">Lawani o ba ki den pia sanu ki buli.</div> <div id="T1aa" class="txs">Ki taa liega o bado den teni ke o bantiagu kpani ke u sanu ye ban cuagi.</div> <div id="T1ab" class="txs">Kan ga tundi den ta o diibuoli ki ban cili ti jadi,</div> <div id="T1ac" class="txs">a ma poli den buali ke ŋen ya bu,</div> <div id="T1ad" class="txs">o den yedi mini kanga tundi.</div> <div id="T1ae" class="txs">O den cedi ke o jawaaba den todi o.</div> <div id="T1af" class="txs">o den ma yedi o ba ke o buli gbeni o kuanu,</div> <div id="T1ag" class="txs">o ba den jandi o.</div> <div id="T1ah" class="txs">ki taaga den mini ki gnani o jadi,</div> <div id="T1ai" class="txs">lani ya po ba ja yengu ki den sieni.</div> <div id="T1aj" class="txs">Bu kpabu  yogunu o den logidi a ñiana kelima wan den sia ya po u muagu na den pia palu.</div> <div id="T1ak" class="txs">li poli go den mia o jawaaba ke bi todi o.</div> <div id="T1al" class="txs">o den ba yedi o ba ke o koo gbeni o ba den pugini o i jandi.</div> <div id="T1am" class="txs">Ti fatudi n ba u palu o den guani ki ban cili ti pedi  li poli go den puguni o i buali.</div> <div id="T1an" class="txs">O den yedi wan kan ga tundi.</div> <div id="T1ao" class="txs">Bi jawaaba go den ñani ki pedi o po.</div> <div id="T1ap" class="txs">O den man todi o ba a ma o den jandi o.</div> <div id="T1aq" class="txs">li daali den cua ke o yedi o pua n gudi o kuanu kelima o den pia sancenli.</div> <div id="T1ar" class="txs">O pua den gedi,</div> <div id="T1as" class="txs">i dii den pia mi jawaama,</div> <div id="T1at" class="txs">a ma u yienu n pagi o den sua ka dii gbada yee u kuanu on fii ki cili ki pee laa dii.</div> <div id="T1au" class="txs">Li poli den gbadi ki buali lan tie yua o den yedi mini kan ga tundi ya pua.</div> <div id="T1av" class="txs">O den yedi o jawaabi ñan todi kan ga tundi pua.</div> <div id="T1aw" class="txs">Bi den ñani ki pedi i dii kuli.</div> <div id="T1ax" class="txs">Kanga tundi pua den cili i mue a ma li poli&nbsp;den teni ke o jawaaba mua ki todi o.</div> <div id="T1ay" class="txs">kan ga tundi den gbadi ki fii pundi o kuanu ki sua ko dii kuli pedi.</div> <div id="T1az" class="txs">O den buali o pua lan ga ma ke o togi o.</div> <div id="T1ba" class="txs">o pali den fii ke o cili ki pua o pua.</div> <div id="T1bb" class="txs">Li poli den buali ke o yedi wani poua  o pua.</div> <div id="T1bc" class="txs">Li poli go den teni ke o jawaaba todi o ko poua o pua ke o kpe.</div> <div id="T1bd" class="txs">O den kuni leni mi kuma ki ban waani o ba.</div> <div id="T1be" class="txs">O ba den yedo ke ne o tie yua kan ga tunde.</div> <div id="T1bf" class="txs">Li bua waani ke yala n ti kuali wan li kuale.</div> <div id="T1bg" class="txs">A ya fii ki gbadi ke bi yedi ke yala n kua ñan tuo.</div></div>
+<div class="m"><div id="T1bh" class="txs">.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/01 gul cont v1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

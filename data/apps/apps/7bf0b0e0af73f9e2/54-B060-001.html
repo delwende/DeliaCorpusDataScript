@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Comment naît la confiance 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.23 },
+    { label: "1b", start: 2.48, end: 9.01 },
+    { label: "1c", start: 9.26, end: 12.23 },
+    { label: "1d", start: 12.48, end: 13.95 },
+    { label: "1e", start: 14.2, end: 18.57 },
+    { label: "1f", start: 18.82, end: 19.91 },
+    { label: "1g", start: 20.16, end: 21.41 },
+    { label: "1h", start: 21.66, end: 23.45 },
+    { label: "1i", start: 23.7, end: 26.57 },
+    { label: "1j", start: 26.82, end: 30.29 },
+    { label: "1k", start: 30.54, end: 31.53 },
+    { label: "1l", start: 31.78, end: 35.99 },
+    { label: "1m", start: 36.24, end: 40.81 },
+    { label: "1n", start: 41.06, end: 43.53 },
+    { label: "1o", start: 43.78, end: 44.99 },
+    { label: "1p", start: 45.24, end: 50.75 },
+    { label: "1q", start: 51, end: 52.05 },
+    { label: "1r", start: 52.3, end: 56.81 },
+    { label: "1s", start: 57.06, end: 58.59 },
+    { label: "1t", start: 58.84, end: 60.55 },
+    { label: "1u", start: 60.8, end: 61.93 },
+    { label: "1v", start: 62.18, end: 63.71 },
+    { label: "1w", start: 63.96, end: 70.57 },
+    { label: "1x", start: 70.82, end: 75.09 },
+    { label: "1y", start: 75.34, end: 77.45 },
+    { label: "1z", start: 77.7, end: 80.51 },
+    { label: "1aa", start: 80.76, end: 82.71 },
+    { label: "1ab", start: 82.96, end: 84.53 },
+    { label: "1ac", start: 84.78, end: 86.91 },
+    { label: "1ad", start: 87.16, end: 90.63 },
+    { label: "1ae", start: 90.88, end: 93.03 },
+    { label: "1af", start: 93.28, end: 94.47 },
+    { label: "1ag", start: 94.72, end: 96.95 },
+    { label: "1ah", start: 97.2, end: 98.67 },
+    { label: "1ai", start: 98.92, end: 103.87 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 103.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "54-B060-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='53-B050-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='53-B050-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Comment naît la confiance&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='55-B051-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='55-B051-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B060-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Comment naît la confiance&nbsp;?</span></div></div>
+<div class="m"><div id="T1b" class="txs">Dans une culture qui cherche avant tout à réduire le plus possible les incertitudes (c’est le cas des pays européens),</div> <div id="T1c" class="txs">on exige d’abord que les gens respectent des règles.</div> <div id="T1d" class="txs">Dans cette culture,</div> <div id="T1e" class="txs">on n’établit pas de relations tant qu’on n’est pas sûr de pouvoir faire confiance.</div></div>
+<div class="m"><div id="T1f" class="txs">À l’inverse,</div> <div id="T1g" class="txs">dans les cultures du Sud,</div> <div id="T1h" class="txs">le contact s’établit rapidement,</div> <div id="T1i" class="txs">motivé par l’intérêt pour ce qui est étranger.</div> <div id="T1j" class="txs">C’est pourquoi l’hospitalité tient une si grande place.</div> <div id="T1k" class="txs">Ensuite,</div> <div id="T1l" class="txs">la relation se renforce au fur et à mesure qu’on apprend à se connaître,</div> <div id="T1m" class="txs">et c’est seulement après cette approche qu’on voit dans quels domaines on peut faire confiance.</div> <div id="T1n" class="txs">La confiance repose sur la relation,</div> <div id="T1o" class="txs">et pas l’inverse.</div></div>
+<div class="m"><div id="T1p" class="txs">C’est là qu'échoue la tentative de créer un contact avec les demandeurs d’asile.</div> <div id="T1q" class="txs">Les Européens se disent :</div> <div id="T1r" class="txs">«&nbsp;<span class="it">Comment établir une relation alors que je ne sais pas si son histoire est vraie&nbsp;?</span></div> <div id="T1s" class="txs"><span class="it">De peur d'être déçu,</span></div> <div id="T1t" class="txs"><span class="it">je préfère me méfier</span>&nbsp;».</div> <div id="T1u" class="txs">De son côté,</div> <div id="T1v" class="txs">le demandeur d’asile se dit&nbsp;:</div> <div id="T1w" class="txs">«&nbsp;<span class="it">Comment puis-je te raconter mon histoire si je ne te connais pas et que je ne suis pas sûr que tu ne me dénonceras pas&nbsp;?</span></div><div id="T1x" class="txs">&nbsp;»</div></div>
+<div class="m"><div id="T1y" class="txs">Alors comment pouvons-nous construire des relations de confiance&nbsp;?</div> <div id="T1z" class="txs">Voici quelques recettes :</div></div>
+<ul>
+  <li class="zuli1"> Ne pas poser des règles comme préalable.</li>
+  <li class="zuli1"> S’intéresser à l'autre.</li>
+  <li class="zuli1"> Chercher le contact :</div> <div id="T1aa" class="txs">cela ne coûte rien si ce n’est du temps,</div> <div id="T1ab" class="txs">mais ce temps se retrouve plus tard quand survient un problème.</li>
+</ul></div>
+<div class="m"><div id="T1ac" class="txs">Ce n’est pas très révolutionnaire,</div> <div id="T1ad" class="txs">mais ce qui est capital,</div> <div id="T1ae" class="txs">c'est de ne pas d’abord attendre tout de l’autre,</div> <div id="T1af" class="txs">mais de faire le premier pas.</div></div>
+<div class="m"><div id="T1ag" class="txs">La confiance est une chose précieuse qui ne se donne qu'avec prudence et sagesse.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/27 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/27 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/27 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

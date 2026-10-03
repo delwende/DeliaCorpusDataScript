@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>16 Les conséquences (4 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.07 },
+    { label: "1b", start: 2.32, end: 5.23 },
+    { label: "1c", start: 5.48, end: 6.49 },
+    { label: "1d", start: 6.74, end: 9.47 },
+    { label: "1e", start: 9.72, end: 15.23 },
+    { label: "1f", start: 15.48, end: 22.61 },
+    { label: "1g", start: 22.86, end: 24.65 },
+    { label: "1h", start: 24.9, end: 29.67 },
+    { label: "1i", start: 29.92, end: 34.81 },
+    { label: "1j", start: 35.06, end: 43.27 },
+    { label: "1k", start: 43.52, end: 47.69 },
+    { label: "1l", start: 47.94, end: 53.87 },
+    { label: "1m", start: 54.12, end: 60.09 },
+    { label: "1n", start: 60.34, end: 71.25 },
+    { label: "1o", start: 71.5, end: 78.53 },
+    { label: "1p", start: 78.78, end: 83.99 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 83.99;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "17-B017-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='16-B016-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;16 Les conséquences (4&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B018-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B018-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B017-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">16 Les conséquences (4):</span></div> <div id="T1b" class="txs"><span class="bd">les troubles urinaires ou menstruels</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1c" class="txs"><span class="it">Questions:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">- Que voyez-vous sur le dessin?</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">- Pourquoi l’excision peut créer des troubles urinaires et menstruels?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs">L’image montre une femme qui va se mettre à l’aise mais sa robe est tâchée de selles ou d’urines.</div></div>
+<div class="m"><div id="T1g" class="txs">A cause de l’excision,</div> <div id="T1h" class="txs">les femmes peuvent souffrir d’incontinence urinaire ou fécale.</div> <div id="T1i" class="txs">Cela veut dire qu’elle ne choisissent pas quand elles se mettent à l’aise.</div> <div id="T1j" class="txs">L’urine (pipi) ou les selles (caca) sortent tout seul sans être contrôlés.</div> <div id="T1k" class="txs">C’est la conséquence des fistules provoquées par l’excision:</div> <div id="T1l" class="txs">des communications se forment entre le vagin et la vessie ou l’arrivée des selles.</div></div>
+<div class="m"><div id="T1m" class="txs">L’incontinence peut durer toute la vie et avoir des conséquences sociales graves.</div></div>
+<div class="m"><div id="T1n" class="txs">La cicatrisation de la plaie peut aussi provoquer des problèmes pour uriner (blocage de l’urine) et provoquer des douleurs et infections graves.</div></div>
+<div class="m"><div id="T1o" class="txs">Si l’orifice vaginal est rétréci (à cause de la cicatrisation de la plaie ou de l’infibulation),</div> <div id="T1p" class="txs">les règles peuvent avoir de la peine à s’écouler et être très douloureuses.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/16AUD-20230320-WA0021.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

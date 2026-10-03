@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°32 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.25 },
+    { label: "1b", start: 2.5, end: 5.49 },
+    { label: "1c", start: 5.74, end: 7.03 },
+    { label: "1d", start: 7.28, end: 12.83 },
+    { label: "1e", start: 13.08, end: 16.77 },
+    { label: "1f", start: 17.02, end: 20.97 },
+    { label: "1g", start: 21.22, end: 25.29 },
+    { label: "1h", start: 25.54, end: 31.69 },
+    { label: "1i", start: 31.94, end: 39.15 },
+    { label: "1j", start: 39.4, end: 40.67 },
+    { label: "1k", start: 40.92, end: 43.91 },
+    { label: "1l", start: 44.16, end: 51.15 },
+    { label: "1m", start: 51.4, end: 56.81 },
+    { label: "1n", start: 57.06, end: 58.41 },
+    { label: "1o", start: 58.66, end: 61.37 },
+    { label: "1p", start: 61.62, end: 63.39 },
+    { label: "1q", start: 63.64, end: 66.61 },
+    { label: "1r", start: 66.86, end: 68.61 },
+    { label: "1s", start: 68.86, end: 72.43 },
+    { label: "1t", start: 72.68, end: 75.21 },
+    { label: "1u", start: 75.46, end: 77.43 },
+    { label: "1v", start: 77.68, end: 79.03 },
+    { label: "1w", start: 79.28, end: 83.03 },
+    { label: "1x", start: 83.28, end: 88.57 },
+    { label: "1y", start: 88.82, end: 94.43 },
+    { label: "1z", start: 94.68, end: 95.63 },
+    { label: "1aa", start: 95.88, end: 98.41 },
+    { label: "1ab", start: 98.66, end: 101.35 },
+    { label: "1ac", start: 101.6, end: 104.39 },
+    { label: "1ad", start: 104.64, end: 108.17 },
+    { label: "1ae", start: 108.42, end: 110.29 },
+    { label: "1af", start: 110.54, end: 114.85 },
+    { label: "1ag", start: 115.1, end: 117.33 },
+    { label: "1ah", start: 117.58, end: 119.43 },
+    { label: "1ai", start: 119.68, end: 122.65 },
+    { label: "1aj", start: 122.9, end: 124.85 },
+    { label: "1ak", start: 125.1, end: 128.25 },
+    { label: "1al", start: 128.5, end: 135.07 },
+    { label: "1am", start: 135.32, end: 138.97 },
+    { label: "1an", start: 139.22, end: 139.95 },
+    { label: "1ao", start: 140.2, end: 144.03 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 144.03;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "33-B033-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='32-B032-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='32-B032-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°32&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='34-B035-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='34-B035-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B033-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°32 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Mettez en pratique ce que vous avez appris.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs">Histoire:</div></div>
+<div class="p"><div id="T1d" class="txs"><span class="it">Rachel est très contente car une infirmière est venue dans son village pour parler des maladies.</span></div> <div id="T1e" class="txs"><span class="it">Elle sait maintenant beaucoup de choses pour pouvoir être en bonne santé.</span></div> <div id="T1f" class="txs"><span class="it">Elle sait par exemple qu’il ne faut pas boire de l’eau sale,</span></div> <div id="T1g" class="txs"><span class="it">qu’il faut se protéger des moustiques pour ne pas avoir le palud,</span></div> <div id="T1h" class="txs"><span class="it">que c’est important de se laver les mains avec du savon avant de préparer et avant de manger.</span></div> <div id="T1i" class="txs"><span class="it">L’enseignement que l’infirmière a donné était très bon et Rachel a très bien compris tout ce qui a été dit.</span></div> <div id="T1j" class="txs"><span class="it">Un an plus tard,</span></div> <div id="T1k" class="txs"><span class="it">l’infirmière revient visiter le village.</span></div> <div id="T1l" class="txs"><span class="it">Elle réalise que Rachel continue de boire l’eau sale de la rivière car ça la fatigue d’attendre au forage.</span></div> <div id="T1m" class="txs"><span class="it">Elle utilise ses moustiquaires pour protéger ses plantations de feuilles de patate.</span></div> <div id="T1n" class="txs"><span class="it">Au moment de manger,</span></div> <div id="T1o" class="txs"><span class="it">elle ne se lave jamais les mains avec le</span><span class="it"> </span><span class="it">savon.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1p" class="txs">Que pensez-vous de cette histoire?</div> <div id="T1q" class="txs">Est-ce que la formation de Rachel a été utile?</div> <div id="T1r" class="txs">Quand on apprend quelque chose,</div> <div id="T1s" class="txs">que doit-on faire si on veut que cela nous aide vraiment?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1t" class="txs">Nous pouvons connaitre beaucoup de choses,</div> <div id="T1u" class="txs">mais si nous ne les mettons pas en pratique,</div> <div id="T1v" class="txs">cela est inutile!</div></div>
+<div class="p_Corpsdetexte"><div id="T1w" class="txs">Ce livre contient de nombreux conseils pour mieux gérer vos biens.</div> <div id="T1x" class="txs">Si vous connaissez très bien tous ces conseils mais que vous ne les mettez pas en pratique,</div> <div id="T1y" class="txs">ces conseils restent inutiles et ne vont rien changer à votre situation.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1aa" class="txs">Mettez en pratique ce que vous avez appris!</div></div>
+<div class="p_Corpsdetexte"><div id="T1ab" class="txs">Quand vous entendez un bon conseil,</div> <div id="T1ac" class="txs">ne pensez pas seulement que c’est un bon conseil.</div> <div id="T1ad" class="txs">Cherchez à vivre ce bon conseil dans votre vie!</div></div>
+<div class="m"><div id="T1ae" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1af" class="txs">Qu’allez-vous faire de tous ces conseils qui sont écrits dans ce livre?</div> <div id="T1ag" class="txs">Qu’allez-vous mettre en pratique?</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs"><span class="ul">Versets </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1ai" class="txs"><span class="it">«&nbsp;Celui qui sait faire le bien et ne le fait pas,</span></div> <div id="T1aj" class="txs"><span class="it">se rend coupable d’un péché.</span></div><div id="T1ak" class="txs"><span class="it">&nbsp;» </span>(Jacques 4, 17)</div></div>
+<div class="p"><div id="T1al" class="txs"><span class="it">«&nbsp;Dieu travaille en vous et il vous rend capables de vouloir et de faire les actions qui lui plaisent.</span></div><div id="T1am" class="txs"><span class="it">&nbsp;» </span>(Philippiens 2, 13)</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1an" class="txs"><span class="bd">Allez,</span></div> <div id="T1ao" class="txs"><span class="bd">et vivez ce que vous avez compris!</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/041_Conseil_n32.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

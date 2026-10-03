@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 12</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-011.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;12&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-013.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image12.jpg" />
+
+<div class="m"><span class="bd">Speranza</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Affinché tu possa conoscere la </span><span class="bdit">speranza</span><span class="it"> che ti ha dato quando ti ha chiamato</span><span class="it">, </span>(Efesini 1, 18).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Cos’è la speranza cristiana?</span></div>
+<div class="m">Sperare è credere fermamente che un desiderio verrà presto esaudito. La speranza cristiana è l'attesa del compimento delle promesse di Dio. La speranza riguarda tutte le promesse di Dio, ma soprattutto quelle riguardanti la nostra vita dopo la morte, alla presenza di Dio e di Gesù, al ritorno di Gesù, alla nuova terra e al nuovo cielo.</div>
+<div class="m">Sperare significa che non è ancora “accaduto”, ma credere con certezza che le nostre aspettative verranno soddisfatte. Tale speranza può avere una profonda influenza sulla nostra vita. Invece di sprofondare nella paura e nell’ansia, possiamo vivere nella gioia e nella pace. Ma non dobbiamo dimenticare che le basi della nostra speranza devono essere solide e affidabili. Se la nostra speranza si fonda su altri esseri umani o su altre forze oltre al Dio vivente, siamo destinati a rimanere delusi. Solo una speranza fondata su Dio, su suo Figlio Gesù e sullo Spirito Santo garantisce il compimento delle promesse attese.</div>
+<div class="m"><span class="bd">Azioni per fare della speranza una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera:</span><span class="it"> </span>Ringraziamo Dio per le sue promesse e per la speranza che abbiamo in lui. Metti le tue paure e preoccupazioni nelle Sue mani.</div>
+<div class="m"><span class="it">- Lettura della Bibbia:</span><span class="it"> </span>Leggi i seguenti versetti e scegline uno da memorizzare: Giovanni 10, 28; Efesini 3, da 20 a 21; Apocalisse 21, 4.</div>
+<div class="m"><span class="it">- Riflessione personale:</span><span class="it"> </span>Ti preoccupi costantemente? Vivi nella paura che possa accadere qualcosa di brutto nella tua vita o in quella dei tuoi cari? Ci sono molti esempi biblici di come Dio mantiene le sue promesse: Noè, Abramo e Sara, Giacobbe, Giuseppe, Rut, Anna, Neemia... Studia uno di questi personaggi, prestando attenzione a come Dio ha accompagnato questa persona, soprattutto nei momenti difficili.</div>
+<div class="m"><span class="it">- Per gli altri:</span><span class="it"> </span>Crea un bel biglietto con un versetto biblico incoraggiante e regalalo a un amico bisognoso. Puoi anche inviare il versetto tramite SMS, WhatsApp o altri mezzi.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

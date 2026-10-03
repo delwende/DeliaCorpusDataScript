@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20 UN DRÔLE D’ÉTRANGER 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.95 },
+    { label: "1b", start: 4.2, end: 14.43 },
+    { label: "1c", start: 14.68, end: 19.43 },
+    { label: "1d", start: 19.68, end: 33.15 },
+    { label: "1e", start: 33.4, end: 41.51 },
+    { label: "1f", start: 41.76, end: 55.43 },
+    { label: "1g", start: 55.68, end: 62.95 },
+    { label: "1h", start: 63.2, end: 67.75 },
+    { label: "1i", start: 68, end: 78.71 },
+    { label: "1j", start: 78.96, end: 89.37 },
+    { label: "1k", start: 89.62, end: 95.67 },
+    { label: "1l", start: 95.92, end: 107.99 },
+    { label: "1m", start: 108.24, end: 116.53 },
+    { label: "1n", start: 116.78, end: 133.19 },
+    { label: "1o", start: 133.44, end: 137.67 },
+    { label: "1p", start: 137.92, end: 149.71 },
+    { label: "1q", start: 149.96, end: 155.61 },
+    { label: "1r", start: 155.86, end: 163.39 },
+    { label: "1s", start: 163.64, end: 171.87 },
+    { label: "1t", start: 172.12, end: 180.69 },
+    { label: "1u", start: 180.94, end: 186.83 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 186.83;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;20 UN DRÔLE D’ÉTRANGER&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">20 UN DRÔLE </span><span class="bd">D’</span><span class="bd">ÉTRANGER</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Dans les traditions africaines, la solidarité est une vertu sur laquelle toutes les éducations et enseignements insistent.</div> <div id="T1c" class="txs">L’hospitalité est une des formes les plus manifestes de cette solidarité.</div> <div id="T1d" class="txs">Ainsi, il est recommandé à tous de témoigner aux étrangers notre solidarité en leur fournissant des conditions de séjour agréable, car comme le dit bien le proverbe :</div> <div id="T1e" class="txs">«&nbsp;<span class="it">Être étranger peut arriver à n’importe qui</span><span class="it">,</span><span class="it"> car c’est tout simplement le fait de quitter sa demeure</span>&nbsp;».</div> <div id="T1f" class="txs">Mais une chose est de témoigner de l’hospitalité à son étranger et une autre est d'être bien récompensé par ce dernier si au contraire il ne décide de vous payer en monnaie de singe.</div></div>
+<div class="m"><div id="T1g" class="txs">Une nuit, une famille avait reçu un groupe d’étrangers en partance pour un village très lointain.</div> <div id="T1h" class="txs">Ce groupe était composé de femmes et d’hommes.</div> <div id="T1i" class="txs">La maison étant petite avec le nombre des occupants, le maître de la maison entreprit de faire la répartition des étrangers dans les différentes cases de la concession.</div> <div id="T1j" class="txs">Comme c’était la nuit noire et qu’il n’arrivait pas à identifier clairement les uns des autres, il désigna un homme de petite taille et ordonna :</div> <div id="T1k" class="txs">«&nbsp;<span class="it">Bon, le petit là va aller dormir avec ma femme et les autres dans les deux autres cases</span>&nbsp;».</div> <div id="T1l" class="txs">En se fondant sur le critère de la taille pour repartir ses hôtes, le chef de famille venait sans se rendre compte de prendre le risque de confier de la viande à une hyène affamée.</div> <div id="T1m" class="txs">Ainsi «&nbsp;l’enfant de l’hôte&nbsp;» pouvait-il dormir tranquillement avec l’épouse de son hôte.</div></div>
+<div class="m"><div id="T1n" class="txs">Quand il fut jour, pendant que le maître de la maison s’affairait pour mettre à la disposition de ses hôtes un petit déjeuner, il voyait «&nbsp;l’enfant&nbsp;» qu’il avait confié à sa femme la nuit sortir de la case de celle-ci et se mettre à s'étirer longuement.</div></div>
+<div class="m"><div id="T1o" class="txs">Quand il l’observa attentivement, il vit sa barbe.</div> <div id="T1p" class="txs">Alors il fut furieux, car il imagina tout de suite ce qui avait pu se passer la nuit entre ce drôle d’étranger à l'allure d'un enfant et sa femme.</div> <div id="T1q" class="txs">Il ruminait sa colère et finit par interpeller cet étranger :</div> <div id="T1r" class="txs">«&nbsp;<span class="it">Eh, toi là, c’est</span><span class="it"> quelle barbe </span><span class="it">que </span><span class="it">tu as là, tu ne pouvais pas dire la nuit que tu avais une barbe</span>&nbsp;»&nbsp;?</div></div>
+<div class="m"><div id="T1s" class="txs">Il aurait dû s’assurer la nuit avant d’envoyer auprès de sa femme un barbu fut-il de petite taille.</div></div>
+<div class="m"><div id="T1t" class="txs">La prudence est donc une vertu à enseigner, car être gentil ne devrait pas dire être imprudent.</div> <div id="T1u" class="txs">D’ailleurs ne dit-on pas que «&nbsp;<span class="it">la </span><span class="it">confiance n’exclut pas le contrôle</span>&nbsp;» ?</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 20 Un drole d'etranger.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

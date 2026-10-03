@@ -1,0 +1,17 @@
+var books = [
+  { name: "1 LA CHAUVE-SOURIS ET", ref: "01-B001-001.html" },
+  { name: "2 L’HYÈNE ET LE LIÈVRE", ref: "02-B002-001.html" },
+  { name: "3 LE ROI ET SA FILLE", ref: "03-B003-001.html" },
+  { name: "4 LE PÈRE ET SES TROIS", ref: "04-B004-001.html" },
+  { name: "05 LE PRIX DE LA", ref: "05-B005-001.html" },
+  { name: "6 LE VIEIL HOMME", ref: "06-B006-001.html" },
+  { name: "07 L’ORPHELIN", ref: "07-B007-001.html" },
+  { name: "8 LES COLPORTEURS", ref: "08-B008-001.html" },
+  { name: "9 L’ENFANT DU VOISIN", ref: "09-B009-001.html" },
+  { name: "10 L’AVEUGLE VOLEUR", ref: "10-B010-001.html" },
+  { name: "11 LE TEST DE PATERNITÉ", ref: "11-B011-001.html" },
+  { name: "12 LE FOU ET LE FAUX FOU", ref: "12-B012-001.html" },
+  { name: "13 LE TRAVAIL ET RIEN QUE", ref: "13-B013-001.html" },
+  { name: "14 C'EST NOTRE TOTEM", ref: "14-B014-001.html" },
+  { name: "15 L’HOMME QUI", ref: "15-B015-001.html" },
+];

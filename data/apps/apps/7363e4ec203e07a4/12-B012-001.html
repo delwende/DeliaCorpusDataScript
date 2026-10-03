@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°11 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.75 },
+    { label: "1b", start: 2, end: 3.67 },
+    { label: "1c", start: 3.92, end: 4.77 },
+    { label: "1d", start: 5.02, end: 5.99 },
+    { label: "1e", start: 6.24, end: 10.01 },
+    { label: "1f", start: 10.26, end: 12.15 },
+    { label: "1g", start: 12.4, end: 15.05 },
+    { label: "1h", start: 15.3, end: 16.49 },
+    { label: "1i", start: 16.74, end: 22.77 },
+    { label: "1j", start: 23.02, end: 25.07 },
+    { label: "1k", start: 25.32, end: 28.51 },
+    { label: "1l", start: 28.76, end: 30.17 },
+    { label: "1m", start: 30.42, end: 34.53 },
+    { label: "1n", start: 34.78, end: 39.79 },
+    { label: "1o", start: 40.04, end: 42.53 },
+    { label: "1p", start: 42.78, end: 47.25 },
+    { label: "1q", start: 47.5, end: 48.53 },
+    { label: "1r", start: 48.78, end: 54.75 },
+    { label: "1s", start: 55, end: 59.11 },
+    { label: "1t", start: 59.36, end: 64.37 },
+    { label: "1u", start: 64.62, end: 71.81 },
+    { label: "1v", start: 72.06, end: 73.77 },
+    { label: "1w", start: 74.02, end: 76.43 },
+    { label: "1x", start: 76.68, end: 78.35 },
+    { label: "1y", start: 78.6, end: 80.31 },
+    { label: "1z", start: 80.56, end: 84.19 },
+    { label: "1aa", start: 84.44, end: 85.49 },
+    { label: "1ab", start: 85.74, end: 88.53 },
+    { label: "1ac", start: 88.78, end: 90.13 },
+    { label: "1ad", start: 90.38, end: 93.21 },
+    { label: "1ae", start: 93.46, end: 96.39 },
+    { label: "1af", start: 96.64, end: 98.23 },
+    { label: "1ag", start: 98.48, end: 99.69 },
+    { label: "1ah", start: 99.94, end: 105.55 },
+    { label: "1ai", start: 105.8, end: 110.27 },
+    { label: "1aj", start: 110.52, end: 113.35 },
+    { label: "1ak", start: 113.6, end: 116.63 },
+    { label: "1al", start: 116.88, end: 120.47 },
+    { label: "1am", start: 120.72, end: 126.97 },
+    { label: "1an", start: 127.22, end: 131.27 },
+    { label: "1ao", start: 131.52, end: 138.19 },
+    { label: "1ap", start: 138.44, end: 142.59 },
+    { label: "1aq", start: 142.84, end: 145.91 },
+    { label: "1ar", start: 146.16, end: 147.07 },
+    { label: "1as", start: 147.32, end: 155.43 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 155.43;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "12-B012-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='11-B011-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°11&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B012-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°11 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bdit">Evitez le gaspillage.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="it">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Tous les jours,</span></div> <div id="T1e" class="txs"><span class="it">Elisa envoie ses enfants puiser 10 bidons d’eau.</span></div> <div id="T1f" class="txs"><span class="it">Pendant la journée,</span></div> <div id="T1g" class="txs"><span class="it">elle et sa famille utilisent 8 bidons d’eau.</span></div> <div id="T1h" class="txs"><span class="it">Tous les matins,</span></div> <div id="T1i" class="txs"><span class="it">elle verse par terre les 2 bidons qui restent et renvoie ses enfants puiser les 10 bidons d’eau.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1j" class="txs">Que pensez-vous de cette histoire?</div> <div id="T1k" class="txs">Elisa est-elle sage ou stupide?</div> <div id="T1l" class="txs">Pourquoi?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1m" class="txs">Dépenser quelque chose que nous n’utilisons pas est du gaspillage.</div> <div id="T1n" class="txs">C’est aussi stupide que de déchirer ou jeter de l’argent au feu.</div></div>
+<div class="p_Corpsdetexte"><div id="T1o" class="txs">Il faut apprendre à ne pas gaspiller,</div> <div id="T1p" class="txs">même si on a tout ce qu’il faut ou que ça ne me coûte rien.</div> <div id="T1q" class="txs">Par exemple,</div> <div id="T1r" class="txs">peut-être que j’ai l’eau gratuite et à volonté au forage à côté de chez moi,</div> <div id="T1s" class="txs">mais je dois quand même apprendre à utiliser seulement ce qui est nécessaire.</div> <div id="T1t" class="txs">Cela m’aidera à ne pas gaspiller et comprendre ce principe important:</div> <div id="T1u" class="txs">je dois utiliser seulement ce que j’ai vraiment besoin et je dois éviter de jeter inutilement.</div></div>
+<div class="m"><div id="T1v" class="txs"><span class="ul">Verset </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1w" class="txs"><span class="it">Jésus dit à ses disciples:</span></div> <div id="T1x" class="txs"><span class="it">«&nbsp;Ramassez les morceaux qui restent,</span></div> <div id="T1y" class="txs"><span class="it">il ne faut rien perdre.</span></div><div id="T1z" class="txs"><span class="it">&nbsp;» </span>(Jean 6.12)</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aa" class="txs"><span class="ul">Exercice à</span><span class="ul"> </span><span class="ul">faire:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ab" class="txs">Prenez du temps pour réfléchir à vos journées.</div> <div id="T1ac" class="txs">Que gaspillez- vous,</div> <div id="T1ad" class="txs">parfois sans vous en rendre compte?</div></div>
+<div class="p_Corpsdetexte"><div id="T1ae" class="txs">Pensez à toutes les choses que l’on peut gaspiller.</div> <div id="T1af" class="txs">C’est souvent des petites choses!</div> <div id="T1ag" class="txs">Par exemple:</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs">chauffer une grande marmite pleine d’eau alors que une petite marmite suffit.</div></div>
+<div class="m"><div id="T1ai" class="txs">laisser le bois continuer de brûler alors qu’on a fini de préparer.</div></div>
+<div class="m"><div id="T1aj" class="txs">mettre plus de charbon que nécessaire.</div></div>
+<div class="m"><div id="T1ak" class="txs">laisser le savon devenir tout mou dans l’eau.</div></div>
+<div class="m"><div id="T1al" class="txs">laisser les fruits pourrir sans les manger ou les conserver.</div></div>
+<div class="m"><div id="T1am" class="txs">préparer une trop grande quantité de riz parce qu’on a mal calculé ce qui est nécessaire.</div></div>
+<div class="m"><div id="T1an" class="txs">utiliser trop d’huile parce qu’on a un grand stock à la maison.</div></div>
+<div class="m"><div id="T1ao" class="txs">faire des aller-retours en moto pour aller en ville car on n’a pas réfléchi ce qu’il nous fallait.</div></div>
+<div class="m"><div id="T1ap" class="txs">remplir seulement à moitié les pages d’un cahier et le jeter.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1aq" class="txs">Changez vos habitudes et arrêtez de gaspiller!</div></div>
+<div class="m"><div id="T1ar" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1as" class="txs">Evitez le gaspillage en utilisant seulement ce dont vous avez besoin.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/020_Conseil_n11.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

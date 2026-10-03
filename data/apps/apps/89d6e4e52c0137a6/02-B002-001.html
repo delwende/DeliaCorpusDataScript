@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>2 Yã ligd n yĩm zoodo 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.81 },
+    { label: "1b", start: 3.06, end: 7.15 },
+    { label: "1c", start: 7.4, end: 8.95 },
+    { label: "1d", start: 9.2, end: 11.99 },
+    { label: "1e", start: 12.24, end: 15.49 },
+    { label: "1f", start: 15.74, end: 17.71 },
+    { label: "1g", start: 17.96, end: 20.95 },
+    { label: "1h", start: 21.2, end: 22.81 },
+    { label: "1i", start: 23.06, end: 24.83 },
+    { label: "1j", start: 25.08, end: 27.15 },
+    { label: "1k", start: 27.4, end: 29.89 },
+    { label: "1l", start: 30.14, end: 33.07 },
+    { label: "1m", start: 33.32, end: 34.37 },
+    { label: "1n", start: 34.62, end: 38.13 },
+    { label: "1o", start: 38.38, end: 41.19 },
+    { label: "1p", start: 41.44, end: 43.31 },
+    { label: "1q", start: 43.56, end: 46.79 },
+    { label: "1r", start: 47.04, end: 49.91 },
+    { label: "1s", start: 50.16, end: 52.61 },
+    { label: "1t", start: 52.86, end: 56.27 },
+    { label: "1u", start: 56.52, end: 58.45 },
+    { label: "1v", start: 58.7, end: 61.27 },
+    { label: "1w", start: 61.52, end: 64.13 },
+    { label: "1x", start: 64.38, end: 67.39 },
+    { label: "1y", start: 67.64, end: 69.05 },
+    { label: "1z", start: 69.3, end: 70.79 },
+    { label: "1aa", start: 71.04, end: 73.19 },
+    { label: "1ab", start: 73.44, end: 76.59 },
+    { label: "1ac", start: 76.84, end: 80.45 },
+    { label: "1ad", start: 80.7, end: 84.05 },
+    { label: "1ae", start: 84.3, end: 86.59 },
+    { label: "1af", start: 86.84, end: 89.11 },
+    { label: "1ag", start: 89.36, end: 91.63 },
+    { label: "1ah", start: 91.88, end: 93.91 },
+    { label: "1ai", start: 94.16, end: 96.99 },
+    { label: "1aj", start: 97.24, end: 100.27 },
+    { label: "1ak", start: 100.52, end: 103.11 },
+    { label: "1al", start: 103.36, end: 107.03 },
+    { label: "1am", start: 107.28, end: 111.43 },
+    { label: "1an", start: 111.68, end: 117.63 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 117.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2 Yã ligd n yĩm zoodo&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">2 </span><span class="bd">Yã ligd n yĩm zoodo</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">A Ratzãnga ne a Sĩndbal yaa zoodo.</div> <div id="T1c" class="txs">Daar a yembre,</div> <div id="T1d" class="txs">b ra tũuda taab n kẽnd la b sõsda.</div> <div id="T1e" class="txs">B wa n yãa korg sẽn dɩg bãmb taoorã.</div> <div id="T1f" class="txs">B sẽn dɩk n lakã,</div> <div id="T1g" class="txs">b yãame tɩ ligd wʋsg n da be be.</div> <div id="T1h" class="txs">Tao bala,</div> <div id="T1i" class="txs">a Sĩndbal yeelame:</div></div>
+<div class="m"><div id="T1j" class="txs">- Ligd wã fãa!</div> <div id="T1k" class="txs">Ad tõnd zug nooma.</div></div>
+<div class="m"><div id="T1l" class="txs">T’a Ratzãng wẽneg n sok-a :</div></div>
+<div class="m"><div id="T1m" class="txs">- Bõe?</div> <div id="T1n" class="txs">Mam zug noom bɩ tõnd zug nooma&nbsp;?</div> <div id="T1o" class="txs">Ãnd n yã korgã n dɩke?</div> <div id="T1p" class="txs">Pa maam la&nbsp;?</div></div>
+<div class="m"><div id="T1q" class="txs">La a Sĩndbal pa bao n na n kɩɩs ye.</div> <div id="T1r" class="txs">A kell n sĩnda a noor bala.</div> <div id="T1s" class="txs">B sẽn gom korgã yell n sa,</div> <div id="T1t" class="txs">b kell n tara sõasg bal la b tutẽ.</div> <div id="T1u" class="txs">Sẽn kaoos bilfu,</div> <div id="T1v" class="txs">b wʋma bʋʋr sẽn tʋk poorẽ wã.</div></div>
+<div class="m"><div id="T1w" class="txs">Neb n da rigd wagdre.</div> <div id="T1x" class="txs">B sẽn yã a Ratzãng ne a Sĩndbalã,</div> <div id="T1y" class="txs">b yõk-b lame,</div> <div id="T1z" class="txs">n vaees b futã,</div> <div id="T1aa" class="txs">n yã korgã ne ligdã.</div> <div id="T1ab" class="txs">Mik yaa wagdr n sɩd da zuk korgã,</div> <div id="T1ac" class="txs">tɩ b sẽn digd-a wã t’a lobg la a zoe.</div> <div id="T1ad" class="txs">Wã masã la Ratzãng yeel yã:</div></div>
+<div class="m"><div id="T1ae" class="txs">- Ad yell paam tõndo!</div></div>
+<div class="m"><div id="T1af" class="txs">T’a Sĩndbal sok-a:</div></div>
+<div class="m"><div id="T1ag" class="txs">- Yell paam tõndo?</div> <div id="T1ah" class="txs">Ãnda?</div> <div id="T1ai" class="txs">Yell paam foo kae.</div> <div id="T1aj" class="txs">Pa foo n dɩk korgã la?</div> <div id="T1ak" class="txs">Mam toog be be?</div></div>
+<div class="m"><div id="T1al" class="txs">Nebã pema a Ratzãng n tall-a n kẽng na-yiri,</div> <div id="T1am" class="txs">n yaool n bas a Sĩndbal tɩ yẽ loog a loogre.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1an" class="txs"><span class="it">Kiba-kãngã wilgdame tɩ ned pa sedg n yã ligd n yĩm zood ye</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/mos/audio/02 Kinda cont vol 1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

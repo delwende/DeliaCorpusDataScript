@@ -1,0 +1,17 @@
+var books = [
+  { name: "16 LE FLAGRANT DÉLIT", ref: "01-B001-001.html" },
+  { name: "17 UN TIENS VAUT MIEUX", ref: "02-B002-001.html" },
+  { name: "18 BON COMME TU L’AS ÉTÉ", ref: "03-B003-001.html" },
+  { name: "19 LA COIFFURE DU RIVAL", ref: "04-B004-001.html" },
+  { name: "20 UN DRÔLE D’ÉTRANGER", ref: "05-B005-001.html" },
+  { name: "21 LE PEUL", ref: "06-B006-001.html" },
+  { name: "22 L’HÔTE PUNI", ref: "07-B007-001.html" },
+  { name: "23 LA VIEILLE FEMME ET", ref: "08-B008-001.html" },
+  { name: "24 LA FEMME DU CHEF", ref: "09-B009-001.html" },
+  { name: "25 LE DIFFICILE JUGEMENT", ref: "10-B010-001.html" },
+  { name: "26 LIÈVRE : LE", ref: "11-B011-001.html" },
+  { name: "27 LE SINGE ET LES", ref: "12-B012-001.html" },
+  { name: "28 LES DEUX AMIS", ref: "13-B013-001.html" },
+  { name: "29 QUAND LA MAISON DU", ref: "14-B014-001.html" },
+  { name: "30 LE CHASSEUR ET LE", ref: "15-B015-001.html" },
+];

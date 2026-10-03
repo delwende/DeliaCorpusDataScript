@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Chào mừng 23</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "104-B105-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='103-B104-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='104-B105-022.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Chào mừng&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;23&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='104-B105-024.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='105-B106-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B105-image23.jpeg" />
+
+<div class="m"><span class="bd">23) LÀM THẾ NÀO TÔI CÓ THỂ BIẾT NGƯỜI Ở NƯỚC NÀY?</span></div>
+<div class="m">Nhiều người châu Âu rất bận rộn trong cuộc sống hàng ngày do công việc và gia đình nên đôi khi rất khó để bắt chuyện tự nhiên với mọi người. Những sở thích mà người châu Âu cũng yêu thích là một cách hay để làm quen với mọi người.</div>
+<div class="m"><span class="bd">NHÓM VÀ CÂU LẠC BỘ</span></div>
+<div class="m">Nhiều người gặp nhau trong các nhóm và câu lạc bộ sau giờ làm việc để chơi thể thao hoặc chơi nhạc cùng nhau. Ví dụ: có đội hợp xướng, nhóm âm nhạc, câu lạc bộ thể thao, nhóm nấu ăn và câu lạc bộ máy tính. Mọi người làm quen với nhau thông qua sở thích chung của họ. Thông tin thường được đăng trên bảng thông báo ở các cửa hàng và thư viện. Bạn cũng có thể tìm thấy thông tin tổng quan về các hoạt động giải trí trên trang chủ của làng tương ứng.</div>
+<div class="m"><span class="bd">DỊCH VỤ THỜ PHƯỢNG</span></div>
+<div class="m">Các buổi lễ nhà thờ thường diễn ra vào các buổi sáng Chủ nhật vào khoảng 10 giờ sáng. Ở nhiều nhà thờ, bạn có thể trò chuyện bên tách cà phê sau buổi lễ. Bạn luôn có thể tham dự các buổi lễ nhà thờ với tư cách là khách. Thông tin về thời gian và chương trình thường được dán trên các bảng thông báo bên ngoài khuôn viên nhà thờ.</div>
+<div class="m"><span class="bd">NHÓM CHƠI DÀNH CHO GIA ĐÌNH</span></div>
+<div class="m">Thường có các nhóm vui chơi miễn phí dành cho các bậc cha mẹ có con nhỏ ở khu vực lân cận hoặc ở nhà thờ. Cha mẹ có con nhỏ gặp nhau ở đó. Trẻ em có thể chơi cùng nhau và bố mẹ có thể nói chuyện với nhau.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

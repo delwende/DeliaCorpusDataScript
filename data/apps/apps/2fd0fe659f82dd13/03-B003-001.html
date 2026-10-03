@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#083F0E">
+<title>21 Gbanŋmankoa n nii ti 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 4.62, end: 12.98 },
+    { label: "1b", start: 13.23, end: 19.25 },
+    { label: "1c", start: 19.5, end: 28.48 },
+    { label: "1d", start: 28.73, end: 37.95 },
+    { label: "1e", start: 38.2, end: 45.8 },
+    { label: "1f", start: 46.05, end: 54.69 },
+    { label: "1g", start: 54.94, end: 65.74 },
+    { label: "1h", start: 65.99, end: 72.49 },
+    { label: "1i", start: 72.74, end: 82.34 },
+    { label: "1j", start: 82.59, end: 91.61 },
+    { label: "1k", start: 91.86, end: 97.9 },
+    { label: "1l", start: 98.15, end: 107.01 },
+    { label: "1m", start: 107.26, end: 115.41 },
+    { label: "1n", start: 115.66, end: 118.93 },
+    { label: "1o", start: 119.18, end: 126.47 },
+    { label: "1p", start: 126.72, end: 136.73 },
+    { label: "1q", start: 136.98, end: 143.06 },
+    { label: "1r", start: 143.31, end: 154 },
+    { label: "1s", start: 154.25, end: 163.06 },
+    { label: "1t", start: 163.31, end: 168.31 },
+    { label: "1u", start: 168.56, end: 177.08 },
+    { label: "1v", start: 177.33, end: 186.28 },
+    { label: "1w", start: 186.53, end: 193.68 },
+    { label: "1x", start: 193.93, end: 202.6 },
+    { label: "1y", start: 202.85, end: 211.25 },
+    { label: "1z", start: 211.5, end: 217.84 },
+    { label: "1aa", start: 218.09, end: 226.17 },
+    { label: "1ab", start: 226.42, end: 235.74 },
+    { label: "1ac", start: 235.99, end: 239.95 },
+    { label: "1ad", start: 240.2, end: 250.2 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 4.62;
+var stopTime  = 250.2;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;21 Gbanŋmankoa n nii ti&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">21 <span class="bd">Gbanŋmankoa</span><span class="bd"> n </span><span class="bd">nii</span><span class="bd"> ti</span><span class="bd"> </span><span class="bd">kobi</span><span class="bd">di</span>.</div></div>
+<div class="m"><div id="T1b" class="txs"><span class="it">C'est celui qui se nourrit de peau qui a des poils dans les déchets.</span></div></div>
+<div class="m"><div id="T1c" class="txs">Gbanŋmankoa n nii ti kobidi.</div></div>
+<div class="m"><div id="T1d" class="txs">22 <span class="bd">Caano</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">bandi</span><span class="bd"> a </span><span class="bd">faama</span><span class="bd">, </span><span class="bd">cannaa</span><span class="bd"> n </span><span class="bd">waani</span><span class="bd"> o.</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">La découverte de votre mensonge par un étranger s'est faite avec la complicité de votre épouse.</span></div></div>
+<div class="m"><div id="T1f" class="txs">Caano yaa bandi a faama, cannaa n waani o.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs">23 <span class="bd">Tanpoli</span><span class="bd"> </span><span class="bd">ñoacuuli</span><span class="bd"> </span><span class="bd">nanga</span><span class="bd"> n </span><span class="bd">kpendi</span><span class="bd"> </span><span class="bd">leni</span><span class="bd"> </span><span class="bd">waligu</span><span class="bd"> </span><span class="bd">ñinkpadima</span>.</div></div>
+<div class="m"><div id="T1h" class="txs">C'est la haine des lèvres supérieures quifait que le sot ait des dents dehors.</div></div>
+<div class="m"><div id="T1i" class="txs">Tanpoli ñoacuuli nanga n kpendi leni waligu ñinkpadima</div></div>
+<div class="m"><div id="T1j" class="txs">24 <span class="bd">O </span><span class="bd">naa</span><span class="bd"> </span><span class="bd">kaagu</span><span class="bd"> po yo </span><span class="bd">ke</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">bonwaaga</span><span class="bd"> </span><span class="bd">ciliti</span><span class="bd"> </span><span class="bd">u </span><span class="bd">buopaadu</span>.</div></div>
+<div class="m"><div id="T1k" class="txs"><span class="it">C'est sur la natte de sa maman qu'un enfant apprend à différencier les clans.</span></div></div>
+<div class="m"><div id="T1l" class="txs">O naa kaagu po yo ke ki bonwaaga ciliti u buopaadu.</div></div>
+<div class="m"><div id="T1m" class="txs">25 <span class="bd">Yua</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">tuuni</span><span class="bd"> o </span><span class="bd">ba</span><span class="bd"> kan </span><span class="bd">bandi</span><span class="bd"> </span><span class="bd">tuonli</span>.</div></div>
+<div class="m"><div id="T1n" class="txs"><span class="it">Ne saura pas travailler, celui qui ne fait rien.</span></div></div>
+<div class="m"><div id="T1o" class="txs">Yua ki tuuni o ba kan bandi tuonli.</div></div>
+<div class="m"><div id="T1p" class="txs">26 <span class="bd">Yaa</span><span class="bd"> </span><span class="bd">dajenkuonli</span><span class="bd"> n </span><span class="bd">deni</span><span class="bd"> o </span><span class="bd">bulo</span><span class="bd"> n </span><span class="bd">paadi</span><span class="bd"> </span><span class="bd">leni</span><span class="bd"> yali.</span></div><div id="T1q" class="txs"><span class="it">C'est le bois sec adossé à un fétiche qui échappe aux coups de hache.</span></div></div>
+<div class="m"><div id="T1r" class="txs">Yaa dajenkuonli n deni o bulo n paadi leni yali.</div></div>
+<div class="m"><div id="T1s" class="txs">27 <span class="bd">Kan </span><span class="bd">laa</span><span class="bd"> </span><span class="bd">fe</span><span class="bd"> </span><span class="bd">se </span><span class="bd">yua</span><span class="bd"> n </span><span class="bd">loagidi</span><span class="bd"> u </span><span class="bd">sankunu</span><span class="bd"> </span><span class="bd">binnili</span>.</div></div>
+<div class="m"><div id="T1t" class="txs"><span class="it">Qui veut éviter la honte, évite de déféquer au bord de la route.</span></div></div>
+<div class="m"><div id="T1u" class="txs">Kan laa fe se yua n loagidi u sankunu binnili.</div></div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">28 </span><span class="bd">Dadadi</span><span class="bd"> n </span><span class="bd">cuani</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">yiega</span><span class="bd"> </span><span class="bd">padima</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1w" class="txs"><span class="it">C'est en voulant la tirer chacun de son côté que la cale basse finit par se casser.</span></div></div>
+<div class="m"><div id="T1x" class="txs">Dadadi n cuani ki yiega padima.</div></div>
+<div class="m"><div id="T1y" class="txs">29 <span class="bd">Tuuli</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> mua </span><span class="bd">nuani</span><span class="bd">, </span><span class="bd">yaala</span><span class="bd"> n </span><span class="bd">balini</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> go ta</span>.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="it">Si les termites s’attaquent aux oiseaux, c'est qu'ils ont fini avec tout ce qui rampe.</span></div></div>
+<div class="m"><div id="T1aa" class="txs">Tuuli yaa mua nuani, yaala n balini ki go ta.</div></div>
+<div class="m"><div id="T1ab" class="txs"><span class="bd">30 </span><span class="bd">Yaa</span><span class="bd"> </span><span class="bd">namo</span><span class="bd"> n </span><span class="bd">juni</span><span class="bd"> </span><span class="bd">tanli</span><span class="bd"> </span><span class="bd">biidi</span><span class="bd"> o </span><span class="bd">luoli</span><span class="bd"> (</span><span class="bd">tonma</span><span class="bd">).</span></div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="it">Gaspille son venin, le scorpion qui pique un caillou.</span></div></div>
+<div class="m"><div id="T1ad" class="txs">Yaa namo n juni tanli biidi o luoli (tonma).</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/03_prov_gulima_vol1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#083F0E">
+<title>298 Nunbankaaga kan pedi 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 4.46, end: 9.89 },
+    { label: "1b", start: 10.14, end: 13.2 },
+    { label: "1c", start: 13.45, end: 16.83 },
+    { label: "1d", start: 17.08, end: 20.5 },
+    { label: "1e", start: 20.75, end: 27.35 },
+    { label: "1f", start: 27.6, end: 35.25 },
+    { label: "1g", start: 35.5, end: 40.65 },
+    { label: "1h", start: 40.9, end: 44.52 },
+    { label: "1i", start: 44.77, end: 52.66 },
+    { label: "1j", start: 52.91, end: 60.79 },
+    { label: "1k", start: 61.04, end: 64.08 },
+    { label: "1l", start: 64.33, end: 69.44 },
+    { label: "1m", start: 69.69, end: 74.34 },
+    { label: "1n", start: 74.59, end: 78.47 },
+    { label: "1o", start: 78.72, end: 82.5 },
+    { label: "1p", start: 82.75, end: 89.64 },
+    { label: "1q", start: 89.89, end: 97.43 },
+    { label: "1r", start: 97.68, end: 102.3 },
+    { label: "1s", start: 102.55, end: 107.03 },
+    { label: "1t", start: 107.28, end: 113.92 },
+    { label: "1u", start: 114.17, end: 120.77 },
+    { label: "1v", start: 121.02, end: 124.57 },
+    { label: "1w", start: 124.82, end: 132.74 },
+    { label: "1x", start: 132.99, end: 141.2 },
+    { label: "1y", start: 141.45, end: 146.19 },
+    { label: "1z", start: 146.44, end: 150.36 },
+    { label: "1aa", start: 150.61, end: 155.37 },
+    { label: "1ab", start: 155.62, end: 160.81 },
+    { label: "1ac", start: 161.06, end: 169.67 },
+    { label: "1ad", start: 169.92, end: 176.32 },
+    { label: "1ae", start: 176.57, end: 177.33 },
+    { label: "1af", start: 177.58, end: 181.88 },
+    { label: "1ag", start: 182.13, end: 189.63 },
+    { label: "1ah", start: 189.88, end: 196.77 },
+    { label: "1ai", start: 197.02, end: 200.98 },
+    { label: "1aj", start: 201.23, end: 203.03 },
+    { label: "1ak", start: 203.28, end: 210.53 },
+    { label: "1al", start: 210.78, end: 218.87 },
+    { label: "1am", start: 219.12, end: 228.15 },
+    { label: "1an", start: 228.4, end: 233.2 },
+    { label: "1ao", start: 233.45, end: 242.17 },
+    { label: "1ap", start: 242.42, end: 248.86 },
+    { label: "1aq", start: 249.11, end: 252.53 },
+    { label: "1ar", start: 252.78, end: 256.33 },
+    { label: "1as", start: 256.58, end: 266.59 },
+    { label: "1at", start: 266.84, end: 272.86 },
+    { label: "1au", start: 273.11, end: 280.16 },
+    { label: "1av", start: 280.41, end: 284.43 },
+    { label: "1aw", start: 284.68, end: 292.1 },
+    { label: "1ax", start: 292.35, end: 297.37 },
+    { label: "1ay", start: 297.62, end: 304.16 },
+    { label: "1az", start: 304.41, end: 309.94 },
+    { label: "1ba", start: 310.19, end: 313.58 },
+    { label: "1bb", start: 313.83, end: 318.76 },
+    { label: "1bc", start: 319.01, end: 325.83 },
+    { label: "1bd", start: 326.08, end: 328.92 },
+    { label: "1be", start: 329.17, end: 333.7 },
+    { label: "1bf", start: 333.95, end: 339.36 },
+    { label: "1bg", start: 339.61, end: 349.61 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 4.46;
+var stopTime  = 349.61;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;298 Nunbankaaga kan pedi&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">298 Nunbankaaga kan pedi yali</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Un visage connu ne se frappe pas avec la hache.</div></div>
+<div class="m"><div id="T1c" class="txs">Sens : Tu ne feras rien de mal à celui que tu connais.</div></div>
+<div class="m"><div id="T1d" class="txs">Emploi : si ton ami veut ta farine de mil, tu peux lui dire ce proverbe.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">Nunbankaaga kan pedi yali</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">299 Ali nunbili bua nyasi len nungbangu o baa te nunyiekaabu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs">Si le globe de l'œil veut ressembler à la paupière, il deviendra un œil qui ne voit pas.</div></div>
+<div class="m"><div id="T1h" class="txs">Sens et emploi : se dit à un inférieur qui veut s'égaler à un supérieur.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Ali nunbili bua nyasi len nungbangu o baa te nunyiekaabu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">300a Nunbu la yaala kuli yaa tie jiema, o sangbanlo kan dua mi koma.</span></div></div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">300b Nunbu la yaa te jiema, boaga kan dua koma</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1l" class="txs">Si tout ce que l'œil voit était nourriture le chien ne se coucherait pas avec la faim.</div></div>
+<div class="m"><div id="T1m" class="txs">Sens : si tout ce que l`homme voit lui appartenait il n'y aurait pas de pauvre.</div></div>
+<div class="m"><div id="T1n" class="txs">Emploi : peut se dire à quelqu'un qui désire quelque chose, qu'il ne peut avoir.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">Nunbu la yaala kuli yaa tie jiema, o sangbanlo kan dua mi koma.</span></div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">Nunbu la yaa te jiema, boaga kan dua koma</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">301a N danli nunbu yaa tie n yaabu n yaa yaabu n cie</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">301b N duali nunbu te n yaabu, n nunceli yaa cie</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs">Si l'œil de mon ami est mon œil, mon propre œil est plus.</div></div>
+<div class="m"><div id="T1t" class="txs">Sens : si ton ami possède quelque chose de bien, c'est aussi à toi, mais ce que tu possèdes est mieux.</div></div>
+<div class="m"><div id="T1u" class="txs">Emploi : Quand tu demandes quelque chose à ton camarade, et que tu ne l'obtiennes pas, tu pourras dire ce proverbe.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">N danli nunbu yaa tie n yaabu n yaa yaabu n cie</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">N duali nunbu te n yaabu, n nunceli yaa cie</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">302 Nunfandanba lie yaa pua cieciena a baa nuugi, a kan daa</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs">Si deux malins font des beignets de haricots, ils vont pourrir.</div></div>
+<div class="m"><div id="T1z" class="txs">Ils ne seront pas achetés, parce qu'ils vont les faire trop petits.</div></div>
+<div class="m"><div id="T1aa" class="txs">Sens et emploi : se dit à deux amis qui se réunissent pour entreprendre quelque chose.</div> <div id="T1ab" class="txs">Comme l'un se croit plus malin que l'autre, l’entreprise ne va pas réussir.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">Nunfandanba lie yaa pua cieciena a baa nuugi, a kan daa</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">303 Nunfandanbi lie yaa jagini ŋunbo o gudu ba kua</span>.</div><div id="T1ae" class="txs"><br/></div></div>
+<div class="m"><div id="T1af" class="txs">Si deux astucieux montent un âne son dos va se briser.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ag" class="txs"><span class="bd">Nunfandanbi lie yaa jagini ŋunbo o gudu ba kua</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">304 A ñima yaa dagidi a walima an fa a nunga</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ai" class="txs">Si ton eau ne suffit pas pour ton bain, lave ton visage.</div></div>
+<div class="m"><div id="T1aj" class="txs">Sens : agis selon tes moyens.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">A ñima yaa dagidi a walima an fa a nunga</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1al" class="txs"><span class="bd">305 Nitoa nungbakobigu yaa ye, li kan biidi n guama</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1am" class="txs">Si quelqu'un n'a pas de sourcils, parce qu'ils ont été arrachés, ça ne gâtera pas mon sommeil (c’est-à-dire, ça ne m'empêchera pas de dormir.)</div></div>
+<div class="m"><div id="T1an" class="txs">Sens : même si un malheur arrive à mon voisin, ça ne m'empêchera pas de dormir.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ao" class="txs"><span class="bd">Nitoa nungbakobigu yaa ye, li kan biidi n guama</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ap" class="txs"><span class="bd">306 </span><span class="bd">Ba n</span><span class="bd">acua </span><span class="bd">yaa </span><span class="bd">kpe</span><span class="bd">,</span><span class="bd"> </span><span class="bd">o </span><span class="bd">nunkudumu </span><span class="bd">ka</span><span class="bd">n bori</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aq" class="txs">Même si une sauterelle meurt, ses yeux ne se perdent pas.</div></div>
+<div class="m"><div id="T1ar" class="txs">Ils seront toujours dehors comme s'ils vivaient.</div></div>
+<div class="m"><div id="T1as" class="txs">Sens et emploi : se dit à un orgueilleux ou à un voleur qui malgré leurs malheurs ou souffrances, resteront ce qu'ils sont, orgueilleux ou voleurs, même si on les fait souffrir.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1at" class="txs"><span class="bd">Ba n</span><span class="bd">acua </span><span class="bd">yaa </span><span class="bd">kpe</span><span class="bd">,</span><span class="bd"> </span><span class="bd">o </span><span class="bd">nunkudumu </span><span class="bd">ka</span><span class="bd">n bori</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1au" class="txs"><span class="bd">307 Nunmoandikaabu kan sia diegu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1av" class="txs">Un regard mauvais ne mettra pas le feu à la concession.</div></div>
+<div class="m"><div id="T1aw" class="txs">Sens : si tu méprises quelqu'un et que tu n'as pas sa force (que tu ne peux rien lui faire) il pourra te dire ce proverbe.</div></div>
+<div class="m"><div id="T1ax" class="txs">La personne qui n'est pas aimée dira ce proverbe à celle qui ne l'aime pas.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ay" class="txs"><span class="bd">Nunmoandikaabu kan sia diegu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1az" class="txs"><span class="bd">308 Nunmuanli kan sia diegu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ba" class="txs">Un regard haineux ne met pas le feu aux cases.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bb" class="txs"><span class="bd">Nunmuanli kan sia diegu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bc" class="txs"><span class="bd">309 Nunyenbu daano n daa laa juamo</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bd" class="txs">Le borgne ne se moque pas de l'aveugle.</div></div>
+<div class="m"><div id="T1be" class="txs">Sens : se dit à celui qui a une femme et qui se moque d'un célibataire.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bf" class="txs"><span class="bd">Nunyenbu daano n daa laa juamo</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bg" class="txs">.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/11 prov gul vol2.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

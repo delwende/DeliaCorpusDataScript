@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>27 Tous sont concernés 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.17 },
+    { label: "1b", start: 3.42, end: 4.45 },
+    { label: "1c", start: 4.7, end: 7.07 },
+    { label: "1d", start: 7.32, end: 12.11 },
+    { label: "1e", start: 12.36, end: 15.75 },
+    { label: "1f", start: 16, end: 17.57 },
+    { label: "1g", start: 17.82, end: 18.69 },
+    { label: "1h", start: 18.94, end: 19.73 },
+    { label: "1i", start: 19.98, end: 21.21 },
+    { label: "1j", start: 21.46, end: 26.11 },
+    { label: "1k", start: 26.36, end: 33.65 },
+    { label: "1l", start: 33.9, end: 39.75 },
+    { label: "1m", start: 40, end: 44.23 },
+    { label: "1n", start: 44.48, end: 47.31 },
+    { label: "1o", start: 47.56, end: 53.37 },
+    { label: "1p", start: 53.62, end: 57.15 },
+    { label: "1q", start: 57.4, end: 59.19 },
+    { label: "1r", start: 59.44, end: 61.63 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 61.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "28-B028-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='27-B027-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='27-B027-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;27 Tous sont concernés&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='29-B032-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='29-B032-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B028-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">27 Tous sont concernés par l’excision (7)</span><span class="bd">&nbsp;!</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="it">Questions:</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="it">- Que voyez-vous sur le dessin?</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">- Voulez-vous vous engager à lutter contre l’excision?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs">L’image montre un village qui a renoncé à l’excision.</div> <div id="T1f" class="txs">On voit des hommes,</div> <div id="T1g" class="txs">des femmes,</div> <div id="T1h" class="txs">des vieux,</div> <div id="T1i" class="txs">des enfants.</div> <div id="T1j" class="txs">Tous ont renoncé à l’excision et le disent fièrement!</div></div>
+<div class="m"><div id="T1k" class="txs">Engageons-nous à lutter contre l’excision et à protéger nos filles et femmes non excisées.</div></div>
+<div class="m"><div id="T1l" class="txs">Elles sont épanouies et font la fierté de nos communautés et villages.</div></div>
+<div class="m"><div id="T1m" class="txs">Engageons-nous à ne pas nous faire exciser.</div></div>
+<div class="m"><div id="T1n" class="txs">Engageons-nous à ne pas exciser nos filles.</div></div>
+<div class="m"><div id="T1o" class="txs">Nous voulons que nos villages et quartiers soient connus pour être des villages sans excision!</div></div>
+<div class="m"><div id="T1p" class="txs">Soyons fiers de nos filles non excisées.</div> <div id="T1q" class="txs">Ensemble,</div> <div id="T1r" class="txs">abandonnons cette mauvaise pratique!</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/27AUD-20230320-WA0005.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Médiation 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.55 },
+    { label: "1b", start: 1.8, end: 6.47 },
+    { label: "1c", start: 6.72, end: 7.69 },
+    { label: "1d", start: 7.94, end: 9.05 },
+    { label: "1e", start: 9.3, end: 10.49 },
+    { label: "1f", start: 10.74, end: 14.23 },
+    { label: "1g", start: 14.48, end: 17.23 },
+    { label: "1h", start: 17.48, end: 19.47 },
+    { label: "1i", start: 19.72, end: 21.89 },
+    { label: "1j", start: 22.14, end: 25.53 },
+    { label: "1k", start: 25.78, end: 26.99 },
+    { label: "1l", start: 27.24, end: 29.91 },
+    { label: "1m", start: 30.16, end: 34.59 },
+    { label: "1n", start: 34.84, end: 36.91 },
+    { label: "1o", start: 37.16, end: 39.15 },
+    { label: "1p", start: 39.4, end: 43.27 },
+    { label: "1q", start: 43.52, end: 45.73 },
+    { label: "1r", start: 45.98, end: 49.41 },
+    { label: "1s", start: 49.66, end: 51.59 },
+    { label: "1t", start: 51.84, end: 54.61 },
+    { label: "1u", start: 54.86, end: 59.41 },
+    { label: "1v", start: 59.66, end: 63.17 },
+    { label: "1w", start: 63.42, end: 70.95 },
+    { label: "1x", start: 71.2, end: 74.23 },
+    { label: "1y", start: 74.48, end: 79.03 },
+    { label: "1z", start: 79.28, end: 82.57 },
+    { label: "1aa", start: 82.82, end: 87.87 },
+    { label: "1ab", start: 88.12, end: 91.59 },
+    { label: "1ac", start: 91.84, end: 93.17 },
+    { label: "1ad", start: 93.42, end: 95.95 },
+    { label: "1ae", start: 96.2, end: 98.51 },
+    { label: "1af", start: 98.76, end: 102.17 },
+    { label: "1ag", start: 102.42, end: 103.69 },
+    { label: "1ah", start: 103.94, end: 109.41 },
+    { label: "1ai", start: 109.66, end: 113.19 },
+    { label: "1aj", start: 113.44, end: 116.05 },
+    { label: "1ak", start: 116.3, end: 118.59 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 118.59;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "58-B062-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='57-B052-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='57-B052-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Médiation&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='59-B053-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='59-B053-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B062-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Médiation</span></div></div>
+<div class="m"><div id="T1b" class="txs">Comment résoudre des conflits quand on ne connaît pas la culture de l’intérieur&nbsp;?</div> <div id="T1c" class="txs">Heureusement,</div> <div id="T1d" class="txs">il existe un chemin :</div> <div id="T1e" class="txs">la médiation.</div></div>
+<div class="m"><div id="T1f" class="txs">Quelles sont les caractéristiques d’un bon médiateur&nbsp;?</div> <div id="T1g" class="txs">Il doit avoir la confiance des deux parties,</div> <div id="T1h" class="txs">ou tout au moins être respecté.</div> <div id="T1i" class="txs">Et il doit comprendre le problème,</div> <div id="T1j" class="txs">sans toutefois être trop directement partie prenante.</div></div>
+<div class="m"><div id="T1k" class="txs">Pour un Européen,</div> <div id="T1l" class="txs">tout cela demande de réviser ses conceptions.</div> <div id="T1m" class="txs">Les Européens partent du principe que le coupable doit demander pardon.</div> <div id="T1n" class="txs">Dans un contexte de l’honneur,</div> <div id="T1o" class="txs">cela paraît insolent et blessant.</div> <div id="T1p" class="txs">«&nbsp;<span class="it">Il ose se présenter devant moi après tout ce qui est arrivé</span><span class="it"> </span><span class="it">?</span>»</div> <div id="T1q" class="txs">Le coupable montre qu’il regrette,</div> <div id="T1r" class="txs">précisément par le fait qu’il a recours à un médiateur.</div> <div id="T1s" class="txs">Ce n’est pas une échappatoire,</div> <div id="T1t" class="txs">comme on peut le penser dans l’optique européenne.</div></div>
+<div class="m"><div id="T1u" class="txs">Faire intervenir un médiateur soulage beaucoup la personne en difficulté.</div> <div id="T1v" class="txs">L’inconvénient de cette procédure est qu'elle prend du temps.</div> <div id="T1w" class="txs">Mais ne vaut-il pas mieux perdre un peu de temps au départ pour éviter d'aboutir à une discorde après une confrontation directe&nbsp;?</div></div>
+<div class="m"><div id="T1x" class="txs">Où peut-on trouver des médiateurs capables&nbsp;?</div> <div id="T1y" class="txs">Le cercle des personnes qui ont une expérience interculturelle s'élargit :</div> <div id="T1z" class="txs">ce sont des gens qui ont fait un séjour assez long à l’étranger,</div> <div id="T1aa" class="txs">ou bien des migrants de la première ou de la deuxième génération qui sont à l'aise dans les deux cultures,</div> <div id="T1ab" class="txs">ou encore des personnes qui ont des connaissances en médiation.</div> <div id="T1ac" class="txs">Tous peuvent apprendre,</div> <div id="T1ad" class="txs">en n'éludant pas les tensions interculturelles,</div> <div id="T1ae" class="txs">mais en cherchant des solutions constructives,</div> <div id="T1af" class="txs">et ainsi ils se qualifient en tant que médiateurs possibles.</div></div>
+<div class="m"><div id="T1ag" class="txs">Sans médiation,</div> <div id="T1ah" class="txs">on court le risque que chaque partie cherche affirmation et harmonie dans le groupe social le plus accueillant,</div> <div id="T1ai" class="txs">et c’est souvent le groupe dont l’arrière-plan est de même culture.</div> <div id="T1aj" class="txs">A chaque échec la frustration augmente,</div> <div id="T1ak" class="txs">et le fossé se creuse entre les groupes.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/29 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/29 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/29 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

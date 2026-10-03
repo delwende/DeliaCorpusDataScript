@@ -1,0 +1,17 @@
+var books = [
+  { name: "Sammbo cuusu", ref: "01-B001-001.html" },
+  { name: "Debbo cennditiiɗo", ref: "02-B002-001.html" },
+  { name: "Soni so Alla waray, kaana", ref: "03-B003-001.html" },
+  { name: "Poolel", ref: "04-B004-001.html" },
+  { name: "Yaare e fowru", ref: "05-B005-001.html" },
+  { name: "Kuse teewu", ref: "06-B006-001.html" },
+  { name: "Jaadiraaɓe", ref: "07-B007-001.html" },
+  { name: "Ɓoccooɗe Buugalel", ref: "08-B008-001.html" },
+  { name: "Ndotti", ref: "09-B009-001.html" },
+  { name: "Jamalenngu", ref: "10-B010-001.html" },
+  { name: "Hayndeeji", ref: "11-B011-001.html" },
+  { name: "Dey Maana e korɗom", ref: "12-B012-001.html" },
+  { name: "Dem-mawɗo e laayoorum", ref: "13-B013-001.html" },
+  { name: "Wuugaandu e lewla", ref: "14-B014-001.html" },
+  { name: "Kiram kaananke", ref: "15-B015-001.html" },
+];

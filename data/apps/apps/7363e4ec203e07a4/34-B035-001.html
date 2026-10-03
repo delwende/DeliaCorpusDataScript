@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conclusion 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.27 },
+    { label: "1b", start: 1.52, end: 2.41 },
+    { label: "1c", start: 2.66, end: 8.03 },
+    { label: "1d", start: 8.28, end: 16.25 },
+    { label: "1e", start: 16.5, end: 17.25 },
+    { label: "1f", start: 17.5, end: 18.43 },
+    { label: "1g", start: 18.68, end: 27.83 },
+    { label: "1h", start: 28.08, end: 33.11 },
+    { label: "1i", start: 33.36, end: 37.89 },
+    { label: "1j", start: 38.14, end: 46.61 },
+    { label: "1k", start: 46.86, end: 51.81 },
+    { label: "1l", start: 52.06, end: 58.47 },
+    { label: "1m", start: 58.72, end: 62.63 },
+    { label: "1n", start: 62.88, end: 69.75 },
+    { label: "1o", start: 70, end: 73.33 },
+    { label: "1p", start: 73.58, end: 75.13 },
+    { label: "1q", start: 75.38, end: 81.03 },
+    { label: "1r", start: 81.28, end: 87.79 },
+    { label: "1s", start: 88.04, end: 93.71 },
+    { label: "1t", start: 93.96, end: 98.43 },
+    { label: "1u", start: 98.68, end: 102.47 },
+    { label: "1v", start: 102.72, end: 108.15 },
+    { label: "1w", start: 108.4, end: 110.43 },
+    { label: "1x", start: 110.68, end: 112.63 },
+    { label: "1y", start: 112.88, end: 115.95 },
+    { label: "1z", start: 116.2, end: 119.03 },
+    { label: "1aa", start: 119.28, end: 123.87 },
+    { label: "1ab", start: 124.12, end: 129.87 },
+    { label: "1ac", start: 130.12, end: 134.69 },
+    { label: "1ad", start: 134.94, end: 135.87 },
+    { label: "1ae", start: 136.12, end: 142.41 },
+    { label: "1af", start: 142.66, end: 146.69 },
+    { label: "1ag", start: 146.94, end: 149.07 },
+    { label: "1ah", start: 149.32, end: 152.61 },
+    { label: "1ai", start: 152.86, end: 159.41 },
+    { label: "1aj", start: 159.66, end: 167.49 },
+    { label: "1ak", start: 167.74, end: 168.95 },
+    { label: "1al", start: 169.2, end: 175.25 },
+    { label: "1am", start: 175.5, end: 179.65 },
+    { label: "1an", start: 179.9, end: 185.13 },
+    { label: "1ao", start: 185.38, end: 186.29 },
+    { label: "1ap", start: 186.54, end: 196.63 },
+    { label: "1aq", start: 196.88, end: 200.79 },
+    { label: "1ar", start: 201.04, end: 205.15 },
+    { label: "1as", start: 205.4, end: 210.29 },
+    { label: "1at", start: 210.54, end: 214.15 },
+    { label: "1au", start: 214.4, end: 220.93 },
+    { label: "1av", start: 221.18, end: 226.11 },
+    { label: "1aw", start: 226.36, end: 233.87 },
+    { label: "1ax", start: 234.12, end: 238.39 },
+    { label: "1ay", start: 238.64, end: 240.13 },
+    { label: "1az", start: 240.38, end: 249.21 },
+    { label: "1ba", start: 249.46, end: 252.13 },
+    { label: "1bb", start: 252.38, end: 257.55 },
+    { label: "1bc", start: 257.8, end: 260.41 },
+    { label: "1bd", start: 260.66, end: 261.73 },
+    { label: "1be", start: 261.98, end: 266.59 },
+    { label: "1bf", start: 266.84, end: 268.23 },
+    { label: "1bg", start: 268.48, end: 271.61 },
+    { label: "1bh", start: 271.86, end: 275.49 },
+    { label: "1bi", start: 275.74, end: 280.71 },
+    { label: "1bj", start: 280.96, end: 282.15 },
+    { label: "1bk", start: 282.4, end: 283.25 },
+    { label: "1bl", start: 283.5, end: 288.89 },
+    { label: "1bm", start: 289.14, end: 290.61 },
+    { label: "1bn", start: 290.86, end: 295.21 },
+    { label: "1bo", start: 295.46, end: 300.87 },
+    { label: "1bp", start: 301.12, end: 304.47 },
+    { label: "1bq", start: 304.72, end: 311.61 },
+    { label: "1br", start: 311.86, end: 313.97 },
+    { label: "1bs", start: 314.22, end: 317.71 },
+    { label: "1bt", start: 317.96, end: 322.51 },
+    { label: "1bu", start: 322.76, end: 325.43 },
+    { label: "1bv", start: 325.68, end: 335.23 },
+    { label: "1bw", start: 335.48, end: 339.23 },
+    { label: "1bx", start: 339.48, end: 339.89 },
+    { label: "1by", start: 340.14, end: 342.57 },
+    { label: "1bz", start: 342.82, end: 344.69 },
+    { label: "1ca", start: 344.94, end: 347.99 },
+    { label: "1cb", start: 348.24, end: 349.85 },
+    { label: "1cc", start: 350.1, end: 351.05 },
+    { label: "1cd", start: 351.3, end: 352.73 },
+    { label: "1ce", start: 352.98, end: 356.03 },
+    { label: "1cf", start: 356.28, end: 357.57 },
+    { label: "1cg", start: 357.82, end: 360.37 },
+    { label: "1ch", start: 360.62, end: 363.25 },
+    { label: "1ci", start: 363.5, end: 367.37 },
+    { label: "1cj", start: 367.62, end: 372.07 },
+    { label: "1ck", start: 372.32, end: 375.15 },
+    { label: "1cl", start: 375.4, end: 377.83 },
+    { label: "1cm", start: 378.08, end: 382.21 },
+    { label: "1cn", start: 382.46, end: 383.21 },
+    { label: "1co", start: 383.46, end: 384.41 },
+    { label: "1cp", start: 384.66, end: 385.85 },
+    { label: "1cq", start: 386.1, end: 388.25 },
+    { label: "1cr", start: 388.5, end: 394.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 394.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "34-B035-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='33-B033-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='33-B033-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conclusion&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='35-B034-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='35-B034-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B035-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conclusion</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1b" class="txs"><span class="bd">Pour finir,</span></div> <div id="T1c" class="txs"><span class="bd">voici une histoire qui reprend beaucoup de conseils qui ont été exposés dans ce livre.</span></div> <div id="T1d" class="txs"><span class="bd">Ils permettent d’imaginer les changements concrets qui peuvent se passer dans une vie si le lecteur met en pratique ce qu’il a compris.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1e" class="txs">Histoire:</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="it">Chaque jour,</span></div> <div id="T1g" class="txs"><span class="it">Esther envoie ses 4 enfants à l’école et leur donne à chacun 50 CFA pour payer quelque chose (200 CFA).</span></div> <div id="T1h" class="txs"><span class="it">Ils lui disent de ne pas oublier de leur ramener quelque chose du marché.</span></div> <div id="T1i" class="txs"><span class="it">Elle part ensuite en ville en moto (500 CFA).</span></div> <div id="T1j" class="txs"><span class="it">Elle paie un sac (50 CFA) </span><span class="it">pour </span><span class="it">mettre les condiments pour la sauce (4’000 CFA).</span></div> <div id="T1k" class="txs"><span class="it">Elle voit une jolie paire de chaussures qu’elle achète (2’000 CFA).</span></div> <div id="T1l" class="txs"><span class="it">Elle paie l’eau (50 CFA) et un gâteau qui lui fait envie (25 CFA).</span></div> <div id="T1m" class="txs"><span class="it">Elle paie 4 bonbons pour ses enfants (100 CFA).</span></div> <div id="T1n" class="txs"><span class="it">Elle paie le charbon (400 CFA) et les unités pour le téléphone (1’000 CFA).</span></div> <div id="T1o" class="txs"><span class="it">Elle rentre en taxi (500 CFA).</span></div> <div id="T1p" class="txs"><span class="it">Plus tard dans la journée,</span></div> <div id="T1q" class="txs"><span class="it">elle reprend le taxi (500 CFA) pour aller saluer une famille en deuil.</span></div> <div id="T1r" class="txs"><span class="it">Elle fait un don (2’000 CFA) et rentre en taxi (500 CFA).</span></div> <div id="T1s" class="txs"><span class="it">Elle a dépensé 11’825 CFA aujourd’hui et n’a plus d’argent.</span></div> <div id="T1t" class="txs"><span class="it">Quand le directeur lui dit qu’il faut payer le reste des frais de scolarité,</span></div> <div id="T1u" class="txs"><span class="it">elle est obligée d’aller emprunter de l’argent et payer des intérêts.</span></div> <div id="T1v" class="txs"><span class="it">Esther trouve sa vie difficile car elle n’a jamais assez d’argent pour payer toutes ses dépenses.</span></div> <div id="T1w" class="txs"><span class="it">Quand elle se couche le soir,</span></div> <div id="T1x" class="txs"><span class="it">sa tête est pleine de</span><span class="it"> </span><span class="it">souci.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs"><span class="it">Esther fait une formation pour mieux gérer ses biens.</span></div> <div id="T1z" class="txs"><span class="it">Elle apprend à réfléchir avant de dépenser.</span></div> <div id="T1aa" class="txs"><span class="it">Comme elle n’a pas assez d’argent pour couvrir toutes les dépenses qu’elle aimerait faire,</span></div> <div id="T1ab" class="txs"><span class="it">elle choisit de dépenser pour ce qui est prioritaire et de limiter les dépenses secondaires.</span></div> <div id="T1ac" class="txs"><span class="it">Elle a appris à ne pas gaspiller et à lutter contre les petits voleurs</span><span class="it"> </span><span class="it">d’argent.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs"><span class="it">Ce matin,</span></div> <div id="T1ae" class="txs"><span class="it">elle a payé 4 bananes pour 100 CFA et envoie chacun de ses enfants à l’école avec une banane.</span></div> <div id="T1af" class="txs"><span class="it">Quand ils lui disent de ne  pas oublier de leur ramener quelque chose du marché,</span></div> <div id="T1ag" class="txs"><span class="it">elle leur rappelle que malheureusement,</span></div> <div id="T1ah" class="txs"><span class="it">elle ne peut pas leur ramener toujours quelque</span><span class="it"> </span><span class="it">chose</span><span class="it"> </span><span class="it">du marché.</span></div> <div id="T1ai" class="txs"><span class="it">Elle leur explique que c’est plus important de payer l’école aux enfants que de leur payer des bonbons.</span></div> <div id="T1aj" class="txs"><span class="it">Elle sait qu’elle ira saluer pour le décès donc elle prévoit y aller en même temps qu’elle va au marché pour limiter les déplacements.</span></div> <div id="T1ak" class="txs"><span class="it">Avant de partir,</span></div> <div id="T1al" class="txs"><span class="it">elle s’assure de ne pas prendre trop d’argent avec elle au marché pour résister aux tentations sur le chemin.</span></div> <div id="T1am" class="txs"><span class="it">Elle renonce à prendre le taxi pour aller et choisit de marcher.</span></div> <div id="T1an" class="txs"><span class="it">Elle prend à la maison des sacs pour ne pas devoir en acheter de nouveaux en ville.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ao" class="txs"><span class="it">Au marché,</span></div> <div id="T1ap" class="txs"><span class="it">elle décide de payer le poisson mais de diminuer le prix </span><span class="it">des </span><span class="it">piments et de l’huile car elle sait que le piment et l’huile ne sont pas importants comme le poisson.</span></div> <div id="T1aq" class="txs"><span class="it">Elle préfère le sel qui coûte moins cher que le cube Maggie.</span></div> <div id="T1ar" class="txs"><span class="it">L’achat des condiments lui coûte 2’500 CFA.</span></div> <div id="T1as" class="txs"><span class="it">Maintenant qu’elle fait attention à n’utiliser que le charbon vraiment nécessaire,</span></div> <div id="T1at" class="txs"><span class="it">elle sait que 300 CFA de charbon lui suffit.</span></div> <div id="T1au" class="txs"><span class="it">Elle veut boire mais n’a pas besoin de payer l’eau en sachet car elle a un pris un petit bidon d’eau à la maison.</span></div> <div id="T1av" class="txs"><span class="it">Elle voit un gâteau qu’elle aime beaucoup mais ne s’arrête pas pour l’acheter.</span></div> <div id="T1aw" class="txs"><span class="it">Elle a décidé de se payer seulement une fois par semaine ce gâteau mais pas à chaque fois qu’elle en trouve.</span></div> <div id="T1ax" class="txs"><span class="it">Elle paie les unités pour le téléphone pour 300 CFA seulement.</span></div> <div id="T1ay" class="txs"><span class="it">Elle voit des jolies chaussures.</span></div> <div id="T1az" class="txs"><span class="it">Elle sait qu’elle a assez d’argent avec elle mais elle renonce à les payer car celles qu’elle a sont encore en assez bon état.</span></div> <div id="T1ba" class="txs"><span class="it">Elle va ensuite sur le lieu du décès.</span></div> <div id="T1bb" class="txs"><span class="it">Elle aimerait faire un don plus généreux mais elle sait que ses moyens sont limités.</span></div> <div id="T1bc" class="txs"><span class="it">Elle décide </span><span class="it">de </span><span class="it">donner 1’000 CFA.</span></div> <div id="T1bd" class="txs"><span class="it">Pour le retour,</span></div> <div id="T1be" class="txs"><span class="it">elle rentre en taxi (500 CFA) car elle est</span><span class="it"> </span><span class="it">fatiguée.</span></div></div>
+<div class="m"><div id="T1bf" class="txs"><span class="it">Elle rentre à la maison,</span></div> <div id="T1bg" class="txs"><span class="it">satisfaite d’avoir fait attention à ses dépenses.</span></div> <div id="T1bh" class="txs"><span class="it">Elle a dépensé seulement 4’700 CFA.</span></div> <div id="T1bi" class="txs"><span class="it">Elle sort d’une cachette 4 enveloppes qu’elle a cachées avec son mari.</span></div> <div id="T1bj" class="txs"><span class="it">Sur les enveloppes,</span></div> <div id="T1bk" class="txs"><span class="it">il est écrit:</span></div> <div id="T1bl" class="txs"><span class="it">frais médicaux - écolage - cas sociaux - projet panneau solaire.</span></div><div id="T1bm" class="txs"><span class="it">Comme chaque semaine,</span></div> <div id="T1bn" class="txs"><span class="it">elle dépose 1’000 CFA dans chacune de ces enveloppes.</span></div></div>
+<div class="m"><div id="T1bo" class="txs"><span class="it">Elle va payer la fin de l’écolage des enfants avec l’argent épargné pour l’école.</span></div></div>
+<div class="m"><div id="T1bp" class="txs"><span class="it">Esther se couche le soir avec le cœur tranquille.</span></div> <div id="T1bq" class="txs"><span class="it">Elle remercie Dieu de l’avoir aidée à changer des choses dans sa vie et elle lui fait confiance pour demain.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1br" class="txs"><span class="it">Que pensez-vous de cette histoire?</span></div> <div id="T1bs" class="txs"><span class="it">Quels conseils de ce livre Esther a suivi?</span></div> <div id="T1bt" class="txs"><span class="it">Quels conseils avez-vous déjà mis en pratique dans votre propre vie?</span></div> <div id="T1bu" class="txs"><span class="it">Comment vous aident-ils au quotidien?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1bv" class="txs">Le but de tous ces exercices a été de vous aider à mieux connaître vos besoins essentiels et de gérer avec sagesse ce que vous avez.</div> <div id="T1bw" class="txs">C’est ainsi que de nombreuses notions ont été abordées,</div> <div id="T1bx" class="txs">comme:</div> <div id="T1by" class="txs">réfléchir avant de faire une dépense;</div> <div id="T1bz" class="txs">définir des priorités;</div> <div id="T1ca" class="txs">renoncer à des dépenses pour les diminuer;</div> <div id="T1cb" class="txs">éviter le gaspillage;</div> <div id="T1cc" class="txs">travailler;</div> <div id="T1cd" class="txs">augmenter les revenus;</div> <div id="T1ce" class="txs">réfléchir aux emprunts et à l’épargne.</div> <div id="T1cf" class="txs">Ces conseils,</div> <div id="T1cg" class="txs">si ils sont vécus dans la crainte de Dieu,</div> <div id="T1ch" class="txs">avec justice et respect du prochain,</div> <div id="T1ci" class="txs">peuvent aider de nombreuses personnes à mieux gérer leurs biens,</div> <div id="T1cj" class="txs">et ainsi participer au développement des familles et des communautés.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ck" class="txs">Si ces principes vous ont aidés,</div> <div id="T1cl" class="txs">n’hésitez pas à les partager à d’autres.</div> <div id="T1cm" class="txs">Enseignez-les à vos enfants mais aussi à vos voisins,</div> <div id="T1cn" class="txs">vos proches,</div> <div id="T1co" class="txs">vos communautés.</div> <div id="T1cp" class="txs">Car finalement,</div> <div id="T1cq" class="txs">s’il est vécu de la bonne façon,</div> <div id="T1cr" class="txs">le développement des uns bénéficie au bien-être de tous.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/042_Conclusion.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

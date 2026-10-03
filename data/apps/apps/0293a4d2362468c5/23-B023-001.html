@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>6 d) La Bible : la Parole 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.63 },
+    { label: "1b", start: 1.88, end: 2.79 },
+    { label: "1c", start: 3.04, end: 3.97 },
+    { label: "1d", start: 4.22, end: 6.57 },
+    { label: "1e", start: 6.82, end: 9.57 },
+    { label: "1f", start: 9.82, end: 13.29 },
+    { label: "1g", start: 13.54, end: 18.05 },
+    { label: "1h", start: 18.3, end: 21.15 },
+    { label: "1i", start: 21.4, end: 22.19 },
+    { label: "1j", start: 22.44, end: 27.33 },
+    { label: "1k", start: 27.58, end: 29.91 },
+    { label: "1l", start: 30.16, end: 30.63 },
+    { label: "1m", start: 30.88, end: 34.21 },
+    { label: "1n", start: 34.46, end: 37.63 },
+    { label: "1o", start: 37.88, end: 39.27 },
+    { label: "1p", start: 39.52, end: 42.97 },
+    { label: "1q", start: 43.22, end: 43.67 },
+    { label: "1r", start: 43.92, end: 46.05 },
+    { label: "1s", start: 46.3, end: 49.11 },
+    { label: "1t", start: 49.36, end: 52.67 },
+    { label: "1u", start: 52.92, end: 56.43 },
+    { label: "1v", start: 56.68, end: 60.51 },
+    { label: "1w", start: 60.76, end: 62.25 },
+    { label: "1x", start: 62.5, end: 65.63 },
+    { label: "1y", start: 65.88, end: 72.55 },
+    { label: "1z", start: 72.8, end: 74.65 },
+    { label: "1aa", start: 74.9, end: 80.07 },
+    { label: "1ab", start: 80.32, end: 81.17 },
+    { label: "1ac", start: 81.42, end: 82.07 },
+    { label: "1ad", start: 82.32, end: 84.89 },
+    { label: "1ae", start: 85.14, end: 86.03 },
+    { label: "1af", start: 86.28, end: 88.65 },
+    { label: "1ag", start: 88.9, end: 90.07 },
+    { label: "1ah", start: 90.32, end: 91.77 },
+    { label: "1ai", start: 92.02, end: 93.73 },
+    { label: "1aj", start: 93.98, end: 96.95 },
+    { label: "1ak", start: 97.2, end: 101.39 },
+    { label: "1al", start: 101.64, end: 102.37 },
+    { label: "1am", start: 102.62, end: 104.55 },
+    { label: "1an", start: 104.8, end: 108.73 },
+    { label: "1ao", start: 108.98, end: 113.47 },
+    { label: "1ap", start: 113.72, end: 117.47 },
+    { label: "1aq", start: 117.72, end: 121.15 },
+    { label: "1ar", start: 121.4, end: 124.97 },
+    { label: "1as", start: 125.22, end: 127.07 },
+    { label: "1at", start: 127.32, end: 129.83 },
+    { label: "1au", start: 130.08, end: 132.25 },
+    { label: "1av", start: 132.5, end: 136.25 },
+    { label: "1aw", start: 136.5, end: 142.07 },
+    { label: "1ax", start: 142.32, end: 147.99 },
+    { label: "1ay", start: 148.24, end: 150.41 },
+    { label: "1az", start: 150.66, end: 154.63 },
+    { label: "1ba", start: 154.88, end: 155.95 },
+    { label: "1bb", start: 156.2, end: 156.79 },
+    { label: "1bc", start: 157.04, end: 158.37 },
+    { label: "1bd", start: 158.62, end: 161.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 161.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "23-B023-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='22-B022-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='22-B022-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;6 d) La Bible : la Parole&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='24-B024-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='24-B024-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B023-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="ul"><span class="bdit">6</span></span><span class="ul"><span class="bdit"> </span></span><span class="ul"><span class="bdit">d)</span></span><span class="ul"><span class="bdit"> La Bible</span></span><span class="ul"><span class="bdit"> </span></span><span class="ul"><span class="bdit">:</span></div> <div id="T1b" class="txs"><span class="bdit">la Parole de Dieu,</span></div> <div id="T1c" class="txs"><span class="bdit">la vérité</span></span><span class="ul"><span class="bdit">.</span></span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">La véritable Parole de Dieu</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1e" class="txs">Pourquoi y a-t-il quatre Evangiles&nbsp;?</div> <div id="T1f" class="txs">C’est une question que se posent parfois les musulmans.</div> <div id="T1g" class="txs">Voici deux illustrations qui les aideront peut-être à mieux comprendre. </div></div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">Des témoins lors d’un procès</span></div></div>
+<div class="m"><div id="T1i" class="txs">Lors d’un procès,</div> <div id="T1j" class="txs">un juge auditionne quatre témoins pour établir la vérité au sujet d’une affaire donnée.</div> <div id="T1k" class="txs">Imaginons deux cas de figure :</div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">1</span><span class="bd">.</span></div> <div id="T1m" class="txs">Le premier témoin donne sa version des faits en un quart d’heure.</div> <div id="T1n" class="txs">Le deuxième raconte exactement la même histoire,</div> <div id="T1o" class="txs">en un quart d’heure aussi.</div> <div id="T1p" class="txs">Et il en va de même pour le troisième et le quatrième.</div></div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">2</span><span class="bd">.</span></div> <div id="T1r" class="txs">Le juge interroge les quatre témoins.</div> <div id="T1s" class="txs">Le premier raconte les faits en dix minutes,</div> <div id="T1t" class="txs">le deuxième les rapporte de manière détaillée en vingt minutes,</div> <div id="T1u" class="txs">le troisième en cinq minutes et le quatrième en un quart d’heure.</div> <div id="T1v" class="txs">Chacun raconte le même événement mais avec ses propres mots.</div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bdit">Conclusion</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T1x" class="txs"><span class="it">Comment réagirions-nous à la place du juge</span><span class="it"> </span><span class="it">?</span></div> <div id="T1y" class="txs"><span class="it">Nous aurions certainement des doutes quant à la véracité du récit rapporté par les témoins du premier cas de figure.</span></div> <div id="T1z" class="txs"><span class="it">Dans le second cas de figure,</span></div> <div id="T1aa" class="txs"><span class="it">chaque témoin raconte les faits avec ses propres mots et selon des perspectives différentes.</span></div> <div id="T1ab" class="txs"><span class="it">De même,</span></div> <div id="T1ac" class="txs"><span class="it">dans la Bible,</span></div> <div id="T1ad" class="txs"><span class="it">Dieu nous a donné quatre récits de la vie de Jésus,</span></div> <div id="T1ae" class="txs"><span class="it">les Evangiles,</span></div> <div id="T1af" class="txs"><span class="it">et chacun insiste sur un autre aspect.</span></div> <div id="T1ag" class="txs"><span class="it">A chaque fois,</span></div> <div id="T1ah" class="txs"><span class="it">la vérité est présentée,</span></div> <div id="T1ai" class="txs"><span class="it">mais sous un angle différent</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">Des témoins lors d’un accident de voiture</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ak" class="txs">Un piéton se fait renverser par une voiture et meurt.</div> <div id="T1al" class="txs">Lors du procès,</div> <div id="T1am" class="txs">quatre témoins sont entendus.</div> <div id="T1an" class="txs">L’un d’eux se trouvait dans la voiture lorsque l’accident a eu lieu.</div> <div id="T1ao" class="txs">Un autre se trouvait dans la rue et a vu l’accident se produire sous ses yeux.</div> <div id="T1ap" class="txs">Un troisième regardait par la fenêtre quand le drame est arrivé,</div> <div id="T1aq" class="txs">et le quatrième est l’officier de police qui a mené l’enquête.</div> <div id="T1ar" class="txs">Chacun raconte avec honnêteté exactement le même événement,</div> <div id="T1as" class="txs">mais selon des angles différents.</div> <div id="T1at" class="txs">Cela permet d’établir clairement la vérité.</div></div>
+<div class="m"><div id="T1au" class="txs"><span class="bdit">Conclusion</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T1av" class="txs"><span class="it">Selon la loi de Dieu (</span><span class="it">voir</span><span class="it"> Nombres 35</span><span class="it">,</span></div><div id="T1aw" class="txs"><span class="it">30</span><span class="it"> </span><span class="it">;</span></div> <div id="T1ax" class="txs"><span class="it">Deutéronome 19</span><span class="it">,</span></div><div id="T1ay" class="txs"><span class="it">15) et l’enseignement de Jésus (</span><span class="it">voir</span><span class="it"> Matthieu 18</span><span class="it">,</span></div><div id="T1az" class="txs"><span class="it">16),</span></div> <div id="T1ba" class="txs"><span class="it">toute affaire (juridique) doit se régler «</span><span class="it"> </span><span class="it">sur la déclaration de deux ou de trois témoins</span><span class="it"> </span><span class="it">».</span></div> <div id="T1bb" class="txs"><span class="it">Pour ce qui concerne l’Evangile,</span></div> <div id="T1bc" class="txs"><span class="it">Dieu a estimé qu’il était nécessaire que nous disposions de quatre récits</span><span class="it"> </span><span class="it">:</span></div> <div id="T1bd" class="txs"><span class="it">celui de Matthieu, de Marc, de Luc et de Jean. Comment pourrions-nous douter de leur véracité</span><span class="it"> </span><span class="it">?</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/23 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

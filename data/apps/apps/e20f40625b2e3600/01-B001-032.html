@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P 81-120 32</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "32a", start: 803.48, end: 808.22 },
+    { label: "32b", start: 808.47, end: 811.19 },
+    { label: "32c", start: 811.44, end: 814.51 },
+    { label: "32d", start: 814.76, end: 817.98 },
+    { label: "32e", start: 818.23, end: 820.88 },
+    { label: "32f", start: 821.13, end: 831.14 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 803.48;
+var stopTime  = 831.14;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-031.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;P 81-120&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;32&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-033.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image32.jpg" />
+
+<div class="m"><div id="T32a" class="txs"><span class="bd">112 </span><span class="bd">Talg</span><span class="bd"> </span><span class="bd">tẽn-kugr</span><span class="bd"> </span><span class="bd">bee</span><span class="bd"> </span><span class="bd">a</span><span class="bd"> </span><span class="bd">loorẽ</span><span class="bd">,</span></div> <div id="T32b" class="txs"><span class="bd">t’a </span><span class="bd">kẽnd</span><span class="bd"> la a </span><span class="bd">pʋlmdẽ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T32c" class="txs"><span class="bdit">(Le fétiche du pauvre reste accroché à son cou,</span></div> <div id="T32d" class="txs"><span class="bdit">ainsi il fait les incantations tout en marchant).</span></div></div>
+<div class="m"><div id="T32e" class="txs"><span class="bd">Talg</span><span class="bd"> </span><span class="bd">tẽn-kugr</span><span class="bd"> </span><span class="bd">bee</span><span class="bd"> a </span><span class="bd">loorẽ</span><span class="bd">,</span></div> <div id="T32f" class="txs"><span class="bd">t’a </span><span class="bd">kẽnd</span><span class="bd"> la a </span><span class="bd">pʋlmdẽ</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 80 a 120 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

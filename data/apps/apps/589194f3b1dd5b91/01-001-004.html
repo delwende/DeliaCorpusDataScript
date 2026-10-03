@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prov 1-40 4</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "4a", start: 79.5, end: 81.93 },
+    { label: "4b", start: 82.18, end: 84.69 },
+    { label: "4c", start: 84.94, end: 87.47 },
+    { label: "4d", start: 87.72, end: 93.01 },
+    { label: "4e", start: 93.26, end: 95.57 },
+    { label: "4f", start: 95.82, end: 103.96 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 79.5;
+var stopTime  = 103.96;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-003.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Prov 1-40&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;4&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-005.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 1-40-image4.jpeg" />
+
+<div class="m"><div id="T4a" class="txs"><span class="bd">4 Zĩrẽ zoeta yʋʋm tusri,</span></div> <div id="T4b" class="txs"><span class="bd">tɩ sɩ</span><span class="bd">d wa yõk-a raar a ye.</span></div></div>
+<div class="m"><div id="T4c" class="txs"><span class="bdit">(En une journée de course,</span></div> <div id="T4d" class="txs"><span class="bdit">la vérité rattrape le mensonge sur sa course de mille ans).</span></div></div>
+<div class="m"><div id="T4e" class="txs"><span class="bd">Zĩrẽ zoeta yʋʋm tusri,</span></div> <div id="T4f" class="txs"><span class="bd">tɩ sɩd wa yõk-a raar a ye. </span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 1 a 40 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introdução 14</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "15-B015-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-013.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introdução&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;14&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-015.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B021-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B015-image14.jpg" />
+
+<div class="m"><span class="bd">A Igreja</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Ele colocou todas as coisas sob seus pés e o deu como cabeça suprema da igreja, que é o seu corpo, a plenitude daquele que preenche tudo em todos.</span>. (Efésios 1, 22 a 23).</div>
+<div class="m">O apóstolo Paulo usou diversas imagens para explicar o que é a igreja.</div>
+<div class="m">Em nossa passagem, Efésios capítulo 1, ele fala do corpo de Cristo (ver também 1 Coríntios 12), e na mesma epístola capítulo 3, 19 a 22, ele usa a imagem de um povo, de uma família e de uma casa.</div>
+<div class="m">O que é a igreja, o corpo de Cristo? Cristo é a cabeça. A cabeça é a parte mais importante do corpo. É na cabeça que se localiza o cérebro, onde se concentram todas as informações, pensamentos e decisões. É onde ficam armazenadas a inteligência, a força de vontade e a memória. Todos os órgãos e membros do nosso corpo estão sob o controle do nosso cérebro. Se dissermos que Cristo é o cabeça da Igreja, entendemos que todos os seus membros dependem DELE. A imagem do corpo sublinha também a unidade da Igreja, a complementaridade dos seus membros e a solidariedade que deve reinar entre eles. O que é a igreja, a família de Deus?</div>
+<div class="m">Quando nos tornamos cristãos, também nos tornamos membros de uma nova família. Com esta imagem, o apóstolo Paulo inspirou-se na família judaica, onde cada membro tinha um lugar fixo com tarefas e obrigações. O mesmo acontece na igreja, onde cada membro tem um papel a desempenhar de acordo com seus dons.</div>
+<div class="m">Duas outras características importantes da família judaica eram a fecundidade e a solidariedade. A fecundidade na igreja significa ampliá-la ganhando novos convertidos! Solidariedade significa ajudar uns aos outros em momentos de necessidade.</div>
+<div class="m">O que é a igreja, uma casa, um edifício? Esta imagem sublinha a importância do fundamento (Jesus Cristo) e o facto de a igreja estar “em construção”, ainda não terminada.</div>
+<div class="m"><span class="bd">Ações para tornar a igreja um ativo em sua vida:</span></div>
+<div class="m"><span class="it">- Oração:</span>Agradeça a Deus pela sua igreja no seu país, com todas as suas fraquezas e deficiências.</div>
+<div class="m"><span class="it">- Leitura da Bíblia:</span>Leia Efésios 2, 13 a 22 e medite nestes versículos.</div>
+<div class="m"><span class="it">- reflexão pessoal:</span>Compare sua igreja local com estas 3 imagens. As características destacadas por Paulo estão presentes? Peça ao Espírito Santo para lhe mostrar o que você pode fazer para tornar a sua igreja verdadeiramente um corpo e uma família!</div>
+<div class="m"><span class="it">- em relação aos outros:</span>Examine seu coração para ver se seus irmãos e irmãs na igreja realmente se tornaram seus pais, como na sua família natural.</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

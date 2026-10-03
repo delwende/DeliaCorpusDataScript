@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>281  So-m-meng 38</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "38a", start: 850.12, end: 854.47 },
+    { label: "38b", start: 854.72, end: 857.73 },
+    { label: "38c", start: 857.98, end: 859.97 },
+    { label: "38d", start: 860.22, end: 867.11 },
+    { label: "38e", start: 867.36, end: 869.19 },
+    { label: "38f", start: 869.44, end: 875.15 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 850.12;
+var stopTime  = 875.15;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 42 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-037.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;281  So-m-meng&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;38&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-039.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes more 280 a 322-image38.jpg" />
+
+<div class="m"><div id="T38a" class="txs"><span class="bd">318</span><span class="bd">  </span><span class="bd"> </span><span class="bd">Wĩir</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n </span><span class="bd">kao</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> b </span><span class="bd">tõke</span><span class="bd">,</span></div> <div id="T38b" class="txs"><span class="bd">a </span><span class="bd">lebga</span><span class="bd"> </span><span class="bd">yodre</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T38c" class="txs"><span class="bdit">(Même renouée,</span></div> <div id="T38d" class="txs"><span class="bdit">une corde coupée fait la différence par son aspect noduleux).</span></div></div>
+<div class="m"><div id="T38e" class="txs"><span class="bd">Wĩir</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n </span><span class="bd">kao</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> b </span><span class="bd">tõke</span><span class="bd">,</span></div> <div id="T38f" class="txs"><span class="bd">a </span><span class="bd">lebga</span><span class="bd"> </span><span class="bd">yodre</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 281 a 322 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

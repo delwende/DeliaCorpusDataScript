@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5E2900">
+<title>Etude Biblique 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "13-B013-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='12-B012-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Etude Biblique&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B013-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">Etude Biblique</span></div>
+<div class="m"><span class="bd">A. Lire Genèse 1 : 27 -28, 31; 2 : 24-25</span></div>
+<div class="m"><span class="bd">B. Ensuite discuter sur les questions en bas</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bdit">1</span><span class="it">&nbsp;: 27&nbsp;Dieu créa l'homme à son image, il le créa à l'image de Dieu. Il créa l'homme et la femme.[1] 28&nbsp;Dieu les bénit et leur dit: «Reproduisez-vous, devenez nombreux, remplissez la terre et soumettez-la! Dominez sur les poissons de la mer, sur les oiseaux du ciel et sur tout animal qui se déplace sur la terre!» … 31&nbsp;Dieu regarda tout ce qu'il avait fait, et il constata que c'était très bon. Il y eut un soir et il y eut un matin. Ce fut le sixième jour.</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bdit">2</span><span class="it">&nbsp;: 24&nbsp;C'est pourquoi l'homme quittera son père et sa mère, et s'attachera à sa femme, et ils deviendront une seule chair. 25&nbsp;L'homme et sa femme étaient tous deux nus, et ils n'en avaient point honte</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Discutez les questions suivantes&nbsp;:</span></div>
+<div class="m">1) Si Dieu nous a créé homme et femme à sa propre image, et qu'il a vu que tout ce qu'il a créé était bon, qu'est-ce que ceci suggère sur le point de vue de Dieu vis-à-vis de la sexualité&nbsp;?</div>
+<div class="m">2) Selon le verset 2 : 24, qu'est-ce qui doit se passer avant qu'un homme ne s'unisse à sa femme&nbsp;? Qu'est-ce que ceci suggère sur sa maturité et sa capacité à se prendre en charge et à soutenir sa famille à ce stade&nbsp;?</div>
+<div class="m">3) A ton avis, que signifie former un seul corps&nbsp;?</div>
+<div class="m">4) Que suggère le verset 2: 25 sur la sexualité comme Dieu l'a, à l'origine, créée&nbsp;? En quoi, le point de vue du monde sur la sexualité est-il différent&nbsp;?</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

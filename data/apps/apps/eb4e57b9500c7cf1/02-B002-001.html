@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 So-taogd a ye kibare 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.79 },
+    { label: "1b", start: 3.04, end: 6.51 },
+    { label: "1c", start: 6.76, end: 14.01 },
+    { label: "1d", start: 14.26, end: 21.19 },
+    { label: "1e", start: 21.44, end: 27.11 },
+    { label: "1f", start: 27.36, end: 33.13 },
+    { label: "1g", start: 33.38, end: 36.15 },
+    { label: "1h", start: 36.4, end: 37.75 },
+    { label: "1i", start: 38, end: 42.23 },
+    { label: "1j", start: 42.48, end: 44.13 },
+    { label: "1k", start: 44.38, end: 47.81 },
+    { label: "1l", start: 48.06, end: 49.33 },
+    { label: "1m", start: 49.58, end: 50.75 },
+    { label: "1n", start: 51, end: 52.11 },
+    { label: "1o", start: 52.36, end: 61.83 },
+    { label: "1p", start: 62.08, end: 68.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 68.39;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2 So-taogd a ye kibare&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">2 </span><span class="bd">So-taogd a ye kibare</span><span class="bd">.</span></div></div>
+<div class="p"><div id="T1b" class="txs">Ned a ye, n wa n na n tog sore.</div> <div id="T1c" class="txs">La, a sẽn wa n kolg tẽngã sẽn pa yɩɩd wakat a yiib kẽnde, la a tudg sorã.</div> <div id="T1d" class="txs">T’a gõodẽ n baood tẽngã sorã n kongdẽ, hal tɩ ko-yũud la kom wa tar-a.</div> <div id="T1e" class="txs">La, a wa n kẽn n tɩ mika rao sẽn zĩ sor noore.</div> <div id="T1f" class="txs">Mik, rao wã sẽn zĩ wã, yaa gãeenga, la so-toagdã ra ka mi ye.</div> <div id="T1g" class="txs">T’a pʋʋse, tɩ gãeengã leok-a.</div> <div id="T1h" class="txs">Tɩ rao wã sok-a :</div> <div id="T1i" class="txs">«Mam tudga Dõosẽ tẽngã sor n dat tɩ y wilg-ma ».</div> <div id="T1j" class="txs">La gãeenga  yeel-a lame :</div> <div id="T1k" class="txs">«Fo pa ne toɛɛgã sẽn be taoorã sɩda ?</div><div id="T1l" class="txs"> » Tɩ rao wã leoke :</div> <div id="T1m" class="txs">«N-yẽ!</div><div id="T1n" class="txs"> ” Tɩ gãeengã yeel-a :</div> <div id="T1o" class="txs">«Fo sã n tɩ loog toɛɛgã, n ta taoor bilfu, bɩ f wẽneg n kẽ f yẽdgẽ  wã, tɩ Dõosẽ sor la be ».</div></div>
+<div class="p"><div id="T1p" class="txs"><span class="bdit">Fo zab ne gãeenga, pa tar yõodo, fo sĩnd f noor me, sũ-toogo.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte_02_Sotogda.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

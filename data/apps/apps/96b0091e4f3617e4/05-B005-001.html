@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pages 40 à 41 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.97 },
+    { label: "1b", start: 4.22, end: 6.91 },
+    { label: "1c", start: 7.16, end: 8.95 },
+    { label: "1d", start: 9.2, end: 10.45 },
+    { label: "1e", start: 10.7, end: 13.63 },
+    { label: "1f", start: 13.88, end: 18.87 },
+    { label: "1g", start: 19.12, end: 22.95 },
+    { label: "1h", start: 23.2, end: 26.15 },
+    { label: "1i", start: 26.4, end: 30.53 },
+    { label: "1j", start: 30.78, end: 33.45 },
+    { label: "1k", start: 33.7, end: 36.61 },
+    { label: "1l", start: 36.86, end: 40.45 },
+    { label: "1m", start: 40.7, end: 44.53 },
+    { label: "1n", start: 44.78, end: 50.69 },
+    { label: "1o", start: 50.94, end: 52.27 },
+    { label: "1p", start: 52.52, end: 55.03 },
+    { label: "1q", start: 55.28, end: 57.63 },
+    { label: "1r", start: 57.88, end: 59.83 },
+    { label: "1s", start: 60.08, end: 63.59 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 63.59;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Pages 40 à 41&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">Pages 40 à 41.</div></div>
+<div class="m"><div id="T1b" class="txs">Visite chez quelqu’un.</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="ul"><span class="bdit">Hôte :</span></span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Dɔ di.</span></div><div id="T1e" class="txs"><span class="bd"> </span>«&nbsp;<span class="it">donne quelque chose</span>&nbsp;».</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">ń y’í yé sɔ̀gɔ́mà</span><span class="bd"> </span>«&nbsp;<span class="it">Je t’ai vu</span><span class="it"> </span><span class="it">le matin</span>&nbsp;».</div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">ń y’í yé tíléfɛ̀</span><span class="bd"> </span>«&nbsp;<span class="it">Je t’ai vu à midi </span>».</div></div>
+<div class="p_Fuzeile"><div id="T1h" class="txs"><span class="bd">ń y’í yé súfɛ̀</span><span class="bd"> </span>«&nbsp;<span class="it">Je t’ai vu la nuit</span>&nbsp;».</div></div>
+<div class="p_Textkrper-Einzug3"><div id="T1i" class="txs">En français ces expressions se traduisent par :</div> <div id="T1j" class="txs">«&nbsp;<span class="it">que me vaut l’honneur de ta visite</span><span class="it">&nbsp;»</span><span class="it">?</span></div></div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">Réponse de l’étranger</span><span class="bd"> </span>:</div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">A má júguya, folí lo</span>.</div> <div id="T1m" class="txs">«&nbsp;<span class="it">il n’y a pas de mal, c’est un bonjour</span>&nbsp;».</div></div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">&nbsp; júguman tɛ, folí lo</span>     «&nbsp;<span class="it">rien de mal c’est un bonjour</span>&nbsp;».</div></div>
+<div class="m"><div id="T1o" class="txs"><span class="ul"><span class="bdit">Hôte</span></span><span class="bdit"> </span><span class="bdit">:</span></div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">Ala k’án tanga júguman ma</span>.</div> <div id="T1q" class="txs">«&nbsp;<span class="it">Que Dieu nous préserve du mal</span>&nbsp;».</div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">Réponse de l’étranger</span><span class="bd"> </span>:</div> <div id="T1s" class="txs">«&nbsp;<span class="it">amí</span>&nbsp;» «&nbsp;<span class="it">amen</span>&nbsp;».</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/05 pages40-41.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>42 Suka gorko e deekum e 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 11.37 },
+    { label: "1b", start: 11.62, end: 13.43 },
+    { label: "1c", start: 13.68, end: 16.79 },
+    { label: "1d", start: 17.04, end: 18.37 },
+    { label: "1e", start: 18.62, end: 22.29 },
+    { label: "1f", start: 22.54, end: 25.95 },
+    { label: "1g", start: 26.2, end: 28.01 },
+    { label: "1h", start: 28.26, end: 30.35 },
+    { label: "1i", start: 30.6, end: 32.67 },
+    { label: "1j", start: 32.92, end: 35.67 },
+    { label: "1k", start: 35.92, end: 37.05 },
+    { label: "1l", start: 37.3, end: 44.73 },
+    { label: "1m", start: 44.98, end: 46.67 },
+    { label: "1n", start: 46.92, end: 48.47 },
+    { label: "1o", start: 48.72, end: 50.07 },
+    { label: "1p", start: 50.32, end: 51.19 },
+    { label: "1q", start: 51.44, end: 55.29 },
+    { label: "1r", start: 55.54, end: 58.05 },
+    { label: "1s", start: 58.3, end: 60.05 },
+    { label: "1t", start: 60.3, end: 64.59 },
+    { label: "1u", start: 64.84, end: 66.29 },
+    { label: "1v", start: 66.54, end: 67.83 },
+    { label: "1w", start: 68.08, end: 69.43 },
+    { label: "1x", start: 69.68, end: 72.31 },
+    { label: "1y", start: 72.56, end: 74.37 },
+    { label: "1z", start: 74.62, end: 75.67 },
+    { label: "1aa", start: 75.92, end: 80.61 },
+    { label: "1ab", start: 80.86, end: 82.77 },
+    { label: "1ac", start: 83.02, end: 85.59 },
+    { label: "1ad", start: 85.84, end: 89.57 },
+    { label: "1ae", start: 89.82, end: 91.51 },
+    { label: "1af", start: 91.76, end: 96.31 },
+    { label: "1ag", start: 96.56, end: 102.87 },
+    { label: "1ah", start: 103.12, end: 105.57 },
+    { label: "1ai", start: 105.82, end: 108.47 },
+    { label: "1aj", start: 108.72, end: 111.09 },
+    { label: "1ak", start: 111.34, end: 113.51 },
+    { label: "1al", start: 113.76, end: 115.09 },
+    { label: "1am", start: 115.34, end: 117.91 },
+    { label: "1an", start: 118.16, end: 120.45 },
+    { label: "1ao", start: 120.7, end: 122.51 },
+    { label: "1ap", start: 122.76, end: 124.87 },
+    { label: "1aq", start: 125.12, end: 127.13 },
+    { label: "1ar", start: 127.38, end: 130.01 },
+    { label: "1as", start: 130.26, end: 131.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 131.39;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;42 Suka gorko e deekum e&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">42 </span><span class="bd">Suka gorko e deekum e araawa tummboowa</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Waɗiini e jamaanuuji,</div> <div id="T1c" class="txs">suka gorko yawnoo wuro esiraaɓem,</div> <div id="T1d" class="txs">heɓa tewna deekum.</div> <div id="T1e" class="txs">Suka gorko waɗi jemmaaji ɗiɗi wuro esiraaɓem.</div> <div id="T1f" class="txs">Njannde o waalannoo tati nde,</div> <div id="T1g" class="txs">o hokkaa laawol.</div> <div id="T1h" class="txs">Haɗay heddii o waali.</div> <div id="T1i" class="txs">Wetunoo ni o adi laawol.</div> <div id="T1j" class="txs">Kanko e deekiiko na ardondiri.</div> <div id="T1k" class="txs">Naa na ɓe njaha.</div></div>
+<div class="m"><div id="T1l" class="txs">Suka gorko heɓunoo uddii wuro esiraaɓem ni fuɗɗi dukidilde e deekum.</div> <div id="T1m" class="txs">Ɓe kaalii kaa,</div> <div id="T1n" class="txs">ni ɓe ngartira kaa.</div> <div id="T1o" class="txs">Ni na ɓe njaha.</div> <div id="T1p" class="txs">Ni na ɓe nduka.</div> <div id="T1q" class="txs">Suka gorko e deekum ngarowi tawi araawa na tummba.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1r" class="txs">Ngaa waɗoke ni ngaa to waɗɗoo.</div> <div id="T1s" class="txs">Ni ariyel na lata.</div> <div id="T1t" class="txs">Araawa ngoota rewi faa waɗɗii de lataa boɓɓowii.</div> <div id="T1u" class="txs">Debbo o,</div> <div id="T1v" class="txs">jali heetii de wi'i:</div> <div id="T1w" class="txs">"Allaakubaru,</div> <div id="T1x" class="txs">tawee nih rewɓe ngaɗannoo worɓe."</div> <div id="T1y" class="txs">Gorko o,</div> <div id="T1z" class="txs">jali de jaabii wi'i:</div> <div id="T1aa" class="txs">"Wallaahi a tawranno bammaa korle kelɗe e rafi nyiiƴe."</div> <div id="T1ab" class="txs">Ni suka debbo semti.</div> <div id="T1ac" class="txs">Anndaa fu ɗo darotoo.</div> <div id="T1ad" class="txs">Nde wootere ni hippitii itti gullal.</div> <div id="T1ae" class="txs">Ni ɓe ndewondiri.</div> <div id="T1af" class="txs">Taa yaaɓu ɗo njaaɓum faa ɗo ɓe kootowi ɗo ɓe ƴuurunoo.</div></div>
+<div class="m"><div id="T1ag" class="txs">Suka debbo e gorum naatunoo ɓaade ni yimɓe ndoggi kawriti ɓoy na ƴama:</div> <div id="T1ah" class="txs">"Koree-jam de ngartuɗon?"</div> <div id="T1ai" class="txs">Suka debbo e gorum na ndarii.</div> <div id="T1aj" class="txs">Ɗiɗo fu na mayri gootal.</div> <div id="T1ak" class="txs">Ni esiraaɓe na ƴama:</div> <div id="T1al" class="txs">"Koree-jam hey!"</div> <div id="T1am" class="txs">Ni suka gorko na murii.</div> <div id="T1an" class="txs">Ni deekum na murii.</div> <div id="T1ao" class="txs">Baaba suka debbo warowi,</div> <div id="T1ap" class="txs">yamiri suka gorko saabe Alla.</div> <div id="T1aq" class="txs">Suka gorko itti fillii.</div></div>
+<div class="m"><div id="T1ar" class="txs">Ndelle neɗɗo ta yelanoo banndum bone.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1as" class="txs">Bukari Jallo</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/02 ful cont vol3.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

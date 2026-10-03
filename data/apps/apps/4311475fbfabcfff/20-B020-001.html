@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>20 Mɔgɔ bolo 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.81 },
+    { label: "1b", start: 2.06, end: 3.91 },
+    { label: "1c", start: 4.16, end: 5.61 },
+    { label: "1d", start: 5.86, end: 7.43 },
+    { label: "1e", start: 7.68, end: 9.21 },
+    { label: "1f", start: 9.46, end: 11.17 },
+    { label: "1g", start: 11.42, end: 13.51 },
+    { label: "1h", start: 13.76, end: 15.49 },
+    { label: "1i", start: 15.74, end: 17.19 },
+    { label: "1j", start: 17.44, end: 19.27 },
+    { label: "1k", start: 19.52, end: 20.95 },
+    { label: "1l", start: 21.2, end: 22.67 },
+    { label: "1m", start: 22.92, end: 24.99 },
+    { label: "1n", start: 25.24, end: 27.11 },
+    { label: "1o", start: 27.36, end: 29.06 },
+    { label: "1p", start: 29.31, end: 30.64 },
+    { label: "1q", start: 30.89, end: 32.41 },
+    { label: "1r", start: 32.66, end: 34.36 },
+    { label: "1s", start: 34.61, end: 36.45 },
+    { label: "1t", start: 36.7, end: 38.03 },
+    { label: "1u", start: 38.28, end: 70.11 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 70.11;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "20-B020-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='19-B019-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='19-B019-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;20 Mɔgɔ bolo&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='21-B021-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='21-B021-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B020-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">20 </span><span class="bd">Mɔgɔ</span><span class="bd"> </span><span class="bd">bolo</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Bolo</span><span class="bd"> </span><span class="bd">minw</span><span class="bd"> koo m</span><span class="bd">a</span><span class="bd">n</span><span class="bd"> di n ye</span></div></div>
+<div class="m"><div id="T1c" class="txs">Mɔgɔjugu bolo,</div></div>
+<div class="m"><div id="T1d" class="txs">tiɲɛnnikɛla bolo</div></div>
+<div class="m"><div id="T1e" class="txs">mugucila bolo,</div></div>
+<div class="m"><div id="T1f" class="txs">kongo jɛnibaga bolo,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">Bolo</span><span class="bd"> </span><span class="bd">minw</span><span class="bd"> koo ka</span><span class="bd"> di n ye</span></div></div>
+<div class="m"><div id="T1h" class="txs">Dinannikɛbolo,</div></div>
+<div class="m"><div id="T1i" class="txs">furakɛlibolo,</div></div>
+<div class="m"><div id="T1j" class="txs">tiɲɛfɔla kalebolo,</div></div>
+<div class="m"><div id="T1k" class="txs">sɔnnikɛlabolo,</div></div>
+<div class="m"><div id="T1l" class="txs">yiriturubolo,</div></div>
+<div class="m"><div id="T1m" class="txs">kongo tasuma fagabolo.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">Bolo minw hina be n na </span></div></div>
+<div class="m"><div id="T1o" class="txs">Delilikɛlabolo,</div></div>
+<div class="m"><div id="T1p" class="txs">yafaɲinibaga bolo,</div></div>
+<div class="m"><div id="T1q" class="txs">kɔngɔtɔ bolo,</div></div>
+<div class="m"><div id="T1r" class="txs">dɛsɛbagatɔ bolo,</div></div>
+<div class="m"><div id="T1s" class="txs">kasangekalanbaga bolo,</div></div>
+<div class="m"><div id="T1t" class="txs">sujobaga bolo,</div></div>
+<div class="m"><div id="T1u" class="txs">gwa tasuma dadonbaga bolo</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src=" https://media.ipsapps.org/dyu/dyu-audio/ora/20 mogo bolo.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

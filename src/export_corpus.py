@@ -27,6 +27,8 @@ from collections import defaultdict
 from pathlib import Path
 
 NON_CORPUS_LANGS = {"fr", "en", "ar", "de", ""}
+# Timings outside this range are broken (zero/negative length, or one phrase spanning minutes).
+MIN_SEGMENT_S, MAX_SEGMENT_S = 0.3, 30.0
 LANG_NAMES = {
     "mos": "Mooré", "dyu": "Dioula", "ful": "Fulfulde", "gux": "Gulmancema", "bam": "Bambara",
     "lob": "Lobiri", "xsm": "Kassem", "dag": "Dagbani", "kus": "Kusaal", "maw": "Mampruli",
@@ -119,7 +121,8 @@ def main() -> None:
             continue
         origin = u["evidence"].split("+", 1)[0]
         # Timed segments that are only punctuation mark music/pauses, not speech.
-        if u["audio"] and u["audio_start"] and sum(ch.isalpha() for ch in src) >= 2:
+        if (u["audio"] and u["audio_start"] and sum(ch.isalpha() for ch in src) >= 2
+                and MIN_SEGMENT_S <= float(u["audio_end"]) - float(u["audio_start"]) <= MAX_SEGMENT_S):
             rel = copier.copy(lang, u["audio"])
             if rel:
                 segments[lang].append({
@@ -148,8 +151,14 @@ def main() -> None:
         else:
             text[lang][src] = None
         for col, tgt in (("translation_fr", "fr"), ("translation_en", "en")):
-            if u[col].strip():
-                parallel[(lang, tgt)].append({"source": src, "target": u[col].strip(), "origin": origin,
+            target = u[col].strip()
+            if target:
+                source = src
+                if origin == "adjacent_french_segment":
+                    # Proverb apps number each line and parenthesize the translation.
+                    source = re.sub(r"^\d+\s*[.)]?\s+", "", source)
+                    target = re.sub(r"^\((.*)\)\s*\.?$", r"\1", target).strip()
+                parallel[(lang, tgt)].append({"source": source, "target": target, "origin": origin,
                                               "source_file": u["source_file"]})
 
     seg_fields = ["audio", "start", "end", "duration", "text", "collection", "title", "source_file", "app_url"]

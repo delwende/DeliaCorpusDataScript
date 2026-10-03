@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>2) La vie commune avec 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 5.33 },
+    { label: "1b", start: 5.58, end: 11.95 },
+    { label: "1c", start: 12.2, end: 13.43 },
+    { label: "1d", start: 13.68, end: 15.49 },
+    { label: "1e", start: 15.74, end: 18.53 },
+    { label: "1f", start: 18.78, end: 21.59 },
+    { label: "1g", start: 21.84, end: 24.25 },
+    { label: "1h", start: 24.5, end: 28.33 },
+    { label: "1i", start: 28.58, end: 33.83 },
+    { label: "1j", start: 34.08, end: 34.81 },
+    { label: "1k", start: 35.06, end: 38.81 },
+    { label: "1l", start: 39.06, end: 41.01 },
+    { label: "1m", start: 41.26, end: 45.55 },
+    { label: "1n", start: 45.8, end: 50.35 },
+    { label: "1o", start: 50.6, end: 54.21 },
+    { label: "1p", start: 54.46, end: 60.75 },
+    { label: "1q", start: 61, end: 63.29 },
+    { label: "1r", start: 63.54, end: 70.65 },
+    { label: "1s", start: 70.9, end: 72.41 },
+    { label: "1t", start: 72.66, end: 79.35 },
+    { label: "1u", start: 79.6, end: 81.55 },
+    { label: "1v", start: 81.8, end: 86.63 },
+    { label: "1w", start: 86.88, end: 88.23 },
+    { label: "1x", start: 88.48, end: 91.95 },
+    { label: "1y", start: 92.2, end: 96.37 },
+    { label: "1z", start: 96.62, end: 99.97 },
+    { label: "1aa", start: 100.22, end: 101.59 },
+    { label: "1ab", start: 101.84, end: 104.45 },
+    { label: "1ac", start: 104.7, end: 108.85 },
+    { label: "1ad", start: 109.1, end: 110.67 },
+    { label: "1ae", start: 110.92, end: 115.61 },
+    { label: "1af", start: 115.86, end: 117.49 },
+    { label: "1ag", start: 117.74, end: 119.51 },
+    { label: "1ah", start: 119.76, end: 122.57 },
+    { label: "1ai", start: 122.82, end: 128.07 },
+    { label: "1aj", start: 128.32, end: 130.09 },
+    { label: "1ak", start: 130.34, end: 131.35 },
+    { label: "1al", start: 131.6, end: 133.55 },
+    { label: "1am", start: 133.8, end: 139.63 },
+    { label: "1an", start: 139.88, end: 148.95 },
+    { label: "1ao", start: 149.2, end: 150.67 },
+    { label: "1ap", start: 150.92, end: 154.83 },
+    { label: "1aq", start: 155.08, end: 159.29 },
+    { label: "1ar", start: 159.54, end: 160.51 },
+    { label: "1as", start: 160.76, end: 161.85 },
+    { label: "1at", start: 162.1, end: 165.19 },
+    { label: "1au", start: 165.44, end: 168.47 },
+    { label: "1av", start: 168.72, end: 170.13 },
+    { label: "1aw", start: 170.38, end: 172.21 },
+    { label: "1ax", start: 172.46, end: 178.95 },
+    { label: "1ay", start: 179.2, end: 180.23 },
+    { label: "1az", start: 180.48, end: 181.41 },
+    { label: "1ba", start: 181.66, end: 184.83 },
+    { label: "1bb", start: 185.08, end: 191.13 },
+    { label: "1bc", start: 191.38, end: 194.55 },
+    { label: "1bd", start: 194.8, end: 196.61 },
+    { label: "1be", start: 196.86, end: 200.51 },
+    { label: "1bf", start: 200.76, end: 210.97 },
+    { label: "1bg", start: 211.22, end: 214.45 },
+    { label: "1bh", start: 214.7, end: 218.93 },
+    { label: "1bi", start: 219.18, end: 223.49 },
+    { label: "1bj", start: 223.74, end: 228.57 },
+    { label: "1bk", start: 228.82, end: 233.19 },
+    { label: "1bl", start: 233.44, end: 235.57 },
+    { label: "1bm", start: 235.82, end: 242.85 },
+    { label: "1bn", start: 243.1, end: 247.91 },
+    { label: "1bo", start: 248.16, end: 251.13 },
+    { label: "1bp", start: 251.38, end: 256.09 },
+    { label: "1bq", start: 256.34, end: 259.63 },
+    { label: "1br", start: 259.88, end: 266.93 },
+    { label: "1bs", start: 267.18, end: 275.27 },
+    { label: "1bt", start: 275.52, end: 278.45 },
+    { label: "1bu", start: 278.7, end: 279.77 },
+    { label: "1bv", start: 280.02, end: 285.89 },
+    { label: "1bw", start: 286.14, end: 292.25 },
+    { label: "1bx", start: 292.5, end: 294.45 },
+    { label: "1by", start: 294.7, end: 295.89 },
+    { label: "1bz", start: 296.14, end: 297.95 },
+    { label: "1ca", start: 298.2, end: 300.13 },
+    { label: "1cb", start: 300.38, end: 307.31 },
+    { label: "1cc", start: 307.56, end: 311.11 },
+    { label: "1cd", start: 311.36, end: 317.77 },
+    { label: "1ce", start: 318.02, end: 321.91 },
+    { label: "1cf", start: 322.16, end: 323.03 },
+    { label: "1cg", start: 323.28, end: 326.43 },
+    { label: "1ch", start: 326.68, end: 334.51 },
+    { label: "1ci", start: 334.76, end: 339.65 },
+    { label: "1cj", start: 339.9, end: 344.97 },
+    { label: "1ck", start: 345.22, end: 348.41 },
+    { label: "1cl", start: 348.66, end: 353.25 },
+    { label: "1cm", start: 353.5, end: 360.03 },
+    { label: "1cn", start: 360.28, end: 366.45 },
+    { label: "1co", start: 366.7, end: 367.43 },
+    { label: "1cp", start: 367.68, end: 373.05 },
+    { label: "1cq", start: 373.3, end: 381.19 },
+    { label: "1cr", start: 381.44, end: 385.13 },
+    { label: "1cs", start: 385.38, end: 387.17 },
+    { label: "1ct", start: 387.42, end: 390.63 },
+    { label: "1cu", start: 390.88, end: 393.99 },
+    { label: "1cv", start: 394.24, end: 398.05 },
+    { label: "1cw", start: 398.3, end: 404.35 },
+    { label: "1cx", start: 404.6, end: 408.27 },
+    { label: "1cy", start: 408.52, end: 410.59 },
+    { label: "1cz", start: 410.84, end: 411.99 },
+    { label: "1da", start: 412.24, end: 417.51 },
+    { label: "1db", start: 417.76, end: 420.47 },
+    { label: "1dc", start: 420.72, end: 422.25 },
+    { label: "1dd", start: 422.5, end: 425.15 },
+    { label: "1de", start: 425.4, end: 427.53 },
+    { label: "1df", start: 427.78, end: 434.07 },
+    { label: "1dg", start: 434.32, end: 437.37 },
+    { label: "1dh", start: 437.62, end: 441.65 },
+    { label: "1di", start: 441.9, end: 447.97 },
+    { label: "1dj", start: 448.22, end: 451.71 },
+    { label: "1dk", start: 451.96, end: 454.43 },
+    { label: "1dl", start: 454.68, end: 459.07 },
+    { label: "1dm", start: 459.32, end: 462.27 },
+    { label: "1dn", start: 462.52, end: 472.51 },
+    { label: "1do", start: 472.76, end: 474.05 },
+    { label: "1dp", start: 474.3, end: 479.47 },
+    { label: "1dq", start: 479.72, end: 485.09 },
+    { label: "1dr", start: 485.34, end: 489.71 },
+    { label: "1ds", start: 489.96, end: 493.31 },
+    { label: "1dt", start: 493.56, end: 495.25 },
+    { label: "1du", start: 495.5, end: 499.13 },
+    { label: "1dv", start: 499.38, end: 501.73 },
+    { label: "1dw", start: 501.98, end: 506.53 },
+    { label: "1dx", start: 506.78, end: 517.67 },
+    { label: "1dy", start: 517.92, end: 519.85 },
+    { label: "1dz", start: 520.1, end: 523.47 },
+    { label: "1ea", start: 523.72, end: 532.33 },
+    { label: "1eb", start: 532.58, end: 536.23 },
+    { label: "1ec", start: 536.48, end: 539.59 },
+    { label: "1ed", start: 539.84, end: 542.95 },
+    { label: "1ee", start: 543.2, end: 547.23 },
+    { label: "1ef", start: 547.48, end: 550.05 },
+    { label: "1eg", start: 550.3, end: 560.33 },
+    { label: "1eh", start: 560.58, end: 564.11 },
+    { label: "1ei", start: 564.36, end: 566.55 },
+    { label: "1ej", start: 566.8, end: 567.99 },
+    { label: "1ek", start: 568.24, end: 576.25 },
+    { label: "1el", start: 576.5, end: 579.89 },
+    { label: "1em", start: 580.14, end: 582.67 },
+    { label: "1en", start: 582.92, end: 584.95 },
+    { label: "1eo", start: 585.2, end: 587.93 },
+    { label: "1ep", start: 588.18, end: 594.35 },
+    { label: "1eq", start: 594.6, end: 596.51 },
+    { label: "1er", start: 596.76, end: 598.09 },
+    { label: "1es", start: 598.34, end: 600.29 },
+    { label: "1et", start: 600.54, end: 602.37 },
+    { label: "1eu", start: 602.62, end: 605.95 },
+    { label: "1ev", start: 606.2, end: 608.55 },
+    { label: "1ew", start: 608.8, end: 616.71 },
+    { label: "1ex", start: 616.96, end: 622.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 622.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "39-B039-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='38-B038-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='38-B038-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2) La vie commune avec&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='40-B040-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='40-B040-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B039-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">2)</span><span class="bd"> La vie commune avec une bonne éducation et un bon enseignement</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">a)</span><span class="bd"> </span><span class="bd">Les former selon l’âge</span> (Proverbes 22, 6).</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="it">(Source :</span></div> <div id="T1d" class="txs"><span class="it">Comment éduquer nos enfants,</span></div> <div id="T1e" class="txs"><span class="it">Stephen et Georgina Adei,</span></div> <div id="T1f" class="txs"><span class="it">p</span><span class="it">ages </span><span class="it">80</span><span class="it"> à </span><span class="it">84)</span><span class="it">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">De la naissance à l’âge de cinq ans</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1h" class="txs">Les enfants de cette tranche d’âge attendent beaucoup de leurs parents.</div> <div id="T1i" class="txs">Il y a d’abord le fardeau des soins à apporter aux bébés – les nourrir,</div> <div id="T1j" class="txs">les langer,</div> <div id="T1k" class="txs">faire face aux nez bouchés pendant la nuit… Pourtant,</div> <div id="T1l" class="txs">dans la société traditionnelle,</div> <div id="T1m" class="txs">c’est la mère seule qui a la responsabilité de prendre soin du bébé.</div> <div id="T1n" class="txs">Mais les bébés ont déjà besoin de leurs pères et de leur attention.</div> <div id="T1o" class="txs">C’est aussi une expression de son amour pour son enfant.</div></div>
+<div class="m"><div id="T1p" class="txs">La période qui s’étend jusqu’à l’âge de cinq ans est la mieux indiquée pour poser les bases sociales,</div> <div id="T1q" class="txs">spirituelles et intellectuelles de l’enfant.</div> <div id="T1r" class="txs">La période de deux à cinq ans est vraiment le meilleur moment pour les enseigner sur les trois niveaux.</div></div>
+<div class="m"><div id="T1s" class="txs">Sur le plan physique,</div> <div id="T1t" class="txs">les enfants qui sont mal nourris pendant cette période souffriront de certains handicaps toute leur vie.</div> <div id="T1u" class="txs">Par la négligence des parents,</div> <div id="T1v" class="txs">ces années peuvent malheureusement passer sans que l’enfant apprenne à bien parler,</div> <div id="T1w" class="txs">à bien s’épanouir,</div> <div id="T1x" class="txs">de manière à ce qu’il soit préparé pour la prochaine période.</div></div>
+<div class="m"><div id="T1y" class="txs">L’enfant jusqu’à cinq ans a besoin d’être caressé et embrassé.</div> <div id="T1z" class="txs">Il faut qu’on l’écoute et qu’on parle souvent avec lui.</div> <div id="T1aa" class="txs">Il a besoin de jouer,</div> <div id="T1ab" class="txs">travailler et se recréer avec ses parents.</div> <div id="T1ac" class="txs">Toutes ces activités contribuent à un bon épanouissement de l’enfant.</div> <div id="T1ad" class="txs">Elles ouvrent son esprit,</div> <div id="T1ae" class="txs">elles encouragent son intelligence et elles influencent positivement son caractère.</div></div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">✓</span><span class="bd"> Quelles sont vos habitudes,</span></div> <div id="T1ag" class="txs"><span class="bd">quand un nouveau bébé arrive&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">De l’âge de six ans à l’âge de douze ans</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ai" class="txs">Cette période correspond à ce que l’on pourrait nommer les années de consolidation.</div></div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">✓</span><span class="bd"> Que signifie </span><span class="bd">c</span><span class="bd">onsolider&nbsp;?</span></div> <div id="T1ak" class="txs"><span class="it">Affermir,</span></div> <div id="T1al" class="txs"><span class="it">approfondir ce qu’on a appris.</span></div></div>
+<div class="m"><div id="T1am" class="txs">Ces années sont les mieux indiquées pour affermir la formation des cinq premières années,</div> <div id="T1an" class="txs">pour leur enseigner ce qu’on a oublié d’enseigner pendant la première période et pour préparer les enfants à devenir de «&nbsp;jeunes adultes&nbsp;».</div></div>
+<div class="m"><div id="T1ao" class="txs">A cette étape de la vie,</div> <div id="T1ap" class="txs">les enfants aiment encore recevoir des câlins et être embrassés.</div></div>
+<div class="m"><div id="T1aq" class="txs"><span class="bd">✓</span><span class="bd"> Êtes-vous habitué à toucher et embrasser vos enfants de cet âge&nbsp;?</span></div></div>
+<div class="m"><div id="T1ar" class="txs">Tous les deux,</div> <div id="T1as" class="txs">filles et fils,</div> <div id="T1at" class="txs">veulent être écoutés aussi par leur père.</div> <div id="T1au" class="txs">La présence du père est nécessaire pour fixer les limites,</div> <div id="T1av" class="txs">renforcer la discipline,</div> <div id="T1aw" class="txs">donner de la valeur aux filles,</div> <div id="T1ax" class="txs">encourager les garçons et assurer que tous ont du respect pour leur mère.</div></div>
+<div class="m"><div id="T1ay" class="txs">Les enfants,</div> <div id="T1az" class="txs">dans cette période,</div> <div id="T1ba" class="txs">peuvent prendre part à des conversations sérieuses.</div> <div id="T1bb" class="txs">Ils commencent à avoir un avis sur les choses et il est bon de les interroger sur ce qu’ils pensent,</div> <div id="T1bc" class="txs">notamment au sujet de ce qui les concerne directement.</div> <div id="T1bd" class="txs">On ne peut plus les tromper.</div> <div id="T1be" class="txs">Ils sauront reconnaître les mensonges et l’hypocrisie.</div> <div id="T1bf" class="txs">C’est la période où les enfants doivent absolument être encouragés à appliquer les principes qui leur ont été enseignés pendant les cinq premières années de leur vie.</div></div>
+<div class="m"><div id="T1bg" class="txs">La période de six à douze ans est exceptionnelle.</div> <div id="T1bh" class="txs">C’est le moment où l’enfant peut prendre une décision pour son salut.</div> <div id="T1bi" class="txs">Il peut se confier au Seigneur et avoir une nouvelle vie en Jésus-Christ.</div> <div id="T1bj" class="txs">Mais lorsque l’enfant se confie au Seigneur si tôt dans sa vie,</div> <div id="T1bk" class="txs">ça ne dit pas qu’il ne manifeste plus de mauvais comportement.</div> <div id="T1bl" class="txs">Son éducation n’est pas terminée&nbsp;!</div> <div id="T1bm" class="txs">Il faudra se garder de remettre en cause la foi de l’enfant ou de le ridiculiser à cause de son comportement.</div> <div id="T1bn" class="txs">Même les adultes chrétiens continuent parfois d’avoir de mauvais comportement,</div> <div id="T1bo" class="txs">ils ont besoin d’être corrigés et pardonnés.</div></div>
+<div class="m"><div id="T1bp" class="txs">Les parents doivent prier et croire que Dieu peut prendre soin de leurs enfants.</div> <div id="T1bq" class="txs">Il faut continuer à leur enseigner les vérités chrétiennes.</div></div>
+<div class="m"><div id="T1br" class="txs"><span class="bd">✓</span><span class="bd"> A quel âge Jésus est-il resté dans le Temple avec les pharisiens (Luc 2</span><span class="bd">,</span></div><div id="T1bs" class="txs"><span class="bd">41)</span><span class="bd"> </span><span class="bd">?</span></div></div>
+<div class="m"><div id="T1bt" class="txs"><span class="bd">✓</span><span class="bd"> Pourquoi était-il capable de poser de telles questions et de donner de telles réponses (Luc 2</span><span class="bd">,</span></div><div id="T1bu" class="txs"><span class="bd">47)</span><span class="bd">&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bv" class="txs"><span class="bd">De l’âge de treize ans à l’âge de dix-neuf ans,</span></div> <div id="T1bw" class="txs"><span class="bd">l’adolescence</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1bx" class="txs">Les enfants de cette tranche d’âge causent souvent beaucoup de peine et d’inquiétudes aux parents.</div> <div id="T1by" class="txs">Cela arrive surtout lorsqu’ils prennent leur indépendance et s'ils se retrouvent en mauvaise compagnie.</div></div>
+<div class="m"><div id="T1bz" class="txs"><span class="bd">D’abord il faut savoir que</span> :</div> <div id="T1ca" class="txs">les adolescents,</div> <div id="T1cb" class="txs">à un moment ou à un autre,</div> <div id="T1cc" class="txs">estiment qu’ils sont des adultes.</div> <div id="T1cd" class="txs">Cela signifie qu’ils n’accepteront plus qu’on leur parle comme à un enfant ou qu'on leur donne des ordres.</div> <div id="T1ce" class="txs">Ils voudront être respectés et traités comme des adultes.</div> <div id="T1cf" class="txs">Ils recevront favorablement les conseils relatifs au choix des amis et des vêtements,</div> <div id="T1cg" class="txs">mais se rebelleront si ces choses leur sont imposées.</div></div>
+<div class="m"><div id="T1ch" class="txs">Ensuite,</div> <div id="T1ci" class="txs">les adolescents ne se comprennent souvent pas eux-mêmes.</div> <div id="T1cj" class="txs">Le développement et le changement de leur corps influencent leur vie émotionnelle ainsi que leurs pensées et leur comportement.</div> <div id="T1ck" class="txs">Ils ont donc besoin d’être compris et aidés au lieu de recevoir des reproches.</div></div>
+<div class="m"><div id="T1cl" class="txs">Il est très important que les parents maintiennent une bonne communication avec les adolescents,</div> <div id="T1cm" class="txs">même s’ils réagissent quelquefois agressivement.</div> <div id="T1cn" class="txs">Il est très important qu’on leur accorde de l’attention quand ils veulent parler.</div> <div id="T1co" class="txs">Il est important qu’on leur accorde de l’attention à 100% si l’on ne veut pas qu’ils se retirent.</div></div>
+<div class="m"><div id="T1cp" class="txs">L’implication du père dans l'éducation des enfants grandit au fur et à mesure que les enfants grandissent.</div> <div id="T1cq" class="txs">Pourtant,</div> <div id="T1cr" class="txs">la contribution des pères à l’éducation des enfants dès le berceau est un élément important.</div> <div id="T1cs" class="txs">Un père qui ne s’est pas impliqué dans l’éducation de ses enfants aura des difficultés à se faire respecter au moment de leur adolescence.</div></div>
+<div class="m"><div id="T1ct" class="txs"><span class="bd">✓</span><span class="bd"> Pourquoi la présence du père est importante pour ses enfants&nbsp;?</span></div></div>
+<div class="m"><div id="T1cu" class="txs"><span class="it">Il est un modèle pour eux.</span></div> <div id="T1cv" class="txs"><span class="it">Les enfants ont besoin d’un bon modèle pour l’imiter.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cw" class="txs"><span class="bd">b</span><span class="bd">)</span><span class="bd"> </span><span class="bd">Les former selon leur tempérament</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1cx" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quels tempéraments différents connaissez-vous chez vos enfants&nbsp;?</span></div></div>
+<div class="m"><div id="T1cy" class="txs">Les enfants peuvent se classer en quatre grands types de tempéraments (détaillés en annexe) qui sont :</div></div>
+<div class="m"><div id="T1cz" class="txs">• Le type dominant ou colérique qui peut se motiver lui-même ;</div></div>
+<div class="m"><div id="T1da" class="txs">• Le type «&nbsp;initiative&nbsp;»,</div> <div id="T1db" class="txs">extraverti,</div> <div id="T1dc" class="txs">ou sanguin à qui l’on doit toujours rappeler de faire ses devoirs ou ses tâches ;</div></div>
+<div class="m"><div id="T1dd" class="txs">• Le type stable ou flegmatique,</div> <div id="T1de" class="txs">qui est lent et taquin ;</div></div>
+<div class="m"><div id="T1df" class="txs">• Le type conscient ou mélancolique,</div> <div id="T1dg" class="txs">d’humeur triste et changeante.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dh" class="txs">Généralement l’homme développe une combinaison de deux types de tempérament ou même plus,</div> <div id="T1di" class="txs">avec quelquefois un ou deux traits dominants.</div> <div id="T1dj" class="txs">Pour bien les éduquer et aider à former leur caractère,</div> <div id="T1dk" class="txs">il est important de connaître chez les enfants les traits dominants et ceux qui sont moins évidents.</div></div>
+<div class="m"><div id="T1dl" class="txs">Il ne faut pas comparer ni préférer un enfant à un autre,</div> <div id="T1dm" class="txs">même si son tempérament me convient mieux.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dn" class="txs"><span class="bd">✓</span><span class="bd"> Pourquoi est-il important de connaître les différents tempéraments de vos enfants&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1do" class="txs"><span class="bd">c)</span><span class="bd"> Les former selon leur rang</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dp" class="txs">Souvent les parents ont tendance à être très exigeants envers le premier-né tandis qu’on tolère beaucoup plus de choses chez les suivants.</div> <div id="T1dq" class="txs">De plus,</div> <div id="T1dr" class="txs">on risque de donner beaucoup plus d’attention au premier-né et au plus jeune.</div> <div id="T1ds" class="txs">Il faut bien tenir compte de tous les enfants d’une manière équilibrée.</div></div>
+<div class="m"><div id="T1dt" class="txs"><span class="bd">✓</span><span class="bd"> Cherchez des exemples et discutez de votre situation familiale.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1du" class="txs"><span class="bd">d)</span><span class="bd"> Les former selon leur sexe</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dv" class="txs">Avant l’adolescence,</div> <div id="T1dw" class="txs">on peut bien traiter les garçons et les filles de la même manière.</div> <div id="T1dx" class="txs">Pour ne pas désavantager les garçons,</div> <div id="T1dy" class="txs">ils doivent apprendre à faire des travaux ménagers et veiller à la propreté.</div> <div id="T1dz" class="txs">Cette éducation empêche qu’un jeune homme se marie surtout pour avoir une personne qui lui ferait le ménage au lieu de chercher à prendre soin d’une épouse.</div></div>
+<div class="m"><div id="T1ea" class="txs">En s’approchant de l'adolescence,</div> <div id="T1eb" class="txs">chaque sexe demandera une attention particulière :</div> <div id="T1ec" class="txs">la mère doit devenir une amie secrète de ses filles et le modèle d’une femme exemplaire aussi bien pour les filles que pour les garçons.</div></div>
+<div class="m"><div id="T1ed" class="txs">Le père doit aussi devenir l’ami secret des garçons,</div> <div id="T1ee" class="txs">passer du temps avec eux et être un modèle.</div> <div id="T1ef" class="txs">S’il y a la confiance entre les enfants et les parents,</div> <div id="T1eg" class="txs">les enfants peuvent poser des questions spécifiques au père ou à la mère,</div> <div id="T1eh" class="txs">surtout sur le sujet de la sexualité.</div> <div id="T1ei" class="txs">Ces questions constituent une occasion pour les parents d’éduquer leurs enfants d'une manière sérieuse au lieu de les laisser s’éduquer eux-mêmes dans la rue.</div></div>
+<div class="m"><div id="T1ej" class="txs"><span class="bd">✓</span><span class="bd"> Comment éduquez-vous vos filles par rapport à vos fils&nbsp;?</span></div></div>
+<div class="m"><div id="T1ek" class="txs"><span class="bd">✓</span><span class="bd"> Faites-vous des différences&nbsp;?</span></div> <div id="T1el" class="txs"><span class="bd">Lesquelles&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1em" class="txs"><span class="bd">e)</span><span class="bd"> Amener nos enfants à vivre selon la Parole de Dieu</span> (Deutéronome 6, 5 à 7).</div></div>
+<div class="m"><div id="T1en" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment amener les enfants à la foi chrétienne&nbsp;?</span></div></div>
+<div class="m"><div id="T1eo" class="txs"><span class="it">On est un exemple pour ses enfants,</span></div> <div id="T1ep" class="txs"><span class="it">non seulement par ce qu’on dit,</span></div> <div id="T1eq" class="txs"><span class="it">mais plus encore par ce qu’on fait&nbsp;!</span></div> <div id="T1er" class="txs"><span class="it">Ils apprennent d'abord au travers de ce qu’ils voient et ensuite au travers de ce qui leur est enseigné.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1es" class="txs"><span class="bd">Enseigner nos enfants à :</span></div></div>
+<div class="m"><div id="T1et" class="txs">• chanter des cantiques ;</div></div>
+<div class="m"><div id="T1eu" class="txs">• raconter des histoires bibliques ;</div></div>
+<div class="m"><div id="T1ev" class="txs">• parler des vérités bibliques ;</div></div>
+<div class="m"><div id="T1ew" class="txs">• apprendre par cœur des versets selon leur âge ;</div></div>
+<div class="m"><div id="T1ex" class="txs">• faire la méditation et la prière.</div></div>
+<div class="m">Il revient aux parents d’expliquer à leurs enfants la foi en vue de son application dans la vie quotidienne. Il ne faut pas laisser tout l’enseignement spirituel à l’école de dimanche ou à l’Eglise&nbsp;!</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/34 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/34 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/34 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

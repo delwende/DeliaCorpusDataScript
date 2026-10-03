@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Contacts interculturels 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.93 },
+    { label: "1b", start: 3.18, end: 11.39 },
+    { label: "1c", start: 11.64, end: 19.27 },
+    { label: "1d", start: 19.52, end: 23.35 },
+    { label: "1e", start: 23.6, end: 24.77 },
+    { label: "1f", start: 25.02, end: 26.13 },
+    { label: "1g", start: 26.38, end: 30.13 },
+    { label: "1h", start: 30.38, end: 34.17 },
+    { label: "1i", start: 34.42, end: 40.01 },
+    { label: "1j", start: 40.26, end: 41.65 },
+    { label: "1k", start: 41.9, end: 44.21 },
+    { label: "1l", start: 44.46, end: 49.17 },
+    { label: "1m", start: 49.42, end: 53.91 },
+    { label: "1n", start: 54.16, end: 56.67 },
+    { label: "1o", start: 56.92, end: 61.21 },
+    { label: "1p", start: 61.46, end: 63.93 },
+    { label: "1q", start: 64.18, end: 69.39 },
+    { label: "1r", start: 69.64, end: 77.73 },
+    { label: "1s", start: 77.98, end: 85.59 },
+    { label: "1t", start: 85.84, end: 87.35 },
+    { label: "1u", start: 87.6, end: 90.97 },
+    { label: "1v", start: 91.22, end: 93.11 },
+    { label: "1w", start: 93.36, end: 94.89 },
+    { label: "1x", start: 95.14, end: 97.67 },
+    { label: "1y", start: 97.92, end: 98.85 },
+    { label: "1z", start: 99.1, end: 100.67 },
+    { label: "1aa", start: 100.92, end: 104.65 },
+    { label: "1ab", start: 104.9, end: 107.53 },
+    { label: "1ac", start: 107.78, end: 109.91 },
+    { label: "1ad", start: 110.16, end: 111.69 },
+    { label: "1ae", start: 111.94, end: 113.55 },
+    { label: "1af", start: 113.8, end: 116.37 },
+    { label: "1ag", start: 116.62, end: 117.13 },
+    { label: "1ah", start: 117.38, end: 121.15 },
+    { label: "1ai", start: 121.4, end: 128.77 },
+    { label: "1aj", start: 129.02, end: 131.63 },
+    { label: "1ak", start: 131.88, end: 133.43 },
+    { label: "1al", start: 133.68, end: 136.15 },
+    { label: "1am", start: 136.4, end: 138.73 },
+    { label: "1an", start: 138.98, end: 140.89 },
+    { label: "1ao", start: 141.14, end: 146.23 },
+    { label: "1ap", start: 146.48, end: 151.07 },
+    { label: "1aq", start: 151.32, end: 153.49 },
+    { label: "1ar", start: 153.74, end: 157.27 },
+    { label: "1as", start: 157.52, end: 159.19 },
+    { label: "1at", start: 159.44, end: 160.71 },
+    { label: "1au", start: 160.96, end: 161.83 },
+    { label: "1av", start: 162.08, end: 164.69 },
+    { label: "1aw", start: 164.94, end: 168.05 },
+    { label: "1ax", start: 168.3, end: 169.81 },
+    { label: "1ay", start: 170.06, end: 172.61 },
+    { label: "1az", start: 172.86, end: 175.87 },
+    { label: "1ba", start: 176.12, end: 177.39 },
+    { label: "1bb", start: 177.64, end: 183.91 },
+    { label: "1bc", start: 184.16, end: 190.25 },
+    { label: "1bd", start: 190.5, end: 192.97 },
+    { label: "1be", start: 193.22, end: 195.99 },
+    { label: "1bf", start: 196.24, end: 198.51 },
+    { label: "1bg", start: 198.76, end: 200.65 },
+    { label: "1bh", start: 200.9, end: 204.35 },
+    { label: "1bi", start: 204.6, end: 208.47 },
+    { label: "1bj", start: 208.72, end: 211.07 },
+    { label: "1bk", start: 211.32, end: 216.99 },
+    { label: "1bl", start: 217.24, end: 217.57 },
+    { label: "1bm", start: 217.82, end: 224.31 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 224.31;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "62-B064-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='61-B054-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='61-B054-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Contacts interculturels&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='63-B055-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='63-B055-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B064-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Contacts interculturels personnels</span></div></div>
+<div class="m"><div id="T1b" class="txs">L’harmonie dans les contacts interculturels n’est pas automatique parce que les réflexes et les comportements culturels sont souvent très différents.</div> <div id="T1c" class="txs">Nous allons maintenant donner quelques indications concrètes auxquelles doivent faire attention des gens issus d’une culture où la règle domine,</div> <div id="T1d" class="txs">lorsqu’ils sont en contact avec des gens issus d’une culture de l’honneur,</div> <div id="T1e" class="txs">et vice versa.</div></div>
+<div class="m"><div id="T1f" class="txs">Des deux côtés,</div> <div id="T1g" class="txs">il est important de se garder des jugements trop hâtifs et des non-dits.</div> <div id="T1h" class="txs">On doit poser la question pour quelles raisons fais-tu cela&nbsp;?</div> <div id="T1i" class="txs">De cette manière on pourra comprendre la logique de l’interlocuteur et découvrir ses méthodes.</div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">Pour les Européens</span><span class="bd"> </span><span class="bd">:</span></div> <div id="T1k" class="txs"><span class="bd">comprendre les personnes d'un autre pays</span></div></div>
+<div class="m"><div id="T1l" class="txs">Il est très important de faire sentir l’<span class="bd">acceptation</span> et la <span class="bd">valorisation</span>.</div> <div id="T1m" class="txs">Le sentiment de honte vient de ce qu’on se sent exclu d’une communauté.</div> <div id="T1n" class="txs">C’est ce qui se passe avec les migrants.</div> <div id="T1o" class="txs">Le meilleur antidote est d’assurer les étrangers qu’ils appartiennent au groupe.</div></div>
+<div class="m"><div id="T1p" class="txs">Comment créer la <span class="bd">confiance</span>&nbsp;?</div> <div id="T1q" class="txs">La meilleure solution consiste à se mettre à la place de l’interlocuteur.</div> <div id="T1r" class="txs">Les gens s’ouvriront plus facilement si on leur montre une sincère disposition à les connaître et si on évite les sujets qui sont perçus comme des menaces.</div> <div id="T1s" class="txs">S’intéresser au pays d’origine et à la famille permet de nouer des relations grâce à des valeurs culturelles auxquelles ils tiennent beaucoup,</div> <div id="T1t" class="txs">et aide à toucher le cœur.</div> <div id="T1u" class="txs">Des questions comme «&nbsp;<span class="it">Pourquoi es-tu ici&nbsp;?</span></div> <div id="T1v" class="txs"><span class="it">Comment es-tu venu&nbsp;?</span></div><div id="T1w" class="txs">&nbsp;» provoquent la méfiance,</div> <div id="T1x" class="txs">elles font penser aux interviews de migrants.</div> <div id="T1y" class="txs">Plus tard,</div> <div id="T1z" class="txs">si la relation se développe,</div> <div id="T1aa" class="txs">on pourra parler de ces sujets quand l’atmosphère sera détendue.</div></div>
+<div class="m"><div id="T1ab" class="txs"><span class="bd">L’hospitalité</span> crée la considération,</div> <div id="T1ac" class="txs">mais il faut respecter chaque culture,</div> <div id="T1ad" class="txs">et de diverses manières.</div> <div id="T1ae" class="txs">En Afrique de l’Ouest,</div> <div id="T1af" class="txs">on honore ses amis en faisant le chemin jusqu’à eux ;</div> <div id="T1ag" class="txs">en Europe,</div> <div id="T1ah" class="txs">on le fait en ouvrant son logis et par là même sa sphère privée.</div> <div id="T1ai" class="txs">Il vaut la peine de se demander quelle forme prend l’hospitalité dans la culture des migrants et comment elle communique la considération,</div> <div id="T1aj" class="txs">pour essayer d'y trouver un point d’ancrage.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs">Avant d'inviter les gens,</div> <div id="T1al" class="txs">il est souvent utile de leur rendre visite chez eux,</div> <div id="T1am" class="txs">ça leur montre qu’ils ont de l’importance.</div> <div id="T1an" class="txs">Même après de nombreuses années,</div> <div id="T1ao" class="txs">beaucoup d’étrangers n’ont jamais vu un intérieur européen et ils ressentent cela comme du rejet.</div> <div id="T1ap" class="txs">Une invitation dans une famille du pays est donc d’autant plus appréciée.</div></div>
+<div class="m"><div id="T1aq" class="txs">Dans les cultures sensibles à l'honneur,</div> <div id="T1ar" class="txs">on évite autant que possible d’exprimer une critique directement,</div> <div id="T1as" class="txs">pour ne choquer personne.</div> <div id="T1at" class="txs">Par exemple,</div> <div id="T1au" class="txs">après une fête,</div> <div id="T1av" class="txs">avant de dire que quelque chose n’a pas été bien rangé,</div> <div id="T1aw" class="txs">on peut s'informer aimablement du bon déroulement de la fête,</div> <div id="T1ax" class="txs">et se montrer compréhensif,</div> <div id="T1ay" class="txs">en invoquant la fatigue en fin de soirée.</div> <div id="T1az" class="txs">Il est important d'éviter de généraliser.</div> <div id="T1ba" class="txs">Des remarques comme :</div> <div id="T1bb" class="txs">«&nbsp;<span class="it">La cuisine n’était pas propre</span>&nbsp;» sont disproportionnées quand seulement un coin de la cuisine avait été oublié.</div> <div id="T1bc" class="txs">La bonne communication réussit mieux si la réaction immédiate de mécontentement est dissipée.</div> <div id="T1bd" class="txs">Pour résoudre des problèmes plus compliqués,</div> <div id="T1be" class="txs">il vaut la peine de recourir à un médiateur.</div></div>
+<div class="m"><div id="T1bf" class="txs">Dans les contacts interculturels,</div> <div id="T1bg" class="txs">il y aura toujours des déceptions.</div> <div id="T1bh" class="txs">Cela est dû aux attentes différentes des uns et des autres,</div> <div id="T1bi" class="txs">mais aussi à ce qu'il y a dans le monde des personnes au caractère difficile,</div> <div id="T1bj" class="txs">tant chez les gens du pays que chez les migrants.</div> <div id="T1bk" class="txs">Il est judicieux de ne pas placer la barre trop haut en matière d’observation des normes occidentales,</div> <div id="T1bl" class="txs">au début,</div> <div id="T1bm" class="txs">en tout cas - en effet les étrangers les connaissent mal – et ainsi de ménager de l’espace pour des développements positifs.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/31 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/31 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/31 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

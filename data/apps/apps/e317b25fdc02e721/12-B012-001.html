@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>221 Fala njehen wanaa 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.34, end: 12.77 },
+    { label: "1b", start: 13.02, end: 25.95 },
+    { label: "1c", start: 26.2, end: 36.47 },
+    { label: "1d", start: 36.72, end: 48.98 },
+    { label: "1e", start: 49.23, end: 61.7 },
+    { label: "1f", start: 61.95, end: 72.01 },
+    { label: "1g", start: 72.26, end: 85.27 },
+    { label: "1h", start: 85.52, end: 98.7 },
+    { label: "1i", start: 98.95, end: 112.8 },
+    { label: "1j", start: 113.05, end: 124.44 },
+    { label: "1k", start: 124.69, end: 139.48 },
+    { label: "1l", start: 139.73, end: 150.19 },
+    { label: "1m", start: 150.44, end: 160.14 },
+    { label: "1n", start: 160.39, end: 172.36 },
+    { label: "1o", start: 172.61, end: 182.72 },
+    { label: "1p", start: 182.97, end: 189.92 },
+    { label: "1q", start: 190.17, end: 197.38 },
+    { label: "1r", start: 197.63, end: 206.99 },
+    { label: "1s", start: 207.24, end: 219.19 },
+    { label: "1t", start: 219.44, end: 229.44 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 3.34;
+var stopTime  = 229.44;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "12-B012-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='11-B011-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;221 Fala njehen wanaa&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B012-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">221 Fala njehen wanaa jaadal.</div></div>
+<div class="m"><div id="T1b" class="txs">222 Fallaandu wii ƴeeñugol tiiɗi, wanaa jippaade.</div></div>
+<div class="m"><div id="T1c" class="txs">223 Famɗude doodi haɗataa ɗum luuɓude.</div></div>
+<div class="m"><div id="T1d" class="txs">224 Famndu ɓookan, liingu ni jey ndiyam.</div></div>
+<div class="m"><div id="T1e" class="txs">225 Famndu e faggudu muuɗum fu, yo mboddi jey.</div></div>
+<div class="m"><div id="T1f" class="txs">226 Famndu na yiɗi ndiyam de wanaa mbawñu ɗam.</div></div>
+<div class="m"><div id="T1g" class="txs">227 Famndu nde yiɗnoo gorko, bammban ɗum.</div></div>
+<div class="m"><div id="T1h" class="txs">228 Fay si mi walaa fay, miɗo woodi fuy.</div></div>
+<div class="m"><div id="T1i" class="txs">229 Fay so fewre ñalli waali, so ngoonga hirndii, hewtoto ɗum.</div></div>
+<div class="m"><div id="T1j" class="txs">230 Fay so mayde waraay, neyaaku na heƴa.</div></div>
+<div class="m"><div id="T1k" class="txs">231 Fay so suka wullaay na haani hokkiteede inna muuɗum.</div></div>
+<div class="m"><div id="T1l" class="txs">232 Fay so ƴeɓtuɗaa gaɗa famndu, naa boɓɓo.</div></div>
+<div class="m"><div id="T1m" class="txs">233 Faynu rawaandu maa ŋate.</div></div>
+<div class="m"><div id="T1n" class="txs">234 Feere wo wojere, mawɗo umminan, suka umminan.</div></div>
+<div class="m"><div id="T1o" class="txs">235 Felñaango gaɗa ndunngu.</div></div>
+<div class="m"><div id="T1p" class="txs">236 Fergere ɓeydi yappo.</div></div>
+<div class="m"><div id="T1q" class="txs">237 Feto kammbiije wanaa fijirde kutte.</div></div>
+<div class="m"><div id="T1r" class="txs">238 Fewre so wottinii hiirtintaa.</div></div>
+<div class="m"><div id="T1s" class="txs">239 Fewre ƴuurataa dow kammu faa saama.</div></div>
+<div class="m"><div id="T1t" class="txs">240 Fii o fa ndogen fuh accu o ɓuri.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/12 prov fulf vol1.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

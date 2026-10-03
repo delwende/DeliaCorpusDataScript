@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>16  Fɔ ti mɔgɔ ban 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.61 },
+    { label: "1b", start: 3.86, end: 7.91 },
+    { label: "1c", start: 8.16, end: 10.43 },
+    { label: "1d", start: 10.68, end: 14.03 },
+    { label: "1e", start: 14.28, end: 22.21 },
+    { label: "1f", start: 22.46, end: 25.25 },
+    { label: "1g", start: 25.5, end: 29.35 },
+    { label: "1h", start: 29.6, end: 32.25 },
+    { label: "1i", start: 32.5, end: 35.13 },
+    { label: "1j", start: 35.38, end: 38.63 },
+    { label: "1k", start: 38.88, end: 43.35 },
+    { label: "1l", start: 43.6, end: 46.51 },
+    { label: "1m", start: 46.76, end: 50.95 },
+    { label: "1n", start: 51.2, end: 60.31 },
+    { label: "1o", start: 60.56, end: 67.27 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 67.27;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;16  Fɔ ti mɔgɔ ban&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">16</span><span class="bd">  </span><span class="bd">Fɔ</span><span class="bd"> ti </span><span class="bd">mɔgɔ</span><span class="bd"> ban</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="it">L’on a beau critiquer quelqu’un, il n’en meurt pas</span>.</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Fɔ ti mɔgɔ ban</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">17</span><span class="bd">  </span><span class="bd">Fɔninkɔrɔ tɔ ye dalamaga ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">Quand tout a été déjà dit, la répétition n’est rien d’autres que du gaspillage de salive</span>.</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">Fɔninkɔrɔ tɔ ye dalamaga ye</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">18</span><span class="bd">  </span><span class="bd">Fosi</span><span class="bd"> te Ala </span><span class="bd">kɛɲɛ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1h" class="txs"><span class="it">Dieu est capable de tout</span>.</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Fosi te Ala kɛɲɛ</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">19</span><span class="bd">  </span><span class="bd">Hɔn</span><span class="bd"> le bi </span><span class="bd">hɔn</span><span class="bd"> diya</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1k" class="txs"><span class="it">Dans la vie, c’est quand on donne qu’on reçoit</span>.</div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">Hɔn</span><span class="bd"> le bi </span><span class="bd">hɔn</span><span class="bd"> </span><span class="bd">diya</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">20</span><span class="bd">  </span><span class="bd">Jantonnyɛrɛla</span><span class="bd"> </span><span class="bd">kɔrɔcogo</span><span class="bd"> ka </span><span class="bd">ɲi</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1n" class="txs"><span class="it">On vieillit avec sa forme normale quand on ne se laisse pas aller à tout ce qui est risquant</span>.</div></div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">Jantonnyɛrɛla</span><span class="bd"> </span><span class="bd">kɔrɔcogo</span><span class="bd"> ka </span><span class="bd">ɲi</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/prov_vol1_16_a_20.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

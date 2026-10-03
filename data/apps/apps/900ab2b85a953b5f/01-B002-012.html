@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 12</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "12a", start: 1658.82, end: 1660.49 },
+    { label: "12b", start: 1660.74, end: 1661.17 },
+    { label: "12c", start: 1661.42, end: 1665.41 },
+    { label: "12d", start: 1665.66, end: 1667.87 },
+    { label: "12e", start: 1668.12, end: 1669.79 },
+    { label: "12f", start: 1670.04, end: 1671.13 },
+    { label: "12g", start: 1671.38, end: 1675.99 },
+    { label: "12h", start: 1676.24, end: 1680.65 },
+    { label: "12i", start: 1680.9, end: 1683.79 },
+    { label: "12j", start: 1684.04, end: 1686.89 },
+    { label: "12k", start: 1687.14, end: 1688.71 },
+    { label: "12l", start: 1688.96, end: 1689.99 },
+    { label: "12m", start: 1690.24, end: 1692.55 },
+    { label: "12n", start: 1692.8, end: 1695.89 },
+    { label: "12o", start: 1696.14, end: 1699.67 },
+    { label: "12p", start: 1699.92, end: 1703.79 },
+    { label: "12q", start: 1704.04, end: 1708.93 },
+    { label: "12r", start: 1709.18, end: 1714.43 },
+    { label: "12s", start: 1714.68, end: 1721.73 },
+    { label: "12t", start: 1721.98, end: 1724.33 },
+    { label: "12u", start: 1724.58, end: 1729.49 },
+    { label: "12v", start: 1729.74, end: 1733.59 },
+    { label: "12w", start: 1733.84, end: 1734.87 },
+    { label: "12x", start: 1735.12, end: 1739.11 },
+    { label: "12y", start: 1739.36, end: 1742.19 },
+    { label: "12z", start: 1742.44, end: 1743.95 },
+    { label: "12aa", start: 1744.2, end: 1746.93 },
+    { label: "12ab", start: 1747.18, end: 1748.65 },
+    { label: "12ac", start: 1748.9, end: 1750.97 },
+    { label: "12ad", start: 1751.22, end: 1753.49 },
+    { label: "12ae", start: 1753.74, end: 1755.39 },
+    { label: "12af", start: 1755.64, end: 1758.03 },
+    { label: "12ag", start: 1758.28, end: 1763.73 },
+    { label: "12ah", start: 1763.98, end: 1767.99 },
+    { label: "12ai", start: 1768.24, end: 1768.35 },
+    { label: "12aj", start: 1768.6, end: 1769.55 },
+    { label: "12ak", start: 1769.8, end: 1770.39 },
+    { label: "12al", start: 1770.64, end: 1771.45 },
+    { label: "12am", start: 1771.7, end: 1772.05 },
+    { label: "12an", start: 1772.3, end: 1772.47 },
+    { label: "12ao", start: 1772.72, end: 1781.61 },
+    { label: "12ap", start: 1781.86, end: 1783.09 },
+    { label: "12aq", start: 1783.34, end: 1790.07 },
+    { label: "12ar", start: 1790.32, end: 1793.43 },
+    { label: "12as", start: 1793.68, end: 1795.09 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1658.82;
+var stopTime  = 1795.09;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-011.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;12&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-013.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image12.jpg" />
+
+<div class="m"><div id="T12a" class="txs"><span class="bd">L’espérance</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T12b" class="txs"><span class="it">Ainsi,</span></div> <div id="T12c" class="txs"><span class="it">vous pourrez connaître </span><span class="bdit">l’espéranc</span><span class="it">e qu’il vous a donnée en vous appelant.</span></div> <div id="T12d" class="txs">(Ephésiens 1, 18)</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T12e" class="txs"><span class="bd">L’espérance chrétienne,</span></div> <div id="T12f" class="txs"><span class="bd">c’est quoi&nbsp;?</span></div></div>
+<div class="m"><div id="T12g" class="txs">Espérer veut dire croire fermement qu’un désir s’accomplira prochainement.</div> <div id="T12h" class="txs">L'espérance chrétienne est l’attente de l'accomplissement des promesses de Dieu.</div> <div id="T12i" class="txs">L’espérance concerne toutes les promesses de Dieu,</div> <div id="T12j" class="txs">mais surtout celles qui concernent notre vie après la mort,</div> <div id="T12k" class="txs">en présence de Dieu et de Jésus,</div> <div id="T12l" class="txs">le retour de Jésus,</div> <div id="T12m" class="txs">la nouvelle terre et le nouveau ciel.</div></div>
+<div class="m"><div id="T12n" class="txs">Espérer veut dire que ce n’est pas encore «&nbsp;<span class="it">arrivé</span>&nbsp;»,</div> <div id="T12o" class="txs">mais de croire avec certitude que nos attentes se réaliseront.</div> <div id="T12p" class="txs">Une telle espérance peut influencer profondément notre vie.</div> <div id="T12q" class="txs">Au lieu de sombrer dans la peur et l’inquiétude nous pouvons vivre dans la joie et la paix.</div> <div id="T12r" class="txs">Mais il ne faut pas oublier que la base de notre espérance doit être solide et fiable.</div> <div id="T12s" class="txs">Si notre espérance est fondée sur d’autres personnes humaines ou d’autres forces que le Dieu vivant nous serons forcément déçus.</div> <div id="T12t" class="txs">Seule une espérance fondée sur Dieu,</div> <div id="T12u" class="txs">sur son fils Jésus et le Saint-Esprit garantit l’accomplissement des promesses attendues.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T12v" class="txs"><span class="bd">Actions pour que l’espérance devienne une richesse dans ta vie</span> :</div></div>
+<div class="m"><div id="T12w" class="txs"><span class="it">-</span><span class="it"> la prière</span> :</div> <div id="T12x" class="txs">Remercie Dieu pour ses promesses et l’espérance que nous avons en Lui.</div> <div id="T12y" class="txs">Confie tes peurs et souci entre ses mains.</div></div>
+<div class="m"><div id="T12z" class="txs"><span class="it">-</span><span class="it"> la lecture biblique</span> :</div> <div id="T12aa" class="txs">Lis les versets suivants et choisis un à mémoriser :</div> <div id="T12ab" class="txs">Jean 10, 28 ;</div> <div id="T12ac" class="txs">Ephésiens 3, 20 à 21 ;</div> <div id="T12ad" class="txs">Apocalypse 21, 4.</div></div>
+<div class="m"><div id="T12ae" class="txs">- réflexion personnelle :</div> <div id="T12af" class="txs">Est-ce que tu as constamment des soucis&nbsp;?</div> <div id="T12ag" class="txs">Tu vis dans la peur que quelque chose de grave puisse arriver dans ta vie ou la vie de tes proches&nbsp;?</div> <div id="T12ah" class="txs">Il y a beaucoup d’exemples bibliques qui montrent que Dieu tient ses promesses :</div> <div id="T12ai" class="txs">Noé,</div> <div id="T12aj" class="txs">Abraham et Sara,</div> <div id="T12ak" class="txs">Jacob,</div> <div id="T12al" class="txs">Joseph,</div> <div id="T12am" class="txs">Ruth,</div> <div id="T12an" class="txs">Anne,</div> <div id="T12ao" class="txs">Néhémie… Etudie un de ces personnages tout en faisant attention comment Dieu a accompagné cette personne surtout pendant les moments difficiles.</div></div>
+<div class="m"><div id="T12ap" class="txs"><span class="it">-</span><span class="it"> envers les autres</span> :</div> <div id="T12aq" class="txs">Confectionne une jolie carte avec un verset biblique encourageant et donne-la à un ami ou à une amie en difficulté.</div> <div id="T12ar" class="txs">Tu peux également envoyer le verset par sms,</div> <div id="T12as" class="txs">WhatsApp ou autre.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

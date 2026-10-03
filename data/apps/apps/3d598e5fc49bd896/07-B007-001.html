@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>22 L’HÔTE PUNI 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.11 },
+    { label: "1b", start: 4.36, end: 6.95 },
+    { label: "1c", start: 7.2, end: 22.27 },
+    { label: "1d", start: 22.52, end: 39.53 },
+    { label: "1e", start: 39.78, end: 52.49 },
+    { label: "1f", start: 52.74, end: 63.95 },
+    { label: "1g", start: 64.2, end: 70.63 },
+    { label: "1h", start: 70.88, end: 78.07 },
+    { label: "1i", start: 78.32, end: 93.71 },
+    { label: "1j", start: 93.96, end: 116.65 },
+    { label: "1k", start: 116.9, end: 126.69 },
+    { label: "1l", start: 126.94, end: 133.71 },
+    { label: "1m", start: 133.96, end: 142.05 },
+    { label: "1n", start: 142.3, end: 154.87 },
+    { label: "1o", start: 155.12, end: 176.17 },
+    { label: "1p", start: 176.42, end: 187.79 },
+    { label: "1q", start: 188.04, end: 197.11 },
+    { label: "1r", start: 197.36, end: 202.67 },
+    { label: "1s", start: 202.92, end: 212.89 },
+    { label: "1t", start: 213.14, end: 218.71 },
+    { label: "1u", start: 218.96, end: 223.91 },
+    { label: "1v", start: 224.16, end: 231.31 },
+    { label: "1w", start: 231.56, end: 241.51 },
+    { label: "1x", start: 241.76, end: 260.11 },
+    { label: "1y", start: 260.36, end: 269.47 },
+    { label: "1z", start: 269.72, end: 282.99 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 282.99;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;22 L’HÔTE PUNI&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">22 </span><span class="bd">L’HÔTE PUN</span><span class="bd">I</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">LA VENGEANCE DE LA FEMME</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs">Il y a un proverbe qui dit bien qu’il «&nbsp;<span class="it">ne faut jamais mettre le doigt entre l’arbre et l’écorce</span>&nbsp;» pour parler des rapports de couple.</div> <div id="T1d" class="txs">On le sait bien, la bagarre qui dure moins est celle qui s'éclate entre un homme et sa femme, car l’heure du pardon arrive d’autant plus vite qu’ils dorment ensemble.</div></div>
+<div class="m"><div id="T1e" class="txs">Donc, la sagesse veut que si vous assistez à une bagarre de couple, qu’il soit préférable d’être prudent.</div> <div id="T1f" class="txs">Si vous prenez une position partisane, quand l’heure de la réconciliation viendrait, vous deviendriez l’ennemi.</div></div>
+<div class="m"><div id="T1g" class="txs">Il était une fois, un étranger était accueilli dans une famille.</div> <div id="T1h" class="txs">Entre-temps une bagarre éclata entre la femme et son époux.</div> <div id="T1i" class="txs">Comme la femme était enceinte, l’homme conclut que «&nbsp;<span class="it">si tu n’étais pas en grossesse, j’allais te corriger pour que tu ne répètes plus cela</span>&nbsp;».</div> <div id="T1j" class="txs">Au lieu de se contenter de ce dénouement heureux, l’étranger conseilla au mari, qu’en la matière lui il était expérimenté, qu’il pouvait frapper sa femme mais en se contentant de fouetter ses pieds.</div> <div id="T1k" class="txs">De cette façon, il ne court aucun danger de la blesser et d’hypothéquer la grossesse.</div> <div id="T1l" class="txs">L’homme appliqua immédiatement les conseils de son hôte.</div> <div id="T1m" class="txs">Il alla chercher un fouet et frappa copieusement les pieds de sa femme.</div> <div id="T1n" class="txs">Celle-ci pleura de douleur et garda une dent contre cet étranger insolite expert dans les mauvais conseils.</div></div>
+<div class="m"><div id="T1o" class="txs">Quand la nuit tomba, la femme fit sa cuisine mais avant de servir le plat de l’étranger, elle prit soin de placer d’abord au fond du plat un gros caillou qu'elle recouvrit ensuite de <span class="it">tô</span>.</div> <div id="T1p" class="txs">Elle l’apporta à l’étranger qui mourrait déjà de faim et qui croyait pouvoir en découdre avec le repas.</div> <div id="T1q" class="txs">À peine il plongea la main dans le plat, il se rendit compte du subterfuge de la femme.</div> <div id="T1r" class="txs">Il interpella l’homme en ces termes :</div> <div id="T1s" class="txs">«&nbsp;<span class="it">M</span><span class="it">on ami, votre femme-là est vraiment bizarre, elle m’a donné le caillou à la place du tô</span>&nbsp;».</div></div>
+<div class="m"><div id="T1t" class="txs">Contre toute attente, l’homme répondit :</div> <div id="T1u" class="txs">«&nbsp;<span class="it">À </span><span class="it">s</span><span class="it">a place je t’aurai donné la montagne.</span></div> <div id="T1v" class="txs"><span class="it">N’est pas toi qui m’a conseillé de la frapper aux pieds, qu’espéra</span><span class="it">i</span><span class="it">s-tu</span><span class="it"> </span>»<span class="it"> </span><span class="it">?</span></div></div>
+<div class="m"><div id="T1w" class="txs">Alors l’homme tira la leçon que ses conseils n’ont pas plu au mari même s’il les a appliqués.</div> <div id="T1x" class="txs">Bien sûr, même si cela était bien, l’homme ne pouvait que lui répondre de cette façon, car l’heure du pardon s’approchant, l’homme préparait déjà son innocence.</div> <div id="T1y" class="txs">Inutile de se mixer dans les affaires de couple surtout pas en donnant de mauvais conseils comme ceux-là.</div> <div id="T1z" class="txs">Un proverbe <span class="it">m</span><span class="it">o</span><span class="it">aga</span> dit bien que «&nbsp;<span class="it">si vous </span><span class="it">ne pouvez pas contribuer </span><span class="it">à</span><span class="it"> arranger un prob</span><span class="it">l</span><span class="it">ème, il ne</span><span class="it"> fa</span><span class="it">ut</span><span class="it"> </span><span class="it">ja</span><span class="it">mais</span><span class="it"> contribuer </span><span class="it">à</span><span class="it"> </span><span class="it">l’</span><span class="it">aggraver</span>&nbsp;».</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 22  l'hote puni.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

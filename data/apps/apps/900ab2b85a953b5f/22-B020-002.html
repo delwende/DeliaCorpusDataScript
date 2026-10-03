@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Ifaara 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "22-B020-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='21-B022-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='22-B020-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Ifaara&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='22-B020-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B020-image2.jpg" />
+
+<div class="m"><span class="bd">Yiyan</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">A ti yan wa lati ọdọ Ọlọrun, </span><span class="it">ṣaaju</span><span class="it"> </span><span class="it">ipilẹṣẹ</span><span class="it"> </span><span class="it">agbaye</span><span class="it">, </span><span class="it">ninu</span><span class="it"> Kristi, lati </span><span class="it">jẹ</span><span class="it"> </span><span class="it">mimọ</span><span class="it"> </span>(Éfésù 1, 4 ).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Kini </span><span class="bd">yíyàn</span><span class="bd">?</span></div>
+<div class="m">Yíyàn jẹ ẹkọ ti o nira lati ni oye. O ṣe pataki ki a ma ṣe ṣoki lori idi ti diẹ ninu awọn ti yan ati awọn miiran ko ṣe. Nupojipetọ-yinyin Jiwheyẹwhe tọn zẹẹmẹdo dọ mí ma sọgan mọnukunnujẹ nuyiwa etọn lẹpo mẹ pọ́n gbede.</div>
+<div class="m">Kini o ṣe pataki lati ranti nipa ẹkọ yii:</div>
+<div class="m">- Igbala bẹrẹ pẹlu Ọlọrun. Ó gbé ìdánúṣe láti gba ènìyàn là. Ẹ̀ṣẹ̀ ti bà wá jẹ́ débi pé kò ṣeé ṣe fún wa láti gbé ìgbésẹ̀ àkọ́kọ́.</div>
+<div class="m">- Eyi jẹ iṣe ti Ọlọrun ṣe nikan ati fun ara rẹ.</div>
+<div class="m">- Oun ko lo awọn ilana kanna gẹgẹbi aye wa ninu awọn yiyan rẹ (1 Korinti 1, 26 si 29).</div>
+<div class="m">- Olorun idibo ni o ni a idi. Ó ti yàn wá láti yin òun lógo, láti máa sìn ín àti láti ṣe iṣẹ́ rere.</div>
+<div class="m"><span class="bd">Awọn iṣe lati jẹ ki idibo jẹ ọlọrọ ninu igbesi aye rẹ:</span></div>
+<div class="m"><span class="it">- Adura:</span>Dupẹ lọwọ Ọlọrun ni gbogbo ọjọ pe o jẹ ọkan ninu awọn ayanfẹ Rẹ.</div>
+<div class="m">Beere fun iranlọwọ rẹ lati gbe yẹ ọkan ninu awọn ayanfẹ Ọlọrun.</div>
+<div class="m"><span class="it">- Bibeli kika</span>: Ka 1 Kọ́ríńtì 1, 26 sí 31. Àwọn ẹsẹ wọ̀nyí kọ́ wa pé Ọlọ́run kì í yàn bí ayé ṣe fẹ́. Kini awọn ilana rẹ fun yiyan? Nítorí pé Ọlọ́run kò yan ohun tó jẹ́ “alágbára” kò túmọ̀ sí pé kò ka wa sí.</div>
+<div class="m">Ka Isaiah 43, 4 ki o si há a sori.</div>
+<div class="m"><span class="it">- Ti ara ẹni otito</span>: Ṣe o lero pe awọn miiran - ọkọ tabi iyawo rẹ, awọn ọga rẹ tabi awọn alabaṣiṣẹpọ rẹ, awọn ọmọ ile ijọsin rẹ - ko ṣe akiyesi rẹ bi? Rántí pé o jẹ́ ọ̀kan lára ​​“àwọn àyànfẹ́” Ọlọ́run. O ṣe pataki pupọ si Ọlọrun. O ro o. O je iyebiye l‘oju Re. Pataki rẹ ko da lori awọn iwe-ẹkọ giga rẹ, ipo awujọ rẹ tabi awọn ohun-ini ohun elo rẹ, ṣugbọn o rọrun nipasẹ oore-ọfẹ ti Ọlọrun ti yan ọ. Ti o ba ṣọra, iwọ yoo ṣe akiyesi rẹ ni igbesi aye ojoojumọ rẹ!</div>
+<div class="m"><span class="it">- Si ọna miiran</span>: Máa bá àwọn arákùnrin àti arábìnrin rẹ nípa tẹ̀mí, tí wọ́n jẹ́ àyànfẹ́ Ọlọ́run, pẹ̀lú ọ̀wọ̀ àti ìfẹ́! Má ṣe kẹ́gàn àwọn aláìlera. Kàkà bẹ́ẹ̀, fi hàn wọ́n pé wọ́n ṣeyebíye lójú Ọlọ́run àti ìjọ.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

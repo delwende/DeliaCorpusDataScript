@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 11</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-010.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;11&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-012.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image11.jpg" />
+
+<div class="m"><span class="bd">Lo </span><span class="bd">S</span><span class="bd">pirito Santo</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">In Cristo anche voi che avete creduto, avete ricevuto da Dio </span><span class="bdit">lo Spirito Santo</span><span class="it">, che egli ha promesso e mediante il quale vi ha sigillato perché appartenete a lui</span><span class="it">, </span>(Efesini 1, 13)</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Cosa significa essere sigillati con lo Spirito Santo?</span></div>
+<div class="m">Presso gli ebrei il sigillo segnava la fine di una transazione: raggiunto l'accordo, compiuto l'atto e pagato il prezzo, il sigillo veniva apposto sul contratto per renderlo definitivo. Un sigillo è un'impronta progettata per garantire l'autenticità di un documento o di un'informazione e per evidenziare se il contenuto è stato alterato o danneggiato.</div>
+<div class="m">- Un sigillo stabilisce i diritti del proprietario e identifica la sua proprietà. Lo Spirito Santo diventa così l'impronta divina su di noi. Siamo proprietà di Dio.</div>
+<div class="m">- Un sigillo indica che si tratta di un'opera autentica, di una transazione completata e non negoziabile, che porta il sigillo di Dio.</div>
+<div class="m">- Un sigillo indica che si tratta di un'opera autentica, di una transazione completata e non negoziabile, recante il timbro dell'autorità competente. L’opera della salvezza è perfetta e non può più essere messa in dubbio.</div>
+<div class="m">- Coloro che portano con sé un documento sigillato con sigillo sono sotto la protezione del titolare del sigillo. Dio è il nostro protettore. Egli garantisce la nostra sicurezza. Lo Spirito Santo agisce anche come garante o pegno della nostra eredità. Chi paga un pegno, si impegna fermamente con l'altro a dare tutto in seguito. Lo Spirito Santo ci assicura la totalità della nostra eredità.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Azioni per rendere lo Spirito Santo una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera</span>: Ringraziamo Dio per il dono dello Spirito Santo. Chiedi allo Spirito Santo di riempirti completamente, affinché tu possa ascoltare la Sua voce.</div>
+<div class="m"><span class="it">- Lettura della Bibbia</span>: Leggi il Vangelo di Giovanni 15, 7 a 15. Cosa ti insegnano questi versetti riguardo allo Spirito Santo?</div>
+<div class="m"><span class="it">- riflessione personale:</span><span class="it"> </span>L’impronta dello Spirito Santo è davvero visibile nella tua vita? Tutti vedono che appartieni a Dio?</div>
+<div class="m">Chiedi allo Spirito Santo di mostrarti cosa c'è che non va in te e di trasformarti nell'immagine del Dio vivente.</div>
+<div class="m"><span class="it">- verso gli altri:</span><span class="it"> </span>Conosci i tuoi doni spirituali e inizia a esercitarli per il bene dei tuoi fratelli e sorelle in Cristo.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

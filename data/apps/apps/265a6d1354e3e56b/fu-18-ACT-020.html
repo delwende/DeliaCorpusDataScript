@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golle Nulaaɓe 20</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 9.49 },
+    { label: "1b", start: 9.74, end: 13.79 },
+    { label: "2a", start: 14.04, end: 18.55 },
+    { label: "2b", start: 18.8, end: 21.09 },
+    { label: "3a", start: 21.34, end: 22.81 },
+    { label: "3b", start: 23.06, end: 29.29 },
+    { label: "3c", start: 29.54, end: 33.07 },
+    { label: "4a", start: 33.32, end: 34.93 },
+    { label: "4b", start: 35.18, end: 46.31 },
+    { label: "4c", start: 46.56, end: 50.41 },
+    { label: "5", start: 50.66, end: 55.03 },
+    { label: "6a", start: 55.28, end: 60.15 },
+    { label: "6b", start: 60.4, end: 65.27 },
+    { label: "7a", start: 65.52, end: 70.05 },
+    { label: "7b", start: 70.3, end: 74.55 },
+    { label: "7c", start: 74.8, end: 77.25 },
+    { label: "8", start: 77.5, end: 82.13 },
+    { label: "9a", start: 82.38, end: 86.49 },
+    { label: "9b", start: 86.74, end: 92.97 },
+    { label: "9c", start: 93.22, end: 96.43 },
+    { label: "9d", start: 96.68, end: 99.87 },
+    { label: "10a", start: 100.12, end: 104.71 },
+    { label: "10b", start: 104.96, end: 105.95 },
+    { label: "10c", start: 106.2, end: 107.71 },
+    { label: "11a", start: 107.96, end: 111.47 },
+    { label: "11b", start: 111.72, end: 115.61 },
+    { label: "12a", start: 115.86, end: 118.17 },
+    { label: "12b", start: 118.42, end: 120.77 },
+    { label: "13", start: 121.02, end: 130.53 },
+    { label: "14", start: 130.78, end: 136.53 },
+    { label: "15a", start: 136.78, end: 141.93 },
+    { label: "15b", start: 142.18, end: 149.93 },
+    { label: "16a", start: 150.18, end: 155.35 },
+    { label: "16b", start: 155.6, end: 160.43 },
+    { label: "17", start: 160.68, end: 166.11 },
+    { label: "18a", start: 166.36, end: 168.41 },
+    { label: "18b", start: 168.66, end: 175.29 },
+    { label: "19", start: 175.54, end: 183.21 },
+    { label: "20", start: 183.46, end: 191.13 },
+    { label: "21", start: 191.38, end: 197.93 },
+    { label: "22", start: 198.18, end: 203.79 },
+    { label: "23", start: 204.04, end: 212.03 },
+    { label: "24a", start: 212.28, end: 223.59 },
+    { label: "24b", start: 223.84, end: 228.95 },
+    { label: "25a", start: 229.2, end: 233.39 },
+    { label: "25b", start: 233.64, end: 235.99 },
+    { label: "26a", start: 236.24, end: 239.49 },
+    { label: "26b", start: 239.74, end: 242.83 },
+    { label: "27", start: 243.08, end: 248.71 },
+    { label: "28a", start: 248.96, end: 256.19 },
+    { label: "28b", start: 256.44, end: 261.35 },
+    { label: "29", start: 261.6, end: 269.49 },
+    { label: "30", start: 269.74, end: 277.97 },
+    { label: "31a", start: 278.22, end: 280.47 },
+    { label: "31b", start: 280.72, end: 287.21 },
+    { label: "32a", start: 287.46, end: 291.77 },
+    { label: "32b", start: 292.02, end: 298.81 },
+    { label: "33", start: 299.06, end: 305.11 },
+    { label: "34", start: 305.36, end: 312.77 },
+    { label: "35a", start: 313.02, end: 320.01 },
+    { label: "35b", start: 320.26, end: 328.47 },
+    { label: "35c", start: 328.72, end: 331.57 },
+    { label: "36", start: 331.82, end: 337.55 },
+    { label: "37", start: 337.8, end: 342.27 },
+    { label: "38a", start: 342.52, end: 346.03 },
+    { label: "38b", start: 346.28, end: 349.55 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+
+// Footnotes and Cross-references
+var footnotes = {
+    "F-0": "<div class=\"footnote-p\"><span class=\"fr\">20:7 </span><span class=\"ft\"><span class=\"bdit\">Heltaade buuru</span> ina fiirta rewrude Laamɗo hiraande seniinde. </span></div>",
+    "F-1": "<div class=\"footnote-p\"><span class=\"fr\">20:15 </span><span class=\"fk\">Ruunde</span><span class=\"ft\"></span><span class=\"ft\">wo leydi tummbiindi hakkunde maayo manngo.</span></div>"
+};
+
+initFootnotes(footnotes);
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 28 }];
+var hasIntro = false;
+var baseRef  = "fu-18-ACT-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='fu-17-JHN-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='fu-18-ACT-019.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Golle Nulaaɓe&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;20&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-18-ACT-021.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-19-ROM-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="s1">No Pool yaari leyɗe Makedoniya e Geres</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">20</div> <div id="T1a" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Nde fitina oon faltinoo ndeen, Pool hawrunduri taalibaaɓe ɓeen, de semmbiniri ɗum'en e haala.</div> <div id="T1b" class="txs">Caggal ɗuum, waynii ɗum'en, fonndii Makedoniya.</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2a" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>O yiiltii ley leydi ndiin, imo semmbina yimɓe toon e waajuuji keewɗi.</div> <div id="T2b" class="txs">Caggal ɗuum, o yottii Geres.</div><span id="bookmarks2"></span> <a id="v3"></a><div id="T3a" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>O waɗi toon lebbi tati.</div> <div id="T3b" class="txs">Nde o segilinoo faa o naata laana yaade Siiriya fu, o nani Alhuudiyankooɓe ndawridii faa mbara mo.</div> <div id="T3c" class="txs">Ndelle o anniyii yeccoraade laawol Makedoniya.</div><span id="bookmarks3"></span> <a id="v4"></a><div id="T4a" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>Inan yaadiraaɓe makko:</div> <div id="T4b" class="txs">Sopater ɓii Pirrus jeyaaɗo Bereya, e Aristarka e Sekundus jeyaaɓe Tesaloniiki, e Gayus jeyaaɗo Derbe, e Timote.</div> <div id="T4c" class="txs">Wooɗi du Tikiku e Torofim jeyaaɓe leydi Aasiya.</div><span id="bookmarks4"></span> <a id="v5"></a><div id="T5" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Ɓeen ardii min, ndoomowi min wuro wi'eteengo Torowas.</div><span id="bookmarks5"></span> <a id="v6"></a><div id="T6a" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>Minen, min naati laana yaade Filipi caggal iidi buuru mo wattaaka rabilla.</div> <div id="T6b" class="txs">E ley balɗe joy min kewti ɓe Torowas, min ngaɗi ɗoon jeɗɗiire.</div><span id="bookmarks6"></span></div>
+
+<div class="s"><div id="s2">No Pool iirtiniri Ewtikus</div></div><span id="bookmarks6"></span><a id="v7"></a>
+<div class="p"><div id="T7a" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>Nyannde arandeere e jeɗɗiire, tawi miɗen kawriti faa min keltoo buuru.</div><div id="T7b" class="txs"><span class="footnote selectable" id="F-0"><sup>a</sup></span> Pool ina waajoo yimɓe ɓeen, sabo imo anniyii dillude jaango majjum.</div> <div id="T7c" class="txs">O heddii e waaju oon faa hakkunde jemma.</div><span id="bookmarks7"></span> <a id="v8"></a><div id="T8" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>Lampe keewɗe ina ngoni e ley suudu dowuuru ndu min kawriti ley muuɗum nduun.</div><span id="bookmarks8"></span> <a id="v9"></a><div id="T9a" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>Suka jokolle bi'eteeɗo Ewtikus ina jooɗii dow feneetere.</div> <div id="T9b" class="txs">Ko Pool juutini waaju muuɗum oon ɗuum, Ewtikus ŋoŋi, faa ɗaanii ɗoyngol teddungol.</div> <div id="T9c" class="txs">O saami ƴuuwde e feneetere sooro tataɓo ngoon.</div> <div id="T9d" class="txs">Nde ɓe kuncunoo mo ndeen, tawi o maayii.</div><span id="bookmarks9"></span> <a id="v10"></a><div id="T10a" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Ammaa Pool jippii, hippii e makko, hooƴi mo e juuɗe muuɗum, wi'i:</div></div>
+<div class="p"><div id="T10b" class="txs">— Mbaaltee!</div> <div id="T10c" class="txs">Yonki makko wartii!</div><span id="bookmarks10"></span></div><span id="bookmarks10"></span><a id="v11"></a>
+<div class="p"><div id="T11a" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>Ndeen Pool ƴeenti, heltii buuru, nyaami.</div> <div id="T11b" class="txs">Caggal ɗuum, o warti e waaju makko faa weeti, de o dilli.</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12a" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>Suka jokolle oon hooraa ina wuuri.</div> <div id="T12b" class="txs">Ɗum waaltini ɓerɗe maɓɓe sanne.</div><span id="bookmarks12"></span></div>
+
+<div class="s"><div id="s3">No Pool waynorii hooreeɓe goonɗinɓe wonɓe Efeesu</div></div><span id="bookmarks12"></span><a id="v13"></a>
+<div class="p"><div id="T13" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Minen, min artii yaade, min naati laana yaade Asos ɗo min njeyi nannude Pool, sabo imo anniyii yaarude toon koyɗe.</div><span id="bookmarks13"></span> <a id="v14"></a><div id="T14" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>Nde min tawunduri Asos ndeen, min nanni mo laana, min njottii Mitilene.</div><span id="bookmarks14"></span> <a id="v15"></a><div id="T15a" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>Min ƴuwi ɗoon e laana, min njottowii jaango muuɗum yeeso ruunde<span class="footnote selectable" id="F-1"><sup>b</sup></span> Kiyos.</div> <div id="T15b" class="txs">Faɓɓi-jaango muuɗum min paltorii ɗakkol ruunde Samos, de faɓɓiti-janngo mum min njottii Miletus.</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16a" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>Pool anniyii wosaade Efeesu, faa taa ɓooya ley leydi Aasiya ndiin.</div> <div id="T16b" class="txs">Imo henyanii yottaade Urusaliima nyannde iidi ɓenndal alkama si tawii na laatoo.</div><span id="bookmarks16"></span></div><span id="bookmarks16"></span><a id="v17"></a>
+<div class="p"><div id="T17" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>Nde Pool wonnoo Miletus ndeen, nelani hooreeɓe kawrital goonɗinɓe Efeesu ɓeen.</div><span id="bookmarks17"></span> <a id="v18"></a><div id="T18a" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>Nde ɓe ngarnoo ndeen, o wi'i ɓe:</div></div>
+<div class="p"><div id="T18b" class="txs">— Oɗon anndi no ngorrumi e mooɗon gilla nde koyngal am naatunoo e leydi Aasiya ndi faa warde hannden.</div><span id="bookmarks18"></span> <a id="v19"></a><div id="T19" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>Mi golliranii Joomiraaɗo leeƴinkinaare fuu, kam e gonɗi keewɗi e torraaji ɗi Alhuudiyankooɓe umminani kam ɗiin.</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>Oɗon anndi mi suuɗaay on huunde fuu ko nafata on, mi waajake on, mi jannginii on hakkunde yimɓe e ley galleeji mooɗon.</div><span id="bookmarks20"></span> <a id="v21"></a><div id="T21" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Mi tindinii Alhuudiyankooɓe e Geresankooɓe fuu tuubana Laamɗo, ngoonɗina Joomiraaɗo meeɗen Iisaa.</div><span id="bookmarks21"></span> <a id="v22"></a><div id="T22" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>Joonin, Ruuhu Ceniiɗo na yaara kam Urusaliima, mi anndaa ko hewtoytoo kam toon.</div><span id="bookmarks22"></span> <a id="v23"></a><div id="T23" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>Ko anndumi tan, Ruuhu Ceniiɗo oon na holla kam ley gure ɗeen fuu ina wi'a kam geƴƴelle e torraaji ina ndoomi kam.</div><span id="bookmarks23"></span> <a id="v24"></a><div id="T24a" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>De miin kaa, mi hiisaaki nguurndam am e maayde am fuu si mi timminii daɗundurgol, mi heɓii yottinde gollal ngal Iisaa Joomiraaɗo halfini kam ngaal.</div> <div id="T24b" class="txs">Gollal ngaal woni seedaade Kabaaru Lobbo haala hinney Laamɗo.</div><span id="bookmarks24"></span></div><span id="bookmarks24"></span><a id="v25"></a>
+<div class="p"><div id="T25a" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>Mi yiilake hakkunde mooɗon, miɗo waajoo haala laamu Laamɗo.</div> <div id="T25b" class="txs">De joonin miɗo anndi on nji'oytaa kam katin.</div><span id="bookmarks25"></span> <a id="v26"></a><div id="T26a" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>Ɗum waɗi de miɗo sappoo on hannden ɗum ɗo:</div> <div id="T26b" class="txs">si tawii gooto mooɗon halkii, wanaa feloore am.</div><span id="bookmarks26"></span> <a id="v27"></a><div id="T27" class="txs"><span class="v">27</span><span class="vsp">&nbsp;</span>Sabo mi waajake on anniyaaji Laamɗo fuu, mi suuɗaay on fay huunde.</div><span id="bookmarks27"></span> <a id="v28"></a><div id="T28a" class="txs"><span class="v">28</span><span class="vsp">&nbsp;</span>Ndeenee ko'e mooɗon, ndeenon coggal ngal Ruuhu Ceniiɗo halfini on faa kaybon ngaal.</div> <div id="T28b" class="txs">Laatoɗon durooɓe kawrital goonɗinɓe Laamɗo, ngal soodiri ƴiiƴam ɓiyum.</div><span id="bookmarks28"></span> <a id="v29"></a><div id="T29" class="txs"><span class="v">29</span><span class="vsp">&nbsp;</span>Miin, miɗo anndi caggal am yimɓe bonɓe cooroto e ley mooɗon hono no pobbi jolbuɗi, katin du ɗi accataa coggal ngaal.</div><span id="bookmarks29"></span> <a id="v30"></a><div id="T30" class="txs"><span class="v">30</span><span class="vsp">&nbsp;</span>Fay e ley mooɗon danyan worɓe ummiiɓe ina mbaajoo waajuuji fewreeji faa pooɗa taalibaaɓe ɓeen njokka ɗum'en.</div><span id="bookmarks30"></span> <a id="v31"></a><div id="T31a" class="txs"><span class="v">31</span><span class="vsp">&nbsp;</span>Ɗum le, kakkilon!</div> <div id="T31b" class="txs">Miccitoɗon, jemma e nyalooma fuu faa waɗi duuɓi tati, mi selaay tindinirde gooto mooɗon fuu e gonɗi.</div><span id="bookmarks31"></span></div><span id="bookmarks31"></span><a id="v32"></a>
+<div class="p"><div id="T32a" class="txs"><span class="v">32</span><span class="vsp">&nbsp;</span>Joonin, miɗo halfina on Laamɗo, e konngol hinney muuɗum.</div> <div id="T32b" class="txs">Konngol ngool ina waawi semmbinde on e ley goonɗinal mon, hokka on ko resani seniiɓe fuu.</div><span id="bookmarks32"></span> <a id="v33"></a><div id="T33" class="txs"><span class="v">33</span><span class="vsp">&nbsp;</span>Abada mi muuyaay fay huunde e mooɗon, wanaa cardi, wanaa kaŋŋe, wanaa kaddule.</div><span id="bookmarks33"></span> <a id="v34"></a><div id="T34" class="txs"><span class="v">34</span><span class="vsp">&nbsp;</span>Onon e ko'e mooɗon, oɗon anndi juuɗe am ɗe kumti haajuuji am e haajuuji wonduɓe e am.</div><span id="bookmarks34"></span> <a id="v35"></a><div id="T35a" class="txs"><span class="v">35</span><span class="vsp">&nbsp;</span>Mi hollii on e kabaaruuji ɗiin fuu, sanaa ngolliron noon, mballon tampuɓe.</div> <div id="T35b" class="txs">E ley ɗuum fuu, miccoɗon ɗii ɗo haalaaji ɗi Joomiraaɗo meeɗen Iisaa haali kam e hoorem:</div> <div id="T35c" class="txs">«Kokkuɗo ɓuri kokkaaɗo barke.»</div><span id="bookmarks35"></span></div><span id="bookmarks35"></span><a id="v36"></a>
+<div class="p"><div id="T36" class="txs"><span class="v">36</span><span class="vsp">&nbsp;</span>Nde Pool tilinoo haalde ɗum ndeen, kam e maɓɓe fuu ɓe kofii, ɓe ndu'ii.</div><span id="bookmarks36"></span> <a id="v37"></a><div id="T37" class="txs"><span class="v">37</span><span class="vsp">&nbsp;</span>Ɓe fuu ɓe mboyi bojji mawɗi, ɓe kippii e Pool, ɓe muccii ɗum.</div><span id="bookmarks37"></span> <a id="v38"></a><div id="T38a" class="txs"><span class="v">38</span><span class="vsp">&nbsp;</span>Ko ɓuri mettude ɓe fu, ko o wi'i ɓe nji'ataa mo katin ɗuum.</div> <div id="T38b" class="txs">Caggal ɗuum, ɓe ɗowti mo faa o naata laana maayo.</div><span id="bookmarks38"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/FUHSIMN1DA/B05___20_Actes_______FUHSIMN1DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

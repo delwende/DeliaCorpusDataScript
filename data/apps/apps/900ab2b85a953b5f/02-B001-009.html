@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 9</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "9a", start: 1161.46, end: 1163.47 },
+    { label: "9b", start: 1163.72, end: 1164.49 },
+    { label: "9c", start: 1164.74, end: 1167.19 },
+    { label: "9d", start: 1167.44, end: 1170.45 },
+    { label: "9e", start: 1170.7, end: 1172.89 },
+    { label: "9f", start: 1173.14, end: 1175.51 },
+    { label: "9g", start: 1175.76, end: 1178.83 },
+    { label: "9h", start: 1179.08, end: 1183.81 },
+    { label: "9i", start: 1184.06, end: 1185.87 },
+    { label: "9j", start: 1186.12, end: 1187.99 },
+    { label: "9k", start: 1188.24, end: 1192.71 },
+    { label: "9l", start: 1192.96, end: 1195.05 },
+    { label: "9m", start: 1195.3, end: 1197.71 },
+    { label: "9n", start: 1197.96, end: 1201.17 },
+    { label: "9o", start: 1201.42, end: 1203.15 },
+    { label: "9p", start: 1203.4, end: 1205.39 },
+    { label: "9q", start: 1205.64, end: 1210.33 },
+    { label: "9r", start: 1210.58, end: 1214.21 },
+    { label: "9s", start: 1214.46, end: 1220.37 },
+    { label: "9t", start: 1220.62, end: 1221.57 },
+    { label: "9u", start: 1221.82, end: 1229.37 },
+    { label: "9v", start: 1229.62, end: 1233.79 },
+    { label: "9w", start: 1234.04, end: 1234.89 },
+    { label: "9x", start: 1235.14, end: 1239.03 },
+    { label: "9y", start: 1239.28, end: 1243.21 },
+    { label: "9z", start: 1243.46, end: 1243.85 },
+    { label: "9aa", start: 1244.1, end: 1247.09 },
+    { label: "9ab", start: 1247.34, end: 1253.99 },
+    { label: "9ac", start: 1254.24, end: 1255.37 },
+    { label: "9ad", start: 1255.62, end: 1259.19 },
+    { label: "9ae", start: 1259.44, end: 1265.01 },
+    { label: "9af", start: 1265.26, end: 1266.83 },
+    { label: "9ag", start: 1267.08, end: 1271.41 },
+    { label: "9ah", start: 1271.66, end: 1272.71 },
+    { label: "9ai", start: 1272.96, end: 1274.87 },
+    { label: "9aj", start: 1275.12, end: 1281.61 },
+    { label: "9ak", start: 1281.86, end: 1285.17 },
+    { label: "9al", start: 1285.42, end: 1286.59 },
+    { label: "9am", start: 1286.84, end: 1291.53 },
+    { label: "9an", start: 1291.78, end: 1297.83 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1161.46;
+var stopTime  = 1297.83;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-008.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;9&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-010.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image9.jpg" />
+
+<div class="m"><div id="T9a" class="txs"><span class="bd">Wisdom and intelligence</span></div></div>
+<div class="m"><div id="T9b" class="txs"><span class="it">Yes,</span></div> <div id="T9c" class="txs"><span class="it">God has showered us with his blessings.</span></div> <div id="T9d" class="txs"><span class="it">He has given us all </span><span class="bdit">wisdom and understanding</span><span class="it">.</span></div> <div id="T9e" class="txs">(Ephesians 1, 8).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T9f" class="txs"><span class="bd">What </span><span class="bd">are</span><span class="bd"> wisdom and understanding?</span></div></div>
+<div class="m"><div id="T9g" class="txs">The basis of wisdom and intelligence is knowledge,</div> <div id="T9h" class="txs">that is an accumulation of information obtained through education or experience.</div> <div id="T9i" class="txs">There are those who confuse knowledge,</div> <div id="T9j" class="txs">intelligence and wisdom.</div> <div id="T9k" class="txs">They think that knowledge automatically leads to intelligence and even wisdom.</div> <div id="T9l" class="txs">But to be considered intelligent,</div> <div id="T9m" class="txs">it's not enough just to accumulate knowledge;</div> <div id="T9n" class="txs">you also have to understand it and know how to use it.</div> <div id="T9o" class="txs">That's intelligence.</div> <div id="T9p" class="txs">Wisdom goes even further.</div> <div id="T9q" class="txs">To be wise means to have the discernment when and how to apply the knowledge you have acquired,</div> <div id="T9r" class="txs">and to be able to pass on your knowledge and discernment to others.</div> <div id="T9s" class="txs">The Word of God teaches us that God can and will give us intelligence and wisdom BUT with the aim of knowing him,</div> <div id="T9t" class="txs">the living God,</div> <div id="T9u" class="txs">of knowing his plan of salvation and the riches he has reserved for us (see also Ephesians 1, 17 to 20).</div></div>
+<div class="m"><div id="T9v" class="txs"><span class="bd">Actions to turn wisdom and intelligence into riches in your life:</span></div></div>
+<div class="m"><div id="T9w" class="txs"><span class="it">- Prayer:</span></div> <div id="T9x" class="txs">Thank God for the wisdom and understanding he has already given you.</div> <div id="T9y" class="txs">Ask him to show you how to use the knowledge you've gained in Bible school,</div> <div id="T9z" class="txs">church,</div> <div id="T9aa" class="txs">conferences and personal study for his glory.</div> <div id="T9ab" class="txs">Ask God to increase your intelligence so that you can better understand his Word and pass on your knowledge to others.</div></div>
+<div class="m"><div id="T9ac" class="txs"><span class="it">- Bible reading:</span></div> <div id="T9ad" class="txs">Read 1 Corinthians 1, 18 to 25.</div> <div id="T9ae" class="txs">These words from the apostle Paul remind us that God's wisdom is different from that of our world.</div></div>
+<div class="m"><div id="T9af" class="txs"><span class="it">- personal reflection:</span></div> <div id="T9ag" class="txs">Intelligence and wisdom are highly regarded and sought after in our world.</div> <div id="T9ah" class="txs">But BEWARE:</div> <div id="T9ai" class="txs">it's not the same as with God.</div> <div id="T9aj" class="txs">Examine your heart with the help of the Holy Spirit to discover what motivates you in your quest to expand your knowledge.</div> <div id="T9ak" class="txs">Remember that God wants you to seek first to know him.</div></div>
+<div class="m"><div id="T9al" class="txs"><span class="it">- Toward others</span>:</div> <div id="T9am" class="txs">Reflect on what you've learned in the last few weeks at church or during other teachings.</div> <div id="T9an" class="txs">Write down an important lesson that has made a difference in your life and share it with a family member or friend.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

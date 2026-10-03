@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Offrir une aide concrète 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.19 },
+    { label: "1b", start: 2.44, end: 4.33 },
+    { label: "1c", start: 4.58, end: 8.55 },
+    { label: "1d", start: 8.8, end: 11.95 },
+    { label: "1e", start: 12.2, end: 19.07 },
+    { label: "1f", start: 19.32, end: 21.29 },
+    { label: "1g", start: 21.54, end: 25.57 },
+    { label: "1h", start: 25.82, end: 26.61 },
+    { label: "1i", start: 26.86, end: 29.79 },
+    { label: "1j", start: 30.04, end: 32.47 },
+    { label: "1k", start: 32.72, end: 34.55 },
+    { label: "1l", start: 34.8, end: 36.79 },
+    { label: "1m", start: 37.04, end: 39.63 },
+    { label: "1n", start: 39.88, end: 42.89 },
+    { label: "1o", start: 43.14, end: 44.25 },
+    { label: "1p", start: 44.5, end: 52.75 },
+    { label: "1q", start: 53, end: 56.19 },
+    { label: "1r", start: 56.44, end: 60.31 },
+    { label: "1s", start: 60.56, end: 61.49 },
+    { label: "1t", start: 61.74, end: 69.55 },
+    { label: "1u", start: 69.8, end: 72.65 },
+    { label: "1v", start: 72.9, end: 79.09 },
+    { label: "1w", start: 79.34, end: 81.19 },
+    { label: "1x", start: 81.44, end: 83.31 },
+    { label: "1y", start: 83.56, end: 85.87 },
+    { label: "1z", start: 86.12, end: 88.73 },
+    { label: "1aa", start: 88.98, end: 93.89 },
+    { label: "1ab", start: 94.14, end: 98.05 },
+    { label: "1ac", start: 98.3, end: 101.07 },
+    { label: "1ad", start: 101.32, end: 104.87 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 104.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "60-B063-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='59-B053-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='59-B053-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Offrir une aide concrète&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='61-B054-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='61-B054-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B063-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Offrir une aide concrète</span></div></div>
+<div class="m"><div id="T1b" class="txs">Quand des tensions surviennent,</div> <div id="T1c" class="txs">les médiateurs peuvent proposer une aide concrète aux gens sensibles à l’honneur,</div> <div id="T1d" class="txs">par exemple l’accompagnement lors d'une explication.</div> <div id="T1e" class="txs">Le médiateur peut expliquer à la justice comment le problème est ressenti par la partie sensible à l’honneur.</div> <div id="T1f" class="txs">Dans un contexte de faute,</div> <div id="T1g" class="txs">le médiateur peut déjà exprimer le fait que le fautif regrette.</div> <div id="T1h" class="txs">Dès lors,</div> <div id="T1i" class="txs">celui-ci n’a plus qu’à avouer brièvement sa faute,</div> <div id="T1j" class="txs">en évitant tout le processus préparatoire,</div> <div id="T1k" class="txs">particulièrement humiliant.</div></div>
+<div class="m"><div id="T1l" class="txs">Pour des gens sensibles à l’honneur,</div> <div id="T1m" class="txs">il est aussi difficile d’exprimer des critiques,</div> <div id="T1n" class="txs">parce qu’ils souhaitent éviter que l'autre perde la face.</div> <div id="T1o" class="txs">Là encore,</div> <div id="T1p" class="txs">le médiateur peut sauter sur l’occasion pour clarifier la situation en transmettant une critique justifiée de façon mesurée et appropriée,</div> <div id="T1q" class="txs">pour que des améliorations puissent être mises en œuvre.</div> <div id="T1r" class="txs">Cela peut être nécessaire entre deux générations de migrants.</div> <div id="T1s" class="txs">En effet,</div> <div id="T1t" class="txs">parents et enfants n’ont pas la même appréciation des choses en rapport avec la culture de l’honneur et la culture du droit (ou du devoir) et là,</div> <div id="T1u" class="txs">une médiation peut faciliter la compréhension.</div></div>
+<div class="m"><div id="T1v" class="txs">Les médiateurs sont bien utiles pour régler les affaires administratives pendant la phase d'intégration.</div> <div id="T1w" class="txs">Quand on est à court d’argent,</div> <div id="T1x" class="txs">les factures sont humiliantes.</div> <div id="T1y" class="txs">Quand on redoute le rejet d’une requête,</div> <div id="T1z" class="txs">chaque lettre officielle est source d’angoisse.</div> <div id="T1aa" class="txs">L’accompagnant peut aider un migrant à ne pas oublier une échéance importante.</div> <div id="T1ab" class="txs">Si les relations ne se limitent pas aux questions administratives,</div> <div id="T1ac" class="txs">un sentiment d’appartenance peut se développer,</div> <div id="T1ad" class="txs">ce qui est très important pour des gens sensibles à la considération.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/30 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/30 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/30 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

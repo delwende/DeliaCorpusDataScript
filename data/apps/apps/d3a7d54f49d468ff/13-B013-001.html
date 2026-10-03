@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>13  O BADO LENI TI 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.97 },
+    { label: "1b", start: 2.22, end: 5.51 },
+    { label: "1c", start: 5.76, end: 6.69 },
+    { label: "1d", start: 6.94, end: 9.89 },
+    { label: "1e", start: 10.14, end: 14.15 },
+    { label: "1f", start: 14.4, end: 17.21 },
+    { label: "1g", start: 17.46, end: 19.73 },
+    { label: "1h", start: 19.98, end: 22.89 },
+    { label: "1i", start: 23.14, end: 25.35 },
+    { label: "1j", start: 25.6, end: 27.51 },
+    { label: "1k", start: 27.76, end: 29.35 },
+    { label: "1l", start: 29.6, end: 30.93 },
+    { label: "1m", start: 31.18, end: 40.09 },
+    { label: "1n", start: 40.34, end: 58.71 },
+    { label: "1o", start: 58.96, end: 60.99 },
+    { label: "1p", start: 61.24, end: 61.24 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 61.24;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "13-B013-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='12-B012-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;13  O BADO LENI TI&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B013-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">13  O BADO LENI TI FUAYANDI</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">O bado n de pia o bisalo ke o ŋani boncianla.</div> <div id="T1c" class="txs">Yua kuli den bua o.</div> <div id="T1d" class="txs">O mo den yedi n bisalo n baku ni yua n no yo.</div> <div id="T1e" class="txs">Yua fidi ki tuodi li ñibobitonli u mu po ke li pu,</div> <div id="T1f" class="txs">ki ñudi yema n biga ba kuni wane.</div> <div id="T1g" class="txs">Wan ba teni o bisalo ya daali,</div> <div id="T1h" class="txs">o den kpani ke bi jawaaba kuli tani.</div> <div id="T1i" class="txs">O den teni ke bi tuani li bobili yeni.</div> <div id="T1j" class="txs">Bi gbaman damba den cua liiga,</div> <div id="T1k" class="txs">o luomo n den cili.</div> <div id="T1l" class="txs">Mi ñima n sia o.</div> <div id="T1m" class="txs">Wan gbali o yangbanlo o namuno o muoanua leni ti yandi kuli den gedi ki gbali ki ban sieni jakpeliga.</div> <div id="T1n" class="txs">Wani n cua wan tuoadi li bobili ki ya wangi yaba n se li kani ki tuoa a nua ka ya bobili yeni jie ñiton n ma leni o ba gani ki cemini li sua ke li bobili ñima suanga wan yadi ki gnudi ki gedi ki ta o pua.</div> <div id="T1o" class="txs">O yafuodano n pia saa.</div></div>
+<div class="m"><div id="T1p" class="txs">.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/13 gul cont v1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

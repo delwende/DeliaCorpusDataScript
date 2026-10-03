@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Введение 10</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "16-B021-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='15-B015-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='16-B021-009.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Введение&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;10&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B021-011.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='17-B016-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B021-image10.jpg" />
+
+<div class="m"><span class="bd">Наследование</span></div>
+<div class="m"><span class="it">Во Христе и мы стали наследниками...</span>(Ефесянам 1, 11).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Что такое христианское наследие?</span></div>
+<div class="m">Это имущество, оставленное умершим человеком тем, кто еще жив, обычно членам семьи.</div>
+<div class="m">Согласно Слову Божьему, у Бога есть наследие для нас, Его детей. Именно спасение, принесенное Иисусом Христом, дает нам право на это наследие. Все, что мы изучаем в этой брошюре, является частью этого наследия. Павел называет это наследием «славного богатства» (Ефесянам 1, 18).</div>
+<div class="m">Быть наследниками означает, что мы еще не полностью владеем этим богатством. Но если мы живем с Богом, если Иисус и Святой Дух обитают внутри нас, мы уже можем вкусить богатство нашего Небесного Отца. Точно так же, как ребенок, живущий в лоне своей семьи, уже может в какой-то степени наслаждаться имуществом своего отца. И нам обещано полное приобретение небесного наследия Святым Духом (см. следующую главу).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Действия, которые сделают наследство богатством вашей жизни:</span></div>
+<div class="m"><span class="it">- Молитва:</span>Благодарите Бога за богатство, которое Он дал вам. Перечислите их по одному. Попросите Бога помочь вам лучше использовать их.</div>
+<div class="m"><span class="it">- Чтение Библии:</span>Прочтите Ефесянам 1 и составьте список всех своих духовных благословений.</div>
+<div class="m"><span class="it">- личные размышления</span>: Бывают ли моменты, когда ты чувствуешь себя бедным? Вы завидуете тем, кто, кажется, имеет больше, чем вы? Помните, что богатство Божье находится в вашем распоряжении. Помните, что это богатство, которое никто не может украсть и которое не испортить.</div>
+<div class="m">В конце дня найдите время, чтобы подумать о том, какое из богатств из Послания к Ефесянам 1 вы смогли использовать в течение дня. Заведите небольшой блокнотик и каждый день записывайте Божьи благословения.</div>
+<div class="m"><span class="it">- другим:</span>Бог хочет, чтобы мы поделились своим духовным наследием с нашей семьей и нашими братьями и сестрами во Христе. Каждое утро выбирайте одно из богатств своего наследства и найдите способ «подарить» его тому, кого вы встретите в течение дня.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

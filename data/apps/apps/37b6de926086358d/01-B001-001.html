@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>41 Talka e dokkal 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 11.99 },
+    { label: "1b", start: 12.24, end: 13.71 },
+    { label: "1c", start: 13.96, end: 15.71 },
+    { label: "1d", start: 15.96, end: 20.43 },
+    { label: "1e", start: 20.68, end: 25.75 },
+    { label: "1f", start: 26, end: 27.45 },
+    { label: "1g", start: 27.7, end: 30.85 },
+    { label: "1h", start: 31.1, end: 35.35 },
+    { label: "1i", start: 35.6, end: 39.13 },
+    { label: "1j", start: 39.38, end: 42.05 },
+    { label: "1k", start: 42.3, end: 44.75 },
+    { label: "1l", start: 45, end: 49.63 },
+    { label: "1m", start: 49.88, end: 54.65 },
+    { label: "1n", start: 54.9, end: 62.91 },
+    { label: "1o", start: 63.16, end: 65.89 },
+    { label: "1p", start: 66.14, end: 68.63 },
+    { label: "1q", start: 68.88, end: 72.57 },
+    { label: "1r", start: 72.82, end: 75.27 },
+    { label: "1s", start: 75.52, end: 76.95 },
+    { label: "1t", start: 77.2, end: 82.53 },
+    { label: "1u", start: 82.78, end: 86.79 },
+    { label: "1v", start: 87.04, end: 89.33 },
+    { label: "1w", start: 89.58, end: 93.81 },
+    { label: "1x", start: 94.06, end: 96.35 },
+    { label: "1y", start: 96.6, end: 98.89 },
+    { label: "1z", start: 99.14, end: 101.77 },
+    { label: "1aa", start: 102.02, end: 105.03 },
+    { label: "1ab", start: 105.28, end: 106.67 },
+    { label: "1ac", start: 106.92, end: 108.21 },
+    { label: "1ad", start: 108.46, end: 109.75 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 109.75;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;41 Talka e dokkal&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">41 </span><span class="bd">Talka e dokkal moodibbo</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Waɗiino e jamaanuuji,</div> <div id="T1c" class="txs">gorko wonnoo de yo talka.</div> <div id="T1d" class="txs">Nyannde gom talka men eggidi deekum hoɗowi nder ladde.</div> <div id="T1e" class="txs">No talkaaku makko foti de o walaa fay mbaatoowan jaango.</div></div>
+<div class="m"><div id="T1f" class="txs">Ɗo o tawaa nder ladde ɗoon,</div> <div id="T1g" class="txs">moodibbo mawɗo rewi waali wuro makko.</div> <div id="T1h" class="txs">Talka men anndaa fu ko waɗanta moodibbo men.</div> <div id="T1i" class="txs">O walaa ko o hokkora moodibbo,</div> <div id="T1j" class="txs">o walaa njogiiɗo heɓa hokkora o,</div> <div id="T1k" class="txs">o hokkora moodibbo.</div></div>
+<div class="m"><div id="T1l" class="txs">Wari garol moodibbo o waylanoke talka men semteende.</div> <div id="T1m" class="txs">O noddi deekiiko heɓa ɓe ndawrida.</div> <div id="T1n" class="txs">Ɓe ndartini ko ɓe korsan gabboy koy ɓe keddodinoo fu ɓe kawrondina ɓe ngaɗana moodibbo hiraande.</div> <div id="T1o" class="txs">Ni moodibbo waɗanaa hiraande.</div> <div id="T1p" class="txs">Heddaa waɗanaa pummaari.</div></div>
+<div class="m"><div id="T1q" class="txs">Moodibbo fummidinnoo ni wi'i dawan.</div> <div id="T1r" class="txs">Talka men e deekum ɗootiri o,</div> <div id="T1s" class="txs">faa o woɗɗii.</div> <div id="T1t" class="txs">Ɓe ngarnoo heɓa ɓe njeeƴoo ni moodibbo hokki ɓe paali ɗiɗi.</div> <div id="T1u" class="txs">O wi'i so gataare warii ni ɓe aawa ɗi.</div> <div id="T1v" class="txs">Heddii ɓe mbaynondiri.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1w" class="txs">Gataare warnoo ni talka men aawi paalim.</div> <div id="T1x" class="txs">Kore puɗi.</div> <div id="T1y" class="txs">Ndee fuɗi fusi cardi;</div> <div id="T1z" class="txs">ndee to fuɗi fusi kanŋe.</div> <div id="T1aa" class="txs">Ndelle beero yo saawoore.</div> <div id="T1ab" class="txs">Ngaɗanɗo ɗum ko wooɗi fu,</div> <div id="T1ac" class="txs">yo hoorem waɗani.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs">Yaakuuba Jallo</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/01 ful cont vol3.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

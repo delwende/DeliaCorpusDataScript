@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#083F0E">
+<title>Mi kpanjama 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 5.09, end: 10.62 },
+    { label: "1b", start: 10.87, end: 14.68 },
+    { label: "1c", start: 14.93, end: 19.24 },
+    { label: "1d", start: 19.49, end: 27.24 },
+    { label: "1e", start: 27.49, end: 34.01 },
+    { label: "1f", start: 34.26, end: 36.65 },
+    { label: "1g", start: 36.9, end: 39.24 },
+    { label: "1h", start: 39.49, end: 41.32 },
+    { label: "1i", start: 41.57, end: 48.76 },
+    { label: "1j", start: 49.01, end: 56.44 },
+    { label: "1k", start: 56.69, end: 60.51 },
+    { label: "1l", start: 60.76, end: 68.56 },
+    { label: "1m", start: 68.81, end: 76.78 },
+    { label: "1n", start: 77.03, end: 85.85 },
+    { label: "1o", start: 86.1, end: 94.73 },
+    { label: "1p", start: 94.98, end: 102.59 },
+    { label: "1q", start: 102.84, end: 106.93 },
+    { label: "1r", start: 107.18, end: 116.09 },
+    { label: "1s", start: 116.34, end: 124.41 },
+    { label: "1t", start: 124.66, end: 128.67 },
+    { label: "1u", start: 128.92, end: 137.98 },
+    { label: "1v", start: 138.23, end: 138.23 },
+    { label: "1w", start: 146.53, end: 151.65 },
+    { label: "1x", start: 151.9, end: 160.39 },
+    { label: "1y", start: 160.64, end: 168.99 },
+    { label: "1z", start: 169.24, end: 173.15 },
+    { label: "1aa", start: 173.4, end: 182.4 },
+    { label: "1ab", start: 182.65, end: 191.92 },
+    { label: "1ac", start: 192.17, end: 195.99 },
+    { label: "1ad", start: 196.24, end: 204.5 },
+    { label: "1ae", start: 204.75, end: 214.39 },
+    { label: "1af", start: 214.64, end: 219.76 },
+    { label: "1ag", start: 220.01, end: 230.01 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 5.09;
+var stopTime  = 230.01;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Mi kpanjama&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Mi </span><span class="bd">kpanjama</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">1 </span><span class="bd">Janbi</span><span class="bd"> n </span><span class="bd">yadi</span><span class="bd"> </span><span class="bd">kundikundi</span><span class="bd"> n </span><span class="bd">sieni</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">diegu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1c" class="txs"><span class="it">C'est la trahison qui détruit un foyer fondé sur la calomnie.</span></div></div>
+<div class="m"><div id="T1d" class="txs">Janbi n yadi kundikundi n sieni yaa diegu.</div></div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">2 O jamo </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">daa</span><span class="bd"> mi </span><span class="bd">ñima</span><span class="bd"> </span><span class="bd">nni</span><span class="bd">.</span></div><div id="T1f" class="txs"><span class="bd">Baa</span><span class="bd"> </span><span class="bd">daa</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> jamo n </span><span class="bd">ye</span><span class="bd"> mi </span><span class="bd">ñimi</span><span class="bd"> </span><span class="bd">nni</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="it">On n'achète pas un poisson dans l'eau.</span></div></div>
+<div class="m"><div id="T1h" class="txs">O jamo ki daa mi ñima nni.</div> <div id="T1i" class="txs">Baa daa yaa jamo n ye mi ñimi nni.</div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">3 </span><span class="bd">Dinla</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">mani</span><span class="bd"> </span><span class="bd">saala</span><span class="bd"> n </span><span class="bd">cie</span>.</div></div>
+<div class="m"><div id="T1k" class="txs"><span class="it">Si aujourd'hui est bon, demain sera m</span><span class="it">eilleur</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1l" class="txs">Dinla yaa mani saala n cie.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">4 </span><span class="bd">Koyiamo</span><span class="bd"> </span><span class="bd">kuado</span><span class="bd"> n yen </span><span class="bd">kubi</span><span class="bd"> li </span><span class="bd">kojenli</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="it">C'est le vendeur de poulet malade qui a besoin d'avoir sur lui une preuve (un œuf) de la bonne santé de son poulet.</span></div></div>
+<div class="m"><div id="T1o" class="txs">Koyiamo kuado n yen kubi li kojenli.</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">5 Da </span><span class="bd">ñiidi</span><span class="bd"> </span><span class="bd">wulo</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">ñi</span><span class="bd"> </span><span class="bd">kpandiamo</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1q" class="txs"><span class="it">N'abandonne pas le varan pour une pintade boiteuse.</span></div></div>
+<div class="m"><div id="T1r" class="txs">Da ñiidi wulo ki ñi kpandiamo.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">6 </span><span class="bd">Nuam</span><span class="bd">a</span><span class="bd"> </span><span class="bd">leni</span><span class="bd"> </span><span class="bd">kpiadima</span><span class="bd"> kan </span><span class="bd">yegi</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">lieba</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs"><span class="it">On ne peut pas courir et se gratter en même temps</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1u" class="txs">Nuama leni kpiadima kan yegi ki lieba.</div></div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">7 Ku </span><span class="bd">mangu</span><span class="bd"> n </span><span class="bd">guliti</span><span class="bd"> </span><span class="bd">ti </span><span class="bd">ñinsandieli</span>.</div></div>
+<div class="m"><div id="T1w" class="txs"><span class="it">C</span><span class="it">’</span><span class="it">est la rosée qui fera tomber une case construite de salive.</span></div></div>
+<div class="m"><div id="T1x" class="txs">Ku mangu n guliti ti ñinsandieli.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">8 </span><span class="bd">Yua</span><span class="bd"> n bua </span><span class="bd">tonma</span><span class="bd"> n maa </span><span class="bd">wabo</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1z" class="txs"><span class="it">C</span><span class="it">’</span><span class="it">est la personne pressée qui accouche </span><span class="it">toujours </span><span class="it">un paralytique.</span></div></div>
+<div class="m"><div id="T1aa" class="txs">Yua n bua tonma n maa wabo.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ab" class="txs"><span class="bd">9 </span><span class="bd">Yua</span><span class="bd"> n nua </span><span class="bd">wulo</span><span class="bd"> n </span><span class="bd">yiedi</span><span class="bd"> </span><span class="bd">dabunli</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ac" class="txs"><span class="it">Celui qui voit le varan refuse le margouillat.</span></div></div>
+<div class="m"><div id="T1ad" class="txs">Yua n nua wulo n yiedi dabunli.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">10 Da </span><span class="bd">luu</span><span class="bd"> a </span><span class="bd">cacaaca</span><span class="bd">di</span><span class="bd"> a </span><span class="bd">danli</span><span class="bd"> n puni a </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">cacaapandi</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> po</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1af" class="txs"><span class="it">Ne jette pas tes vieilles chaussures parce qu'un ami t'en a offert de nouvelles.</span></div></div>
+<div class="m"><div id="T1ag" class="txs">Da luu a cacaacadi a danli n puni a yaa cacaapandi yaa po.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/01_prov_gulima_vol1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

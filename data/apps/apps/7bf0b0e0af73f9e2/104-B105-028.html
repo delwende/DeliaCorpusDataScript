@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Chào mừng 28</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "104-B105-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='103-B104-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='104-B105-027.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Chào mừng&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;28&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='104-B105-029.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='105-B106-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B105-image28.jpeg" />
+
+<div class="m"><span class="bd">Giải quyết vấn đề</span></div>
+<div class="m">Thể hiện vẻ mặt tử tế và tránh xấu hổ có giá trị to lớn trong nhiều nền văn hóa, bởi vì nó thể hiện sự tôn trọng người khác và chính mình. Đây là lý do tại sao những người thuộc nền văn hóa nhạy cảm với danh dự không thích nói về các vấn đề để người khác không bị mất mặt. Nhưng trong cuộc sống hàng ngày, các vấn đề hiếm khi tự giải quyết được.</div>
+<div class="m">Ví dụ, ở những ngôi nhà cho thuê, phòng giặt chung là nơi có khả năng giết chết sự hòa hợp. Một phụ nữ châu Á kể với chúng tôi rằng một người hàng xóm châu Phi đã trách móc cô về tình trạng phòng giặt sau khi sử dụng. Thật không may, người châu Phi trở nên rất tức giận. Sau đó, cô xấu hổ đến mức không dám nói chuyện với người châu Á nữa. Kể từ ngày đó, liên lạc đều thông qua người chồng châu Á.</div>
+<div class="m">Hai người hàng xóm đến từ những nền văn hóa tìm kiếm sự tôn trọng, nhưng văn hóa của họ rất khác nhau.</div>
+<div class="m">Đối với hai người phụ nữ này, thật khó để thực hiện bước này và giải quyết mâu thuẫn trực tiếp. Vấn đề thực sự không còn là sự sạch sẽ của phòng giặt mà là nguy cơ mất mặt.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

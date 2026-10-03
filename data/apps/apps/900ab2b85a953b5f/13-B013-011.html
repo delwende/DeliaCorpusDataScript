@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Seensa 11</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "13-B013-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='12-B012-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-010.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Seensa&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;11&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-012.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B013-image11.jpg" />
+
+<div class="m"><span class="bd">Hafuura Qulqulluu</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Kiristoositti isin warri amantanis hafuura qulqulluu isa inni abdachiisee fi kan isaa </span><span class="it">ta'uuf</span><span class="it"> </span><span class="it">ittiin</span><span class="it"> </span><span class="it">isin</span><span class="it"> </span><span class="it">mallatteesse</span><span class="it"> </span><span class="it">Waaqayyo</span><span class="it"> </span><span class="it">biraa</span><span class="it"> </span><span class="it">fudhattaniittu</span><span class="it">.</span><span class="it"> </span>(Efesoon 1, 13)</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Hafuura Qulqulluun chaappaa godhamuu jechuun maal jechuudha?</span></div>
+<div class="m">Yihudoota biratti, chaappaan sun xumura daldala tokkoo kan argisiisu ture: waliigaltee irra ga’amee, sanadni erga raawwatamee fi gatiin yeroo kaffalamu, chaappaan sun waliigaltee irratti kan maxxane murtaa’aa akka ta’uuf ture. Chaappaan mallattoo dhugummaa sanada ykn odeeffannoo tokko mirkaneessuuf, akkasumas qabiyyeen isaa jijjiiramuu ykn miidhamuu isaa agarsiisuuf qophaa’eedha.</div>
+<div class="m">- Chaappaan mirga abbaa qabeenyaa kan mirkaneessu yoo ta’u, qabeenya isaa adda baasa. Hafuurri Qulqulluun akkasitti mallattoo waaqummaa nu irratti ta’a. Nuti qabeenya Waaqayyooti.</div>
+<div class="m">- Chaappaan hojii dhugaa, daldala xumuramee fi kan hin mari’atamne, chaappaa Waaqayyoo kan qabu ta’uu isaa agarsiisa.</div>
+<div class="m">- Chaappaan hojii dhugaa, daldala xumuramee fi kan hin mari’atamne, chaappaa qaama aangoo qabuu kan qabu ta’uu isaa agarsiisa. Hojiin fayyinaa guutuu waan ta’eef kana booda shakkuun hin danda’amu.</div>
+<div class="m">- Warri sanada chaappaan cufame qabatanii deeman eegumsa abbaa chaappaa jala jiru. Waaqayyo tiksaa keenya. Nageenya keenya ni mirkaneessa. Hafuurri qulqulluunis akka wabii ykn waadaa dhaala keenyaatti ni hojjeta. Namni waadaa kaffale, booda hunda akka kennuuf isa kaaniif waadaa cimaa seena. Hafuurri Qulqulluun waliigala dhaala keenyaa nuuf mirkaneessa.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Gochoota Hafuura Qulqulluun jireenya kee keessatti badhaadhina akka ta'u gochuuf:</span></div>
+<div class="m"><span class="it">- Kadhannaa</span>: Kennaa Hafuura Qulqulluu kanaaf Waaqayyoon galateeffadhu. Hafuurri qulqulluun guutummaatti akka si guutu kadhadhu, akka ati sagalee isaa dhaggeeffachuu dandeessuuf.</div>
+<div class="m"><span class="it">- Dubbisa Macaafa Qulqulluu</span>: Wangeela Yohaannis 15, 7 hanga 15 dubbisi.Lakkoofsi kun waa’ee Hafuura Qulqulluu maal si barsiisu?</div>
+<div class="m"><span class="it">- calaqqisiisa dhuunfaa: 1.1.</span>Dhuguma mallattoon Hafuura Qulqulluu jireenya kee keessatti mul’ataa? Namni hundinuu kan Waaqayyoo ta'uu kee arguu danda'aa?</div>
+<div class="m">Hafuura Qulqulluun waan si mudate akka sitti agarsiisu, akkasumas gara fakkii Waaqayyoo jiraataatti akka si jijjiiru kadhadhu.</div>
+<div class="m"><span class="it">- gara namoota birootti:</span>Kennaawwan hafuuraa kee beekaa, obboloota kee fi obboleettota Kiristoos keessa jiraniif akka gaariitti shaakaluu jalqabi.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

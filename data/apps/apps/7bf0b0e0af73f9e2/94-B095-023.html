@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) ¡Bienvenido 23</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "94-B095-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='93-B094-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='94-B095-022.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) ¡Bienvenido&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;23&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='94-B095-024.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='95-B096-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B095-image23.jpeg" />
+
+<div class="m"><span class="bd">23) ¿CÓMO PUEDO CONOCER GENTE DE ESTE PAÍS?</span></div>
+<div class="m">Muchos europeos están muy ocupados en su vida cotidiana debido al trabajo y la familia, por lo que a veces resulta difícil entablar una conversación espontánea con la gente. Los pasatiempos que también disfrutan los europeos son una buena manera de conocer gente.</div>
+<div class="m"><span class="bd">GRUPOS Y CLUBES</span></div>
+<div class="m">Mucha gente se reúne en grupos y clubes después del trabajo para hacer deporte o tocar música juntos. Por ejemplo, hay coros, grupos de música, clubes deportivos, grupos de cocina y clubes de informática. Las personas se conocen a través de su pasatiempo compartido. La información suele publicarse en tablones de anuncios de tiendas y bibliotecas. También puede encontrar una descripción general de las actividades de ocio en la página web del respectivo pueblo.</div>
+<div class="m"><span class="bd">SERVICIOS DE ADORACIÓN</span></div>
+<div class="m">Los servicios religiosos suelen tener lugar los domingos por la mañana alrededor de las 10 de la mañana. En muchas iglesias se puede charlar con una taza de café después del servicio. Siempre puedes asistir a los servicios religiosos como invitado. La información sobre horarios y programas a menudo se muestra en tablones de anuncios fuera de los edificios de la iglesia.</div>
+<div class="m"><span class="bd">GRUPOS DE JUEGO PARA FAMILIAS</span></div>
+<div class="m">A menudo hay grupos de juego gratuitos para padres con niños más pequeños en el barrio o en las iglesias. Allí se reúnen los padres con niños pequeños. Los niños pueden jugar juntos y los padres pueden hablar entre ellos.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

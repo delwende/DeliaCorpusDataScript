@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 Ngorgu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 7, end: 9.89 },
+    { label: "1b", start: 10.14, end: 12.03 },
+    { label: "1c", start: 12.28, end: 13.69 },
+    { label: "1d", start: 13.94, end: 16.19 },
+    { label: "1e", start: 16.44, end: 21.07 },
+    { label: "1f", start: 21.32, end: 25.85 },
+    { label: "1g", start: 26.1, end: 27.63 },
+    { label: "1h", start: 27.88, end: 30.17 },
+    { label: "1i", start: 30.42, end: 31.99 },
+    { label: "1j", start: 32.24, end: 34.89 },
+    { label: "1k", start: 35.14, end: 43.31 },
+    { label: "1l", start: 43.56, end: 47.95 },
+    { label: "1m", start: 48.2, end: 50.95 },
+    { label: "1n", start: 51.2, end: 57.17 },
+    { label: "1o", start: 57.42, end: 61.45 },
+    { label: "1p", start: 61.7, end: 68.25 },
+    { label: "1q", start: 68.5, end: 69.73 },
+    { label: "1r", start: 69.98, end: 72.15 },
+    { label: "1s", start: 72.4, end: 77.41 },
+    { label: "1t", start: 77.66, end: 82.21 },
+    { label: "1u", start: 82.46, end: 85.85 },
+    { label: "1v", start: 86.1, end: 87.95 },
+    { label: "1w", start: 88.2, end: 91.97 },
+    { label: "1x", start: 92.22, end: 94.21 },
+    { label: "1y", start: 94.46, end: 96.33 },
+    { label: "1z", start: 96.58, end: 102.05 },
+    { label: "1aa", start: 102.3, end: 104.19 },
+    { label: "1ab", start: 104.44, end: 105.79 },
+    { label: "1ac", start: 106.04, end: 108.41 },
+    { label: "1ad", start: 108.66, end: 110.27 },
+    { label: "1ae", start: 110.52, end: 112.01 },
+    { label: "1af", start: 112.26, end: 114.85 },
+    { label: "1ag", start: 115.1, end: 117.49 },
+    { label: "1ah", start: 117.74, end: 119.05 },
+    { label: "1ai", start: 119.3, end: 122.47 },
+    { label: "1aj", start: 122.72, end: 126.39 },
+    { label: "1ak", start: 126.64, end: 129.07 },
+    { label: "1al", start: 129.32, end: 131.95 },
+    { label: "1am", start: 132.2, end: 135.75 },
+    { label: "1an", start: 136, end: 137.73 },
+    { label: "1ao", start: 137.98, end: 143.33 },
+    { label: "1ap", start: 143.58, end: 147.39 },
+    { label: "1aq", start: 147.64, end: 149.03 },
+    { label: "1ar", start: 149.28, end: 151.71 },
+    { label: "1as", start: 151.96, end: 154.23 },
+    { label: "1at", start: 154.48, end: 158.23 },
+    { label: "1au", start: 158.48, end: 162.03 },
+    { label: "1av", start: 162.28, end: 165.43 },
+    { label: "1aw", start: 165.68, end: 170.15 },
+    { label: "1ax", start: 170.4, end: 172.97 },
+    { label: "1ay", start: 173.22, end: 177.35 },
+    { label: "1az", start: 177.6, end: 180.55 },
+    { label: "1ba", start: 180.8, end: 182.29 },
+    { label: "1bb", start: 182.54, end: 184.25 },
+    { label: "1bc", start: 184.5, end: 185.97 },
+    { label: "1bd", start: 186.22, end: 189.51 },
+    { label: "1be", start: 189.76, end: 193.09 },
+    { label: "1bf", start: 193.34, end: 194.87 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 7;
+var stopTime  = 194.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;10 Ngorgu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">10 Ngorgu</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Waɗiino e jamaanuuji,</div> <div id="T1c" class="txs">debbo lobbo.</div> <div id="T1d" class="txs">Dagu makko e wodde walaa.</div> <div id="T1e" class="txs">Sukaaɓe worɓe ɗiɗo du ngonnoo dagu muɓɓoy e ngorgu walaa.</div> <div id="T1f" class="txs">Kamɓe ndiiwondirta e suka debbo oon.</div> <div id="T1g" class="txs">Debbo o,</div> <div id="T1h" class="txs">mo ngorgu yiɗi waɗa gorum.</div> <div id="T1i" class="txs">Worɓe ɗiɗo ɓe,</div> <div id="T1j" class="txs">annduɗo moy ɓuri ngorgu e maɓɓe walaa.</div></div>
+<div class="m"><div id="T1k" class="txs">Suka debbo noddi gooto maɓɓe wi'i na yiɗi ɓoy tawondira luuro ɓokki na lettugal wuro maɓɓe.</div> <div id="T1l" class="txs">O wi'owi suka gorko ɗiɗaɓo o du noon.</div> <div id="T1m" class="txs">Yeru ɓokki du e hulɓinaade jemma walaa.</div> <div id="T1n" class="txs">Laddeeru rimi ɓinngel ceccel de kiikiiɗe fu ɗoon jaaƴotoo.</div> <div id="T1o" class="txs">Sukaaɓe worɓe le anndaa tiiri laddeeru nduun.</div></div>
+<div class="m"><div id="T1p" class="txs">Heddii suka debbo yehi naatowi luuro ɓokki na hedii sukaaɓe worɓe.</div> <div id="T1q" class="txs">Naange na saama,</div> <div id="T1r" class="txs">suka gorko gooto na yottoo.</div> <div id="T1s" class="txs">Tawi ndeen laddeeru du e ɓiyum njaaƴotonoo ɓokki ɗoon.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs">Bii laddeeru fijinii wiiti luuro ɓokki.</div> <div id="T1u" class="txs">Suka gorko yi'unoo ɗuum ni haandi.</div> <div id="T1v" class="txs">Doggi faddii luuro.</div> <div id="T1w" class="txs">Binngel laddeeru yottinoo ni ɓe kaamondiri.</div> <div id="T1x" class="txs">Fadde inniyo e warde,</div> <div id="T1y" class="txs">tawi ɓii laddeeru waati.</div> <div id="T1z" class="txs">Laddeeru fiiri faa hooti dow heɓa jippitoo dow suka gorko.</div> <div id="T1aa" class="txs">Suka gorko tawi ndu dow.</div> <div id="T1ab" class="txs">Ɓe keɓondiri toon.</div> <div id="T1ac" class="txs">Suka debbo na woni ley luuro na moosa.</div> <div id="T1ad" class="txs">Suka debbo boɗeejo coy,</div> <div id="T1ae" class="txs">mo daande mbilla.</div></div>
+<div class="m"><div id="T1af" class="txs">Suka gorko jaaltii laddeeru.</div> <div id="T1ag" class="txs">Ndeen noon suka debbo wuytii wi'i:</div> <div id="T1ah" class="txs">“Mi yi'ii ngorgu maa.</div> <div id="T1ai" class="txs">Na mi ɗaɓɓe kootaa ko mi nilanoyte."</div> <div id="T1aj" class="txs">Ni suka gorko adi laawol wurom.</div></div>
+<div class="m"><div id="T1ak" class="txs">Suka debbo anndunoo koo suka gorko woɗɗoke,</div> <div id="T1al" class="txs">daasi laddeeru nanni e luuro ɓokki.</div> <div id="T1am" class="txs">O fukkii de o adi laddeeru ndu e ɓiyum,</div> <div id="T1an" class="txs">o deki dow makko.</div> <div id="T1ao" class="txs">O yoppi lefol makko hoore na luuloo e dammbugal luuro ɓokki.</div></div>
+<div class="m"><div id="T1ap" class="txs">Ba jenngan seeɗa ni naa suka gorko ɗiɗaɓo o,</div> <div id="T1aq" class="txs">na wara.</div> <div id="T1ar" class="txs">O yappataa o yawɗataako.</div> <div id="T1as" class="txs">O yottii daande luuro ɓokki.</div> <div id="T1at" class="txs">O yi'unoo lefol suka debbo ni o haanɗi.</div> <div id="T1au" class="txs">Nde wootere ni o sorkii nder luuro.</div> <div id="T1av" class="txs">O tawi laddeeru na huufi suka debbo.</div> <div id="T1aw" class="txs">O haami hoore laddeeru heɓa o durwida ɗum.</div> <div id="T1ax" class="txs">Laddeeru sonnyay latay.</div> <div id="T1ay" class="txs">O annditi koo laddeeru waatilawii.</div> <div id="T1az" class="txs">Ndeen noon suka debbo ummii.</div> <div id="T1ba" class="txs">Na moosa.</div> <div id="T1bb" class="txs">Ɓe kiirnondiri jam.</div> <div id="T1bc" class="txs">Ni suka debbo na moosa.</div></div>
+<div class="m"><div id="T1bd" class="txs">Heddii o wi'i suka gorko hoota ko o nilanowan ɗum.</div> <div id="T1be" class="txs">Ndelle yidde jaalii kulol.</div></div>
+<div class="m"><div id="T1bf" class="txs">Saajo Bari</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/05 Ful cont Absa.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

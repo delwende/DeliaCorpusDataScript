@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>11  Dugulenya diya ye 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 5.03 },
+    { label: "1b", start: 5.28, end: 13.27 },
+    { label: "1c", start: 13.52, end: 17.87 },
+    { label: "1d", start: 18.12, end: 22.75 },
+    { label: "1e", start: 23, end: 30.65 },
+    { label: "1f", start: 30.9, end: 34.75 },
+    { label: "1g", start: 35, end: 39.79 },
+    { label: "1h", start: 40.04, end: 43.99 },
+    { label: "1i", start: 44.24, end: 46.89 },
+    { label: "1j", start: 47.14, end: 50.61 },
+    { label: "1k", start: 50.86, end: 56.13 },
+    { label: "1l", start: 56.38, end: 60.35 },
+    { label: "1m", start: 60.6, end: 64.15 },
+    { label: "1n", start: 64.4, end: 68.53 },
+    { label: "1o", start: 68.78, end: 76.05 },
+    { label: "1p", start: 76.3, end: 81.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 81.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;11  Dugulenya diya ye&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">11</span><span class="bd">  </span><span class="bd">Dugulenya</span><span class="bd"> </span><span class="bd">diya</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">sufɛ</span><span class="bd"> </span><span class="bd">dumuni</span><span class="bd"> le </span><span class="bd">ye</span>.</div></div>
+<div class="m"><div id="T1b" class="txs"><span class="it">L’avantage d’un autochtone en ville est qu’il a de bonnes adresses pour régler ses préoccupations</span>.</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Dugulenya diya ye sufɛ dumuni le ye</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">12</span><span class="bd">  </span><span class="bd">Dugumɛni sɔnkɔrɔ le ye cinni ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">Le caractère connu d’une personne pourrait ne plus changer quel que soit le temps</span>.</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">Dugumɛni</span><span class="bd"> </span><span class="bd">sɔnkɔrɔ</span><span class="bd"> le </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">cinni</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">13</span><span class="bd">  </span><span class="bd">Duniya</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">baroso</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1h" class="txs"><span class="it">La vie est juste un passe-temps</span>.</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Duniya</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">baroso</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">14</span><span class="bd">  </span><span class="bd">Fanga ti lii don </span><span class="bd">ŋunu</span><span class="bd"> </span><span class="bd">kɔnɔ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1k" class="txs"><span class="it">La force physique ne permet pas de tout réaliser dans la vie.</span></div> <div id="T1l" class="txs"><span class="it">Parfois il faut de l’intelligence aussi</span>.</div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">Fanga ti lii don </span><span class="bd">ŋunu</span><span class="bd"> </span><span class="bd">kɔnɔ</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">15</span><span class="bd">  </span><span class="bd">Fanta fila ti se ka </span><span class="bd">lɔ</span><span class="bd"> </span><span class="bd">ɲɔgɔn</span><span class="bd"> </span><span class="bd">jigi</span><span class="bd"> </span><span class="bd">kɔrɔ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1o" class="txs"><span class="it">Un pauvre ne peut pas venir au secours d’un autre pauvre sur le plan financier</span>.</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">Fanta fila ti se ka </span><span class="bd">lɔ</span><span class="bd"> </span><span class="bd">ɲɔgɔn</span><span class="bd"> </span><span class="bd">jigi</span><span class="bd"> </span><span class="bd">kɔrɔ</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/prov_vol1_11_a_15.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

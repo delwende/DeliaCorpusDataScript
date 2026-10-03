@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 Jara deen 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.43 },
+    { label: "1b", start: 0.68, end: 2.87 },
+    { label: "1c", start: 3.12, end: 9.75 },
+    { label: "1d", start: 10, end: 19.69 },
+    { label: "1e", start: 19.94, end: 26.11 },
+    { label: "1f", start: 26.36, end: 29.69 },
+    { label: "1g", start: 29.94, end: 35.37 },
+    { label: "1h", start: 35.62, end: 39.19 },
+    { label: "1i", start: 39.44, end: 43.91 },
+    { label: "1j", start: 44.16, end: 44.91 },
+    { label: "1k", start: 45.16, end: 46.91 },
+    { label: "1l", start: 47.16, end: 51.25 },
+    { label: "1m", start: 51.5, end: 60.63 },
+    { label: "1n", start: 60.88, end: 64.25 },
+    { label: "1o", start: 64.5, end: 66.61 },
+    { label: "1p", start: 66.86, end: 69.25 },
+    { label: "1q", start: 69.5, end: 78.21 },
+    { label: "1r", start: 78.46, end: 81.73 },
+    { label: "1s", start: 81.98, end: 87.41 },
+    { label: "1t", start: 87.66, end: 88.85 },
+    { label: "1u", start: 89.1, end: 92.05 },
+    { label: "1v", start: 92.3, end: 94.51 },
+    { label: "1w", start: 94.76, end: 96.49 },
+    { label: "1x", start: 96.74, end: 99.79 },
+    { label: "1y", start: 100.04, end: 107.49 },
+    { label: "1z", start: 107.74, end: 113.97 },
+    { label: "1aa", start: 114.22, end: 117.13 },
+    { label: "1ab", start: 117.38, end: 120.89 },
+    { label: "1ac", start: 121.14, end: 123.09 },
+    { label: "1ad", start: 123.34, end: 124.59 },
+    { label: "1ae", start: 124.84, end: 129.19 },
+    { label: "1af", start: 129.44, end: 137.01 },
+    { label: "1ag", start: 137.26, end: 143.97 },
+    { label: "1ah", start: 144.22, end: 147.43 },
+    { label: "1ai", start: 147.68, end: 151.05 },
+    { label: "1aj", start: 151.3, end: 153.21 },
+    { label: "1ak", start: 153.46, end: 155.05 },
+    { label: "1al", start: 155.3, end: 157.83 },
+    { label: "1am", start: 158.08, end: 166.75 },
+    { label: "1an", start: 167, end: 169.31 },
+    { label: "1ao", start: 169.56, end: 171.21 },
+    { label: "1ap", start: 171.46, end: 172.69 },
+    { label: "1aq", start: 172.94, end: 180.11 },
+    { label: "1ar", start: 180.36, end: 185.29 },
+    { label: "1as", start: 185.54, end: 187.01 },
+    { label: "1at", start: 187.26, end: 189.71 },
+    { label: "1au", start: 189.96, end: 191.83 },
+    { label: "1av", start: 192.08, end: 196.43 },
+    { label: "1aw", start: 196.68, end: 205.51 },
+    { label: "1ax", start: 205.76, end: 214.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 214.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;5 Jara deen&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">Nsiirin&nbsp;!</div> <div id="T1b" class="txs">nsiirin&nbsp;!</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">N y’a ta </span><span class="bd">k’a</span><span class="bd"> la </span><span class="bd">kongofɛnw</span><span class="bd"> kan.</span></div></div>
+<div class="m"><div id="T1d" class="txs">Kongotigi jara ye tulonba labɛn ka se k’a deen nusɔndiya.</div></div>
+<div class="m"><div id="T1e" class="txs">Ni kongofɛn min sera ka dɔɔn kɛ k’a deen layɛlɛ,</div> <div id="T1f" class="txs">o tigi bi libara saba sɔrɔ.</div> <div id="T1g" class="txs">Kongofɛn caaman tɛmɛna jara deen ma yɛlɛ.</div> <div id="T1h" class="txs">Kɔnɔsogolon nana don fogo ra,</div> <div id="T1i" class="txs">jara deen ye yɛlɛ daminɛ.</div></div>
+<div class="m"><div id="T1j" class="txs">O ra,</div> <div id="T1k" class="txs">suruku ko :</div> <div id="T1l" class="txs">kɔnɔsogolon ye n belenden le ye.</div></div>
+<div class="m"><div id="T1m" class="txs">A ye libara saba nunu ta ka bila a ɲafɛ sanni kɔnɔsogolon ka tila dɔɔn na.</div> <div id="T1n" class="txs">N’a ko a bi lɔ,</div> <div id="T1o" class="txs">jara deen bi kasi.</div> <div id="T1p" class="txs">A sɛgɛnna minkɛ,</div> <div id="T1q" class="txs">a ye fɛɛrɛ ɲini ka fazi bɔ ka jara deen ɲaa kelen ci,</div> <div id="T1r" class="txs">o kɔfɛ ka pan.</div> <div id="T1s" class="txs">Kunko yɛlɛmana suruku kan.</div></div>
+<div class="m"><div id="T1t" class="txs">A ko :</div> <div id="T1u" class="txs">n’a ye nne ni kɔnɔsogolon filɛ,</div> <div id="T1v" class="txs">an ye kelen ye wa?</div> <div id="T1w" class="txs">Ale bi pan,</div> <div id="T1x" class="txs">nga nne ti se ka pan.</div></div>
+<div class="m"><div id="T1y" class="txs">Jara ko fɛɛrɛ foyi te yi foo suruku ɲaden ka falen n’ale deen ɲaden ye.</div></div>
+<div class="m"><div id="T1z" class="txs">O lo mɔgɔ man kan ka nata dumuni kɔ ka danmatɛmɛ.</div></div>
+<div class="m"><div id="T1aa" class="txs"><span class="it">Écoutez m</span><span class="it">on conte</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1ab" class="txs"><span class="it">Il s’agit des </span><span class="it">animaux de la brousse.</span></div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="it">Le maître des lieux,</span></div> <div id="T1ad" class="txs"><span class="it">le lion,</span></div> <div id="T1ae" class="txs"><span class="it">a organisé une grande fête pour égayer son enfant.</span></div></div>
+<div class="m"><div id="T1af" class="txs"><span class="it">L’animal dont la danse fait rire son enfant aura trois gourdes de miel.</span></div> <div id="T1ag" class="txs"><span class="it">Plusieurs animaux de la brousse passèrent mais le </span><span class="it">fils du lion n’a pas ri.</span></div> <div id="T1ah" class="txs"><span class="it">L’Autru</span><span class="it">che entra dans la foule,</span></div> <div id="T1ai" class="txs"><span class="it">l’enfant du  lion commença à rire.</span></div></div>
+<div class="m"><div id="T1aj" class="txs"><span class="it">Su</span><span class="it">r ce fait,</span></div> <div id="T1ak" class="txs"><span class="it">l’hyène dit :</span></div> <div id="T1al" class="txs"><span class="it">l’Autru</span><span class="it">che est mon neveu.</span></div></div>
+<div class="m"><div id="T1am" class="txs"><span class="it">Elle </span><span class="it">a </span><span class="it">mi</span><span class="it">s</span><span class="it"> les trois gourdes de miel devant lui en attendant que l’Autr</span><span class="it">u</span><span class="it">che fini de danser.</span></div> <div id="T1an" class="txs"><span class="it">Quand elle veut s’arrêter,</span></div> <div id="T1ao" class="txs"><span class="it">le lionceau pleure.</span></div> <div id="T1ap" class="txs"><span class="it">Fatiguée,</span></div> <div id="T1aq" class="txs"><span class="it">elle sorti une phase et a cassé un œil du lionceau et s’est évadé</span><span class="it">e</span><span class="it">.</span></div> <div id="T1ar" class="txs"><span class="it">Le problème est devenu celui de l’hyène.</span></div></div>
+<div class="m"><div id="T1as" class="txs"><span class="it">Elle dit</span><span class="it"> :</span></div> <div id="T1at" class="txs"><span class="it">si vous me comparer à l’Autru</span><span class="it">che,</span></div> <div id="T1au" class="txs"><span class="it">sommes-nous pareils ?</span></div> <div id="T1av" class="txs"><span class="it">Elle vole mais moi je ne peux pas voler.</span></div></div>
+<div class="m"><div id="T1aw" class="txs"><span class="it">Le lion dit qu’il n’y a pas d’autre solution que celle de remplacer l’œil de son fils par celui de l’hyène.</span></div></div>
+<div class="m"><div id="T1ax" class="txs"><span class="it">C’est pour cela </span><span class="it">que </span><span class="it">l'on ne doit pas être trop gourmand en présence de la nourriture.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/conte 5.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>20 Être non excisée n’est 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.33 },
+    { label: "1b", start: 3.58, end: 4.51 },
+    { label: "1c", start: 4.76, end: 7.03 },
+    { label: "1d", start: 7.28, end: 9.27 },
+    { label: "1e", start: 9.52, end: 12.71 },
+    { label: "1f", start: 12.96, end: 18.59 },
+    { label: "1g", start: 18.84, end: 22.67 },
+    { label: "1h", start: 22.92, end: 25.37 },
+    { label: "1i", start: 25.62, end: 29.63 },
+    { label: "1j", start: 29.88, end: 35.61 },
+    { label: "1k", start: 35.86, end: 37.19 },
+    { label: "1l", start: 37.44, end: 41.05 },
+    { label: "1m", start: 41.3, end: 42.95 },
+    { label: "1n", start: 43.2, end: 47.75 },
+    { label: "1o", start: 48, end: 49.63 },
+    { label: "1p", start: 49.88, end: 51.57 },
+    { label: "1q", start: 51.82, end: 58.39 },
+    { label: "1r", start: 58.64, end: 63.05 },
+    { label: "1s", start: 63.3, end: 66.09 },
+    { label: "1t", start: 66.34, end: 74.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 74.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "21-B021-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='20-B020-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='20-B020-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;20 Être non excisée n’est&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='22-B022-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='22-B022-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B021-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">20 Être non excisée n’est pas une honte!</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="it">Questions:</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="it">- Que voyez-vous sur le dessin?</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">- Dans certains villages,</span></div> <div id="T1e" class="txs"><span class="it">comment traite-t-on les jeunes filles non excisées?</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="it">- Une jeune fille non excisée doit-elle avoir honte de sa situation?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs">L’image montre des jeunes filles qui se réjouissent ensemble.</div> <div id="T1h" class="txs">Elles sont non excisées.</div> <div id="T1i" class="txs">D’autres jeunes filles les regardent et se moquent d’elles.</div></div>
+<div class="m"><div id="T1j" class="txs">Beaucoup de personnes peuvent se moquer des jeunes filles non excisées et les rejeter.</div></div>
+<div class="m"><div id="T1k" class="txs">Pourtant,</div> <div id="T1l" class="txs">ce n’est pas une honte de ne pas être excisée.</div> <div id="T1m" class="txs">Au contraire,</div> <div id="T1n" class="txs">une jeune fille non excisée peut être fière de sa situation!</div> <div id="T1o" class="txs">Elle est parfaite,</div> <div id="T1p" class="txs">comme Dieu l’a créée.</div> <div id="T1q" class="txs">Elle ne doit pas perdre courage et ne jamais demander l’excision pour être comme les autres.</div></div>
+<div class="m"><div id="T1r" class="txs">Une fille non excisée peut être épanouie et joyeuse.</div> <div id="T1s" class="txs">Elle peut devenir une femme sage,</div> <div id="T1t" class="txs">intelligente et se comporter de manière respectable pour ainsi faire la fierté de ses parents et de son pays.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/20AUD-20230320-WA0013.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

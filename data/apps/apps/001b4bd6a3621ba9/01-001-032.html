@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>161 Pʋ-toap yũud a bĩnd-k 32</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "32a", start: 631.84, end: 635.14 },
+    { label: "32b", start: 635.39, end: 638.83 },
+    { label: "32c", start: 639.08, end: 641.5 },
+    { label: "32d", start: 641.75, end: 650 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 631.84;
+var stopTime  = 650;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-031.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;161 Pʋ-toap yũud a bĩnd-k&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;32&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-033.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 161 a 200-image32.jpg" />
+
+<div class="m"><div id="T32a" class="txs"><span class="bd">192 </span><span class="bd">Sʋʋr-sʋʋr</span><span class="bd"> n </span><span class="bd">pit</span><span class="bd"> </span><span class="bd">korgo</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T32b" class="txs"><span class="bdit">(En attrapant des criquets l’un après l’autre,</span></div> <div id="T32c" class="txs"><span class="bdit">on finit par en remplir son sac).</span></div></div>
+<div class="m"><div id="T32d" class="txs"><span class="bd">Sʋʋr-sʋʋr</span><span class="bd"> n </span><span class="bd">pit</span><span class="bd"> </span><span class="bd">korgo</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 161 a 200 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

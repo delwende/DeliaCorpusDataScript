@@ -1,0 +1,17 @@
+var books = [
+  { name: "288 Haaju na waɗa dimo", ref: "01-B001-001.html" },
+  { name: "311 Heɓa baaba, heɓa", ref: "02-B002-001.html" },
+  { name: "331 Hiraande gaɗa", ref: "03-B003-001.html" },
+  { name: "351 Hunnduko ni bonni", ref: "04-B004-001.html" },
+  { name: "371 Jaasi e jeydal fuh wo", ref: "05-B005-001.html" },
+  { name: "391 Jawo wooto senƴataa", ref: "06-B006-001.html" },
+  { name: "411 Jom ƴugoode heɓii", ref: "07-B007-001.html" },
+  { name: "431 Keeɗu yo duluuru", ref: "08-B008-001.html" },
+  { name: "451 Ko ɓii fus, fusata", ref: "09-B009-001.html" },
+  { name: "471 Ko foondu anndi e", ref: "10-B010-001.html" },
+  { name: "491 Ko jumaa e jumma fu", ref: "11-B011-001.html" },
+  { name: "511 Ko neɗɗo ɓooyi jultal", ref: "12-B012-001.html" },
+  { name: "531 Ko soppaa e lekki", ref: "13-B013-001.html" },
+  { name: "551 Ko ƴakketee na", ref: "14-B014-001.html" },
+  { name: "571 Koyɗo wo sawru", ref: "15-B015-001.html" },
+];

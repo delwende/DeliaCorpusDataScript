@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>19 Yiri kumakan 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.85 },
+    { label: "1b", start: 1.1, end: 1.83 },
+    { label: "1c", start: 2.08, end: 3.41 },
+    { label: "1d", start: 3.66, end: 4.72 },
+    { label: "1e", start: 4.97, end: 6.53 },
+    { label: "1f", start: 6.78, end: 7.81 },
+    { label: "1g", start: 8.06, end: 8.91 },
+    { label: "1h", start: 9.16, end: 10.83 },
+    { label: "1i", start: 11.08, end: 12.37 },
+    { label: "1j", start: 12.62, end: 14.27 },
+    { label: "1k", start: 14.52, end: 15.29 },
+    { label: "1l", start: 15.54, end: 16.13 },
+    { label: "1m", start: 16.38, end: 17.77 },
+    { label: "1n", start: 18.02, end: 19.2 },
+    { label: "1o", start: 19.45, end: 20.29 },
+    { label: "1p", start: 20.54, end: 21.3 },
+    { label: "1q", start: 21.55, end: 22.03 },
+    { label: "1r", start: 22.28, end: 23.2 },
+    { label: "1s", start: 23.45, end: 24.44 },
+    { label: "1t", start: 24.69, end: 26 },
+    { label: "1u", start: 26.25, end: 27.73 },
+    { label: "1v", start: 27.98, end: 29.31 },
+    { label: "1w", start: 29.56, end: 30.04 },
+    { label: "1x", start: 30.29, end: 60.79 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 60.79;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "19-B019-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='18-B018-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='18-B018-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;19 Yiri kumakan&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='20-B020-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='20-B020-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B019-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">19 </span><span class="bd">Yiri </span><span class="bd">kumakan</span></div></div>
+<div class="m"><div id="T1b" class="txs">N teri, </div></div>
+<div class="m"><div id="T1c" class="txs">Yiri dɔ be kongo kɔnɔ, </div></div>
+<div class="m"><div id="T1d" class="txs">a tɔgɔ yayan, </div></div>
+<div class="m"><div id="T1e" class="txs">yayan k’an be yan le</div></div>
+<div class="m"><div id="T1f" class="txs">an b’o le lɔn.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs">n teri, </div></div>
+<div class="m"><div id="T1h" class="txs">yiri dɔ be soo ni kongo cɛ, </div></div>
+<div class="m"><div id="T1i" class="txs">a tɔgɔ kaala, </div></div>
+<div class="m"><div id="T1j" class="txs">kaala k’an ka k’ala ye</div></div>
+<div class="m"><div id="T1k" class="txs">ye ka furu kɛ. </div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1l" class="txs">n teri, </div></div>
+<div class="m"><div id="T1m" class="txs">yiri dɔ be forodaw ra, </div></div>
+<div class="m"><div id="T1n" class="txs">a tɔgɔ koto, </div></div>
+<div class="m"><div id="T1o" class="txs">koto k’an ka koo to</div></div>
+<div class="m"><div id="T1p" class="txs">musow taa ma,</div> <div id="T1q" class="txs">o ra,</div> <div id="T1r" class="txs">tɔɔrɔ be nɔgɔya.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs">N teri, </div></div>
+<div class="m"><div id="T1t" class="txs">Yiri dɔ be kɔdaw ra, </div></div>
+<div class="m"><div id="T1u" class="txs">A tɔgɔ finsan, </div></div>
+<div class="m"><div id="T1v" class="txs">Finsan ko saan finna</div></div>
+<div class="m"><div id="T1w" class="txs">diɲɛ ma,</div> <div id="T1x" class="txs">k’an m’a ye wa&nbsp;?</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src=" https://media.ipsapps.org/dyu/dyu-audio/ora/19 yiriw kumakan.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

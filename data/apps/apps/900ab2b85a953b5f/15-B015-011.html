@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introdução 11</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "15-B015-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-010.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introdução&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;11&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-012.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B021-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B015-image11.jpg" />
+
+<div class="m"><span class="bd">O espírito Santo</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Em Cristo também vós, os que crestes, recebestes de Deus o </span><span class="bdit">Espírito Santo</span><span class="it">, a quem ele prometeu e </span><span class="it">por</span><span class="it"> </span><span class="it">quem</span><span class="it"> </span><span class="it">vos</span><span class="it"> </span><span class="it">selou</span><span class="it"> para </span><span class="it">pertencerem</span><span class="it"> </span><span class="it">a</span><span class="it"> </span><span class="it">ele</span><span class="it">.</span><span class="it"> </span>(Efésios 1, 13)</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">O que significa ser selado com o Espírito Santo?</span></div>
+<div class="m">Entre os judeus, o selo marcava o fim de uma transação: quando o acordo era alcançado, a escritura feita e o preço pago, o selo era afixado no contrato para torná-lo definitivo. O selo é uma impressão destinada a garantir a autenticidade de um documento ou informação e a indicar se o conteúdo foi alterado ou danificado.</div>
+<div class="m">- Um selo estabelece os direitos do proprietário e identifica a sua propriedade. O Espírito Santo torna-se assim a marca divina em nós. Somos propriedade de Deus.</div>
+<div class="m">- Um selo indica que se trata de uma obra genuína, uma transação concluída e inegociável, que traz o selo de Deus.</div>
+<div class="m">- O selo indica que se trata de uma obra autêntica, uma transação concluída e inegociável, ostentando o carimbo da autoridade competente. A obra da salvação é perfeita e não pode mais ser duvidada.</div>
+<div class="m">- Quem porta documento lacrado com selo fica sob a proteção do titular do selo. Deus é nosso protetor. Ele garante nossa segurança. O Espírito Santo também atua como fiador ou penhor da nossa herança. Quem paga um penhor, assume firme compromisso com o outro de dar tudo depois. O Espírito Santo nos assegura a totalidade da nossa herança.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Ações para tornar o Espírito Santo uma riqueza em sua vida:</span></div>
+<div class="m"><span class="it">- Oração</span>: Graças a Deus pelo dom do Espírito Santo. Peça que o Espírito Santo o encha completamente, para que você possa ouvir a Sua voz.</div>
+<div class="m"><span class="it">- Leitura da Bíblia</span>: Leia o Evangelho de João 15, 7 a 15. O que esses versículos ensinam sobre o Espírito Santo?</div>
+<div class="m"><span class="it">- reflexão pessoal:</span>A marca do Espírito Santo é realmente visível em sua vida? Todos podem ver que você pertence a Deus?</div>
+<div class="m">Peça ao Espírito Santo para lhe mostrar o que há de errado com você e para transformá-lo à imagem do Deus vivo.</div>
+<div class="m"><span class="it">- em relação aos outros:</span>Conheça seus dons espirituais e comece a exercitá-los para o bem de seus irmãos e irmãs em Cristo.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>9 c) Sujets divers 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.51 },
+    { label: "1b", start: 2.76, end: 4.59 },
+    { label: "1c", start: 4.84, end: 9.47 },
+    { label: "1d", start: 9.72, end: 15.31 },
+    { label: "1e", start: 15.56, end: 18.11 },
+    { label: "1f", start: 18.36, end: 20.55 },
+    { label: "1g", start: 20.8, end: 21.89 },
+    { label: "1h", start: 22.14, end: 26.83 },
+    { label: "1i", start: 27.08, end: 30.51 },
+    { label: "1j", start: 30.76, end: 34.89 },
+    { label: "1k", start: 35.14, end: 36.63 },
+    { label: "1l", start: 36.88, end: 39.23 },
+    { label: "1m", start: 39.48, end: 48.77 },
+    { label: "1n", start: 49.02, end: 50.69 },
+    { label: "1o", start: 50.94, end: 52.43 },
+    { label: "1p", start: 52.68, end: 55.73 },
+    { label: "1q", start: 55.98, end: 58.69 },
+    { label: "1r", start: 58.94, end: 63.83 },
+    { label: "1s", start: 64.08, end: 65.23 },
+    { label: "1t", start: 65.48, end: 67.51 },
+    { label: "1u", start: 67.76, end: 68.53 },
+    { label: "1v", start: 68.78, end: 69.29 },
+    { label: "1w", start: 69.54, end: 74.17 },
+    { label: "1x", start: 74.42, end: 77.81 },
+    { label: "1y", start: 78.06, end: 80.65 },
+    { label: "1z", start: 80.9, end: 82.05 },
+    { label: "1aa", start: 82.3, end: 84.95 },
+    { label: "1ab", start: 85.2, end: 87.95 },
+    { label: "1ac", start: 88.2, end: 91.59 },
+    { label: "1ad", start: 91.84, end: 93.53 },
+    { label: "1ae", start: 93.78, end: 95.17 },
+    { label: "1af", start: 95.42, end: 97.13 },
+    { label: "1ag", start: 97.38, end: 98.85 },
+    { label: "1ah", start: 99.1, end: 100.59 },
+    { label: "1ai", start: 100.84, end: 103.87 },
+    { label: "1aj", start: 104.12, end: 108.17 },
+    { label: "1ak", start: 108.42, end: 110.15 },
+    { label: "1al", start: 110.4, end: 113.49 },
+    { label: "1am", start: 113.74, end: 116.53 },
+    { label: "1an", start: 116.78, end: 118.75 },
+    { label: "1ao", start: 119, end: 123.09 },
+    { label: "1ap", start: 123.34, end: 125.43 },
+    { label: "1aq", start: 125.68, end: 126.29 },
+    { label: "1ar", start: 126.54, end: 129.03 },
+    { label: "1as", start: 129.28, end: 130.25 },
+    { label: "1at", start: 130.5, end: 133.73 },
+    { label: "1au", start: 133.98, end: 135.59 },
+    { label: "1av", start: 135.84, end: 137.15 },
+    { label: "1aw", start: 137.4, end: 140.45 },
+    { label: "1ax", start: 140.7, end: 143.35 },
+    { label: "1ay", start: 143.6, end: 144.93 },
+    { label: "1az", start: 145.18, end: 146.75 },
+    { label: "1ba", start: 147, end: 148.41 },
+    { label: "1bb", start: 148.66, end: 151.51 },
+    { label: "1bc", start: 151.76, end: 153.25 },
+    { label: "1bd", start: 153.5, end: 155.59 },
+    { label: "1be", start: 155.84, end: 161.03 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 161.03;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "41-B047-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='40-B040-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='40-B040-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;9 c) Sujets divers&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='42-B041-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='42-B041-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B047-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="ul"><span class="bdit">9</span></span><span class="ul"><span class="bdit"> </span></span><span class="ul"><span class="bdit">c)</span></span><span class="ul"><span class="bdit"> Sujets divers</span></span><span class="ul"><span class="bdit">.</span></span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">La vraie grandeur</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Imaginons</span> que quelqu’un dise un jour que le calife Omar ibn al-Khattâb et le sultan Saladin,</div> <div id="T1d" class="txs">grandes figures de l’islam parmi les plus respectées de tous les temps au sein de la communauté musulmane,</div> <div id="T1e" class="txs">jouaient à la poupée… Spontanément,</div> <div id="T1f" class="txs">tout musulman qui se respecte dirait :</div> <div id="T1g" class="txs">«&nbsp;Certainement pas&nbsp;!</div> <div id="T1h" class="txs">Jamais le calife Omar ibn al-Khattâb et le sultan Saladin n’auraient fait pareille chose&nbsp;!</div> <div id="T1i" class="txs">Les grands hommes de l’islam ne jouent pas à la poupée&nbsp;!</div> <div id="T1j" class="txs">Cela n’aurait pas été convenable pour des personnes d’un tel rang&nbsp;»&nbsp;!</div></div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">Au premier abord</span>,</div> <div id="T1l" class="txs">cette réponse semblerait assez sensée.</div> <div id="T1m" class="txs">Mais qu’en serait-il si l’Histoire montrait que les deux chefs avaient eu chacun trois filles désirant que leur papa s’assoie par terre pour jouer avec elles à la poupée&nbsp;?</div> <div id="T1n" class="txs">Et si nous apprenions que,</div> <div id="T1o" class="txs">par amour pour ses filles,</div> <div id="T1p" class="txs">l’un des deux hommes avait accepté de s’abaisser lui-même ainsi,</div> <div id="T1q" class="txs">non pas une fois seulement mais régulièrement&nbsp;?</div> <div id="T1r" class="txs">Cela le rendrait-il meilleur à nos yeux ou bien baisserait-il dans notre estime&nbsp;?</div> <div id="T1s" class="txs">Certainement,</div> <div id="T1t" class="txs">cela le rendrait meilleur à nos yeux&nbsp;!</div></div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">Et si,</span></div> <div id="T1v" class="txs"><span class="bd">maintenant</span>,</div> <div id="T1w" class="txs">nous apprenions que Saladin jouait avec ses filles mais qu’Omar ibn al-Khattâb leur refusait ce plaisir,</div> <div id="T1x" class="txs">considérant qu’il était bien au-dessus de ce genre de choses&nbsp;?</div> <div id="T1y" class="txs">Pour qui aurions-nous le plus d’estime&nbsp;?</div> <div id="T1z" class="txs">Personnellement,</div> <div id="T1aa" class="txs">Saladin m’apparaîtrait comme un bien meilleur père,</div> <div id="T1ab" class="txs">un bien meilleur mari et un bien meilleur chef.</div> <div id="T1ac" class="txs">La véritable grandeur n’a pas besoin de se défendre ;</div> <div id="T1ad" class="txs">elle n’a pas besoin de se protéger,</div> <div id="T1ae" class="txs">ni de s’expliquer.</div> <div id="T1af" class="txs">Elle va de soi.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ag" class="txs"><span class="bdit">Conclusion</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T1ah" class="txs"><span class="it">Selon l’islam,</span></div> <div id="T1ai" class="txs"><span class="it">rien ne pourrait jamais conduire Dieu à devenir homme.</span></div> <div id="T1aj" class="txs"><span class="it">«</span><span class="it"> </span><span class="it">Il est absolument impossible que Dieu puisse avoir un fils</span><span class="it"> </span><span class="it">!</span></div> <div id="T1ak" class="txs"><span class="it">disent les musulmans.</span></div> <div id="T1al" class="txs"><span class="it">Faire une telle chose ne sied pas au Tout-Puissant</span><span class="it"> </span><span class="it">!»</span></div> <div id="T1am" class="txs"><span class="it">Mais en voulant ainsi élever Dieu au plus haut rang,</span></div> <div id="T1an" class="txs"><span class="it">l’islam a fait de </span><span class="it">lui un dieu distant,</span></div> <div id="T1ao" class="txs"><span class="it">tout comme le calife Omar refusant de s’abaisser au niveau de ses filles.</span></div> <div id="T1ap" class="txs"><span class="it">La conception biblique de Dieu,</span></div> <div id="T1aq" class="txs"><span class="it">à l’inverse,</span></div> <div id="T1ar" class="txs"><span class="it">ressemble à l’attitude du sultan Saladin,</span></div> <div id="T1as" class="txs"><span class="it">le père aimant.</span></div> <div id="T1at" class="txs"><span class="it">Puisque Dieu est bon dans le sens le plus pur du terme,</span></div> <div id="T1au" class="txs"><span class="it">il désire s’abaisser jusqu’à nous,</span></div> <div id="T1av" class="txs"><span class="it">se révéler à nous.</span></div> <div id="T1aw" class="txs"><span class="it">Il désire que nous le connaissions personnellement.</span></div> <div id="T1ax" class="txs"><span class="it">Jésus est celui qui nous a révélé Dieu,</span></div> <div id="T1ay" class="txs"><span class="it">comme le montre ce texte</span><span class="it"> </span><span class="it">:</span></div> <div id="T1az" class="txs"><span class="it">«</span><span class="it"> </span><span class="it">C’est moi qui suis le chemin,</span></div> <div id="T1ba" class="txs"><span class="it">la vérité et la vie.</span></div> <div id="T1bb" class="txs"><span class="it">On ne vient au Père qu’en passant par moi.</span></div> <div id="T1bc" class="txs"><span class="it">Si vous me connaissiez,</span></div> <div id="T1bd" class="txs"><span class="it">vous connaîtriez aussi mon Père.</span></div> <div id="T1be" class="txs"><span class="it">Et dès maintenant vous le connaissez et vous l’avez vu</span><span class="it"> </span><span class="it">» (Jean 14</span><span class="it">, </span><span class="it">6</span><span class="it"> à </span><span class="it">7).</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/41 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

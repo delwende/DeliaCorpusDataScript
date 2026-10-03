@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 14</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-013.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;14&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-015.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image14.jpg" />
+
+<div class="m"><span class="bd">La Chiesa</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Egli ha posto ogni cosa sotto i suoi piedi e lo ha dato come capo supremo della </span><span class="bdit">Chiesa</span><span class="it">, che è il suo corpo, la pienezza di colui che si compie in ogni cosa.</span> (Efesini 1, 22 a 23).</div>
+<div class="m">L'apostolo Paolo usò diverse immagini per spiegare cos'è la chiesa.</div>
+<div class="m">Nel nostro brano, Efesini capitolo 1, parla del corpo di Cristo (vedi anche 1 Corinzi 12), e nella stessa epistola capitolo 3, da 19 a 22, usa l'immagine di un popolo, di una famiglia e di una casa.</div>
+<div class="m">Cos’è la Chiesa, il corpo di Cristo? Cristo è il capo. La testa è la parte più importante del corpo. È nella testa che si trova il cervello, dove si concentrano tutte le informazioni, i pensieri e le decisioni. È dove sono immagazzinate l'intelligenza, la forza di volontà e la memoria. Tutti gli organi e gli arti del nostro corpo sono sotto il controllo del nostro cervello. Se diciamo che Cristo è il capo della Chiesa, comprendiamo che tutti i suoi membri dipendono da LUI. L'immagine del corpo sottolinea anche l'unità della Chiesa, la complementarità dei suoi membri e la solidarietà che deve regnare tra loro. Cos'è la Chiesa, la famiglia di Dio?</div>
+<div class="m">Quando diventiamo cristiani, diventiamo anche membri di una nuova famiglia. Con questa immagine l'apostolo Paolo si ispirò alla famiglia ebraica, dove ogni membro aveva un posto fisso con compiti e obblighi. È lo stesso nella chiesa, dove ogni membro ha un ruolo da svolgere secondo i suoi doni.</div>
+<div class="m">Altre due caratteristiche importanti della famiglia ebraica erano la fecondità e la solidarietà. La fecondità nella chiesa significa ampliarla conquistando nuovi convertiti! Solidarietà significa aiutarsi a vicenda nel momento del bisogno.</div>
+<div class="m">Che cos'è la chiesa, una casa, un edificio? Questa immagine sottolinea l'importanza della fondazione (Gesù Cristo) e il fatto che la chiesa è "in costruzione", non ancora terminata.</div>
+<div class="m"><span class="bd">Azioni per rendere la Chiesa una risorsa nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera:</span><span class="it"> </span>Grazie a Dio per la sua chiesa nel tuo paese, con tutte le sue debolezze e mancanze.</div>
+<div class="m"><span class="it">- Lettura della Bibbia:</span><span class="it"> </span>Leggi Efesini 2, da 13 a 22 e medita su questi versetti.</div>
+<div class="m"><span class="it">- riflessione personale:</span><span class="it"> </span>Confronta la tua chiesa locale con queste 3 immagini. Sono presenti le caratteristiche evidenziate da Paolo? Chiedi allo Spirito Santo di mostrarti cosa puoi fare per rendere la tua chiesa veramente un corpo e una famiglia!</div>
+<div class="m"><span class="it">- verso gli altri:</span><span class="it"> </span>Esamina il tuo cuore per vedere se i tuoi fratelli e sorelle in chiesa sono veramente diventati i tuoi genitori, come nella tua famiglia naturale.</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

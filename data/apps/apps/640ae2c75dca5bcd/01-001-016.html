@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saa bi duguma seen bi dug 16</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "16a", start: 375.05, end: 377.61 },
+    { label: "16b", start: 377.86, end: 380.42 },
+    { label: "16c", start: 380.67, end: 388.39 },
+    { label: "16d", start: 388.64, end: 391.51 },
+    { label: "16e", start: 391.76, end: 394.51 },
+    { label: "16f", start: 394.76, end: 402.32 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 375.05;
+var stopTime  = 402.32;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 29 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-015.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Saa bi duguma seen bi dug&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;16&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-017.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Dioula Proverbes 29-image16.jpg" />
+
+<div class="m"><div id="T16a" class="txs"><span class="bd">F</span><span class="bd">i</span><span class="bd">in y</span><span class="bd">e</span><span class="bd"> k</span><span class="bd">e</span><span class="bd">l</span><span class="bd">e</span><span class="bd">n y</span><span class="bd">e</span><span class="bd"> nga,</span></div> <div id="T16b" class="txs"><span class="bd">a m</span><span class="bd">a</span><span class="bd">namanacogo t</span><span class="bd">i</span><span class="bd"> k</span><span class="bd">e</span><span class="bd">len y</span><span class="bd">e</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T16c" class="txs"><span class="it">[</span><span class="it">Le noir est le même mais sa manière de briller n’est pas la même.</span></div></div>
+<div class="m"><div id="T16d" class="txs"><span class="bdit">Tout ce qui brille n’est pas or</span><span class="bdit">]</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T16e" class="txs"><span class="bd">F</span><span class="bd">i</span><span class="bd">in y</span><span class="bd">e</span><span class="bd"> k</span><span class="bd">e</span><span class="bd">l</span><span class="bd">e</span><span class="bd">n y</span><span class="bd">e</span><span class="bd"> nga,</span></div> <div id="T16f" class="txs"><span class="bd">a m</span><span class="bd">a</span><span class="bd">namanacogo t</span><span class="bd">i</span><span class="bd"> k</span><span class="bd">e</span><span class="bd">len y</span><span class="bd">e</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/dioula Prov 01 a 29 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

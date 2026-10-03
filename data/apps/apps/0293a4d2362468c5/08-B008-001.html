@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>4 a) Illustrations pour 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.47 },
+    { label: "1b", start: 4.72, end: 12.61 },
+    { label: "1c", start: 12.86, end: 14.91 },
+    { label: "1d", start: 15.16, end: 16.35 },
+    { label: "1e", start: 16.6, end: 18.19 },
+    { label: "1f", start: 18.44, end: 23.77 },
+    { label: "1g", start: 24.02, end: 27.35 },
+    { label: "1h", start: 27.6, end: 30.35 },
+    { label: "1i", start: 30.6, end: 32.85 },
+    { label: "1j", start: 33.1, end: 36.87 },
+    { label: "1k", start: 37.12, end: 39.51 },
+    { label: "1l", start: 39.76, end: 41.75 },
+    { label: "1m", start: 42, end: 47.11 },
+    { label: "1n", start: 47.36, end: 48.89 },
+    { label: "1o", start: 49.14, end: 51.67 },
+    { label: "1p", start: 51.92, end: 54.01 },
+    { label: "1q", start: 54.26, end: 56.75 },
+    { label: "1r", start: 57, end: 59.83 },
+    { label: "1s", start: 60.08, end: 62.17 },
+    { label: "1t", start: 62.42, end: 63.29 },
+    { label: "1u", start: 63.54, end: 65.47 },
+    { label: "1v", start: 65.72, end: 68.01 },
+    { label: "1w", start: 68.26, end: 69.25 },
+    { label: "1x", start: 69.5, end: 71.11 },
+    { label: "1y", start: 71.36, end: 76.63 },
+    { label: "1z", start: 76.88, end: 80.15 },
+    { label: "1aa", start: 80.4, end: 83.67 },
+    { label: "1ab", start: 83.92, end: 85.97 },
+    { label: "1ac", start: 86.22, end: 89.27 },
+    { label: "1ad", start: 89.52, end: 91.37 },
+    { label: "1ae", start: 91.62, end: 93.39 },
+    { label: "1af", start: 93.64, end: 99.77 },
+    { label: "1ag", start: 100.02, end: 102.73 },
+    { label: "1ah", start: 102.98, end: 106.47 },
+    { label: "1ai", start: 106.72, end: 109.77 },
+    { label: "1aj", start: 110.02, end: 113.25 },
+    { label: "1ak", start: 113.5, end: 115.85 },
+    { label: "1al", start: 116.1, end: 116.91 },
+    { label: "1am", start: 117.16, end: 121.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 121.23;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "08-B008-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='07-B007-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;4 a) Illustrations pour&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B008-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="ul"><span class="bdit">4</span></span><span class="ul"><span class="bdit"> </span></span><span class="ul"><span class="bdit">a</span></span><span class="ul"><span class="bdit">)</span></span><span class="ul"><span class="bdit"> Illustrations pour mieux comprendre comment Dieu voit l’homme</span></span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">La Bible</span> nous apprend qu’aucun être humain n’est jamais parvenu à respecter les commandements de Dieu (voir Romains 3, 23).</div> <div id="T1c" class="txs">Nous les avons tous transgressés,</div> <div id="T1d" class="txs">que ce soit en actes,</div> <div id="T1e" class="txs">en pensées ou en paroles.</div> <div id="T1f" class="txs">Nous n’avons pas toujours vécu selon la «&nbsp;règle d’or&nbsp;» (voir Matthieu 7, 12 ;</div> <div id="T1g" class="txs">Matthieu 22, 37 à 40).</div> <div id="T1h" class="txs">Nous n’avons pas satisfait aux exigences de Dieu.</div> <div id="T1i" class="txs">Esaïe 59, 2 dit :</div> <div id="T1j" class="txs">«&nbsp;…ce sont vos fautes qui ont fait séparation entre vous et votre Dieu.</div><div id="T1k" class="txs">&nbsp;» Que disons-nous face à cela&nbsp;?</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">Trois péchés par jour</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">Le péché</span> ne consiste pas uniquement à enfreindre les commandements de Dieu en paroles,</div> <div id="T1n" class="txs">en pensées ou en actes.</div> <div id="T1o" class="txs">Nous pouvons aussi pécher par omission,</div> <div id="T1p" class="txs">en ne faisant pas ce que nous devrions faire,</div> <div id="T1q" class="txs">comme aimer véritablement notre prochain&nbsp;!</div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">Combien de fois</span> péchons-nous par jour&nbsp;?</div> <div id="T1s" class="txs">Combien de fois oublions-nous,</div> <div id="T1t" class="txs">comme par hasard,</div> <div id="T1u" class="txs">d’agir comme Dieu le désire&nbsp;?</div> <div id="T1v" class="txs">50, 100 fois&nbsp;?</div> <div id="T1w" class="txs">Plus&nbsp;?</div> <div id="T1x" class="txs">Selon les psychologues,</div> <div id="T1y" class="txs">nous oublions 99% des situations où nous n’avons pas fait ce que nous aurions dû,</div> <div id="T1z" class="txs">car ces souvenirs sont embarrassants et désagréables.</div></div>
+<div class="m"><div id="T1aa" class="txs"><span class="bdit">Imaginons</span><span class="it"> que nous ne péchions que 10 fois par jour,</span></div> <div id="T1ab" class="txs"><span class="it">voire seulement 5 ou 3 fois.</span></div> <div id="T1ac" class="txs"><span class="it">Nous serions presque parfaits</span><span class="it"> </span><span class="it">!</span></div> <div id="T1ad" class="txs"><span class="it">Nous aurions rarement des mauvaises pensées,</span></div> <div id="T1ae" class="txs"><span class="it">ne nous mettrions pas en colère,</span></div> <div id="T1af" class="txs"><span class="it">respecterions presque toujours les commandements de Dieu et agirions de manière juste envers la plupart des hommes.</span></div> <div id="T1ag" class="txs"><span class="it">Mais même si nous étions des gens aussi bien,</span></div> <div id="T1ah" class="txs"><span class="it">nous pécherions quand même plus de 1000 fois par an contre Dieu</span><span class="it"> </span><span class="it">!</span></div> <div id="T1ai" class="txs"><span class="it">Et en vivant jusqu’à l’âge moyen de 70 ans,</span></div> <div id="T1aj" class="txs"><span class="it">nous pécherions 70’000 fois.</span></div> <div id="T1ak" class="txs"><span class="it">Imaginons juste un instant ce qui,</span></div> <div id="T1al" class="txs"><span class="it">au tribunal,</span></div> <div id="T1am" class="txs"><span class="it">arriverait à un homme accusé de 70’000 délits</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/08 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

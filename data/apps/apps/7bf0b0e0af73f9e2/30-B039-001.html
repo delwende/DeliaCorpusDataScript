@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>15) SCOLARITÉ OBLIGATOIRE 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.51 },
+    { label: "1b", start: 2.76, end: 3.73 },
+    { label: "1c", start: 3.98, end: 7.41 },
+    { label: "1d", start: 7.66, end: 8.73 },
+    { label: "1e", start: 8.98, end: 12.29 },
+    { label: "1f", start: 12.54, end: 15.07 },
+    { label: "1g", start: 15.32, end: 17.17 },
+    { label: "1h", start: 17.42, end: 18.85 },
+    { label: "1i", start: 19.1, end: 22.49 },
+    { label: "1j", start: 22.74, end: 26.15 },
+    { label: "1k", start: 26.4, end: 27.99 },
+    { label: "1l", start: 28.24, end: 29.01 },
+    { label: "1m", start: 29.26, end: 30.21 },
+    { label: "1n", start: 30.46, end: 33.13 },
+    { label: "1o", start: 33.38, end: 36.49 },
+    { label: "1p", start: 36.74, end: 38.61 },
+    { label: "1q", start: 38.86, end: 42.77 },
+    { label: "1r", start: 43.02, end: 49.85 },
+    { label: "1s", start: 50.1, end: 51.99 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 51.99;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "30-B039-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='29-B015-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='29-B015-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;15) SCOLARITÉ OBLIGATOIRE&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='31-B016-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='31-B016-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B039-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">15) SCOLARITÉ OBLIGATOIRE</span></div></div>
+<div class="m"><div id="T1b" class="txs">En Europe,</div> <div id="T1c" class="txs">l'école est obligatoire à partir de l'âge de cinq ou six ans,</div> <div id="T1d" class="txs">selon les pays.</div> <div id="T1e" class="txs">Les élèves ne sont pas autorisés à rester à la maison,</div> <div id="T1f" class="txs">sauf s'ils sont malades et qu'ils s’excusent.</div> <div id="T1g" class="txs">L'école est gratuite.</div></div>
+<div class="m"><div id="T1h" class="txs">En règle générale,</div> <div id="T1i" class="txs">les enfants fréquentent la maternelle à partir de quatre ans.</div> <div id="T1j" class="txs">Celle-ci les prépare de manière ludique à l'école.</div> <div id="T1k" class="txs">L'école primaire dure,</div> <div id="T1l" class="txs">selon les pays,</div> <div id="T1m" class="txs">environ six ans,</div> <div id="T1n" class="txs">suivis de plusieurs années d’école secondaire.</div> <div id="T1o" class="txs">Après cette période de scolarité obligatoire,</div> <div id="T1p" class="txs">les jeunes continuent leur scolarité,</div> <div id="T1q" class="txs">ou bien ils font un apprentissage professionnel dans une entreprise.</div></div>
+<div class="m"><div id="T1r" class="txs">Pour les enfants et les adultes c’est important d’apprendre la langue du pays hôte pour pouvoir s’intégrer dans la vie quotidienne,</div> <div id="T1s" class="txs">sociale et professionnelle.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/15 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/15 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/15 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

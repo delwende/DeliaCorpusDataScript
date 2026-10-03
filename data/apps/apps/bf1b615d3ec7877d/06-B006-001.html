@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>26  Koo tɛmɛniw le 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.45 },
+    { label: "1b", start: 4.7, end: 14.63 },
+    { label: "1c", start: 14.88, end: 17.27 },
+    { label: "1d", start: 17.52, end: 24.73 },
+    { label: "1e", start: 24.98, end: 28.15 },
+    { label: "1f", start: 28.4, end: 31.93 },
+    { label: "1g", start: 32.18, end: 36.19 },
+    { label: "1h", start: 36.44, end: 40.65 },
+    { label: "1i", start: 40.9, end: 43.77 },
+    { label: "1j", start: 44.02, end: 47.33 },
+    { label: "1k", start: 47.58, end: 52.47 },
+    { label: "1l", start: 52.72, end: 56.79 },
+    { label: "1m", start: 57.04, end: 60.55 },
+    { label: "1n", start: 60.8, end: 67.19 },
+    { label: "1o", start: 67.44, end: 68.25 },
+    { label: "1p", start: 68.5, end: 75.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 75.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;26  Koo tɛmɛniw le&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">26</span><span class="bd">  </span><span class="bd">K</span><span class="bd">oo</span><span class="bd"> </span><span class="bd">tɛmɛniw</span><span class="bd"> le </span><span class="bd">lakalen</span><span class="bd"> ka di</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="it">Quand on est sure, qu’une situation </span><span class="it">defavorable</span><span class="it"> ne se </span><span class="it">repète</span><span class="it"> plus, on est plus à l’aise pour en parler</span>.</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">K</span><span class="bd">oo</span><span class="bd"> </span><span class="bd">tɛmɛniw</span><span class="bd"> le </span><span class="bd">lakalen</span><span class="bd"> ka di</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">27</span><span class="bd">  </span><span class="bd">Kumaɲuma</span><span class="bd"> le bi </span><span class="bd">banba</span><span class="bd"> </span><span class="bd">bɔ</span><span class="bd"> </span><span class="bd">jii</span><span class="bd"> </span><span class="bd">kɔnɔ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">On ne négocie pas avec des mots violents</span>.</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">Kumaɲuma</span><span class="bd"> le bi </span><span class="bd">banba</span><span class="bd"> </span><span class="bd">bɔ</span><span class="bd"> </span><span class="bd">jii</span><span class="bd"> </span><span class="bd">kɔnɔ</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">28</span><span class="bd">  </span><span class="bd">Kungoyiri</span><span class="bd"> </span><span class="bd">bɛɛ</span><span class="bd"> ti </span><span class="bd">tilen</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1h" class="txs"><span class="it">N’attendez pas </span><span class="it">à ce </span><span class="it">que tous les hommes soient justes</span>.</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Kungoyiri</span><span class="bd"> </span><span class="bd">bɛɛ</span><span class="bd"> ti </span><span class="bd">tilen</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">29</span><span class="bd">  </span><span class="bd">Kuntori</span><span class="bd"> ti a </span><span class="bd">yɛrɛ</span><span class="bd"> </span><span class="bd">kasa</span><span class="bd"> </span><span class="bd">mɛn</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1k" class="txs"><span class="it">L’homme ignore ses propres défauts</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1l" class="txs"><span class="it">Le médiocre ne croit pas à sa médiocrité</span>.</div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">Kuntori</span><span class="bd"> ti a </span><span class="bd">yɛrɛ</span><span class="bd"> </span><span class="bd">kasa</span><span class="bd"> </span><span class="bd">mɛn</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">30</span><span class="bd">  </span><span class="bd">K</span><span class="bd">ͻ</span><span class="bd">ɲ</span><span class="bd">ͻ</span><span class="bd">muso </span><span class="bd">nakun</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> c</span><span class="bd">ɛ</span><span class="bd">ko le </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1o" class="txs"><span class="it">La nouvelle mariée vient à cause de son mari</span>.</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">K</span><span class="bd">ͻɲͻmuso</span><span class="bd"> </span><span class="bd">nakun</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> c</span><span class="bd">ɛ</span><span class="bd">ko le </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/prov_vol1_26_a_30.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Hordhac 12</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "18-B017-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='17-B016-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-011.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Hordhac&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;12&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-013.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B018-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B017-image12.jpg" />
+
+<div class="m"><span class="bd">Rajo</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Si </span><span class="it">aad</span><span class="it"> u </span><span class="it">ogaataan</span><span class="it"> </span><span class="it">rajada</span><span class="it"> </span><span class="it">uu</span><span class="it"> </span><span class="it">idin</span><span class="it"> </span><span class="it">siiyey</span><span class="it"> </span><span class="it">markuu</span><span class="it"> </span><span class="it">idiin</span><span class="it"> </span><span class="it">yeedhay</span><span class="it"> </span>(Efesos 1, 18).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Waa </span><span class="bd">maxay</span><span class="bd"> </span><span class="bd">rajada</span><span class="bd"> </span><span class="bd">Masiixiyiinta</span><span class="bd">?</span></div>
+<div class="m">Rajada waa in si adag loo rumaysto in rabitaanku dhawaan la fulin doono. Rajada Masiixiyiintu waa rajada oofinta ballamaha Ilaah. Rajadu waxay khusaysaa dhammaan ballamaha Ilaah, laakiin gaar ahaan kuwa khuseeya nolosheenna dhimashada ka dib, hortiis Ilaah iyo Ciise, soo noqoshada Ciise, dhulka cusub iyo jannada cusub.</div>
+<div class="m">Rajada macneheedu waxa weeye in aanay wali "dhicin", laakiin si dhab ah loo rumaysto in waxa aan rajaynayno ay rumoobayso. Rajadaas oo kale waxay saameyn weyn ku yeelan kartaa nolosheena. Halkii aan cabsi iyo walaac gelin lahayn, waxaan ku noolaan karnaa farxad iyo nabad. Laakiin waa in aynaan iloobin in saldhigga rajadeennu uu ahaado mid adag oo la isku halayn karo. Haddii rajadayadu ay ku dhisan tahay bini'aadam ama quwado kale oo aan ahayn Ilaaha nool, waa hubaal inaan niyad jabno. Kaliya rajada lagu aasaasay Ilaah, Wiilkiisa Ciise iyo Ruuxa Quduuska ah ayaa dammaanad qaadaya fulinta ballamihii la sugayey.</div>
+<div class="m"><span class="bd">Tallaabooyinka</span><span class="bd"> </span><span class="bd">aad</span><span class="bd"> </span><span class="bd">rajada</span><span class="bd"> </span><span class="bd">uga</span><span class="bd"> </span><span class="bd">dhigi</span><span class="bd"> </span><span class="bd">lahayd</span><span class="bd"> mid </span><span class="bd">hodan</span><span class="bd"> </span><span class="bd">ku</span><span class="bd"> ah </span><span class="bd">noloshaada</span><span class="bd">: </span></div>
+<div class="m"><span class="it">- </span><span class="it">Ducada</span><span class="it">: </span>Ilaah baa mahad leh ballamihiisii iyo rajada aan isaga ka qabno. Geli cabsidaada iyo welwelkaaga gacmihiisa.</div>
+<div class="m"><span class="it">- </span><span class="it">Kitaabka</span><span class="it"> </span><span class="it">Qudduuska</span><span class="it"> ah</span><span class="it">: </span>Akhri aayadahan soo socda oo dooro mid aad xifdisanayso: Yooxanaa 10, 28; Efesos 3, 20 ilaa 21; Muujintii 21, 4.</div>
+<div class="m"><span class="it">- </span><span class="it">Milicsiga</span><span class="it"> </span><span class="it">shakhsi</span><span class="it"> </span><span class="it">ahaaneed</span><span class="it">: </span>Si joogto ah ma u werwertaa? Ma ku nooshahay cabsi ah in wax xun ay ku dhacaan noloshaada ama nolosha dadka aad jeceshahay? Waxaa jira tusaalooyin badan oo kitaabiga ah oo ku saabsan sida Ilaah u oofiyo ballamihiisii: Nuux, Ibraahim iyo Saarah, Yacquub, Yuusuf, Ruth, Xannaah, Nexemyaah... Baro mid ka mid ah jilayaashan, adigoo fiiro gaar ah u leh sida Ilaah u raacay qofkan, gaar ahaan xilliyada adag.</div>
+<div class="m"><span class="it">Ku </span><span class="it">dadka</span><span class="it"> kale</span><span class="it">: </span>Samee kaadh qurux badan oo ay ku qoran tahay aayadda Baybalka ee dhiirigelinaysa oo sii saaxiib u baahan. Waxaad sidoo kale ku soo diri kartaa aayadda SMS, WhatsApp ama siyaabo kale.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

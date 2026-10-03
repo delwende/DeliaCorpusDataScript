@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Pour les étrangers 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.41 },
+    { label: "1b", start: 1.66, end: 3.27 },
+    { label: "1c", start: 3.52, end: 4.85 },
+    { label: "1d", start: 5.1, end: 13.67 },
+    { label: "1e", start: 13.92, end: 14.77 },
+    { label: "1f", start: 15.02, end: 16.69 },
+    { label: "1g", start: 16.94, end: 20.15 },
+    { label: "1h", start: 20.4, end: 21.33 },
+    { label: "1i", start: 21.58, end: 27.17 },
+    { label: "1j", start: 27.42, end: 29.57 },
+    { label: "1k", start: 29.82, end: 31.65 },
+    { label: "1l", start: 31.9, end: 36.95 },
+    { label: "1m", start: 37.2, end: 48.33 },
+    { label: "1n", start: 48.58, end: 52.01 },
+    { label: "1o", start: 52.26, end: 54.91 },
+    { label: "1p", start: 55.16, end: 57.13 },
+    { label: "1q", start: 57.38, end: 61.13 },
+    { label: "1r", start: 61.38, end: 65.29 },
+    { label: "1s", start: 65.54, end: 66.47 },
+    { label: "1t", start: 66.72, end: 67.93 },
+    { label: "1u", start: 68.18, end: 70.75 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 70.75;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "64-B065-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='63-B055-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='63-B055-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Pour les étrangers&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='65-B056-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='65-B056-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B065-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Pour les étrangers</span><span class="bd"> </span><span class="bd">:</span></div> <div id="T1b" class="txs"><span class="bd">comprendre les européens</span></div></div>
+<div class="m"><div id="T1c" class="txs">Chez les européens,</div> <div id="T1d" class="txs">la règle veut que le nouveau venu se présente chez ses voisins et signale ainsi son intérêt pour la communauté existante et son intention de s’y intégrer.</div></div>
+<div class="m"><div id="T1e" class="txs">Chez eux,</div> <div id="T1f" class="txs">les visites spontanées sont rares,</div> <div id="T1g" class="txs">en dehors du voisinage immédiat ou entre amis intimes.</div> <div id="T1h" class="txs">En effet,</div> <div id="T1i" class="txs">les habitants d’Europe centrale apprécient de pouvoir préparer leur sphère privée pour les visiteurs.</div> <div id="T1j" class="txs">Si l’on veut établir le contact,</div> <div id="T1k" class="txs">la règle est de les inviter.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1l" class="txs">Certains Européens désirent ne faire aucune faute dans les contacts interculturels.</div> <div id="T1m" class="txs">C’est pourquoi un étranger qui veut en inviter chez lui pour un événement peut gommer un sentiment d’insécurité en préparant ses invités au déroulement de la visite et en leur expliquant ce qu’il attend d’eux.</div></div>
+<div class="m"><div id="T1n" class="txs">La confiance s’instaure quand on communique clairement.</div> <div id="T1o" class="txs">Si on ne peut pas respecter un engagement,</div> <div id="T1p" class="txs">il vaut mieux le dire que de se taire par honte :</div> <div id="T1q" class="txs">un silence serait un signe qu’on ne peut pas nous faire confiance.</div></div>
+<div class="m"><div id="T1r" class="txs">Le franc-parler de beaucoup d’Européens peut provoquer des blessures.</div> <div id="T1s" class="txs">Souvent,</div> <div id="T1t" class="txs">elles ne sont pas volontaires,</div> <div id="T1u" class="txs">et il arrive que l’auteur n’en soit pas conscient.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/32 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/32 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/32 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

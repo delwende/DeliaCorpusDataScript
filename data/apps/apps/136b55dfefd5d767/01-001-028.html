@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>281  So-m-meng 28</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "28a", start: 604.54, end: 614.95 },
+    { label: "28b", start: 615.2, end: 617.71 },
+    { label: "28c", start: 617.96, end: 621.87 },
+    { label: "28d", start: 622.12, end: 624.89 },
+    { label: "28e", start: 625.14, end: 629.05 },
+    { label: "28f", start: 629.3, end: 633.63 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 604.54;
+var stopTime  = 633.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 42 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-027.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;281  So-m-meng&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;28&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-029.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes more 280 a 322-image28.jpg" />
+
+<div class="m"><div id="T28a" class="txs"><span class="bd">308</span><span class="bd">  </span><span class="bd"> Ned</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n</span><span class="bd"> </span><span class="bd">yũ</span><span class="bd"> </span><span class="bd">rãam</span><span class="bd"> </span><span class="bd">n</span><span class="bd"> </span><span class="bd">tʋ</span><span class="bd">-f</span><span class="bd">,</span></div><div id="T28b" class="txs"><span class="bd"> </span><span class="bd">bɩ</span><span class="bd"> </span><span class="bd">f</span><span class="bd"> </span><span class="bd">wãb</span><span class="bd"> </span><span class="bd">kae</span><span class="bd"> </span><span class="bd">n</span><span class="bd"> </span><span class="bd">pãb</span><span class="bd">-a.</span></div></div>
+<div class="m"><div id="T28c" class="txs"><span class="bdit">(Si quelqu’un s’enivre de dolo pour vous insulter,</span></div> <div id="T28d" class="txs"><span class="bdit">ma</span><span class="bdit">ngez la malte pour le frapper).</span></div></div>
+<div class="m"><div id="T28e" class="txs"><span class="bd">Ned</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n</span><span class="bd"> </span><span class="bd">yũ</span><span class="bd"> </span><span class="bd">rãam</span><span class="bd"> </span><span class="bd">n</span><span class="bd"> </span><span class="bd">tʋ</span><span class="bd">-f</span><span class="bd">,</span></div><div id="T28f" class="txs"><span class="bd">bɩ</span><span class="bd"> </span><span class="bd">f</span><span class="bd"> </span><span class="bd">wãb</span><span class="bd"> </span><span class="bd">kae</span><span class="bd"> </span><span class="bd">n</span><span class="bd"> </span><span class="bd">pãb</span><span class="bd">-a</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 281 a 322 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

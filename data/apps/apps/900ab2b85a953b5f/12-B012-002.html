@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Utangulizi 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "12-B012-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='11-B011-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Utangulizi&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B012-image2.jpg" />
+
+<div class="m"><span class="bd">Uchaguzi</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Tumechaguliwa</span><span class="it"> </span><span class="it">na</span><span class="it"> </span><span class="it">Mungu</span><span class="it">, </span><span class="it">kabla</span><span class="it"> </span><span class="it">ya</span><span class="it"> </span><span class="it">kuwekwa</span><span class="it"> </span><span class="it">misingi</span><span class="it"> </span><span class="it">ya</span><span class="it"> </span><span class="it">ulimwengu</span><span class="it">, </span><span class="it">katika</span><span class="it"> Kristo, </span><span class="it">kuwa</span><span class="it"> </span><span class="it">watakatifu</span><span class="it"> </span>(Waefeso 1, 4).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Uchaguzi</span><span class="bd"> </span><span class="bd">ni</span><span class="bd"> </span><span class="bd">nini</span><span class="bd">?</span></div>
+<div class="m">Uchaguzi ni fundisho gumu kuelewa. Ni muhimu tusikate tamaa kwa nini wengine wamechaguliwa na wengine hawajachaguliwa. Enzi kuu ya Mungu inamaanisha kwamba hatuwezi kamwe kuelewa matendo yake yote.</div>
+<div class="m">Ni nini muhimu kukumbuka kuhusu fundisho hili:</div>
+<div class="m">- Wokovu huanza na Mungu. Alichukua hatua ya kuokoa mwanadamu. Tumepotoshwa sana na dhambi hivi kwamba haiwezekani kwetu kuchukua hatua ya kwanza.</div>
+<div class="m">- Hili ni tendo ambalo Mungu hufanya peke yake na kwa ajili yake mwenyewe.</div>
+<div class="m">- Hatumii vigezo sawa na ulimwengu wetu katika uchaguzi wake (1 Wakorintho 1, 26-29).</div>
+<div class="m">- Uchaguzi wa Mungu una kusudi. Ametuchagua ili tumtukuze, tumtumikie na tutende matendo mema.</div>
+<div class="m"><span class="bd">Vitendo</span><span class="bd"> </span><span class="bd">vya</span><span class="bd"> </span><span class="bd">kufanya</span><span class="bd"> </span><span class="bd">uchaguzi</span><span class="bd"> </span><span class="bd">kuwa</span><span class="bd"> </span><span class="bd">utajiri</span><span class="bd"> </span><span class="bd">katika</span><span class="bd"> </span><span class="bd">maisha</span><span class="bd"> </span><span class="bd">yako</span><span class="bd">:</span></div>
+<div class="m"><span class="it">- </span><span class="it">Maombi:</span>Mshukuru Mungu kila siku kwa kuwa wewe ni mmoja wa wateule wake.</div>
+<div class="m">Omba msaada wake ili uishi kwa kustahili mmoja wa wateule wa Mungu.</div>
+<div class="m"><span class="it">- </span><span class="it">Usomaji</span><span class="it"> </span><span class="it">wa</span><span class="it"> Biblia</span>: Soma 1 Wakorintho 1, 26 hadi 31. Mistari hii inatufundisha kwamba Mungu hachagui jinsi ulimwengu unavyochagua. Vigezo vyake vya kuchagua ni vipi? Kwa sababu Mungu hachagui kile kilicho "nguvu" haimaanishi kwamba hatufikirii.</div>
+<div class="m">Soma Isaya 43, 4 na uikariri.</div>
+<div class="m"><span class="it">- </span><span class="it">Tafakari</span><span class="it"> </span><span class="it">ya</span><span class="it"> </span><span class="it">kibinafsi</span>: Je, unahisi kwamba wengine - mume au mke wako, wakubwa wako au wafanyakazi wenzako, washiriki wa kanisa lako - hawakufikirii? Kumbuka kwamba wewe ni mmoja wa “wateule” wa Mungu. Wewe ni muhimu sana kwa Mungu. Anakuzingatia. Wewe ni wa thamani machoni pake. Umuhimu wako hautokani na diploma zako, nafasi yako ya kijamii au mali yako, lakini ni kwa neema tu kwamba Mungu amekuchagua. Ukiwa mwangalifu, utayaona katika maisha yako ya kila siku!</div>
+<div class="m"><span class="it">- Kwa </span><span class="it">wengine</span>: Watendee ndugu na dada zako wa kiroho, ambao pia ni wateule wa Mungu, kwa heshima na upendo! Usiwadharau walio dhaifu. Badala yake, waonyeshe kwamba wao ni wa thamani machoni pa Mungu na kanisa.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

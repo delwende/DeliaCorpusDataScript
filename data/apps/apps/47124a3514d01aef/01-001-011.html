@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prov 41-80 11</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "11a", start: 247.97, end: 250.37 },
+    { label: "11b", start: 250.62, end: 252.61 },
+    { label: "11c", start: 252.86, end: 255.96 },
+    { label: "11d", start: 256.21, end: 256.93 },
+    { label: "11e", start: 257.18, end: 259.44 },
+    { label: "11f", start: 259.69, end: 262.24 },
+    { label: "11g", start: 262.49, end: 270.36 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 247.97;
+var stopTime  = 270.36;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-010.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Prov 41-80&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;11&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-012.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 41 a 80-image11.jpg" />
+
+<div class="m"><div id="T11a" class="txs"><span class="bd">51 </span><span class="bd">B</span><span class="bd">a-yir ka lobgd ne kugr ye,</span></div> <div id="T11b" class="txs"><span class="bd">lobgda ne tãndagre</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T11c" class="txs"><span class="bdit">(On ne jette pas de pierres sur sa patrie,</span></div> <div id="T11d" class="txs"><span class="bdit">mais,</span></div> <div id="T11e" class="txs"><span class="bdit">des mottes de terre).</span></div></div>
+<div class="m"><div id="T11f" class="txs"><span class="bd">B</span><span class="bd">a-yir ka lobgd ne kugr ye,</span></div> <div id="T11g" class="txs"><span class="bd">lobgda ne tãndagre</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 41 a 80 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

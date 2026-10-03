@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1)欢迎！ 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "71-B071-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='70-B070-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='70-B070-033.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1)欢迎！&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='71-B071-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='72-B072-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B071-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">1)欢迎！</span></div>
+<div class="m">了解欧洲人的生活方式和他们的信仰。</div>
+<div class="m">这个应用程序是一个提议。它之所以被创建，是因为来自其他国家的人对我们这里的人来说很重要。我们想让你深入了解欧洲文化，因为我们文化中的一些事情可能会让你产生疑问。这并不奇怪，因为在每种文化中，许多事情都是按照当地人熟知的规则发生的，但这些规则并没有在任何地方明确写下来。这样的规则和价值观无处不在。我们想在这个应用程序中描述欧洲的一些规则和价值观。当然，一些欧洲人的行为方式不同。但这里有几种典型的行为模式。来自其他国家的人也与我们分享了一些观察结果。</div>
+<div class="m">作为作者，我们想象着您和我们在火车上或咖啡馆里相遇——或者我们坐在一起吃饭聊天，当然我们实际上也和来自不同国家的人坐在一起，倾听和交谈。我们有意识地以基督徒的身份、作为跟随耶稣的人的身份发布这个应用程序。我们也在这个应用程序中写了一些关于这一点的内容。因为我们在餐桌上也听到了很多关于我们信仰的问题。许多欧洲人也期待着与你们真正的接触。他们期待着了解你们的文化。例如，许多人欣赏来自其他国家的人带到欧洲的热情好客和家庭感。我们期待着一起过上好日子。</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

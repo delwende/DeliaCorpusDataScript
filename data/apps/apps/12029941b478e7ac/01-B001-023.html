@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P 121-160 23</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "23a", start: 474.5, end: 478.03 },
+    { label: "23b", start: 478.28, end: 485.33 },
+    { label: "23c", start: 485.58, end: 497.79 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 474.5;
+var stopTime  = 497.79;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-022.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;P 121-160&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;23&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-024.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image23.jpg" />
+
+<div class="m"><div id="T23a" class="txs"><span class="bd">143 </span><span class="bd">Naab</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n </span><span class="bd">sond</span><span class="bd"> </span><span class="bd">korgo</span><span class="bd">, </span><span class="bd">sẽn</span><span class="bd"> </span><span class="bd">pʋgd</span><span class="bd">-b </span><span class="bd">lebga</span><span class="bd"> </span><span class="bd">suid-ba</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T23b" class="txs"><span class="bdit">(Si un chef se nomme Sac, ses sujets sont des enfouisseurs).</span></div></div>
+<div class="m"><div id="T23c" class="txs"><span class="bd">Naab</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n </span><span class="bd">sond</span><span class="bd"> </span><span class="bd">korgo</span><span class="bd">, </span><span class="bd">sẽn</span><span class="bd"> </span><span class="bd">pʋgd</span><span class="bd">-b </span><span class="bd">lebga</span><span class="bd"> </span><span class="bd">suid-ba</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 121 a 160 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

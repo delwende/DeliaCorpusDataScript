@@ -1,0 +1,18 @@
+var books = [
+  { name: "15 Nziirin nziirin", ref: "01-B001-001.html" },
+  { name: "16 Nziirin nziirin", ref: "02-B002-001.html" },
+  { name: "17 Nziirin nziirin", ref: "03-B003-001.html" },
+  { name: "18 Nziirin nziirin", ref: "04-B004-001.html" },
+  { name: "19 Waraba, suruku ani sonsannin", ref: "05-B005-001.html" },
+  { name: "20 Nziirin nziirin", ref: "06-B006-001.html" },
+  { name: "21 Nziirin nziirin", ref: "07-B007-001.html" },
+  { name: "22 Nziirin nziirin", ref: "08-B008-001.html" },
+  { name: "23 Nziirin nziirin", ref: "09-B009-001.html" },
+  { name: "24 Nziirin nziirin", ref: "10-B010-001.html" },
+  { name: "25 Baa ni suruku", ref: "11-B011-001.html" },
+  { name: "26 Nziirin nziirin", ref: "12-B012-001.html" },
+  { name: "27 Fali, sonsannin ni", ref: "13-B013-001.html" },
+  { name: "28 Cɛkɔrɔba dɔ ni a deen", ref: "14-B014-001.html" },
+  { name: "29 Cɛkɔrɔba ni a deen", ref: "15-B015-001.html" },
+  { name: "Traduction en français", ref: "16-B016-001.html" },
+];

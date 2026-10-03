@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proverbes en dioula 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 7.41 },
+    { label: "1b", start: 7.66, end: 11.27 },
+    { label: "1c", start: 11.52, end: 18.79 },
+    { label: "1d", start: 19.04, end: 23.45 },
+    { label: "1e", start: 23.7, end: 27.59 },
+    { label: "1f", start: 27.84, end: 33.17 },
+    { label: "1g", start: 33.42, end: 37.41 },
+    { label: "1h", start: 37.66, end: 41.79 },
+    { label: "1i", start: 42.04, end: 48.27 },
+    { label: "1j", start: 48.52, end: 54.31 },
+    { label: "1k", start: 54.56, end: 58.67 },
+    { label: "1l", start: 58.92, end: 62.47 },
+    { label: "1m", start: 62.72, end: 66.25 },
+    { label: "1n", start: 66.5, end: 69.93 },
+    { label: "1o", start: 70.18, end: 74.89 },
+    { label: "1p", start: 75.14, end: 81.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 81.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Proverbes en dioula&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Proverbes en dioula expliqués en français</span><span class="bd">,</span><span class="bd"> Volume 1</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">1</span><span class="bd"> </span><span class="bd">Ala kana </span><span class="bd">suu</span><span class="bd"> </span><span class="bd">kɔrɔbɔ</span><span class="bd"> </span><span class="bd">tile</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="it">Que Dieu ne dévoile</span><span class="it"> pas</span><span class="it"> au grand jour ce que la nuit cache en elle</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Ala kana suu kɔrɔbɔ tile ye</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">2</span><span class="bd"> </span><span class="bd">Alasɔn ka fisa mɔgɔsɔn ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="it">Le Don de Dieu est meilleur que </span><span class="it">celui</span><span class="it"> des hommes</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">Alasɔn ka fisa mɔgɔsɔn ye</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">3</span><span class="bd"> </span><span class="bd">An ta </span><span class="bd">ani</span><span class="bd"> n ta, </span><span class="bd">kelen</span><span class="bd"> t</span><span class="bd">ɛ.</span></div></div>
+<div class="m"><div id="T1i" class="txs"><span class="it">Il vaut mieux chercher sa propriété personnelle, plutôt que de compter sur les propriétés communes</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">An ta </span><span class="bd">ani</span><span class="bd"> n ta, </span><span class="bd">kelen</span><span class="bd"> t</span><span class="bd">ɛ.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">4</span><span class="bd"> </span><span class="bd">Bɛɛ</span><span class="bd"> ni </span><span class="bd">a</span><span class="bd"> </span><span class="bd">kunko</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1l" class="txs"><span class="ul"><span class="it">Chacun a ses problèmes</span></span><span class="it">.</span></div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">Bɛɛ</span><span class="bd"> ni </span><span class="bd">a</span><span class="bd"> </span><span class="bd">kunko</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">5</span><span class="bd"> </span><span class="bd">Bilankɔrɔ</span><span class="bd"> ta ka di</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1o" class="txs"><span class="it">On accède facilement à ce qu’on a soi-même épargné</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">Bilankɔrɔ</span><span class="bd"> ta ka di</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/prov_vol1_01_a_05.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

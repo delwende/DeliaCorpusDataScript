@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°18 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.65 },
+    { label: "1b", start: 1.9, end: 3.83 },
+    { label: "1c", start: 4.08, end: 4.89 },
+    { label: "1d", start: 5.14, end: 10.11 },
+    { label: "1e", start: 10.36, end: 11.85 },
+    { label: "1f", start: 12.1, end: 16.51 },
+    { label: "1g", start: 16.76, end: 18.75 },
+    { label: "1h", start: 19, end: 23.41 },
+    { label: "1i", start: 23.66, end: 25.35 },
+    { label: "1j", start: 25.6, end: 28.83 },
+    { label: "1k", start: 29.08, end: 31.73 },
+    { label: "1l", start: 31.98, end: 36.07 },
+    { label: "1m", start: 36.32, end: 39.17 },
+    { label: "1n", start: 39.42, end: 42.49 },
+    { label: "1o", start: 42.74, end: 49.67 },
+    { label: "1p", start: 49.92, end: 51.49 },
+    { label: "1q", start: 51.74, end: 55.91 },
+    { label: "1r", start: 56.16, end: 59.77 },
+    { label: "1s", start: 60.02, end: 62.77 },
+    { label: "1t", start: 63.02, end: 67.01 },
+    { label: "1u", start: 67.26, end: 70.95 },
+    { label: "1v", start: 71.2, end: 76.69 },
+    { label: "1w", start: 76.94, end: 78.17 },
+    { label: "1x", start: 78.42, end: 81.05 },
+    { label: "1y", start: 81.3, end: 85.73 },
+    { label: "1z", start: 85.98, end: 88.87 },
+    { label: "1aa", start: 89.12, end: 91.75 },
+    { label: "1ab", start: 92, end: 93.73 },
+    { label: "1ac", start: 93.98, end: 97.23 },
+    { label: "1ad", start: 97.48, end: 103.57 },
+    { label: "1ae", start: 103.82, end: 110.35 },
+    { label: "1af", start: 110.6, end: 114.55 },
+    { label: "1ag", start: 114.8, end: 116.25 },
+    { label: "1ah", start: 116.5, end: 119.31 },
+    { label: "1ai", start: 119.56, end: 122.61 },
+    { label: "1aj", start: 122.86, end: 125.55 },
+    { label: "1ak", start: 125.8, end: 129.35 },
+    { label: "1al", start: 129.6, end: 135.19 },
+    { label: "1am", start: 135.44, end: 141.63 },
+    { label: "1an", start: 141.88, end: 145.81 },
+    { label: "1ao", start: 146.06, end: 148.51 },
+    { label: "1ap", start: 148.76, end: 154.09 },
+    { label: "1aq", start: 154.34, end: 155.73 },
+    { label: "1ar", start: 155.98, end: 161.09 },
+    { label: "1as", start: 161.34, end: 164.19 },
+    { label: "1at", start: 164.44, end: 170.11 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 170.11;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "19-B019-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='18-B018-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='18-B018-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°18&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='20-B020-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='20-B020-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B019-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°18 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Evitez d’emprunter de l’argent.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="it">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Samuel et Marthe sont fatigués de ne pas avoir la lumière à la maison.</span></div> <div id="T1e" class="txs"><span class="it">Depuis que leur bébé est né,</span></div> <div id="T1f" class="txs"><span class="it">c’est très pénible de se lever toutes les nuits sans lumière.</span></div> <div id="T1g" class="txs"><span class="it">Ils veulent avoir un panneau solaire.</span></div> <div id="T1h" class="txs"><span class="it">Marthe propose d’emprunter l’argent à son oncle qui est médecin.</span></div> <div id="T1i" class="txs"><span class="it">Samuel hésite.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1j" class="txs">Pourquoi Samuel hésite d’emprunter de l’argent?</div> <div id="T1k" class="txs">Quels sont les problèmes liés à l’emprunt?</div> <div id="T1l" class="txs">Quelles sont les autres possibilités qu’ont Samuel et Marthe?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1m" class="txs"><span class="bd">Les gens sont souvent pressés d’avoir ce qu’ils désirent.</span></div> <div id="T1n" class="txs"><span class="bd">Emprunter de l’argent semble une solution facile.</span></div> <div id="T1o" class="txs"><span class="bd">Cela cause pourtant beaucoup de problèmes car il est souvent difficile de rembourser l’argent emprunté.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1p" class="txs"><span class="ul">Verset </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1q" class="txs"><span class="it">«&nbsp;Ceux qui ont des dettes sont prisonniers de ceux qui leur prêtent de l’argent.</span></div><div id="T1r" class="txs"><span class="it">&nbsp;» </span>(Proverbes 22.7).</div></div>
+<div class="b">&nbsp;</div>
+<div class="p"><div id="T1s" class="txs"><span class="it">«&nbsp;N’ayez aucune dette envers personne,</span></div> <div id="T1t" class="txs"><span class="it">sauf la dette de l’amour que vous devez avoir entre vous.</span></div><div id="T1u" class="txs"><span class="it">&nbsp;» </span>(Romains 13.8).</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1v" class="txs">Il faut comprendre qu’un emprunt doit être quelque chose de vraiment exceptionnel.</div> <div id="T1w" class="txs">Si possible,</div> <div id="T1x" class="txs">il vaut mieux renoncer à emprunter de l’argent,</div> <div id="T1y" class="txs">surtout si l’emprunt ne permet pas de générer de nouveaux revenus.</div> <div id="T1z" class="txs">Il est plus sage d’économiser pendant un temps,</div> <div id="T1aa" class="txs">jusqu’à pouvoir payer ce que nous voulons,</div> <div id="T1ab" class="txs">ou renoncer à une dépense,</div> <div id="T1ac" class="txs">plutôt que nous presser à emprunter.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ad" class="txs">Beaucoup choisissent d’emprunter parce qu’ils n’ont pas bien planifié et anticipé les dépenses à venir.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ae" class="txs">Nous devons comprendre qu’emprunter de l’argent n’est souvent pas une solution au problème de la pauvreté,</div> <div id="T1af" class="txs">mais crée souvent encore plus de pauvreté.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ag" class="txs"><span class="ul">Exercice à</span><span class="ul"> </span><span class="ul">faire:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ah" class="txs">Réfléchissez à ces différentes situations.</div> <div id="T1ai" class="txs">Pensez-vous qu’il est sage d’emprunter pour cela?</div> <div id="T1aj" class="txs">Quelles raisons justifient un emprunt?</div></div>
+<div class="m"><div id="T1ak" class="txs">Mon enfant doit être opéré de l’appendicite.</div></div>
+<div class="m"><div id="T1al" class="txs">C’est la présentation de mon enfant à l’église et nous invitons tout le monde pour un repas.</div></div>
+<div class="m"><div id="T1am" class="txs">Je veux commencer un petit commerce et j’ai besoin d’argent pour acheter les choses de base.</div></div>
+<div class="m"><div id="T1an" class="txs">Nous voulons payer un bœuf pour les funérailles de ma mère.</div></div>
+<div class="m"><div id="T1ao" class="txs">Il faut payer les habits pour la fête.</div></div>
+<div class="m"><div id="T1ap" class="txs">Mon ami est dans les problèmes et me demande de l’aide pour rembourser une dette.</div></div>
+<div class="m"><div id="T1aq" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ar" class="txs">Trop d’emprunts sont faits avec précipitation et par manque de sagesse!</div> <div id="T1as" class="txs">Les emprunts doivent être exceptionnels.</div> <div id="T1at" class="txs">Il faut les éviter car ils créent souvent des problèmes.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/027_Conseil_n18.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

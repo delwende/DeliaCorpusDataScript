@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>27 Njuura e yaare 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 7.28, end: 10.57 },
+    { label: "1b", start: 10.82, end: 14.93 },
+    { label: "1c", start: 15.18, end: 17.21 },
+    { label: "1d", start: 17.46, end: 20.21 },
+    { label: "1e", start: 20.46, end: 23.93 },
+    { label: "1f", start: 24.18, end: 26.93 },
+    { label: "1g", start: 27.18, end: 31.31 },
+    { label: "1h", start: 31.56, end: 35.19 },
+    { label: "1i", start: 35.44, end: 42.09 },
+    { label: "1j", start: 42.34, end: 45.09 },
+    { label: "1k", start: 45.34, end: 48.51 },
+    { label: "1l", start: 48.76, end: 50.85 },
+    { label: "1m", start: 51.1, end: 54.65 },
+    { label: "1n", start: 54.9, end: 57.25 },
+    { label: "1o", start: 57.5, end: 59.15 },
+    { label: "1p", start: 59.4, end: 60.95 },
+    { label: "1q", start: 61.2, end: 62.67 },
+    { label: "1r", start: 62.92, end: 63.89 },
+    { label: "1s", start: 64.14, end: 67.43 },
+    { label: "1t", start: 67.68, end: 74.43 },
+    { label: "1u", start: 74.68, end: 77.59 },
+    { label: "1v", start: 77.84, end: 81.71 },
+    { label: "1w", start: 81.96, end: 82.87 },
+    { label: "1x", start: 83.12, end: 85.73 },
+    { label: "1y", start: 85.98, end: 89.57 },
+    { label: "1z", start: 89.82, end: 91.51 },
+    { label: "1aa", start: 91.76, end: 93.21 },
+    { label: "1ab", start: 93.46, end: 96.27 },
+    { label: "1ac", start: 96.52, end: 100.03 },
+    { label: "1ad", start: 100.28, end: 101.99 },
+    { label: "1ae", start: 102.24, end: 104.19 },
+    { label: "1af", start: 104.44, end: 107.35 },
+    { label: "1ag", start: 107.6, end: 111.27 },
+    { label: "1ah", start: 111.52, end: 112.69 },
+    { label: "1ai", start: 112.94, end: 114.81 },
+    { label: "1aj", start: 115.06, end: 118.33 },
+    { label: "1ak", start: 118.58, end: 120.49 },
+    { label: "1al", start: 120.74, end: 123.17 },
+    { label: "1am", start: 123.42, end: 125.65 },
+    { label: "1an", start: 125.9, end: 128.15 },
+    { label: "1ao", start: 128.4, end: 132.21 },
+    { label: "1ap", start: 132.46, end: 133.95 },
+    { label: "1aq", start: 134.2, end: 135.35 },
+    { label: "1ar", start: 135.6, end: 140.27 },
+    { label: "1as", start: 140.52, end: 141.51 },
+    { label: "1at", start: 141.76, end: 144.95 },
+    { label: "1au", start: 145.2, end: 145.91 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 7.28;
+var stopTime  = 145.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;27 Njuura e yaare&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">27 </span><span class="bd">Njuura e y</span><span class="bd">aar</span><span class="bd">e</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Fowru ɗowtunoo deekum yaha wuro bammum koo esum heddaaki.</div> <div id="T1c" class="txs">Be njehi faa ɓe mboɗɗowii.</div> <div id="T1d" class="txs">Ɓe tawi yaare na fukkii na fortii.</div> <div id="T1e" class="txs">Fowru wi'i dara faam ndaara ɗume fukkii nih.</div> <div id="T1f" class="txs">O ƴami yaare ndaare aan won moy?</div> <div id="T1g" class="txs">Yaare wi'i miin won susu ndaar.</div> <div id="T1h" class="txs">Ni deekiiko wi'i kuni taaɓa njeehen.</div></div>
+<div class="m"><div id="T1i" class="txs">Fowru taaɓinoo ni wi'i so ngoonga ni min kaa kuungel ngel haalam naawii kam.</div> <div id="T1j" class="txs">Mi rutto mi susa ngel.</div> <div id="T1k" class="txs">Nde nih fowru ndu susunoo yaare men,</div> <div id="T1l" class="txs">nde fettii ɗum hinere.</div> <div id="T1m" class="txs">Ni o ƴewnii o haalani deekiiko,</div> <div id="T1n" class="txs">o wi'i jon kaa yonii ko puɗɗen bojji.</div> <div id="T1o" class="txs">Yonii koy!</div> <div id="T1p" class="txs">yonnii.</div></div>
+<div class="m"><div id="T1q" class="txs">Deekiiko wi'i yonnay,</div> <div id="T1r" class="txs">na woɗɗi.</div> <div id="T1s" class="txs">O wi'i ndelle min kaa mi fuɗɗan.</div> <div id="T1t" class="txs">Ni fowru wi'i haay pattaali daande am,</div> <div id="T1u" class="txs">hannde mboyyan mi hinnere am.</div> <div id="T1v" class="txs">Deekkiko wi'i wanaa inna am kay mbullataa.</div> <div id="T1w" class="txs">Fowru wi'i,</div> <div id="T1x" class="txs">iii a wi'aanaa kuungel ngel yo sukka noon?</div> <div id="T1y" class="txs">Jon kaa faa ɓe njottowii wuro essiiko noon.</div></div>
+<div class="m"><div id="T1z" class="txs">Faa waali duuɓi tati,</div> <div id="T1aa" class="txs">nde o rewnoo ndoon fu,</div> <div id="T1ab" class="txs">o tawi ndamdiri mbe'eewa na darii.</div> <div id="T1ac" class="txs">O ƴamitii salle andi ndii ndamndiri o tawnoo ɗo,</div> <div id="T1ad" class="txs">ko duuɓi tati ɗum naa?</div> <div id="T1ae" class="txs">Ni o ƴami ndamndiri du.</div> <div id="T1af" class="txs">Ndamdiri wi'i ayyo miin tawunoɗaa ɗo nih.</div> <div id="T1ag" class="txs">O wi'i ndelle a mawnii jon kaa?</div> <div id="T1ah" class="txs">Ndamdiri wi'i sanne.</div> <div id="T1ai" class="txs">O wi'i a fuɗii waare du?</div> <div id="T1aj" class="txs">Ndamdirii wi'i ko njiwɗaa.</div> <div id="T1ak" class="txs">A fuɗɗii layre du?</div> <div id="T1al" class="txs">Ndamdirii wi'i mi fuɗɗii.</div> <div id="T1am" class="txs">A fuɗɗii luwee du?</div> <div id="T1an" class="txs">Ndamdiri wi'i mi fuɗɗii.</div> <div id="T1ao" class="txs">Wi'i ndelle jon kaa so a ŋattii neɗɗo ni maayan?</div> <div id="T1ap" class="txs">Ndamdiri wi'i fay so leetii-mi neɗɗo,</div> <div id="T1aq" class="txs">yo maayan.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ar" class="txs">Fowru wi'i ndelle ta leetam faam heɓa mi taaɓoo.</div> <div id="T1as" class="txs">A nannii naa&nbsp;?</div> <div id="T1at" class="txs">Ni fowru rappitii taaɓii yoppi ndamdiiri.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1au" class="txs">Bukari Jallo</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/07 ful cont vol3.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

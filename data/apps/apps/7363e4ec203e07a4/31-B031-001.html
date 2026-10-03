@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°30 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.31 },
+    { label: "1b", start: 2.56, end: 3.93 },
+    { label: "1c", start: 4.18, end: 6.69 },
+    { label: "1d", start: 6.94, end: 8.71 },
+    { label: "1e", start: 8.96, end: 9.91 },
+    { label: "1f", start: 10.16, end: 14.89 },
+    { label: "1g", start: 15.14, end: 19.07 },
+    { label: "1h", start: 19.32, end: 20.27 },
+    { label: "1i", start: 20.52, end: 23.03 },
+    { label: "1j", start: 23.28, end: 24.21 },
+    { label: "1k", start: 24.46, end: 27.61 },
+    { label: "1l", start: 27.86, end: 28.93 },
+    { label: "1m", start: 29.18, end: 31.65 },
+    { label: "1n", start: 31.9, end: 32.77 },
+    { label: "1o", start: 33.02, end: 34.41 },
+    { label: "1p", start: 34.66, end: 42.45 },
+    { label: "1q", start: 42.7, end: 46.29 },
+    { label: "1r", start: 46.54, end: 49.07 },
+    { label: "1s", start: 49.32, end: 55.29 },
+    { label: "1t", start: 55.54, end: 60.15 },
+    { label: "1u", start: 60.4, end: 61.41 },
+    { label: "1v", start: 61.66, end: 65.61 },
+    { label: "1w", start: 65.86, end: 67.39 },
+    { label: "1x", start: 67.64, end: 69.41 },
+    { label: "1y", start: 69.66, end: 73.89 },
+    { label: "1z", start: 74.14, end: 74.87 },
+    { label: "1aa", start: 75.12, end: 77.31 },
+    { label: "1ab", start: 77.56, end: 80.09 },
+    { label: "1ac", start: 80.34, end: 80.99 },
+    { label: "1ad", start: 81.24, end: 83.85 },
+    { label: "1ae", start: 84.1, end: 86.47 },
+    { label: "1af", start: 86.72, end: 91.37 },
+    { label: "1ag", start: 91.62, end: 93.47 },
+    { label: "1ah", start: 93.72, end: 97.21 },
+    { label: "1ai", start: 97.46, end: 100.51 },
+    { label: "1aj", start: 100.76, end: 101.91 },
+    { label: "1ak", start: 102.16, end: 104.61 },
+    { label: "1al", start: 104.86, end: 106.51 },
+    { label: "1am", start: 106.76, end: 108.07 },
+    { label: "1an", start: 108.32, end: 110.13 },
+    { label: "1ao", start: 110.38, end: 114.27 },
+    { label: "1ap", start: 114.52, end: 115.07 },
+    { label: "1aq", start: 115.32, end: 116.19 },
+    { label: "1ar", start: 116.44, end: 118.57 },
+    { label: "1as", start: 118.82, end: 122.63 },
+    { label: "1at", start: 122.88, end: 125.61 },
+    { label: "1au", start: 125.86, end: 127.47 },
+    { label: "1av", start: 127.72, end: 129.59 },
+    { label: "1aw", start: 129.84, end: 131.31 },
+    { label: "1ax", start: 131.56, end: 135.21 },
+    { label: "1ay", start: 135.46, end: 138.43 },
+    { label: "1az", start: 138.68, end: 148.19 },
+    { label: "1ba", start: 148.44, end: 150.37 },
+    { label: "1bb", start: 150.62, end: 155.19 },
+    { label: "1bc", start: 155.44, end: 159.43 },
+    { label: "1bd", start: 159.68, end: 165.97 },
+    { label: "1be", start: 166.22, end: 169.59 },
+    { label: "1bf", start: 169.84, end: 177.87 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 177.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "31-B031-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='30-B030-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='30-B030-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°30&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='32-B032-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='32-B032-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B031-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°30 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Soyez discipliné&nbsp;!</span></div> <div id="T1c" class="txs"><span class="bd">Tenez-vous à ce que vous avez décidé,</span></div> <div id="T1d" class="txs"><span class="bd">même si c’est difficile.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1e" class="txs">Histoire:</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="it">Saraï et son mari ont compris qu’il faut qu’ils diminuent leurs dépenses.</span></div> <div id="T1g" class="txs"><span class="it">Ils ont réalisé qu’ils dépensent trop d’argent dans les déplacements.</span></div> <div id="T1h" class="txs"><span class="it">Ensemble,</span></div> <div id="T1i" class="txs"><span class="it">ils ont décidé de limiter leurs déplacements.</span></div> <div id="T1j" class="txs"><span class="it">Ce matin,</span></div> <div id="T1k" class="txs"><span class="it">ils apprennent qu’un vieux au village vient de décéder.</span></div> <div id="T1l" class="txs"><span class="it">Habituellement,</span></div> <div id="T1m" class="txs"><span class="it">ils seraient partis saluer sans se poser la question.</span></div> <div id="T1n" class="txs"><span class="it">Aujourd’hui,</span></div> <div id="T1o" class="txs"><span class="it">ils parlent en couple.</span></div> <div id="T1p" class="txs"><span class="it">Ils savent qu’un déplacement est prévu dans deux semaines pour le travail de monsieur qui doit se rendre tout près du village.</span></div> <div id="T1q" class="txs"><span class="it">Ils décident qu’ils iront saluer au village à ce moment,</span></div> <div id="T1r" class="txs"><span class="it">et ils renoncent à partir aujourd’hui.</span></div> <div id="T1s" class="txs"><span class="it">C’est difficile de téléphoner à la famille du défunt et leur dire qu’ils ne viendront pas aujourd’hui.</span></div> <div id="T1t" class="txs"><span class="it">Ils viendront saluer prochainement mais ils risquent de ne pas être compris.</span></div> <div id="T1u" class="txs"><span class="it">Pourtant,</span></div> <div id="T1v" class="txs"><span class="it">Saraï et son mari se tiennent aux décisions qu’ils ont prises,</span></div> <div id="T1w" class="txs"><span class="it">même si c’est</span><span class="it"> </span><span class="it">difficile.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1x" class="txs">Que pensez-vous de cette histoire?</div> <div id="T1y" class="txs">Pensez-vous que la décision de Saraï et son mari était facile à prendre?</div> <div id="T1z" class="txs">Pourquoi?</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1aa" class="txs">Si nous voulons mieux gérer l’argent,</div> <div id="T1ab" class="txs">c’est important de changer certaines habitudes.</div> <div id="T1ac" class="txs">Pourtant,</div> <div id="T1ad" class="txs">certains changements sont difficiles à vivre.</div> <div id="T1ae" class="txs">Nous devons tenir nos décisions,</div> <div id="T1af" class="txs">sans donner trop d’importance à ce que les autres vont dire ou penser.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ag" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="m"><div id="T1ah" class="txs">Après avoir compris comment mieux gérer vos biens,</div> <div id="T1ai" class="txs">quelles sont les choses que vous avez décidé de changer?</div> <div id="T1aj" class="txs">(par exemple:</div> <div id="T1ak" class="txs">renoncer à certaines dépenses inutiles,</div> <div id="T1al" class="txs">apprendre à épargner,</div> <div id="T1am" class="txs">travailler plus…)</div></div>
+<div class="m"><div id="T1an" class="txs">D’après ce que vous imaginez,</div> <div id="T1ao" class="txs">quelles sont les décisions qui vont être difficiles à tenir?</div> <div id="T1ap" class="txs">Pourquoi?</div></div>
+<div class="m"><div id="T1aq" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ar" class="txs">Changer des habitudes est difficile.</div> <div id="T1as" class="txs">Rappelez-vous qu’il faut beaucoup de volonté et de discipline.</div></div>
+<div class="p_Corpsdetexte"><div id="T1at" class="txs">Dieu peut vous aider à être discipliné.</div> <div id="T1au" class="txs">Recherchez Son aide.</div></div>
+<div class="m"><div id="T1av" class="txs"><span class="ul">Verset </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1aw" class="txs"><span class="it">«&nbsp;Toujours et partout,</span></div> <div id="T1ax" class="txs"><span class="it">j’ai appris à être rassasié et à avoir faim,</span></div> <div id="T1ay" class="txs"><span class="it">à vivre avec beaucoup et avec peu.</span></div> <div id="T1az" class="txs"><span class="it">Je suis capable de tout cela grâce au Christ qui me rend fort&nbsp;» </span>(Philippiens 4, 12-13)</div></div>
+<div class="m"><div id="T1ba" class="txs"><span class="ul">Exercice à</span><span class="ul"> </span><span class="ul">faire:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1bb" class="txs">Vous avez maintenant appris beaucoup de choses pour savoir mieux gérer vos biens.</div> <div id="T1bc" class="txs">Partager à quelqu’un de confiance ce que vous avez compris.</div> <div id="T1bd" class="txs">Dites-lui ce que vous avez décidé de changer et engagez-vous à faire des efforts pour le vivre.</div> <div id="T1be" class="txs">Dites-lui ce qui est difficile pour vous à changer.</div> <div id="T1bf" class="txs">Demandez-lui de vous encourager dans vos décisions et de vous soutenir dans la prière.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/039_Conseil_n30.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

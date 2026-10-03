@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>281  So-m-meng 4</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "4a", start: 57, end: 67.41 },
+    { label: "4b", start: 67.66, end: 69.21 },
+    { label: "4c", start: 69.46, end: 72.59 },
+    { label: "4d", start: 72.84, end: 73.51 },
+    { label: "4e", start: 73.76, end: 74.85 },
+    { label: "4f", start: 75.1, end: 77.51 },
+    { label: "4g", start: 77.76, end: 78.43 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 57;
+var stopTime  = 78.43;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 42 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-003.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;281  So-m-meng&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;4&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-005.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes more 280 a 322-image4.jpg" />
+
+<div class="m"><div id="T4a" class="txs"><span class="bd">284</span><span class="bd"> </span><span class="bd"> </span><span class="bd">Bũmb</span><span class="bd"> </span><span class="bd">gõdb</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n </span><span class="bd">wa</span><span class="bd"> </span><span class="bd">yɩɩd</span><span class="bd"> </span><span class="bd">gũun-daoogo</span><span class="bd">,</span></div><div id="T4b" class="txs"><span class="bd">yaa</span><span class="bd"> </span><span class="bd">sẽn</span><span class="bd"> </span><span class="bd">kao</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T4c" class="txs"><span class="bdit">(Plus recourbé qu’un mille-pattes,</span></div> <div id="T4d" class="txs"><span class="bdit">c’est que,</span></div> <div id="T4e" class="txs"><span class="bdit">c’est cassé).</span></div></div>
+<div class="m"><div id="T4f" class="txs"><span class="bd">Bũmb</span><span class="bd"> </span><span class="bd">gõdb</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n </span><span class="bd">wa</span><span class="bd"> </span><span class="bd">yɩɩd</span><span class="bd"> </span><span class="bd">gũun-daoogo</span><span class="bd">,</span></div><div id="T4g" class="txs"><span class="bd">yaa</span><span class="bd"> </span><span class="bd">sẽn</span><span class="bd"> </span><span class="bd">kao</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 281 a 322 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

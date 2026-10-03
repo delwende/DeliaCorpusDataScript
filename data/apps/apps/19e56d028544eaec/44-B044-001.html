@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>Le projet de 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.13 },
+    { label: "1b", start: 4.38, end: 10.19 },
+    { label: "1c", start: 10.44, end: 22.81 },
+    { label: "1d", start: 23.06, end: 31.87 },
+    { label: "1e", start: 32.12, end: 45.59 },
+    { label: "1f", start: 45.84, end: 47.81 },
+    { label: "1g", start: 48.06, end: 61.11 },
+    { label: "1h", start: 61.36, end: 63.33 },
+    { label: "1i", start: 63.58, end: 66.75 },
+    { label: "1j", start: 67, end: 72.97 },
+    { label: "1k", start: 73.22, end: 78.35 },
+    { label: "1l", start: 78.6, end: 80.57 },
+    { label: "1m", start: 80.82, end: 84.27 },
+    { label: "1n", start: 84.52, end: 88.71 },
+    { label: "1o", start: 88.96, end: 102.71 },
+    { label: "1p", start: 102.96, end: 104.31 },
+    { label: "1q", start: 104.56, end: 118.21 },
+    { label: "1r", start: 118.46, end: 123.01 },
+    { label: "1s", start: 123.26, end: 126.19 },
+    { label: "1t", start: 126.44, end: 127.55 },
+    { label: "1u", start: 127.8, end: 129.01 },
+    { label: "1v", start: 129.26, end: 132.59 },
+    { label: "1w", start: 132.84, end: 145.51 },
+    { label: "1x", start: 145.76, end: 154.37 },
+    { label: "1y", start: 154.62, end: 163.95 },
+    { label: "1z", start: 164.2, end: 171.95 },
+    { label: "1aa", start: 172.2, end: 180.73 },
+    { label: "1ab", start: 180.98, end: 183.55 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 183.55;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "44-B044-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='43-B043-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='43-B043-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Le projet de&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='45-B045-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='45-B045-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B044-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Le projet de communication (</span><span class="bd">8</span><span class="bd">)</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Partie 1 - A faire individuellement</span> (5 minutes).</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">1</span>) Comment pensez-vous que vous et votre conjoint parvenez à gérer les conflits dans votre mariage&nbsp;?</div></div>
+<div class="m"><div id="T1d" class="txs">☐ Bien  ☐ Assez bien  ☐ Pas bien  ☐ Mal.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">2</span>) Comment écoutez-vous votre conjoint quand vous avez un conflit&nbsp;?</div></div>
+<div class="m"><div id="T1f" class="txs">☐ Bien  ☐ Assez bien  ☐ Pas bien  ☐ Mal.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">3</span>) Comment pensez-vous que votre conjoint écoute dans ce moment-là&nbsp;?</div></div>
+<div class="m"><div id="T1h" class="txs">☐ Bien  ☐ Assez bien  ☐ Pas bien  ☐ Mal.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">4</span>) Quand vous êtes en conflit,</div> <div id="T1j" class="txs">comment avez-vous l’habitude de réagir&nbsp;?</div></div>
+<div class="m"><div id="T1k" class="txs">(Cochez tout ce qui correspond)</div></div>
+<div class="m"><div id="T1l" class="txs">  ☐ Colère  ☐ Agressivité  ☐ Vengeance.</div></div>
+<div class="m"><div id="T1m" class="txs"> ☐ Repli sur soi  ☐ Refoulement  ☐ Autre réaction :</div></div>
+<div class="m"><div id="T1n" class="txs"> ☐ Silence  ☐ Hostilité.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">5</span>) Etes-vous disposé à demander pardon quand vous avez tort et à pardonner quand on vous a fait du tort&nbsp;?</div></div>
+<div class="m"><div id="T1p" class="txs"> ☐ Bien disposé  ☐ Assez disposé  ☐ Souvent peu disposé.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">Partie 2 - A faire ensemble</span> (30 minutes minimum).</div></div>
+<div class="m"><div id="T1r" class="txs">✓ Discutez ensemble de vos réponses aux questions précédentes.</div> <div id="T1s" class="txs">Est-ce que vos réponses correspondent&nbsp;?</div> <div id="T1t" class="txs">Si non,</div> <div id="T1u" class="txs">pourquoi&nbsp;?</div></div>
+<div class="m"><div id="T1v" class="txs">✓ Répondez aux questions suivantes :</div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">1</span>) Quels sont les deux ou trois choses qui semblent apporter le plus de conflits dans notre mariage&nbsp;?</div></div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">2</span>) Comment pouvez-vous vous aider mutuellement à mieux gérer et à résoudre les conflits quand ils surviennent&nbsp;?</div></div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">3</span>) Y a-t-il une chose que vous avez à vous pardonner maintenant&nbsp;?</div> <div id="T1z" class="txs">Etes-vous disposé à demander pardon et à pardonner maintenant&nbsp;?</div></div>
+<div class="m"><div id="T1aa" class="txs"><span class="bd">4</span>) Et quels sont votre plan et votre engagement mutuel pour gérer les conflits à venir&nbsp;?</div></div>
+<div class="m"><div id="T1ab" class="txs">.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/37a Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/37a Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/37a Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

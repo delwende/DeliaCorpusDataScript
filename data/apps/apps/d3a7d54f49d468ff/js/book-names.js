@@ -1,0 +1,15 @@
+var books = [
+  { name: "1 TELELE DA", ref: "01-B001-001.html" },
+  { name: "2 TELELE JAKPELIGA LENI", ref: "02-B002-001.html" },
+  { name: "3 TELELE KUNKULI LENI", ref: "03-B003-001.html" },
+  { name: "4 TELELE JAKPELIGA LENI", ref: "04-B004-001.html" },
+  { name: "5 TELELE LAAMO LENI", ref: "05-B005-001.html" },
+  { name: "6 TELELE KOKOLO LENI", ref: "06-B006-001.html" },
+  { name: "7  TELELE O BADO LENI TI", ref: "07-B007-001.html" },
+  { name: "8 TELELE O BADO LENI TIE", ref: "08-B008-001.html" },
+  { name: "9 TELELE O KABO LENI LI", ref: "09-B009-001.html" },
+  { name: "10 TELELE DAMLI BI TAA", ref: "10-B010-001.html" },
+  { name: "11  O KPAAKPAALO LENI O", ref: "11-B011-001.html" },
+  { name: "12  O BUALO LENI O", ref: "12-B012-001.html" },
+  { name: "13  O BADO LENI TI", ref: "13-B013-001.html" },
+];

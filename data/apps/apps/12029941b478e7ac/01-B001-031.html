@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P 121-160 31</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "31a", start: 647.21, end: 650.96 },
+    { label: "31b", start: 651.21, end: 656.01 },
+    { label: "31c", start: 656.26, end: 666.93 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 647.21;
+var stopTime  = 666.93;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-030.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;P 121-160&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;31&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-032.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image31.jpg" />
+
+<div class="m"><div id="T31a" class="txs"><span class="bd">151 </span><span class="bd">Bĩng</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> </span><span class="bd">maag</span><span class="bd"> </span><span class="bd">gũuda</span><span class="bd"> </span><span class="bd">a-</span><span class="bd">rɩ</span><span class="bd">t</span><span class="bd">ba</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T31b" class="txs"><span class="bdit">(Qui laisse refroidir le repas, expose son plat à des consommateurs intrus).</span></div></div>
+<div class="m"><div id="T31c" class="txs"><span class="bd">Bĩng</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> </span><span class="bd">maag</span><span class="bd"> </span><span class="bd">gũuda</span><span class="bd"> </span><span class="bd">a-</span><span class="bd">rɩ</span><span class="bd">t</span><span class="bd">ba</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 121 a 160 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

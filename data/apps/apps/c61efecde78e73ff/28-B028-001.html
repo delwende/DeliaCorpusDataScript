@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5E2900">
+<title>Table de matières 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 0;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "28-B028-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='27-B027-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='27-B027-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Table de matières&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B028-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">Table de</span><span class="bd">s</span><span class="bd"> matières</span></div>
+<div class="m">Pourquoi une application sur les dons spirituels</div>
+<div class="m">Un don spirituel, c'est quoi&nbsp;?</div>
+<div class="m">Comment utiliser cette appli</div>
+<div class="m">Le don de l'apostolat</div>
+<div class="m">Le don de l'artiste (communication créative)</div>
+<div class="m">Le don du bricolage (habilité manuelle)</div>
+<div class="m">Le don de la connaissance</div>
+<div class="m">Le don de la direction (leadership)</div>
+<div class="m">Le don de du discernement</div>
+<div class="m">Le don de l'encouragement (exhortation)</div>
+<div class="m">Le don de l'enseignement</div>
+<div class="m">Le don de l'évangélisation</div>
+<div class="m">Le don de la foi</div>
+<div class="m">Le don de la générosité (libéralité)</div>
+<div class="m">Le don de la guérison</div>
+<div class="m">Le don de l'hospitalité</div>
+<div class="m">Le don de la miséricorde</div>
+<div class="m">Le don de la mission</div>
+<div class="m">Le don de la musique</div>
+<div class="m">Le don de l'organisation (gestion)</div>
+<div class="m">Le don de parler en langues et l’interprétation</div>
+<div class="m">Le don du pastorat</div>
+<div class="m">Le don de la prière</div>
+<div class="m">Le don de la prophétie</div>
+<div class="m">Le don de la sagesse</div>
+<div class="m">Le don du service</div>
+<div class="m">Propositions pour la mise en pratique</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

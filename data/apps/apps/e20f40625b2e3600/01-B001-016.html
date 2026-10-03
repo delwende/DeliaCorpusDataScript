@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P 81-120 16</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "16a", start: 399.11, end: 404.97 },
+    { label: "16b", start: 405.22, end: 407.65 },
+    { label: "16c", start: 407.9, end: 410.68 },
+    { label: "16d", start: 410.93, end: 414.48 },
+    { label: "16e", start: 414.73, end: 416.31 },
+    { label: "16f", start: 416.56, end: 426.04 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 399.11;
+var stopTime  = 426.04;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-015.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;P 81-120&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;16&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-017.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image16.jpg" />
+
+<div class="m"><div id="T16a" class="txs"><span class="bd">96 Mo-ka-</span><span class="bd">tĩidga</span><span class="bd">,</span></div> <div id="T16b" class="txs"><span class="bd">n </span><span class="bd">leokd</span><span class="bd"> </span><span class="bd">nifu</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T16c" class="txs"><span class="bdit">(Tombe dans l’œil,</span></div> <div id="T16d" class="txs"><span class="bdit">la brindille la moins attendue).</span></div></div>
+<div class="m"><div id="T16e" class="txs"><span class="bd">Mo-ka-</span><span class="bd">tĩidga</span><span class="bd">,</span></div> <div id="T16f" class="txs"><span class="bd">n </span><span class="bd">leokd</span><span class="bd"> </span><span class="bd">nifu</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 80 a 120 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

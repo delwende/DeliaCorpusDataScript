@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>10) It's time to 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.67 },
+    { label: "1b", start: 2.92, end: 7.29 },
+    { label: "1c", start: 7.54, end: 11.75 },
+    { label: "1d", start: 12, end: 13.17 },
+    { label: "1e", start: 13.42, end: 16.19 },
+    { label: "1f", start: 16.44, end: 19.13 },
+    { label: "1g", start: 19.38, end: 20.43 },
+    { label: "1h", start: 20.68, end: 22.75 },
+    { label: "1i", start: 23, end: 26.67 },
+    { label: "1j", start: 26.92, end: 29.85 },
+    { label: "1k", start: 30.1, end: 33.87 },
+    { label: "1l", start: 34.12, end: 37.23 },
+    { label: "1m", start: 37.48, end: 40.83 },
+    { label: "1n", start: 41.08, end: 44.43 },
+    { label: "1o", start: 44.68, end: 48.35 },
+    { label: "1p", start: 48.6, end: 51.83 },
+    { label: "1q", start: 52.08, end: 54.21 },
+    { label: "1r", start: 54.46, end: 56.63 },
+    { label: "1s", start: 56.88, end: 59.07 },
+    { label: "1t", start: 59.32, end: 60.41 },
+    { label: "1u", start: 60.66, end: 63.77 },
+    { label: "1v", start: 64.02, end: 65.37 },
+    { label: "1w", start: 65.62, end: 67.97 },
+    { label: "1x", start: 68.22, end: 70.75 },
+    { label: "1y", start: 71, end: 73.23 },
+    { label: "1z", start: 73.48, end: 74.95 },
+    { label: "1aa", start: 75.2, end: 77.31 },
+    { label: "1ab", start: 77.56, end: 80.19 },
+    { label: "1ac", start: 80.44, end: 82.97 },
+    { label: "1ad", start: 83.22, end: 84.21 },
+    { label: "1ae", start: 84.46, end: 86.11 },
+    { label: "1af", start: 86.36, end: 88.13 },
+    { label: "1ag", start: 88.38, end: 91.09 },
+    { label: "1ah", start: 91.34, end: 93.77 },
+    { label: "1ai", start: 94.02, end: 95.35 },
+    { label: "1aj", start: 95.6, end: 96.93 },
+    { label: "1ak", start: 97.18, end: 98.63 },
+    { label: "1al", start: 98.88, end: 101.81 },
+    { label: "1am", start: 102.06, end: 103.01 },
+    { label: "1an", start: 103.26, end: 107.27 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 107.27;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "19-B010-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='18-B033-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='18-B033-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;10) It's time to&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='20-B034-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='20-B034-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B010-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">10) It's time to celebrate!</span></div></div>
+<div class="m"><div id="T1b" class="txs">Many public holidays in Europe can be traced back to the Christian faith.</div> <div id="T1c" class="txs">Many Europeans no longer officially belong to a Christian church.</div> <div id="T1d" class="txs">Nevertheless,</div> <div id="T1e" class="txs">public holidays still play an important role.</div> <div id="T1f" class="txs">They are often celebrated within the family.</div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">CHRISTMAS:</span></div> <div id="T1h" class="txs"><span class="bd">BIRTHDAY CANDLES FOR JESUS</span></div></div>
+<div class="m"><div id="T1i" class="txs">The most important family celebration in Europe is Christmas,</div> <div id="T1j" class="txs">always from 24 - 26 December.</div> <div id="T1k" class="txs">Children in particular look forward to it long in advance.</div> <div id="T1l" class="txs">The four weeks before Christmas are called Advent.</div> <div id="T1m" class="txs">Christmas is the birthday celebration for Jesus.</div> <div id="T1n" class="txs">He was born over 2000 years ago.</div> <div id="T1o" class="txs">Jesus was born in a stable because all other shelters were occupied.</div> <div id="T1p" class="txs">His mother Mary laid him in the manger of the animals.</div> <div id="T1q" class="txs">This is depicted in many pictures:</div> <div id="T1r" class="txs">The newborn child lies in the manger,</div> <div id="T1s" class="txs">next to him we see Mary and Joseph,</div> <div id="T1t" class="txs">her husband.</div> <div id="T1u" class="txs">Sometimes the animals in the stable are also shown:</div> <div id="T1v" class="txs">ox and donkey.</div></div>
+<div class="m"><div id="T1w" class="txs">The birth of Jesus is a happy occasion,</div> <div id="T1x" class="txs">which is why music can be heard everywhere.</div> <div id="T1y" class="txs">There are many Christmas carols.</div> <div id="T1z" class="txs">Houses are decorated,</div> <div id="T1aa" class="txs">people stroll through Christmas markets,</div> <div id="T1ab" class="txs">and lights and candles can be seen everywhere.</div> <div id="T1ac" class="txs">They are a sign that Jesus is the light.</div> <div id="T1ad" class="txs">In the Bible,</div> <div id="T1ae" class="txs">Jesus says about himself:</div> <div id="T1af" class="txs">"I am the light of the world.</div> <div id="T1ag" class="txs">Whoever follows me will not walk in darkness,</div> <div id="T1ah" class="txs">but will have the light of life" (The Bible.</div> <div id="T1ai" class="txs">John 8:12).</div> <div id="T1aj" class="txs">On Christmas Eve,</div> <div id="T1ak" class="txs">24 December,</div> <div id="T1al" class="txs">some families go to church together in the evening.</div> <div id="T1am" class="txs">Usually,</div> <div id="T1an" class="txs">there is a special festive meal at home and everyone receives presents.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/10 Welcome Woman.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/10 Welcome Woman.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/10 Welcome Woman.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

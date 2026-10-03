@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3 Arzẽk soab a ye kibare 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.25 },
+    { label: "1b", start: 4.5, end: 12.07 },
+    { label: "1c", start: 12.32, end: 15.37 },
+    { label: "1d", start: 15.62, end: 20.89 },
+    { label: "1e", start: 21.14, end: 25.73 },
+    { label: "1f", start: 25.98, end: 32.55 },
+    { label: "1g", start: 32.8, end: 40.81 },
+    { label: "1h", start: 41.06, end: 46.51 },
+    { label: "1i", start: 46.76, end: 55.69 },
+    { label: "1j", start: 55.94, end: 71.21 },
+    { label: "1k", start: 71.46, end: 81.85 },
+    { label: "1l", start: 82.1, end: 90.57 },
+    { label: "1m", start: 90.82, end: 97.11 },
+    { label: "1n", start: 97.36, end: 107.41 },
+    { label: "1o", start: 107.66, end: 114.17 },
+    { label: "1p", start: 114.42, end: 119.11 },
+    { label: "1q", start: 119.36, end: 128.31 },
+    { label: "1r", start: 128.56, end: 135.99 },
+    { label: "1s", start: 136.24, end: 142.45 },
+    { label: "1t", start: 142.7, end: 145.59 },
+    { label: "1u", start: 145.84, end: 147.63 },
+    { label: "1v", start: 147.88, end: 156.27 },
+    { label: "1w", start: 156.52, end: 163.21 },
+    { label: "1x", start: 163.46, end: 166.17 },
+    { label: "1y", start: 166.42, end: 168.45 },
+    { label: "1z", start: 168.7, end: 171.57 },
+    { label: "1aa", start: 171.82, end: 178.01 },
+    { label: "1ab", start: 178.26, end: 181.13 },
+    { label: "1ac", start: 181.38, end: 187.45 },
+    { label: "1ad", start: 187.7, end: 194.95 },
+    { label: "1ae", start: 195.2, end: 199.79 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 199.79;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;3 Arzẽk soab a ye kibare&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_Textkrper"><div id="T1a" class="txs"><span class="bd">3 Arzẽk soab a ye kibare</span><span class="bd">.</span></div></div>
+<div class="p_Textkrper"><div id="T1b" class="txs">Arzɛk soab n da be tẽng a yembr pʋgẽ, n tar pagb la kamb wʋsgo.</div> <div id="T1c" class="txs">A rũm-bãoonegã pa tõe n sõd n sa ye :</div> <div id="T1d" class="txs">Niisi, piisi, bʋʋse, noos la kĩini.</div> <div id="T1e" class="txs">La ne rẽ fãa, a ra koosda gʋʋr la taba.</div></div>
+<div class="p_Textkrper"><div id="T1f" class="txs">La, ra yaa ned me, sẽn dɩk ligdi, tɩ lebg a Wẽnnaam.</div> <div id="T1g" class="txs">Ned sã n da a bũmbu, t’a ligd pa a nengẽ, a soab pa tõe n le paam ligd-kãng ye.</div> <div id="T1h" class="txs">Fo sã n pa tar ligd me, f ka tõe n paam bũmb a nengẽ ye.</div>  <div id="T1i" class="txs">Ned bʋʋg bɩ a pesg sã n lʋɩ a rũmsã sʋka, a ka le yit ye; yẽ n na n soog-a.</div> <div id="T1j" class="txs">La, sãan sã n wa sig-a, yaa rũng ning a sẽn ka so wã, la a na n yõk n kʋ n moneg sãanã, sẽn na yɩl, tɩ sãanã sũur yɩ noogo, t’a ning-a barka.</div> <div id="T1k" class="txs">Bala, nebã yetame, tɩ f sã n maan sãan yel-sõmde, a wat n leba f menga, wall f kamba.</div></div>
+<div class="p_Textkrper"><div id="T1l" class="txs">La nin-kãngã ra yĩmame, tɩ yẽ sẽn wẽgd nebã, tõe n leba a menga, tɩ b ka gomd a kambã ye.</div> <div id="T1m" class="txs">La, sẽn ya yell n tɩ yɩɩda, yaa tɩ f tɩɩm ka tõe-a ye.</div> <div id="T1n" class="txs">Fo ka tõe me, n bool-a bʋʋd ye, tɩ bala, a tara tõogo, hal tɩ tẽngã nebã fãa wa gomd a yelle.</div></div>
+<div class="p_Textkrper"><div id="T1o" class="txs">La sẽn wa n beẽ n beẽ, Wẽnnaam nin-sõng a ye, n da bʋʋg ne pesg n na n gʋʋle.</div> <div id="T1p" class="txs">Tɩ bʋʋgã tõsga a wĩirã, n kẽng n tɩ lagem a rũmsã.</div> <div id="T1q" class="txs">Tɩ nin-sõngã yet t’a na n gome, tɩ tẽngã nebã yeel-a, t’a pĩnd n sĩnd a noorã, tɩ arzɛkã soaba ka nin-sõng ye.</div> <div id="T1r" class="txs">La ne rẽ fãa, rao wã kell n talla raoodo, n kẽng n tɩ yãnd arzɛkã soaba n yeel-a :</div> <div id="T1s" class="txs">«Mam daa bʋʋg n loe n na n gʋʋle, t’a tõsg a wĩirã n wa naag yãmb rũmsã.</div> <div id="T1t" class="txs">Ad-a sẽn gãe, m bõos n yõk-a ».</div> <div id="T1u" class="txs">Tɩ arzɛkã soab leok-a :</div> <div id="T1v" class="txs">«Yaa ziri, bʋ-kãngã roga ka n bɩ ka , yaa mam bʋʋga; da bao m noor yibeoogã ye».</div> <div id="T1w" class="txs">La, bʋʋgã soab sẽn mi a yellã yĩnga, a ka bao n na n bʋ ne-a ye.</div> <div id="T1x" class="txs">A yeela arzɛkã soab bala :</div> <div id="T1y" class="txs">«Wẽnnaam yaa m kaset soaba.</div> <div id="T1z" class="txs">Foom, la m kaset a yiib-n-soaba.</div> <div id="T1aa" class="txs">Sã n mikame, tɩ bʋʋgã yaa mam dẽnda, ka ne vẽere, d na gese.</div> <div id="T1ab" class="txs">Fo rũmsã fãa na sa, n bas-fo ».</div></div>
+<div class="p_Textkrper"><div id="T1ac" class="txs">Sɩd me, sẽoogã sẽn wa n ta, saag n tãs a rũmsã n kʋ n kell rũms piiga.</div> <div id="T1ad" class="txs">Dẽ poore, we-baas n wa n yõg a rũmsã fãa, n wãb n kell rao wã bʋʋg bala.</div></div>
+<div class="p_Textkrper"><div id="T1ae" class="txs"><span class="bdit">Rẽ wã, </span><span class="bdit">Wẽnnaam deegda ka-pãng soab zĩig n zabe.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte_03_Arzek_soaba.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

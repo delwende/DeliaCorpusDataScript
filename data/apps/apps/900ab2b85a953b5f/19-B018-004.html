@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>መእተዊ 4</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "19-B018-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='18-B017-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='19-B018-003.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;መእተዊ&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;4&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B018-005.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='20-B019-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B018-image4.jpg" />
+
+<div class="m"><span class="bd">ምውሳድ ቆልዑ</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">ኣምላኽ ብፍቕሩ ብኢየሱስ ክርስቶስ ኣቢሉ ረድኤት ደቁ ክንከውን ኣቐዲሙ መዲቡና ኣሎ።</span>(ኤፌሶን 1.5)።</div>
+<div class="m"><span class="bd">ምውሳድ ምውሳድ እንታይ እዩ?</span></div>
+<div class="m">ብግዜ ሃዋርያ ጳውሎስ፡ ውላድ ዘይብሎም ሰብ ሓዳር ብተደጋጋሚ ወራሲኦም ዝዀነ ወዲ የዕብዩ ነበሩ። ዋላ እኳ እቶም ስጋዊ ወለዲ ናይቲ ዘዕበየ ወዲ ብህይወት እንተነበሩ፡ እቲ ምውሳድ ምስ ተዛዘመ ኣብ ልዕሊኡ ዝኾነ መሰል ኣይነበሮምን። ምሉእ ብምሉእ ምውሳድ ቆልዑ ሕጋዊ ተግባር እዩ። እቲ ቆልዓ ንስድራቤት ጥራይ ኣይቅይርን እዩ። ምስታ ኣረጊት ስድራቤት ምሉእ ዕረፍቲ ኣሎ። እቲ ዝተረከበ ቆልዓ ስሙ ቀይሩ ሓድሽ ናይ ልደት ምስክር ወረቐት ይረክብ። ድሕሪ ደጊም ካብ ስጋዊ ስድርኡ ውርሻ ክረክብ መሰል የብሉን፣ ኣብ መስመር ወለዶ ሓዳስ ስድርኡ ግን ምሉእ ብምሉእ ተዋሃሂዱ ይርከብ። እታ ናይ ቀደም ስድራቤት ድሕሪ ሕጂ ኣብ ልዕሊኡ ወይ ኣብ ልዕሊኣ ዝኾነ መሰል የብላን። ኣብ ገሊኡ ሃገራት፡ ስጋዊ ወለዲ ንውላዶም ናይ ምርኣይ መሰል እውን የብሎምን። ጳውሎስ ነዚ ማሕበራዊ ልምዲ እዚ ተጠቒሙ ነዞም ዝስዕቡ መጽሓፍ ቅዱሳዊ ሓቅታት ይምህር፤</div>
+<div class="m">- ቅድሚ ምውላድና ኢና ንሕረይ፡ እንተኾነ ግን ድሕነት ኣምላኽ ኣብ እንቕበልሉ ህሞት ብውላድነት ደቂ ኣምላኽ ንኸውን።</div>
+<div class="m">- ምሉእ ብምሉእ ደቂ ኣምላኽ ኢና። ምስ ሕሉፍ ዘሎ ዕረፍቲ ምሉእ እዩ። "ኣረጊት ስድራና" ድሕሪ ሕጂ ኣብ ልዕሌና ዝኾነ ስልጣን የብላን።</div>
+<div class="m">- ምውሳድ ምውሳድ ብሞት ክርስቶስ እዩ ተኻኢሉ። ኣብታ ዝኣመንናሉን ኣባላት ስድራቤት ኣምላኽ ዝኾንናሉን ህሞት እዩ ተፈጺሙ (ሮሜ 8, 15)፡ እንተኾነ ግን ናይ ትንሳኤ ስጋና ምስለበስና ምሉእ ብምሉእ ክግሃድ እዩ (ሮሜ 8, 23)።</div>
+<div class="m"><span class="bd">ምውሳድ ቆልዑ ኣብ ህይወትካ ሃብቲ ንኽኸውን ዝሕግዙ ተግባራት፤</span></div>
+<div class="m"><span class="it">- ጸሎት፤</span>ስለቲ ሓዳስ መንፈሳዊት ስድራኻ ንኣምላኽ ኣመስግን። ናይቶም ኣብ ቤተ ክርስቲያን ሓቀኛታት ኣቦን ኣዴታትን ኣሕዋትን ኣሓትን ዝኾኑኹም ኣስማት ተዛረቡ። ስለኦም ንኣምላኽ ይመስገን።</div>
+<div class="m"><span class="it">- ንባብ መጽሓፍ ቅዱስ፤</span>ኤፌሶን 4, 17 ክሳብ 32 ኣንብብ።ካብታ ኣረጊት ስድራቤት ድሕሪ ደጊም ኣብታ ሓዳስ ስድራቤት ማለት ስድራቤት ኣምላኽ ዘይፍቀድ ባህርያት ቀዳማይ ዝርዝር ኣውጽእ። ድሕሪኡ ካልኣይ ዝርዝር ናይቶም ከም ኣወዳትን ኣዋልድን ስድራቤት ኣምላኽ ክትመሃሩዎም ዘለኩም ባህርያት ኣስርሑ።</div>
+<div class="m"><span class="it">- ውልቃዊ ኣስተንትኖ፤</span>ገና ካብቲ ናይ ቀደም ህይወትካ ባህርያት እንተሃልዩካ ንምርኣይ ንህይወትካ መርምር። ከምኡ እንተኾይኑ፡ ብሓገዝ መንፈስ ቅዱስ ክትልውጦም ድለ።</div>
+<div class="m"><span class="it">- ናብ ካልኦት ገጹ፤</span>ኣብ ቤተ ክርስቲያንካ መንፈሳዊ ኣቦ ወይ ኣደ ወይ ሓው ወይ ሓፍቲ ከም ዘድልዮ ከርእየካ ንኣምላኽ ለምኖ። ምስቲ ሰብ ቅርብ ኢልካ ከምቲ ኣብ ተፈጥሮኣዊ ስድራቤትካ ዘሎ ሓው ወይ ሓፍትኻ ኣብ ህይወት ኣሰንዮ።</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

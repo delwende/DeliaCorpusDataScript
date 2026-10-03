@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>3) La méthode du 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.93 },
+    { label: "1b", start: 3.18, end: 4.83 },
+    { label: "1c", start: 5.08, end: 16.07 },
+    { label: "1d", start: 16.32, end: 20.89 },
+    { label: "1e", start: 21.14, end: 22.55 },
+    { label: "1f", start: 22.8, end: 24.09 },
+    { label: "1g", start: 24.34, end: 28.89 },
+    { label: "1h", start: 29.14, end: 30.57 },
+    { label: "1i", start: 30.82, end: 37.67 },
+    { label: "1j", start: 37.92, end: 42.99 },
+    { label: "1k", start: 43.24, end: 45.73 },
+    { label: "1l", start: 45.98, end: 50.81 },
+    { label: "1m", start: 51.06, end: 57.89 },
+    { label: "1n", start: 58.14, end: 62.67 },
+    { label: "1o", start: 62.92, end: 63.77 },
+    { label: "1p", start: 64.02, end: 67.47 },
+    { label: "1q", start: 67.72, end: 68.79 },
+    { label: "1r", start: 69.04, end: 71.47 },
+    { label: "1s", start: 71.72, end: 75.13 },
+    { label: "1t", start: 75.38, end: 86.53 },
+    { label: "1u", start: 86.78, end: 87.79 },
+    { label: "1v", start: 88.04, end: 90.59 },
+    { label: "1w", start: 90.84, end: 93.53 },
+    { label: "1x", start: 93.78, end: 95.93 },
+    { label: "1y", start: 96.18, end: 97.17 },
+    { label: "1z", start: 97.42, end: 101.19 },
+    { label: "1aa", start: 101.44, end: 109.09 },
+    { label: "1ab", start: 109.34, end: 111.83 },
+    { label: "1ac", start: 112.08, end: 117.13 },
+    { label: "1ad", start: 117.38, end: 122.35 },
+    { label: "1ae", start: 122.6, end: 129.73 },
+    { label: "1af", start: 129.98, end: 133.03 },
+    { label: "1ag", start: 133.28, end: 137.11 },
+    { label: "1ah", start: 137.36, end: 141.43 },
+    { label: "1ai", start: 141.68, end: 144.39 },
+    { label: "1aj", start: 144.64, end: 146.73 },
+    { label: "1ak", start: 146.98, end: 153.51 },
+    { label: "1al", start: 153.76, end: 155.57 },
+    { label: "1am", start: 155.82, end: 157.99 },
+    { label: "1an", start: 158.24, end: 161.03 },
+    { label: "1ao", start: 161.28, end: 164.99 },
+    { label: "1ap", start: 165.24, end: 171.57 },
+    { label: "1aq", start: 171.82, end: 176.85 },
+    { label: "1ar", start: 177.1, end: 180.91 },
+    { label: "1as", start: 181.16, end: 183.17 },
+    { label: "1at", start: 183.42, end: 187.19 },
+    { label: "1au", start: 187.44, end: 190.79 },
+    { label: "1av", start: 191.04, end: 194.23 },
+    { label: "1aw", start: 194.48, end: 198.43 },
+    { label: "1ax", start: 198.68, end: 200.07 },
+    { label: "1ay", start: 200.32, end: 201.85 },
+    { label: "1az", start: 202.1, end: 204.21 },
+    { label: "1ba", start: 204.46, end: 208.61 },
+    { label: "1bb", start: 208.86, end: 210.09 },
+    { label: "1bc", start: 210.34, end: 214.03 },
+    { label: "1bd", start: 214.28, end: 218.61 },
+    { label: "1be", start: 218.86, end: 220.93 },
+    { label: "1bf", start: 221.18, end: 223.31 },
+    { label: "1bg", start: 223.56, end: 225.95 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 225.95;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "24-B024-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='23-B023-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='23-B023-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;3) La méthode du&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='25-B025-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='25-B025-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B024-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">3)<span class="bd"> La méthode du calendrier</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="it">✓</span><span class="it"> </span><span class="it">Montrez le tableau&nbsp;!</span></div></div>
+<div class="m"><div id="T1c" class="txs">Cette méthode enseigne comment déterminer le temps de fertilité en comptant les jours du cycle mensuel de la femme et en les notant sur un calendrier.</div></div>
+<div class="m"><div id="T1d" class="txs">On commence le premier jour des règles en traçant un cercle :</div> <div id="T1e" class="txs"><span class="bd">o</span> sur le tableau&nbsp;!</div></div>
+<div class="m"><div id="T1f" class="txs">Après les règles,</div> <div id="T1g" class="txs">si on n’a pas de sensation on fait un trait :</div> <div id="T1h" class="txs"><span class="bd">–</span> sur le tableau</div></div>
+<div class="m"><div id="T1i" class="txs">Si l'humidité de la glaire commence on raye le jour jusqu’à ce que le vagin soit sec de nouveau.</div> <div id="T1j" class="txs">On compte deux jours après le pic en rayant :</div> <div id="T1k" class="txs"><span class="bd">X</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1l" class="txs">Si les jours infertiles commencent,</div> <div id="T1m" class="txs">on fait des traits <span class="bd">– –</span> jusqu’à ce que les règles commencent de nouveau.</div> <div id="T1n" class="txs">Au premier jour des règles on commence avec la nouvelle ligne du jour 1 en signant un <span class="bd">o</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">Règles d’or pour les premiers jours non fertiles</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1p" class="txs">1.</div> <div id="T1q" class="txs">Ne pas avoir de relations sexuelles pendant les règles.</div></div>
+<div class="m"><div id="T1r" class="txs">2.</div> <div id="T1s" class="txs">Les premiers jours non fertiles,</div> <div id="T1t" class="txs">avoir des relations le soir et non le matin.</div> <div id="T1u" class="txs">Après les relations sexuelles matinales la femme a une sensation d’humidité toute la journée et il lui est alors difficile de savoir quand elle commence à avoir de la glaire.</div></div>
+<div class="m"><div id="T1v" class="txs">3.</div> <div id="T1w" class="txs">Les premiers jours non fertiles,</div> <div id="T1x" class="txs">ne pas avoir des relations deux jours de suite.</div> <div id="T1y" class="txs">Sauter au moins un jour.</div> <div id="T1z" class="txs">Pourquoi&nbsp;?</div> <div id="T1aa" class="txs">parce que si une femme a des rapports chaque soir,</div> <div id="T1ab" class="txs">elle aura toujours une sensation d’humidité au niveau de la vulve et elle ne saura pas quand commence la sécrétion.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">Cycle long ou cycle court</span> :</div> <div id="T1ad" class="txs">Examinons le fait que le tableau d’une femme est différent chaque mois.</div> <div id="T1ae" class="txs">Certains de ses cycles peuvent être plus longs ou plus courts que les autres.</div> <div id="T1af" class="txs">Elle peut avoir un cycle de 32 jours suivi d’un autre de 24 jours et ainsi de suite.</div></div>
+<div class="m"><div id="T1ag" class="txs">Notez que dans le cycle court,</div> <div id="T1ah" class="txs">il n’y a pas de premiers jours non fertiles,</div> <div id="T1ai" class="txs">mais dans tous les cycles il y a des derniers jours non fertiles.</div> <div id="T1aj" class="txs">Que la femme ait un cycle court ou long,</div> <div id="T1ak" class="txs">cela n’a aucune importance.</div> <div id="T1al" class="txs">Elle devrait faire son tableau chaque mois et ainsi elle pourra connaître ses jours fertiles.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1am" class="txs"><span class="bd">Cycle régulier</span>&nbsp;:</div> <div id="T1an" class="txs">regardez l’image ci-dessus.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ao" class="txs"><span class="bd">4)</span><span class="bd"> L’allaitement prolongé</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ap" class="txs">Allaiter son enfant a un effet contraceptif.</div> <div id="T1aq" class="txs">C’est là une des méthodes naturelles de planning familial les plus répandues.</div> <div id="T1ar" class="txs">Mais l’allaitement est un moyen de contraception relativement sûr seulement :</div></div>
+<div class="m"><div id="T1as" class="txs">• Si vous nourrissez votre enfant uniquement au sein,</div> <div id="T1at" class="txs">le jour comme la nuit.</div></div>
+<div class="m"><div id="T1au" class="txs">• Si vous n’avez pas de saignement (aménorrhée).</div></div>
+<div class="m"><div id="T1av" class="txs">• Si l’accouchement remonte à moins de six mois.</div></div>
+<div class="m"><div id="T1aw" class="txs">Dès qu’une de ces trois conditions n’est pas remplie,</div> <div id="T1ax" class="txs">vous devez recourir à un autre moyen de contraception&nbsp;!</div></div>
+<div class="m"><div id="T1ay" class="txs">En conclusion,</div> <div id="T1az" class="txs">les méthodes naturelles,</div> <div id="T1ba" class="txs">surtout si elles sont combinées,</div> <div id="T1bb" class="txs">peuvent être efficaces pour favoriser l’espacement des naissances.</div> <div id="T1bc" class="txs">Cependant,</div> <div id="T1bd" class="txs">elles nécessitent une bonne capacité d’observation du corps,</div> <div id="T1be" class="txs">une grande discipline et une bonne communication dans le couple.</div></div>
+<div class="m"><div id="T1bf" class="txs">Parmi les méthodes naturelles,</div> <div id="T1bg" class="txs">on trouve aussi le coït interrompu, qui est peu sûre.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/20 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/20 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/20 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°20 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.73 },
+    { label: "1b", start: 1.98, end: 3.71 },
+    { label: "1c", start: 3.96, end: 4.93 },
+    { label: "1d", start: 5.18, end: 10.71 },
+    { label: "1e", start: 10.96, end: 11.89 },
+    { label: "1f", start: 12.14, end: 14.77 },
+    { label: "1g", start: 15.02, end: 16.79 },
+    { label: "1h", start: 17.04, end: 20.53 },
+    { label: "1i", start: 20.78, end: 23.63 },
+    { label: "1j", start: 23.88, end: 27.75 },
+    { label: "1k", start: 28, end: 29.47 },
+    { label: "1l", start: 29.72, end: 30.63 },
+    { label: "1m", start: 30.88, end: 35.67 },
+    { label: "1n", start: 35.92, end: 36.79 },
+    { label: "1o", start: 37.04, end: 39.77 },
+    { label: "1p", start: 40.02, end: 40.89 },
+    { label: "1q", start: 41.14, end: 44.07 },
+    { label: "1r", start: 44.32, end: 46.81 },
+    { label: "1s", start: 47.06, end: 50.89 },
+    { label: "1t", start: 51.14, end: 51.99 },
+    { label: "1u", start: 52.24, end: 54.43 },
+    { label: "1v", start: 54.68, end: 62.35 },
+    { label: "1w", start: 62.6, end: 63.97 },
+    { label: "1x", start: 64.22, end: 66.63 },
+    { label: "1y", start: 66.88, end: 70.67 },
+    { label: "1z", start: 70.92, end: 72.19 },
+    { label: "1aa", start: 72.44, end: 77.81 },
+    { label: "1ab", start: 78.06, end: 80.71 },
+    { label: "1ac", start: 80.96, end: 82.99 },
+    { label: "1ad", start: 83.24, end: 88.07 },
+    { label: "1ae", start: 88.32, end: 88.85 },
+    { label: "1af", start: 89.1, end: 93.31 },
+    { label: "1ag", start: 93.56, end: 95.59 },
+    { label: "1ah", start: 95.84, end: 99.73 },
+    { label: "1ai", start: 99.98, end: 103.55 },
+    { label: "1aj", start: 103.8, end: 106.47 },
+    { label: "1ak", start: 106.72, end: 110.51 },
+    { label: "1al", start: 110.76, end: 114.43 },
+    { label: "1am", start: 114.68, end: 118.63 },
+    { label: "1an", start: 118.88, end: 123.71 },
+    { label: "1ao", start: 123.96, end: 127.27 },
+    { label: "1ap", start: 127.52, end: 132.57 },
+    { label: "1aq", start: 132.82, end: 141.43 },
+    { label: "1ar", start: 141.68, end: 146.45 },
+    { label: "1as", start: 146.7, end: 150.01 },
+    { label: "1at", start: 150.26, end: 151.97 },
+    { label: "1au", start: 152.22, end: 156.23 },
+    { label: "1av", start: 156.48, end: 158.45 },
+    { label: "1aw", start: 158.7, end: 164.79 },
+    { label: "1ax", start: 165.04, end: 167.81 },
+    { label: "1ay", start: 168.06, end: 168.91 },
+    { label: "1az", start: 169.16, end: 170.11 },
+    { label: "1ba", start: 170.36, end: 171.93 },
+    { label: "1bb", start: 172.18, end: 172.99 },
+    { label: "1bc", start: 173.24, end: 174.29 },
+    { label: "1bd", start: 174.54, end: 176.33 },
+    { label: "1be", start: 176.58, end: 184.17 },
+    { label: "1bf", start: 184.42, end: 186.03 },
+    { label: "1bg", start: 186.28, end: 191.43 },
+    { label: "1bh", start: 191.68, end: 193.37 },
+    { label: "1bi", start: 193.62, end: 196.41 },
+    { label: "1bj", start: 196.66, end: 199.91 },
+    { label: "1bk", start: 200.16, end: 201.03 },
+    { label: "1bl", start: 201.28, end: 206.19 },
+    { label: "1bm", start: 206.44, end: 223.27 },
+    { label: "1bn", start: 223.52, end: 227.15 },
+    { label: "1bo", start: 227.4, end: 231.45 },
+    { label: "1bp", start: 231.7, end: 239.25 },
+    { label: "1bq", start: 239.5, end: 243.21 },
+    { label: "1br", start: 243.46, end: 246.09 },
+    { label: "1bs", start: 246.34, end: 250.27 },
+    { label: "1bt", start: 250.52, end: 251.71 },
+    { label: "1bu", start: 251.96, end: 256.87 },
+    { label: "1bv", start: 257.12, end: 264.11 },
+    { label: "1bw", start: 264.36, end: 269.63 },
+    { label: "1bx", start: 269.88, end: 272.71 },
+    { label: "1by", start: 272.96, end: 273.47 },
+    { label: "1bz", start: 273.72, end: 277.97 },
+    { label: "1ca", start: 278.22, end: 278.59 },
+    { label: "1cb", start: 278.84, end: 280.03 },
+    { label: "1cc", start: 280.28, end: 281.27 },
+    { label: "1cd", start: 281.52, end: 282.07 },
+    { label: "1ce", start: 282.32, end: 284.51 },
+    { label: "1cf", start: 284.76, end: 286.63 },
+    { label: "1cg", start: 286.88, end: 288.89 },
+    { label: "1ch", start: 289.14, end: 292.67 },
+    { label: "1ci", start: 292.92, end: 295.23 },
+    { label: "1cj", start: 295.48, end: 295.91 },
+    { label: "1ck", start: 296.16, end: 296.53 },
+    { label: "1cl", start: 296.78, end: 298.75 },
+    { label: "1cm", start: 299, end: 299.59 },
+    { label: "1cn", start: 299.84, end: 305.97 },
+    { label: "1co", start: 306.22, end: 308.57 },
+    { label: "1cp", start: 308.82, end: 315.75 },
+    { label: "1cq", start: 316, end: 317.87 },
+    { label: "1cr", start: 318.12, end: 326.65 },
+    { label: "1cs", start: 326.9, end: 329.85 },
+    { label: "1ct", start: 330.1, end: 331.61 },
+    { label: "1cu", start: 331.86, end: 335.75 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 335.75;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "21-B021-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='20-B020-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='20-B020-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°20&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='22-B022-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='22-B022-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B021-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°20 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Apprenez à épargner.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="it">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Fidéline</span><span class="it"> est fatiguée d’avoir toujours du souci pour payer l’écolage de ses enfants.</span></div> <div id="T1e" class="txs"><span class="it">Chaque année,</span></div> <div id="T1f" class="txs"><span class="it">quand arrive le mois de septembre,</span></div> <div id="T1g" class="txs"><span class="it">elle passe de très mauvaises nuits,</span></div> <div id="T1h" class="txs"><span class="it">se demandant comment elle va trouver l’argent pour payer l’école,</span></div> <div id="T1i" class="txs"><span class="it">la tenue et le matériel scolaire.</span></div> <div id="T1j" class="txs"><span class="it">Après avoir suivi un enseignement sur l’épargne,</span></div> <div id="T1k" class="txs"><span class="it">elle parle avec son mari.</span></div> <div id="T1l" class="txs"><span class="it">Ensemble,</span></div><div id="T1m" class="txs"><span class="it"> </span><span class="it">ils</span><span class="it"> </span><span class="it">décident</span><span class="it"> </span><span class="it">de</span><span class="it"> </span><span class="it">cacher</span><span class="it"> </span><span class="it">dans</span><span class="it"> </span><span class="it">leur</span><span class="it"> </span><span class="it">maison</span><span class="it"> </span><span class="it">un</span><span class="it"> </span><span class="it">bocal.</span></div><div id="T1n" class="txs"><span class="it"> </span><span class="it">Chaque semaine,</span></div> <div id="T1o" class="txs"><span class="it">le mari y dépose 2’000 CFA.</span></div> <div id="T1p" class="txs"><span class="it">Chaque jour,</span></div><div id="T1q" class="txs"><span class="it">Fidéline</span><span class="it"> y met 100 CFA.</span></div> <div id="T1r" class="txs"><span class="it">Ils s’engagent à ne pas toucher à cet argent,</span></div> <div id="T1s" class="txs"><span class="it">même quand viendra la période des fêtes avec toutes ses dépenses.</span></div> <div id="T1t" class="txs"><span class="it">Toute l’année,</span></div> <div id="T1u" class="txs"><span class="it">ils réussissent à épargner.</span></div> <div id="T1v" class="txs"><span class="it">Il n’y a que quelques semaines où ils ne mettent pas de l’argent de côté car ils doivent payer les frais médicaux pour leur fille.</span></div> <div id="T1w" class="txs"><span class="it">Au bout d’une année,</span></div> <div id="T1x" class="txs"><span class="it">quand le moment de payer l’école arrive,</span></div> <div id="T1y" class="txs"><span class="it">ils ont presque deux million d’argent disponible.</span></div> <div id="T1z" class="txs"><span class="it">Pour la première fois,</span></div><div id="T1aa" class="txs"><span class="it">Fidéline</span><span class="it"> n’a pas de peine à s’endormir en pensant à l’écolage de ses enfants&nbsp;!</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ab" class="txs">Que pensez-vous de l’histoire de Fidéline?</div> <div id="T1ac" class="txs">Est-ce qu’elle vous inspire?</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ad" class="txs"><span class="bdit">Epargner nous oblige à penser à demain et pas seulement à aujourd’hui.</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ae" class="txs">Epargner,</div> <div id="T1af" class="txs">c’est renoncer à dépenser aujourd’hui et garder cet argent pour demain.</div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="ul">Verset </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1ah" class="txs"><span class="it">«&nbsp;Une richesse gagnée en peu de temps diminuera.</span></div> <div id="T1ai" class="txs"><span class="it">Mais une richesse gagnée petit à petit augmentera.</span></div><div id="T1aj" class="txs"><span class="it">&nbsp;» </span>(Proverbes 13.11)</div></div>
+<div class="m"><div id="T1ak" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1al" class="txs">Avez-vous déjà épargné pour un projet particulier?</div> <div id="T1am" class="txs">Est-ce que cela a été une bonne ou mauvaise expérience?</div></div>
+<div class="p_Corpsdetexte"><div id="T1an" class="txs">Pourquoi apprendre à épargner peut nous aider à mieux vivre?</div></div>
+<div class="p_Corpsdetexte"><div id="T1ao" class="txs">Quels objectifs peut-on avoir pour notre épargne?</div></div>
+<div class="p_Corpsdetexte"><div id="T1ap" class="txs">Pourquoi certaines personnes commencent à épargner puis se découragent?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1aq" class="txs">Epargner est souvent difficile car c’est renoncer à une dépense et on est souvent tenté d’utiliser cet argent pour autre chose.</div> <div id="T1ar" class="txs">Mais épargner peut nous sortir de situations très difficiles!</div></div>
+<div class="p_Corpsdetexte"><div id="T1as" class="txs">Nous pouvons avoir différents objectifs pour épargner:</div></div>
+<div class="m"><div id="T1at" class="txs"><span class="bd">R</span><span class="bd">épondre aux urgences</span>.</div> <div id="T1au" class="txs">Certaines dépenses sont imprévues mais ne peuvent pas attendre,</div> <div id="T1av" class="txs">comme les urgences médicales.</div> <div id="T1aw" class="txs">Epargner pour le jour où il y a une urgence médicale est une grande aide pour les familles.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ax" class="txs"><span class="bd">F</span><span class="bd">aire face aux mois difficiles</span>.</div> <div id="T1ay" class="txs">Certains mois,</div> <div id="T1az" class="txs">nous gagnons plus,</div> <div id="T1ba" class="txs">d’autres mois nous gagnons moins.</div> <div id="T1bb" class="txs">Certains mois,</div> <div id="T1bc" class="txs">nous dépensons plus,</div> <div id="T1bd" class="txs">d’autres mois nous dépensons moins.</div> <div id="T1be" class="txs">Epargner va nous aider dans les mois difficiles où nous avons beaucoup de dépenses ou les mois où nous gagnons moins.</div> <div id="T1bf" class="txs">Quand les récoltes sont bonnes,</div> <div id="T1bg" class="txs">mettre une partie de côté va nous aider le jour où la nourriture vient à manquer.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bh" class="txs"><span class="bd">R</span><span class="bd">éaliser</span><span class="bd"> </span><span class="bd">un</span><span class="bd"> </span><span class="bd">projet</span>.</div> <div id="T1bi" class="txs">Plutôt que de s’endetter en faisant un prêt,</div> <div id="T1bj" class="txs">il est plus sage d’épargner pour nos projets.</div> <div id="T1bk" class="txs">Avec le temps,</div> <div id="T1bl" class="txs">l’épargne nous aidera à avoir ce qui aujourd’hui n’est pas possible.</div> <div id="T1bm" class="txs">Nous pouvons épargner pour un projet unique (par exemple acheter une moto ou un panneau solaire) ou pour une dépense qui revient régulièrement (par exemple les dépenses pour une fête ou pour l’écolage des enfants).</div></div>
+<div class="p_Corpsdetexte"><div id="T1bn" class="txs">Beaucoup de personnes n’arrivent pas à épargner parce que:</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bo" class="txs">elles pensent qu’épargner n’est pas bien (manque de générosité ou de foi).</div></div>
+<div class="m"><div id="T1bp" class="txs">elles ne réalisent pas que mettre régulièrement de côté une petite somme finit par représenter une grande somme.</div></div>
+<div class="m"><div id="T1bq" class="txs">elles n’ont pas un vrai objectif et se découragent.</div></div>
+<div class="m"><div id="T1br" class="txs">elles n’ont pas bien protégé leur argent.</div></div>
+<div class="m"><div id="T1bs" class="txs">elles finissent par utiliser leur argent pour autre chose.</div></div>
+<div class="m"><div id="T1bt" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1bu" class="txs">L’épargne n’est pas manque de générosité mais signe de sagesse.</div> <div id="T1bv" class="txs">Dieu peut vraiment nous aider à sortir de situations difficiles si nous avons appris à épargner.</div></div>
+<div class="p_Corpsdetexte"><div id="T1bw" class="txs">Il faut s’assurer que l’argent épargné est gardé ailleurs que l’argent du foyer et qu’il ne va pas être utilisé pour des besoins secondaires du quotidien.</div></div>
+<div class="p_Corpsdetexte"><div id="T1bx" class="txs">Participer à un groupement d’épargne avec des personnes de confiance peut nous aider à épargner.</div> <div id="T1by" class="txs">Le principe est simple:</div> <div id="T1bz" class="txs">chaque membre du groupe amène chaque semaine un montant qui sera gardé en sécurité dans un endroit pour la durée décidée par le groupe.</div> <div id="T1ca" class="txs">Mais attention,</div> <div id="T1cb" class="txs">beaucoup de groupes d’épargne connaissent des échecs.</div> <div id="T1cc" class="txs">Pour qu’un groupe fonctionne bien,</div> <div id="T1cd" class="txs">il est indispensable qu’il y ait :</div></div>
+<div class="p_Corpsdetexte"><div id="T1ce" class="txs">- une entière confiance entre les membres,</div> <div id="T1cf" class="txs">la transparence dans l'utilisation de l’argent au sein du groupe,</div></div>
+<div class="m"><div id="T1cg" class="txs">l’accord des membres sur les règles du groupe,</div></div>
+<div class="m"><div id="T1ch" class="txs">la discipline de chacun pour respecter ses engagements envers le groupe,</div></div>
+<div class="m"><div id="T1ci" class="txs">des bons responsables qui savent servir et montrer l’exemple.</div></div>
+<div class="m"><div id="T1cj" class="txs"><span class="ul">Exercice à</span><span class="ul"> </span><span class="ul">faire:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ck" class="txs">Réfléchissez pour quels objectifs vous voulez épargner.</div> <div id="T1cl" class="txs">Qu’est-ce qui soulagerait vraiment votre famille?</div></div>
+<div class="m"><div id="T1cm" class="txs">Répondre aux urgences:</div></div>
+<div class="p_Corpsdetexte"><div id="T1cn" class="txs">Quel montant faudrait-il avoir en épargne pour répondre aux urgences médicales (par exemple le prix de la consultation et de quelques produits)?</div></div>
+<div class="m"><div id="T1co" class="txs">Faire face aux mois difficiles:</div></div>
+<div class="p_Corpsdetexte"><div id="T1cp" class="txs">Quels mois sont plus difficiles pour ma famille (car il y a moins de nourriture ou plus de dépenses)?</div></div>
+<div class="m"><div id="T1cq" class="txs">Réaliser un projet:</div></div>
+<div class="p_Corpsdetexte"><div id="T1cr" class="txs">Y a-t-il un projet générateur de revenus qui soulagerait votre famille et pour lequel vous pouvez commencer à épargner?</div></div>
+<div class="p_Corpsdetexte"><div id="T1cs" class="txs">Allez-vous commencer maintenant à épargner?</div> <div id="T1ct" class="txs">Pour quel objectif?</div> <div id="T1cu" class="txs">Seul ou dans un groupement?</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/029_Conseil_n20.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

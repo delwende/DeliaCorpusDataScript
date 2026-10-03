@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>161 Pʋ-toap yũud a bĩnd-k 5</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "5a", start: 79.49, end: 84.9 },
+    { label: "5b", start: 85.15, end: 87.74 },
+    { label: "5c", start: 87.99, end: 91.81 },
+    { label: "5d", start: 92.06, end: 103.74 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 79.49;
+var stopTime  = 103.74;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-004.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;161 Pʋ-toap yũud a bĩnd-k&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;5&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-006.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 161 a 200-image5.jpg" />
+
+<div class="m"><div id="T5a" class="txs"><span class="bd">165 </span><span class="bd">Kãnkã</span><span class="bd">-</span><span class="bd">wɩɩsd</span><span class="bd">-b </span><span class="bd">yẽsdame</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> b nan ka </span><span class="bd">tʋk</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T5b" class="txs"><span class="bdit">(Avant de charger des fagots,</span></div> <div id="T5c" class="txs"><span class="bdit">il faut au préalable tomber d’accord sur comment s’aider à le faire).</span></div></div>
+<div class="m"><div id="T5d" class="txs"><span class="bd">Kãnkã</span><span class="bd">-</span><span class="bd">wɩɩsd</span><span class="bd">-b </span><span class="bd">yẽsdame</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> b nan ka </span><span class="bd">tʋk</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 161 a 200 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

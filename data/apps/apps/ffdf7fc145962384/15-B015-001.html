@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF9800">
+<title>29 Cɛkɔrɔba ni a deen 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.39 },
+    { label: "1b", start: 1.64, end: 2.91 },
+    { label: "1c", start: 3.16, end: 6.95 },
+    { label: "1d", start: 7.2, end: 9.63 },
+    { label: "1e", start: 9.88, end: 11.25 },
+    { label: "1f", start: 11.5, end: 14.51 },
+    { label: "1g", start: 14.76, end: 18.27 },
+    { label: "1h", start: 18.52, end: 19.45 },
+    { label: "1i", start: 19.7, end: 21.03 },
+    { label: "1j", start: 21.28, end: 22.65 },
+    { label: "1k", start: 22.9, end: 24.27 },
+    { label: "1l", start: 24.52, end: 25.73 },
+    { label: "1m", start: 25.98, end: 27.17 },
+    { label: "1n", start: 27.42, end: 30.63 },
+    { label: "1o", start: 30.88, end: 31.93 },
+    { label: "1p", start: 32.18, end: 34.59 },
+    { label: "1q", start: 34.84, end: 38.11 },
+    { label: "1r", start: 38.36, end: 41.83 },
+    { label: "1s", start: 42.08, end: 45.13 },
+    { label: "1t", start: 45.38, end: 46.71 },
+    { label: "1u", start: 46.96, end: 47.61 },
+    { label: "1v", start: 47.86, end: 48.81 },
+    { label: "1w", start: 49.06, end: 50.69 },
+    { label: "1x", start: 50.94, end: 52.47 },
+    { label: "1y", start: 52.72, end: 54.13 },
+    { label: "1z", start: 54.38, end: 55.41 },
+    { label: "1aa", start: 55.66, end: 57.49 },
+    { label: "1ab", start: 57.74, end: 63.33 },
+    { label: "1ac", start: 63.58, end: 68.11 },
+    { label: "1ad", start: 68.36, end: 70.67 },
+    { label: "1ae", start: 70.92, end: 73.65 },
+    { label: "1af", start: 73.9, end: 75.41 },
+    { label: "1ag", start: 75.66, end: 77.21 },
+    { label: "1ah", start: 77.46, end: 82.11 },
+    { label: "1ai", start: 82.36, end: 83.05 },
+    { label: "1aj", start: 83.3, end: 87.69 },
+    { label: "1ak", start: 87.94, end: 89.09 },
+    { label: "1al", start: 89.34, end: 90.63 },
+    { label: "1am", start: 90.88, end: 92.23 },
+    { label: "1an", start: 92.48, end: 93.51 },
+    { label: "1ao", start: 93.76, end: 94.91 },
+    { label: "1ap", start: 95.16, end: 97.67 },
+    { label: "1aq", start: 97.92, end: 101.03 },
+    { label: "1ar", start: 101.28, end: 103.57 },
+    { label: "1as", start: 103.82, end: 106.73 },
+    { label: "1at", start: 106.98, end: 108.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 108.39;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "15-B015-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;29 Cɛkɔrɔba ni a deen&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B015-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Nziirin nziirin</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">29 </span><span class="bd">C</span><span class="bd">ɛ</span><span class="bd">k</span><span class="bd">ɔ</span><span class="bd">r</span><span class="bd">ɔ</span><span class="bd">b</span><span class="bd">a</span><span class="bd"> n</span><span class="bd">i</span><span class="bd"> a d</span><span class="bd">e</span><span class="bd">en</span>.</div></div>
+<div class="m"><div id="T1c" class="txs">N ye a ta cɛkɔrɔba dɔ le kan ani a dencɛ.</div> <div id="T1d" class="txs">Cɛkɔrɔba nin ye nafolo di a deen ma,</div> <div id="T1e" class="txs">ko a ka taga jago kɛ.</div></div>
+<div class="m"><div id="T1f" class="txs">Dencɛ bɔra ko a be taga jagokɛyɔrɔ la,</div> <div id="T1g" class="txs">a tagara sɔrɔ kungowulunin lanin be duguma,</div> <div id="T1h" class="txs">kɔngɔ be a ra,</div> <div id="T1i" class="txs">a sɛgɛnninba lo,</div> <div id="T1j" class="txs">kɔngɔ be ɲini ka a faga,</div> <div id="T1k" class="txs">a te se ka dumuni sɔrɔ,</div> <div id="T1l" class="txs">foo ka a nɛɛn bɔ.</div></div>
+<div class="m"><div id="T1m" class="txs">A nana ye waraba nana,</div> <div id="T1n" class="txs">ka na dagwɛ bugɔ ka a bin,</div> <div id="T1o" class="txs">ka a kɔnɔ sɔgɔ,</div> <div id="T1p" class="txs">ka a biɲɛ ni a sɔɔn dumu ka i fa,</div> <div id="T1q" class="txs">ka tɛmɛ ka taga ka dagwɛ tɔɔ to duguma.</div></div>
+<div class="m"><div id="T1r" class="txs">Kungowulunin fana ye i fɔgɔfɔgɔ foo ka na se o ma.</div> <div id="T1s" class="txs">O fana ye sogo dumu foo a fara.</div> <div id="T1t" class="txs">A ye fanga sɔrɔ,</div> <div id="T1u" class="txs">a wilira,</div> <div id="T1v" class="txs">a tagara.</div> <div id="T1w" class="txs">Deen nin be ka o filɛ.</div></div>
+<div class="m"><div id="T1x" class="txs">Deen seginna ni wari ye,</div> <div id="T1y" class="txs">ka na a faa nɔɔn fɛ.</div></div>
+<div class="m"><div id="T1z" class="txs">A ko baba,</div> <div id="T1aa" class="txs">n tena taga jago kɛ.</div> <div id="T1ab" class="txs">A ko n ye a lɔn danfɛn bɛɛ ka daa hirimɛ be Ala le bolo.</div> <div id="T1ac" class="txs">A ko n ye kungowulunin ye kɔngɔ be a la,</div> <div id="T1ad" class="txs">see te a ye ka sogo mina,</div> <div id="T1ae" class="txs">nga n nana ye waraba ye sogo faga,</div> <div id="T1af" class="txs">ka a dumu ka i fa,</div> <div id="T1ag" class="txs">ka taga&nbsp;ka a tɔɔ to yen,</div> <div id="T1ah" class="txs">kungowulunin dɛmɛdɛmɛna ka na o dumu ka fanga sɔrɔ ;</div> <div id="T1ai" class="txs">o ra,</div> <div id="T1aj" class="txs">n ye a lɔn ko Ala le be bɛɛ daa hirimɛ di i ma.</div> <div id="T1ak" class="txs">A ko o kɔsɔn,</div> <div id="T1al" class="txs">n tena taga jago kɛ.</div></div>
+<div class="m"><div id="T1am" class="txs">Faa fana ko a wo,</div> <div id="T1an" class="txs">a ko n deen,</div> <div id="T1ao" class="txs">taga jago kɛ,</div> <div id="T1ap" class="txs">a ko n be a fɛ i ka kɛ waraba le ye,</div> <div id="T1aq" class="txs">i ka sogo dumu ka a tɔɔ di kungowulunin ma,</div> <div id="T1ar" class="txs">n te a fɛ e ka kɛ kungowulunin ye,</div> <div id="T1as" class="txs">warabaw ka sogo dumu ka a tɔɔ di i ma&nbsp;;</div> <div id="T1at" class="txs">taga i ka baara kɛ.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/dyu/dyu-audio/ora/29 cont dioull vol2.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

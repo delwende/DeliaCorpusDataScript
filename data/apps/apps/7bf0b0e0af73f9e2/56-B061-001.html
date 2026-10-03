@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Aborder les problèmes 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.13 },
+    { label: "1b", start: 2.38, end: 6.83 },
+    { label: "1c", start: 7.08, end: 10.41 },
+    { label: "1d", start: 10.66, end: 18.25 },
+    { label: "1e", start: 18.5, end: 20.39 },
+    { label: "1f", start: 20.64, end: 23.19 },
+    { label: "1g", start: 23.44, end: 24.63 },
+    { label: "1h", start: 24.88, end: 26.23 },
+    { label: "1i", start: 26.48, end: 29.63 },
+    { label: "1j", start: 29.88, end: 37.01 },
+    { label: "1k", start: 37.26, end: 38.47 },
+    { label: "1l", start: 38.72, end: 40.61 },
+    { label: "1m", start: 40.86, end: 42.11 },
+    { label: "1n", start: 42.36, end: 42.91 },
+    { label: "1o", start: 43.16, end: 46.63 },
+    { label: "1p", start: 46.88, end: 48.23 },
+    { label: "1q", start: 48.48, end: 51.03 },
+    { label: "1r", start: 51.28, end: 55.23 },
+    { label: "1s", start: 55.48, end: 57.79 },
+    { label: "1t", start: 58.04, end: 59.37 },
+    { label: "1u", start: 59.62, end: 63.27 },
+    { label: "1v", start: 63.52, end: 66.97 },
+    { label: "1w", start: 67.22, end: 69.35 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 69.35;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "56-B061-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='55-B051-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='55-B051-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Aborder les problèmes&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='57-B052-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='57-B052-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B061-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Aborder les problèmes</span></div></div>
+<div class="m"><div id="T1b" class="txs">Faire bonne figure et <span class="ul">éviter la honte a une grande valeur dans beaucoup de cultures</span>,</div> <div id="T1c" class="txs">car <span class="ul">cela exprime le respect de l'autre et de soi-même</span>.</div> <div id="T1d" class="txs">C'est pourquoi des gens issus de cultures sensibles à l’honneur <span class="bd">préfèrent ne pas parler des problèmes</span> pour que l’autre ne perde pas la face.</div> <div id="T1e" class="txs">Mais dans la vie quotidienne,</div> <div id="T1f" class="txs">les problèmes se résolvent rarement tout seuls.</div></div>
+<div class="m"><div id="T1g" class="txs">Par exemple,</div> <div id="T1h" class="txs">dans les immeubles locatifs,</div> <div id="T1i" class="txs">la buanderie commune est un lieu qui peut tuer l’harmonie.</div> <div id="T1j" class="txs">Une Asiatique nous a raconté qu’une voisine africaine lui faisait des reproches sur l’état de la buanderie après usage.</div> <div id="T1k" class="txs">Malheureusement,</div> <div id="T1l" class="txs">l'Africaine s'énerva beaucoup.</div> <div id="T1m" class="txs">Par la suite,</div> <div id="T1n" class="txs">elle en eut honte,</div> <div id="T1o" class="txs">si bien qu’elle n’osait plus adresser la parole à l’Asiatique.</div> <div id="T1p" class="txs">Depuis ce jour,</div> <div id="T1q" class="txs">le contact passe par le mari asiatique.</div></div>
+<div class="m"><div id="T1r" class="txs">Les deux voisines sont issues de cultures qui recherchent le respect,</div> <div id="T1s" class="txs">mais leurs cultures sont très différentes.</div></div>
+<div class="m"><div id="T1t" class="txs">Pour ces deux femmes,</div> <div id="T1u" class="txs">il était difficile de faire le pas et d’aborder le conflit de front.</div> <div id="T1v" class="txs">Le vrai problème n'était plus la propreté de la buanderie,</div> <div id="T1w" class="txs">mais le risque de perdre la face.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/28 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/28 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/28 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

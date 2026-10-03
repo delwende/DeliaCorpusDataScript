@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#AD4428">
+<title>151 On ne prête qu'aux 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 2.95, end: 7.14 },
+    { label: "1b", start: 7.39, end: 20.11 },
+    { label: "1c", start: 20.36, end: 27.24 },
+    { label: "1d", start: 27.49, end: 35.86 },
+    { label: "1e", start: 36.11, end: 42.37 },
+    { label: "1f", start: 42.62, end: 52.07 },
+    { label: "1g", start: 52.32, end: 58.03 },
+    { label: "1h", start: 58.28, end: 64.42 },
+    { label: "1i", start: 64.67, end: 70.76 },
+    { label: "1j", start: 71.01, end: 76.61 },
+    { label: "1k", start: 76.86, end: 83.04 },
+    { label: "1l", start: 83.29, end: 92.05 },
+    { label: "1m", start: 92.3, end: 98.51 },
+    { label: "1n", start: 98.76, end: 104.14 },
+    { label: "1o", start: 104.39, end: 112.06 },
+    { label: "1p", start: 112.31, end: 119.51 },
+    { label: "1q", start: 119.76, end: 128.75 },
+    { label: "1r", start: 129, end: 134 },
+    { label: "1s", start: 134.25, end: 141.06 },
+    { label: "1t", start: 141.31, end: 148.04 },
+    { label: "1u", start: 148.29, end: 155.09 },
+    { label: "1v", start: 155.34, end: 163.04 },
+    { label: "1w", start: 163.29, end: 170.31 },
+    { label: "1x", start: 170.56, end: 178.17 },
+    { label: "1y", start: 178.42, end: 184.58 },
+    { label: "1z", start: 184.83, end: 190.56 },
+    { label: "1aa", start: 190.81, end: 197.69 },
+    { label: "1ab", start: 197.94, end: 205.99 },
+    { label: "1ac", start: 206.24, end: 212.1 },
+    { label: "1ad", start: 212.35, end: 222.35 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 2.95;
+var stopTime  = 222.35;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;151 On ne prête qu'aux&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">151 </span><span class="bd">On ne prête qu'aux riches</span>,</div></div>
+<div class="m"><div id="T1b" class="txs">on ne rend des services qu'à ceux qui sont en état de les récompenser; on attribue volontiers certains actes à ceux qui sont habitués à les faire.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1c" class="txs"><span class="c_CharacterStyle1"><span class="bd">152 </span></span><span class="c_CharacterStyle1"><span class="bd">On ne tâte pas la poule qu'on reçoit en cadeau</span></span><span class="c_CharacterStyle1"><span class="bd">,</span></span></div></div>
+<div class="p_Style1"><div id="T1d" class="txs"><span class="c_CharacterStyle1"><span class="bd">= </span></span><span class="c_CharacterStyle1">À cheval donné, on ne regarde pas les </span><span class="c_CharacterStyle1">dents (pour connaître son âge).</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1e" class="txs"><span class="c_CharacterStyle1"><span class="bd">153 </span></span><span class="c_CharacterStyle1"><span class="bd">On ne vend pas le voleur pour acheter le sorcier</span></span><span class="c_CharacterStyle1"><span class="bd">,</span></span></div></div>
+<div class="p_Style1"><div id="T1f" class="txs"><span class="c_CharacterStyle1">= de deux maux, préfère le moindre (le </span><span class="c_CharacterStyle1">sorcier est plus redoutable que le voleur).</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="c_CharacterStyle1"><span class="bd">154 </span></span><span class="bd">On reconnaît l'arbre à ses fruits</span>,</div></div>
+<div class="m"><div id="T1h" class="txs">c'est à ses actes qu’on connaît la valeur d'un homme.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">155 </span><span class="bd">Paris ne s'est pas fait en un jour</span>,</div></div>
+<div class="m"><div id="T1j" class="txs">rien ne peut se faire sans le temps voulu.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">156 </span><span class="bd">Pas de nouvelles, bonnes nouvelles</span>,</div></div>
+<div class="m"><div id="T1l" class="txs">sans nouvelles de quelqu'un, on peut conjecturer qu'il ne lui est rien arrivé de fâcheux.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">157 </span><span class="bd">Pauvreté n'est pas vice</span>,</div></div>
+<div class="m"><div id="T1n" class="txs">il n'y a pas de honte à être pauvre.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">158 </span><span class="bd">Péché avoué est à demi pardonné</span>, </div></div>
+<div class="m"><div id="T1p" class="txs">celui qui avoue son péché obtient plus aisément l’indulgence.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style2"><div id="T1q" class="txs"><span class="bd">159 </span><span class="bd">Pendant la lune de miel, les ignames sont toujours douces </span></div></div>
+<div class="p_Style2"><div id="T1r" class="txs">= tout nouveau, tout beau.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style2"><div id="T1s" class="txs"><span class="bd">160 </span><span class="bd">Petit à petit, l'oiseau fait son nid,</span></div></div>
+<div class="p_Style2"><div id="T1t" class="txs">à force de persévérance on vient à bout d'une entreprise.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">161 </span><span class="bd">Petite pluie abat grand vent</span>,</div></div>
+<div class="m"><div id="T1v" class="txs">souvent, peu de chose suffit pour calmer une grande colère.</div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">162 </span><span class="bd">Pierre qui roule n'amasse pas mousse</span>,</div></div>
+<div class="m"><div id="T1x" class="txs">on ne s'enrichit pas en changeant souvent d'état, de pays.</div></div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">163 </span><span class="bd">Plaie d'argent n'est pas mortelle</span>,</div></div>
+<div class="m"><div id="T1z" class="txs">les pertes d'argent peuvent toujours se réparer.</div></div>
+<div class="m"><div id="T1aa" class="txs"><span class="bd">164 </span><span class="bd">Plus on est de fous, plus on rit</span>,</div></div>
+<div class="m"><div id="T1ab" class="txs">la gaieté devient plus vive avec le nombre des joyeux compagnons.</div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">165 </span><span class="bd">Prudence est mère de sûreté</span>,</div></div>
+<div class="m"><div id="T1ad" class="txs">c'est en étant prudent qu'on évite tout danger.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/11 prov fr avec mus.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

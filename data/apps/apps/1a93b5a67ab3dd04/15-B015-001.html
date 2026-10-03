@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5E2900">
+<title>landa donkili. . 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.15 },
+    { label: "1b", start: 3.4, end: 13.4 },
+    { label: "1c", start: 3.4, end: 5.55 },
+    { label: "1d", start: 5.8, end: 6.47 },
+    { label: "1e", start: 6.72, end: 9.05 },
+    { label: "1f", start: 9.3, end: 11.27 },
+    { label: "1g", start: 11.52, end: 13.45 },
+    { label: "1h", start: 13.7, end: 16.55 },
+    { label: "1i", start: 16.8, end: 17.21 },
+    { label: "1j", start: 17.46, end: 32.19 },
+    { label: "1k", start: 32.44, end: 34.19 },
+    { label: "1l", start: 34.44, end: 38.93 },
+    { label: "1m", start: 39.18, end: 41.79 },
+    { label: "1n", start: 42.04, end: 46.61 },
+    { label: "1o", start: 46.86, end: 49.17 },
+    { label: "1p", start: 49.42, end: 51.85 },
+    { label: "1q", start: 52.1, end: 55.41 },
+    { label: "1r", start: 55.66, end: 58.03 },
+    { label: "1s", start: 58.28, end: 60.07 },
+    { label: "1t", start: 60.32, end: 62.77 },
+    { label: "1u", start: 63.02, end: 63.35 },
+    { label: "1v", start: 63.6, end: 64.03 },
+    { label: "1w", start: 64.28, end: 65.83 },
+    { label: "1x", start: 66.08, end: 70.89 },
+    { label: "1y", start: 71.14, end: 72.31 },
+    { label: "1z", start: 72.56, end: 76.87 },
+    { label: "1aa", start: 77.12, end: 80.39 },
+    { label: "1ab", start: 80.64, end: 83.17 },
+    { label: "1ac", start: 83.42, end: 86.05 },
+    { label: "1ad", start: 86.3, end: 91.65 },
+    { label: "1ae", start: 91.9, end: 94.83 },
+    { label: "1af", start: 95.08, end: 101.75 },
+    { label: "1ag", start: 102, end: 102.55 },
+    { label: "1ah", start: 102.8, end: 104.79 },
+    { label: "1ai", start: 105.04, end: 106.53 },
+    { label: "1aj", start: 106.78, end: 113.27 },
+    { label: "1ak", start: 113.52, end: 115.55 },
+    { label: "1al", start: 115.8, end: 117.83 },
+    { label: "1am", start: 118.08, end: 122.67 },
+    { label: "1an", start: 122.92, end: 128.53 },
+    { label: "1ao", start: 128.78, end: 139.47 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 139.47;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "15-B015-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;landa donkili. .&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B015-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="it">landa donkili</span>.</div> <div id="T1b" class="txs">. .</div></div>
+<div class="m"><div id="T1c" class="txs">Nsiirin,</div> <div id="T1d" class="txs">nsiirin</div></div>
+<div class="m"><div id="T1e" class="txs">N'y'a bila cɛkɔrɔba kelen dɔ kan.</div></div>
+<div class="m"><div id="T1f" class="txs">Cɛkɔrɔba nin tun ye fiyɛntɔ ye,</div> <div id="T1g" class="txs">a tun ye kayabatigi ye,</div> <div id="T1h" class="txs">a bɛlɛkili tun ka bon kosɔbɛ.</div></div>
+<div class="m"><div id="T1i" class="txs">Loon dɔ,</div> <div id="T1j" class="txs">u y'a minɛ k’a sigi kɛnɛma i n'a fɔ loon taw tilegwantuma na sɛgɛ (Kɔnɔ min bi sisɛfen minɛ) o ye basa gwɛn ka na don cɛkɔrɔba ka bɛlɛkiliba jukɔrɔ la dogo yen.</div></div>
+<div class="m"><div id="T1k" class="txs">Sɛgɛ ko cɛkɔrɔba ma :</div> <div id="T1l" class="txs">basa labɔ ka di n ma n b'i ɲadenw yɛlɛ,</div> <div id="T1m" class="txs">basa fana k’a ma,</div> <div id="T1n" class="txs">n'i ye n to yen n b'i bɛlɛkili minnin k'a dɔgɔya.</div></div>
+<div class="m"><div id="T1o" class="txs">Cɛkɔrɔba hokili ɲamina,</div> <div id="T1p" class="txs">a ma lɔn min kɛ,</div> <div id="T1q" class="txs">a y'a ka musow n'a deenw weele u ka nu denbɛ.</div> <div id="T1r" class="txs">Sosoliba wulil'a cɛmo,</div> <div id="T1s" class="txs">dɔɔw sɔnna sɛgɛ taa ma,</div> <div id="T1t" class="txs">dɔɔw fana bi basa ko.</div> <div id="T1u" class="txs">O b'o la,</div> <div id="T1v" class="txs">o b'a la,</div> <div id="T1w" class="txs">u te sera ka bɛn kelen ma.</div> <div id="T1x" class="txs">Musofitini ka sinlaban k'a bamuso ma :</div> <div id="T1y" class="txs">nna a fɔ n baba ye,</div> <div id="T1z" class="txs">k'a ka sɛgɛ deli a ka sisɛ minɛ basa nɔnno.</div> <div id="T1aa" class="txs">o ra n baba ka bana fila bɛɛ bi ban.</div></div>
+<div class="m"><div id="T1ab" class="txs">Musofitini y’o lase cɛkɔrɔba ma,</div> <div id="T1ac" class="txs">cɛkɔrɔba y’o fɔ sɛgɛ ye,</div> <div id="T1ad" class="txs">o fana diyara sɛgɛ ye bari a tun ma deli ka sisɛ dumu ka ye.</div> <div id="T1ae" class="txs">Sɛgɛ sɔnna u ta ma.</div> <div id="T1af" class="txs">A ye tɛmɛtɔ saba kɛ ka cɛkɔrɔba ɲɛɛ gosi n’a ganmanw ye,</div> <div id="T1ag" class="txs">a naaninan ;</div> <div id="T1ah" class="txs">a y'a ka sisɛ ta ka tɛmɛ.</div> <div id="T1ai" class="txs">Cɛkɔrɔba ɲɛɛnw yɛlɛla,</div> <div id="T1aj" class="txs">basa fana y’a seko kɛ bɛlɛkiliba kera fitini ye cɛkɔrɔba ka banaw bana.</div></div>
+<div class="m"><div id="T1ak" class="txs">Sɛgɛ taara ye sisɛsogo ka di,</div> <div id="T1al" class="txs">a ma dabila tun foo ka se bii ma.</div></div>
+<div class="m"><div id="T1am" class="txs">O le y'a tɔ fana densinlanan ko ka gwɛlɛ a bangibaw ma,</div> <div id="T1an" class="txs">musofitini fana ko ti bɔ cɛɛ kɔnɔ bari a ye deen hakiliman wolo.</div></div>
+<div class="m"><div id="T1ao" class="txs">N'y'a sɔrɔ yɔrɔ min n y'a bila yen.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src=" https://media.ipsapps.org/dyu/dyu-audio/ora/Conte dioula 8.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

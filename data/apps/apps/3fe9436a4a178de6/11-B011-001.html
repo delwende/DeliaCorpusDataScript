@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>11 LE TEST DE PATERNITÉ 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.93 },
+    { label: "1b", start: 2.18, end: 14.51 },
+    { label: "1c", start: 14.76, end: 25.11 },
+    { label: "1d", start: 25.36, end: 30.71 },
+    { label: "1e", start: 30.96, end: 37.13 },
+    { label: "1f", start: 37.38, end: 45.01 },
+    { label: "1g", start: 45.26, end: 59.93 },
+    { label: "1h", start: 60.18, end: 78.03 },
+    { label: "1i", start: 78.28, end: 86.55 },
+    { label: "1j", start: 86.8, end: 93.33 },
+    { label: "1k", start: 93.58, end: 99.59 },
+    { label: "1l", start: 99.84, end: 114.33 },
+    { label: "1m", start: 114.58, end: 132.43 },
+    { label: "1n", start: 132.68, end: 159.35 },
+    { label: "1o", start: 159.6, end: 166.83 },
+    { label: "1p", start: 167.08, end: 176.41 },
+    { label: "1q", start: 176.66, end: 183.09 },
+    { label: "1r", start: 183.34, end: 188.23 },
+    { label: "1s", start: 188.48, end: 196.57 },
+    { label: "1t", start: 196.82, end: 206.41 },
+    { label: "1u", start: 206.66, end: 210.29 },
+    { label: "1v", start: 210.54, end: 215.11 },
+    { label: "1w", start: 215.36, end: 218.97 },
+    { label: "1x", start: 219.22, end: 225.27 },
+    { label: "1y", start: 225.52, end: 246.83 },
+    { label: "1z", start: 247.08, end: 249.27 },
+    { label: "1aa", start: 249.52, end: 257.71 },
+    { label: "1ab", start: 257.96, end: 265.63 },
+    { label: "1ac", start: 265.88, end: 277.61 },
+    { label: "1ad", start: 277.86, end: 280.51 },
+    { label: "1ae", start: 280.76, end: 303.23 },
+    { label: "1af", start: 303.48, end: 313.25 },
+    { label: "1ag", start: 313.5, end: 318.09 },
+    { label: "1ah", start: 318.34, end: 334.75 },
+    { label: "1ai", start: 335, end: 345.27 },
+    { label: "1aj", start: 345.52, end: 352.31 },
+    { label: "1ak", start: 352.56, end: 355.67 },
+    { label: "1al", start: 355.92, end: 358.95 },
+    { label: "1am", start: 359.2, end: 373.03 },
+    { label: "1an", start: 373.28, end: 384.63 },
+    { label: "1ao", start: 384.88, end: 403.47 },
+    { label: "1ap", start: 403.72, end: 406.83 },
+    { label: "1aq", start: 407.08, end: 423.01 },
+    { label: "1ar", start: 423.26, end: 434.43 },
+    { label: "1as", start: 434.68, end: 443.53 },
+    { label: "1at", start: 443.78, end: 461.93 },
+    { label: "1au", start: 462.18, end: 469.23 },
+    { label: "1av", start: 469.48, end: 484.09 },
+    { label: "1aw", start: 484.34, end: 493.91 },
+    { label: "1ax", start: 494.16, end: 498.13 },
+    { label: "1ay", start: 498.38, end: 511.87 },
+    { label: "1az", start: 512.12, end: 530.91 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 530.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;11 LE TEST DE PATERNITÉ&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">11 LE TEST DE PATERNITÉ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">En comparant notre monde moderne avec celui de nos grands-parents, on pense très souvent que nous connaissons mieux les choses que nos prédécesseurs.</div> <div id="T1c" class="txs">Surtout, avec notre science, nous pensons que le monde nous appartient, car nous sommes sûrs de le posséder, de le maîtriser.</div> <div id="T1d" class="txs">Ce n’est pas pour rien que le philosophe, Jean Rostand disait :</div> <div id="T1e" class="txs">«&nbsp;<span class="it">L</span><span class="it">a </span><span class="it">science </span><span class="it">a fait de nous </span><span class="it">des dieux avant que nous ne méritions d’être </span><span class="it">h</span><span class="it">ommes</span>&nbsp;».</div></div>
+<div class="m"><div id="T1f" class="txs">En clair, nos parents étaient aussi très intelligents et pour preuve, suivons ce conte.</div></div>
+<div class="m"><div id="T1g" class="txs">Un père avait neuf enfants qu’il aimait bien, car la prospérité, l’estime et en bref le bonheur d’un homme se mesurait au nombre de ses enfants.</div> <div id="T1h" class="txs">Ce père qui n’avait vécu qu'avec sa seule et unique femme à qui il devait cette fierté que lui offraient ses fils, se rappela qu’il y avait parmi ses enfants un qui n’était pas le sien.</div> <div id="T1i" class="txs">Comment étai-il arrivé qu’il ait une infidélité dans ce couple monogame ?</div> <div id="T1j" class="txs">Là n’était pas la question que se posait avec acuité le père.</div> <div id="T1k" class="txs">La question embarrassante était qui des neuf enfants était le bâtard&nbsp;?</div></div>
+<div class="m"><div id="T1l" class="txs">Cette question a longtemps traumatisé cet homme qui sentait le poids de la vieillesse dans ses os et qui ne doutait plus de son départ imminent vers les ancêtres.</div> <div id="T1m" class="txs">Il y avait donc une nécessité impérieuse de résoudre cette question de paternité pour la pureté dans la famille, car les ancêtres détesteraient l’impureté.</div> <div id="T1n" class="txs">En clair, si notre homme n’identifiait pas l'enfant qui n’était pas de lui et s'il mourrait et que lors des rites funéraires le bâtard lui offrait une offrande, cela pourrait amener les ancêtres à rejeter, lui, le nouveau venu (défunt) de leur communauté.</div> <div id="T1o" class="txs">Le problème était donc délicat et il fallait le résoudre avant d’engager le dernier voyage.</div></div>
+<div class="m"><div id="T1p" class="txs">Si c’était de nos jours, il n'y aurait pas de quoi se faire des soucis puisqu’il y a les tests d'ADN.</div> <div id="T1q" class="txs">Mais comme c'était dans l’ancien temps, il y avait de quoi s’inquiéter.</div> <div id="T1r" class="txs">Mais il y a rarement de problème sans solution.</div> <div id="T1s" class="txs">Il suffit de bien y penser et la bonne solution apparaît comme un don du bon Dieu.</div> <div id="T1t" class="txs">C’est ainsi qu’un jour, l'homme alla en brousse très tôt le matin et y ramena des branches vertes.</div> <div id="T1u" class="txs">Celles-ci devraient faire office de fouets.</div> <div id="T1v" class="txs">Il attendit que ses neuf (9) enfants se réveillassent.</div> <div id="T1w" class="txs">Il les appela et leur tint ces propos :</div> <div id="T1x" class="txs">«&nbsp;Mes enfants, je veux savoir si vous m’aimez réellement !»</div> <div id="T1y" class="txs">Tous les enfants s’étonnèrent de la question mais rassurèrent leur père qu’il n'avait pas à se faire des soucis pour cela, car la preuve de leur amour pour lui c’est qu’ils s’occupaient bien de lui et aucun d’eux ne lui manquait du respect.</div></div>
+<div class="m"><div id="T1z" class="txs">Le père reprend :</div> <div id="T1aa" class="txs">«&nbsp;S<span class="it">i je vous pose la question, c’est pour vous décrire une situation délicate.</span></div> <div id="T1ab" class="txs"><span class="it">Je suis allé voir un devin et il m’a annoncé une triste nouvelle.</span></div> <div id="T1ac" class="txs"><span class="it">Moi, votre père, je vais mourir dans une semaine si vous refusez de me frapper avec les fouets que vous voyez là.</span></div> <div id="T1ad" class="txs"><span class="it">C’est à vous de choisir.</span></div> <div id="T1ae" class="txs"><span class="it">Si vous voulez que je meure, vous refuserez de me battre avec ces fouets, mais si vous voulez que je vive encore un peu avec vous, alors chacun prendra un fouet et, à mon signal, tour à tour l’exécutera </span>».</div></div>
+<div class="m"><div id="T1af" class="txs">Les enfants voyant l'enjeu, haussèrent la tête et promirent de faire l’aventure avec le père.</div> <div id="T1ag" class="txs">Ainsi les a-t-il faits reculer à une vingtaine de mètres.</div> <div id="T1ah" class="txs">Par ordre de naissance, il demanda au premier fils de prendre son élan comme s’il devrait abattre un ennemi et le frapper fort avec le fouet qu’il tenait entre les mains.</div></div>
+<div class="m"><div id="T1ai" class="txs">L’enfant accepta mais quand il fut à quelques mètres de son père, il laissa tomber le fouet et lui dit :</div> <div id="T1aj" class="txs">«&nbsp;<span class="it">Papa, vraiment c’est dur pour moi de te frapper</span>&nbsp;».</div> <div id="T1ak" class="txs">Le père répliqua :</div> <div id="T1al" class="txs">«&nbsp;<span class="it">D</span><span class="it">onc tu veux ma mort ?</span></div><div id="T1am" class="txs">&nbsp;»</div></div>
+<div class="m"><div id="T1an" class="txs">«&nbsp;<span class="it">Non papa, je ne veux pas que tu meures mais je ne pourrai te frapper en aucun moment</span><span class="it">,</span><span class="it"> car c’est plus fort que moi</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ao" class="txs">Le père qui feignait d’ignorer la puissance de l’amour paternel s'est finalement tu et ordonna au suivant de passer à l’action.</div> <div id="T1ap" class="txs">Celui-ci aussi prit l’allure qu’il faut mais à quelques mètres encore de son père il fut bloqué par le même sentiment que le premier et renonça au projet du père.</div> <div id="T1aq" class="txs">Le père tempêta :</div> <div id="T1ar" class="txs">«&nbsp;<span class="it">D</span><span class="it">écidément aucun de mes enfants ne souhaite que je vive puisque personne ne veut exécuter ce que le devin me dit de vous faire faire pour conjurer le sort qui s’abattra sur moi</span>&nbsp;».</div></div>
+<div class="m"><div id="T1as" class="txs">Cette intervention pitoyable du père n’a pas incité les autres enfants à frapper leur père.</div> <div id="T1at" class="txs">L’élan de chacun s’est toujours terminé par un échec et cela jusqu’au neuvième enfant.</div></div>
+<div class="m"><div id="T1au" class="txs">Quand celui-ci recula et prit l’allure qu'il fallait, il s’engagea avec une vitesse qui lui permit de terminer sa course sur le vieillard en l’assenant de vrais coups de fouet.</div></div>
+<div class="m"><div id="T1av" class="txs">N'eut été l’intervention des autres enfants, il était prêt à l’achever.</div></div>
+<div class="m"><div id="T1aw" class="txs">Quand le vieillard fut revenu à la vie, il eut la preuve tangible de ce qu’il cherchait à savoir, qui des neuf enfants n’était pas de son sang.</div> <div id="T1ax" class="txs">Il demanda immédiatement des comptes à sa femme qui fut obligée de lui dire la vérité.</div> <div id="T1ay" class="txs">Et l’enfant fut congédié de sa concession. </div></div>
+<div class="m"><div id="T1az" class="txs">Avec le modernisme, il n’est pas rare de constater que les enfants font physiquement mal à leurs parents pour une raison ou pour une autre. Mais on doit savoir que cela n’est qu'une dépravation des mœurs, car un bon enfant, c'est-à-dire, celui qui est bien éduqué ne peut et ne doit en aucun cas porter la main sur ses géniteurs.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 11 Le test de la paternite.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saa bi duguma seen bi dug 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 1.19, end: 4.35 },
+    { label: "1ab", start: 4.6, end: 6.39 },
+    { label: "1c", start: 6.64, end: 10.14 },
+    { label: "1d", start: 10.39, end: 11.48 },
+    { label: "1e", start: 11.73, end: 14.78 },
+    { label: "1f", start: 15.03, end: 18.99 },
+    { label: "1g", start: 19.24, end: 22.53 },
+    { label: "1h", start: 22.78, end: 29.99 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1.19;
+var stopTime  = 29.99;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 29 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Saa bi duguma seen bi dug&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Dioula Proverbes 29-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Saa bi duguma seen bi duguma,</span></div> <span class="bd">o ti fɔn ɲɔgɔn kɔ.</span></div>
+<div class="m"><div id="T1c" class="txs"><span class="it">[</span><span class="it">Le serpent est à terre le pied est à terre.</span></div> <div id="T1d" class="txs"><span class="it">Tôt ou tard,</span></div> <div id="T1e" class="txs"><span class="it">le serpe</span><span class="it">nt et le pied se rencontreront.</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bdit">T</span><span class="bdit">ôt ou tard nous nous rencontreron</span><span class="bdit">s]</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">Saa bi duguma seen bi duguma,</span></div> <div id="T1h" class="txs"><span class="bd">o ti fɔn ɲɔgɔn kɔ.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/dioula Prov 01 a 29 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

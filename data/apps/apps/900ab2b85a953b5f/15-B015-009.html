@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introdução 9</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "15-B015-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-008.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introdução&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;9&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-010.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B021-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B015-image9.jpg" />
+
+<div class="m"><span class="bd">Sabedoria e inteligência</span></div>
+<div class="m"><span class="it">Sim, Deus nos cobriu com suas bênçãos. Ele </span><span class="it">nos</span><span class="it"> </span><span class="it">deu</span><span class="it"> </span><span class="it">sabedoria</span><span class="it"> e </span><span class="it">entendimento</span><span class="it">.</span><span class="it"> </span>(Efésios 1, 8).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">O que são sabedoria e entendimento?</span></div>
+<div class="m">A base da sabedoria e da inteligência é o conhecimento, que é um acúmulo de informações obtidas por meio da educação ou da experiência. Há quem confunda conhecimento, inteligência e sabedoria. Eles pensam que o conhecimento leva automaticamente à inteligência e até à sabedoria. Mas para ser considerado inteligente não basta apenas acumular conhecimento; você também precisa entendê-lo e saber como usá-lo. Isso é inteligência. A sabedoria vai ainda mais longe. Ser sábio significa ter discernimento quando e como aplicar o conhecimento que você adquiriu e ser capaz de transmitir seu conhecimento e discernimento a outras pessoas. A Palavra de Deus nos ensina que Deus pode e nos dará inteligência e sabedoria, MAS com o objetivo de conhecê-lo, o Deus vivo, de conhecer seu plano de salvação e as riquezas que ele reservou para nós (ver também Efésios 1, 17 a 20).</div>
+<div class="m"><span class="bd">Ações para transformar sabedoria e inteligência em riquezas em sua vida:</span></div>
+<div class="m"><span class="it">- Oração:</span>Agradeça a Deus pela sabedoria e compreensão que ele já lhe deu. Peça-lhe que lhe mostre como usar o conhecimento que você adquiriu na escola bíblica, na igreja, nas conferências e no estudo pessoal para a glória dele. Peça a Deus que aumente a sua inteligência para que você possa entender melhor a Sua Palavra e transmitir o seu conhecimento a outras pessoas.</div>
+<div class="m"><span class="it">- Leitura da Bíblia:</span>Leia 1 Coríntios 1, 18 a 25. Estas palavras do apóstolo Paulo nos lembram que a sabedoria de Deus é diferente daquela do nosso mundo.</div>
+<div class="m"><span class="it">- reflexão pessoal:</span>Inteligência e sabedoria são altamente consideradas e procuradas em nosso mundo. Mas CUIDADO: não é a mesma coisa que acontece com Deus. Examine seu coração com a ajuda do Espírito Santo para descobrir o que o motiva em sua busca para expandir seu conhecimento. Lembre-se de que Deus quer que você procure primeiro conhecê-lo.</div>
+<div class="m"><span class="it">- Em relação aos outros</span>: Reflita sobre o que você aprendeu nas últimas semanas na igreja ou durante outros ensinamentos. Escreva uma lição importante que fez diferença em sua vida e compartilhe-a com um familiar ou amigo.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

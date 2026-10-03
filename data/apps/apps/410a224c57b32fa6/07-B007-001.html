@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>6 Les outils pour 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.45 },
+    { label: "1b", start: 2.7, end: 3.71 },
+    { label: "1c", start: 3.96, end: 6.13 },
+    { label: "1d", start: 6.38, end: 9.21 },
+    { label: "1e", start: 9.46, end: 14.39 },
+    { label: "1f", start: 14.64, end: 17.25 },
+    { label: "1g", start: 17.5, end: 18.63 },
+    { label: "1h", start: 18.88, end: 21.07 },
+    { label: "1i", start: 21.32, end: 25.63 },
+    { label: "1j", start: 25.88, end: 28.85 },
+    { label: "1k", start: 29.1, end: 32.71 },
+    { label: "1l", start: 32.96, end: 36.95 },
+    { label: "1m", start: 37.2, end: 40.43 },
+    { label: "1n", start: 40.68, end: 45.45 },
+    { label: "1o", start: 45.7, end: 50.33 },
+    { label: "1p", start: 50.58, end: 55.87 },
+    { label: "1q", start: 56.12, end: 59.91 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 59.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;6 Les outils pour&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">6 Les outils pour exciser</span>.</div></div>
+<div class="m"><div id="T1b" class="txs"><span class="it">Questions:</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="it">- Que voyez-vous sur les </span><span class="it">photos?</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">- Comment est pratiquée </span><span class="it">l’excision?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs">L’excision consiste à couper le sexe de la fille ou de la femme.</div></div>
+<div class="m"><div id="T1f" class="txs">Différents outils sont utilisés:</div> <div id="T1g" class="txs">un rasoir,</div> <div id="T1h" class="txs">un couteau ou des ciseaux.</div> <div id="T1i" class="txs">L’exciseuse peut aussi simplement utiliser ses ongles.</div></div>
+<div class="m"><div id="T1j" class="txs">C’est un acte très douloureux pour la fille.</div> <div id="T1k" class="txs">Celles qui en ont été victimes peuvent en témoigner.</div></div>
+<div class="m"><div id="T1l" class="txs">L’excision peut avoir des conséquences graves toute la vie,</div> <div id="T1m" class="txs">mais beaucoup d’hommes et de femmes ne le savent pas.</div> <div id="T1n" class="txs">C’est donc important de bien expliquer ce qu’est vraiment l’excision.</div></div>
+<div class="m"><div id="T1o" class="txs">Les prochaines pages montrent des dessins et des photos de sexes.</div> <div id="T1p" class="txs">Le but n’est pas de choquer mais de bien comprendre de quoi nous parlons.</div> <div id="T1q" class="txs">Nous allons présenter les différents types d’excision.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/06AUD-20230320-WA0023.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

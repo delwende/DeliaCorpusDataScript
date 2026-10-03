@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A liɓataa kam, mi liɓataa ma 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 0;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;A liɓataa kam, mi liɓataa ma&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">Banndi fulfulɗe</span> (1495 proverbes en fulfuldé par ordre alphabétique)</div>
+<ol>
+<li class="zoli1">A liɓataa kam, mi liɓataa ma : ɗuum kay, on kulondir</li>
+<li class="zoli1">A waawaa ɓurde neɗɗo toowde, de ɓuraa ɗum raɓɓiɗinde</li>
+<li class="zoli1">A yiɗaa cuule aɗa yiɗi ɓellinngal </li>
+<li class="zoli1">A yiɗaa jollooru, aɗa yiɗi ko woni nder jollooru </li>
+<li class="zoli1">Acciraaɗo ngam Alla, dewgal mum hoyataa</li>
+<li class="zoli1">Acciroowo ngam Alla, ɗakkete </li>
+<li class="zoli1">Aɗa yiɗi nananeede ba egguɗo nagge woote </li>
+<li class="zoli1">Aɗa anndi ko kaalataa, de a anndaa ko njaabeteɗaa</li>
+<li class="zoli1">Aɗa diwna ba ɗokko hocci gite</li>
+<li class="zoli1">Aɗa metti fay seeɗa e reedu</li>
+<li class="zoli1">Aɗa waawi wi’ude a yiɗaa njuumndi, de a waawaa wi’ude njumndi welaa</li>
+<li class="zoli1">Aduna ɓuri kural yaawude</li>
+<li class="zoli1">Aduna hannde laatoke pobbi, ndu hen fu, nangana hoore mum</li>
+<li class="zoli1">Aduna hannde o, so a wi'ii ngoonga tan kaalataa, no junuubaaji maa pamɗiri fuh, na tawu yigraaɓe maa ɓuri famɗude</li>
+<li class="zoli1">Aduna wanaa jinni de na hulɓina</li>
+<li class="zoli1">Aduna yo lacol soltooru : nanngee, ɓora </li>
+<li class="zoli1">Adunaaru hannde wuuraanaa nguurndam laddeeji : wootoru fu filano hoore muuɗum.</li>
+<li class="zoli1">Alhaali na ɓuri bi’aangol </li>
+<li class="zoli1">Alla reenataanaa ndeentiiɗo </li>
+<li class="zoli1">Alla daɗinam e Alla hokkam, wanaa gootum </li>
+<li class="zoli1">Alla haɗi juula yeƴƴo </li>
+<li class="zoli1">Alla hokki gorko jikkuuji fu, de haɗi ɗum anndude jikku debbo </li>
+<li class="zoli1">Alla jannginta gorko, ibiliisa janngina debbo</li>
+<li class="zoli1">Alla na waawi hokkude ma tummbude, kaa hebbinde nde, dow maa woni </li>
+<li class="zoli1">Alla nanngirtaa fay gooto bonɗi goɗɗo</li>
+<li class="zoli1">Alla reenata suka</li>
+<li class="zoli1">Alla tagi neɗɗo, neɗɗo du tagi njinngu, njinngu du tagi cunu</li>
+<li class="zoli1">Alla waawani baa ɓaade mo walaa lukaare </li>
+<li class="zoli1">Alla waylitataa ko woni e yimɓe, so wanaa yimɓe mbaylita ko ngondi</li>
+<li class="zoli1">Alla woni : wara manee</li>
+<li class="zoli1">Alluuje tewnata ɗowgi </li>
+<li class="zoli1">Amtaro sikkataanaa haarataa </li>
+<li class="zoli1">Anndal yo hoccinte </li>
+<li class="zoli1">Anndal woɗɗaa, yo wiirni</li>
+<li class="zoli1">Anndude anndaa, e anndal jeyaa</li>
+<li class="zoli1">Anndude ko weli, na weli</li>
+<li class="zoli1">Anndude mo haaldata jey wi’ude : " Miin heensii waɗi "</li>
+<li class="zoli1">Anndude no foti, ɓuri anndineede no foti </li>
+<li class="zoli1">Anniyiiɗo lootaade, na leppu</li>
+<li class="zoli1">Araawa haandi e peeki, de puccu ni jey</li>
+<li class="zoli1">Araawa koɗa na weli teppere de anndaa to nyaamdu woni </li>
+<li class="zoli1">Araawa nyaagoto Alla ta waɗa ɓuure kunkuuru, kaa wanaa taa rinndinee </li>
+<li class="zoli1">Araawa, nde laɓi tawaa e tawaaka fu, haɗataa ɗum saaɗude.</li>
+<li class="zoli1">Artii ɗaanaade, artoo finude</li>
+<li class="zoli1">Artiiɓe mayi keɓaay uweede sakko cakitiiɓe</li>
+<li class="zoli1">Artiiɗo e suudu, anndi ɗo ndu si’irata</li>
+</div>
+</body>
+</html>

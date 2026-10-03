@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Hordhac 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "18-B017-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='17-B016-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Hordhac&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B018-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B017-image2.jpg" />
+
+<div class="m"><span class="bd">Doorashada</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Waxaa</span><span class="it"> la </span><span class="it">inagu</span><span class="it"> </span><span class="it">doortay</span><span class="it"> </span><span class="it">Ilaah</span><span class="it">, </span><span class="it">intaan</span><span class="it"> </span><span class="it">dunida</span><span class="it"> la </span><span class="it">aasaasin</span><span class="it">, </span><span class="it">Masiixa</span><span class="it">, </span><span class="it">inaan</span><span class="it"> </span><span class="it">quduus</span><span class="it"> </span><span class="it">noqonno</span><span class="it"> </span>(Efesos 1, 4).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Waa </span><span class="bd">maxay</span><span class="bd"> </span><span class="bd">doorashadu</span><span class="bd">?</span></div>
+<div class="m">Doorashadu waa caqiido adag in la fahmo. Waa muhiim in aan teleefanka lagu xidhin sababta qaar loo doortay qaarna u dhici waayeen. Madaxbanaanida Ilaahay waxay ka dhigan tahay inaan waligeen fahmi karin falimihiisa oo dhan.</div>
+<div class="m">Maxaa muhiim ah in lagu xasuusto caqiidadan: </div>
+<div class="m">- Badbaadadu waxay ka bilaabataa Ilaah. Waxa uu qaaday tallaabo uu ku badbaadinayo dadka. Aad baannu u kharribnay dembiga oo aynaan suurtogal ahayn in aannu qaadno tallaabada ugu horreysa.</div>
+<div class="m">- Tani waa fal uu Ilaahay keligiis iyo naftiisa u sameeyo.</div>
+<div class="m">- Isagu ma isticmaalo shuruud la mid ah tan adduunkeena marka la eego dookhiisa (1 Korintos 1, 26 ilaa 29).</div>
+<div class="m">-Doorashada Ilaah waxay leedahay ujeedo. Wuxuu inoo doortay inaan isaga ammaanno, oo u adeegno oo shuqullo wanaagsan samayno.</div>
+<div class="m"><span class="bd">Tallaabooyinka</span><span class="bd"> </span><span class="bd">aad</span><span class="bd"> </span><span class="bd">doorashada</span><span class="bd"> </span><span class="bd">uga</span><span class="bd"> </span><span class="bd">dhigayso</span><span class="bd"> </span><span class="bd">hodannimada</span><span class="bd"> </span><span class="bd">noloshaada</span><span class="bd">: </span></div>
+<div class="m"><span class="it">- </span><span class="it">Ducada</span><span class="it">: </span>Ilaah baa mahad leh maalin walba inaad ka mid tahay kuwii uu doortay.</div>
+<div class="m">Weydiiso caawimaaddiisa si aad ugu noolaato mid u qalma mid ka mid ah kuwa Eebbe doortay.</div>
+<div class="m"><span class="it">- </span><span class="it">Kitaabka</span><span class="it"> </span><span class="it">akhriska</span>: Akhri 1 Korintos 1, 26 ilaa 31. Aayadahani waxay ina barayaan in Ilaah aanu dooran sida dunidu ay doonto. Waa maxay shuruudaha uu ku dooran karo? Sababtoo ah Ilaah ma dooran waxa "xoog leh" macnaheedu maaha inuu ina tixgelinayo.</div>
+<div class="m">Akhri Isaiah 43, 4 oo xafid.</div>
+<div class="m"><span class="it">- </span><span class="it">Milicsiga</span><span class="it"> </span><span class="it">shakhsi</span><span class="it"> </span><span class="it">ahaaneed</span>Ma dareentay in kuwa kale - ninkaaga ama naagtaada, madaxdaada ama asxaabtaada, xubnaha kaniisadda - aysan ku tixgelinayn? Xusuusnow inaad tahay mid ka mid ah "kuwa la doortay". Aad baad muhiim ugu tahay Ilaahay. Wuu ku tixgelinayaa. Indhihiisa ayaad qaali ku tahay. Muhiimadaadu kuma salaysna shahaadadaada, mawqifkaaga bulsho iyo hantidaada maadiga ah, balse waa nimco uu Alle ku doortay. Haddii aad ka taxadarto, waxaad ku ogaan doontaa nolol maalmeedkaaga!</div>
+<div class="m"><span class="it">- </span><span class="it">Xagga</span><span class="it"> </span><span class="it">kuwa</span><span class="it"> kale</span>: Walaalihiinna xagga ruuxa ah, kuwaas oo ah kuwa Ilaah doortay, ula dhaqan ixtiraam iyo jacayl. Ha quudhsanina kuwa itaalka daran. Laakiin, tus inay ku qaali ku yihiin Ilaah hortiisa iyo kaniisadda.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

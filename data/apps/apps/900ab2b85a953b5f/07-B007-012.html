@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Einführung 12</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-011.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Einführung&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;12&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-013.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image12.jpg" />
+
+<div class="m"><span class="bd">Hoffnung</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Damit ihr die </span><span class="bdit">Hoffnung</span><span class="it"> erkennt, die er euch gab, als er euch rief</span><span class="it"> </span>(Epheser 1, 18).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Was ist christliche Hoffnung?</span></div>
+<div class="m">Hoffen heißt, fest daran zu glauben, dass ein Wunsch bald in Erfüllung gehen wird. Christliche Hoffnung ist die Erwartung der Erfüllung von Gottes Versprechen. Hoffnung betrifft alle Versprechen Gottes, aber insbesondere jene, die unser Leben nach dem Tod, in der Gegenwart Gottes und Jesu, die Wiederkunft Jesu, die neue Erde und den neuen Himmel betreffen.</div>
+<div class="m">Hoffen heißt, dass es noch nicht „<span class="it">geschehen</span>“ ist, sondern mit Sicherheit zu glauben, dass unsere Erwartungen sich erfüllen werden. Eine solche Hoffnung kann unser Leben tiefgreifend beeinflussen. Statt in Angst und Sorge zu versinken, können wir in Freude und Frieden leben. Aber wir dürfen nicht vergessen, dass die Grundlage unserer Hoffnung solide und verlässlich sein muss. Wenn unsere Hoffnung auf andere Menschen oder andere Kräfte als den lebendigen Gott gegründet ist, werden wir zwangsläufig enttäuscht werden. Nur eine Hoffnung, die auf Gott, seinen Sohn Jesus und den Heiligen Geist gegründet ist, garantiert die Erfüllung der erwarteten Versprechen.</div>
+<div class="m"><span class="bd">Maßnahmen, um Hoffnung zu einem Reichtum in Ihrem Leben zu machen:</span></div>
+<div class="m"><span class="it">- Gebet:</span><span class="it"> </span>Wir danken Gott für seine Versprechen und die Hoffnung, die wir in ihn setzen. Legen Sie Ihre Ängste und Sorgen in seine Hände.</div>
+<div class="m"><span class="it">- Bibellesen:</span><span class="it"> </span>Lesen Sie die folgenden Verse und wählen Sie einen zum Auswendiglernen aus: Johannes 10, 28; Epheser 3, 20 bis 21; Offenbarung 21, 4.</div>
+<div class="m"><span class="it">- Persönliche Reflexion:</span><span class="it"> </span>Machen Sie sich ständig Sorgen? Leben Sie in Angst, dass in Ihrem Leben oder im Leben Ihrer Lieben etwas Schlimmes passieren könnte? Es gibt viele biblische Beispiele dafür, wie Gott seine Versprechen hält: Noah, Abraham und Sarah, Jakob, Josef, Ruth, Hanna, Nehemia ... Studieren Sie eine dieser Figuren und achten Sie darauf, wie Gott diese Person begleitet, insbesondere in schwierigen Zeiten.</div>
+<div class="m"><span class="it">- </span><span class="it">Gegenüber</span><span class="it"> anderen:</span><span class="it"> </span>Basteln Sie eine hübsche Karte mit einem ermutigenden Bibelspruch und schenken Sie diese einem Freund in Not. Sie können den Spruch auch per SMS, WhatsApp oder auf anderem Wege verschicken.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

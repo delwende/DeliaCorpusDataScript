@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introducción 10</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "08-B008-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='07-B007-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-009.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introducción&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;10&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-011.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B008-image10.jpg" />
+
+<div class="m"><span class="bd">Herencia</span></div>
+<div class="m"><span class="it">En Cristo </span><span class="it">también</span><span class="it"> </span><span class="it">nosotros</span><span class="it"> </span><span class="it">hemos</span><span class="it"> </span><span class="it">llegado</span><span class="it"> a ser </span><span class="bdit">herederos</span><span class="it">...</span><span class="it"> </span>(Efesios 1, 11).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">¿Qué es una herencia cristiana?</span></div>
+<div class="m">Es la propiedad que deja una persona fallecida a quienes aún viven, generalmente miembros de su familia.</div>
+<div class="m">Según la Palabra de Dios, Dios tiene una herencia para nosotros, sus hijos. Es la salvación traída por Jesucristo la que nos da derecho a esta herencia. Todo lo que estudiamos en este folleto es parte de esa herencia. Pablo la llama herencia de "riquezas gloriosas" (Efesios 1, 18).</div>
+<div class="m">Ser herederos significa que todavía no estamos en plena posesión de estas riquezas. Pero si vivimos con Dios, si Jesús y el Espíritu Santo habitan en nosotros, ya podemos saborear las riquezas de nuestro Padre celestial. Así como un niño que vive en el seno de su familia ya puede disfrutar en cierta medida de los bienes de su padre. Y el Espíritu Santo promete nuestra plena adquisición de la herencia celestial (ver el próximo capítulo).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Acciones para hacer de la herencia una riqueza en tu vida:</span></div>
+<div class="m"><span class="it">- </span><span class="it">Oración</span><span class="it">:</span><span class="it"> </span>Gracias a Dios por las riquezas que te ha dado. Enumérelos uno por uno. Pídele a Dios que te ayude a aprovecharlos mejor.</div>
+<div class="m"><span class="it">- Lectura de la Biblia:</span><span class="it"> </span>Lee Efesios 1 y haz una lista de todas tus bendiciones espirituales.</div>
+<div class="m"><span class="it">- reflexión personal</span>: ¿Hay momentos en los que te sientes pobre? ¿Estás celoso de otros que parecen tener más que tú? Recuerda que las riquezas de Dios están a tu disposición. Recuerda que son riquezas que nadie puede robar y que no estropean.</div>
+<div class="m">Al final del día, tómate un tiempo para reflexionar sobre cuáles de las riquezas de Efesios 1 pudiste usar durante el día. Comienza una pequeña libreta y anota las bendiciones de Dios todos los días.</div>
+<div class="m"><span class="it">- </span><span class="it">a</span><span class="it"> </span><span class="it">otros</span><span class="it">:</span><span class="it"> </span>Dios quiere que compartamos nuestra herencia espiritual con nuestra familia y nuestros hermanos y hermanas en Cristo. Cada mañana, elige una de las riquezas de tu herencia y encuentra la manera de "darla" a alguien que conozcas durante el día.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

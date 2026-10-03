@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>መእተዊ 3</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "19-B018-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='18-B017-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='19-B018-002.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;መእተዊ&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;3&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B018-004.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='20-B019-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B018-image3.jpg" />
+
+<div class="m"><span class="bd">ቅድመ ዕጫ</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">ኣምላኽ ብፍቕሩ ብኢየሱስ ክርስቶስ ኣቢሉ ረድኤት ደቁ ክንከውን ኣቐዲሙ መዲቡና እዩ።</span>(ኤፌሶን 1, 5)።</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">ቅድመ ዕጫ እንታይ እዩ፧</span></div>
+<div class="m">ቅድመ ዕጫ ምስ ምርጫ ዝተኣሳሰር እዩ። ምርጫ ዝያዳ ብዛዕባ ሕሉፍ፡ ዘጋጠመ፡ ኣቐዲምና እንፈልጦ (ሕሩያት ኣምላኽ ኢና) ክኸውን ከሎ፡ ቅድመ ዕጫ ብዛዕባ መጻኢ፡ ኣምላኽ ንህይወትና ዝሰርዖ እዩ።</div>
+<div class="m">ኣብ ቃል ኣምላኽ "predestine" ተባሂሉ ዝተተርጎመ ቃል ካብ "proorizo" ዝብል ናይ ግሪኽ ቃል ዝመጸ ኮይኑ፡ ትርጉሙ "ኣቐዲምካ ምውሳን"፡ "ምእዛዝ"፡ "ኣቐዲምካ ምውሳን" ማለት እዩ። ልክዕ ከም ምርጫ ቅድመ ዕጫ ንምርዳእ ቀሊል ኣይኮነን። ኣቐዲምካ ምምዳብ ማለት ዕጫኻ ኣቐዲምካ ምእራም ማለት እዩ። ንሕና ሕሩያት ኣምላኽ ደቂ ኣምላኽ ክንከውን ኣቐዲምና ዝተመደበ ኢና።</div>
+<div class="m">ኣቐዲምካ ምምዳብ ኣምላኽ ንሓደ ነገር ከም ዝሓረየና እዩ ዘጕልሕ። እግዚኣብሄር ንህይወት ነፍሲ ወከፍ ደቁ መደብ ኣለዎ። ኩሉ ኣቐዲሙ መደብ ኣውጺኡዎ ኣሎ። ምጭናቕ የብለይን። ኣምላኽ ንመጻኢይ ይቆጻጸሮ ኣሎ። ንህይወተይ ዝሓንጸጾ መደባት ድማ ኣዝዩ ጽቡቕ መደባት እዩ። ካብቲ ዝሓስቦ ኣዝዩ ዝሓሸ።</div>
+<div class="m">ነቲ እግዚኣብሔር ንህይወተይ ዝሓንጸጾ መደብ ምሕላፍ ማለት እግዚኣብሔር ክሓድገኒ ወይ ድሕነተይ ክስእነኒ ማለት ኣይኮነን፡ እንተኾነ ግን ዓቢ በረኸት ኣምላኽ ክስእን ይኽእል እየ።</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">ቅድመ ዕጫ ኣብ ህይወትካ ሃብቲ ንምግባር ዝግበር ተግባራት፤</span></div>
+<div class="m"><span class="it">- ጸሎት</span>፦ ቅድሚ ጸሎትካ፡ ኩሉ ክትገብሮ እትደሊ - ናይ ሓጺርን ነዊሕን ግዜ - ኣብ ወረቐት ጽሓፍ። ኩሉ ኣብ ኢድ ኣምላኽ ኣቐምጦ። መደባትካ እውን መደባቱ እንተኾይኑ ከርእየካ ሕተቶ።</div>
+<div class="m"><span class="it">- ንባብ መጽሓፍ ቅዱስ፤</span>መዝሙር 139 ኣንብብ።እዛ መዝሙር እዚኣ ብዛዕባ ርክብ ኣምላኽ ምሳኻን ብዛዕባ መጻኢ መደባት ንዓኻን እንታይ ይምህረካ?</div>
+<div class="m"><span class="it">- ውልቃዊ ኣስተንትኖ</span>፦ ልብኻ መርምር። ኩሉ ሓጎስካ ኣብ ዕዉት መደባትካ ድዩ ዝምርኮስ? ኣምላኽ ንህይወትካ ካልእ መደብ ክህልዎ ከም ዝኽእል ኣይትረስዕ። ብዛዕባ መጻኢኻ ንኣምላኽ ትኣምኖ ዲኻ፧ ጭንቀት ንለይቲ ንቑሕ ኮይኑ ብመዓልቲ ክትሰርሕ ከም ዘይትኽእል ይገብረካ ድዩ? ኣምላኽ ካልእ መገዲ እንተ ኣርእዩካ ንሓደ ኻብ መደባትካ ክትገድፎ ድሉው ዲኻ፧</div>
+<div class="m"><span class="it">- ናብ ካልኦት ገጹ</span>፦ ፍቓድ ኣምላኽ ንዓኻ እንታይ ምዃኑ ርግጸኛታት እንተዘይኮንካ፡ ኣብ ክርስቶስ ዘሎ ሓው ወይ ሓፍቲ ምኽሪ ሕተት። ብዘይካዚ፡ ነቶም ብዛዕባ መጻኢኦም ኣገዳሲ ውሳነታት ኪገብሩ ዘለዎም ሰባት ሓገዝ ድለ።</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

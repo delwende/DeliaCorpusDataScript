@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>7 e) Le salut et la vie 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.21 },
+    { label: "1b", start: 3.46, end: 5.47 },
+    { label: "1c", start: 5.72, end: 11.49 },
+    { label: "1d", start: 11.74, end: 12.79 },
+    { label: "1e", start: 13.04, end: 15.39 },
+    { label: "1f", start: 15.64, end: 19.59 },
+    { label: "1g", start: 19.84, end: 21.05 },
+    { label: "1h", start: 21.3, end: 23.63 },
+    { label: "1i", start: 23.88, end: 25.63 },
+    { label: "1j", start: 25.88, end: 28.13 },
+    { label: "1k", start: 28.38, end: 30.55 },
+    { label: "1l", start: 30.8, end: 35.89 },
+    { label: "1m", start: 36.14, end: 37.61 },
+    { label: "1n", start: 37.86, end: 38.33 },
+    { label: "1o", start: 38.58, end: 42.39 },
+    { label: "1p", start: 42.64, end: 45.83 },
+    { label: "1q", start: 46.08, end: 47.89 },
+    { label: "1r", start: 48.14, end: 49.37 },
+    { label: "1s", start: 49.62, end: 53.63 },
+    { label: "1t", start: 53.88, end: 59.75 },
+    { label: "1u", start: 60, end: 61.91 },
+    { label: "1v", start: 62.16, end: 64.17 },
+    { label: "1w", start: 64.42, end: 65.91 },
+    { label: "1x", start: 66.16, end: 68.51 },
+    { label: "1y", start: 68.76, end: 69.83 },
+    { label: "1z", start: 70.08, end: 72.83 },
+    { label: "1aa", start: 73.08, end: 73.73 },
+    { label: "1ab", start: 73.98, end: 75.95 },
+    { label: "1ac", start: 76.2, end: 78.71 },
+    { label: "1ad", start: 78.96, end: 80.11 },
+    { label: "1ae", start: 80.36, end: 87.11 },
+    { label: "1af", start: 87.36, end: 88.17 },
+    { label: "1ag", start: 88.42, end: 90.19 },
+    { label: "1ah", start: 90.44, end: 91.63 },
+    { label: "1ai", start: 91.88, end: 94.09 },
+    { label: "1aj", start: 94.34, end: 96.79 },
+    { label: "1ak", start: 97.04, end: 101.03 },
+    { label: "1al", start: 101.28, end: 102.81 },
+    { label: "1am", start: 103.06, end: 103.85 },
+    { label: "1an", start: 104.1, end: 105.47 },
+    { label: "1ao", start: 105.72, end: 109.59 },
+    { label: "1ap", start: 109.84, end: 113.55 },
+    { label: "1aq", start: 113.8, end: 116.33 },
+    { label: "1ar", start: 116.58, end: 119.07 },
+    { label: "1as", start: 119.32, end: 121.29 },
+    { label: "1at", start: 121.54, end: 125.59 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 125.59;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "35-B035-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='34-B034-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='34-B034-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;7 e) Le salut et la vie&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='36-B036-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='36-B036-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B035-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="ul"><span class="bdit">7</span></span><span class="ul"><span class="bdit"> </span></span><span class="ul"><span class="bdit">e)</span></span><span class="ul"><span class="bdit"> Le salut et la vie éternelle</span></span><span class="ul"><span class="bdit">.</span></span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">La clé de la liberté</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Les amis d’un roi</span> des temps anciens avaient été faits prisonniers par les autorités d’un pays voisin.</div> <div id="T1d" class="txs">Le roi,</div> <div id="T1e" class="txs">ne souhaitant pas les laisser seuls dans leur malheur,</div> <div id="T1f" class="txs">a décidé de leur venir en aide et d’envoyer son fils pour les délivrer.</div> <div id="T1g" class="txs">Mais leur cellule,</div> <div id="T1h" class="txs">située à l’intérieur d’une grande tour,</div> <div id="T1i" class="txs">ne s’ouvrait que de l’intérieur.</div> <div id="T1j" class="txs">Après avoir maîtrisé le geôlier,</div> <div id="T1k" class="txs">le fils l’a ligoté aux mains et aux pieds,</div> <div id="T1l" class="txs">puis il lui a pris la clé et l’a fait passer à ses amis qui se trouvaient derrière la porte.</div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">En voyant cette clé</span>,</div> <div id="T1n" class="txs">les amis,</div> <div id="T1o" class="txs">ont commencé à discuter pour savoir ce qu’ils devaient en faire.</div> <div id="T1p" class="txs">Le fils du roi les pressait d’ouvrir leur porte,</div> <div id="T1q" class="txs">expliquant que le temps était compté,</div> <div id="T1r" class="txs">mais au lieu de l’écouter,</div> <div id="T1s" class="txs">ils continuaient à disserter sur ce qu’il convenait de faire avec la clé.</div> <div id="T1t" class="txs">L’un d’eux était d’avis qu’ils devaient essayer d’en limer certaines parties en la frottant contre le mur.</div> <div id="T1u" class="txs">Un autre pensait qu’en réalité,</div> <div id="T1v" class="txs">l’objet n’était pas une clé.</div> <div id="T1w" class="txs">Car de toute façon,</div> <div id="T1x" class="txs">pourquoi auraient-ils eu besoin d’une clé&nbsp;?</div> <div id="T1y" class="txs">Finalement,</div> <div id="T1z" class="txs">ils ont trouvé le moyen d’en changer la forme.</div> <div id="T1aa" class="txs">Puis,</div> <div id="T1ab" class="txs">ils l’ont essayée dans la serrure.</div> <div id="T1ac" class="txs">Mais elle ne fonctionnait plus!</div> <div id="T1ad" class="txs">Frustrés,</div> <div id="T1ae" class="txs">ils ont commencé à se moquer du prince venu pour les délivrer et à lui reprocher de ne pas leur avoir donné de clé du tout.</div> <div id="T1af" class="txs">Pourtant,</div> <div id="T1ag" class="txs">s’ils lui avaient fait confiance,</div> <div id="T1ah" class="txs">ils auraient recouvré la liberté.</div></div>
+<div class="m"><div id="T1ai" class="txs"><span class="bdit">Conclusion</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T1aj" class="txs"><span class="it">Cette histoire montre que bien des gens,</span></div> <div id="T1ak" class="txs"><span class="it">lorsqu’ils entendent la vérité (le message du salut en Jésus-Christ),</span></div> <div id="T1al" class="txs"><span class="it">en font un mauvais usage.</span></div> <div id="T1am" class="txs"><span class="it">Souvent,</span></div> <div id="T1an" class="txs"><span class="it">ils déforment le message,</span></div> <div id="T1ao" class="txs"><span class="it">à tel point qu’il ne ressemble plus du tout à ce qu’il était au départ.</span></div> <div id="T1ap" class="txs"><span class="it">Dieu a envoyé son Fils Jésus pour sauver chacun.</span></div> <div id="T1aq" class="txs"><span class="it">Il nous remet la clé de la liberté.</span></div> <div id="T1ar" class="txs"><span class="it">Mais si nous ne l’utilisons pas telle qu’elle est,</span></div> <div id="T1as" class="txs"><span class="it">elle ne nous sera d’aucune utilité.</span></div> <div id="T1at" class="txs"><span class="it">Nous ne serons pas libérés mais resterons éternellement prisonniers.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/35 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

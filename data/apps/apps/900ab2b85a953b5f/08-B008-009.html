@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introducción 9</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "08-B008-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='07-B007-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-008.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introducción&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;9&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-010.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B008-image9.jpg" />
+
+<div class="m"><span class="bd">Sabiduría e inteligencia</span></div>
+<div class="m"><span class="it">Sí, Dios nos ha colmado de sus bendiciones. Él nos ha dado a </span><span class="it">todos</span><span class="it"> </span><span class="it">sabiduría</span><span class="it"> y </span><span class="it">entendimiento</span><span class="it">.</span><span class="it"> </span>(Efesios 1, 8).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">¿Qué son la sabiduría y el entendimiento?</span></div>
+<div class="m">La base de la sabiduría y la inteligencia es el conocimiento, es decir, una acumulación de información obtenida a través de la educación o la experiencia. Hay quienes confunden conocimiento, inteligencia y sabiduría. Piensan que el conocimiento conduce automáticamente a la inteligencia e incluso a la sabiduría. Pero para ser considerado inteligente no basta con acumular conocimientos; también hay que entenderlo y saber utilizarlo. Eso es inteligencia. La sabiduría va aún más lejos. Ser sabio significa tener discernimiento cuando y cómo aplicar el conocimiento que has adquirido, y ser capaz de transmitir tu conocimiento y discernimiento a los demás. La Palabra de Dios nos enseña que Dios puede y nos dará inteligencia y sabiduría PERO con el objetivo de conocerlo a él, el Dios vivo, de conocer su plan de salvación y las riquezas que tiene reservadas para nosotros (ver también Efesios 1, 17 a 20).</div>
+<div class="m"><span class="bd">Acciones para convertir la sabiduría y la inteligencia en riquezas en tu vida:</span></div>
+<div class="m"><span class="it">- </span><span class="it">Oración</span><span class="it">:</span><span class="it"> </span>Gracias a Dios por la sabiduría y comprensión que ya te ha dado. Pídale que le muestre cómo usar el conocimiento que ha adquirido en la escuela bíblica, la iglesia, las conferencias y el estudio personal para su gloria. Pídele a Dios que aumente tu inteligencia para que puedas comprender mejor su Palabra y transmitir tus conocimientos a los demás.</div>
+<div class="m"><span class="it">- Lectura de la Biblia:</span><span class="it"> </span>Lee 1 Corintios 1, 18 al 25. Estas palabras del apóstol Pablo nos recuerdan que la sabiduría de Dios es diferente a la de nuestro mundo.</div>
+<div class="m"><span class="it">- </span><span class="it">reflexión</span><span class="it"> personal:</span><span class="it"> </span>La inteligencia y la sabiduría son muy apreciadas y buscadas en nuestro mundo. Pero CUIDADO: no es lo mismo que con Dios. Examina tu corazón con la ayuda del Espíritu Santo para descubrir qué te motiva en tu búsqueda de ampliar tus conocimientos. Recuerda que Dios quiere que busques primero conocerlo.</div>
+<div class="m"><span class="it">- Hacia los demás</span>: Reflexiona sobre lo que has aprendido en las últimas semanas en la iglesia o durante otras enseñanzas. Escriba una lección importante que haya marcado una diferencia en su vida y compártala con un familiar o amigo.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

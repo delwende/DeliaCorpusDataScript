@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saa bi duguma seen bi dug 6</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "6a", start: 136.56, end: 138.04 },
+    { label: "6b", start: 138.29, end: 139.07 },
+    { label: "6c", start: 139.32, end: 142.33 },
+    { label: "6d", start: 142.58, end: 144.47 },
+    { label: "6e", start: 144.72, end: 146.19 },
+    { label: "6f", start: 146.44, end: 150.41 },
+    { label: "6g", start: 150.66, end: 156.1 },
+    { label: "6h", start: 156.35, end: 158.04 },
+    { label: "6i", start: 158.29, end: 159.29 },
+    { label: "6j", start: 159.54, end: 167.86 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 136.56;
+var stopTime  = 167.86;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 29 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-005.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Saa bi duguma seen bi dug&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;6&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-007.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Dioula Proverbes 29-image6.jpg" />
+
+<div class="m"><div id="T6a" class="txs"><span class="bd">N ɲun,</span></div> <div id="T6b" class="txs"><span class="bd">n jigi,</span></div> <div id="T6c" class="txs"><span class="bd">kunlakolontagama ka fisa o bɛɛ ye.</span></div></div>
+<div class="m"><div id="T6d" class="txs"><span class="it">[Charge sur ma tête,</span></div> <div id="T6e" class="txs"><span class="it">décharge-</span><span class="it">moi,</span></div> <div id="T6f" class="txs"><span class="it">marcher sans rien sur ma tête vaut mieux que tout cela.</span></div></div>
+<div class="m"><div id="T6g" class="txs"><span class="bdit">Il ne faut pas chercher de problème là où il y  en n’a pas</span><span class="bdit">]</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T6h" class="txs"><span class="bd">N ɲun,</span></div> <div id="T6i" class="txs"><span class="bd">n jigi,</span></div> <div id="T6j" class="txs"><span class="bd">kunlakolontagama ka fisa o bɛɛ ye.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/dioula Prov 01 a 29 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

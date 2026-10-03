@@ -5,8 +5,9 @@ venv/
 .env
 .DS_Store
 
-# Generated data. Committed: inventory, manifests, page text, PDFs, app text + audio,
-# aligned tables. Kept local only: video, images, APKs, fonts/styles.
+# Generated data. Committed: inventory, manifests, page text, PDFs, app text, aligned tables
+# and the training corpus (corpus/, which holds the audio). Kept local only: video, images,
+# APKs, fonts/styles, and app audio (exported into corpus/speech/<lang>/audio/).
 data/raw/*
 !data/raw/metadata/
 !data/raw/pages/
@@ -19,12 +20,6 @@ data/apps/**
 !data/apps/*.csv
 !data/apps/*.json
 !data/apps/*.jsonl
-!data/apps/**/*.mp3
-!data/apps/**/*.m4a
-!data/apps/**/*.ogg
-!data/apps/**/*.wav
-# IPS apps ship some narration as audio-only (Opus) .webm
-!data/apps/**/*.webm
 !data/apps/**/*.html
 !data/apps/**/*.htm
 !data/apps/**/*.js
@@ -33,4 +28,6 @@ data/apps/**
 !data/apps/**/*.txt
 !data/apps/**/*.vtt
 !data/apps/**/*.srt
+# Same rows as master_units.csv; 75 MB.
+data/aligned/master_units.jsonl
 *.log

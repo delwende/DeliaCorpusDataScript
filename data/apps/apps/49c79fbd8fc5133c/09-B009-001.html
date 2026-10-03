@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ndotti 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.19 },
+    { label: "1b", start: 0.44, end: 9.61 },
+    { label: "1c", start: 9.86, end: 17.27 },
+    { label: "1d", start: 17.52, end: 20.45 },
+    { label: "1e", start: 20.7, end: 22.19 },
+    { label: "1f", start: 22.44, end: 24.09 },
+    { label: "1g", start: 24.34, end: 26.45 },
+    { label: "1h", start: 26.7, end: 41.73 },
+    { label: "1i", start: 41.98, end: 50.11 },
+    { label: "1j", start: 50.36, end: 52.73 },
+    { label: "1k", start: 52.98, end: 56.01 },
+    { label: "1l", start: 56.26, end: 58.43 },
+    { label: "1m", start: 58.68, end: 60.45 },
+    { label: "1n", start: 60.7, end: 82.75 },
+    { label: "1o", start: 83, end: 85.79 },
+    { label: "1p", start: 86.04, end: 90.29 },
+    { label: "1q", start: 90.54, end: 90.67 },
+    { label: "1r", start: 90.92, end: 92.01 },
+    { label: "1s", start: 92.26, end: 95.49 },
+    { label: "1t", start: 95.74, end: 97.99 },
+    { label: "1u", start: 98.24, end: 99.05 },
+    { label: "1v", start: 99.3, end: 120.93 },
+    { label: "1w", start: 121.18, end: 121.99 },
+    { label: "1x", start: 122.24, end: 123.19 },
+    { label: "1y", start: 123.44, end: 131.67 },
+    { label: "1z", start: 131.92, end: 133.61 },
+    { label: "1aa", start: 133.86, end: 134.79 },
+    { label: "1ab", start: 135.04, end: 136.63 },
+    { label: "1ac", start: 136.88, end: 138.09 },
+    { label: "1ad", start: 138.34, end: 159.55 },
+    { label: "1ae", start: 159.8, end: 168.31 },
+    { label: "1af", start: 168.56, end: 170.05 },
+    { label: "1ag", start: 170.3, end: 171.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 171.23;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "09-B009-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='08-B008-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Ndotti&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B009-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetitre"><div id="T1a" class="txs">Ndotti</div></div>
+<div class="p_contetexte"><div id="T1b" class="txs">Goɗɗo gooɗom du wiitaakena Ndotti; mo yaha fa o tawi nyaalel dow tefaare na darii.</div> <div id="T1c" class="txs">Tan o wii ɗum nyaalel, foofoo!</div> <div id="T1d" class="txs">Tan nyaalel wi'i mo "piiciti pooco."</div> <div id="T1e" class="txs">O wi'i piiciti pooco?</div> <div id="T1f" class="txs">Min mbi'ata piiciti pooco?</div> <div id="T1g" class="txs">A faaman ko woni piiciti pooco.</div> <div id="T1h" class="txs">Tan ɗum mettimo; o yehi mbarkileehi, o siri baajel, o wari o tawi nyaalel na darii dow tefaare ton tan, o haɓɓi ɗum.</div></div>
+<div class="p_contetexte"><div id="T1i" class="txs">O haɓɓunoo nyaalel tan, mo jogii mo yaha, mo yaha faa goɗɗo hawri mo.</div> <div id="T1j" class="txs">Tan wi'i ndotti koree jam?</div> <div id="T1k" class="txs">Ndotti wi'i ƴamee nyaalel.</div> <div id="T1l" class="txs">O wi'i nyaalel koree jam?</div> <div id="T1m" class="txs">Tan nyaalel wi'i:</div></div>
+<div class="p_contetexte"><div id="T1n" class="txs"><span class="it">Oo ni tawi kam dow tefaare,</span><span class="it"><br/></span><span class="it">Miɗo fitta e fittugol am, </span><span class="it"><br/></span><span class="it">O wii kam nyaalel foofoo, </span><span class="it"><br/></span><span class="it">Mbii-mi o piiciti pooco, piiciti pooco,</span><span class="it"><br/></span><span class="it">Nyaale poliiɗe pooli,</span><span class="it"><br/></span><span class="it">Jaka ɗum non ndotti ɓeerni,</span><span class="it"><br/></span><span class="it">Siri bajel haɓɓi nyaalel,</span><span class="it"><br/></span><span class="it">Herkiti daangel dow tefaare.</span></div></div>
+<div class="p_contetexte"><div id="T1o" class="txs">Tan ɓe mbittii gadin.</div> <div id="T1p" class="txs">Ɓe njehi ɓe kawrowi goɗɗo gatin.</div> <div id="T1q" class="txs">Ɓi!</div> <div id="T1r" class="txs">koree jam, ndotti?</div> <div id="T1s" class="txs">O wi'i min kay mi anndaa, ƴamee nyaalel.</div> <div id="T1t" class="txs">O wi'i nyaalel, koree jam?</div> <div id="T1u" class="txs">Tan nyaalel wi'i:</div></div>
+<div class="p_contetexte"><div id="T1v" class="txs"><span class="it">Oo ni tawi kam dow tefaare,</span><span class="it"><br/></span><span class="it">Miɗo fitta e fittugol am, </span><span class="it"><br/></span><span class="it">O wii kam nyaalel foofoo, </span><span class="it"><br/></span><span class="it">Mbii-mi o piiciti pooco, piiciti pooco,</span><span class="it"><br/></span><span class="it">Nyaale poliiɗe pooli,</span><span class="it"><br/></span><span class="it">Jaka ɗum non ndotti ɓeerni,</span><span class="it"><br/></span><span class="it">Siri bajel haɓɓi nyaalel,</span><span class="it"><br/></span><span class="it">Herkiti daangel dow tefaare.</span></div></div>
+<div class="p_contetexte"><div id="T1w" class="txs">Ɓe mbitti gadin.</div> <div id="T1x" class="txs">Kawruɗo ɓe fu ƴama.</div> <div id="T1y" class="txs">Faa ɓe njehi nokkuure gooɗom, nyaale na keewi sanne, kurmiti ɓe, mbi'i nyaalel koreei jam?</div> <div id="T1z" class="txs">Nyaalel wi'i ƴamee ndotti.</div> <div id="T1aa" class="txs">Wi'aa ndotti koree jam?</div> <div id="T1ab" class="txs">Ndotti wi'i ƴamee nyaalel.</div> <div id="T1ac" class="txs">Tan nyaalel wi'i ɓe:</div></div>
+<div class="p_contetexte"><div id="T1ad" class="txs"><span class="it">Oo ni tawi kam dow tefaare,</span><span class="it"><br/></span><span class="it">Miɗo fitta e fittugol am, </span><span class="it"><br/></span><span class="it">O wii kam nyaalel foofoo, </span><span class="it"><br/></span><span class="it">Mbii-mi o piiciti pooco, piiciti pooco,</span><span class="it"><br/></span><span class="it">Nyaale poliiɗe pooli,</span><span class="it"><br/></span><span class="it">Jaka ɗum non ndotti ɓeerni,</span><span class="it"><br/></span><span class="it">Siri bajel haɓɓi nyaalel,</span><span class="it"><br/></span><span class="it">Herkiti daangel dow tefaare.</span></div></div>
+<div class="p_contetexte"><div id="T1ae" class="txs">Tan nyaale kurmiti Ndotti, kam en du, coppi ɗum ni, coppi ɗum ni, coppi ɗum ni fa, fa, faa ndotti du waati.</div> <div id="T1af" class="txs">Nde njoppi nyaalel fiiri.</div></div>
+<div class="p_Conteur"><div id="T1ag" class="txs">Tijjaani Ba</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/09_Ndotti.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+var books = [
+  { name: "Le « Dioula facile, Tome", ref: "01-B001-001.html" },
+  { name: "Pages 28 à 29 première", ref: "02-B002-001.html" },
+  { name: "Pages 29 deuxième partie", ref: "03-B003-001.html" },
+  { name: "Pages 31b à 32", ref: "04-B004-001.html" },
+  { name: "Pages 40 à 41", ref: "05-B005-001.html" },
+  { name: "Pages 42 à 44", ref: "06-B006-001.html" },
+  { name: "Pages 45a à 46a", ref: "07-B007-001.html" },
+  { name: "Page 46b", ref: "08-B008-001.html" },
+  { name: "Page 47", ref: "09-B009-001.html" },
+  { name: "Page 54", ref: "10-B010-001.html" },
+  { name: "Pages 56 à 58", ref: "11-B011-001.html" },
+  { name: "Pages 55 et le début de", ref: "12-B012-001.html" },
+  { name: "Pages 62 à 64", ref: "13-B013-001.html" },
+];

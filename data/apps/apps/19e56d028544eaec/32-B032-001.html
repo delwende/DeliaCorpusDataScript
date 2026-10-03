@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>2 Les 8 principes 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.53 },
+    { label: "1b", start: 4.78, end: 8.45 },
+    { label: "1c", start: 8.7, end: 10.51 },
+    { label: "1d", start: 10.76, end: 10.83 },
+    { label: "1e", start: 11.08, end: 13.31 },
+    { label: "1f", start: 13.56, end: 15.67 },
+    { label: "1g", start: 15.92, end: 22.05 },
+    { label: "1h", start: 22.3, end: 24.59 },
+    { label: "1i", start: 24.84, end: 29.35 },
+    { label: "1j", start: 29.6, end: 31.25 },
+    { label: "1k", start: 31.5, end: 34.01 },
+    { label: "1l", start: 34.26, end: 37.67 },
+    { label: "1m", start: 37.92, end: 42.47 },
+    { label: "1n", start: 42.72, end: 46.55 },
+    { label: "1o", start: 46.8, end: 50.39 },
+    { label: "1p", start: 50.64, end: 51.79 },
+    { label: "1q", start: 52.04, end: 55.75 },
+    { label: "1r", start: 56, end: 56.63 },
+    { label: "1s", start: 56.88, end: 59.21 },
+    { label: "1t", start: 59.46, end: 62.25 },
+    { label: "1u", start: 62.5, end: 67.81 },
+    { label: "1v", start: 68.06, end: 77.41 },
+    { label: "1w", start: 77.66, end: 81.69 },
+    { label: "1x", start: 81.94, end: 84.69 },
+    { label: "1y", start: 84.94, end: 86.87 },
+    { label: "1z", start: 87.12, end: 89.31 },
+    { label: "1aa", start: 89.56, end: 92.31 },
+    { label: "1ab", start: 92.56, end: 97.97 },
+    { label: "1ac", start: 98.22, end: 102.91 },
+    { label: "1ad", start: 103.16, end: 105.57 },
+    { label: "1ae", start: 105.82, end: 107.73 },
+    { label: "1af", start: 107.98, end: 109.51 },
+    { label: "1ag", start: 109.76, end: 113.45 },
+    { label: "1ah", start: 113.7, end: 115.23 },
+    { label: "1ai", start: 115.48, end: 118.51 },
+    { label: "1aj", start: 118.76, end: 120.65 },
+    { label: "1ak", start: 120.9, end: 121.55 },
+    { label: "1al", start: 121.8, end: 122.81 },
+    { label: "1am", start: 123.06, end: 125.53 },
+    { label: "1an", start: 125.78, end: 133.41 },
+    { label: "1ao", start: 133.66, end: 135.17 },
+    { label: "1ap", start: 135.42, end: 143.31 },
+    { label: "1aq", start: 143.56, end: 145.61 },
+    { label: "1ar", start: 145.86, end: 146.51 },
+    { label: "1as", start: 146.76, end: 148.45 },
+    { label: "1at", start: 148.7, end: 151.89 },
+    { label: "1au", start: 152.14, end: 156.27 },
+    { label: "1av", start: 156.52, end: 157.31 },
+    { label: "1aw", start: 157.56, end: 161.13 },
+    { label: "1ax", start: 161.38, end: 163.63 },
+    { label: "1ay", start: 163.88, end: 168.07 },
+    { label: "1az", start: 168.32, end: 173.79 },
+    { label: "1ba", start: 174.04, end: 176.39 },
+    { label: "1bb", start: 176.64, end: 182.09 },
+    { label: "1bc", start: 182.34, end: 186.59 },
+    { label: "1bd", start: 186.84, end: 187.97 },
+    { label: "1be", start: 188.22, end: 191.75 },
+    { label: "1bf", start: 192, end: 196.15 },
+    { label: "1bg", start: 196.4, end: 198.09 },
+    { label: "1bh", start: 198.34, end: 201.69 },
+    { label: "1bi", start: 201.94, end: 204.87 },
+    { label: "1bj", start: 205.12, end: 216.09 },
+    { label: "1bk", start: 216.34, end: 217.65 },
+    { label: "1bl", start: 217.9, end: 221.99 },
+    { label: "1bm", start: 222.24, end: 222.89 },
+    { label: "1bn", start: 223.14, end: 227.29 },
+    { label: "1bo", start: 227.54, end: 235.57 },
+    { label: "1bp", start: 235.82, end: 239.27 },
+    { label: "1bq", start: 239.52, end: 242.39 },
+    { label: "1br", start: 242.64, end: 246.99 },
+    { label: "1bs", start: 247.24, end: 248.73 },
+    { label: "1bt", start: 248.98, end: 250.93 },
+    { label: "1bu", start: 251.18, end: 259.55 },
+    { label: "1bv", start: 259.8, end: 263.81 },
+    { label: "1bw", start: 264.06, end: 267.91 },
+    { label: "1bx", start: 268.16, end: 272.29 },
+    { label: "1by", start: 272.54, end: 276.91 },
+    { label: "1bz", start: 277.16, end: 283.47 },
+    { label: "1ca", start: 283.72, end: 287.85 },
+    { label: "1cb", start: 288.1, end: 289.29 },
+    { label: "1cc", start: 289.54, end: 291.93 },
+    { label: "1cd", start: 292.18, end: 294.71 },
+    { label: "1ce", start: 294.96, end: 299.17 },
+    { label: "1cf", start: 299.42, end: 303.25 },
+    { label: "1cg", start: 303.5, end: 304.55 },
+    { label: "1ch", start: 304.8, end: 305.45 },
+    { label: "1ci", start: 305.7, end: 306.81 },
+    { label: "1cj", start: 307.06, end: 309.69 },
+    { label: "1ck", start: 309.94, end: 311.87 },
+    { label: "1cl", start: 312.12, end: 315.37 },
+    { label: "1cm", start: 315.62, end: 317.69 },
+    { label: "1cn", start: 317.94, end: 320.43 },
+    { label: "1co", start: 320.68, end: 325.07 },
+    { label: "1cp", start: 325.32, end: 327.15 },
+    { label: "1cq", start: 327.4, end: 333.87 },
+    { label: "1cr", start: 334.12, end: 335.41 },
+    { label: "1cs", start: 335.66, end: 345.03 },
+    { label: "1ct", start: 345.28, end: 350.09 },
+    { label: "1cu", start: 350.34, end: 356.83 },
+    { label: "1cv", start: 357.08, end: 357.89 },
+    { label: "1cw", start: 358.14, end: 360.25 },
+    { label: "1cx", start: 360.5, end: 361.57 },
+    { label: "1cy", start: 361.82, end: 362.59 },
+    { label: "1cz", start: 362.84, end: 366.67 },
+    { label: "1da", start: 366.92, end: 373.79 },
+    { label: "1db", start: 374.04, end: 376.51 },
+    { label: "1dc", start: 376.76, end: 379.93 },
+    { label: "1dd", start: 380.18, end: 384.33 },
+    { label: "1de", start: 384.58, end: 388.83 },
+    { label: "1df", start: 389.08, end: 394.23 },
+    { label: "1dg", start: 394.48, end: 400.91 },
+    { label: "1dh", start: 401.16, end: 408.11 },
+    { label: "1di", start: 408.36, end: 412.67 },
+    { label: "1dj", start: 412.92, end: 415.87 },
+    { label: "1dk", start: 416.12, end: 419.21 },
+    { label: "1dl", start: 419.46, end: 420.03 },
+    { label: "1dm", start: 420.28, end: 422.43 },
+    { label: "1dn", start: 422.68, end: 428.95 },
+    { label: "1do", start: 429.2, end: 431.25 },
+    { label: "1dp", start: 431.5, end: 432.37 },
+    { label: "1dq", start: 432.62, end: 435.19 },
+    { label: "1dr", start: 435.44, end: 436.47 },
+    { label: "1ds", start: 436.72, end: 440.13 },
+    { label: "1dt", start: 440.38, end: 441.55 },
+    { label: "1du", start: 441.8, end: 448.75 },
+    { label: "1dv", start: 449, end: 453.65 },
+    { label: "1dw", start: 453.9, end: 454.61 },
+    { label: "1dx", start: 454.86, end: 455.97 },
+    { label: "1dy", start: 456.22, end: 458.09 },
+    { label: "1dz", start: 458.34, end: 459.23 },
+    { label: "1ea", start: 459.48, end: 464.37 },
+    { label: "1eb", start: 464.62, end: 468.07 },
+    { label: "1ec", start: 468.32, end: 471.53 },
+    { label: "1ed", start: 471.78, end: 477.03 },
+    { label: "1ee", start: 477.28, end: 480.89 },
+    { label: "1ef", start: 481.14, end: 485.09 },
+    { label: "1eg", start: 485.34, end: 488.91 },
+    { label: "1eh", start: 489.16, end: 491.83 },
+    { label: "1ei", start: 492.08, end: 493.01 },
+    { label: "1ej", start: 493.26, end: 495.73 },
+    { label: "1ek", start: 495.98, end: 498.23 },
+    { label: "1el", start: 498.48, end: 500.31 },
+    { label: "1em", start: 500.56, end: 503.59 },
+    { label: "1en", start: 503.84, end: 508.37 },
+    { label: "1eo", start: 508.62, end: 512.51 },
+    { label: "1ep", start: 512.76, end: 514.95 },
+    { label: "1eq", start: 515.2, end: 522.27 },
+    { label: "1er", start: 522.52, end: 526.15 },
+    { label: "1es", start: 526.4, end: 529.57 },
+    { label: "1et", start: 529.82, end: 531.65 },
+    { label: "1eu", start: 531.9, end: 532.69 },
+    { label: "1ev", start: 532.94, end: 533.67 },
+    { label: "1ew", start: 533.92, end: 536.25 },
+    { label: "1ex", start: 536.5, end: 539.51 },
+    { label: "1ey", start: 539.76, end: 542.09 },
+    { label: "1ez", start: 542.34, end: 543.11 },
+    { label: "1fa", start: 543.36, end: 544.41 },
+    { label: "1fb", start: 544.66, end: 548.15 },
+    { label: "1fc", start: 548.4, end: 557.03 },
+    { label: "1fd", start: 557.28, end: 561.69 },
+    { label: "1fe", start: 561.94, end: 565.05 },
+    { label: "1ff", start: 565.3, end: 568.03 },
+    { label: "1fg", start: 568.28, end: 569.93 },
+    { label: "1fh", start: 570.18, end: 575.95 },
+    { label: "1fi", start: 576.2, end: 577.85 },
+    { label: "1fj", start: 578.1, end: 580.93 },
+    { label: "1fk", start: 581.18, end: 588.41 },
+    { label: "1fl", start: 588.66, end: 595.91 },
+    { label: "1fm", start: 596.16, end: 599.89 },
+    { label: "1fn", start: 600.14, end: 601.09 },
+    { label: "1fo", start: 601.34, end: 604.33 },
+    { label: "1fp", start: 604.58, end: 606.83 },
+    { label: "1fq", start: 607.08, end: 609.67 },
+    { label: "1fr", start: 609.92, end: 612.25 },
+    { label: "1fs", start: 612.5, end: 615.27 },
+    { label: "1ft", start: 615.52, end: 620.57 },
+    { label: "1fu", start: 620.82, end: 624.89 },
+    { label: "1fv", start: 625.14, end: 635.65 },
+    { label: "1fw", start: 635.9, end: 639.27 },
+    { label: "1fx", start: 639.52, end: 645.15 },
+    { label: "1fy", start: 645.4, end: 646.97 },
+    { label: "1fz", start: 647.22, end: 649.85 },
+    { label: "1ga", start: 650.1, end: 650.75 },
+    { label: "1gb", start: 651, end: 655.21 },
+    { label: "1gc", start: 655.46, end: 658.69 },
+    { label: "1gd", start: 658.94, end: 660.99 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 660.99;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "32-B032-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='31-B031-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='31-B031-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2 Les 8 principes&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='33-B033-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='33-B033-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B032-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">2</span><span class="bd"> Les 8 principes fondamentaux d’une bonne gérance</span><span class="bd"> </span><span class="bd">:</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">1)</span><span class="bd"> Tout ce que nous possédons appartient à Dieu.</span></div></div>
+<div class="m"><div id="T1c" class="txs">Lisez 1 Chroniques 29&nbsp;:</div> <div id="T1d" class="txs">11,</div> <div id="T1e" class="txs">versets 12 et 14.</div> <div id="T1f" class="txs">Psaume 89, 11 et 12).</div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que ce verset signifie pour votre vie quotidienne comme couple&nbsp;?</span></div></div>
+<div class="m"><div id="T1h" class="txs"><span class="it">Nous sommes les administrateurs de tous nos biens.</span></div> <div id="T1i" class="txs"><span class="it">Nous devons utiliser nos ressources avec beaucoup de prière et de soin,</span></div> <div id="T1j" class="txs"><span class="it">comme Dieu lui-même le veut,</span></div><div id="T1k" class="txs"><span class="it">non</span><span class="it"> selon nos propres désirs.</span></div> <div id="T1l" class="txs"><span class="it">Il faut gérer les biens ensemble devant Dieu&nbsp;!</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">2)</span><span class="bd"> De nombreuses choses sont plus précieuses que l’or.</span></div></div>
+<div class="m"><div id="T1n" class="txs"><span class="it">Lisez Matthieu</span> 16, 26 ;</div> <div id="T1o" class="txs">«&nbsp;<span class="it">Que servira-t-il à un homme de gagner le monde entier,</span></div> <div id="T1p" class="txs"><span class="it">s'il perd son âme</span><span class="it"> </span><span class="it">?</span></div> <div id="T1q" class="txs"><span class="it">Ou que pourra donner un homme en échange de son âme</span><span class="it"> </span><span class="it">?</span></div> <div id="T1r" class="txs"><span class="it">...</span></div><div id="T1s" class="txs"><span class="it">.</span></div></div>
+<div class="m"><div id="T1t" class="txs"><span class="it">Proverbe</span><span class="it"> </span><span class="it">16</span><span class="it">,</span></div><div id="T1u" class="txs"><span class="it"> </span><span class="it">16 ;</span></div> <div id="T1v" class="txs"><span class="it">Il vaut mieux posséder la sagesse que de </span><span class="it">l’or…</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que ces versets signifient en vue du travail quotidien et de l’éducation de nos enfants&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">3)</span><span class="bd"> Dieu s’attend à ce que nous utilisions pleinement la force et l’habileté qu’il nous a données pour travailler avec honnêteté.</span></div></div>
+<div class="m"><div id="T1y" class="txs">Dieu aime et récompense celui qui travaille dans l’honnêteté.</div> <div id="T1z" class="txs">(2 Thessaloniciens 3,</div> <div id="T1aa" class="txs">versets 6 à 13)</div></div>
+<div class="m"><div id="T1ab" class="txs">En Genèse 1,</div> <div id="T1ac" class="txs">nous découvrons la manière dont Dieu a travaillé.</div> <div id="T1ad" class="txs">Ce passage doit nous servir de référence de la façon dont nous devons travailler.</div></div>
+<div class="m"><div id="T1ae" class="txs">En lisant dans Proverbes 6, 6 à 11 :</div></div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Que font les fourmis d'extraordinaire&nbsp;?</span></div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="it">Elles travaillent sans chef,</span></div> <div id="T1ah" class="txs"><span class="it">sans surveillance,</span></div> <div id="T1ai" class="txs"><span class="it">pendant la bonne saison elles amassent de la nourriture,</span></div> <div id="T1aj" class="txs"><span class="it">elles font des réserves…</span></div></div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que cet exemple nous enseigne dans la vie du couple&nbsp;?</span></div></div>
+<div class="m"><div id="T1al" class="txs"><span class="it">Il faut travailler sérieusement,</span></div> <div id="T1am" class="txs"><span class="it">honnêtement,</span></div> <div id="T1an" class="txs"><span class="it">sans tricherie,</span></div> <div id="T1ao" class="txs"><span class="it">bien gérer et préparer les réserves&nbsp;!</span></div></div>
+<div class="m"><div id="T1ap" class="txs">En Matthieu 25, 16-28 Jésus nous raconte la parabole des talents.</div> <div id="T1aq" class="txs">Dans cette parabole,</div> <div id="T1ar" class="txs">l’argent donné aux trois serviteurs ne leur appartenait pas et ne devait pas être utilisé selon leur bon plaisir,</div> <div id="T1as" class="txs">mais pour le service du maître.</div> <div id="T1at" class="txs">De même,</div> <div id="T1au" class="txs">quand Dieu nous donne des capacités,</div> <div id="T1av" class="txs">ce n’est pas pour satisfaire nos désirs égoïstes.</div> <div id="T1aw" class="txs">Les talents nous ont été donnés par Dieu pour sa gloire et son service.</div> <div id="T1ax" class="txs">Donc,</div> <div id="T1ay" class="txs">tous les dons sont importants pour soutenir l’œuvre de Dieu.</div></div>
+<div class="m"><div id="T1az" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quels dons avez-vous comme couple&nbsp;?</span></div></div>
+<div class="m"><div id="T1ba" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment gérez-vous vos dons en tant que couple pour le service de Dieu&nbsp;?</span></div></div>
+<div class="m"><div id="T1bb" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Vous soutenez-vous l’un l’autre pour que ses dons soient bien utilisés&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bc" class="txs"><span class="bd">4)</span><span class="bd"> </span><span class="bd">La convoitise,</span></div> <div id="T1bd" class="txs"><span class="bd">le mécontentement et l’inquiétude au sujet des choses matérielles sont des péchés.</span></div></div>
+<div class="m"><div id="T1be" class="txs">En Luc 12, 15 Jésus dit :</div> <div id="T1bf" class="txs">«&nbsp;<span class="it">Attention&nbsp;!</span></div> <div id="T1bg" class="txs"><span class="it">Ne cherchez pas à avoir toujours plus de choses.</span></div> <div id="T1bh" class="txs"><span class="it">En effet la vie de quelqu’un ne dépend pas de ce qu’il possède,</span></div> <div id="T1bi" class="txs"><span class="it">même s’il est très riche </span>».</div></div>
+<div class="m"><div id="T1bj" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Vous arrive-t-il de vivre cette situation décrite&nbsp;?</span></div></div>
+<div class="m"><div id="T1bk" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelles sont vos priorités dans vos achats&nbsp;?</span></div></div>
+<div class="m"><div id="T1bl" class="txs">Considérez ce qu’impliquent ces versets quant au désir d’égaler les autres dans leur recherche de possessions toujours nouvelles et plus éclatantes,</div> <div id="T1bm" class="txs">dans l’achat d’appareils,</div> <div id="T1bn" class="txs">de vêtements et objets divers qui ne sont pas vraiment nécessaires,</div> <div id="T1bo" class="txs">etc.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bp" class="txs"><span class="bd">5)</span><span class="bd"> Donner au Seigneur est un privilège</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1bq" class="txs">Lisez Malachie 3, 10 et 1 Timothée 5, 17 à 18</div></div>
+<div class="m"><div id="T1br" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Pourquoi faut-il donner le dixième de nos biens à Dieu&nbsp;?</span></div></div>
+<div class="m"><div id="T1bs" class="txs"><span class="it">Nous sommes les administrateurs de tous nos biens.</span></div> <div id="T1bt" class="txs"><span class="it">Nous devons utiliser nos ressources avec beaucoup de prière et de soin,</span></div> <div id="T1bu" class="txs"><span class="it">comme Dieu lui-même le veut,</span></div> <div id="T1bv" class="txs"><span class="it">non selon nos propres désirs.</span></div> <div id="T1bw" class="txs"><span class="it">Les Ecritures indiquent clairement qu’une partie de notre argent doit revenir à Dieu et servir à soutenir les ministères de l’Eglise.</span></div> <div id="T1bx" class="txs"><span class="it">Il faut le faire de façon régulière et de bon cœur,</span></div> <div id="T1by" class="txs"><span class="it">d’une manière réfléchie et en fonction de nos revenus.</span></div> <div id="T1bz" class="txs"><span class="it">Il faut apporter ses dîmes et ses offrandes à l’église.</span></div></div>
+<div class="m"><div id="T1ca" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Discutez de ces versets et tirez une conclusion pour votre vie.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cb" class="txs"><span class="bd">6)</span><span class="bd"> Nous devons vivre selon nos revenus et éviter de nous endetter</span></div></div>
+<div class="m"><div id="T1cc" class="txs">En Proverbes 6, 1 à 3 il est écrit :</div> <div id="T1cd" class="txs">«&nbsp;<span class="it">Mon fils,</span></div> <div id="T1ce" class="txs"><span class="it">si tu as cautionné ton prochain,</span></div> <div id="T1cf" class="txs"><span class="it">si tu t’es engagé pour autrui,</span></div> <div id="T1cg" class="txs"><span class="it">si tu es enlacé par les paroles de ta bouche,</span></div> <div id="T1ch" class="txs"><span class="it">si tu es pris par les paroles de ta bouche,</span></div> <div id="T1ci" class="txs"><span class="it">fais donc ceci,</span></div> <div id="T1cj" class="txs"><span class="it">mon fils,</span></div> <div id="T1ck" class="txs"><span class="it">dégage- toi</span>…&nbsp;»</div></div>
+<div class="m"><div id="T1cl" class="txs">Proverbes 22, 7 :</div> <div id="T1cm" class="txs">«&nbsp;<span class="it">Le riche domine sur les pauvres,</span></div> <div id="T1cn" class="txs"><span class="it">et celui qui emprunte est l’esclave de celui qui prête</span>&nbsp;».</div></div>
+<div class="m"><div id="T1co" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que ces versets nous enseignent&nbsp;?</span></div></div>
+<div class="m"><div id="T1cp" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Avez-vous l’habitude de cautionner quelqu’un&nbsp;?</span></div></div>
+<div class="m"><div id="T1cq" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Avez-vous l’habitude de demander des prêts (bons) ou des avances&nbsp;?</span></div></div>
+<div class="m"><div id="T1cr" class="txs">Ces versets sont un avertissement :</div> <div id="T1cs" class="txs">nous ne devrions pas nous placer dans une situation où nous devons rembourser une dette qui dépasse nos moyens.</div> <div id="T1ct" class="txs">Selon ce passage,</div> <div id="T1cu" class="txs">nous ne devrions pas prendre d’engagements financiers irresponsables ou contracter des dettes qu’il nous serait difficile voire impossible de rembourser.</div></div>
+<div class="m"><div id="T1cv" class="txs">D’autres passages bibliques indiquent qu’il est légitime d’emprunter dans une certaine mesure.</div> <div id="T1cw" class="txs">Par exemple Jésus dit en Matthieu 5, 42 «&nbsp;<span class="it">Quand on te demande quelque chose,</span></div> <div id="T1cx" class="txs"><span class="it">donne-le.</span></div> <div id="T1cy" class="txs"><span class="it">Quand on veut t'emprunter quelque chose,</span></div> <div id="T1cz" class="txs"><span class="it">ne tourne pas le dos</span>&nbsp;».</div></div>
+<div class="m"><div id="T1da" class="txs">Cependant,</div> <div id="T1db" class="txs">les écritures nous mettent en garde d’éviter les emprunts excessifs,</div> <div id="T1dc" class="txs">ou les dettes qui deviennent si lourdes de nature à nous faire perdre notre liberté (financière ou autre).</div></div>
+<div class="m"><div id="T1dd" class="txs">Pour nous aider à gérer les problèmes financiers,</div> <div id="T1de" class="txs">nous encourageons les couples à mettre de l’argent de côté,</div> <div id="T1df" class="txs">à épargner avant de s’acheter un objet ou de faire une dépense,</div> <div id="T1dg" class="txs">plutôt que de prendre une dette qu’on devra ensuite rembourser.</div> <div id="T1dh" class="txs">Si on est capable de mettre de côté un peu chaque mois pour rembourser une dette,</div> <div id="T1di" class="txs">alors on devrait aussi être capable de mettre de côté un peu chaque mois pour épargner&nbsp;!</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dj" class="txs"><span class="bd">7)</span><span class="bd"> Donner aux gens dans le besoin est un privilège et un investissement aussi bien qu’une responsabilité.</span></div></div>
+<div class="m"><div id="T1dk" class="txs">Lisez Luc 6, 38 :</div> <div id="T1dl" class="txs">«&nbsp;<span class="it">Donnez et il vous sera donné (vous recevrez des dons) :</span></div> <div id="T1dm" class="txs"><span class="it">on versera dans votre sein une bonne mesure,</span></div> <div id="T1dn" class="txs"><span class="it">serrée,</span></div> <div id="T1do" class="txs"><span class="it">secouée et qui déborde</span>&nbsp;».</div></div>
+<div class="m"><div id="T1dp" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelles sont vos coutumes et vos habitudes au sujet les demandes de vos familles et de vos amis&nbsp;?</span></div></div>
+<div class="m"><div id="T1dq" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Y a-t-il des limites à cette générosité&nbsp;?</span></div> <div id="T1dr" class="txs"><span class="bd">Lesquelles&nbsp;?</span></div></div>
+<div class="m"><div id="T1ds" class="txs">Genèse 2, 24 :</div> <div id="T1dt" class="txs">En tant que parents,</div> <div id="T1du" class="txs">nous sommes les premiers responsables de notre propre famille.</div> <div id="T1dv" class="txs">Dans une famille,</div> <div id="T1dw" class="txs">la priorité est accordée au couple et à leurs enfants après viennent les parents et la famille élargie.</div> <div id="T1dx" class="txs">Ils doivent savoir quels sont les besoins de leur propre famille (la nourriture,</div> <div id="T1dy" class="txs">les habits,</div> <div id="T1dz" class="txs">l’écolage,</div> <div id="T1ea" class="txs">les traitements en cas de la maladie,</div> <div id="T1eb" class="txs">etc.),</div> <div id="T1ec" class="txs">et assumer leur responsabilité en cherchant les moyens pour satisfaire ces besoins.</div></div>
+<div class="m"><div id="T1ed" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Lisez 1Timothée 5</span><span class="bd">,</span></div><div id="T1ee" class="txs"><span class="bd">8 :</span></div> <div id="T1ef" class="txs"><span class="bd">discutez de cette pensée par rapport à vos habitudes.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1eg" class="txs"><span class="bd">8)</span><span class="bd"> </span><span class="bd">Il faut planifier comment nous gagnerons et dépenserons notre argent.</span></div></div>
+<div class="m"><div id="T1eh" class="txs">Lisez Proverbes 20, 18 :</div> <div id="T1ei" class="txs">«&nbsp;<span class="it">Grâce à de bons conseils on réalise ses projets.</span></div> <div id="T1ej" class="txs"><span class="it">Calcule bien ton affaire si tu pars en guerre</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ek" class="txs">Luc 14, 28 :</div> <div id="T1el" class="txs">«&nbsp;<span class="it">En effet,</span></div> <div id="T1em" class="txs"><span class="it">quand un de vous veut construire une maison,</span></div> <div id="T1en" class="txs"><span class="it">il commence par s’asseoir et calculer</span>&nbsp;».</div> <div id="T1eo" class="txs">Combien est-ce que cela va coûter&nbsp;?</div> <div id="T1ep" class="txs">Est-ce que j’ai assez d’argent pour aller jusqu’au bout&nbsp;?</div> <div id="T1eq" class="txs">Ce verset ne parle pas principalement de la planification financière,</div> <div id="T1er" class="txs">mais Jésus parle en faveur de l’homme qui calcule avant de bâtir.</div></div>
+<div class="m"><div id="T1es" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que ces versets expriment&nbsp;?</span></div></div>
+<div class="m"><div id="T1et" class="txs"><span class="it">Ces versets enseignent clairement l’importance de bien planifier et administrer avec soin nos ressources.</span></div></div>
+<div class="m"><div id="T1eu" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Si vous avez un bas-fond et si vous récoltez le riz,</span></div> <div id="T1ev" class="txs"><span class="bd">qu’est-ce que ces versets disent sur la bonne gestion&nbsp;?</span></div></div>
+<div class="m"><div id="T1ew" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Si vous possédez des bâtiments,</span></div> <div id="T1ex" class="txs"><span class="bd">des terrains,</span></div> <div id="T1ey" class="txs"><span class="bd">des puits,</span></div> <div id="T1ez" class="txs"><span class="bd">des véhicules ou n’importe quoi,</span></div> <div id="T1fa" class="txs"><span class="bd">qu’est-ce que ces versets disent concernant l’entretien&nbsp;?</span></div></div>
+<div class="m"><div id="T1fb" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment entretenez-vous votre maison&nbsp;?</span></div> <div id="T1fc" class="txs"><span class="bd">Vos habits,</span></div> <div id="T1fd" class="txs"><span class="bd">etc.</span></div> <div id="T1fe" class="txs"><span class="bd">S’il y en a un trou dans une tôle qu’est-ce que vous faites&nbsp;?</span></div></div>
+<div class="m"><div id="T1ff" class="txs"><span class="it">Si on répare le dégât tout de suite il ne va pas grandir mais si on le laisse il grandira et la réparation coûtera plus cher.</span></div></div>
+<div class="m"><div id="T1fg" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelle possibilité existe-t-il pour garder l’argent et pour épargner&nbsp;?</span></div></div>
+<div class="m"><div id="T1fh" class="txs"><span class="it">On pourrait préparer des enveloppes pour chaque cas.</span></div> <div id="T1fi" class="txs"><span class="it">On met l’argent dedans après le calcul.</span></div> <div id="T1fj" class="txs"><span class="it">Pour les dépenses annuelles,</span></div> <div id="T1fk" class="txs"><span class="it">on ajoute chaque mois le montant après le calcul et s’il faut payer l’écolage pour les enfants,</span></div> <div id="T1fl" class="txs"><span class="it">on a assez économisé,</span></div> <div id="T1fm" class="txs"><span class="it">ce qui veut dire qu’on est prêt pour les achats.</span></div> <div id="T1fn" class="txs"><span class="it">Mais il faut vraiment ne pas utiliser les enveloppes pour d’autres choses que ce qui a été planifié et déterminé.</span></div></div>
+<div class="m"><div id="T1fo" class="txs"><span class="it">Pour les demandes et le besoin des amis et de la famille élargie on pourrait aussi prévoir une enveloppe.</span></div> <div id="T1fp" class="txs"><span class="it">Mais si celle-ci est vide on doit arrêter de donner.</span></div> <div id="T1fq" class="txs"><span class="it">C’est difficile,</span></div> <div id="T1fr" class="txs"><span class="it">mais c’est important qu’on respecte cette limite,</span></div> <div id="T1fs" class="txs"><span class="it">sinon la planification est inutile&nbsp;!</span></div></div>
+<div class="m"><div id="T1ft" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que vous pensez de ces propositions&nbsp;?</span></div></div>
+<div class="m"><div id="T1fu" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment voudriez-vous répondre à cela&nbsp;?</span></div></div>
+<div class="m"><div id="T1fv" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Si vous pensez que ce sont de bonnes propositions,</span></div> <div id="T1fw" class="txs"><span class="bd">comment allez-vous faire pour les mettre en pratique dans la gestion des biens de votre famille&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1fx" class="txs">Voilà donc quelques aspects d’une pensée biblique concernant l’argent.</div> <div id="T1fy" class="txs">Vous faites un grand pas vers l’unité lorsque vous considérez ces principes dans le détail et que vous les appliquez de façon très précise à chaque situation.</div></div>
+<div class="m"><div id="T1fz" class="txs">Une pensée biblique face à l’argent est essentielle :</div> <div id="T1ga" class="txs">c’est le fondement indispensable aux époux qui désirent être unis sur le plan financier.</div> <div id="T1gb" class="txs">Sans un bon fondement,</div> <div id="T1gc" class="txs">impossible de construire un bâtiment solide.</div></div>
+<div class="m"><div id="T1gd" class="txs">Pourtant, le fondement n’est qu’une partie du bâtiment - son commencement seulement. Si on n’érige pas de structure par-dessus, il a bien peu d’utilité.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/27 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/27 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/27 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

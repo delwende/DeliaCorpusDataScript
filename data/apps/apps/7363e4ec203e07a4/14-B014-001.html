@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°13 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.87 },
+    { label: "1b", start: 2.12, end: 4.69 },
+    { label: "1c", start: 4.94, end: 6.09 },
+    { label: "1d", start: 6.34, end: 8.71 },
+    { label: "1e", start: 8.96, end: 13.59 },
+    { label: "1f", start: 13.84, end: 16.79 },
+    { label: "1g", start: 17.04, end: 20.23 },
+    { label: "1h", start: 20.48, end: 22.89 },
+    { label: "1i", start: 23.14, end: 26.29 },
+    { label: "1j", start: 26.54, end: 28.97 },
+    { label: "1k", start: 29.22, end: 34.71 },
+    { label: "1l", start: 34.96, end: 41.03 },
+    { label: "1m", start: 41.28, end: 42.29 },
+    { label: "1n", start: 42.54, end: 47.29 },
+    { label: "1o", start: 47.54, end: 49.63 },
+    { label: "1p", start: 49.88, end: 53.35 },
+    { label: "1q", start: 53.6, end: 56.85 },
+    { label: "1r", start: 57.1, end: 62.07 },
+    { label: "1s", start: 62.32, end: 64.33 },
+    { label: "1t", start: 64.58, end: 70.93 },
+    { label: "1u", start: 71.18, end: 77.79 },
+    { label: "1v", start: 78.04, end: 80.59 },
+    { label: "1w", start: 80.84, end: 86.31 },
+    { label: "1x", start: 86.56, end: 88.73 },
+    { label: "1y", start: 88.98, end: 91.21 },
+    { label: "1z", start: 91.46, end: 96.23 },
+    { label: "1aa", start: 96.48, end: 97.73 },
+    { label: "1ab", start: 97.98, end: 101.27 },
+    { label: "1ac", start: 101.52, end: 103.79 },
+    { label: "1ad", start: 104.04, end: 106.37 },
+    { label: "1ae", start: 106.62, end: 110.23 },
+    { label: "1af", start: 110.48, end: 112.47 },
+    { label: "1ag", start: 112.72, end: 115.03 },
+    { label: "1ah", start: 115.28, end: 116.63 },
+    { label: "1ai", start: 116.88, end: 118.13 },
+    { label: "1aj", start: 118.38, end: 119.91 },
+    { label: "1ak", start: 120.16, end: 123.99 },
+    { label: "1al", start: 124.24, end: 125.07 },
+    { label: "1am", start: 125.32, end: 128.85 },
+    { label: "1an", start: 129.1, end: 130.47 },
+    { label: "1ao", start: 130.72, end: 132.33 },
+    { label: "1ap", start: 132.58, end: 134.27 },
+    { label: "1aq", start: 134.52, end: 139.67 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 139.67;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "14-B014-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='13-B013-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°13&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B014-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°13 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Ne vivez pas en dessus de vos moyens.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="it">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">A la sortie d’une réunion d’église,</span></div> <div id="T1e" class="txs"><span class="it">Jeanne vend des pagnes qu’elle a ramené d’un voyage à l’intérieur du pays.</span></div> <div id="T1f" class="txs"><span class="it">Bénédicte les trouve très beaux.</span></div> <div id="T1g" class="txs"><span class="it">Jeanne demande 9’000 CFA pour un complet.</span></div> <div id="T1h" class="txs"><span class="it">Bénédicte n’a pas d’argent avec elle.</span></div> <div id="T1i" class="txs"><span class="it">Elle sait qu’elle a un peu d’argent à la maison,</span></div> <div id="T1j" class="txs"><span class="it">mais pas assez pour payer les pagnes.</span></div> <div id="T1k" class="txs"><span class="it">Elle sait qu’elle a d’autres dépenses à faire bientôt car la fête de Noël approche.</span></div> <div id="T1l" class="txs"><span class="it">Elle va causer avec Jeanne et lui dit qu’elle paiera les pagnes dans un ou deux mois.</span></div> <div id="T1m" class="txs"><span class="it">Jeanne accepte.</span></div> <div id="T1n" class="txs"><span class="it">Bénédicte est tellement contente de rentrer à la maison avec ces nouveaux pagnes!</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1o" class="txs">Que pensez-vous de cette histoire?</div> <div id="T1p" class="txs">Ressemble-t-elle à des situations que vous connaissez?</div></div>
+<div class="p_Corpsdetexte"><div id="T1q" class="txs">Bénédicte avait-elle l’argent pour payer les pagnes?</div> <div id="T1r" class="txs">Était-il sage de prendre les pagnes si elle ne pouvait pas les payer?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1s" class="txs">Vivre au-dessus de ses moyens,</div> <div id="T1t" class="txs">cela veut dire désirer et chercher à avoir des choses que nous ne pouvons pas nous payer :</div> <div id="T1u" class="txs">nous n’avons pas d’argent pour payer quelque chose mais nous cherchons quand même à avoir cette chose.</div></div>
+<div class="p_Corpsdetexte"><div id="T1v" class="txs">Cela peut causer de grands problèmes :</div></div>
+<div class="m"><div id="T1w" class="txs">Cela nous pousse à emprunter mais souvent nous n’arrivons pas à rembourser.</div></div>
+<div class="m"><div id="T1x" class="txs">Cela nous pousse à mentir :</div> <div id="T1y" class="txs">nous disons que nous paierons plus tard,</div> <div id="T1z" class="txs">pourtant nous savons très bien que nous n’aurons pas l’argent plus tard pour payer.</div></div>
+<div class="m"><div id="T1aa" class="txs">A cause de nous,</div> <div id="T1ab" class="txs">d’autres personnes se retrouvent dans des mauvaises situations.</div> <div id="T1ac" class="txs">Pour reprendre notre histoire,</div> <div id="T1ad" class="txs">si Joséphine ne paie pas le pagne,</div> <div id="T1ae" class="txs">c’est Jeanne qui aura des problèmes avec son commerce de pagnes.</div></div>
+<div class="m"><div id="T1af" class="txs">Cela fait du mal aux relations :</div> <div id="T1ag" class="txs">tant que nous avons des dettes chez quelqu’un,</div> <div id="T1ah" class="txs">nous allons l’éviter,</div> <div id="T1ai" class="txs">ne plus aller le saluer.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1aj" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ak" class="txs">Si vous désirez quelque chose mais que vous ne pouvez pas le payer,</div> <div id="T1al" class="txs">renoncez-y!</div> <div id="T1am" class="txs">Si vous n’avez pas l’argent pour une dépense non essentielle,</div> <div id="T1an" class="txs">oubliez cette chose!</div> <div id="T1ao" class="txs">Apprenez à renoncer.</div> <div id="T1ap" class="txs">Avant de faire une dépense,</div> <div id="T1aq" class="txs">réfléchissez si vous devez vraiment la faire.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/022_Conseil_n13.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

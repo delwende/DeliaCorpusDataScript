@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#AD4428">
+<title>32 M bʋ-zugu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.35, end: 7.92 },
+    { label: "1b", start: 8.17, end: 12.76 },
+    { label: "1c", start: 13.01, end: 20.36 },
+    { label: "1d", start: 20.61, end: 25.96 },
+    { label: "1e", start: 26.21, end: 30.56 },
+    { label: "1f", start: 30.81, end: 39.35 },
+    { label: "1g", start: 39.6, end: 44.46 },
+    { label: "1h", start: 44.71, end: 48.89 },
+    { label: "1i", start: 49.14, end: 57.8 },
+    { label: "1j", start: 58.05, end: 63.13 },
+    { label: "1k", start: 63.38, end: 67.62 },
+    { label: "1l", start: 67.88, end: 77.48 },
+    { label: "1m", start: 77.73, end: 82.99 },
+    { label: "1n", start: 83.24, end: 87.54 },
+    { label: "1o", start: 87.79, end: 95.92 },
+    { label: "1p", start: 96.17, end: 101.48 },
+    { label: "1q", start: 101.73, end: 105.88 },
+    { label: "1r", start: 106.13, end: 114.89 },
+    { label: "1s", start: 115.14, end: 120.73 },
+    { label: "1t", start: 120.98, end: 125.37 },
+    { label: "1u", start: 125.62, end: 133.57 },
+    { label: "1v", start: 133.82, end: 139.29 },
+    { label: "1w", start: 139.54, end: 143.81 },
+    { label: "1x", start: 144.06, end: 152.28 },
+    { label: "1y", start: 152.53, end: 158.41 },
+    { label: "1z", start: 158.66, end: 162.64 },
+    { label: "1aa", start: 162.89, end: 171.17 },
+    { label: "1ab", start: 171.42, end: 176.15 },
+    { label: "1ac", start: 176.4, end: 180.42 },
+    { label: "1ad", start: 180.67, end: 191.18 },
+    { label: "1ae", start: 191.43, end: 196.41 },
+    { label: "1af", start: 196.66, end: 201.17 },
+    { label: "1ag", start: 201.42, end: 210.43 },
+    { label: "1ah", start: 210.68, end: 216.13 },
+    { label: "1ai", start: 216.38, end: 220.85 },
+    { label: "1aj", start: 221.1, end: 230.5 },
+    { label: "1ak", start: 230.75, end: 235.65 },
+    { label: "1al", start: 235.9, end: 240.11 },
+    { label: "1am", start: 240.36, end: 249.02 },
+    { label: "1an", start: 249.27, end: 254.39 },
+    { label: "1ao", start: 254.64, end: 259.25 },
+    { label: "1ap", start: 259.5, end: 268.03 },
+    { label: "1aq", start: 268.28, end: 272.98 },
+    { label: "1ar", start: 273.23, end: 277.29 },
+    { label: "1as", start: 277.54, end: 285.43 },
+    { label: "1at", start: 285.68, end: 295.68 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 3.35;
+var stopTime  = 295.68;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;32 M bʋ-zugu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">32 M bʋ-zugu</span>.</div></div>
+<div class="m"><div id="T1b" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1c" class="txs">- Sãan gũs n bas a yẽd-nĩfu.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">33 M lengre</span>.</div></div>
+<div class="m"><div id="T1e" class="txs">- M zɩ-a.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs">- Koko-lʋʋg kodgre, budgri.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">34 M zãong sagdo</span>.</div></div>
+<div class="m"><div id="T1h" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1i" class="txs">- Yĩk naab taoor ne f yãong kõbdo.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">35 M dõosentil-miidu</span>.</div></div>
+<div class="m"><div id="T1k" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1l" class="txs">- Lɩk silmiig roogẽ n kok a zãnkãd yũugu.</div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">36 M kʋɩɩr kʋĩĩr kʋɩ</span>.</div></div>
+<div class="m"><div id="T1n" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1o" class="txs">- Taan-kãsr zao m baoor zugu.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">37 M kʋɩɩr-kʋɩɩr-kʋɩ</span>.</div></div>
+<div class="m"><div id="T1q" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1r" class="txs">- Koko noog be a kẽeg yiri.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">38 M kʋɩɩr-kʋɩɩr-kʋɩ</span>.</div></div>
+<div class="m"><div id="T1t" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1u" class="txs">- Rã-yũud weef zĩ n neeme.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">39 M wed-moaag sãbe</span>.</div></div>
+<div class="m"><div id="T1w" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1x" class="txs">- Yãmb taab pa tɩgd rɩɩbã bal n yãbe.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">40 M kankang wɛlba</span>.</div></div>
+<div class="m"><div id="T1z" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1aa" class="txs">- Nang rũm bãnkoang t’a sã.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ab" class="txs"><span class="bd">41 Ãnd n lam taangã?</span></div></div>
+<div class="m"><div id="T1ac" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1ad" class="txs">- Fo sẽn yet tɩ f ma pa zuudã ãnd n wãb kãoongã.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">42 M to mi to zɩ</span>.</div></div>
+<div class="m"><div id="T1af" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1ag" class="txs">- To bãngr daare, to na sã bĩndu.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">43 M soom-wẽng rõb ne tʋba</span>.</div></div>
+<div class="m"><div id="T1ai" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1aj" class="txs">- Zĩrẽ-be-ned lall kɩreng tɩ m togs m sɩda.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">44 M pãngenvũudri</span>.</div></div>
+<div class="m"><div id="T1al" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1am" class="txs">- B wẽe waong t’a wudg, n bas a neoodre.</div></div>
+<div class="m"><div id="T1an" class="txs"><span class="bd">45 M s</span><span class="bd">ɛ</span><span class="bd">nif võore</span>.</div></div>
+<div class="m"><div id="T1ao" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1ap" class="txs">- F yãdg n nuk la f maan bʋʋre.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aq" class="txs"><span class="bd">46 M lengre</span>.</div></div>
+<div class="m"><div id="T1ar" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1as" class="txs">- Kokolʋʋg kodgre, budgri.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1at" class="txs">.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/mos/mosora-audio/05 devin avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

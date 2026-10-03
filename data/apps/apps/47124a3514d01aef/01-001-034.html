@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prov 41-80 34</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "34a", start: 763.01, end: 765.92 },
+    { label: "34b", start: 766.17, end: 767.85 },
+    { label: "34c", start: 768.1, end: 774.26 },
+    { label: "34d", start: 774.51, end: 776.77 },
+    { label: "34e", start: 777.02, end: 785.68 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 763.01;
+var stopTime  = 785.68;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-033.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Prov 41-80&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;34&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-035.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 41 a 80-image34.jpg" />
+
+<div class="m"><div id="T34a" class="txs"><span class="bd">74 </span><span class="bd">P</span><span class="bd">ĩim sã n kẽ koɛɛga,</span></div> <div id="T34b" class="txs"><span class="bd">bɩ b foog-a koɛɛga</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T34c" class="txs"><span class="bdit">(Mieux vaut retirer une fl</span><span class="bdit">è</span><span class="bdit">che à temps que de la laisser aller en profondeur).</span></div></div>
+<div class="m"><div id="T34d" class="txs"><span class="bd">P</span><span class="bd">ĩim sã n kẽ koɛɛga,</span></div> <div id="T34e" class="txs"><span class="bd">bɩ b foog-a koɛɛga</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 41 a 80 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

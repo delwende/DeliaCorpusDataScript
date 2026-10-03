@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pages 55 et le début de 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.75 },
+    { label: "1b", start: 4, end: 6.55 },
+    { label: "1c", start: 6.8, end: 11.21 },
+    { label: "1d", start: 11.46, end: 19.03 },
+    { label: "1e", start: 19.28, end: 23.69 },
+    { label: "1f", start: 23.94, end: 30.09 },
+    { label: "1g", start: 30.34, end: 34.11 },
+    { label: "1h", start: 34.36, end: 35.61 },
+    { label: "1i", start: 35.86, end: 42.49 },
+    { label: "1j", start: 42.74, end: 48.43 },
+    { label: "1k", start: 48.68, end: 49.97 },
+    { label: "1l", start: 50.22, end: 57.27 },
+    { label: "1m", start: 57.52, end: 59.39 },
+    { label: "1n", start: 59.64, end: 68.93 },
+    { label: "1o", start: 69.18, end: 70.81 },
+    { label: "1p", start: 71.06, end: 79.81 },
+    { label: "1q", start: 80.06, end: 81.17 },
+    { label: "1r", start: 81.42, end: 86.27 },
+    { label: "1s", start: 86.52, end: 92.21 },
+    { label: "1t", start: 92.46, end: 99.63 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 99.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "12-B012-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='11-B011-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Pages 55 et le début de&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B012-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">Pages 55 et le début de la page 60.</div></div>
+<div class="p_berschrift2"><div id="T1b" class="txs">6-2 Convertissons.</div></div>
+<div class="m"><div id="T1c" class="txs">Là vous avez besoin des prix ainsi nous allons compter d’abord.</div> <div id="T1d" class="txs">Mais attention à la différence entre le franc et le <span class="bd">dɔ́rɔmɛ</span> (d).</div></div>
+<div class="m"><div id="T1e" class="txs">10 francs= <span class="bd">dɔ́rɔmɛ fila</span>= d2.</div></div>
+<div class="m"><div id="T1f" class="txs">C’est à dire que pour avoir le « <span class="bd">d</span><span class="bd">ɔ́</span><span class="bd">r</span><span class="bd">ɔ</span><span class="bd">mɛ</span> », il faut diviser les francs par 5.</div> <div id="T1g" class="txs">De même pour avoir les francs il faut multiplier le « <span class="bd">dɔ́rɔmɛ</span> » par cinq.</div></div>
+<div class="m"><div id="T1h" class="txs"><span class="ul">Exemples</span><span class="ul">.</span></div></div>
+<div class="m"><div id="T1i" class="txs">100 F = d20.</div></div>
+<div class="m"><div id="T1j" class="txs">d100  = 500F.</div></div>
+<div class="m"><div id="T1k" class="txs">d.</div> <div id="T1l" class="txs">2 000 <span class="bd">(dɔ́rɔmɛ) wága fíla</span> = 10 000 F.</div></div>
+<div class="m"><div id="T1m" class="txs">d.</div><div id="T1n" class="txs">10 000 <span class="bd">(dɔ́rɔmɛ) wága tán</span> = 50 000 F.</div></div>
+<div class="m"><div id="T1o" class="txs">d.</div> <div id="T1p" class="txs">2 500 <span class="bd">wága fila ní kɛmɛ dúuru</span>  = 12 500 F.</div></div>
+<div class="m"><div id="T1q" class="txs">d.</div><div id="T1r" class="txs">5 000 <span class="bd">waga duuru</span> = 25 000 F.</div></div>
+<div class="p"><div id="T1s" class="txs">Il faut donc d’abord bien maîtriser le compte en dioula pour convertir facilement en dioula.</div> <div id="T1t" class="txs">Cela peut se faire à l’aide d’une calculatrice mais il faut pouvoir dire correctement le résultat en dioula.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/12 page 55 et 60.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

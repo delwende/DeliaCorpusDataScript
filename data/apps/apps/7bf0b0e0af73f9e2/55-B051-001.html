@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Addressing Problems 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.85 },
+    { label: "1b", start: 2.1, end: 6.33 },
+    { label: "1c", start: 6.58, end: 10.09 },
+    { label: "1d", start: 10.34, end: 17.69 },
+    { label: "1e", start: 17.94, end: 19.39 },
+    { label: "1f", start: 19.64, end: 22.01 },
+    { label: "1g", start: 22.26, end: 23.43 },
+    { label: "1h", start: 23.68, end: 25.01 },
+    { label: "1i", start: 25.26, end: 29.19 },
+    { label: "1j", start: 29.44, end: 35.41 },
+    { label: "1k", start: 35.66, end: 36.87 },
+    { label: "1l", start: 37.12, end: 39.25 },
+    { label: "1m", start: 39.5, end: 40.73 },
+    { label: "1n", start: 40.98, end: 42.27 },
+    { label: "1o", start: 42.52, end: 45.75 },
+    { label: "1p", start: 46, end: 47.21 },
+    { label: "1q", start: 47.46, end: 50.03 },
+    { label: "1r", start: 50.28, end: 53.47 },
+    { label: "1s", start: 53.72, end: 55.85 },
+    { label: "1t", start: 56.1, end: 57.45 },
+    { label: "1u", start: 57.7, end: 61.37 },
+    { label: "1v", start: 61.62, end: 65.31 },
+    { label: "1w", start: 65.56, end: 67.43 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 67.43;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "55-B051-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='54-B060-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='54-B060-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Addressing Problems&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='56-B061-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='56-B061-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B051-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Addressing Problems</span></div></div>
+<div class="m"><div id="T1b" class="txs">Putting on a good face and avoiding shame has great value in many cultures,</div> <div id="T1c" class="txs">because it expresses respect for others and for oneself.</div> <div id="T1d" class="txs">This is why people from cultures sensitive to honor prefer not to talk about problems so that the other person does not lose face.</div> <div id="T1e" class="txs">But in everyday life,</div> <div id="T1f" class="txs">problems rarely resolve themselves.</div></div>
+<div class="m"><div id="T1g" class="txs">For example,</div> <div id="T1h" class="txs">in rental properties,</div> <div id="T1i" class="txs">the common laundry room is a place that has the potential to kill harmony.</div> <div id="T1j" class="txs">An Asian woman told us that an African neighbor reproached her about the state of the laundry room after use.</div> <div id="T1k" class="txs">Unfortunately,</div> <div id="T1l" class="txs">the African became very angry.</div> <div id="T1m" class="txs">Subsequently,</div> <div id="T1n" class="txs">she was ashamed of it,</div> <div id="T1o" class="txs">so much that she no longer dared to speak to the Asian.</div> <div id="T1p" class="txs">Since that day,</div> <div id="T1q" class="txs">contact has been through the Asian husband.</div></div>
+<div class="m"><div id="T1r" class="txs">The two neighbors come from cultures that seek respect,</div> <div id="T1s" class="txs">but their cultures are very different.</div></div>
+<div class="m"><div id="T1t" class="txs">For these two women,</div> <div id="T1u" class="txs">it was difficult to take the step and address the conflict head on.</div> <div id="T1v" class="txs">The real problem was no longer the cleanliness of the laundry room,</div> <div id="T1w" class="txs">but the risk of losing face.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/28 Welcome Woman.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/28 Welcome Woman.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/28 Welcome Woman.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

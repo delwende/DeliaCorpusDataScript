@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>21 LE PEUL 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.27 },
+    { label: "1b", start: 2.52, end: 7.25 },
+    { label: "1c", start: 7.5, end: 14.39 },
+    { label: "1d", start: 14.64, end: 26.23 },
+    { label: "1e", start: 26.48, end: 49.03 },
+    { label: "1f", start: 49.28, end: 60.61 },
+    { label: "1g", start: 60.86, end: 64.03 },
+    { label: "1h", start: 64.28, end: 81.99 },
+    { label: "1i", start: 82.24, end: 88.11 },
+    { label: "1j", start: 88.36, end: 95.57 },
+    { label: "1k", start: 95.82, end: 101.71 },
+    { label: "1l", start: 101.96, end: 111.65 },
+    { label: "1m", start: 111.9, end: 118.49 },
+    { label: "1n", start: 118.74, end: 124.43 },
+    { label: "1o", start: 124.68, end: 128.71 },
+    { label: "1p", start: 128.96, end: 142.33 },
+    { label: "1q", start: 142.58, end: 151.43 },
+    { label: "1r", start: 151.68, end: 158.15 },
+    { label: "1s", start: 158.4, end: 165.51 },
+    { label: "1t", start: 165.76, end: 170.27 },
+    { label: "1u", start: 170.52, end: 173.15 },
+    { label: "1v", start: 173.4, end: 177.47 },
+    { label: "1w", start: 177.72, end: 183.79 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 183.79;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;21 LE PEUL&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">21 LE PEUL</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Un peul avait demandé hospitalité dans une famille.</div> <div id="T1c" class="txs">Assommé par la fatigue et la faim, il espérait bien manger dans cette famille.</div> <div id="T1d" class="txs">Il remarqua d’ailleurs que son vœu allait être exaucé car en jetant un coup d'œil rapide sur le foyer du couple, il constata une grande marmite sur un feu ardent.</div> <div id="T1e" class="txs">Quand le moment du repas vint, le couple qui manquait de soupe présenta au peul une cuvette de farine de <span class="it">néré</span> (poudre jaune extraite des fruits d’un arbre très connu dans la savane), l’invitant d’en prendre comme dîner tout en s’excusant de n'avoir rien d'autre à lui proposer.</div></div>
+<div class="m"><div id="T1f" class="txs">Le peul trouva que cette façon de faire cachait les bonnes intentions de la famille d’accepter partager le repas copieux qu'elle préparait sur le grand feu.</div> <div id="T1g" class="txs">Il signifia que lui, ne mangeait pas de néré.</div> <div id="T1h" class="txs">En effet, la marmite sur le feu était celle de noix de karité (un autre arbre de la savane) prévues pour produire du beurre (crème très prisée par les sahéliens dont la préparation prend trois jours au minimum).</div> <div id="T1i" class="txs">Le peul par ce refus pensait pouvoir faire passer son message.</div> <div id="T1j" class="txs">En fait, il voulait que son hôte lui serve ce qui était dans la marmite.</div></div>
+<div class="m"><div id="T1k" class="txs">Toute la famille, n’ayant plus rien d’autre à se mettre sous la dent, s’est mise au lit.</div></div>
+<div class="m"><div id="T1l" class="txs">Notre étranger croyant surprendre le couple en flagrant délit de dégustation du repas qui est sur le feu, refusa de fermer l'œil.</div> <div id="T1m" class="txs">Petit à petit l’espoir se dissipait et laissait la place à un ventre creux.</div> <div id="T1n" class="txs">Au milieu de la nuit l’étranger était maintenant tenaillé par la faim.</div> <div id="T1o" class="txs">Il aurait souhaité le néré qu’on lui avait proposé tantôt.</div> <div id="T1p" class="txs">Mais, comme d’une part il avait posé son refus catégorique et d'autre part le couple était déjà endormi, il ne savait plus alors quel argument utiliser pour le réveiller.</div></div>
+<div class="m"><div id="T1q" class="txs">Comme le peul est réputé intelligent, il se mit à crier en prononçant le nom du néré comme s’il rêvait.</div> <div id="T1r" class="txs">Les cris ont réveillé le couple qui alla aussitôt le réveiller et lui demanda ce qui n’allait pas.</div> <div id="T1s" class="txs">Il répondit que dans son songe il s’est trouvé devant un délicieux plat de néré.</div> <div id="T1t" class="txs">On comprit qu’il sollicitait ce qu’il avait refusé.</div> <div id="T1u" class="txs">On le servit le plat de néré.</div> <div id="T1v" class="txs">Il élimina ainsi sa faim avant de retrouver le sommeil.</div></div>
+<div class="m"><div id="T1w" class="txs">Lorsqu’on est en voyage, on doit faire un effort de diminuer ses caprices alimentaires.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 21 le peul.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

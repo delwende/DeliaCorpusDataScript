@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Введение 6</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "16-B021-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='15-B015-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='16-B021-005.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Введение&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;6&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B021-007.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='17-B016-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B021-image6.jpg" />
+
+<div class="m"><span class="bd">Искупление</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">В Иисусе мы имеем искупление через Его кровь</span>(Ефесянам 1, 7).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Что такое искупление?</span></div>
+<div class="m">Слово «искупление» является частью набора терминов, описывающих спасение. Буквально оно означает «далеко развязать», «избавление». Он вызывает идею искупления, как раб, привязанный к хозяину и освобожденный заплатой определенной суммы денег. Человек – раб греха и его последствий, то есть смерти. Искупление освобождает его от власти греха и его юридических последствий.</div>
+<div class="m">В Своей работе искупления Христос заплатил цену искупления всего человечества. Цена ясно указана по своей природе: это кровь Христа. Поскольку мы были искуплены этой ценой, мы должны служить тому, кто заплатил ее (1 Коринфянам 7, 22–23).</div>
+<div class="m">Искупление можно свести к трем основным идеям: (1) люди искуплены от чего-то, а именно от рабства греха; (2) они чем-то искуплены, уплатой цены, а именно кровью Христа; (3) они для чего-то искуплены, а именно для того, чтобы быть свободными. После освобождения им предлагается сделать себя рабами Господа, который искупил их.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Действия, которые сделают спасение или искупление богатством вашей жизни:</span></div>
+<div class="m"><span class="it">- Молитва</span>: В своей ежедневной молитве вы можете благодарить Бога за то, что он спас вас от греха, смерти, разврата...</div>
+<div class="m"><span class="it">- Чтение Библии</span>: регулярно читайте рассказы о смерти Иисуса, например Луки 23, 33–49. Представьте себя в толпе, наблюдающей за распятием. Напоминайте себе об огромной жертве Иисуса.</div>
+<div class="m"><span class="it">- Личные размышления</span>: Вы получили выгоду от искупления своего сына Иисуса.</div>
+<div class="m">Он освободил вас от рабства сатаны. Но действительно ли ты свободен? Исследуйте свою жизнь с помощью Святого Духа, чтобы выяснить, являетесь ли вы все еще «рабом» сатаны. Есть ли у вас еще вредные привычки, которые не прославляют Бога?</div>
+<div class="m"><span class="it">- по отношению к другим</span>: Спасение становится еще более ценным, если им поделиться с другими. Объявляйте о спасении Иисуса хотя бы раз в неделю тому, кто его еще не знает.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

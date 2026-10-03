@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Добро пожаловать 9</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "92-B093-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='91-B092-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='92-B093-008.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Добро пожаловать&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;9&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='92-B093-010.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='93-B094-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B093-image9.jpeg" />
+
+<div class="m"><span class="bd">9) ЕДА И ПИТЬЕ</span></div>
+<div class="m">В зависимости от страны Европы существуют разные типичные блюда. Многие люди также любят время от времени выпивать стаканчик алкоголя во время еды. Это также разрешено в общественных местах с 16 или 18 лет. Спиртные напитки (шнапс, ликеры и т. д.) можно пить только с 18 лет. Однако есть также много людей, которые не употребляют алкоголь. Всегда можно отказаться от алкоголя.</div>
+<div class="m">В Европе также едят много свинины.</div>
+<div class="m">Если вы не уверены, свинина ли это, всегда можете спросить. Почти везде есть и блюда без мяса, так как некоторые европейцы придерживаются вегетарианской или даже веганской диеты.</div>
+<div class="m">Есть или передавать что-либо левой рукой не считается неправильным, это вполне нормально. С другой стороны, считается невежливым сильно чавкать во время еды или тянуться далеко через стол. Если вам нужно что-то, чего вы не можете достичь сами, вы вежливо просите об этом. Следите, чтобы крошки не падали на пол. Вы можете присмотреть дешевые магазины (в Швейцарии, например, это Denner, Migros, Coop, Aldi и Lidl). Особенно в городах есть также турецкие и арабские магазины с халяльной едой.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

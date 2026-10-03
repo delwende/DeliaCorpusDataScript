@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>3) L’accompagnement 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.05 },
+    { label: "1b", start: 3.3, end: 5.41 },
+    { label: "1c", start: 5.66, end: 9.67 },
+    { label: "1d", start: 9.92, end: 11.15 },
+    { label: "1e", start: 11.4, end: 15.15 },
+    { label: "1f", start: 15.4, end: 22.29 },
+    { label: "1g", start: 22.54, end: 26.83 },
+    { label: "1h", start: 27.08, end: 30.39 },
+    { label: "1i", start: 30.64, end: 34.45 },
+    { label: "1j", start: 34.7, end: 39.23 },
+    { label: "1k", start: 39.48, end: 45.73 },
+    { label: "1l", start: 45.98, end: 49.29 },
+    { label: "1m", start: 49.54, end: 56.49 },
+    { label: "1n", start: 56.74, end: 58.85 },
+    { label: "1o", start: 59.1, end: 66.35 },
+    { label: "1p", start: 66.6, end: 66.91 },
+    { label: "1q", start: 67.16, end: 69.57 },
+    { label: "1r", start: 69.82, end: 74.17 },
+    { label: "1s", start: 74.42, end: 76.53 },
+    { label: "1t", start: 76.78, end: 79.73 },
+    { label: "1u", start: 79.98, end: 81.49 },
+    { label: "1v", start: 81.74, end: 85.05 },
+    { label: "1w", start: 85.3, end: 86.85 },
+    { label: "1x", start: 87.1, end: 91.75 },
+    { label: "1y", start: 92, end: 93.07 },
+    { label: "1z", start: 93.32, end: 94.87 },
+    { label: "1aa", start: 95.12, end: 100.97 },
+    { label: "1ab", start: 101.22, end: 104.49 },
+    { label: "1ac", start: 104.74, end: 108.31 },
+    { label: "1ad", start: 108.56, end: 114.05 },
+    { label: "1ae", start: 114.3, end: 118.45 },
+    { label: "1af", start: 118.7, end: 123.73 },
+    { label: "1ag", start: 123.98, end: 129.67 },
+    { label: "1ah", start: 129.92, end: 131.83 },
+    { label: "1ai", start: 132.08, end: 133.59 },
+    { label: "1aj", start: 133.84, end: 135.63 },
+    { label: "1ak", start: 135.88, end: 137.95 },
+    { label: "1al", start: 138.2, end: 142.15 },
+    { label: "1am", start: 142.4, end: 146.71 },
+    { label: "1an", start: 146.96, end: 151.81 },
+    { label: "1ao", start: 152.06, end: 159.91 },
+    { label: "1ap", start: 160.16, end: 161.83 },
+    { label: "1aq", start: 162.08, end: 164.01 },
+    { label: "1ar", start: 164.26, end: 166.05 },
+    { label: "1as", start: 166.3, end: 167.41 },
+    { label: "1at", start: 167.66, end: 169.23 },
+    { label: "1au", start: 169.48, end: 170.37 },
+    { label: "1av", start: 170.62, end: 171.75 },
+    { label: "1aw", start: 172, end: 173.37 },
+    { label: "1ax", start: 173.62, end: 174.55 },
+    { label: "1ay", start: 174.8, end: 178.27 },
+    { label: "1az", start: 178.52, end: 184.65 },
+    { label: "1ba", start: 184.9, end: 188.01 },
+    { label: "1bb", start: 188.26, end: 189.63 },
+    { label: "1bc", start: 189.88, end: 191.97 },
+    { label: "1bd", start: 192.22, end: 193.89 },
+    { label: "1be", start: 194.14, end: 195.17 },
+    { label: "1bf", start: 195.42, end: 199.11 },
+    { label: "1bg", start: 199.36, end: 202.13 },
+    { label: "1bh", start: 202.38, end: 205.25 },
+    { label: "1bi", start: 205.5, end: 209.83 },
+    { label: "1bj", start: 210.08, end: 212.35 },
+    { label: "1bk", start: 212.6, end: 216.05 },
+    { label: "1bl", start: 216.3, end: 218.57 },
+    { label: "1bm", start: 218.82, end: 221.19 },
+    { label: "1bn", start: 221.44, end: 221.79 },
+    { label: "1bo", start: 222.04, end: 223.71 },
+    { label: "1bp", start: 223.96, end: 226.89 },
+    { label: "1bq", start: 227.14, end: 228.65 },
+    { label: "1br", start: 228.9, end: 231.87 },
+    { label: "1bs", start: 232.12, end: 234.55 },
+    { label: "1bt", start: 234.8, end: 236.15 },
+    { label: "1bu", start: 236.4, end: 238.25 },
+    { label: "1bv", start: 238.5, end: 241.57 },
+    { label: "1bw", start: 241.82, end: 245.77 },
+    { label: "1bx", start: 246.02, end: 247.87 },
+    { label: "1by", start: 248.12, end: 250.75 },
+    { label: "1bz", start: 251, end: 255.33 },
+    { label: "1ca", start: 255.58, end: 264.39 },
+    { label: "1cb", start: 264.64, end: 267.47 },
+    { label: "1cc", start: 267.72, end: 268.77 },
+    { label: "1cd", start: 269.02, end: 271.95 },
+    { label: "1ce", start: 272.2, end: 274.97 },
+    { label: "1cf", start: 275.22, end: 277.35 },
+    { label: "1cg", start: 277.6, end: 279.01 },
+    { label: "1ch", start: 279.26, end: 280.53 },
+    { label: "1ci", start: 280.78, end: 282.53 },
+    { label: "1cj", start: 282.78, end: 284.75 },
+    { label: "1ck", start: 285, end: 290.41 },
+    { label: "1cl", start: 290.66, end: 293.23 },
+    { label: "1cm", start: 293.48, end: 295.95 },
+    { label: "1cn", start: 296.2, end: 300.21 },
+    { label: "1co", start: 300.46, end: 301.55 },
+    { label: "1cp", start: 301.8, end: 307.85 },
+    { label: "1cq", start: 308.1, end: 310.21 },
+    { label: "1cr", start: 310.46, end: 312.63 },
+    { label: "1cs", start: 312.88, end: 314.59 },
+    { label: "1ct", start: 314.84, end: 317.63 },
+    { label: "1cu", start: 317.88, end: 320.17 },
+    { label: "1cv", start: 320.42, end: 321.91 },
+    { label: "1cw", start: 322.16, end: 325.95 },
+    { label: "1cx", start: 326.2, end: 329.57 },
+    { label: "1cy", start: 329.82, end: 332.71 },
+    { label: "1cz", start: 332.96, end: 336.63 },
+    { label: "1da", start: 336.88, end: 343.01 },
+    { label: "1db", start: 343.26, end: 347.97 },
+    { label: "1dc", start: 348.22, end: 350.67 },
+    { label: "1dd", start: 350.92, end: 353.37 },
+    { label: "1de", start: 353.62, end: 355.05 },
+    { label: "1df", start: 355.3, end: 358.21 },
+    { label: "1dg", start: 358.46, end: 361.01 },
+    { label: "1dh", start: 361.26, end: 368.23 },
+    { label: "1di", start: 368.48, end: 374.61 },
+    { label: "1dj", start: 374.86, end: 379.69 },
+    { label: "1dk", start: 379.94, end: 383.05 },
+    { label: "1dl", start: 383.3, end: 384.11 },
+    { label: "1dm", start: 384.36, end: 385.53 },
+    { label: "1dn", start: 385.78, end: 386.97 },
+    { label: "1do", start: 387.22, end: 388.21 },
+    { label: "1dp", start: 388.46, end: 389.89 },
+    { label: "1dq", start: 390.14, end: 391.65 },
+    { label: "1dr", start: 391.9, end: 398.43 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 398.43;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "41-B041-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='40-B040-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='40-B040-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;3) L’accompagnement&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='42-B042-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='42-B042-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B041-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">3)</span><span class="bd"> </span><span class="bd">L’accompagnement parental :</span></div> <div id="T1b" class="txs"><span class="bd">avec conséquence et discipline</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs">Tous les enfants montrent de la désobéissance à un moment ou à un autre.</div> <div id="T1d" class="txs">Cela est évident.</div> <div id="T1e" class="txs">Il faut rester calme en dirigeant nos enfants avec respect,</div> <div id="T1f" class="txs">conséquence et discipline vers une obéissance volontaire (Ephésiens 6, 4).</div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">a</span><span class="bd">)</span><span class="bd"> </span><span class="bd">Il faut que nos enfants connaissent nos attentes et nos principes&nbsp;!</span></div></div>
+<div class="m"><div id="T1h" class="txs">Dieu exprime clairement ses attentes dans sa Parole.</div> <div id="T1i" class="txs">Il ne nous laisse pas dans l’ignorance quant à ses désirs envers nous.</div> <div id="T1j" class="txs">De même nous devrions exprimer clairement nos attentes envers nos enfants.</div> <div id="T1k" class="txs">Le fait de ne pas savoir ce que les parents exigent peut susciter chez eux l’insécurité et la frustration.</div> <div id="T1l" class="txs">Ils ne sont jamais certains qu’ils font ce qu’ils devraient faire.</div> <div id="T1m" class="txs">Ils ignorent s’ils seront punis ou réprimandés au cas où ils n'auraient pas fait ce qu’ils auraient dû faire.</div> <div id="T1n" class="txs">Les enfants ne lisent pas dans nos pensées.</div> <div id="T1o" class="txs">C’est pourquoi nous devons leur définir sans détour nos limites et nos attentes au risque de générer l’insécurité,</div> <div id="T1p" class="txs">l’hostilité,</div> <div id="T1q" class="txs">les frustrations et les ressentiments.</div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’attendez-vous de vos enfants dans les différentes situations de la vie quotidienne&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">b</span><span class="bd">)</span><span class="bd"> </span><span class="bd">Discipliner nos enfants</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1t" class="txs">Discipliner signifie amener à l’obéissance,</div> <div id="T1u" class="txs">à l’instruction et à l’ordre.</div> <div id="T1v" class="txs">C’est former le caractère et corriger un mauvais comportement.</div></div>
+<div class="m"><div id="T1w" class="txs">Discipliner nos enfants,</div> <div id="T1x" class="txs">c’est les amener à conformer leur vie à l’instruction et à la formation.</div> <div id="T1y" class="txs">Autrement dit :</div> <div id="T1z" class="txs">former le caractère.</div> <div id="T1aa" class="txs">Il faut les corriger avec amour comme Dieu nous corrige (Proverbes 13, 24 ;</div> <div id="T1ab" class="txs">Hébreux 12, 5 à 13).</div> <div id="T1ac" class="txs">Il est dit en Ephésiens 6, 4 :</div> <div id="T1ad" class="txs">«&nbsp;<span class="it">Elevez-les en leur donnant une éducation et des avertissements qui viennent du Seigneur.</span></div><div id="T1ae" class="txs">&nbsp;» L’enfant doit connaître les valeurs et les principes qui doivent orienter sa vie.</div></div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">Discipliner n’est pas</span> réagir d’une manière arbitraire selon ma propre humeur,</div> <div id="T1ag" class="txs">ni frapper ses enfants en réagissant avec colère (Proverbes 19, 18).</div></div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quel est le but de la discipline&nbsp;?</span></div></div>
+<div class="m"><div id="T1ai" class="txs"><span class="it">Le bien de l’enfant&nbsp;!</span></div> <div id="T1aj" class="txs"><span class="it">Aider l’enfant à grandir,</span></div> <div id="T1ak" class="txs"><span class="it">l’éduquer et le former.</span></div> <div id="T1al" class="txs"><span class="it">Nous devons nous souvenir que le but de Dieu quand il nous corrige,</span></div> <div id="T1am" class="txs"><span class="it">n’est pas seulement de nous punir ou pire de nous faire du mal.</span></div> <div id="T1an" class="txs"><span class="it">Mais bien de nous amener à changer de vie et nous conduire dans la bonne direction.</span></div> <div id="T1ao" class="txs"><span class="it">Nous devons avoir la même attitude quand nous disciplinons nos enfants (Hébreux 12</span><span class="it">,</span></div><div id="T1ap" class="txs"><span class="it">9</span><span class="it"> à </span><span class="it">10)</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1aq" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quand faut-il discipliner&nbsp;?</span></div></div>
+<div class="m"><div id="T1ar" class="txs"><span class="it">Si l’enfant connaît les principes,</span></div> <div id="T1as" class="txs"><span class="it">mais ne les respecte pas.</span></div> <div id="T1at" class="txs"><span class="it">Par exemple :</span></div> <div id="T1au" class="txs"><span class="it">l’interdiction de voler,</span></div> <div id="T1av" class="txs"><span class="it">de mentir,</span></div> <div id="T1aw" class="txs"><span class="it">d’arriver en retard,</span></div> <div id="T1ax" class="txs"><span class="it">de refuser d’aller à l’école,</span></div> <div id="T1ay" class="txs"><span class="it">etc.</span></div> <div id="T1az" class="txs"><span class="it">Si l’enfant reçoit un ordre auquel il n’obéit pas.</span></div> <div id="T1ba" class="txs"><span class="it">Si l’enfant vous manque de respect en paroles ou en actes (Proverbes 22</span><span class="it">,</span></div><div id="T1bb" class="txs"><span class="it">15)</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1bc" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelles sont les conséquences d’une discipline exagérée&nbsp;?</span></div></div>
+<div class="m"><div id="T1bd" class="txs"><span class="it">L’enfant a peur,</span></div> <div id="T1be" class="txs"><span class="it">manque de confiance en ses parents,</span></div> <div id="T1bf" class="txs"><span class="it">manque de confiance en soi,</span></div> <div id="T1bg" class="txs"><span class="it">la rébellion...</span></div></div>
+<div class="m"><div id="T1bh" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelles sont les conséquences possibles d’un manque de discipline&nbsp;?</span></div></div>
+<div class="m"><div id="T1bi" class="txs"><span class="it">L’enfant s’habitue à un mauvais comportement,</span></div> <div id="T1bj" class="txs"><span class="it">il n’a pas de respect pour ses parents et pour les autres.</span></div> <div id="T1bk" class="txs"><span class="it">Il n’apprend pas à faire la différence entre ce qui est bien et ce qui est mal.</span></div> <div id="T1bl" class="txs"><span class="it">Il a un manque de confiance de soi,</span></div> <div id="T1bm" class="txs"><span class="it">parce qu’il pense ne pas être important pour ses parents.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bn" class="txs"><span class="bd">Conseils pour une bonne discipline</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1bo" class="txs">La discipline doit se faire avec amour,</div> <div id="T1bp" class="txs">sagesse,</div> <div id="T1bq" class="txs">intelligence et réflexion,</div> <div id="T1br" class="txs">en reconnaissant la dignité de chaque enfant.</div> <div id="T1bs" class="txs">Dans la mesure du possible,</div> <div id="T1bt" class="txs">il ne faut pas discipliner sous le coup de la colère.</div></div>
+<div class="m"><div id="T1bu" class="txs"><span class="bd">-Avec des conséquences logiques</span>.</div> <div id="T1bv" class="txs">Par exemple,</div> <div id="T1bw" class="txs">si un enfant a oublié quelque chose,</div> <div id="T1bx" class="txs">il faut qu’il aille encore la chercher.</div> <div id="T1by" class="txs">Ou si un enfant est avec des amis qui ont un mauvais comportement,</div> <div id="T1bz" class="txs">il faut arrêter cette amitié.</div></div>
+<div class="m"><div id="T1ca" class="txs"><span class="bd">-Avec des conséquences proportionnelles</span>.</div> <div id="T1cb" class="txs">Il ne faut pas donner une punition trop grande pour une petite faute.</div> <div id="T1cc" class="txs">Il ne faut pas punir de la même façon un enfant qui fait l’erreur pour la première fois que celui qui répète la même faute tous les jours.</div></div>
+<div class="m"><div id="T1cd" class="txs"><span class="bd">-Avec des conséquences de sanctions</span>.</div> <div id="T1ce" class="txs">Par exemple,</div> <div id="T1cf" class="txs">si un enfant n’a pas obéi pour faire un travail,</div> <div id="T1cg" class="txs">il faut lui donner un travail supplémentaire à faire.</div></div>
+<div class="m"><div id="T1ch" class="txs"><span class="bd">-Avec le châtiment corporel</span>.</div> <div id="T1ci" class="txs">Frapper un enfant,</div> <div id="T1cj" class="txs">lui donner une fessée,</div> <div id="T1ck" class="txs">est une façon de le corriger.</div> <div id="T1cl" class="txs">Mais si on doit le frapper,</div> <div id="T1cm" class="txs">il faut le faire avec intelligence et amour pour lui sans être dominé par la colère.</div> <div id="T1cn" class="txs">Notre but n’est pas que l’enfant ait mal,</div> <div id="T1co" class="txs">mais qu’il soit ramené sur le bon chemin&nbsp;!</div></div>
+<div class="m"><div id="T1cp" class="txs">On ne devrait jamais parler de violence dans une maison chrétienne.</div> <div id="T1cq" class="txs">Concrètement,</div> <div id="T1cr" class="txs">si un enfant est blessé ou a des marques qui restent sur son corps suite à un châtiment corporel,</div> <div id="T1cs" class="txs">c’est mauvais et excessif.</div> <div id="T1ct" class="txs">Si un enfant est battu chaque jour,</div> <div id="T1cu" class="txs">ou trop souvent par ses parents,</div> <div id="T1cv" class="txs">ce n’est ni normal ni acceptable.</div> <div id="T1cw" class="txs">Il ne s’agit alors plus de discipline,</div> <div id="T1cx" class="txs">mais de violence parentale.</div></div>
+<div class="m"><div id="T1cy" class="txs">On ne doit pas non plus tolérer la violence entre les enfants.</div> <div id="T1cz" class="txs">Il n’est pas bon que les enfants se tapent les uns les autres,</div> <div id="T1da" class="txs">ou que les grands tapent les plus petits pour les corriger.</div></div>
+<div class="m"><div id="T1db" class="txs">Le châtiment corporel ne devrait être donné que par les parents.</div> <div id="T1dc" class="txs">Et seulement dans les cas où d’autres moyens de discipline n’ont pas permis de corriger l’enfant valablement.</div></div>
+<div class="m"><div id="T1dd" class="txs"><span class="bd">Le couple devrait avoir les mêmes idées et se soutenir mutuellement dans la discipline</span>.</div> <div id="T1de" class="txs">Autrement les enfants sont embrouillés.</div></div>
+<div class="m"><div id="T1df" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Discutez vos idées sur la discipline.</span></div> <div id="T1dg" class="txs"><span class="bd">Comparez vos idées,</span></div> <div id="T1dh" class="txs"><span class="bd">cherchez les différences et essayez de vous comprendre.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1di" class="txs"><span class="bd">c</span><span class="bd">)</span><span class="bd"> </span><span class="bd">Prier pour nos enfants</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dj" class="txs">Les parents doivent beaucoup prier pour leurs enfants pour les soumettre tout le temps à la protection et à la bénédiction de Dieu.</div> <div id="T1dk" class="txs">Comme Job (Job 1) a accompli son devoir envers ses enfants,</div> <div id="T1dl" class="txs">c’est la tâche qui nous reste aussi après leur départ du foyer familial.</div> <div id="T1dm" class="txs">Les enfants aujourd’hui sont tentés de tous côtés :</div> <div id="T1dn" class="txs">à l’école,</div> <div id="T1do" class="txs">à la télévision,</div> <div id="T1dp" class="txs">sur leurs téléphones,</div> <div id="T1dq" class="txs">sur internet,</div> <div id="T1dr" class="txs">aussi bien que dans la rue. En conséquence, ils ont énormément besoin de notre prière pour être forts dans leur lutte contre toutes ces tentations.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/36 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/36 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/36 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

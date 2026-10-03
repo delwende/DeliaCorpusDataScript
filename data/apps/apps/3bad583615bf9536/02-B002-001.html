@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 Suruku ni Bakɔrɔnin 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.95 },
+    { label: "1b", start: 1.2, end: 4.31 },
+    { label: "1c", start: 4.56, end: 9.25 },
+    { label: "1d", start: 9.5, end: 17.45 },
+    { label: "1e", start: 17.7, end: 22.27 },
+    { label: "1f", start: 22.52, end: 28.03 },
+    { label: "1g", start: 28.28, end: 29.65 },
+    { label: "1h", start: 29.9, end: 35.83 },
+    { label: "1i", start: 36.08, end: 38.45 },
+    { label: "1j", start: 38.7, end: 41.23 },
+    { label: "1k", start: 41.48, end: 45.75 },
+    { label: "1l", start: 46, end: 48.83 },
+    { label: "1m", start: 49.08, end: 51.01 },
+    { label: "1n", start: 51.26, end: 55.29 },
+    { label: "1o", start: 55.54, end: 57.79 },
+    { label: "1p", start: 58.04, end: 64.97 },
+    { label: "1q", start: 65.22, end: 67.53 },
+    { label: "1r", start: 67.78, end: 71.73 },
+    { label: "1s", start: 71.98, end: 73.95 },
+    { label: "1t", start: 74.2, end: 78.73 },
+    { label: "1u", start: 78.98, end: 80.83 },
+    { label: "1v", start: 81.08, end: 82.29 },
+    { label: "1w", start: 82.54, end: 85.23 },
+    { label: "1x", start: 85.48, end: 89.73 },
+    { label: "1y", start: 89.98, end: 93.63 },
+    { label: "1z", start: 93.88, end: 95.63 },
+    { label: "1aa", start: 95.88, end: 97.63 },
+    { label: "1ab", start: 97.88, end: 100.63 },
+    { label: "1ac", start: 100.88, end: 107.17 },
+    { label: "1ad", start: 107.42, end: 110.77 },
+    { label: "1ae", start: 111.02, end: 116.35 },
+    { label: "1af", start: 116.6, end: 118.91 },
+    { label: "1ag", start: 119.16, end: 121.73 },
+    { label: "1ah", start: 121.98, end: 124.91 },
+    { label: "1ai", start: 125.16, end: 131.39 },
+    { label: "1aj", start: 131.64, end: 135.17 },
+    { label: "1ak", start: 135.42, end: 136.89 },
+    { label: "1al", start: 137.14, end: 140.41 },
+    { label: "1am", start: 140.66, end: 142.23 },
+    { label: "1an", start: 142.48, end: 148.23 },
+    { label: "1ao", start: 148.48, end: 150.33 },
+    { label: "1ap", start: 150.58, end: 153.67 },
+    { label: "1aq", start: 153.92, end: 155.23 },
+    { label: "1ar", start: 155.48, end: 157.83 },
+    { label: "1as", start: 158.08, end: 159.79 },
+    { label: "1at", start: 160.04, end: 161.31 },
+    { label: "1au", start: 161.56, end: 164.63 },
+    { label: "1av", start: 164.88, end: 169.35 },
+    { label: "1aw", start: 169.6, end: 172.03 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 172.03;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2 Suruku ni Bakɔrɔnin&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="c_Titre1Car">2 </span>N siirin&nbsp;!</div> <div id="T1b" class="txs">N <span class="c_Titre1Car"><span class="bd">siirin</span></span><span class="c_Titre1Car"><span class="bd"> </span></span><span class="c_Titre1Car"><span class="bd">!</span></span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">N y’a la </span><span class="bd">suruku</span><span class="bd"> ni </span><span class="bd">bakɔrɔnin</span><span class="bd"> kan.</span></div></div>
+<div class="m"><div id="T1d" class="txs">Loon dɔ suruku ni bakɔrɔnin ye ɲɔgɔn kuun bɛn yaalasira kan.</div> <div id="T1e" class="txs">Suruku yi bakɔrɔnin nin lalɔ fanga ra.</div> <div id="T1f" class="txs">A y’a fɔ a ye ko n’a sera ka tiɲɛ saba fɔ a ye,</div> <div id="T1g" class="txs">a bi kisi.</div> <div id="T1h" class="txs">Bakɔrɔnin lɔra ka miiri ɲanaman.</div> <div id="T1i" class="txs">Bakɔrɔnin ko tiɲɛ tiɲɛ na,</div> <div id="T1j" class="txs">n ka tiɲɛ fɔlɔ ye min ye,</div> <div id="T1k" class="txs">n’ele suruku yi n to ka tag’a fɔ I muso ɲana,</div> <div id="T1l" class="txs">ko ele ye n kuun bɛn ka n to,</div> <div id="T1m" class="txs">a bin’a fɔ ko galon lo.</div> <div id="T1n" class="txs">Suruku k’o kɔni ye tiɲɛ ye.</div> <div id="T1o" class="txs">A filanan ye min ye,</div> <div id="T1p" class="txs">ni nne fana tagar’a fɔ soo ko n y’i kuun bɛn ka n to sira kan,</div> <div id="T1q" class="txs">o bin’a fɔ ko galon lo.</div> <div id="T1r" class="txs">Suruku k’o fana yi tiɲɛ ye.</div> <div id="T1s" class="txs">A sabanan ye min ye,</div> <div id="T1t" class="txs">bakɔrɔnin ko ele lɔnin bi yɔrɔ min na,</div> <div id="T1u" class="txs">I kɔnɔ fanin lo,</div> <div id="T1v" class="txs">n’o tɛ,</div> <div id="T1w" class="txs">i tun tina to kuma caaman na.</div> <div id="T1x" class="txs">Suruku k’o fana yi tiɲɛ ye.</div> <div id="T1y" class="txs">Taga n ye sira di i ma.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="bdit">Écoutez mon</span><span class="bdit"> conte</span><span class="bdit"> </span><span class="bdit">!</span></div></div>
+<div class="m"><div id="T1aa" class="txs"><span class="it">Il était une fois,</span></div> <div id="T1ab" class="txs"><span class="it">une hyène et un bouc</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="it">Un jour l’hyène et le bouc se sont rencontrés dans leur promenade</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1ad" class="txs"><span class="it">L’hyène a obligé le bouc à s’arrêter.</span></div> <div id="T1ae" class="txs"><span class="it">Elle lui a dit que si elle arrive à lui dire </span><span class="it">trois</span><span class="it"> vérités,</span></div> <div id="T1af" class="txs"><span class="it">il sera sauvé</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="it">Le bouc a bien réfléchi.</span></div> <div id="T1ah" class="txs"><span class="it">Le bouc dit en vérité,</span></div> <div id="T1ai" class="txs"><span class="it">ma première vérité est que si toi l’hyène tu me laisse</span><span class="it">s </span><span class="it">et </span><span class="it">tu </span><span class="it">va</span><span class="it">s</span><span class="it"> dire à ta femme,</span></div> <div id="T1aj" class="txs"><span class="it">que toi hyène m’a rencontré</span><span class="it"> </span><span class="it">et m’a laissé,</span></div> <div id="T1ak" class="txs"><span class="it">elle dira que c’est faux.</span></div> <div id="T1al" class="txs"><span class="it">L’hyène dit que ça c’est la vérité.</span></div></div>
+<div class="m"><div id="T1am" class="txs"><span class="it">La deuxième,</span></div> <div id="T1an" class="txs"><span class="it">si moi aussi je dis que je t’ai rencontrée sur la route et tu m’as laissé,</span></div> <div id="T1ao" class="txs"><span class="it">on dira que c’est faux.</span></div> <div id="T1ap" class="txs"><span class="it">L’hyène dit que ça aussi c’est vrai.</span></div></div>
+<div class="m"><div id="T1aq" class="txs"><span class="it">La troisième,</span></div> <div id="T1ar" class="txs"><span class="it">là où toi tu es arrêté,</span></div> <div id="T1as" class="txs"><span class="it">ton ventre est plein,</span></div> <div id="T1at" class="txs"><span class="it">si non,</span></div> <div id="T1au" class="txs"><span class="it">tu n’allais pas rester à bavarder ainsi.</span></div> <div id="T1av" class="txs"><span class="it">L’hyène dit que ça a</span><span class="it">ussi c’est la vérité.</span></div> <div id="T1aw" class="txs"><span class="it">Vas </span><span class="it">tu es libre.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/conte 2.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

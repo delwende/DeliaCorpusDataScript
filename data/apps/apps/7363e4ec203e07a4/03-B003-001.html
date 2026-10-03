@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°2 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.83 },
+    { label: "1b", start: 2.08, end: 3.25 },
+    { label: "1c", start: 3.5, end: 5.35 },
+    { label: "1d", start: 5.6, end: 7.95 },
+    { label: "1e", start: 8.2, end: 9.55 },
+    { label: "1f", start: 9.8, end: 12.61 },
+    { label: "1g", start: 12.86, end: 17.03 },
+    { label: "1h", start: 17.28, end: 22.21 },
+    { label: "1i", start: 22.46, end: 23.67 },
+    { label: "1j", start: 23.92, end: 29.37 },
+    { label: "1k", start: 29.62, end: 31.29 },
+    { label: "1l", start: 31.54, end: 36.31 },
+    { label: "1m", start: 36.56, end: 37.83 },
+    { label: "1n", start: 38.08, end: 40.99 },
+    { label: "1o", start: 41.24, end: 42.31 },
+    { label: "1p", start: 42.56, end: 45.27 },
+    { label: "1q", start: 45.52, end: 47.41 },
+    { label: "1r", start: 47.66, end: 52.05 },
+    { label: "1s", start: 52.3, end: 56.83 },
+    { label: "1t", start: 57.08, end: 58.33 },
+    { label: "1u", start: 58.58, end: 64.05 },
+    { label: "1v", start: 64.3, end: 68.87 },
+    { label: "1w", start: 69.12, end: 73.99 },
+    { label: "1x", start: 74.24, end: 76.59 },
+    { label: "1y", start: 76.84, end: 79.09 },
+    { label: "1z", start: 79.34, end: 81.21 },
+    { label: "1aa", start: 81.46, end: 83.71 },
+    { label: "1ab", start: 83.96, end: 89.51 },
+    { label: "1ac", start: 89.76, end: 98.97 },
+    { label: "1ad", start: 99.22, end: 103.87 },
+    { label: "1ae", start: 104.12, end: 105.51 },
+    { label: "1af", start: 105.76, end: 106.15 },
+    { label: "1ag", start: 106.4, end: 108.67 },
+    { label: "1ah", start: 108.92, end: 118.03 },
+    { label: "1ai", start: 118.28, end: 120.27 },
+    { label: "1aj", start: 120.52, end: 124.79 },
+    { label: "1ak", start: 125.04, end: 128.17 },
+    { label: "1al", start: 128.42, end: 135.43 },
+    { label: "1am", start: 135.68, end: 137.53 },
+    { label: "1an", start: 137.78, end: 139.67 },
+    { label: "1ao", start: 139.92, end: 140.63 },
+    { label: "1ap", start: 140.88, end: 143.67 },
+    { label: "1aq", start: 143.92, end: 144.81 },
+    { label: "1ar", start: 145.06, end: 146.39 },
+    { label: "1as", start: 146.64, end: 148.53 },
+    { label: "1at", start: 148.78, end: 150.31 },
+    { label: "1au", start: 150.56, end: 152.35 },
+    { label: "1av", start: 152.6, end: 154.37 },
+    { label: "1aw", start: 154.62, end: 158.29 },
+    { label: "1ax", start: 158.54, end: 163.09 },
+    { label: "1ay", start: 163.34, end: 165.23 },
+    { label: "1az", start: 165.48, end: 171.73 },
+    { label: "1ba", start: 171.98, end: 178.75 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 178.75;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°2&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°2 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Soyez sage&nbsp;!</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bdit">Avant de chercher à avoir plus,</span></div> <div id="T1d" class="txs"><span class="bdit">cherchez à mieux gérer ce que vous avez.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1e" class="txs"><span class="bdit">Histoire:</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="it">Jean a récolté 15 sacs de riz cette année.</span></div> <div id="T1g" class="txs"><span class="it">Il a besoin d’un sac par mois pour nourrir sa famille.</span></div> <div id="T1h" class="txs"><span class="it">Il dépose ses sacs devant sa maison car il n’a pas d’endroit pour les abriter.</span></div> <div id="T1i" class="txs"><span class="it">Le premier mois,</span></div> <div id="T1j" class="txs"><span class="it">la famille se réjouit de la bonne récolte et tout le monde mange abondamment,</span></div> <div id="T1k" class="txs"><span class="it">bien plus que d’habitude.</span></div> <div id="T1l" class="txs"><span class="it">Il planifie le baptême de son enfant et ils organisent une grande fête.</span></div> <div id="T1m" class="txs"><span class="it">Le mois suivant,</span></div> <div id="T1n" class="txs"><span class="it">des voleurs viennent prendre 2 sacs pendant la nuit.</span></div> <div id="T1o" class="txs"><span class="it">Heureusement,</span></div> <div id="T1p" class="txs"><span class="it">le chien les fait fuir et le reste est sauvé.</span></div> <div id="T1q" class="txs"><span class="it">Quand la saison des pluies arrive,</span></div> <div id="T1r" class="txs"><span class="it">une partie du riz est gâté car il n’a pas été bien protégé.</span></div> <div id="T1s" class="txs"><span class="it">Quand Jean découvre que des rats ont mangé une partie du riz restant,</span></div> <div id="T1t" class="txs"><span class="it">il est découragé.</span></div> <div id="T1u" class="txs"><span class="it">Il prie et demande à Dieu de lui donner plus de moyens pour nourrir sa famille.</span></div> <div id="T1v" class="txs"><span class="it">Les enfants ont faim et il est difficile d’attendre la prochaine récolte.</span></div> <div id="T1w" class="txs"><span class="it">Si seulement Dieu leur donnait la nourriture en</span><span class="it"> </span><span class="it">abondance!</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1x" class="txs"><span class="it">Que pensez-vous de l’histoire de Jean?</span></div> <div id="T1y" class="txs"><span class="it">Quels conseils pouvez-vous lui donner?</span></div> <div id="T1z" class="txs"><span class="it">Manquait-il vraiment de riz?</span></div> <div id="T1aa" class="txs"><span class="it">Quel est son plus </span><span class="it">grand </span><span class="it">problème:</span></div> <div id="T1ab" class="txs"><span class="it">ne pas avoir assez de riz ou ne pas avoir bien géré ce qu’il</span><span class="it"> </span><span class="it">avait?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ac" class="txs">Les êtres humains dépensent beaucoup d’efforts et d’énergie pour essayer de posséder plus (plus d’argent ou de biens matériels).</div> <div id="T1ad" class="txs">Les croyants demandent souvent dans leurs prières des bénédictions matérielles.</div> <div id="T1ae" class="txs">Nous pensons facilement,</div> <div id="T1af" class="txs">à tort,</div> <div id="T1ag" class="txs">que l’argent est la clé du bonheur.</div> <div id="T1ah" class="txs">Nous avons tous besoin de biens matériels pour vivre mais c’est un mensonge de croire que notre joie et notre paix intérieures dépendent de nos biens.</div></div>
+<div class="m"><div id="T1ai" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1aj" class="txs">Ne pensez pas qu’avoir plus d’argent vous rendrait forcément plus heureux.</div> <div id="T1ak" class="txs">Plutôt que de demander à Dieu de vous donner plus,</div> <div id="T1al" class="txs">commencez par lui demander de vous donner plus de sagesse pour gérer ce que vous avez déjà.</div></div>
+<div class="m"><div id="T1am" class="txs"><span class="ul">Versets </span><span class="ul">bibliques à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1an" class="txs"><span class="it">«&nbsp;Ne me donne ni pauvreté,</span></div> <div id="T1ao" class="txs"><span class="it">ni richesse.</span></div> <div id="T1ap" class="txs"><span class="it">Donne-moi seulement ce qu’il me faut pour vivre.</span></div> <div id="T1aq" class="txs"><span class="it">En effet,</span></div> <div id="T1ar" class="txs"><span class="it">si je suis trop riche,</span></div> <div id="T1as" class="txs"><span class="it">je peux te trahir en disant:</span></div> <div id="T1at" class="txs"><span class="it">Qui est le Seigneur?</span></div> <div id="T1au" class="txs"><span class="it">Et si je suis trop pauvre,</span></div> <div id="T1av" class="txs"><span class="it">je peux devenir </span><span class="it">un </span><span class="it">voleur.</span></div> <div id="T1aw" class="txs"><span class="it">Alors je ne respecterai plus le nom de Dieu.</span></div><div id="T1ax" class="txs"><span class="it">&nbsp;» </span>(Proverbes 30.8-9)</div></div>
+<div class="m"><div id="T1ay" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1az" class="txs">Pensez-vous que parfois vous avez assez de biens matériels mais que vous ne savez pas les gérer?</div> <div id="T1ba" class="txs">Vous arrive-t-il de demander à Dieu plus de sagesse pour gérer votre vie et vos biens?</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/011_Conseil_n2.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°16 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.25 },
+    { label: "1b", start: 2.5, end: 7.27 },
+    { label: "1c", start: 7.52, end: 8.55 },
+    { label: "1d", start: 8.8, end: 11.31 },
+    { label: "1e", start: 11.56, end: 14.03 },
+    { label: "1f", start: 14.28, end: 19.19 },
+    { label: "1g", start: 19.44, end: 27.03 },
+    { label: "1h", start: 27.28, end: 27.79 },
+    { label: "1i", start: 28.04, end: 34.85 },
+    { label: "1j", start: 35.1, end: 41.81 },
+    { label: "1k", start: 42.06, end: 47.27 },
+    { label: "1l", start: 47.52, end: 53.77 },
+    { label: "1m", start: 54.02, end: 56.41 },
+    { label: "1n", start: 56.66, end: 60.45 },
+    { label: "1o", start: 60.7, end: 64.37 },
+    { label: "1p", start: 64.62, end: 70.43 },
+    { label: "1q", start: 70.68, end: 71.45 },
+    { label: "1r", start: 71.7, end: 73.71 },
+    { label: "1s", start: 73.96, end: 76.79 },
+    { label: "1t", start: 77.04, end: 77.81 },
+    { label: "1u", start: 78.06, end: 79.69 },
+    { label: "1v", start: 79.94, end: 83.27 },
+    { label: "1w", start: 83.52, end: 87.65 },
+    { label: "1x", start: 87.9, end: 92.23 },
+    { label: "1y", start: 92.48, end: 95.89 },
+    { label: "1z", start: 96.14, end: 101.91 },
+    { label: "1aa", start: 102.16, end: 108.29 },
+    { label: "1ab", start: 108.54, end: 117.31 },
+    { label: "1ac", start: 117.56, end: 125.31 },
+    { label: "1ad", start: 125.56, end: 127.15 },
+    { label: "1ae", start: 127.4, end: 129.53 },
+    { label: "1af", start: 129.78, end: 130.55 },
+    { label: "1ag", start: 130.8, end: 134.13 },
+    { label: "1ah", start: 134.38, end: 137.29 },
+    { label: "1ai", start: 137.54, end: 141.95 },
+    { label: "1aj", start: 142.2, end: 145.31 },
+    { label: "1ak", start: 145.56, end: 148.59 },
+    { label: "1al", start: 148.84, end: 154.59 },
+    { label: "1am", start: 154.84, end: 155.95 },
+    { label: "1an", start: 156.2, end: 160.83 },
+    { label: "1ao", start: 161.08, end: 162.07 },
+    { label: "1ap", start: 162.32, end: 170.17 },
+    { label: "1aq", start: 170.42, end: 175.55 },
+    { label: "1ar", start: 175.8, end: 178.27 },
+    { label: "1as", start: 178.52, end: 181.87 },
+    { label: "1at", start: 182.12, end: 184.87 },
+    { label: "1au", start: 185.12, end: 187.35 },
+    { label: "1av", start: 187.6, end: 188.73 },
+    { label: "1aw", start: 188.98, end: 190.07 },
+    { label: "1ax", start: 190.32, end: 196.03 },
+    { label: "1ay", start: 196.28, end: 197.29 },
+    { label: "1az", start: 197.54, end: 198.63 },
+    { label: "1ba", start: 198.88, end: 200.35 },
+    { label: "1bb", start: 200.6, end: 201.17 },
+    { label: "1bc", start: 201.42, end: 203.51 },
+    { label: "1bd", start: 203.76, end: 205.89 },
+    { label: "1be", start: 206.14, end: 209.35 },
+    { label: "1bf", start: 209.6, end: 212.57 },
+    { label: "1bg", start: 212.82, end: 217.89 },
+    { label: "1bh", start: 218.14, end: 218.61 },
+    { label: "1bi", start: 218.86, end: 220.13 },
+    { label: "1bj", start: 220.38, end: 224.21 },
+    { label: "1bk", start: 224.46, end: 233.35 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 233.35;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "17-B017-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='16-B016-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°16&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B018-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B018-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B017-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°16 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Cherchez à augmenter vos revenus en essayant de nouvelles choses</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="it">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Depuis que Mariam et Matthieu sont mariés,</span></div> <div id="T1e" class="txs"><span class="it">ils souffrent à la période de soudure.</span></div> <div id="T1f" class="txs"><span class="it">Il leur manque toujours un ou deux sacs de riz pour nourrir leur famille.</span></div> <div id="T1g" class="txs"><span class="it">Ils travaillent dur pour cultiver et utilisent les méthodes traditionnelles que leurs parents leur ont transmises.</span></div> <div id="T1h" class="txs"><span class="it">Un jour,</span></div> <div id="T1i" class="txs"><span class="it">une organisation visite leur village pour enseigner des nouvelles méthodes de culture qui permettent un meilleur rendement.</span></div><div id="T1j" class="txs"><span class="it">Matthieu </span><span class="it">va écouter les explications et se dit qu’il va essayer de changer sa façon de cultiver.</span></div> <div id="T1k" class="txs"><span class="it">Ils ont aussi la visite de leur nièce qui habite à la capitale et sait faire des gâteaux.</span></div> <div id="T1l" class="txs"><span class="it">Mariam lui demande de lui apprendre à préparer des gâteaux pour pouvoir les vendre au</span><span class="it"> </span><span class="it">village.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1m" class="txs">Qu’est-ce que Mariam et Matthieu ont fait?</div> <div id="T1n" class="txs">Qu’est-ce que cela va avoir comme conséquence pour leur famille?</div> <div id="T1o" class="txs">Qu’est-ce qui aurait pu empêcher Mariam et Matthieu de changer?</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1p" class="txs"><span class="bdit">Nous ne devons pas courir après l’argent et en désirer toujours plus.</span></div> <div id="T1q" class="txs"><span class="bdit">Par contre,</span></div> <div id="T1r" class="txs"><span class="bdit">quand les ressources sont insuffisantes,</span></div> <div id="T1s" class="txs"><span class="bdit">il faut réfléchir comment augmenter les revenus.</span></div> <div id="T1t" class="txs"><span class="bdit">Souvent,</span></div> <div id="T1u" class="txs"><span class="bdit">cela veut dire soit :</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1v" class="txs">essayer des nouvelles choses (comme Mariam), ou</div></div>
+<div class="m"><div id="T1w" class="txs">chercher à améliorer ce que l’on fait déjà (comme Matthieu).</div></div>
+<div class="p_Corpsdetexte"><div id="T1x" class="txs">On a besoin que d’autres personnes nous partagent ce qu’elles connaissent et nous forment.</div> <div id="T1y" class="txs">Parfois il faut prendre des risques (par exemple:</div> <div id="T1z" class="txs">essayer de vendre un nouveau gâteau sans savoir si il y aura beaucoup d’acheteurs).</div> <div id="T1aa" class="txs">Il faut bien réfléchir avant de se lancer pour avoir plus de chances de réussir (par exemple:</div> <div id="T1ab" class="txs">faire goûter le nouveau gâteau à plusieurs personnes et être sûr que les gens l’aiment avant d’acheter les ingrédients en grande quantité.</div> <div id="T1ac" class="txs">Il faut aussi bien calculer le prix de tous les ingrédients pour être sûr que cette activité aura un bénéfice).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs"><span class="ul">Verset </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1ae" class="txs"><span class="it">«&nbsp;N’hésite pas à prendre des risques,</span></div> <div id="T1af" class="txs"><span class="it">à la fin,</span></div> <div id="T1ag" class="txs"><span class="it">tu pourras obtenir de bons résultats.</span></div> <div id="T1ah" class="txs"><span class="it">Mais ne mets pas toutes tes richesses au même endroit,</span></div> <div id="T1ai" class="txs"><span class="it">car tu ne</span><span class="it"> </span><span class="it">sais pas quel malheur peut arriver sur la terre.</span></div> <div id="T1aj" class="txs"><span class="it">(…) Le paysan qui a peur du vent ne sème pas.</span></div> <div id="T1ak" class="txs"><span class="it">Celui qui a peur de la pluie ne récolte pas.</span></div><div id="T1al" class="txs"><span class="it">&nbsp;» </span>(Ecclésiastique 11.1-2,4).</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1am" class="txs">Parfois,</div> <div id="T1an" class="txs">nous devons essayer de faire les choses d’une autre façon qu’à notre habitude.</div> <div id="T1ao" class="txs">Par exemple,</div> <div id="T1ap" class="txs">un agriculteur va essayer de pratiquer la méthode du zéro labour car on lui a expliqué que ça améliore les récoltes.</div> <div id="T1aq" class="txs">Ça peut être très bien d’apprendre une nouvelle façon de faire mais souvent,</div> <div id="T1ar" class="txs">c’est difficile de changer nos habitudes.</div> <div id="T1as" class="txs">On aime faire comme on a toujours fait.</div> <div id="T1at" class="txs">Nous devons être prêt à essayer le changement.</div> <div id="T1au" class="txs">Nous devons oser prendre des risques,</div> <div id="T1av" class="txs">avec sagesse.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aw" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ax" class="txs">Soyez prêt à essayer des choses nouvelles ou à améliorer ce que vous faites déjà.</div> <div id="T1ay" class="txs">Formez-vous,</div> <div id="T1az" class="txs">renseignez-vous!</div> <div id="T1ba" class="txs">Soyez sages,</div> <div id="T1bb" class="txs">mais osez!</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bc" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1bd" class="txs">Si vos revenus sont insuffisants,</div> <div id="T1be" class="txs">quelle activité pourrait aider à les augmenter?</div> <div id="T1bf" class="txs">Prenez le temps de bien y réfléchir.</div> <div id="T1bg" class="txs">Avez-vous ce qu’il faut pour commencer une nouvelle activité (matériel,</div> <div id="T1bh" class="txs">temps,</div> <div id="T1bi" class="txs">compétences…)?</div> <div id="T1bj" class="txs">Ou comment pouvez-vous améliorer ce que vous faites déjà?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1bk" class="txs">Faut-il prendre conseil auprès de quelqu’un pour mieux se former ou vous aider à réfléchir à vos idées?</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/025_Conseil_n16.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

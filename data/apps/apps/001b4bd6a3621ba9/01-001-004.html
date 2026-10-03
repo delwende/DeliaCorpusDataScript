@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>161 Pʋ-toap yũud a bĩnd-k 4</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "4a", start: 58.81, end: 62.13 },
+    { label: "4b", start: 62.38, end: 67.08 },
+    { label: "4c", start: 67.33, end: 68.73 },
+    { label: "4d", start: 68.98, end: 79.24 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 58.81;
+var stopTime  = 79.24;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-003.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;161 Pʋ-toap yũud a bĩnd-k&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;4&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-005.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 161 a 200-image4.jpg" />
+
+<div class="m"><div id="T4a" class="txs"><span class="bd">164 </span><span class="bd">Kur</span><span class="bd"> n </span><span class="bd">bao</span><span class="bd"> la </span><span class="bd">nang</span><span class="bd"> </span><span class="bd">tão</span><span class="bd">-a</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T4b" class="txs"><span class="bdit">(Si une tortue se fai</span><span class="bdit">sait</span><span class="bdit"> darder par un </span><span class="bdit">scorpion,</span></div> <div id="T4c" class="txs"><span class="bdit">elle l’aurait voulu).</span></div></div>
+<div class="m"><div id="T4d" class="txs"><span class="bd">Kur</span><span class="bd"> n </span><span class="bd">bao</span><span class="bd"> la </span><span class="bd">nang</span><span class="bd"> </span><span class="bd">tão</span><span class="bd">-a</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 161 a 200 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

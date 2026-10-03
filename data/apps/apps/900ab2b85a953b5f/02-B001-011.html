@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 11</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "11a", start: 1420.64, end: 1422.13 },
+    { label: "11b", start: 1422.38, end: 1426.69 },
+    { label: "11c", start: 1426.94, end: 1430.39 },
+    { label: "11d", start: 1430.64, end: 1433.07 },
+    { label: "11e", start: 1433.32, end: 1436.45 },
+    { label: "11f", start: 1436.7, end: 1437.93 },
+    { label: "11g", start: 1438.18, end: 1440.41 },
+    { label: "11h", start: 1440.66, end: 1442.51 },
+    { label: "11i", start: 1442.76, end: 1444.51 },
+    { label: "11j", start: 1444.76, end: 1448.59 },
+    { label: "11k", start: 1448.84, end: 1453.85 },
+    { label: "11l", start: 1454.1, end: 1457.51 },
+    { label: "11m", start: 1457.76, end: 1462.45 },
+    { label: "11n", start: 1462.7, end: 1466.21 },
+    { label: "11o", start: 1466.46, end: 1468.21 },
+    { label: "11p", start: 1468.46, end: 1471.25 },
+    { label: "11q", start: 1471.5, end: 1474.11 },
+    { label: "11r", start: 1474.36, end: 1475.99 },
+    { label: "11s", start: 1476.24, end: 1479.07 },
+    { label: "11t", start: 1479.32, end: 1481.95 },
+    { label: "11u", start: 1482.2, end: 1484.73 },
+    { label: "11v", start: 1484.98, end: 1488.93 },
+    { label: "11w", start: 1489.18, end: 1494.43 },
+    { label: "11x", start: 1494.68, end: 1496.47 },
+    { label: "11y", start: 1496.72, end: 1498.81 },
+    { label: "11z", start: 1499.06, end: 1503.69 },
+    { label: "11aa", start: 1503.94, end: 1505.51 },
+    { label: "11ab", start: 1505.76, end: 1508.81 },
+    { label: "11ac", start: 1509.06, end: 1513.13 },
+    { label: "11ad", start: 1513.38, end: 1516.93 },
+    { label: "11ae", start: 1517.18, end: 1518.05 },
+    { label: "11af", start: 1518.3, end: 1520.81 },
+    { label: "11ag", start: 1521.06, end: 1523.91 },
+    { label: "11ah", start: 1524.16, end: 1526.39 },
+    { label: "11ai", start: 1526.64, end: 1527.75 },
+    { label: "11aj", start: 1528, end: 1531.59 },
+    { label: "11ak", start: 1531.84, end: 1535.25 },
+    { label: "11al", start: 1535.5, end: 1537.05 },
+    { label: "11am", start: 1537.3, end: 1540.67 },
+    { label: "11an", start: 1540.92, end: 1543.73 },
+    { label: "11ao", start: 1543.98, end: 1547.07 },
+    { label: "11ap", start: 1547.32, end: 1550.41 },
+    { label: "11aq", start: 1550.66, end: 1551.85 },
+    { label: "11ar", start: 1552.1, end: 1554.17 },
+    { label: "11as", start: 1554.42, end: 1558.95 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1420.64;
+var stopTime  = 1558.95;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-010.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;11&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-012.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image11.jpg" />
+
+<div class="m"><div id="T11a" class="txs"><span class="bd">The Holy Spirit</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T11b" class="txs"><span class="it">In Christ also you who have believed have received from God the </span><span class="bdit">Holy Spirit</span><span class="it">,</span></div> <div id="T11c" class="txs"><span class="it">whom he promised and by whom he sealed you to belong to him.</span></div> <div id="T11d" class="txs">(Ephesians 1, 13)</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T11e" class="txs"><span class="bd">What does it mean to be sealed with the Holy Spirit?</span></div></div>
+<div class="m"><div id="T11f" class="txs">Among the Jews,</div> <div id="T11g" class="txs">the seal marked the end of a transaction:</div> <div id="T11h" class="txs">when the agreement had been reached,</div> <div id="T11i" class="txs">the deed done and the price paid,</div> <div id="T11j" class="txs">the seal was affixed to the contract to make it definitive.</div> <div id="T11k" class="txs">A seal is an imprint designed to guarantee the authenticity of a document or piece of information,</div> <div id="T11l" class="txs">and to show whether the contents have been altered or damaged.</div></div>
+<div class="m"><div id="T11m" class="txs">- A seal establishes the owner's rights and identifies his or her property.</div> <div id="T11n" class="txs">The Holy Spirit thus becomes the divine imprint on us.</div> <div id="T11o" class="txs">We are God's property.</div></div>
+<div class="m"><div id="T11p" class="txs">- A seal indicates that it is a genuine work,</div> <div id="T11q" class="txs">a completed and non-negotiable transaction,</div> <div id="T11r" class="txs">bearing the seal of God.</div></div>
+<div class="m"><div id="T11s" class="txs">- A seal indicates that it is an authentic work,</div> <div id="T11t" class="txs">a completed and non-negotiable transaction,</div> <div id="T11u" class="txs">bearing the stamp of the competent authority.</div> <div id="T11v" class="txs">The work of salvation is perfect and can no longer be doubted.</div></div>
+<div class="m"><div id="T11w" class="txs">- Those who carry a document sealed with a seal are under the protection of the owner of the seal.</div> <div id="T11x" class="txs">God is our protector.</div> <div id="T11y" class="txs">He ensures our security.</div> <div id="T11z" class="txs">The Holy Spirit also acts as the guarantor or pledge of our inheritance.</div> <div id="T11aa" class="txs">Whoever pays a pledge,</div> <div id="T11ab" class="txs">makes a firm commitment to the other to give it all later.</div> <div id="T11ac" class="txs">The Holy Spirit assures us of the totality of our inheritance.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T11ad" class="txs"><span class="bd">Actions to make the Holy Spirit a richness in your life:</span></div></div>
+<div class="m"><div id="T11ae" class="txs"><span class="it">- Prayer</span>:</div> <div id="T11af" class="txs">Thank God for the gift of the Holy Spirit.</div> <div id="T11ag" class="txs">Ask for the Holy Spirit to fill you completely,</div> <div id="T11ah" class="txs">so that you can listen to His voice.</div></div>
+<div class="m"><div id="T11ai" class="txs"><span class="it">- Bible reading</span>:</div> <div id="T11aj" class="txs">Read the Gospel of John 15, 7 to 15.</div> <div id="T11ak" class="txs">What do these verses teach you about the Holy Spirit?</div></div>
+<div class="m"><div id="T11al" class="txs"><span class="it">- personal reflection:</span></div> <div id="T11am" class="txs">Is the mark of the Holy Spirit really visible in your life?</div> <div id="T11an" class="txs">Can everyone see that you belong to God? </div></div>
+<div class="m"><div id="T11ao" class="txs">Ask the Holy Spirit to show you what's wrong with you,</div> <div id="T11ap" class="txs">and to transform you into the image of the living God.</div></div>
+<div class="m"><div id="T11aq" class="txs"><span class="it">- towards others:</span></div> <div id="T11ar" class="txs">Get to know your spiritual gifts,</div> <div id="T11as" class="txs">and start exercising them for the good of your brothers and sisters in Christ.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

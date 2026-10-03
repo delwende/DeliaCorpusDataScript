@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>16 LE FLAGRANT DÉLIT 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.25 },
+    { label: "1b", start: 4.5, end: 20.43 },
+    { label: "1c", start: 20.68, end: 32.21 },
+    { label: "1d", start: 32.46, end: 38.71 },
+    { label: "1e", start: 38.96, end: 45.27 },
+    { label: "1f", start: 45.52, end: 51.53 },
+    { label: "1g", start: 51.78, end: 57.17 },
+    { label: "1h", start: 57.42, end: 64.63 },
+    { label: "1i", start: 64.88, end: 70.39 },
+    { label: "1j", start: 70.64, end: 74.95 },
+    { label: "1k", start: 75.2, end: 80.75 },
+    { label: "1l", start: 81, end: 94.35 },
+    { label: "1m", start: 94.6, end: 100.87 },
+    { label: "1n", start: 101.12, end: 108.97 },
+    { label: "1o", start: 109.22, end: 120.05 },
+    { label: "1p", start: 120.3, end: 133.23 },
+    { label: "1q", start: 133.48, end: 140.95 },
+    { label: "1r", start: 141.2, end: 147.21 },
+    { label: "1s", start: 147.46, end: 166.73 },
+    { label: "1t", start: 166.98, end: 181.89 },
+    { label: "1u", start: 182.14, end: 189.19 },
+    { label: "1v", start: 189.44, end: 197.41 },
+    { label: "1w", start: 197.66, end: 211.57 },
+    { label: "1x", start: 211.82, end: 219.81 },
+    { label: "1y", start: 220.06, end: 232.09 },
+    { label: "1z", start: 232.34, end: 234.57 },
+    { label: "1aa", start: 234.82, end: 243.55 },
+    { label: "1ab", start: 243.8, end: 249.83 },
+    { label: "1ac", start: 250.08, end: 256.05 },
+    { label: "1ad", start: 256.3, end: 270.05 },
+    { label: "1ae", start: 270.3, end: 271.25 },
+    { label: "1af", start: 271.5, end: 278.11 },
+    { label: "1ag", start: 278.36, end: 284.95 },
+    { label: "1ah", start: 285.2, end: 290.15 },
+    { label: "1ai", start: 290.4, end: 297.31 },
+    { label: "1aj", start: 297.56, end: 311.99 },
+    { label: "1ak", start: 312.24, end: 318.01 },
+    { label: "1al", start: 318.26, end: 321.67 },
+    { label: "1am", start: 321.92, end: 338.47 },
+    { label: "1an", start: 338.72, end: 350.35 },
+    { label: "1ao", start: 350.6, end: 359.21 },
+    { label: "1ap", start: 359.46, end: 369.65 },
+    { label: "1aq", start: 369.9, end: 378.35 },
+    { label: "1ar", start: 378.6, end: 382.11 },
+    { label: "1as", start: 382.36, end: 385.17 },
+    { label: "1at", start: 385.42, end: 395.55 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 395.55;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;16 LE FLAGRANT DÉLIT&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">16 LE FLAGRANT DÉLIT D‘ADULTÈRE</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">La femme, dans les sociétés traditionnelles africaines, est considérée comme une fierté de l’homme au point que les gens disent que les hommes prennent les femmes pour leur propriété.</div> <div id="T1c" class="txs">L’homme, à cause de sa fierté, son honneur et sa dignité, est prêt à tout pour garder sa femme pour lui et lui seul.</div> <div id="T1d" class="txs">Comme l’adage le dit «&nbsp;<span class="it">on peut tout partager sauf une femme</span>&nbsp;».</div></div>
+<div class="m"><div id="T1e" class="txs">Il était une fois une femme qui provoqua de chaudes disputes conjugales.</div> <div id="T1f" class="txs">Mais rien de tout ceci n’affecta le comportement de l’épouse.</div> <div id="T1g" class="txs">L’époux cocu entrepris d’en parler aux parents et amis.</div> <div id="T1h" class="txs">Mais personne ne réussit à faire changer la femme de comportement.</div> <div id="T1i" class="txs">Elle continuait d’être généreuse avec ses multiples amants.</div> <div id="T1j" class="txs">Les scènes de ménage ne finissaient jamais dans ce couple.</div> <div id="T1k" class="txs">L'entourage avait commencé par penser que l'homme exagérait.</div> <div id="T1l" class="txs">Conscient de ce fait, il résolut de ne plus en parler et de se plier au bon vouloir de sa femme qui convolait de conquêtes en conquêtes.</div> <div id="T1m" class="txs">À l’approche de la fête des récoltes, tout le village se mit aux préparatifs.</div> <div id="T1n" class="txs">L’homme s’y met aussi et trouva le mil pour la préparation du dolo (bière de mil).</div> <div id="T1o" class="txs">Mais sa femme s'y était négligemment impliquée puisqu’elle avait même refusé de faire germer le mil.</div></div>
+<div class="m"><div id="T1p" class="txs">Finalement elle accepta d’engager la préparation du dolo qui devrait durer trois jours, le troisième jour étant le jour de la fête.</div> <div id="T1q" class="txs">À la veille du jour J, elle alla passer la nuit avec un de ses amants.</div> <div id="T1r" class="txs">Cela fut tellement plaisant qu’elle fut surprise par le petit matin.</div></div>
+<div class="m"><div id="T1s" class="txs">Pourtant dans cette société, une femme qui est prise en flagrant délit d’infidélité devient un paria car elle sera indexée par tous et même ses enfants n'échapperont pas aux injures de toutes les langues.</div></div>
+<div class="m"><div id="T1t" class="txs">Quand elle sursauta du lit de son amant, elle ramassa quelque chose qui lui servit de foulard mais elle s’était souciée peu de la nature de ce foulard.</div> <div id="T1u" class="txs">C’est justement là que la preuve de son infidélité va se mettre à grand jour.</div> <div id="T1v" class="txs">Dans la précipitation, c’était le slip de son amant qu’elle avait attaché comme foulard.</div></div>
+<div class="m"><div id="T1w" class="txs">Une fois au domicile conjugal, elle feint d’être très gentille avec tout le monde puisqu’elle était convaincue que personne ne peut se rendre compte de son acte.</div> <div id="T1x" class="txs">Mais tout le monde la regardait avec un air ahuri sans qu'elle ne s’en aperçoive.</div> <div id="T1y" class="txs">Ce fut l'occasion pour son mari de finir avec toutes les supputations qui ne lui donnaient plus raison sur le comportement de son épouse.</div> <div id="T1z" class="txs">Comme on le dit chaque fois :</div> <div id="T1aa" class="txs">«&nbsp;<span class="it">L</span><span class="it">e voleur peut avoir tous les jours en sa faveur mais un seul sera celui du propriétaire </span>».</div> <div id="T1ab" class="txs">Autrement, le mauvais acte finit par se savoir quel que soit la durée du temps.</div></div>
+<div class="m"><div id="T1ac" class="txs">Plus précisément, on dit que «&nbsp;<span class="it">le mensonge a de courtes pattes </span>».</div> <div id="T1ad" class="txs">Alors, le mari cocufié demanda en ces termes à sa femme d’aller remettre une calebasse de dolo au doyen de la famille :</div> <div id="T1ae" class="txs">«&nbsp;<span class="it">Bon !</span></div> <div id="T1af" class="txs"><span class="it">Tu remettras le dolo au doyen, tu lui diras que je lui souhaite une très bonne fête.</span></div> <div id="T1ag" class="txs"><span class="it">Qu’en outre, je l’invite à regarder lui-même et de constater les faits.</span></div> <div id="T1ah" class="txs"><span class="it">Si c’est bon pour lui, ce serait bon désormais pour moi</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ai" class="txs">Il insista auprès de sa femme pour que la commission soit transmise comme formulée.</div> <div id="T1aj" class="txs">La femme qui ne se doutait de rien et d’ailleurs qui voulait paraître gentille pour masquer son sale comportement de la veille, transmit fidèlement la commission.</div> <div id="T1ak" class="txs">Elle n'a même pas remarqué que les gens s’attardaient sur son drôle de foulard.</div> <div id="T1al" class="txs">Elle revint et fit le compte rendu :</div> <div id="T1am" class="txs">«<span class="it"> </span><span class="it">L</span><span class="it">e</span><span class="it"> </span><span class="it">doyen te remercie et il me dit de te dire qu’il a compris mais comme on ne conseille jamais à quelqu’un de pleurer même s’il a raison, de garder courage sinon que cela vaut la peine</span>&nbsp;».</div></div>
+<div class="m"><div id="T1an" class="txs">Son mari l’envoya encore chez sa tante avec les mêmes propos accompagnés de la calebasse du dolo pour souhaiter la bonne fête.</div> <div id="T1ao" class="txs">La scène s'est répétée avec les amis, les voisins et tous ceux qui étaient impliqués dans leurs bagarres conjugales.</div> <div id="T1ap" class="txs">Quand elle revenait de sa dernière course, une femme du village l’appela et lui fait des remarques sur son foulard.</div> <div id="T1aq" class="txs">Lorsqu’elle l’enleva pour l’examiner de près, elle s’est rendue compte qu’elle venait de se vendre.</div> <div id="T1ar" class="txs">Elle comprit alors les propos déguisés de son mari.</div> <div id="T1as" class="txs">Elle était devenue couverte de honte.</div> <div id="T1at" class="txs">Depuis ce jour, elle éprouva des difficultés à mettre les pieds dehors encore moins à aller rencontrer des amants.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 16  le flagrant d'elit d'aldutere.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

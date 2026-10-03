@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4 Zood yõbg yelle 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.31 },
+    { label: "1b", start: 2.56, end: 11.13 },
+    { label: "1c", start: 11.38, end: 14.85 },
+    { label: "1d", start: 15.1, end: 21.23 },
+    { label: "1e", start: 21.48, end: 27.61 },
+    { label: "1f", start: 27.86, end: 39.93 },
+    { label: "1g", start: 40.18, end: 44.99 },
+    { label: "1h", start: 45.24, end: 56.89 },
+    { label: "1i", start: 57.14, end: 64.01 },
+    { label: "1j", start: 64.26, end: 66.09 },
+    { label: "1k", start: 66.34, end: 70.87 },
+    { label: "1l", start: 71.12, end: 73.81 },
+    { label: "1m", start: 74.06, end: 82.17 },
+    { label: "1n", start: 82.42, end: 88.77 },
+    { label: "1o", start: 89.02, end: 95.15 },
+    { label: "1p", start: 95.4, end: 97.55 },
+    { label: "1q", start: 97.8, end: 105.03 },
+    { label: "1r", start: 105.28, end: 112.13 },
+    { label: "1s", start: 112.38, end: 120.57 },
+    { label: "1t", start: 120.82, end: 126.31 },
+    { label: "1u", start: 126.56, end: 131.09 },
+    { label: "1v", start: 131.34, end: 144.03 },
+    { label: "1w", start: 144.28, end: 147.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 147.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;4 Zood yõbg yelle&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_Textkrper"><div id="T1a" class="txs"><span class="bd">4 Zood yõbg yelle</span><span class="bd">.</span></div></div>
+<div class="p_Textkrper"><div id="T1b" class="txs">Wakat fãa, kinkirg a yembr n yit weoogã pʋgẽ, n lebgd ned n wat n dood tẽn-bil a ye raaga.</div> <div id="T1c" class="txs">La, a wa n yõga zood ne rao a ye.</div> <div id="T1d" class="txs">La, a sã n wa raag fãa, b bee ne taaba.</div></div>
+<div class="p_Textkrper"><div id="T1e" class="txs">La, rao wã n yikame, n zomb a wed-moaag n na n tɩ kaag-a.</div> <div id="T1f" class="txs">La, a sẽn wa n ta zakẽ wã n pʋʋse, a zoa wã sẽn ya kinkirgã, sɩd yiime n pʋʋs-a, n lebg n kẽ a roogẽ.</div> <div id="T1g" class="txs">La, vugr bala, zakã lebga kãgre.</div> <div id="T1h" class="txs">Tɩ rao wã ket n zĩẽ, sẽn yi bilfu, la kinkirgã ba wã la a ma wã, tɩ yi n pʋʋs-a n lebg n kẽ.</div> <div id="T1i" class="txs">La, rao wã wed-moaagã wa n kʋmame, t’a tik n yiki, n tɩ kolg-a.</div> <div id="T1j" class="txs">La wed-moaagã yeel-a lame :</div> <div id="T1k" class="txs">«Mam yãbr a tãab-n-soabã sã n mik tõnd ka, b na n kʋʋ tõndo».</div> <div id="T1l" class="txs">La rao wã lebgame, n tɩ zĩndi.</div> <div id="T1m" class="txs">La wed-moaagã le kʋmame, tɩ rao wã yik n wudg n tɩ ta, n yɩk n zomb wed-moaagã, n na n zoe n kuili.</div> <div id="T1n" class="txs">La, a zoa wã me lebga neda, n zomb a wed-moaaga, n na n dig-a.</div> <div id="T1o" class="txs">B sẽn tar taab rigbu, rao wã wed-moaagã wa n yaame, tɩ bɛ wã  ket n pʋgd-a.</div> <div id="T1p" class="txs">Tɩ rao wã yeel a wed-moaagã :</div> <div id="T1q" class="txs">«Sã n yaa m ba ne m ma n da foo n kõ maam, bɩ  f ra sak tɩ yãnd paam maam ye».</div> <div id="T1r" class="txs">Wakat-kãnga,  rao wã kẽem bãnga a yamẽ, t’a yao wã bee yell pʋga.</div> <div id="T1s" class="txs">A tik n yikame, n dɩk a bug-raoogo, n bob n yɩk n zomb a wed-moaagã, n dɩk sorã, n na n babs-ba.</div> <div id="T1t" class="txs">La, a wa n tool n ne-b, b sẽn wate, tɩ wubsgã tʋke.</div> <div id="T1u" class="txs">T’a yalse, n maneg a bug-raoogã, n tees n gũudẽ.</div> <div id="T1v" class="txs">La, a yao wã wa n pɩʋʋgame, t’a kẽemã kell n tees bug-raoogã, ned ning sẽn pʋgdã zugu, n wẽ, tɩ kinkirgã yak n lʋɩ n ki.</div></div>
+<div class="p_Textkrper"><div id="T1w" class="txs"><span class="bdit">Rẽ wã, z</span><span class="bdit">ood  yõgda ne gũusgu</span>.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte_04_Zood_yobg.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

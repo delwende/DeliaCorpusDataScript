@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°17 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.79 },
+    { label: "1b", start: 2.04, end: 3.71 },
+    { label: "1c", start: 3.96, end: 4.85 },
+    { label: "1d", start: 5.1, end: 7.57 },
+    { label: "1e", start: 7.82, end: 11.55 },
+    { label: "1f", start: 11.8, end: 15.81 },
+    { label: "1g", start: 16.06, end: 19.35 },
+    { label: "1h", start: 19.6, end: 25.63 },
+    { label: "1i", start: 25.88, end: 30.55 },
+    { label: "1j", start: 30.8, end: 32.77 },
+    { label: "1k", start: 33.02, end: 35.61 },
+    { label: "1l", start: 35.86, end: 38.25 },
+    { label: "1m", start: 38.5, end: 42.69 },
+    { label: "1n", start: 42.94, end: 44.87 },
+    { label: "1o", start: 45.12, end: 52.09 },
+    { label: "1p", start: 52.34, end: 54.25 },
+    { label: "1q", start: 54.5, end: 65.85 },
+    { label: "1r", start: 66.1, end: 69.33 },
+    { label: "1s", start: 69.58, end: 73.05 },
+    { label: "1t", start: 73.3, end: 75.71 },
+    { label: "1u", start: 75.96, end: 78.03 },
+    { label: "1v", start: 78.28, end: 81.05 },
+    { label: "1w", start: 81.3, end: 86.11 },
+    { label: "1x", start: 86.36, end: 87.61 },
+    { label: "1y", start: 87.86, end: 89.39 },
+    { label: "1z", start: 89.64, end: 90.93 },
+    { label: "1aa", start: 91.18, end: 93.09 },
+    { label: "1ab", start: 93.34, end: 95.21 },
+    { label: "1ac", start: 95.46, end: 100.39 },
+    { label: "1ad", start: 100.64, end: 102.71 },
+    { label: "1ae", start: 102.96, end: 106.63 },
+    { label: "1af", start: 106.88, end: 110.73 },
+    { label: "1ag", start: 110.98, end: 113.47 },
+    { label: "1ah", start: 113.72, end: 116.19 },
+    { label: "1ai", start: 116.44, end: 122.57 },
+    { label: "1aj", start: 122.82, end: 126.65 },
+    { label: "1ak", start: 126.9, end: 130.01 },
+    { label: "1al", start: 130.26, end: 134.83 },
+    { label: "1am", start: 135.08, end: 137.09 },
+    { label: "1an", start: 137.34, end: 138.33 },
+    { label: "1ao", start: 138.58, end: 140.51 },
+    { label: "1ap", start: 140.76, end: 142.15 },
+    { label: "1aq", start: 142.4, end: 143.93 },
+    { label: "1ar", start: 144.18, end: 147.31 },
+    { label: "1as", start: 147.56, end: 158.55 },
+    { label: "1at", start: 158.8, end: 161.89 },
+    { label: "1au", start: 162.14, end: 168.91 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 168.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "18-B018-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='17-B017-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='17-B017-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°17&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B019-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B019-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B018-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°17 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Développez vos activités</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="it">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Sia vend des gâteaux devant chez elle.</span></div> <div id="T1e" class="txs"><span class="it">Cette activité l’aide pour les dépenses de la famille.</span></div> <div id="T1f" class="txs"><span class="it">Elle parle un jour avec une amie qui revend des boissons fraîches.</span></div> <div id="T1g" class="txs"><span class="it">C’est une bonne façon de gagner de l’argent supplémentaire,</span></div> <div id="T1h" class="txs"><span class="it">mais Sia n’a pas de glacière et ne peut donc pas ajouter cette nouvelle activité.</span></div> <div id="T1i" class="txs"><span class="it">Elle se demande ce qu’elle pourrait faire pour développer son activité.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1j" class="txs">Que pouvez-vous conseiller à Sia?</div> <div id="T1k" class="txs">Y a-t-il un moyen d’acheter une glacière?</div> <div id="T1l" class="txs">Si elle veut développer son activité,</div> <div id="T1m" class="txs">Sia peut-elle faire autre chose que vendre des boissons fraîches?</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1n" class="txs">Travailler est important.</div> <div id="T1o" class="txs">Mais il faut aussi réfléchir à nos activités et chercher comment les faire durer et les développer.</div></div>
+<div class="p_Titre4"><div id="T1p" class="txs"><span class="ul">Verset </span>à méditer:</div></div>
+<div class="p"><div id="T1q" class="txs">La femme vertueuse <span class="it">«&nbsp;cherche avec soin de la laine et du lin et elle travaille activement de ses mains (…) Elle réfléchit puis elle plante un champ.</span></div> <div id="T1r" class="txs"><span class="it">Elle fait une plantation avec l’argent qu’elle a gagné.</span></div> <div id="T1s" class="txs"><span class="it">Elle se met au travail avec courage,</span></div> <div id="T1t" class="txs"><span class="it">elle ne reste jamais sans rien faire.</span></div> <div id="T1u" class="txs"><span class="it">Elle voit que ses affaires vont bien,</span></div> <div id="T1v" class="txs"><span class="it">sa lampe reste allumée tard dans la nuit.</span></div><div id="T1w" class="txs"><span class="it">&nbsp;» </span>(Proverbes 31.13-18)</div></div>
+<div class="p_Titre4"><div id="T1x" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1y" class="txs">Comme la femme vertueuse,</div> <div id="T1z" class="txs">nous devons travailler,</div> <div id="T1aa" class="txs">mais aussi réfléchir,</div> <div id="T1ab" class="txs">investir avec sagesse,</div> <div id="T1ac" class="txs">et développer avec intelligence et courage ce que nous faisons.</div></div>
+<div class="p_Titre4"><div id="T1ad" class="txs"><span class="ul">Questions à se</span> poser:</div></div>
+<div class="p_Corpsdetexte"><div id="T1ae" class="txs">Si vous avez une activité qui génère un revenu,</div> <div id="T1af" class="txs">il faut réfléchir si vous pouvez augmenter vos bénéfices.</div> <div id="T1ag" class="txs">Il faut se poser des questions:</div></div>
+<div class="m"><div id="T1ah" class="txs">Quels sont les bénéfices de l’activité?</div> <div id="T1ai" class="txs">(Les bénéfices sont le total des ventes moins les dépenses liées à l’activité)</div></div>
+<div class="m"><div id="T1aj" class="txs">Peut-on diminuer les dépenses liées à cette activité?</div> <div id="T1ak" class="txs">(par exemple en diminuant les frais de déplacement,</div> <div id="T1al" class="txs">en achetant des plus grandes quantités qui coûtent moins cher à l’unité).</div></div>
+<div class="m"><div id="T1am" class="txs">Peut-on augmenter les revenus?</div> <div id="T1an" class="txs">(par exemple :</div> <div id="T1ao" class="txs">en vendant de meilleure qualité,</div> <div id="T1ap" class="txs">à un autre endroit,</div> <div id="T1aq" class="txs">en ajustant le prix,</div> <div id="T1ar" class="txs">en faisant la promotion de notre activité…).</div></div>
+<div class="m"><div id="T1as" class="txs">Quelle partie des bénéfices de l’activité sont pour l’épargne ou les dépenses personnelles et quelle partie des bénéfices va servir à faire grandir l’activité?</div></div>
+<div class="m"><div id="T1at" class="txs">Comment développer une activité?</div> <div id="T1au" class="txs">Réfléchir à des idées nouvelles et s’il est possible de les concrétiser.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/026_Conseil_n17.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

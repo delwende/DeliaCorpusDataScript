@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Willkommen 23</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 32 }];
+var hasIntro = false;
+var baseRef  = "72-B072-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='71-B071-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='72-B072-022.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Willkommen&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;23&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='72-B072-024.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='73-B074-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B072-image23.jpg" />
+
+<div class="m"><span class="bd">23) WIE KANN ICH MENSCHEN IN DIESEM LAND KENNENLERNEN?</span></div>
+<div class="m">Viele Europäer sind in ihrem Alltag durch Beruf und Familie sehr eingespannt, sodass es manchmal schwierig ist, spontan mit Menschen ins Gespräch zu kommen. Hobbys, die Europäern ebenfalls Freude bereiten, sind eine gute Möglichkeit, Menschen kennenzulernen.</div>
+<div class="m"><span class="bd">GRUPPEN UND CLUBS</span></div>
+<div class="m">Viele Menschen treffen sich nach der Arbeit in Gruppen und Vereinen, um gemeinsam Sport zu treiben oder Musik zu machen. So gibt es zum Beispiel Chöre, Musikgruppen, Sportvereine, Kochgruppen und Computerclubs. Über das gemeinsame Hobby lernt man sich kennen. Informationen hängen oft an schwarzen Brettern in Geschäften und Bibliotheken aus. Eine Übersicht über Freizeitangebote findet sich auch auf der Homepage des jeweiligen Dorfes.</div>
+<div class="m"><span class="bd">Gottesdienste</span></div>
+<div class="m">Gottesdienste finden oft sonntags um ca. 10 Uhr statt. In vielen Kirchen kann man sich nach dem Gottesdienst bei einer Tasse Kaffee noch einmal austauschen. Die Teilnahme als Gast ist jederzeit möglich. Informationen zu Uhrzeiten und Ablauf hängen oft an Anschlagtafeln außerhalb der Kirchengebäude aus.</div>
+<div class="m"><span class="bd">SPIELGRUPPEN FÜR FAMILIEN</span></div>
+<div class="m">Oft gibt es im Stadtteil oder in Kirchengemeinden kostenlose Spielgruppen für Eltern mit kleineren Kindern. Dort treffen sich Eltern mit Kleinkindern. Die Kinder können miteinander spielen und die Eltern können sich austauschen.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wuugaandu e lewla 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.35 },
+    { label: "1b", start: 3.6, end: 8.77 },
+    { label: "1c", start: 9.02, end: 22.15 },
+    { label: "1d", start: 22.4, end: 49.63 },
+    { label: "1e", start: 49.88, end: 59.93 },
+    { label: "1f", start: 60.18, end: 66.65 },
+    { label: "1g", start: 66.9, end: 82.43 },
+    { label: "1h", start: 82.68, end: 88.11 },
+    { label: "1i", start: 88.36, end: 98.09 },
+    { label: "1j", start: 98.34, end: 119.95 },
+    { label: "1k", start: 120.2, end: 130.89 },
+    { label: "1l", start: 131.14, end: 136.07 },
+    { label: "1m", start: 136.32, end: 154.87 },
+    { label: "1n", start: 155.12, end: 160.53 },
+    { label: "1o", start: 160.78, end: 174.11 },
+    { label: "1p", start: 174.36, end: 182.77 },
+    { label: "1q", start: 183.02, end: 188.43 },
+    { label: "1r", start: 188.68, end: 190.07 },
+    { label: "1s", start: 190.32, end: 193.47 },
+    { label: "1t", start: 193.72, end: 210.95 },
+    { label: "1u", start: 211.2, end: 217.11 },
+    { label: "1v", start: 217.36, end: 229.67 },
+    { label: "1w", start: 229.92, end: 243.91 },
+    { label: "1x", start: 244.16, end: 257.33 },
+    { label: "1y", start: 257.58, end: 270.71 },
+    { label: "1z", start: 270.96, end: 280.21 },
+    { label: "1aa", start: 280.46, end: 295.97 },
+    { label: "1ab", start: 296.22, end: 350.43 },
+    { label: "1ac", start: 350.68, end: 356.41 },
+    { label: "1ad", start: 356.66, end: 364.73 },
+    { label: "1ae", start: 364.98, end: 368.71 },
+    { label: "1af", start: 368.96, end: 384.23 },
+    { label: "1ag", start: 384.48, end: 386.67 },
+    { label: "1ah", start: 386.92, end: 400.19 },
+    { label: "1ai", start: 400.44, end: 405.19 },
+    { label: "1aj", start: 405.44, end: 433.89 },
+    { label: "1ak", start: 434.14, end: 450.75 },
+    { label: "1al", start: 451, end: 452.73 },
+    { label: "1am", start: 452.98, end: 455.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 455.39;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "14-B014-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='13-B013-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Wuugaandu e lewla&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B014-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetitre"><div id="T1a" class="txs">Wuugaandu e lewla</div></div>
+<div class="p_illustration"><div id="T1b" class="txs">Wuugaandu e lewla wo yaadiraaɓe sanne.</div> <div id="T1c" class="txs">Jemma e nyalooma fu ɓe ngondu faa nyannde gom tan ɓe muuyi yaroyde ndiyam.</div> <div id="T1d" class="txs">Nde ɓe njahannoo fa ɓe njaroowa fu, lewla wii wuugaandu: "Hannden ka wuugaandu, en njarowa keerkete."</div> <div id="T1e" class="txs">Wuugaandu nootii o wii: "Hey lewlel, accu ni njarowen mbaaliiɗam.</div> <div id="T1f" class="txs">Saabu dey, kerkete na tiiɗani ma."</div> <div id="T1g" class="txs">Lewlel wii o, ndelle so ni ɓe njarooytaa keerkete fu, jaadal maɓɓe timmii.</div> <div id="T1h" class="txs">Wuugaandu nootii o: "Ayyo wooɗii.</div> <div id="T1i" class="txs">Min kay mi yiɗaa fu ko senndata en.</div> <div id="T1j" class="txs">En njaha njaarowen keerkete so ɗuum weli ma.</div></div>
+<div class="p_illustration"><div id="T1k" class="txs">Keerkete le wo ndiyam iiloojam ceeɗu ley gooruuwol hakkunde dubbe koole.</div> <div id="T1l" class="txs">Ɓe ndilliri kerkete.</div> <div id="T1m" class="txs">Ɓe njogii ɓe njaha faa ɓe njottii hunnduko gooruuwol tan ɓe ndarii.</div> <div id="T1n" class="txs">Ɓe puɗɗi yarude.</div> <div id="T1o" class="txs">Buugalel ɗomɗitilnoo fu, fiiri hoɗowi dow lekki.</div> <div id="T1p" class="txs">Lewlel yardunoo ni luwe ɗisii e ɗaɗi kooli.</div> <div id="T1q" class="txs">Memi ɗoofude luwe e ɗaɗi kooli waaway.</div> <div id="T1r" class="txs">Faa neeɓi.</div> <div id="T1s" class="txs">Wari poolel na yima: </div></div>
+<div class="p_illustration"><div id="T1t" class="txs"><span class="it">Pooloy keerkete dannga lilifo,</span><span class="it"><br/></span><span class="it">ƴoogooɓe maana dannga lilifo,</span><span class="it"><br/></span><span class="it">Kamɓoy ina ngara dannga lilifo.</span></div></div>
+<div class="p_illustration"><div id="T1u" class="txs">Nde lewlel nanunoo fu, nootii kam du:</div></div>
+<div class="p_illustration"><div id="T1v" class="txs"><span class="it">Kiiriri njeecoo dannga lilifo,</span><span class="it"><br/></span><span class="it">Kaarara njeeƴo dannga lilifo.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_contetexte"><div id="T1w" class="txs">Nde lewlel wiinoo noon fu, heddii na diffoo, na fitta, na fooɗa hoore muuɗum faa wuurtoo, waaway.</div> <div id="T1x" class="txs">To ƴoogooɓe ton du tawi cukalel kam aardinoo.</div> <div id="T1y" class="txs">Nden cukalel ngel wii womɓe gaɗa muuɗum: "Goɗɗum ya na ton to keerkete to na haala."</div> <div id="T1z" class="txs">Womɓe gaɗa ɓen, mbi o fenan, o tinnoo tan o yaaha law."</div> <div id="T1aa" class="txs">Nde wuugaandu yiinoo ɓe ngara warde fu, wii gatin:</div></div>
+<div class="p_contetexte"><div id="T1ab" class="txs"><span class="it">Jaadel am lewlel dannga lilifo,</span><span class="it"><br/></span><span class="it">Ɗum ni mbiimaa-mi dannga lilifo, </span><span class="it"><br/></span><span class="it">Njaren mbaaliiɗam dannga lilifo, </span><span class="it"><br/></span><span class="it">Mbiiɗaa keerkete dannga lilifo, </span><span class="it"><br/></span><span class="it">Pooloy keerkete dannga lilifo,</span><span class="it"><br/></span><span class="it">ƴoogooɓe maana dannga lilifo,</span><span class="it"><br/></span><span class="it">Kamɓoy ina ngara dannga lilifo.</span></div></div>
+<div class="p_contetexte"><div id="T1ac" class="txs">Lewlel nde nannoo fu, wii gatin:</div></div>
+<div class="p_contetexte"><div id="T1ad" class="txs"><span class="it">Kiiriri njeeƴoo dannga lilifo</span><span class="it"><br/></span><span class="it">Kaarara njeeƴo dannga lilifo.</span></div></div>
+<div class="p_contetexte"><div id="T1ae" class="txs">Nden wuugaandu wii o:</div></div>
+<div class="p_contetexte"><div id="T1af" class="txs"><span class="it">Kiiriri njottoke dannga lilifo</span><span class="it"><br/></span><span class="it">Kaarara njottoke dannga lilifo.</span></div></div>
+<div class="p_contetexte"><div id="T1ag" class="txs">Timmii!</div> <div id="T1ah" class="txs">Den kay himɓe wuro njottii tawi nani lewla na fitta faa tefa wurtagol, waaway.</div> <div id="T1ai" class="txs">Ndeen ɓeen njottii kaɓɓi lewlel koyɗe.</div> <div id="T1aj" class="txs">Ɓe nanngi hoore muuɗum, ɓe ngatti luwem ley ɗaɗi koole tan, ɓe mbuurtini ɗum yaasin; ɓe kiirsiɗum, ɓe kutti, ɓe cenndi tan ɓe itti baka buugalel ɓe kokki ɗum.</div> <div id="T1ak" class="txs">Tan kam du nde hemnoo bakam fu fiiri furr!</div> <div id="T1al" class="txs">nanaa na yaha.</div></div>
+<div class="p_Conteur"><div id="T1am" class="txs">Tijjaani Ba</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/14_Wuugaandu_lewla.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Maligayang pagdating 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "73-B074-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='72-B072-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='72-B072-032.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Maligayang pagdating&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='73-B074-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='74-B075-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B074-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">1) Maligayang pagdating!</span></div>
+<div class="m">Tuklasin kung paano nabubuhay ang mga Europeo at kung ano ang kanilang pinaniniwalaan.</div>
+<div class="m">Ang application na ito ay isang alok. Ito ay nilikha dahil ang mga tao mula sa ibang bansa ay mahalaga sa atin dito. Gusto ka naming bigyan ng insight sa kulturang Europeo, dahil maaaring magtanong sa iyo ang ilang bagay tungkol sa aming kultura. Hindi ito nakakagulat, dahil sa bawat kultura, maraming bagay ang nangyayari ayon sa mga alituntunin na alam ng mga lokal sa labas, ngunit hindi tahasang nakasulat kahit saan. Ang ganitong mga alituntunin at pagpapahalaga ay umiiral sa lahat ng dako. Nais naming ilarawan ang ilan sa kanila mula sa Europa sa application na ito. Siyempre, iba ang ugali ng ilang European. Ngunit narito ang ilang karaniwang mga pattern ng pag-uugali. Ang mga tao mula sa ibang mga bansa ay nagbahagi rin ng ilang mga obserbasyon sa amin.</div>
+<div class="m">Bilang mga may-akda, iniisip namin na ikaw at kami ay nagkita sa tren o sa isang cafe - o marahil kami ay nakaupo sa isang pagkain at nag-uusap, at siyempre kami ay talagang nakaupo sa mesa kasama ang mga tao mula sa ibang mga bansa at nakinig at nag-uusap. Sinasadya naming i-publish ang app na ito bilang mga Kristiyano, bilang mga taong sumusunod kay Jesus. Nagsusulat din kami ng isang bagay tungkol dito sa app na ito. Dahil marami na rin tayong narinig na katanungan tungkol sa ating pananampalataya sa hapag kainan. Inaasahan din ng maraming Europeo ang mga tunay na pakikipagtagpo sa iyo. Inaasahan nilang makilala ang isang bagay sa iyong kultura. Halimbawa, pinahahalagahan ng marami ang pagkamapagpatuloy at pamilya na dinadala ng mga tao mula sa ibang mga bansa sa Europa. Inaasahan naming mamuhay nang maayos nang magkasama.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 13</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-012.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;13&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-014.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image13.jpg" />
+
+<div class="m"><span class="bd">Il potere</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Conoscerai la potenza straordinaria che Dio ha mostrato per noi che crediamo in lui</span><span class="it">, </span>(Efesini 1, 19).</div>
+<div class="m"><span class="bd">Qual è il potere di Dio?</span></div>
+<div class="m">Un potere è un mezzo o una forza che ti consente di fare grandi cose o di dominare su altre persone o cose. È molto ricercato nel nostro mondo. ATTENZIONE: quando la Bibbia parla della potenza di Dio, non è la stessa cosa. Innanzitutto, la potenza di Dio è più grande di qualsiasi cosa possiamo immaginare. È il creatore del nostro mondo e ha potere sulla vita e sulla morte di tutto ciò che esiste. In secondo luogo, usa il suo potere per il bene e non per il male, come avviene nel nostro mondo. Dio ha mostrato la sua potenza nella morte e nella risurrezione di suo figlio Gesù, che ci ha portato la salvezza. Questo potere si manifesta anche nell'ascensione e nell'esaltazione di Gesù e nella sua posizione suprema sulla chiesa.</div>
+<div class="m">È questo potere che è a nostra disposizione. Una potenza illimitata, inimmaginabile, ma sempre con l'obiettivo di salvare, non di distruggere!</div>
+<div class="m"><span class="bd">Azioni per rendere il potere una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera:</span><span class="it"> </span>Ringrazia Dio per i suoi atti del passato che hanno dimostrato che Egli è onnipotente e che sono visibili ancora oggi, ad esempio la creazione del mondo, la tua creazione, la morte e risurrezione di Gesù... (Completa tu stesso l'elenco).</div>
+<div class="m">Se ti trovi in una situazione o affronti un problema che sembra impossibile, dì a te stesso che nulla è impossibile al Dio vivente e affida la situazione nelle sue mani.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">- Lettura della Bibbia</span>: Leggi Isaia 40, da 18 a 31. Cosa ti insegnano questi versetti sull'onnipotenza di Dio?</div>
+<div class="m"><span class="it">- riflessione personale:</span><span class="it"> </span>Ti affidi davvero alla potenza di Dio nella tua vita quotidiana? Oppure sono i tuoi sforzi e la tua forza che stai cercando? Stai cercando il potere di Dio per TE STESSO, per glorificare te stesso, per cercare il progresso solo per te stesso e la tua famiglia, o per aiutare e salvare gli altri?</div>
+<div class="m"><span class="it">- verso gli altri:</span><span class="it"> </span>Esamina i tuoi rapporti con gli altri per vedere se stai davvero usando il potere che Dio ti ha dato per il loro bene.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

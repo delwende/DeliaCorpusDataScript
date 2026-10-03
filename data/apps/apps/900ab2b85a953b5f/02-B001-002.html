@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "2a", start: 169.52, end: 170.67 },
+    { label: "2b", start: 170.92, end: 172.63 },
+    { label: "2c", start: 172.88, end: 174.83 },
+    { label: "2d", start: 175.08, end: 175.95 },
+    { label: "2e", start: 176.2, end: 179.41 },
+    { label: "2f", start: 179.66, end: 181.13 },
+    { label: "2g", start: 181.38, end: 184.59 },
+    { label: "2h", start: 184.84, end: 189.55 },
+    { label: "2i", start: 189.8, end: 194.19 },
+    { label: "2j", start: 194.44, end: 197.51 },
+    { label: "2k", start: 197.76, end: 200.05 },
+    { label: "2l", start: 200.3, end: 202.79 },
+    { label: "2m", start: 203.04, end: 207.87 },
+    { label: "2n", start: 208.12, end: 211.63 },
+    { label: "2o", start: 211.88, end: 219.71 },
+    { label: "2p", start: 219.96, end: 222.25 },
+    { label: "2q", start: 222.5, end: 224.77 },
+    { label: "2r", start: 225.02, end: 227.25 },
+    { label: "2s", start: 227.5, end: 230.63 },
+    { label: "2t", start: 230.88, end: 231.75 },
+    { label: "2u", start: 232, end: 235.41 },
+    { label: "2v", start: 235.66, end: 239.25 },
+    { label: "2w", start: 239.5, end: 240.69 },
+    { label: "2x", start: 240.94, end: 244.69 },
+    { label: "2y", start: 244.94, end: 249.25 },
+    { label: "2z", start: 249.5, end: 251.93 },
+    { label: "2aa", start: 252.18, end: 256.89 },
+    { label: "2ab", start: 257.14, end: 260.73 },
+    { label: "2ac", start: 260.98, end: 262.57 },
+    { label: "2ad", start: 262.82, end: 265.71 },
+    { label: "2ae", start: 265.96, end: 267.89 },
+    { label: "2af", start: 268.14, end: 271.15 },
+    { label: "2ag", start: 271.4, end: 274.55 },
+    { label: "2ah", start: 274.8, end: 276.95 },
+    { label: "2ai", start: 277.2, end: 278.77 },
+    { label: "2aj", start: 279.02, end: 281.07 },
+    { label: "2ak", start: 281.32, end: 284.19 },
+    { label: "2al", start: 284.44, end: 287.35 },
+    { label: "2am", start: 287.6, end: 290.59 },
+    { label: "2an", start: 290.84, end: 292.13 },
+    { label: "2ao", start: 292.38, end: 294.61 },
+    { label: "2ap", start: 294.86, end: 296.05 },
+    { label: "2aq", start: 296.3, end: 298.83 },
+    { label: "2ar", start: 299.08, end: 300.87 },
+    { label: "2as", start: 301.12, end: 302.87 },
+    { label: "2at", start: 303.12, end: 305.37 },
+    { label: "2au", start: 305.62, end: 306.47 },
+    { label: "2av", start: 306.72, end: 310.21 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 169.52;
+var stopTime  = 310.21;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image2.jpg" />
+
+<div class="m"><div id="T2a" class="txs"><span class="bd">Election</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T2b" class="txs"><span class="it">We are </span><span class="bdit">chosen</span><span class="it"> by God,</span></div> <div id="T2c" class="txs"><span class="it">before the foundation of the world,</span></div> <div id="T2d" class="txs"><span class="it">in Christ,</span></div> <div id="T2e" class="txs"><span class="it">to be holy</span> (Ephesians 1, 4).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T2f" class="txs"><span class="bd">What is election?</span></div></div>
+<div class="m"><div id="T2g" class="txs">Election is a difficult doctrine to understand.</div> <div id="T2h" class="txs">It's important not to get hung up on why some have been elected and others have not.</div> <div id="T2i" class="txs">God's sovereignty means that we could never understand all his actions.</div></div>
+<div class="m"><div id="T2j" class="txs">What's important to remember about this doctrine:</div></div>
+<div class="m"><div id="T2k" class="txs">- Salvation begins with God.</div> <div id="T2l" class="txs">He took the initiative to save man.</div> <div id="T2m" class="txs">We are so corrupted by sin that it is impossible for us to take the first step.</div></div>
+<div class="m"><div id="T2n" class="txs">- This is an action that God does alone and for himself.</div></div>
+<div class="m"><div id="T2o" class="txs">- He does not use the same criteria as our world in his choices (1 Corinthians 1, 26 to 29).</div></div>
+<div class="m"><div id="T2p" class="txs">- God's election has a purpose.</div> <div id="T2q" class="txs">He has chosen us to glorify him,</div> <div id="T2r" class="txs">to serve him and to do good works.</div></div>
+<div class="m"><div id="T2s" class="txs"><span class="bd">Actions to make election a richness in your life:</span></div></div>
+<div class="m"><div id="T2t" class="txs"><span class="it">- Prayer:</span></div> <div id="T2u" class="txs">Thank God every day that you are one of His chosen ones.</div></div>
+<div class="m"><div id="T2v" class="txs">Ask for his help to live worthy of one of God's chosen.</div></div>
+<div class="m"><div id="T2w" class="txs"><span class="it">- Bible reading</span>:</div> <div id="T2x" class="txs">Read 1 Corinthians 1, 26 to 31.</div> <div id="T2y" class="txs">These verses teach us that God does not choose as the world chooses.</div> <div id="T2z" class="txs">What are his criteria for choice?</div> <div id="T2aa" class="txs">Just because God doesn't choose what's "strong" doesn't mean he doesn't consider us.</div></div>
+<div class="m"><div id="T2ab" class="txs">Read Isaiah 43, 4 and memorize it.</div></div>
+<div class="m"><div id="T2ac" class="txs"><span class="it">- Personal reflection</span>:</div> <div id="T2ad" class="txs">Do you feel that others - your husband or wife,</div> <div id="T2ae" class="txs">your superiors or colleagues,</div> <div id="T2af" class="txs">the members of your church - don't consider you?</div> <div id="T2ag" class="txs">Remember that you are one of God's "chosen ones".</div> <div id="T2ah" class="txs">You're very important to God.</div> <div id="T2ai" class="txs">He considers you.</div> <div id="T2aj" class="txs">You are precious in His eyes.</div> <div id="T2ak" class="txs">Your importance is not based on your diplomas,</div> <div id="T2al" class="txs">your social position or your material possessions,</div> <div id="T2am" class="txs">but it's simply by grace that God has chosen you.</div> <div id="T2an" class="txs">If you're careful,</div> <div id="T2ao" class="txs">you'll notice it in your everyday life!</div></div>
+<div class="m"><div id="T2ap" class="txs"><span class="it">- Towards others</span>:</div> <div id="T2aq" class="txs">Treat your spiritual brothers and sisters,</div> <div id="T2ar" class="txs">who are also God's chosen ones,</div> <div id="T2as" class="txs">with respect and love!</div>  <div id="T2at" class="txs">Don't despise those who are weak.</div> <div id="T2au" class="txs">Rather,</div> <div id="T2av" class="txs">show them that they are precious in the eyes of God and the church.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

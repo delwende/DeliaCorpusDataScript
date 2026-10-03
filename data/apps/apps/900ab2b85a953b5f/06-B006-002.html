@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Daminɛ kuma 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Daminɛ kuma&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image2.jpg" />
+
+<div class="m"><span class="bd">Sugandili</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">An</span><span class="it"> </span><span class="it">sugandira</span><span class="it"> Ala </span><span class="it">fɛ</span><span class="it">, </span><span class="it">sani</span><span class="it"> </span><span class="it">diɲɛ</span><span class="it"> ka </span><span class="it">sigi</span><span class="it">, </span><span class="it">Krisita</span><span class="it"> la, ka </span><span class="it">kɛ</span><span class="it"> </span><span class="it">mɔgɔ</span><span class="it"> </span><span class="it">senumaw</span><span class="it"> ye</span><span class="it"> </span>(Efesekaw 1, 4).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Sugandili</span><span class="bd"> ye mun ye?</span></div>
+<div class="m">Sugandili ye kalansira ye min faamuyali ka gɛlɛn. A nafa ka bon an kana i yɛrɛ siri mun na dɔw sugandira, dɔw ma sugandi. Ala ka kuntigiya kɔrɔ ye ko an tun tɛ se k’a ka kɛwalew bɛɛ faamu abada.</div>
+<div class="m">Fɛn min nafa ka bon ka to an hakili la nin kalansira in ko la:</div>
+<div class="m">- Kisili b damin Ala de la. A ye fɛɛrɛ tigɛ walasa ka hadamaden kisi. An tiɲɛna jurumu fɛ fo a tɛ se ka kɛ an ka fɛɛrɛ fɔlɔ ta.</div>
+<div class="m">- Nin ye wale ye min bɛ kɛ Ala kelen na ani a yɛrɛ ye.</div>
+<div class="m">- A tɛ baara kɛ ni sariya kelen ye ni an ka diɲɛ ye a ka sugandili la (1 Kɔrɛntekaw 1, 26 ka se 29 ma).</div>
+<div class="m">- Ala ka sugandili kun ye. A ye an sugandi walisa ka nɔɔrɔ da a kan, ka baara kɛ a ye ani ka kɛwale ɲumanw kɛ.</div>
+<div class="m"><span class="bd">Waleya</span><span class="bd"> </span><span class="bd">minnu</span><span class="bd"> </span><span class="bd">bɛ</span><span class="bd"> </span><span class="bd">kɛ</span><span class="bd"> </span><span class="bd">walasa</span><span class="bd"> ka </span><span class="bd">kalata</span><span class="bd"> </span><span class="bd">kɛ</span><span class="bd"> </span><span class="bd">nafolo</span><span class="bd"> ye </span><span class="bd">i</span><span class="bd"> ka </span><span class="bd">ɲɛnamaya</span><span class="bd"> </span><span class="bd">kɔnɔ</span><span class="bd">:</span></div>
+<div class="m"><span class="it">- </span><span class="it">Delili</span><span class="it"> :</span><span class="it"> 1 .</span>Aw ka barika da Ala ye don o don ko aw ye a ka mɔgɔ sugandilenw dɔ ye.</div>
+<div class="m">A ka dɛmɛ ɲini walisa ka ɲɛnamaya kɛ ka bɛn Ala ka mɔgɔ sugandilen dɔ ma.</div>
+<div class="m"><span class="it">- </span><span class="it">Bibulu</span><span class="it"> </span><span class="it">kalan</span>: 1 Kɔrɛntekaw 1, 26 fo 31 kalan. A ka sugandili sariyaw ye jumɛnw ye? K'a masɔrɔ Ala tɛ min sugandi min "barika ka bon" o kɔrɔ tɛ ko a tɛ an jate.</div>
+<div class="m">Esayi 43, 4 kalan ani k’a to i hakili la.</div>
+<div class="m"><span class="it">- </span><span class="it">Mɔgɔ</span><span class="it"> </span><span class="it">yɛrɛ</span><span class="it"> ka </span><span class="it">miirili</span>: I b'a miiri ko mɔgɔ wɛrɛw - i cɛ walima i muso, i kuntigiw walima i baarakɛɲɔgɔnw, i ka egilisi mɔgɔw - t' i jate wa? Aw k'aw hakili to a la ko aw ye Ala ka "sugandilenw" dɔ ye. I nafa ka bon kosɛbɛ Ala bolo. A b'i jate. I nafa ka bon a ɲɛ kɔrɔ. I nafa tɛ bɔ i ka diplomuw la, i jɔyɔrɔ la sigida la walima i ka nafolomafɛnw na, nka a bɛ kɛ nɛɛma dɔrɔn de fɛ Ala ye i sugandi. N’i ​​y’i janto i yɛrɛ la, i bɛna o kɔlɔsi i ka don o don ɲɛnamaya kɔnɔ!</div>
+<div class="m"><span class="it">- Ka </span><span class="it">ɲɛsin</span><span class="it"> </span><span class="it">mɔgɔ</span><span class="it"> </span><span class="it">wɛrɛw</span><span class="it"> ma</span>: Aw ka aw balimakɛw ni aw balimamusow minɛ hakili ta fan fɛ, olu minnu fana ye Ala ka mɔgɔ sugandilenw ye, ni bonya ni kanuya ye&nbsp;! Minnu barika ka dɔgɔ, i kana olu mafiɲɛya. Nka, a jira u la ko u nafa ka bon Ala ni egilisi ɲɛkɔrɔ.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

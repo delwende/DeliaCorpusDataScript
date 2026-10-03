@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P 81-120 37</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "37a", start: 932.82, end: 938.27 },
+    { label: "37b", start: 938.52, end: 940.97 },
+    { label: "37c", start: 941.22, end: 949.55 },
+    { label: "37d", start: 949.8, end: 953.02 },
+    { label: "37e", start: 953.27, end: 963.46 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 932.82;
+var stopTime  = 963.46;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-036.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;P 81-120&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;37&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-038.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image37.jpg" />
+
+<div class="m"><div id="T37a" class="txs"><span class="bd">117 </span><span class="bd">Noaag</span><span class="bd"> </span><span class="bd">yeelame</span><span class="bd"> t’a </span><span class="bd">tõe</span><span class="bd"> n </span><span class="bd">kɩɩs</span><span class="bd">-a </span><span class="bd">a</span><span class="bd"> </span><span class="bd">gelle</span><span class="bd">,</span></div> <div id="T37b" class="txs"><span class="bd">a ka </span><span class="bd">tõe</span><span class="bd"> n </span><span class="bd">kɩɩs</span><span class="bd"> a </span><span class="bd">biig</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T37c" class="txs"><span class="bdit">(La poule peut s’aventurer à disculper son œuf mais pas son poussin).</span></div></div>
+<div class="m"><div id="T37d" class="txs"><span class="bd">Noaag</span><span class="bd"> </span><span class="bd">yeelame</span><span class="bd"> t’a </span><span class="bd">tõe</span><span class="bd"> n </span><span class="bd">kɩɩs</span><span class="bd">-a </span><span class="bd">a</span><span class="bd"> </span><span class="bd">gelle</span><span class="bd">,</span></div> <div id="T37e" class="txs"><span class="bd">a ka </span><span class="bd">tõe</span><span class="bd"> n </span><span class="bd">kɩɩs</span><span class="bd"> a </span><span class="bd">biig</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 80 a 120 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

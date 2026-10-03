@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>24 Soso misinanam 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 7.2, end: 10.11 },
+    { label: "1b", start: 10.36, end: 15.35 },
+    { label: "1c", start: 15.6, end: 17.47 },
+    { label: "1d", start: 17.72, end: 19.95 },
+    { label: "1e", start: 20.2, end: 21.55 },
+    { label: "1f", start: 21.8, end: 22.07 },
+    { label: "1g", start: 22.32, end: 23.63 },
+    { label: "1h", start: 23.88, end: 24.69 },
+    { label: "1i", start: 24.94, end: 27.83 },
+    { label: "1j", start: 28.08, end: 30.79 },
+    { label: "1k", start: 31.04, end: 32.11 },
+    { label: "1l", start: 32.36, end: 34.39 },
+    { label: "1m", start: 34.64, end: 35.71 },
+    { label: "1n", start: 35.96, end: 37.47 },
+    { label: "1o", start: 37.72, end: 38.75 },
+    { label: "1p", start: 39, end: 40.71 },
+    { label: "1q", start: 40.96, end: 43.11 },
+    { label: "1r", start: 43.36, end: 45.15 },
+    { label: "1s", start: 45.4, end: 50.31 },
+    { label: "1t", start: 50.56, end: 52.63 },
+    { label: "1u", start: 52.88, end: 54.31 },
+    { label: "1v", start: 54.56, end: 56.07 },
+    { label: "1w", start: 56.32, end: 57.31 },
+    { label: "1x", start: 57.56, end: 59.11 },
+    { label: "1y", start: 59.36, end: 60.15 },
+    { label: "1z", start: 60.4, end: 62.11 },
+    { label: "1aa", start: 62.36, end: 64.63 },
+    { label: "1ab", start: 64.88, end: 66.59 },
+    { label: "1ac", start: 66.84, end: 71.11 },
+    { label: "1ad", start: 71.36, end: 74.31 },
+    { label: "1ae", start: 74.56, end: 77.67 },
+    { label: "1af", start: 77.92, end: 78.75 },
+    { label: "1ag", start: 79, end: 80.59 },
+    { label: "1ah", start: 80.84, end: 81.67 },
+    { label: "1ai", start: 81.92, end: 83.35 },
+    { label: "1aj", start: 83.6, end: 84.43 },
+    { label: "1ak", start: 84.68, end: 86.31 },
+    { label: "1al", start: 86.56, end: 88.47 },
+    { label: "1am", start: 88.72, end: 90.35 },
+    { label: "1an", start: 90.6, end: 94.43 },
+    { label: "1ao", start: 94.68, end: 98.83 },
+    { label: "1ap", start: 99.08, end: 100.39 },
+    { label: "1aq", start: 100.64, end: 102.75 },
+    { label: "1ar", start: 103, end: 103.71 },
+    { label: "1as", start: 103.96, end: 104.99 },
+    { label: "1at", start: 105.24, end: 106.71 },
+    { label: "1au", start: 106.96, end: 108.15 },
+    { label: "1av", start: 108.4, end: 109.87 },
+    { label: "1aw", start: 110.12, end: 110.91 },
+    { label: "1ax", start: 111.16, end: 112.91 },
+    { label: "1ay", start: 113.16, end: 114.91 },
+    { label: "1az", start: 115.16, end: 116.39 },
+    { label: "1ba", start: 116.64, end: 120.07 },
+    { label: "1bb", start: 120.32, end: 122.15 },
+    { label: "1bc", start: 122.4, end: 129.99 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 7.2;
+var stopTime  = 129.99;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;24 Soso misinanam&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">24 Soso misinanam.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Goɗɗo faa hannde marnoo baalim e baali kaananke ngendi.</div> <div id="T1c" class="txs">Nde ɗi ndimi fu yo o sonnan.</div> <div id="T1d" class="txs">Mbaala neewa gomma tawaa ɗoon.</div> <div id="T1e" class="txs">Kam kaa yiiti hakkillo.</div> <div id="T1f" class="txs">Wi'i kam,</div> <div id="T1g" class="txs">so rimii jon fu,</div> <div id="T1h" class="txs">resan ley ladde.</div> <div id="T1i" class="txs">Heddii rimunoo ni resi ley waande.</div> <div id="T1j" class="txs">Nga durowii subaka ni nga yotto nga wi'a:</div></div>
+<div class="m"><div id="T1k" class="txs">Soso misinanam</div></div>
+<div class="m"><div id="T1l" class="txs">Susubinde musinanam</div></div>
+<div class="m"><div id="T1m" class="txs">Baali ndaɗii kam</div></div>
+<div class="m"><div id="T1n" class="txs">Baali jooro ndaɗii kam</div></div>
+<div class="m"><div id="T1o" class="txs">Jooro fiyan kam</div></div>
+<div class="m"><div id="T1p" class="txs">Fiira kam cawel celli</div></div>
+<div class="m"><div id="T1q" class="txs">Jaɓɓitoroo nano e nyaamo</div></div>
+<div class="m"><div id="T1r" class="txs">Aarr baalel waar musin.</div></div>
+<div class="m"><div id="T1s" class="txs">Ni ɓii-mbaala ngaan wara wurto musina ni o durowa. </div></div>
+<div class="m"><div id="T1t" class="txs">O jannyii gasin ni o wi'a noon:</div></div>
+<div class="m"><div id="T1u" class="txs">Soso misinanam</div></div>
+<div class="m"><div id="T1v" class="txs">Susubinde musinanam</div></div>
+<div class="m"><div id="T1w" class="txs">Baali ndaɗii kam</div></div>
+<div class="m"><div id="T1x" class="txs">Baali jooro ndaɗii kam</div></div>
+<div class="m"><div id="T1y" class="txs">Jooro fiyan kam</div></div>
+<div class="m"><div id="T1z" class="txs">Fiira kam cawel celli</div></div>
+<div class="m"><div id="T1aa" class="txs">Jaɓɓitoroo nano e nyaamo</div></div>
+<div class="m"><div id="T1ab" class="txs">Aarr baalel waar musin.</div></div>
+<div class="m"><div id="T1ac" class="txs">Ni ɓii-mbaala ngaan wara wurto musina ni o durowa. </div></div>
+<div class="m"><div id="T1ad" class="txs">Jaka leyndu moggoken.</div> <div id="T1ae" class="txs">Nde o dillunoo ni leyndu wari wi'i:</div></div>
+<div class="m"><div id="T1af" class="txs">Soso misinanam</div></div>
+<div class="m"><div id="T1ag" class="txs">Susubinde musinanam</div></div>
+<div class="m"><div id="T1ah" class="txs">Baali ndaɗii kam</div></div>
+<div class="m"><div id="T1ai" class="txs">Baali jooro ndaɗii kam</div></div>
+<div class="m"><div id="T1aj" class="txs">Jooro fiyan kam</div></div>
+<div class="m"><div id="T1ak" class="txs">Fiira kam cawel celli</div></div>
+<div class="m"><div id="T1al" class="txs">Jaɓɓitoroo nano e nyaamo</div></div>
+<div class="m"><div id="T1am" class="txs">Aarr baalel waar musin.</div></div>
+<div class="m"><div id="T1an" class="txs">Ni ɓii-mbaala ngaan wara wurto musina ni o durowa. </div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ao" class="txs">Baalel wurtinoo ha musina ni leyndu moɗiɗum.</div> <div id="T1ap" class="txs">Moɗunoo ni taaɓii dilli.</div> <div id="T1aq" class="txs">Ni mbaala durowi jannyi;</div> <div id="T1ar" class="txs">yottinoo ni wi'i:</div></div>
+<div class="m"><div id="T1as" class="txs">Soso musinanam,</div></div>
+<div class="m"><div id="T1at" class="txs">Susubindee musinanam,</div></div>
+<div class="m"><div id="T1au" class="txs">Baali ndaaɗii kam,</div></div>
+<div class="m"><div id="T1av" class="txs">Baali jooro ndaaɗii kam,</div></div>
+<div class="m"><div id="T1aw" class="txs">Jooro fiyan kam,</div></div>
+<div class="m"><div id="T1ax" class="txs">Fiira kam cawel celli,</div></div>
+<div class="m"><div id="T1ay" class="txs">Jaɓɓitoroo namo e nyaamo,</div></div>
+<div class="m"><div id="T1az" class="txs">Aarr baalel war musin.</div></div>
+<div class="m"><div id="T1ba" class="txs">Tawi ɓii-mbaala addaama hoo!</div> <div id="T1bb" class="txs">Alla dannu en sarli leengaa.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bc" class="txs">Tijjaani Ba</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/07 ful cont vol5.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

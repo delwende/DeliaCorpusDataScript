@@ -1,0 +1,17 @@
+var books = [
+  { name: "907 Paliinga haɗii", ref: "01-B001-001.html" },
+  { name: "927 Putte kaɗataa araawa", ref: "02-B002-001.html" },
+  { name: "947 Salaade aadi ɓuri", ref: "03-B003-001.html" },
+  { name: "967 Sippu jam njaraa ko", ref: "04-B004-001.html" },
+  { name: "987 So a lootii ɓii", ref: "05-B005-001.html" },
+  { name: "1007 So a tawii juuɗe na", ref: "06-B006-001.html" },
+  { name: "1027 So a yiɗii yiide", ref: "07-B007-001.html" },
+  { name: "1047 So Alla wi’ii ma", ref: "08-B008-001.html" },
+  { name: "1067 So bonnde na wara", ref: "09-B009-001.html" },
+  { name: "1087 So demoowo", ref: "10-B010-001.html" },
+  { name: "1107 So geerte colii", ref: "11-B011-001.html" },
+  { name: "1127 So inna wooɗii", ref: "12-B012-001.html" },
+  { name: "1147 So kahi boɓɓoke", ref: "13-B013-001.html" },
+  { name: "1167 So mbaalu na darii", ref: "14-B014-001.html" },
+  { name: "1187 So neɗɗo findinaama", ref: "15-B015-001.html" },
+];

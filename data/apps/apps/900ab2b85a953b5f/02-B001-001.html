@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.03 },
+    { label: "1b", start: 1.28, end: 7.57 },
+    { label: "1c", start: 7.82, end: 13.71 },
+    { label: "1d", start: 13.96, end: 17.41 },
+    { label: "1e", start: 17.66, end: 18.55 },
+    { label: "1f", start: 18.8, end: 20.53 },
+    { label: "1g", start: 20.78, end: 24.13 },
+    { label: "1h", start: 24.38, end: 25.23 },
+    { label: "1i", start: 25.48, end: 28.73 },
+    { label: "1j", start: 28.98, end: 32.91 },
+    { label: "1k", start: 33.16, end: 34.63 },
+    { label: "1l", start: 34.88, end: 36.91 },
+    { label: "1m", start: 37.16, end: 38.77 },
+    { label: "1n", start: 39.02, end: 41.49 },
+    { label: "1o", start: 41.74, end: 44.55 },
+    { label: "1p", start: 44.8, end: 50.01 },
+    { label: "1q", start: 50.26, end: 53.45 },
+    { label: "1r", start: 53.7, end: 57.33 },
+    { label: "1s", start: 57.58, end: 61.87 },
+    { label: "1t", start: 62.12, end: 64.89 },
+    { label: "1u", start: 65.14, end: 66.27 },
+    { label: "1v", start: 66.52, end: 70.79 },
+    { label: "1w", start: 71.04, end: 73.23 },
+    { label: "1x", start: 73.48, end: 77.55 },
+    { label: "1y", start: 77.8, end: 81.27 },
+    { label: "1z", start: 81.52, end: 84.63 },
+    { label: "1aa", start: 84.88, end: 87.19 },
+    { label: "1ab", start: 87.44, end: 91.27 },
+    { label: "1ac", start: 91.52, end: 94.37 },
+    { label: "1ad", start: 94.62, end: 95.39 },
+    { label: "1ae", start: 95.64, end: 98.85 },
+    { label: "1af", start: 99.1, end: 101.79 },
+    { label: "1ag", start: 102.04, end: 105.05 },
+    { label: "1ah", start: 105.3, end: 108.25 },
+    { label: "1ai", start: 108.5, end: 111.61 },
+    { label: "1aj", start: 111.86, end: 116.57 },
+    { label: "1ak", start: 116.82, end: 119.15 },
+    { label: "1al", start: 119.4, end: 122.35 },
+    { label: "1am", start: 122.6, end: 124.51 },
+    { label: "1an", start: 124.76, end: 127.81 },
+    { label: "1ao", start: 128.06, end: 130.59 },
+    { label: "1ap", start: 130.84, end: 135.59 },
+    { label: "1aq", start: 135.84, end: 137.21 },
+    { label: "1ar", start: 137.46, end: 140.71 },
+    { label: "1as", start: 140.96, end: 142.69 },
+    { label: "1at", start: 142.94, end: 143.69 },
+    { label: "1au", start: 143.94, end: 144.47 },
+    { label: "1av", start: 144.72, end: 145.53 },
+    { label: "1aw", start: 145.78, end: 146.61 },
+    { label: "1ax", start: 146.86, end: 147.47 },
+    { label: "1ay", start: 147.72, end: 149.23 },
+    { label: "1az", start: 149.48, end: 150.47 },
+    { label: "1ba", start: 150.72, end: 151.81 },
+    { label: "1bb", start: 152.06, end: 152.69 },
+    { label: "1bc", start: 152.94, end: 154.33 },
+    { label: "1bd", start: 154.58, end: 156.27 },
+    { label: "1be", start: 156.52, end: 158.65 },
+    { label: "1bf", start: 158.9, end: 162.25 },
+    { label: "1bg", start: 162.5, end: 163.43 },
+    { label: "1bh", start: 163.68, end: 169.27 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 169.27;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-015.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Introduction</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">The epistle to the Ephesians is addressed to Christians who "are in danger of suffering from spiritual malnutrition,</div> <div id="T1c" class="txs">because they are not taking advantage of the enormous store of food and spiritual goods they have at their disposal.</div> <div id="T1d" class="txs">The epistle to the Ephesians has been called the believer's bank,</div> <div id="T1e" class="txs">the checkbook,</div> <div id="T1f" class="txs">the Bible's treasure room.</div> <div id="T1g" class="txs">This wonderful letter tells Christians about the great riches,</div> <div id="T1h" class="txs">the inheritance,</div> <div id="T1i" class="txs">and the fullness they possess in Jesus Christ and his church.</div> <div id="T1j" class="txs">It tells them what they possess and what they must do to appropriate it."</div> <div id="T1k" class="txs">(John MACARTHUR).</div></div>
+<div class="m"><div id="T1l" class="txs">This is not material wealth,</div> <div id="T1m" class="txs">but spiritual wealth.</div> <div id="T1n" class="txs">Ephesus was a very important city,</div> <div id="T1o" class="txs">one of the 5 key cities of the Roman Empire.</div> <div id="T1p" class="txs">It was definitely the largest city (apart from Rome) that Paul visited.</div> <div id="T1q" class="txs">It was so rich that it was called the "Bank of Asia".</div>  <div id="T1r" class="txs">Traders came from all over to buy and sell their wares.</div> <div id="T1s" class="txs">And tourists visited to admire a temple dedicated to the goddess Artemis,</div> <div id="T1t" class="txs">one of the 7 wonders of the world at the time.</div> <div id="T1u" class="txs">With his letter,</div> <div id="T1v" class="txs">the apostle Paul certainly wanted to show the members of the church in Ephesus,</div> <div id="T1w" class="txs">surrounded by great material wealth,</div> <div id="T1x" class="txs">that the joy and contentment of a Christian is not based on the material.</div> <div id="T1y" class="txs">He wanted to remind them of the true riches we have in Christ,</div> <div id="T1z" class="txs">riches that don't spoil and that no one can steal!</div></div>
+<div class="m"><div id="T1aa" class="txs">This theme is still relevant today.</div> <div id="T1ab" class="txs">Today's world would have us believe that money brings happiness!</div> <div id="T1ac" class="txs">But God's Word tells us that this is a lie.</div> <div id="T1ad" class="txs">True,</div> <div id="T1ae" class="txs">money can buy us things that make our daily lives easier,</div> <div id="T1af" class="txs">but money is powerless against the difficulties,</div> <div id="T1ag" class="txs">suffering and great challenges of our life on earth.</div></div>
+<div class="m"><div id="T1ah" class="txs">The key verse in Ephesians is right at the beginning:</div> <div id="T1ai" class="txs">Blessed be the God and Father of our Lord Jesus Christ,</div> <div id="T1aj" class="txs">who has blessed us with every spiritual blessing in heavenly places in Christ.</div> <div id="T1ak" class="txs">Ephesians 1, 3</div></div>
+<div class="m"><div id="T1al" class="txs">In Jesus we have ALL spiritual blessing!</div> <div id="T1am" class="txs">And in the verses that follow,</div> <div id="T1an" class="txs">Paul gives us more details about these blessings.</div> <div id="T1ao" class="txs">In the original Greek version of the Bible,</div> <div id="T1ap" class="txs">verses 3 to 14 of the first chapter of Ephesians are a single sentence!</div> <div id="T1aq" class="txs">According to Paul,</div> <div id="T1ar" class="txs">the list of spiritual riches for those "in Christ" is long:</div> <div id="T1as" class="txs">election and predestination;</div> <div id="T1at" class="txs">adoption;</div> <div id="T1au" class="txs">love;</div> <div id="T1av" class="txs">redemption;</div> <div id="T1aw" class="txs">forgiveness;</div> <div id="T1ax" class="txs">grace;</div> <div id="T1ay" class="txs">wisdom and understanding;</div> <div id="T1az" class="txs">inheritance;</div> <div id="T1ba" class="txs">the Holy Spirit;</div> <div id="T1bb" class="txs">power;</div> <div id="T1bc" class="txs">hope and the church.</div></div>
+<div class="m"><div id="T1bd" class="txs">In the next few pages,</div> <div id="T1be" class="txs">we will study these biblical truths,</div> <div id="T1bf" class="txs">but not simply as doctrines or knowledge for our heads.</div> <div id="T1bg" class="txs">Instead,</div> <div id="T1bh" class="txs">we'll be looking to discover how they can become real riches for our daily lives with everyday actions.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

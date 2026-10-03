@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#AD4428">
+<title>46 Dans le doute 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 2.48, end: 8.92 },
+    { label: "1b", start: 9.17, end: 17.32 },
+    { label: "1c", start: 17.57, end: 24.54 },
+    { label: "1d", start: 24.79, end: 36.32 },
+    { label: "1e", start: 36.57, end: 42.36 },
+    { label: "1f", start: 42.61, end: 47.95 },
+    { label: "1g", start: 48.2, end: 55.96 },
+    { label: "1h", start: 56.21, end: 67.7 },
+    { label: "1i", start: 67.95, end: 73.43 },
+    { label: "1j", start: 73.68, end: 78.39 },
+    { label: "1k", start: 78.64, end: 86.48 },
+    { label: "1l", start: 86.73, end: 92.18 },
+    { label: "1m", start: 92.43, end: 99.64 },
+    { label: "1n", start: 99.89, end: 106.1 },
+    { label: "1o", start: 106.35, end: 115.46 },
+    { label: "1p", start: 115.71, end: 123.64 },
+    { label: "1q", start: 123.89, end: 130.65 },
+    { label: "1r", start: 130.9, end: 137.12 },
+    { label: "1s", start: 137.38, end: 142.6 },
+    { label: "1t", start: 142.85, end: 150.95 },
+    { label: "1u", start: 151.2, end: 155.88 },
+    { label: "1v", start: 156.12, end: 164.77 },
+    { label: "1w", start: 165.02, end: 171.61 },
+    { label: "1x", start: 171.86, end: 178.85 },
+    { label: "1y", start: 179.1, end: 184.81 },
+    { label: "1z", start: 185.06, end: 192.14 },
+    { label: "1aa", start: 192.39, end: 198.89 },
+    { label: "1ab", start: 199.14, end: 204.55 },
+    { label: "1ac", start: 204.8, end: 212.07 },
+    { label: "1ad", start: 212.32, end: 222.32 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 2.48;
+var stopTime  = 222.32;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;46 Dans le doute&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">46 </span><span class="bd">Dans le doute, abstiens-toi</span>, </div></div>
+<div class="m"><div id="T1b" class="txs">maxime qui s'applique au doute pratique comme au doute purement spéculatif.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">47 </span><span class="bd">De deux maux il faut choisir le moindre</span>, </div></div>
+<div class="m"><div id="T1d" class="txs">adage que l'on prête à Socrate, qui aurait ainsi explique pourquoi il avait pris une femme de très petite taille.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">48 </span><span class="bd">Des goûts et des couleurs on ne discute pas</span>, </div></div>
+<div class="m"><div id="T1f" class="txs">chacun est libre d'avoir ses préférences.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">49 </span><span class="bd">Déshabiller saint Pierre pour habiller saint Paul</span>, </div></div>
+<div class="m"><div id="T1h" class="txs">faire une dette pour en acquitter une autre; se tirer d'une difficulté en s'en créant une nouvelle.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1i" class="txs"><span class="c_CharacterStyle1"><span class="bd">50 </span></span><span class="c_CharacterStyle1"><span class="bd">Dieu parle une langue étrangère, </span></span></div></div>
+<div class="p_Style1"><div id="T1j" class="txs"><span class="c_CharacterStyle1">on ne peut pas comprendre Dieu.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1k" class="txs"><span class="c_CharacterStyle1"><span class="bd">51 </span></span><span class="c_CharacterStyle1"><span class="bd">Dire </span></span><span class="c_CharacterStyle1">«&nbsp;</span><span class="c_CharacterStyle1"><span class="bd">Au</span></span><span class="c_CharacterStyle1"><span class="bd"> </span></span><span class="c_CharacterStyle1"><span class="bd">nom de Dieu </span></span><span class="c_CharacterStyle1">» </span><span class="c_CharacterStyle1"><span class="bd">ne tire pas le marabout du puits </span></span></div></div>
+<div class="p_Style1"><div id="T1l" class="txs"><span class="c_CharacterStyle1">= Aide-toi, le Ciel t'aidera.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1m" class="txs"><span class="c_CharacterStyle1"><span class="bd">52 </span></span><span class="c_CharacterStyle1"><span class="bd">Dis-moi qui tu fréquentes, je te dirai qui tu es, </span></span></div></div>
+<div class="p_Style1"><div id="T1n" class="txs"><span class="c_CharacterStyle1">on juge une personne d'après la société qu'elle </span><span class="c_CharacterStyle1">fréquente.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="c_CharacterStyle1"><span class="bd">53 </span></span><span class="bd">En avril, n'ôte pas un fil; en mai, fais ce qu'il te plait</span>, </div></div>
+<div class="m"><div id="T1p" class="txs">on ne doit pas mettre des vêtements légers en avril; on le peut en mai.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">54 </span><span class="bd">Entre l'arbre et l'écorce il ne faut pas mettre le doigt</span>, </div></div>
+<div class="m"><div id="T1r" class="txs">il ne faut point intervenir dans une dispute entre proches.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">55 </span><span class="bd">Erreur n'est pas compte</span>, </div></div>
+<div class="m"><div id="T1t" class="txs">tant que subsiste une erreur, un compte n'est pas définitif.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1u" class="txs"><span class="c_CharacterStyle1"><span class="bd">56 </span></span><span class="c_CharacterStyle1"><span class="bd">Est voleur celui qui est pris </span></span></div></div>
+<div class="p_Style1"><div id="T1v" class="txs"><span class="c_CharacterStyle1">= pas vu, pas pris (n'est considéré comme voleur que celui qui </span><span class="c_CharacterStyle1">est pris sur le fait).</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1w" class="txs"><span class="c_CharacterStyle1"><span class="bd">57 </span></span><span class="c_CharacterStyle1"><span class="bd">Fais ce que dois, advienne que pourra, </span></span></div></div>
+<div class="p_Style1"><div id="T1x" class="txs"><span class="c_CharacterStyle1">fais ton devoir sans t'inquiéter de ce qui pourra en résulter.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs"><span class="c_CharacterStyle1"><span class="bd">58 </span></span><span class="bd">Faute de grives, on mange des merles</span>, </div></div>
+<div class="m"><div id="T1z" class="txs">à défaut de mieux, il faut se contenter de ce que l'on a.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1aa" class="txs"><span class="c_CharacterStyle1"><span class="bd">59 </span></span><span class="c_CharacterStyle1"><span class="bd">Faute de maman, on tète sa grand-mère</span></span><span class="c_CharacterStyle1"><span class="bd">,</span></span></div></div>
+<div class="p_Style1"><div id="T1ab" class="txs"><span class="c_CharacterStyle1">= il faut </span><span class="c_CharacterStyle1">se contenter de ce qu'on a.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1ac" class="txs"><span class="c_CharacterStyle1"><span class="bd">60 </span></span><span class="c_CharacterStyle1"><span class="bd">Il </span></span><span class="c_CharacterStyle1"><span class="bd">est préférable de trahir celui qui t'a circoncis que ton coiffeur,</span></span></div></div>
+<div class="p_Style1"><div id="T1ad" class="txs"><span class="c_CharacterStyle1">parce qu'on est circoncis qu'une fois tandis que le coiffeur aura maintes occasions de se venger.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/04 prov fr avec mus.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

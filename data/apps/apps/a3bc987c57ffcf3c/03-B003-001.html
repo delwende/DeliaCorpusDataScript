@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>111 Ni i te se ka boli ka 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0.67, end: 8.84 },
+    { label: "1b", start: 9.09, end: 13.99 },
+    { label: "1c", start: 14.24, end: 23.22 },
+    { label: "1d", start: 23.47, end: 28.47 },
+    { label: "1e", start: 28.72, end: 34.99 },
+    { label: "1f", start: 35.24, end: 44.7 },
+    { label: "1g", start: 44.95, end: 50.57 },
+    { label: "1h", start: 50.82, end: 60.43 },
+    { label: "1i", start: 60.68, end: 70.93 },
+    { label: "1j", start: 71.18, end: 80.8 },
+    { label: "1k", start: 81.05, end: 85.01 },
+    { label: "1l", start: 85.26, end: 98.38 },
+    { label: "1m", start: 98.63, end: 104.5 },
+    { label: "1n", start: 104.75, end: 111.23 },
+    { label: "1o", start: 111.48, end: 121.48 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0.67;
+var stopTime  = 121.48;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;111 Ni i te se ka boli ka&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">111</span><span class="bd"> N</span><span class="bd">i i te se ka boli ka mɔgɔ min to, kana bolifura dumu ka a tigi to.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Il est toujours mieux de prendre ses responsabilités à temps.</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">N</span><span class="bd">i i te se ka boli ka mɔgɔ min to, kana bolifura dumu ka a tigi to.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">112</span><span class="bd"> </span><span class="bd">Ni jakuma tagara dugu ra, ɲinanw be o tile kɛ.</span></div></div>
+<div class="m"><div id="T1e" class="txs">Si le chat voyage, les souris profitent bien.</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">Ni jakuma tagara dugu ra, ɲinanw be o tile kɛ.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">113</span><span class="bd"> </span><span class="bd">Ni jidaga cira e kunna e be e ɲaa ko ni a jii ye.</span></div></div>
+<div class="m"><div id="T1h" class="txs">Souvent, lorsqu’on se trouve dans une situation embarrassante, il vaut mieux s’enfoncer pour en finir avec.</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Ni jidaga cira e kunna e be e ɲaa ko ni a jii ye.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">114</span><span class="bd"> </span><span class="bd">Ni jigɛ bɔra jii ra ka a fɔ ko banba ɲaa kelen cinin lo, gerenkanmɔgɔ bi se ka fɔ tiɲɛ tɛ wa?</span></div></div>
+<div class="m"><div id="T1k" class="txs">Ce sont ceux qui se connaissent mieux qui se critiquent.</div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">Ni jigɛ bɔra jii ra ka a fɔ ko banba ɲaa kelen cinin lo, gerenkanmɔgɔ bi se ka fɔ tiɲɛ tɛ wa?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">115</span><span class="bd"> </span><span class="bd">Ni kabakuru bɔra sanfɛ ka jigi, bɛɛ bi a yɛrɛ kuun le minɛ.</span></div></div>
+<div class="m"><div id="T1n" class="txs">Dans une situation de panique généralisée, chacun cherche à se sauver d’abord. </div></div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">Ni kabakuru bɔra sanfɛ ka jigi, bɛɛ bi a yɛrɛ kuun le minɛ.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/sidibe prov vol4 111-115.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

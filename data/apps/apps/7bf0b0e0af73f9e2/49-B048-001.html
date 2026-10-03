@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>In general, in the world 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.03 },
+    { label: "1b", start: 1.28, end: 5.23 },
+    { label: "1c", start: 5.48, end: 6.03 },
+    { label: "1d", start: 6.28, end: 6.69 },
+    { label: "1e", start: 6.94, end: 9.87 },
+    { label: "1f", start: 10.12, end: 11.25 },
+    { label: "1g", start: 11.5, end: 17.11 },
+    { label: "1h", start: 17.36, end: 22.29 },
+    { label: "1i", start: 22.54, end: 23.63 },
+    { label: "1j", start: 23.88, end: 25.87 },
+    { label: "1k", start: 26.12, end: 28.59 },
+    { label: "1l", start: 28.84, end: 31.15 },
+    { label: "1m", start: 31.4, end: 33.69 },
+    { label: "1n", start: 33.94, end: 36.31 },
+    { label: "1o", start: 36.56, end: 38.01 },
+    { label: "1p", start: 38.26, end: 40.71 },
+    { label: "1q", start: 40.96, end: 43.13 },
+    { label: "1r", start: 43.38, end: 44.93 },
+    { label: "1s", start: 45.18, end: 47.11 },
+    { label: "1t", start: 47.36, end: 48.47 },
+    { label: "1u", start: 48.72, end: 50.45 },
+    { label: "1v", start: 50.7, end: 51.75 },
+    { label: "1w", start: 52, end: 54.43 },
+    { label: "1x", start: 54.68, end: 57.25 },
+    { label: "1y", start: 57.5, end: 65.85 },
+    { label: "1z", start: 66.1, end: 67.65 },
+    { label: "1aa", start: 67.9, end: 71.25 },
+    { label: "1ab", start: 71.5, end: 74.43 },
+    { label: "1ac", start: 74.68, end: 78.43 },
+    { label: "1ad", start: 78.68, end: 82.75 },
+    { label: "1ae", start: 83, end: 85.61 },
+    { label: "1af", start: 85.86, end: 89.63 },
+    { label: "1ag", start: 89.88, end: 92.37 },
+    { label: "1ah", start: 92.62, end: 95.73 },
+    { label: "1ai", start: 95.98, end: 101.69 },
+    { label: "1aj", start: 101.94, end: 102.67 },
+    { label: "1ak", start: 102.92, end: 106.33 },
+    { label: "1al", start: 106.58, end: 109.51 },
+    { label: "1am", start: 109.76, end: 114.05 },
+    { label: "1an", start: 114.3, end: 115.39 },
+    { label: "1ao", start: 115.64, end: 119.31 },
+    { label: "1ap", start: 119.56, end: 120.81 },
+    { label: "1aq", start: 121.06, end: 125.93 },
+    { label: "1ar", start: 126.18, end: 128.49 },
+    { label: "1as", start: 128.74, end: 131.85 },
+    { label: "1at", start: 132.1, end: 134.05 },
+    { label: "1au", start: 134.3, end: 137.67 },
+    { label: "1av", start: 137.92, end: 145.89 },
+    { label: "1aw", start: 146.14, end: 149.87 },
+    { label: "1ax", start: 150.12, end: 152.45 },
+    { label: "1ay", start: 152.7, end: 154.67 },
+    { label: "1az", start: 154.92, end: 157.87 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 157.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "49-B048-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='48-B057-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='48-B057-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;In general, in the world&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='50-B058-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='50-B058-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B048-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">In general,</div> <div id="T1b" class="txs">in the world there are populations reacting to shame (like Asians,</div> <div id="T1c" class="txs">Africans,</div> <div id="T1d" class="txs">etc.)</div> <div id="T1e" class="txs">and those responding to guilt (like Europeans,</div> <div id="T1f" class="txs">Westerners).</div> <div id="T1g" class="txs">Anyone who reacts to a mistake with remorse and feelings of guilt belongs to the culture of guilt.</div> <div id="T1h" class="txs">His conscience pushes him to look for ways to admit his fault and put things in order.</div></div>
+<div class="m"><div id="T1i" class="txs">Conversely,</div> <div id="T1j" class="txs">in a culture of shame and dishonor,</div> <div id="T1k" class="txs">it seems that as long as it remains secret,</div> <div id="T1l" class="txs">the transgressor feels no guilt.</div> <div id="T1m" class="txs">But if the transgression is discovered,</div> <div id="T1n" class="txs">it brings shame and a bad conscience.</div> <div id="T1o" class="txs">To escape dishonor,</div> <div id="T1p" class="txs">we therefore seek to conceal our fault.</div></div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">A bad and a good conscience</span></div></div>
+<div class="m"><div id="T1r" class="txs">In the culture of guilt,</div> <div id="T1s" class="txs">the bad conscience is appeased if,</div> <div id="T1t" class="txs">for the wrongdoer,</div> <div id="T1u" class="txs">justice is reestablished;</div> <div id="T1v" class="txs">on the other hand,</div> <div id="T1w" class="txs">in the culture of shame and dishonor,</div> <div id="T1x" class="txs">it is when the person is considered and honored again.</div> <div id="T1y" class="txs">It quickly became apparent that the importance of honor in the culture of shame and that of justice in the culture of guilt are not only linked to conscience.</div> <div id="T1z" class="txs">In a culture of shame,</div> <div id="T1aa" class="txs">reciprocal honor is an absolute law in everyday life.</div> <div id="T1ab" class="txs">Any action that contributes to honor is good,</div> <div id="T1ac" class="txs">on the other hand any action that brings discredit is reprobated.</div> <div id="T1ad" class="txs">We therefore strive to ensure personal honor and that of the family.</div> <div id="T1ae" class="txs">Honor is defended at all costs.</div> <div id="T1af" class="txs">What seems to me to be a lie will not be considered morally false,</div> <div id="T1ag" class="txs">if honor is preserved and shame avoided?</div> <div id="T1ah" class="txs">Nor should the honor of a superior be tarnished.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ai" class="txs">The culture where law and justice are basic values is opposed to the culture oriented towards honor.</div> <div id="T1aj" class="txs">Here,</div> <div id="T1ak" class="txs">it is not primarily about personal honor or family honor,</div> <div id="T1al" class="txs">and what others think of my actions is secondary.</div> <div id="T1am" class="txs">The important thing is that I know that I acted fairly and that I am right.</div> <div id="T1an" class="txs">To do this,</div> <div id="T1ao" class="txs">we need rules and principles that are respected in common life.</div> <div id="T1ap" class="txs">For example,</div> <div id="T1aq" class="txs">I must be certain that my interlocutor is telling the truth and keeping his promises.</div> <div id="T1ar" class="txs">Discussing the rules is not desired,</div> <div id="T1as" class="txs">negotiating compromises is not appreciated.</div></div>
+<div class="m"><div id="T1at" class="txs">These two basic structures,</div> <div id="T1au" class="txs">honor in the culture of shame and justice in the culture of guilt,</div> <div id="T1av" class="txs">influence daily community life so strongly that we will henceforth speak of the orientation towards honor and the orientation towards Justice.</div> <div id="T1aw" class="txs">If we polarize by distinguishing the two cultures in this way,</div> <div id="T1ax" class="txs">it is to better highlight the differences.</div> <div id="T1ay" class="txs">There are of course “gray areas”,</div> <div id="T1az" class="txs">justice and honor are not mutually exclusive.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/25 Welcome Man voice.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/25 Welcome Man voice.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/25 Welcome Man voice.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

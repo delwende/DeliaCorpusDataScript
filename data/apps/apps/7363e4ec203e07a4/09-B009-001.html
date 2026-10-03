@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°8 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.55 },
+    { label: "1b", start: 1.8, end: 2.57 },
+    { label: "1c", start: 2.82, end: 6.05 },
+    { label: "1d", start: 6.3, end: 7.13 },
+    { label: "1e", start: 7.38, end: 12.53 },
+    { label: "1f", start: 12.78, end: 15.73 },
+    { label: "1g", start: 15.98, end: 20.99 },
+    { label: "1h", start: 21.24, end: 24.31 },
+    { label: "1i", start: 24.56, end: 26.27 },
+    { label: "1j", start: 26.52, end: 28.63 },
+    { label: "1k", start: 28.88, end: 29.77 },
+    { label: "1l", start: 30.02, end: 30.43 },
+    { label: "1m", start: 30.68, end: 35.69 },
+    { label: "1n", start: 35.94, end: 39.61 },
+    { label: "1o", start: 39.86, end: 44.09 },
+    { label: "1p", start: 44.34, end: 47.43 },
+    { label: "1q", start: 47.68, end: 53.53 },
+    { label: "1r", start: 53.78, end: 57.09 },
+    { label: "1s", start: 57.34, end: 58.79 },
+    { label: "1t", start: 59.04, end: 60.35 },
+    { label: "1u", start: 60.6, end: 62.79 },
+    { label: "1v", start: 63.04, end: 64.51 },
+    { label: "1w", start: 64.76, end: 66.71 },
+    { label: "1x", start: 66.96, end: 71.03 },
+    { label: "1y", start: 71.28, end: 75.63 },
+    { label: "1z", start: 75.88, end: 76.97 },
+    { label: "1aa", start: 77.22, end: 81.05 },
+    { label: "1ab", start: 81.3, end: 82.91 },
+    { label: "1ac", start: 83.16, end: 87.07 },
+    { label: "1ad", start: 87.32, end: 89.27 },
+    { label: "1ae", start: 89.52, end: 93.27 },
+    { label: "1af", start: 93.52, end: 98.65 },
+    { label: "1ag", start: 98.9, end: 103.75 },
+    { label: "1ah", start: 104, end: 104.85 },
+    { label: "1ai", start: 105.1, end: 105.93 },
+    { label: "1aj", start: 106.18, end: 111.37 },
+    { label: "1ak", start: 111.62, end: 118.43 },
+    { label: "1al", start: 118.68, end: 126.05 },
+    { label: "1am", start: 126.3, end: 130.11 },
+    { label: "1an", start: 130.36, end: 133.15 },
+    { label: "1ao", start: 133.4, end: 140.15 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 140.15;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "09-B009-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='08-B008-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°8&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B009-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°8 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Renoncez&nbsp;!</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bdit">Diminuez les dépenses pour les besoins secondaires.</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1d" class="txs"><span class="it">Histoire:</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">Fatou aimerait envoyer son fils à l’école mais n’a pas d’argent pour cela.</span></div> <div id="T1f" class="txs"><span class="it">Elle pense que c’est un besoin prioritaire.</span></div> <div id="T1g" class="txs"><span class="it">Elle va donc décider de diminuer ses dépenses pour ses besoins</span><span class="it"> </span><span class="it">secondaires.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1h" class="txs">Que pensez-vous de la décision de Fatou?</div> <div id="T1i" class="txs">Si vous étiez à sa place,</div> <div id="T1j" class="txs">que choisiriez-vous de diminuer?</div></div>
+<div class="p_Corpsdetexte"><div id="T1k" class="txs">Fatou,</div> <div id="T1l" class="txs">elle,</div> <div id="T1m" class="txs">va renoncer à se faire régulièrement tresser au marché et à participer à une conférence.</div> <div id="T1n" class="txs">Elle va utiliser cet argent pour payer l’école de son fils.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1o" class="txs">Si on n’a pas assez d’argent pour payer tout ce que l’on aimerait,</div> <div id="T1p" class="txs">il faut diminuer les dépenses des besoins secondaires:</div> <div id="T1q" class="txs">il faut renoncer ou repousser à plus tard les achats pour les besoins non prioritaires.</div> <div id="T1r" class="txs">Cela permet de garder l’argent pour ce qui est prioritaire.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p"><div id="T1s" class="txs">Avant de faire une dépense,</div> <div id="T1t" class="txs">posez-vous la question :</div> <div id="T1u" class="txs">«&nbsp;<span class="it">Est-ce une dépense nécessaire?</span></div> <div id="T1v" class="txs"><span class="it">prioritaire?</span></div> <div id="T1w" class="txs"><span class="it">Est-ce sage de dépenser pour cela?</span>»</div> <div id="T1x" class="txs">Renoncer à une dépense qui nous fait envie est parfois difficile,</div> <div id="T1y" class="txs">mais c’est important à apprendre si nous voulons gérer sagement notre argent.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1aa" class="txs">Dépensez en fonction des priorités que vous avez définies.</div> <div id="T1ab" class="txs">Pour diminuer vos dépenses,</div> <div id="T1ac" class="txs">apprenez à renoncer à une dépense si c’est un besoin secondaire.</div></div>
+<div class="m"><div id="T1ad" class="txs"><span class="ul">Exercice à</span><span class="ul"> </span><span class="ul">faire:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ae" class="txs">Repensez à la liste de vos besoins prioritaires et secondaires.</div> <div id="T1af" class="txs">Etes-vous prêt à diminuer les dépenses pour les besoins qui ne sont pas prioritaires?</div> <div id="T1ag" class="txs">Que vous engagez-vous à diminuer ou à quoi allez-vous renoncer?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ah" class="txs">Soyez concret.</div> <div id="T1ai" class="txs">Par exemple:</div></div>
+<div class="m"><div id="T1aj" class="txs">Si vous dépensez facilement 1’000 CFA par semaine pour les communications,</div> <div id="T1ak" class="txs">décidez de ne pas recharger et dépenser plus que 500 ou 700 CFA par semaine.</div></div>
+<div class="m"><div id="T1al" class="txs">Décidez de ne pas acheter de nouveaux habits ou pagnes si vous avez suffisamment d’habits en bon état à la maison.</div></div>
+<div class="m"><div id="T1am" class="txs">Attendez avant d’acheter une nouvelle paire de chaussure.</div></div>
+<div class="m"><div id="T1an" class="txs">Renoncez à payer un meilleur téléphone.</div></div>
+<div class="m"><div id="T1ao" class="txs">Reportez à plus tard une visite ou un déplacement qui peut attendre.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/017_Conseil_n8.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

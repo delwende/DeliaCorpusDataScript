@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P 81-120 33</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "33a", start: 831.39, end: 835.4 },
+    { label: "33b", start: 835.65, end: 837.6 },
+    { label: "33c", start: 837.85, end: 840.78 },
+    { label: "33d", start: 841.03, end: 843.58 },
+    { label: "33e", start: 843.83, end: 845.62 },
+    { label: "33f", start: 845.87, end: 857.03 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 831.39;
+var stopTime  = 857.03;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-032.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;P 81-120&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;33&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-034.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image33.jpg" />
+
+<div class="m"><div id="T33a" class="txs"><span class="bd">113 Ned </span><span class="bd">sã</span><span class="bd"> n ka </span><span class="bd">so</span><span class="bd"> </span><span class="bd">misgu</span><span class="bd">,</span></div> <div id="T33b" class="txs"><span class="bd">a ka </span><span class="bd">wãdgd</span><span class="bd">-a </span><span class="bd">sʋ</span><span class="bd">k</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T33c" class="txs"><span class="bdit">(Si une galette ne t’appartient pas,</span></div> <div id="T33d" class="txs"><span class="bdit">évite de la couper par le milieu).</span></div></div>
+<div class="m"><div id="T33e" class="txs"><span class="bd">Ned </span><span class="bd">sã</span><span class="bd"> n ka </span><span class="bd">so</span><span class="bd"> </span><span class="bd">misgu</span><span class="bd">,</span></div> <div id="T33f" class="txs"><span class="bd">a ka </span><span class="bd">wãdgd</span><span class="bd">-a </span><span class="bd">sʋ</span><span class="bd">k</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 80 a 120 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

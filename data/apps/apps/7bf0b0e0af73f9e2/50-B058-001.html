@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>En général, dans le monde 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.23 },
+    { label: "1b", start: 1.48, end: 5.69 },
+    { label: "1c", start: 5.94, end: 7.13 },
+    { label: "1d", start: 7.38, end: 11.13 },
+    { label: "1e", start: 11.38, end: 19.27 },
+    { label: "1f", start: 19.52, end: 25.03 },
+    { label: "1g", start: 25.28, end: 26.41 },
+    { label: "1h", start: 26.66, end: 29.07 },
+    { label: "1i", start: 29.32, end: 29.97 },
+    { label: "1j", start: 30.22, end: 31.73 },
+    { label: "1k", start: 31.98, end: 35.19 },
+    { label: "1l", start: 35.44, end: 38.01 },
+    { label: "1m", start: 38.26, end: 40.79 },
+    { label: "1n", start: 41.04, end: 42.73 },
+    { label: "1o", start: 42.98, end: 45.33 },
+    { label: "1p", start: 45.58, end: 48.19 },
+    { label: "1q", start: 48.44, end: 50.83 },
+    { label: "1r", start: 51.08, end: 53.01 },
+    { label: "1s", start: 53.26, end: 54.13 },
+    { label: "1t", start: 54.38, end: 55.85 },
+    { label: "1u", start: 56.1, end: 56.67 },
+    { label: "1v", start: 56.92, end: 59.07 },
+    { label: "1w", start: 59.32, end: 62.73 },
+    { label: "1x", start: 62.98, end: 72.63 },
+    { label: "1y", start: 72.88, end: 74.69 },
+    { label: "1z", start: 74.94, end: 78.23 },
+    { label: "1aa", start: 78.48, end: 81.31 },
+    { label: "1ab", start: 81.56, end: 85.15 },
+    { label: "1ac", start: 85.4, end: 90.31 },
+    { label: "1ad", start: 90.56, end: 92.99 },
+    { label: "1ae", start: 93.24, end: 97.55 },
+    { label: "1af", start: 97.8, end: 99.99 },
+    { label: "1ag", start: 100.24, end: 103.93 },
+    { label: "1ah", start: 104.18, end: 110.59 },
+    { label: "1ai", start: 110.84, end: 111.65 },
+    { label: "1aj", start: 111.9, end: 116.19 },
+    { label: "1ak", start: 116.44, end: 119.33 },
+    { label: "1al", start: 119.58, end: 124.21 },
+    { label: "1am", start: 124.46, end: 125.47 },
+    { label: "1an", start: 125.72, end: 129.53 },
+    { label: "1ao", start: 129.78, end: 135.67 },
+    { label: "1ap", start: 135.92, end: 138.21 },
+    { label: "1aq", start: 138.46, end: 141.11 },
+    { label: "1ar", start: 141.36, end: 143.17 },
+    { label: "1as", start: 143.42, end: 147.89 },
+    { label: "1at", start: 148.14, end: 156.15 },
+    { label: "1au", start: 156.4, end: 159.81 },
+    { label: "1av", start: 160.06, end: 162.75 },
+    { label: "1aw", start: 163, end: 165.53 },
+    { label: "1ax", start: 165.78, end: 168.91 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 168.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "50-B058-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='49-B048-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='49-B048-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;En général, dans le monde&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='51-B049-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='51-B049-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B058-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">En général,</div> <div id="T1b" class="txs">dans le monde il y a des populations réagissant à la honte (comme les Orientaux,</div> <div id="T1c" class="txs">Africains etc.)</div> <div id="T1d" class="txs">et celles répondant à la culpabilité (comme les Occidentaux).</div> <div id="T1e" class="txs">Appartient à la <span class="bd">culture de la culpabilité</span> toute personne qui réagit à une faute par des remords et des sentiments de culpabilité.</div> <div id="T1f" class="txs">Sa conscience la pousse à chercher des moyens d’avouer sa faute et de mettre les choses en ordre.</div></div>
+<div class="m"><div id="T1g" class="txs">À l'inverse,</div> <div id="T1h" class="txs">dans une <span class="bd">culture de la honte et du déshonneur</span>,</div> <div id="T1i" class="txs">il semble que,</div> <div id="T1j" class="txs">tant que cela reste secret,</div> <div id="T1k" class="txs">le transgresseur ne ressente pas de culpabilité.</div> <div id="T1l" class="txs">Mais si la transgression est découverte,</div> <div id="T1m" class="txs">cela amène honte et mauvaise conscience.</div> <div id="T1n" class="txs">Pour échapper au déshonneur,</div> <div id="T1o" class="txs">on cherche donc à dissimuler sa faute.</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">Une mauvaise et une bonne conscience</span></div></div>
+<div class="m"><div id="T1q" class="txs">Dans la <span class="bd">culture de la culpabilité</span>,</div> <div id="T1r" class="txs">la mauvaise conscience est apaisée si,</div> <div id="T1s" class="txs">pour <span class="ul">le fautif,</span></div> <div id="T1t" class="txs"><span class="ul">la justice est rétablie</span> ;</div> <div id="T1u" class="txs">par contre,</div> <div id="T1v" class="txs">dans la <span class="bd">culture de la honte et du déshonneur</span>,</div> <div id="T1w" class="txs">c’est lorsque la personne est à <span class="ul">nouveau considérée et honorée</span>.</div> <div id="T1x" class="txs">Il est vite apparu que l’importance de l'honneur dans la culture de la honte et celle de la justice dans la culture de la culpabilité ne sont pas uniquement liées à la conscience.</div> <div id="T1y" class="txs">Dans une culture de la honte,</div> <div id="T1z" class="txs">l'honneur réciproque est une loi absolue au quotidien.</div> <div id="T1aa" class="txs">Toute action qui contribue à l’honneur est bonne,</div> <div id="T1ab" class="txs">par contre toute action qui jette le discrédit est réprouvée.</div> <div id="T1ac" class="txs">Aussi s'efforce-t-on de veiller à l’honneur personnel et à celui de la famille.</div> <div id="T1ad" class="txs">L’honneur est défendu à tout prix.</div> <div id="T1ae" class="txs">Ce qui me paraît un mensonge ne sera pas considéré comme moralement faux,</div> <div id="T1af" class="txs">si l’honneur est sauf et la honte évitée&nbsp;?</div> <div id="T1ag" class="txs">L’honneur d’un supérieur ne doit pas non plus être terni.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs">La culture où le droit et la justice sont des valeurs de base s’oppose à la culture orientée vers l’honneur.</div> <div id="T1ai" class="txs">Ici,</div> <div id="T1aj" class="txs">il ne s’agit pas en premier lieu de l'honneur personnel ou de l'honneur de la famille,</div> <div id="T1ak" class="txs">et ce que les autres pensent de mes actes est secondaire.</div> <div id="T1al" class="txs">L’important est que je sache que j’ai agi de façon juste et que j’ai raison.</div> <div id="T1am" class="txs">Pour cela,</div> <div id="T1an" class="txs">il faut des règles et des principes qui soient respectés dans la vie en commun.</div> <div id="T1ao" class="txs">Je dois par exemple être certaine que mon interlocuteur dit la vérité et tient ses promesses.</div> <div id="T1ap" class="txs">Discuter les règles n’est pas souhaité,</div> <div id="T1aq" class="txs">négocier des compromis n’est pas apprécié.</div></div>
+<div class="m"><div id="T1ar" class="txs">Ces deux structures de base,</div> <div id="T1as" class="txs">l’<span class="bd">honneur</span> dans la culture de la honte et la <span class="bd">justice</span> dans la culture de la culpabilité,</div> <div id="T1at" class="txs">influencent si fort la vie communautaire quotidienne que nous parlerons désormais de l’orientation vers l’honneur et de l’orientation vers la justice.</div> <div id="T1au" class="txs">Si nous polarisons en distinguant ainsi les deux cultures,</div> <div id="T1av" class="txs">c'est pour mieux mettre les différences en relief.</div> <div id="T1aw" class="txs">Il y a bien sûr des «&nbsp;<span class="it">zones grises</span>&nbsp;»,</div> <div id="T1ax" class="txs">la justice et l’honneur ne s'excluent pas mutuellement.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/25 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/25 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/25 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

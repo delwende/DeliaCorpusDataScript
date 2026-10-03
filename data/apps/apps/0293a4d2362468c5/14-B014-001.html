@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>4 g) Illustrations pour 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.57 },
+    { label: "1b", start: 4.82, end: 7.09 },
+    { label: "1c", start: 7.34, end: 10.51 },
+    { label: "1d", start: 10.76, end: 12.87 },
+    { label: "1e", start: 13.12, end: 13.87 },
+    { label: "1f", start: 14.12, end: 21.55 },
+    { label: "1g", start: 21.8, end: 25.29 },
+    { label: "1h", start: 25.54, end: 26.51 },
+    { label: "1i", start: 26.76, end: 28.15 },
+    { label: "1j", start: 28.4, end: 31.45 },
+    { label: "1k", start: 31.7, end: 35.95 },
+    { label: "1l", start: 36.2, end: 41.33 },
+    { label: "1m", start: 41.58, end: 43.45 },
+    { label: "1n", start: 43.7, end: 47.31 },
+    { label: "1o", start: 47.56, end: 49.35 },
+    { label: "1p", start: 49.6, end: 51.55 },
+    { label: "1q", start: 51.8, end: 52.73 },
+    { label: "1r", start: 52.98, end: 55.97 },
+    { label: "1s", start: 56.22, end: 57.17 },
+    { label: "1t", start: 57.42, end: 60.25 },
+    { label: "1u", start: 60.5, end: 65.79 },
+    { label: "1v", start: 66.04, end: 71.27 },
+    { label: "1w", start: 71.52, end: 72.99 },
+    { label: "1x", start: 73.24, end: 76.21 },
+    { label: "1y", start: 76.46, end: 79.59 },
+    { label: "1z", start: 79.84, end: 81.91 },
+    { label: "1aa", start: 82.16, end: 84.51 },
+    { label: "1ab", start: 84.76, end: 90.01 },
+    { label: "1ac", start: 90.26, end: 93.11 },
+    { label: "1ad", start: 93.36, end: 96.19 },
+    { label: "1ae", start: 96.44, end: 99.05 },
+    { label: "1af", start: 99.3, end: 100.77 },
+    { label: "1ag", start: 101.02, end: 103.45 },
+    { label: "1ah", start: 103.7, end: 104.87 },
+    { label: "1ai", start: 105.12, end: 108.07 },
+    { label: "1aj", start: 108.32, end: 113.57 },
+    { label: "1ak", start: 113.82, end: 116.69 },
+    { label: "1al", start: 116.94, end: 119.85 },
+    { label: "1am", start: 120.1, end: 122.93 },
+    { label: "1an", start: 123.18, end: 129.75 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 129.75;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "14-B014-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='13-B013-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;4 g) Illustrations pour&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B014-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="ul"><span class="bdit">4</span></span><span class="ul"><span class="bdit"> </span></span><span class="ul"><span class="bdit">g</span></span><span class="ul"><span class="bdit">)</span></span><span class="ul"><span class="bdit"> Illustrations pour mieux comprendre comment Dieu voit l’homme</span></span><span class="ul"><span class="bdit">.</span></span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">«</span><span class="bd"> </span><span class="bd">Halal</span><span class="bd"> </span><span class="bd">» ou «</span><span class="bd"> </span><span class="bd">haram</span><span class="bd"> </span><span class="bd">»</span><span class="bd"> </span><span class="bd">?</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Tout musulman</span> connaît les termes halal (licite,</div> <div id="T1d" class="txs">pur) et haram (illicite,</div> <div id="T1e" class="txs">impur).</div> <div id="T1f" class="txs">Nous pouvons utiliser ces notions comme point d’accroche utile pour leur expliquer la signification biblique du mot «&nbsp;<span class="it">péché</span>&nbsp;».</div> <div id="T1g" class="txs">L’islam distingue plusieurs catégories de «&nbsp;<span class="it">péchés</span>&nbsp;» :</div> <div id="T1h" class="txs">les «&nbsp;<span class="it">erreurs</span>&nbsp;»,</div> <div id="T1i" class="txs">les «&nbsp;<span class="it">petits péchés</span>&nbsp;»,</div> <div id="T1j" class="txs">les «&nbsp;<span class="it">grands péchés</span>&nbsp;» et les «&nbsp;<span class="it">péchés mortels</span>&nbsp;».</div> <div id="T1k" class="txs">Abandonner l’islam ou se rendre coupable d’apostasie (irtidad),</div> <div id="T1l" class="txs">placer qui que ce soit d’autre au même niveau qu’Allah (shirk) et ne pas croire (kufr),</div> <div id="T1m" class="txs">tels sont les péchés mortels.</div> <div id="T1n" class="txs">Tous les autres peuvent être compensés par des «&nbsp;bonnes actions&nbsp;»,</div> <div id="T1o" class="txs">comme observer le jeûne du ramadan,</div> <div id="T1p" class="txs">faire les cinq prières quotidiennes,</div> <div id="T1q" class="txs">etc.</div></div>
+<div class="m"><div id="T1r" class="txs">Demandez à votre ami musulman ce qu’il fait si,</div> <div id="T1s" class="txs">au supermarché,</div> <div id="T1t" class="txs">il a le choix entre quatre sortes de saucisson :</div></div>
+<div class="m"><div id="T1u" class="txs">une première composée de 50% de bœuf et de 50% de porc;</div></div>
+<div class="m"><div id="T1v" class="txs">deux autres composées de 75% ou 90% de bœuf,</div> <div id="T1w" class="txs">le reste étant du porc;</div></div>
+<div class="m"><div id="T1x" class="txs">une dernière composée à 100% de bœuf,</div> <div id="T1y" class="txs">mais à la peau fabriquée à base de porc.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="bd">N’opte-t-il pas</span> pour la dernière sorte,</div> <div id="T1aa" class="txs">qui contient moins de porc que les autres&nbsp;?</div> <div id="T1ab" class="txs">Le musulman scrupuleux pensera immédiatement que les quatre sortes sont haram.</div> <div id="T1ac" class="txs">Car peu importe le pourcentage de porc,</div> <div id="T1ad" class="txs">ou peu importe que seule la peau soit à base de porc,</div> <div id="T1ae" class="txs">elles contiennent toutes du porc et sont donc haram&nbsp;!</div></div>
+<div class="m"><div id="T1af" class="txs"><span class="bdit">Conclusion</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="it">Il en va de même avec le péché</span><span class="it"> </span><span class="it">!</span></div> <div id="T1ah" class="txs"><span class="it">Aux yeux de Dieu,</span></div> <div id="T1ai" class="txs"><span class="it">tout péché est haram et nous rend impurs devant lui</span><span class="it"> </span><span class="it">!</span></div> <div id="T1aj" class="txs"><span class="it">Il ne permettra à rien ni à qui que ce soit d’impur d’entrer dans le ciel ou le paradis (cf.</span></div> <div id="T1ak" class="txs"><span class="it">Apocalypse 21</span><span class="it">,</span></div><div id="T1al" class="txs"><span class="it">27).</span></div> <div id="T1am" class="txs"><span class="it">La Bible dit que nous sommes tous des pécheurs.</span></div> <div id="T1an" class="txs"><span class="it">Nous avons tous tendance à mal agir. C’est pourquoi nous avons tous besoin d’être sauvés de nos péchés (</span><span class="it">voir</span><span class="it"> Romains 3</span><span class="it">, </span><span class="it">23</span><span class="it"> à </span><span class="it">24).</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/14 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

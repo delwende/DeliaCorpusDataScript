@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le « Dioula facile, Tome 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 8.77 },
+    { label: "1b", start: 9.02, end: 21.61 },
+    { label: "1c", start: 21.86, end: 24.99 },
+    { label: "1d", start: 25.24, end: 27.09 },
+    { label: "1e", start: 27.34, end: 30.75 },
+    { label: "1f", start: 31, end: 33.77 },
+    { label: "1g", start: 34.02, end: 37.19 },
+    { label: "1h", start: 37.44, end: 39.53 },
+    { label: "1i", start: 39.78, end: 41.23 },
+    { label: "1j", start: 41.48, end: 44.41 },
+    { label: "1k", start: 44.66, end: 47.91 },
+    { label: "1l", start: 48.16, end: 52.39 },
+    { label: "1m", start: 52.64, end: 56.69 },
+    { label: "1n", start: 56.94, end: 60.87 },
+    { label: "1o", start: 61.12, end: 66.77 },
+    { label: "1p", start: 67.02, end: 70.77 },
+    { label: "1q", start: 71.02, end: 74.75 },
+    { label: "1r", start: 75, end: 75.35 },
+    { label: "1s", start: 75.6, end: 78.79 },
+    { label: "1t", start: 79.04, end: 82.63 },
+    { label: "1u", start: 82.88, end: 86.89 },
+    { label: "1v", start: 87.14, end: 90.31 },
+    { label: "1w", start: 90.56, end: 94.61 },
+    { label: "1x", start: 94.86, end: 99.21 },
+    { label: "1y", start: 99.46, end: 103.01 },
+    { label: "1z", start: 103.26, end: 106.95 },
+    { label: "1aa", start: 107.2, end: 108.37 },
+    { label: "1ab", start: 108.62, end: 114.13 },
+    { label: "1ac", start: 114.38, end: 118.11 },
+    { label: "1ad", start: 118.36, end: 123.67 },
+    { label: "1ae", start: 123.92, end: 127.67 },
+    { label: "1af", start: 127.92, end: 131.77 },
+    { label: "1ag", start: 132.02, end: 136.43 },
+    { label: "1ah", start: 136.68, end: 141.43 },
+    { label: "1ai", start: 141.68, end: 156.27 },
+    { label: "1aj", start: 156.52, end: 166.93 },
+    { label: "1ak", start: 167.18, end: 168.13 },
+    { label: "1al", start: 168.38, end: 171.77 },
+    { label: "1am", start: 172.02, end: 176.79 },
+    { label: "1an", start: 177.04, end: 183.37 },
+    { label: "1ao", start: 183.62, end: 185.19 },
+    { label: "1ap", start: 185.44, end: 188.51 },
+    { label: "1aq", start: 188.76, end: 193.35 },
+    { label: "1ar", start: 193.6, end: 197.97 },
+    { label: "1as", start: 198.22, end: 204.87 },
+    { label: "1at", start: 205.12, end: 209.53 },
+    { label: "1au", start: 209.78, end: 212.11 },
+    { label: "1av", start: 212.36, end: 213.61 },
+    { label: "1aw", start: 213.86, end: 218.29 },
+    { label: "1ax", start: 218.54, end: 220.95 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 220.95;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Le « Dioula facile, Tome&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">Le «&nbsp;<span class="it">Dioula facile, Tome I</span>&nbsp;» existe depuis 2003 sous forme de document d’auto apprentissage du dioula.</div> <div id="T1b" class="txs">Ici une forme audio d’une grande partie de ce même document vous est proposée pour répondre à un besoin exprimé par de nombreux utilisateurs dudit document.</div> <div id="T1c" class="txs">Vos suggestions sont toujours les bienvenues.</div></div>
+<div class="m"><div id="T1d" class="txs"><span class="c_berschrift1Zchn">Pages 8 </span>à 15.</div></div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">1 ÉLÉMENTS DE TRANSCRIPTION.</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">1</span><span class="bd">-</span><span class="bd">1 </span><span class="bd">L</span><span class="bd">’alphabet</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1g" class="txs">Nous commençons par l’alphabet ainsi qu’il suit :</div> <div id="T1h" class="txs">Les <span class="ul">voyelles orales</span><span class="ul">.</span></div></div>
+<div class="m"><div id="T1i" class="txs">Exemples :</div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">a</span>   ábada   «&nbsp;<span class="it">jamais </span>».</div></div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">e</span>   kálé   «&nbsp;<span class="it">antimoine</span>&nbsp;».</div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">ɛ</span>   bɛrɛ́   «&nbsp;<span class="it">caillou</span>&nbsp;».</div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">i</span><span class="bd"> </span><span class="bd">  </span>dibí   «&nbsp;<span class="it">obscurité</span>&nbsp;».</div></div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">o</span><span class="bd"> </span><span class="bd">  </span>bóló   «&nbsp;<span class="it">bras / main</span>&nbsp;».</div></div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">ɔ</span>   kɔgɔ́   «&nbsp;<span class="it">sel</span>&nbsp;».</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">u</span><span class="bd"> </span><span class="bd">  </span>musó   «&nbsp;<span class="it">femme / femelle</span>&nbsp;».</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1q" class="txs">Voici les <span class="ul">voyelles orales longues </span>attestées en dioula :</div></div>
+<div class="m"><div id="T1r" class="txs">Exemples :</div></div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">aa</span>   báara   «&nbsp;<span class="it">travail</span>&nbsp;».</div></div>
+<div class="m"><div id="T1t" class="txs"><span class="bd">ee</span>   feerelí   «&nbsp;<span class="it">vente</span>&nbsp;».</div></div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">ɛɛ</span>   hɛ́ɛrɛ   «&nbsp;<span class="it">paix</span>&nbsp;».</div></div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">ii</span>   míirí   «&nbsp;<span class="it">pensée</span>&nbsp;».</div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">oo</span>   kóoró   «&nbsp;<span class="it">varan de terre</span>&nbsp;».</div></div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">ɔɔ</span>   wɔ́ɔrɔ   «&nbsp;<span class="it">six</span>&nbsp;».</div></div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">uu</span>   dúuru   «&nbsp;<span class="it">cinq</span>&nbsp;».</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1z" class="txs">Toutes les <span class="ul">voyelles</span> du dioula peuvent être <span class="ul">nasalisées</span>.</div></div>
+<div class="m"><div id="T1aa" class="txs">Exemples :</div></div>
+<div class="m"><div id="T1ab" class="txs"><span class="bd">an</span>   bálán   «&nbsp;<span class="it">balafon</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">en</span>   kélen   «&nbsp;<span class="it">un</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">ɛn</span>   tɛ́ntɛ́n   «&nbsp;<span class="it">tamiser</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">in</span>   síirín   «&nbsp;<span class="it">conte</span>&nbsp;».</div></div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">on</span>   kolón   «&nbsp;<span class="it">mortier</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="bd">ɔn</span>   kɔlɔ́n   «&nbsp;<span class="it">puits</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">un</span>   dundún   «&nbsp;<span class="it">tam-tam</span>&nbsp;».</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Textkrper-Einzug3"><div id="T1ai" class="txs">La plupart des consonnes dioula sont comme en français, mais il y a les quatre exceptions suivantes <span class="bd">c, j, ɲ ŋ</span>.</div> <div id="T1aj" class="txs">Les <span class="ul"><span class="bd">consonnes</span></span> qui ont la même graphie en dioula et en français mais qui ne correspondent pas au même son, sont les suivantes :</div></div>
+<div class="p_Textkrper-Einzug3"><div id="T1ak" class="txs">Exemples :</div></div>
+<div class="m"><div id="T1al" class="txs"><span class="bd">c</span>   cɛncɛ́n    «&nbsp;<span class="it">sable</span>&nbsp;».</div></div>
+<div class="p_Fuzeile"><div id="T1am" class="txs"><span class="bd">j</span>   jula   «&nbsp;<span class="it">dioula</span>&nbsp;».</div></div>
+<div class="m"><div id="T1an" class="txs">Les graphies qui existent en dioula seulement sont <span class="bd">ɲ ŋ.</span></div></div>
+<div class="m"><div id="T1ao" class="txs">Exemples :</div></div>
+<div class="m"><div id="T1ap" class="txs"><span class="bd">ɲ</span>   <span class="bd">ɲ</span>inan   «&nbsp;<span class="it">année en cours</span>&nbsp;».</div></div>
+<div class="m"><div id="T1aq" class="txs">           <span class="bd">ɲ</span>ún    «&nbsp;<span class="it">porter sur la tête</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ar" class="txs">Ce son est écrit «&nbsp;<span class="it">gn</span>&nbsp;» en français.</div></div>
+<div class="m"><div id="T1as" class="txs">Le son <span class="bd">ŋ</span> qui n’existe pas en français, mérite donc une attention particulière.</div> <div id="T1at" class="txs">C’est le son que l’on trouve à la fin des mots anglais comme :</div></div>
+<div class="m"><div id="T1au" class="txs">Parki<span class="bd">ng</span> [paRki<span class="bd">ŋ</span>] ; meeti<span class="bd">ng</span> [miti<span class="bd">ŋ</span>]</div></div>
+<div class="m"><div id="T1av" class="txs">Exemples :</div></div>
+<div class="p_Fuzeile"><div id="T1aw" class="txs"><span class="bd">ŋ</span>   <span class="bd">ŋ</span>ɔmí   «&nbsp;<span class="it">galette</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ax" class="txs"><span class="bd">      </span><span class="bd">ŋ</span>ána   «&nbsp;<span class="it">expert</span>&nbsp;».</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/01 pages8-15.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

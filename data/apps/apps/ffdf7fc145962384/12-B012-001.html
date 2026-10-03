@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF9800">
+<title>26 Nziirin nziirin 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.97 },
+    { label: "1b", start: 1.22, end: 2.39 },
+    { label: "1c", start: 2.64, end: 5.45 },
+    { label: "1d", start: 5.7, end: 6.57 },
+    { label: "1e", start: 6.82, end: 10.31 },
+    { label: "1f", start: 10.56, end: 12.13 },
+    { label: "1g", start: 12.38, end: 17.19 },
+    { label: "1h", start: 17.44, end: 20.19 },
+    { label: "1i", start: 20.44, end: 21.77 },
+    { label: "1j", start: 22.02, end: 24.93 },
+    { label: "1k", start: 25.18, end: 30.37 },
+    { label: "1l", start: 30.62, end: 37.21 },
+    { label: "1m", start: 37.46, end: 40.55 },
+    { label: "1n", start: 40.8, end: 43.43 },
+    { label: "1o", start: 43.68, end: 44.27 },
+    { label: "1p", start: 44.52, end: 46.79 },
+    { label: "1q", start: 47.04, end: 49.01 },
+    { label: "1r", start: 49.26, end: 50.09 },
+    { label: "1s", start: 50.34, end: 53.27 },
+    { label: "1t", start: 53.52, end: 55.63 },
+    { label: "1u", start: 55.88, end: 59.73 },
+    { label: "1v", start: 59.98, end: 61.63 },
+    { label: "1w", start: 61.88, end: 65.53 },
+    { label: "1x", start: 65.78, end: 67.81 },
+    { label: "1y", start: 68.06, end: 71.03 },
+    { label: "1z", start: 71.28, end: 74.15 },
+    { label: "1aa", start: 74.4, end: 75.77 },
+    { label: "1ab", start: 76.02, end: 78.05 },
+    { label: "1ac", start: 78.3, end: 79.79 },
+    { label: "1ad", start: 80.04, end: 82.45 },
+    { label: "1ae", start: 82.7, end: 84.09 },
+    { label: "1af", start: 84.34, end: 85.99 },
+    { label: "1ag", start: 86.24, end: 93.67 },
+    { label: "1ah", start: 93.92, end: 96.45 },
+    { label: "1ai", start: 96.7, end: 99.75 },
+    { label: "1aj", start: 100, end: 103.47 },
+    { label: "1ak", start: 103.72, end: 105.53 },
+    { label: "1al", start: 105.78, end: 107.19 },
+    { label: "1am", start: 107.44, end: 108.77 },
+    { label: "1an", start: 109.02, end: 110.03 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 110.03;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "12-B012-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='11-B011-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;26 Nziirin nziirin&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B012-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">26 </span><span class="bd">Nziirin nziirin</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">26 </span><span class="bd">Banb</span><span class="bd">a</span><span class="bd"> n</span><span class="bd">i</span><span class="bd"> fal</span><span class="bd">i</span>.</div></div>
+<div class="m"><div id="T1c" class="txs">N ye a ta banba ni fali le kɔrɔ.</div></div>
+<div class="m"><div id="T1d" class="txs">Loon dɔ,</div> <div id="T1e" class="txs">banba tora yaala ra ka na ben kɔlɔn kɔnɔ.</div> <div id="T1f" class="txs">A tun te sera ka bɔ.</div> <div id="T1g" class="txs">A tora o yɔrɔ ra foo ka na fali kulekan mɛn.</div> <div id="T1h" class="txs">Banba tora kɔlɔn kɔnɔ ka fali weele.</div> <div id="T1i" class="txs">Fali sera kɔlɔnda ra,</div> <div id="T1j" class="txs">banba ye a ka koo ɲafɔ fali ye,</div> <div id="T1k" class="txs">ka sɔrɔ ka fali deeli ko a ka ale dɛmɛ ka a bɔ kɔlɔn kɔnɔ.</div> <div id="T1l" class="txs">Fali ko ale bi siran sabu banba bi sɔn ka ale dun ni a bɔra kɔlɔn kɔnɔ.</div></div>
+<div class="m"><div id="T1m" class="txs">Banba ko fali kana siran,</div> <div id="T1n" class="txs">sabu ale tina sɔn ka fɛn kɛ a ra.</div></div>
+<div class="m"><div id="T1o" class="txs">Ayiwa,</div> <div id="T1p" class="txs">fali ye a kuu di banba ma,</div> <div id="T1q" class="txs">ka a sama ka a bɔ kɔlɔn kɔnɔ.</div> <div id="T1r" class="txs">Nga,</div> <div id="T1s" class="txs">banba bɔra kɔlɔn na ka fali seen mina,</div> <div id="T1t" class="txs">ko a sogo yɛrɛ ka di kojugu.</div></div>
+<div class="m"><div id="T1u" class="txs">Fali ko banba ma ko u tun ma bɛn o ra dɛ,</div> <div id="T1v" class="txs">ko ni o lon,</div> <div id="T1w" class="txs">banba ka kɔnɔni kɛ foo kongosogow bɛɛ ka na,</div> <div id="T1x" class="txs">a be sɔrɔ ka ale dun u bɛɛ ɲana.</div> <div id="T1y" class="txs">Fali kulera ka kongosogow weele.</div> <div id="T1z" class="txs">Kongosogow bɛɛ nana foo sonsannin kelen&nbsp;;</div> <div id="T1aa" class="txs">sonsanin tun te yen.</div> <div id="T1ab" class="txs">Fali ko u ka sonsannin kɔnɔ.</div> <div id="T1ac" class="txs">Sonsannin nana,</div> <div id="T1ad" class="txs">fali ye koo ɲafɔ a ye.</div> <div id="T1ae" class="txs">Sonsannin ko tiɲɛ tɛ.</div> <div id="T1af" class="txs">Banba ko tiɲɛ lo.</div> <div id="T1ag" class="txs">Sonsannin ko banba ka a yɛrɛ bila ka ben kɔlɔn kɔnɔ walisa fali ka a bɔ kongosogow bɛɛ ɲana,</div> <div id="T1ah" class="txs">o ra bɛɛ be tiɲɛ ye.</div> <div id="T1ai" class="txs">Banban sɔnna ka a yɛrɛ bila ka ben kɔlɔn kɔnɔ.</div> <div id="T1aj" class="txs">Kongosogow bɛɛ bolira ka banba kelen to kɔlɔn kɔnɔ.</div></div>
+<div class="m"><div id="T1ak" class="txs">Ka a ta o loon foo ka na se bi,</div> <div id="T1al" class="txs">banba be sɔrɔ jii kɔnɔ.</div></div>
+<div class="m"><div id="T1am" class="txs">N ye a ta yɔrɔ min na,</div> <div id="T1an" class="txs">n ye a bila yen.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/dyu/dyu-audio/ora/26 cont dioull vol2.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pages 45a à 46a 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "2a", start: 57.08, end: 60.67 },
+    { label: "2b", start: 60.92, end: 62.01 },
+    { label: "2c", start: 62.26, end: 64.33 },
+    { label: "2d", start: 64.58, end: 67.39 },
+    { label: "2e", start: 67.64, end: 68.23 },
+    { label: "2f", start: 68.48, end: 69.27 },
+    { label: "2g", start: 69.52, end: 70.27 },
+    { label: "2h", start: 70.52, end: 72.55 },
+    { label: "2i", start: 72.8, end: 76.25 },
+    { label: "2j", start: 76.5, end: 83.81 },
+    { label: "2k", start: 84.06, end: 85.33 },
+    { label: "2l", start: 85.58, end: 88.51 },
+    { label: "2m", start: 88.76, end: 91.63 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 57.08;
+var stopTime  = 91.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 2 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Pages 45a à 46a&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image2.png" />
+
+<div class="m"><div id="T2a" class="txs"><span class="bd">b) Vous vous adressez aux mariés</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T2b" class="txs"><span class="ul">Salutation</span>:</div> <div id="T2c" class="txs"><span class="bd">Ala k'áw káan bɛn</span><span class="bd">.</span></div> <div id="T2d" class="txs">«&nbsp;<span class="it">Que Dieu fasse que vous </span><span class="it">vous </span><span class="it">entendez</span>&nbsp;».</div></div>
+<div class="m"><div id="T2e" class="txs"><span class="ul">Réponse</span>:</div><div id="T2f" class="txs"><span class="bd">Amí</span><span class="bd">.</span></div> <div id="T2g" class="txs">«&nbsp;<span class="it">Merci</span> .»</div></div>
+<div class="m"><div id="T2h" class="txs"><span class="ul">Salutation</span>:</div> <div id="T2i" class="txs"><span class="bd">Ala ká bólo ni séén bɔ́ a lá</span>.</div>  <div id="T2j" class="txs">«&nbsp;<span class="it">Q</span><span class="it">ue Dieu vous donne des enfants (qu’il en sorte </span><span class="it">des </span><span class="it">bras et </span><span class="it">des </span><span class="it">pieds)</span>&nbsp;».</div></div>
+<div class="m"><div id="T2k" class="txs"><span class="ul">Réponse</span>:</div><div id="T2l" class="txs"><span class="bd">Amí, í ní cé, í ní barají</span><span class="bd">.</span></div><div id="T2m" class="txs">«&nbsp;<span class="it">A</span><span class="it">men, que Dieu te bénisse</span>&nbsp;».</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/07 pages45-46a.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

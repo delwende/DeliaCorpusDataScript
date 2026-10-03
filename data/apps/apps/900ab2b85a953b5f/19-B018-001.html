@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>መእተዊ 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "19-B018-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='18-B017-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-015.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;መእተዊ&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B018-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='20-B019-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B018-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">መእተዊ</span></div>
+<div class="b">&nbsp;</div>
+<div class="m">መልእኽቲ ናብ ሰብ ኤፌሶን ነቶም "ነቲ ኣብ ኢዶም ዘሎ ገዚፍ መኽዘን መግብን መንፈሳዊ ኣቑሑትን ስለዘይጥቀሙሉ፡ ብመንፈሳዊ ሕጽረት ምግቢ ኣብ ሓደጋ ንዝርከቡ ክርስትያናት ዝተጻሕፈት እያ። እታ ናብ ሰብ ኤፌሶን ዝተጻሕፈት መልእኽቲ እቲ" ተባሂላ ትጽዋዕ ኣላ ባንኪ ኣማኒ፡ መጽሓፍ ቸክ፡ ክፍሊ መዝገብ መጽሓፍ ቅዱስ እዛ ድንቂ ደብዳቤ ንክርስትያናት ብዛዕባ እቲ ኣብ ኢየሱስ ክርስቶስን ቤተ ክርስቲያኑን ዝውንንዎ ዓቢ ሃብትን ምልኣትን ትነግሮም ." (ጆን ማካርተር)።</div>
+<div class="m">እዚ ንዋታዊ ሃብቲ ዘይኮነስ መንፈሳዊ ሃብቲ እዩ። ኤፌሶን ኣዝያ ኣገዳሲት ከተማ እያ ነይራ፣ ሓንቲ ካብተን 5 ወሰንቲ ከተማታት ግዝኣት ሮሜ እያ። ብርግጽ እታ ጳውሎስ ዝበጽሓ ዝዓበየት ከተማ (ብዘይካ ሮማ) እያ ነይራ። ኣዝዩ ሃብታም ስለ ዝነበረ "ባንክ ኤስያ" ተባሂላ ትጽዋዕ ነበረት። ካብ ኩሉ ሸነኻት ነጋዶ ንብረቶም ክገዝኡን ክሸጡን ይመጹ ነበሩ። ከምኡ’ውን በጻሕቲ ዓዲ ነታ ኣብቲ እዋን ካብ ዝነበሩ 7 ተኣምራት ዓለም ዝነበረት ኣምላኽቲ ኣርጤምስ ዝተወፈየ ቤተ መቕደስ ንምድናቕ ይበጽሑ ነበሩ። ሃዋርያ ጳውሎስ ብመልእኽቱ ብርግጽ ነቶም ብዓቢ ስጋዊ ሃብቲ ዝተኸበቡ ኣባላት ቤተ ክርስቲያን ኤፌሶን ናይ ሓደ ክርስትያን ሓጐስን ዕግበትን ኣብቲ ንዋታዊ ከም ዘይኮነ ከርእዮም ደለየ። ነቲ ብክርስቶስ ዘሎና ሓቀኛ ሃብቲ፡ ዘይበላሾን ማንም ክሰርቕ ዘይክእልን ሃብቲ ከዘኻኽሮም ደለየ!</div>
+<div class="m">እዚ ቴማ እዚ ሎሚ እውን ኣገዳሲ እዩ። ናይ ሎሚ ዓለም ገንዘብ ሓጎስ ከም ዘምጽእ ክንኣምን ምደለየና! ቃል ኣምላኽ ግን እዚ ሓሶት ምዃኑ ይነግረና። ልክዕ እዩ ገንዘብ መዓልታዊ ናብራና ዝቐለለ ነገራት ክገዝኣልና ይኽእል እዩ፣ ገንዘብ ግን ኣንጻር እቲ ኣብ ምድሪ ዘሎና ጸገማትን መከራን ዓበይቲ ብድሆታትን ሓይሊ የብሉን።</div>
+<div class="m">ኣብ ኤፌሶን ዘሎ ቁልፊ ጥቕሲ ልክዕ ኣብ መጀመርታ እያ፡ እቲ ብክርስቶስ ኣብ ሰማያዊ ቦታታት ብኹሉ መንፈሳዊ በረኸት ዝባረኸና ኣምላኽን ኣቦን ጎይታና ኢየሱስ ክርስቶስ ይባረኽ። ኤፌሶን 1, 3</div>
+<div class="m">ኣብ ኢየሱስ ኩሉ መንፈሳዊ በረኸት ኣሎና! ኣብተን ዝስዕባ ጥቕስታት ድማ ጳውሎስ ብዛዕባ እዚ በረኸት እዚ ዝያዳ ዝርዝር ሓበሬታ ሂቡና ኣሎ። ኣብቲ መበቈላዊ ናይ ግሪኽኛ ትርጕም መጽሓፍ ቅዱስ፡ ካብ ጥቕሲ 3 ክሳዕ 14 ናይታ ቀዳመይቲ ምዕራፍ ኤፌሶን ሓንቲ ሓረግ እያ! ብመሰረት ጳውሎስ፡ ዝርዝር መንፈሳዊ ሃብቲ ነቶም "ብክርስቶስ" <span class="bd">ዘለዉ ነዊሕ እዩ፡ ምርጫን ቅድመ ዕጫን፤ ምውሳድ ቆልዑ፤ ፍቅሪ፤ መድሕን፤ ይቕሬታ፤ ጸጋ፤ ጥበብን ምስትውዓልን፤ ውርሲ፤ መንፈስ ቅዱስ፤ ሓይሊ፤ ተስፋን ቤተ ክርስቲያንን።</span></div>
+<div class="m">ኣብ ዝቕጽል ገጻት ነዞም መጽሓፍ ቅዱሳዊ ሓቅታት ከነጽንዖም ኢና፡ ግን ከም ትምህርቲ ወይ ፍልጠት ንርእስና ጥራይ ኣይኮነን። ኣብ ክንድኡስ፡ ብኸመይ ብመዓልታዊ ተግባራት ንመዓልታዊ ህይወትና ናይ ብሓቂ ሃብቲ ክኾኑ ከም ዝኽእሉ ንምፍላጥ ክንጥምት ኢና።</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

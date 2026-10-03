@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saa bi duguma seen bi dug 14</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "14a", start: 325.89, end: 327.86 },
+    { label: "14b", start: 328.11, end: 330.16 },
+    { label: "14c", start: 330.41, end: 333.57 },
+    { label: "14d", start: 333.82, end: 337.44 },
+    { label: "14e", start: 337.69, end: 345.84 },
+    { label: "14f", start: 346.09, end: 348.46 },
+    { label: "14g", start: 348.71, end: 356.29 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 325.89;
+var stopTime  = 356.29;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 29 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-013.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Saa bi duguma seen bi dug&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;14&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-015.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Dioula Proverbes 29-image14.jpg" />
+
+<div class="m"><div id="T14a" class="txs"><span class="bd">Sɔɔn b’an bɛɛ ra,</span></div> <div id="T14b" class="txs"><span class="bd">mɔgɔ wɛrɛ taa fɔ ka di.</span></div></div>
+<div class="m"><div id="T14c" class="txs"><span class="it">[</span><span class="it">Chacun a un mauvais côté,</span></div> <div id="T14d" class="txs"><span class="it">mais il est plus facile de parler de celui de l’autre.</span></div></div>
+<div class="m"><div id="T14e" class="txs"><span class="bdit">On </span><span class="bdit">voit la paille qui est dans l’œil de l’autre sans voir la poutre qui est dans le sien</span><span class="bdit">]</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T14f" class="txs"><span class="bd">Sɔɔn b’an bɛɛ ra,</span></div> <div id="T14g" class="txs"><span class="bd">mɔgɔ wɛrɛ taa fɔ ka di.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/dioula Prov 01 a 29 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

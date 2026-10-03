@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>ANNEXE 1 : Les quatre 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.53 },
+    { label: "1b", start: 1.78, end: 6.11 },
+    { label: "1c", start: 6.36, end: 8.45 },
+    { label: "1d", start: 8.7, end: 13.89 },
+    { label: "1e", start: 14.14, end: 21.79 },
+    { label: "1f", start: 22.04, end: 26.69 },
+    { label: "1g", start: 26.94, end: 32.37 },
+    { label: "1h", start: 32.62, end: 36.39 },
+    { label: "1i", start: 36.64, end: 37.65 },
+    { label: "1j", start: 37.9, end: 42.11 },
+    { label: "1k", start: 42.36, end: 43.81 },
+    { label: "1l", start: 44.06, end: 46.55 },
+    { label: "1m", start: 46.8, end: 47.41 },
+    { label: "1n", start: 47.66, end: 50.91 },
+    { label: "1o", start: 51.16, end: 55.03 },
+    { label: "1p", start: 55.28, end: 58.67 },
+    { label: "1q", start: 58.92, end: 65.55 },
+    { label: "1r", start: 65.8, end: 66.79 },
+    { label: "1s", start: 67.04, end: 72.89 },
+    { label: "1t", start: 73.14, end: 79.13 },
+    { label: "1u", start: 79.38, end: 82.31 },
+    { label: "1v", start: 82.56, end: 85.65 },
+    { label: "1w", start: 85.9, end: 90.97 },
+    { label: "1x", start: 91.22, end: 94.89 },
+    { label: "1y", start: 95.14, end: 96.33 },
+    { label: "1z", start: 96.58, end: 100.77 },
+    { label: "1aa", start: 101.02, end: 102.35 },
+    { label: "1ab", start: 102.6, end: 103.99 },
+    { label: "1ac", start: 104.24, end: 105.71 },
+    { label: "1ad", start: 105.96, end: 108.79 },
+    { label: "1ae", start: 109.04, end: 110.07 },
+    { label: "1af", start: 110.32, end: 112.65 },
+    { label: "1ag", start: 112.9, end: 114.93 },
+    { label: "1ah", start: 115.18, end: 119.83 },
+    { label: "1ai", start: 120.08, end: 120.79 },
+    { label: "1aj", start: 121.04, end: 122.43 },
+    { label: "1ak", start: 122.68, end: 131.79 },
+    { label: "1al", start: 132.04, end: 135.51 },
+    { label: "1am", start: 135.76, end: 137.59 },
+    { label: "1an", start: 137.84, end: 139.99 },
+    { label: "1ao", start: 140.24, end: 142.19 },
+    { label: "1ap", start: 142.44, end: 148.03 },
+    { label: "1aq", start: 148.28, end: 150.55 },
+    { label: "1ar", start: 150.8, end: 152.85 },
+    { label: "1as", start: 153.1, end: 160.47 },
+    { label: "1at", start: 160.72, end: 164.19 },
+    { label: "1au", start: 164.44, end: 165.33 },
+    { label: "1av", start: 165.58, end: 166.29 },
+    { label: "1aw", start: 166.54, end: 175.03 },
+    { label: "1ax", start: 175.28, end: 184.39 },
+    { label: "1ay", start: 184.64, end: 188.19 },
+    { label: "1az", start: 188.44, end: 190.15 },
+    { label: "1ba", start: 190.4, end: 196.53 },
+    { label: "1bb", start: 196.78, end: 198.23 },
+    { label: "1bc", start: 198.48, end: 202.93 },
+    { label: "1bd", start: 203.18, end: 204.57 },
+    { label: "1be", start: 204.82, end: 206.15 },
+    { label: "1bf", start: 206.4, end: 207.39 },
+    { label: "1bg", start: 207.64, end: 208.51 },
+    { label: "1bh", start: 208.76, end: 209.73 },
+    { label: "1bi", start: 209.98, end: 214.01 },
+    { label: "1bj", start: 214.26, end: 228.85 },
+    { label: "1bk", start: 229.1, end: 237.31 },
+    { label: "1bl", start: 237.56, end: 238.57 },
+    { label: "1bm", start: 238.82, end: 241.09 },
+    { label: "1bn", start: 241.34, end: 244.65 },
+    { label: "1bo", start: 244.9, end: 249.87 },
+    { label: "1bp", start: 250.12, end: 253.91 },
+    { label: "1bq", start: 254.16, end: 256.29 },
+    { label: "1br", start: 256.54, end: 259.23 },
+    { label: "1bs", start: 259.48, end: 261.69 },
+    { label: "1bt", start: 261.94, end: 270.11 },
+    { label: "1bu", start: 270.36, end: 271.39 },
+    { label: "1bv", start: 271.64, end: 274.35 },
+    { label: "1bw", start: 274.6, end: 275.61 },
+    { label: "1bx", start: 275.86, end: 276.45 },
+    { label: "1by", start: 276.7, end: 277.39 },
+    { label: "1bz", start: 277.64, end: 284.27 },
+    { label: "1ca", start: 284.52, end: 288.95 },
+    { label: "1cb", start: 289.2, end: 298.75 },
+    { label: "1cc", start: 299, end: 307.73 },
+    { label: "1cd", start: 307.98, end: 315.73 },
+    { label: "1ce", start: 315.98, end: 322.25 },
+    { label: "1cf", start: 322.5, end: 325.31 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 325.31;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "45-B045-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='44-B044-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='44-B044-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;ANNEXE 1 : Les quatre&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='46-B046-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='46-B046-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B045-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">ANNEXE 1 :</span></div> <div id="T1b" class="txs"><span class="bd">Les quatre tempéraments de la personnalité dans le mariage</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs">Les dictons populaires disent vrai :</div> <div id="T1d" class="txs">«&nbsp;Qui se ressemble s’assemble&nbsp;» ou bien au contraire «&nbsp;les opposés s’attirent&nbsp;».</div> <div id="T1e" class="txs">On est souvent attiré soit par les valeurs importantes pour soi-même et que l’on reconnaît chez l’autre,</div> <div id="T1f" class="txs">soit par les traits de caractère positifs de l’autre que l’on n’a pas soi-même.</div> <div id="T1g" class="txs">C’est seulement après un certain temps de vie commune que l’on constate les faiblesses,</div> <div id="T1h" class="txs">qui vont de pair avec les traits de caractère positifs.</div></div>
+<div class="m"><div id="T1i" class="txs">A partir de ce moment,</div> <div id="T1j" class="txs">beaucoup essayent de changer l’autre pour qu’il devienne comme eux,</div> <div id="T1k" class="txs">mais cela ne peut pas fonctionner.</div> <div id="T1l" class="txs">La seule personne que nous pouvons changer,</div> <div id="T1m" class="txs">c’est nous-mêmes&nbsp;!</div> <div id="T1n" class="txs">Lorsque nous essayons d’imposer des changements à quelqu’un,</div> <div id="T1o" class="txs">nous risquons de nous décourager ou de détruire la relation.</div> <div id="T1p" class="txs">Nous devons apprendre à accepter l’autre tel qu’il est,</div> <div id="T1q" class="txs">tout en lui communiquant ce qui ne nous convient pas pour lui donner l’occasion de changer et d’évoluer.</div> <div id="T1r" class="txs">De toute façon,</div> <div id="T1s" class="txs">il est impossible de le changer de façon fondamentale pour la durée de votre relation.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs"><span class="bd">Les personnes avec un style de comportement «&nbsp;Dominance&nbsp;»</span> voient les défis qu’il faut surmonter,</div> <div id="T1u" class="txs">parce qu’elles se sentent suffisamment fortes pour le faire.</div> <div id="T1v" class="txs">Elles essayent de changer ou diriger les choses.</div></div>
+<div class="m"><div id="T1w" class="txs">Tant que les «<span class="bd"> D</span>&nbsp;» et leur conjoint ont les mêmes objectifs et les mêmes désirs,</div> <div id="T1x" class="txs">la paix règne dans leur couple et ils peuvent atteindre beaucoup ensemble.</div> <div id="T1y" class="txs">La plupart du temps,</div> <div id="T1z" class="txs">la raison pour les querelles et les disputes sont des luttes de pouvoir.</div> <div id="T1aa" class="txs">Ils sont énergiques,</div> <div id="T1ab" class="txs">décidés et sûrs d’eux,</div> <div id="T1ac" class="txs">même envers leur conjoint,</div> <div id="T1ad" class="txs">et prennent souvent l’initiative pour vite faire un travail.</div> <div id="T1ae" class="txs">Lors de conflits,</div> <div id="T1af" class="txs">leur conjoint les ressent comme étant rudes,</div> <div id="T1ag" class="txs">sans cœur et trop ambitieux.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">Les personnes avec un style de comportement «&nbsp;Influence&nbsp;»</span> essayent,</div> <div id="T1ai" class="txs">au contraire,</div> <div id="T1aj" class="txs">d’influencer les autres,</div> <div id="T1ak" class="txs">parce qu’elles se sentent fortes dans un environnement qu’elles considèrent favorable pour elles et parce qu’elles veulent persuader les autres de leurs opinions.</div></div>
+<div class="m"><div id="T1al" class="txs">Les «&nbsp;<span class="bd">I</span>&nbsp;» savent enthousiasmer leur conjoint,</div> <div id="T1am" class="txs">lui laissent beaucoup de liberté,</div> <div id="T1an" class="txs">partagent avec lui leurs succès,</div> <div id="T1ao" class="txs">considèrent la vie comme étant belle.</div> <div id="T1ap" class="txs">Ils aiment s’amuser et cherchent à impressionner leur conjoint ainsi que leur entourage.</div> <div id="T1aq" class="txs">Leur rythme parfois trop rapide,</div> <div id="T1ar" class="txs">leur optimisme exagéré,</div> <div id="T1as" class="txs">leur manque de discipline et leur impulsivité peut être la cause de tensions et de disputes avec leur conjoint.</div> <div id="T1at" class="txs">Les «<span class="bd"> I</span>&nbsp;» sont enthousiasmées par leur conjoint,</div> <div id="T1au" class="txs">loquaces,</div> <div id="T1av" class="txs">aimable,</div> <div id="T1aw" class="txs">ouvertes et prennent souvent en premier l’initiative lorsqu’il s’agit de créer des contacts ou de motiver les autres à participer.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ax" class="txs"><span class="bd">Les personnes avec un style de comportement «&nbsp;Stabilité&nbsp;»</span> forte veulent conserver l’environnement qu’elles considèrent comme étant favorable,</div> <div id="T1ay" class="txs">parce qu’elles ne se sentent pas assez fortes pour le changer.</div> <div id="T1az" class="txs">Elles redoutent les grands changements.</div></div>
+<div class="m"><div id="T1ba" class="txs">Les «&nbsp;<span class="bd">S</span>&nbsp;» encouragent leur conjoint et le soutiennent pour atteindre leurs objectifs.</div> <div id="T1bb" class="txs">Elles sont sociables,</div> <div id="T1bc" class="txs">aiment passer de bons moments ensembles dans un atmosphère détendue,</div> <div id="T1bd" class="txs">calme et paisible.</div> <div id="T1be" class="txs">Elles sont prévisibles,</div> <div id="T1bf" class="txs">pour le conjoint,</div> <div id="T1bg" class="txs">agréable,</div> <div id="T1bh" class="txs">satisfaites,</div> <div id="T1bi" class="txs">loyales et s’impliquent surtout lorsque des personnes sont en jeu.</div> <div id="T1bj" class="txs">Des frictions surviennent souvent à cause de leur attitude trop émotionnelle qui a pour conséquence le fait qu’elles ne parlent pas ouvertement de problèmes et qu’elles considèrent les défis toujours comme une menace.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bk" class="txs"><span class="bd">Les personnes avec un style de comportement «&nbsp;Conscience&nbsp;»</span> se sentent moins fortes dans un environnement défavorable et elles essayent,</div> <div id="T1bl" class="txs">par conséquent,</div> <div id="T1bm" class="txs">d’analyser soigneusement les choses,</div> <div id="T1bn" class="txs">puis de chercher à atteindre de hauts niveaux de qualité.</div></div>
+<div class="m"><div id="T1bo" class="txs">Lorsqu’une «&nbsp;<span class="bd">C </span>» et son conjoint ont des objectifs communs,</div> <div id="T1bp" class="txs">ils peuvent être très efficaces dans leur vie de couple et s’entraider.</div> <div id="T1bq" class="txs">S’ils ont des objectifs différents,</div> <div id="T1br" class="txs">cela devient très difficile pour «&nbsp;<span class="bd">C</span>&nbsp;».</div> <div id="T1bs" class="txs">Il veut que les choses soient bien faites.</div> <div id="T1bt" class="txs">Mais ce qui parait juste aux yeux du «&nbsp;C&nbsp;» peut être compliqué et trop détaillé pour son conjoint.</div> <div id="T1bu" class="txs">Au sein du couple,</div> <div id="T1bv" class="txs">il réagit aussi de manière analytique,</div> <div id="T1bw" class="txs">sérieuse,</div> <div id="T1bx" class="txs">prudente,</div> <div id="T1by" class="txs">exacte,</div> <div id="T1bz" class="txs">en suivant les règles en mettant la priorité sur les tâches à accomplir ou les projets à terminer.</div> <div id="T1ca" class="txs">Lors de difficultés avec les autres,</div> <div id="T1cb" class="txs">le «&nbsp;C&nbsp;» fort a tendance à les éviter et est par ailleurs considéré par son conjoint comme étant mesquin ou borné.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cc" class="txs"><span class="bd">D et C</span> sont très proche l’un de l’autre car ils perçoivent tous les deux leur environnement comme étant plus défavorable.</div> <div id="T1cd" class="txs">La réaction toute naturelle à cela est soit une extrême réserve soit une extrême discrétion.</div></div>
+<div class="m"><div id="T1ce" class="txs"><span class="bd">I et S</span> ont en commun le fait de percevoir leur environnement comme plutôt favorable.</div> <div id="T1cf" class="txs">Ils sont donc plus ouverts et plus réceptifs.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/38 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/38 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/38 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

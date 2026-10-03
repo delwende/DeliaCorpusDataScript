@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prov 41-80 15</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "15a", start: 339.87, end: 342.42 },
+    { label: "15b", start: 342.67, end: 344.81 },
+    { label: "15c", start: 345.06, end: 347.31 },
+    { label: "15d", start: 347.56, end: 348.78 },
+    { label: "15e", start: 349.03, end: 350.88 },
+    { label: "15f", start: 351.13, end: 352.28 },
+    { label: "15g", start: 352.53, end: 354.67 },
+    { label: "15h", start: 354.92, end: 362.94 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 339.87;
+var stopTime  = 362.94;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-014.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Prov 41-80&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;15&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-016.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 41 a 80-image15.jpg" />
+
+<div class="m"><div id="T15a" class="txs"><span class="bd">55 </span><span class="bd">B</span><span class="bd">i-kaseng rigb yaa :</span></div> <div id="T15b" class="txs"><span class="bd">f ka na n kẽ bɩ f yi</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T15c" class="txs"><span class="bdit">(P</span><span class="bdit">our refuser l’accueil à un adulte,</span></div> <div id="T15d" class="txs"><span class="bdit">voil</span><span class="bdit">à</span><span class="bdit"> la formule :</span></div> <div id="T15e" class="txs"><span class="bdit">si tu ne rentres pas,</span></div> <div id="T15f" class="txs"><span class="bdit">tu t’en vas).</span></div></div>
+<div class="m"><div id="T15g" class="txs"><span class="bd">B</span><span class="bd">i-kaseng rigb yaa :</span></div> <div id="T15h" class="txs"><span class="bd">f ka na n kẽ bɩ f yi</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 41 a 80 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

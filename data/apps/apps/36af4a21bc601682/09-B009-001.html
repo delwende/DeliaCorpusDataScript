@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>15 Ramnde e leendu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 7, end: 11.03 },
+    { label: "1b", start: 11.28, end: 13.23 },
+    { label: "1c", start: 13.48, end: 18.31 },
+    { label: "1d", start: 18.56, end: 23.55 },
+    { label: "1e", start: 23.8, end: 26.21 },
+    { label: "1f", start: 26.46, end: 28.53 },
+    { label: "1g", start: 28.78, end: 34.13 },
+    { label: "1h", start: 34.38, end: 36.25 },
+    { label: "1i", start: 36.5, end: 39.11 },
+    { label: "1j", start: 39.36, end: 40.45 },
+    { label: "1k", start: 40.7, end: 43.09 },
+    { label: "1l", start: 43.34, end: 45.17 },
+    { label: "1m", start: 45.42, end: 48.77 },
+    { label: "1n", start: 49.02, end: 49.89 },
+    { label: "1o", start: 50.14, end: 53.29 },
+    { label: "1p", start: 53.54, end: 57.65 },
+    { label: "1q", start: 57.9, end: 59.15 },
+    { label: "1r", start: 59.4, end: 64.03 },
+    { label: "1s", start: 64.28, end: 67.87 },
+    { label: "1t", start: 68.12, end: 70.87 },
+    { label: "1u", start: 71.12, end: 72.15 },
+    { label: "1v", start: 72.4, end: 73.59 },
+    { label: "1w", start: 73.84, end: 77.57 },
+    { label: "1x", start: 77.82, end: 80.19 },
+    { label: "1y", start: 80.44, end: 84.43 },
+    { label: "1z", start: 84.68, end: 87.63 },
+    { label: "1aa", start: 87.88, end: 89.13 },
+    { label: "1ab", start: 89.38, end: 90.79 },
+    { label: "1ac", start: 91.04, end: 98.75 },
+    { label: "1ad", start: 99, end: 100.69 },
+    { label: "1ae", start: 100.94, end: 105.27 },
+    { label: "1af", start: 105.52, end: 108.25 },
+    { label: "1ag", start: 108.5, end: 112.75 },
+    { label: "1ah", start: 113, end: 114.39 },
+    { label: "1ai", start: 114.64, end: 114.64 },
+    { label: "1aj", start: 114.88, end: 116.35 },
+    { label: "1ak", start: 116.6, end: 120.17 },
+    { label: "1al", start: 120.42, end: 124.23 },
+    { label: "1am", start: 124.48, end: 126.67 },
+    { label: "1an", start: 126.92, end: 128.79 },
+    { label: "1ao", start: 129.04, end: 129.51 },
+    { label: "1ap", start: 129.76, end: 131.35 },
+    { label: "1aq", start: 131.6, end: 135.27 },
+    { label: "1ar", start: 135.52, end: 137.19 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 7;
+var stopTime  = 137.19;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "09-B009-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='08-B008-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;15 Ramnde e leendu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B009-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">15 </span><span class="bd">Ram</span><span class="bd">nde</span><span class="bd"> e leen</span><span class="bd">du</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Ndamndiri mbe'eewa wonnoo,</div> <div id="T1c" class="txs">de walaa fu golle so wanaa rewde nder fiilooji be'i na susa.</div> <div id="T1d" class="txs">Nyannde gom ndi dilli suso na ndi warta.</div> <div id="T1e" class="txs">Ndi woɗɗoke ɗo ndi ƴuuri,</div> <div id="T1f" class="txs">ndi hewtay ɗo ndi ummanii.</div> <div id="T1g" class="txs">Ndeen ndi falondiri e mo ndi ɗaɓataano Alla falondirde:</div> <div id="T1h" class="txs">ɗuum won leendu.</div></div>
+<div class="m"><div id="T1i" class="txs">Leenga ƴami ndamndiri:</div> <div id="T1j" class="txs">"Ndamndiri,</div> <div id="T1k" class="txs">a yiɗi yonki maa naa a yiɗaa?"</div> <div id="T1l" class="txs">Ndi wi'i na ndi yiɗi.</div> <div id="T1m" class="txs">Leengaa ndaari ndamndiri faa ɓooyi de watti wi'i:</div> <div id="T1n" class="txs">"Ndamndiri,</div> <div id="T1o" class="txs">so na a haajaa mi yoppide e jonki maa,</div> <div id="T1p" class="txs">kanaa kollaa kam ngoongaaji tati celluɗi,</div> <div id="T1q" class="txs">ndariiɗi."</div> <div id="T1r" class="txs">Ndamndiri men miilii faa wooɗi de wi'i ɗuum walaa baasi.</div> <div id="T1s" class="txs">O heɗɗoo ngoongaaji tati ɗiin.</div> <div id="T1t" class="txs">Leengaa wi'i na heɗii.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1u" class="txs">Go'o,</div> <div id="T1v" class="txs">ramto wi'i:</div> <div id="T1w" class="txs">"So mi anndiino koo na a rewa ngol laawol,</div> <div id="T1x" class="txs">bada ndewu-mi ngol."</div> <div id="T1y" class="txs">Leenga jaabii wi'i a yiitii.</div> <div id="T1z" class="txs">Na mi heɗii faa hannde.</div></div>
+<div class="m"><div id="T1aa" class="txs">Ɗiɗi,</div> <div id="T1ab" class="txs">ramto wi'i:</div> <div id="T1ac" class="txs">“Wallaahi so mi hootii mi haalowii ko mi hawrii ma de njoppidilɗaa kam e yonki am,</div> <div id="T1ad" class="txs">wi'ete mi fenu."</div> <div id="T1ae" class="txs">Leengaa jaabii wi'i ɗoon du a haalii ngoonga.</div> <div id="T1af" class="txs">Ngoongaaji ɗiɗi ɗi fu yo celluɗi.</div> <div id="T1ag" class="txs">Tinna faa hannde so na a haajaa mi yoppide e yonki maa.</div></div>
+<div class="m"><div id="T1ah" class="txs">Ramto wi'i:</div> <div id="T1ai" class="txs">"Tati,</div> <div id="T1aj" class="txs">so mi daɗii ma hannde,</div> <div id="T1ak" class="txs">so na en kawra du tawete wanaa dow ngol laawol."</div> <div id="T1al" class="txs">Leengaa jaabii wi'i kaal du yo ngoonga.</div></div>
+<div class="m"><div id="T1am" class="txs">Ngoongaaji tati ɗi,</div> <div id="T1an" class="txs">ɗiin ndanni ramto.</div> <div id="T1ao" class="txs">Ndelle,</div> <div id="T1ap" class="txs">tinnee e wawde haala,</div> <div id="T1aq" class="txs">saboo waawde haala na danna on tiiɗormaaji kewɗi.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ar" class="txs">Bukari Jallo</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/09 Ful cont Absa.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

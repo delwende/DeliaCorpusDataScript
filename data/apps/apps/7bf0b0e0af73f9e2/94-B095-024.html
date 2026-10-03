@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) ¡Bienvenido 24</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "94-B095-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='93-B094-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='94-B095-023.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) ¡Bienvenido&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;24&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='94-B095-025.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='95-B096-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B095-image24.jpeg" />
+
+<div class="m"><span class="bd">“Gafas” de nuestra cultura</span></div>
+<div class="m">Sin darnos cuenta, todos usamos gafas. No son gafas que compramos en la óptica, sino las que nos impone la cultura en la que crecimos. Estas gafas moldean nuestra visión del mundo e influyen en nuestro comportamiento. Sin embargo, todo esto nos parece tan normal y obvio que ni siquiera seríamos capaces de describir estos procesos y mucho menos cambiarlos. A veces nos sorprendemos, tal vez incluso nos indignamos, cuando alguien se comporta de una manera particular, extraña o simplemente incomprensible para nosotros: “¿Cómo puede alguien actuar así? “, nos preguntamos.</div>
+<div class="m">Si nos hacemos esta pregunta, no como un reproche, sino como una forma de ir más allá, perfecto.</div>
+<div class="m">Esta idea de las gafas de colores puede ayudarnos a comprender los siguientes capítulos que son como un “viaje a diferentes culturas”. Este viaje te llevará tanto hacia ti mismo como hacia los demás. Se le animará a pensar en la influencia de su propia cultura, así como en la influencia de personas de otras sociedades, que utilizan gafas diferentes. Se trata más precisamente de saber cómo nuestra conciencia nos guía de manera diferente según hayamos crecido en una cultura orientada al bien (o al mal) o por el contrario en una cultura orientada al honor (o a la vergüenza). Muchos malentendidos entre personas de otras culturas se deben a esta diferencia de orientación.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

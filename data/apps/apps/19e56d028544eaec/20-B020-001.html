@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>b) Il faut se préparer à 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.45 },
+    { label: "1b", start: 4.7, end: 8.13 },
+    { label: "1c", start: 8.38, end: 10.23 },
+    { label: "1d", start: 10.48, end: 13.39 },
+    { label: "1e", start: 13.64, end: 15.83 },
+    { label: "1f", start: 16.08, end: 18.55 },
+    { label: "1g", start: 18.8, end: 21.51 },
+    { label: "1h", start: 21.76, end: 28.53 },
+    { label: "1i", start: 28.78, end: 32.99 },
+    { label: "1j", start: 33.24, end: 35.85 },
+    { label: "1k", start: 36.1, end: 38.33 },
+    { label: "1l", start: 38.58, end: 39.99 },
+    { label: "1m", start: 40.24, end: 44.35 },
+    { label: "1n", start: 44.6, end: 47.77 },
+    { label: "1o", start: 48.02, end: 49.15 },
+    { label: "1p", start: 49.4, end: 51.61 },
+    { label: "1q", start: 51.86, end: 59.57 },
+    { label: "1r", start: 59.82, end: 62.01 },
+    { label: "1s", start: 62.26, end: 63.09 },
+    { label: "1t", start: 63.34, end: 70.67 },
+    { label: "1u", start: 70.92, end: 75.59 },
+    { label: "1v", start: 75.84, end: 78.55 },
+    { label: "1w", start: 78.8, end: 80.51 },
+    { label: "1x", start: 80.76, end: 85.57 },
+    { label: "1y", start: 85.82, end: 88.75 },
+    { label: "1z", start: 89, end: 95.71 },
+    { label: "1aa", start: 95.96, end: 98.87 },
+    { label: "1ab", start: 99.12, end: 103.37 },
+    { label: "1ac", start: 103.62, end: 107.01 },
+    { label: "1ad", start: 107.26, end: 109.83 },
+    { label: "1ae", start: 110.08, end: 113.23 },
+    { label: "1af", start: 113.48, end: 119.39 },
+    { label: "1ag", start: 119.64, end: 124.15 },
+    { label: "1ah", start: 124.4, end: 127.13 },
+    { label: "1ai", start: 127.38, end: 134.23 },
+    { label: "1aj", start: 134.48, end: 142.57 },
+    { label: "1ak", start: 142.82, end: 145.57 },
+    { label: "1al", start: 145.82, end: 150.73 },
+    { label: "1am", start: 150.98, end: 155.41 },
+    { label: "1an", start: 155.66, end: 159.81 },
+    { label: "1ao", start: 160.06, end: 163.69 },
+    { label: "1ap", start: 163.94, end: 170.55 },
+    { label: "1aq", start: 170.8, end: 173.93 },
+    { label: "1ar", start: 174.18, end: 175.09 },
+    { label: "1as", start: 175.34, end: 179.53 },
+    { label: "1at", start: 179.78, end: 183.37 },
+    { label: "1au", start: 183.62, end: 185.75 },
+    { label: "1av", start: 186, end: 188.07 },
+    { label: "1aw", start: 188.32, end: 189.57 },
+    { label: "1ax", start: 189.82, end: 192.19 },
+    { label: "1ay", start: 192.44, end: 193.85 },
+    { label: "1az", start: 194.1, end: 203.15 },
+    { label: "1ba", start: 203.4, end: 204.57 },
+    { label: "1bb", start: 204.82, end: 206.15 },
+    { label: "1bc", start: 206.4, end: 212.87 },
+    { label: "1bd", start: 213.12, end: 217.83 },
+    { label: "1be", start: 218.08, end: 227.35 },
+    { label: "1bf", start: 227.6, end: 230.75 },
+    { label: "1bg", start: 231, end: 235.13 },
+    { label: "1bh", start: 235.38, end: 238.11 },
+    { label: "1bi", start: 238.36, end: 247.79 },
+    { label: "1bj", start: 248.04, end: 250.99 },
+    { label: "1bk", start: 251.24, end: 256.17 },
+    { label: "1bl", start: 256.42, end: 260.27 },
+    { label: "1bm", start: 260.52, end: 263.67 },
+    { label: "1bn", start: 263.92, end: 268.85 },
+    { label: "1bo", start: 269.1, end: 270.39 },
+    { label: "1bp", start: 270.64, end: 274.33 },
+    { label: "1bq", start: 274.58, end: 279.05 },
+    { label: "1br", start: 279.3, end: 281.83 },
+    { label: "1bs", start: 282.08, end: 286.55 },
+    { label: "1bt", start: 286.8, end: 290.37 },
+    { label: "1bu", start: 290.62, end: 291.57 },
+    { label: "1bv", start: 291.82, end: 293.91 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 293.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "20-B020-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='19-B019-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='19-B019-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;b) Il faut se préparer à&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='21-B021-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='21-B021-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B020-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">b) </span><span class="bd">Il faut se préparer à l’acte sexuel</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Pour qu’une relation sexuelle soit pleinement satisfaisante,</div> <div id="T1c" class="txs">il faut une préparation.</div> <div id="T1d" class="txs">C’est comme avant de déguster un bon repas,</div> <div id="T1e" class="txs">il faut une bonne préparation&nbsp;!</div> <div id="T1f" class="txs">Cette préparation ne commence pas au lit,</div> <div id="T1g" class="txs">mais bien avant le moment d’aller se coucher.</div> <div id="T1h" class="txs">Mari et femme devraient se préparer à faire l’amour pendant la journée de la façon suivante :</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">1)</span><span class="bd"> S’excuser et pardonner</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1j" class="txs">Ephésiens 4, 26 :</div> <div id="T1k" class="txs">«&nbsp;<span class="it">Si vous vous mettez en colère,</span></div> <div id="T1l" class="txs"><span class="it">ne péchez pas ;</span></div> <div id="T1m" class="txs"><span class="it">que le soleil ne se couche pas sur votre irritation</span>.</div><div id="T1n" class="txs">&nbsp;» Les disputes doivent être réglées avant la nuit.</div> <div id="T1o" class="txs">D’ailleurs,</div> <div id="T1p" class="txs">il faut les régler le plus tôt possible.</div> <div id="T1q" class="txs">Par exemple si le couple se dispute pendant la journée il doit prendre le temps pour en parler tout de suite,</div> <div id="T1r" class="txs">s’excuser et se pardonner.</div> <div id="T1s" class="txs">Sinon,</div> <div id="T1t" class="txs">le péché et la rancune augmente dans leur cœur et cela est comparable avec un lit qui est plein de valises.</div> <div id="T1u" class="txs">Il n’y aura plus de place pour s'approcher et savourer le temps ensemble.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">2)</span><span class="bd"> Une belle apparence</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1w" class="txs">Dans un foyer,</div> <div id="T1x" class="txs">les deux conjoints devraient faire un effort pour bien s’habiller par amour pour l’autre.</div> <div id="T1y" class="txs">Cela ne veut pas dire dépenser beaucoup pour s'habiller,</div> <div id="T1z" class="txs">mais tout simplement que chacun montre à l’autre qu’il veut être beau ou belle en sa compagnie.</div></div>
+<div class="m"><div id="T1aa" class="txs">Pour donner envie à l’autre d’être avec lui,</div> <div id="T1ab" class="txs">il faut bien se laver d’abord et avoir une odeur agréable.</div> <div id="T1ac" class="txs">Si on est puant en transpirant au travail,</div> <div id="T1ad" class="txs">on n’est pas très attrayant pour son conjoint.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">3)</span><span class="bd"> </span><span class="bd">Clarifier la contraception</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1af" class="txs">Une femme ne peut pas jouir des relations sexuelles si elle a peur de tomber en grossesse.</div> <div id="T1ag" class="txs">Il faut discuter ensemble et prendre une décision à ce sujet.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">4)</span><span class="bd"> Fermer la porte</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ai" class="txs">Il est difficile de jouir des relations sexuelles si on a peur que quelqu’un entre dans la chambre à tout moment.</div> <div id="T1aj" class="txs">Même un lit qui grince et la pensée que tout le voisinage nous entend peut diminuer l’envie de la femme ou de l’homme.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">5)</span><span class="bd"> </span><span class="bd">Le jeu de l’amour</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1al" class="txs">Pour que la relation sexuelle soit pleinement satisfaisante pour l’homme et la femme,</div> <div id="T1am" class="txs">ils doivent tous les deux être très excités avant la pénétration.</div> <div id="T1an" class="txs">C’est pourquoi ils doivent passer beaucoup de temps aux jeux de l’amour.</div> <div id="T1ao" class="txs">Le couple s’excite par le toucher et les baisers.</div> <div id="T1ap" class="txs">Ils font également jouir l’autre par de tendres caresses et le toucher de son corps.</div> <div id="T1aq" class="txs">Des mots tendres accompagnent les gestes tendres.</div></div>
+<div class="m"><div id="T1ar" class="txs">Souvent,</div> <div id="T1as" class="txs">la femme se plaint que son mari passe trop peu de temps aux caresses.</div> <div id="T1at" class="txs">Il embrasse sa femme et il la caresse un peu,</div> <div id="T1au" class="txs">mais beaucoup trop rapidement,</div> <div id="T1av" class="txs">avant même qu’elle soit excitée,</div> <div id="T1aw" class="txs">il la pénètre.</div> <div id="T1ax" class="txs">Beaucoup de maris commettent cette erreur :</div> <div id="T1ay" class="txs">c'est trop rapide.</div> <div id="T1az" class="txs">Ils sont si pressés quand ils veulent faire l’amour qu’ils pénètrent la femme sans passer du temps à la caresser et après quelques minutes,</div> <div id="T1ba" class="txs">tout est terminé.</div> <div id="T1bb" class="txs">Par conséquent,</div> <div id="T1bc" class="txs">la femme n’en tire aucune satisfaction et le mari est déçu de constater qu’elle n’a pas apprécié.</div></div>
+<div class="m"><div id="T1bd" class="txs">Ce genre de relation sexuelle incomplète n’est pas dans le plan de Dieu.</div> <div id="T1be" class="txs">Le plan de Dieu est que la sexualité soit une expression puissante de l’unité et de l’amour que les époux ont l’un pour l’autre,</div> <div id="T1bf" class="txs">et pas seulement la satisfaction de besoins physique.</div> <div id="T1bg" class="txs">Le plan de Dieu est que mari et femme passent du temps à se caresser.</div> <div id="T1bh" class="txs">Les caresses font partie du plan de Dieu&nbsp;!</div> <div id="T1bi" class="txs">Il y a des versets qui expriment cette joie (Cantique 4, 11 et 7, 8 à 10).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bj" class="txs"><span class="bd">6)</span><span class="bd"> </span><span class="bd">Deux feux différents</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1bk" class="txs">On peut comparer les tempéraments de l’homme et de la femme avec deux feux différents.</div> <div id="T1bl" class="txs">L’homme fonctionne comme un feu qu’on allume avec le pétrole.</div> <div id="T1bm" class="txs">Après avoir versé le pétrole sur le bois,</div> <div id="T1bn" class="txs">une seule allumette suffit pour qu’une flamme commence à brûler tout le bois.</div></div>
+<div class="m"><div id="T1bo" class="txs">Au contraire,</div> <div id="T1bp" class="txs">la femme est comme un feu qu’il faut allumer sans pétrole.</div> <div id="T1bq" class="txs">Il faut couper d’abord de petits bouts de bois et bien les arranger.</div> <div id="T1br" class="txs">Après avoir mis l’allumette dedans,</div> <div id="T1bs" class="txs">il faut souffler prudemment et bien aider ce feu à se développer.</div> <div id="T1bt" class="txs">Allumer ce feu demande beaucoup de temps et de patience,</div> <div id="T1bu" class="txs">mais à la fin,</div> <div id="T1bv" class="txs">il peut donner toute sa chaleur&nbsp;!</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/16 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/16 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/16 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

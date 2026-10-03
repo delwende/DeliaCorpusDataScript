@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5E2900">
+<title>landa donkili. . 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.95 },
+    { label: "1b", start: 5.2, end: 15.2 },
+    { label: "1c", start: 5.2, end: 5.39 },
+    { label: "1d", start: 5.64, end: 5.73 },
+    { label: "1e", start: 5.98, end: 9.35 },
+    { label: "1f", start: 9.6, end: 13.09 },
+    { label: "1g", start: 13.34, end: 15.19 },
+    { label: "1h", start: 15.44, end: 16.67 },
+    { label: "1i", start: 16.92, end: 17.75 },
+    { label: "1j", start: 18, end: 19.23 },
+    { label: "1k", start: 19.48, end: 20.99 },
+    { label: "1l", start: 21.24, end: 23.15 },
+    { label: "1m", start: 23.4, end: 27.97 },
+    { label: "1n", start: 28.22, end: 29.19 },
+    { label: "1o", start: 29.44, end: 30.99 },
+    { label: "1p", start: 31.24, end: 33.31 },
+    { label: "1q", start: 33.56, end: 35.73 },
+    { label: "1r", start: 35.98, end: 37.07 },
+    { label: "1s", start: 37.32, end: 37.83 },
+    { label: "1t", start: 38.08, end: 39.47 },
+    { label: "1u", start: 39.72, end: 44.13 },
+    { label: "1v", start: 44.38, end: 45.97 },
+    { label: "1w", start: 46.22, end: 47.19 },
+    { label: "1x", start: 47.44, end: 49.31 },
+    { label: "1y", start: 49.56, end: 51.51 },
+    { label: "1z", start: 51.76, end: 53.21 },
+    { label: "1aa", start: 53.46, end: 54.81 },
+    { label: "1ab", start: 55.06, end: 56.01 },
+    { label: "1ac", start: 56.26, end: 58.45 },
+    { label: "1ad", start: 58.7, end: 59.71 },
+    { label: "1ae", start: 59.96, end: 60.45 },
+    { label: "1af", start: 60.7, end: 63.59 },
+    { label: "1ag", start: 63.84, end: 65.55 },
+    { label: "1ah", start: 65.8, end: 67.35 },
+    { label: "1ai", start: 67.6, end: 68.57 },
+    { label: "1aj", start: 68.82, end: 69.73 },
+    { label: "1ak", start: 69.98, end: 71.09 },
+    { label: "1al", start: 71.34, end: 73.79 },
+    { label: "1am", start: 74.04, end: 76.27 },
+    { label: "1an", start: 76.52, end: 78.45 },
+    { label: "1ao", start: 78.7, end: 82.71 },
+    { label: "1ap", start: 82.96, end: 84.57 },
+    { label: "1aq", start: 84.82, end: 86.13 },
+    { label: "1ar", start: 86.38, end: 89.71 },
+    { label: "1as", start: 89.96, end: 91.55 },
+    { label: "1at", start: 91.8, end: 93.03 },
+    { label: "1au", start: 93.28, end: 94.59 },
+    { label: "1av", start: 94.84, end: 96.31 },
+    { label: "1aw", start: 96.56, end: 99.01 },
+    { label: "1ax", start: 99.26, end: 103.87 },
+    { label: "1ay", start: 104.12, end: 110.25 },
+    { label: "1az", start: 110.5, end: 113.31 },
+    { label: "1ba", start: 113.56, end: 114.51 },
+    { label: "1bb", start: 114.76, end: 119.39 },
+    { label: "1bc", start: 119.64, end: 120.63 },
+    { label: "1bd", start: 120.88, end: 123.07 },
+    { label: "1be", start: 123.32, end: 127.49 },
+    { label: "1bf", start: 127.74, end: 130.23 },
+    { label: "1bg", start: 130.48, end: 132.63 },
+    { label: "1bh", start: 132.88, end: 134.31 },
+    { label: "1bi", start: 134.56, end: 135.97 },
+    { label: "1bj", start: 136.22, end: 138.37 },
+    { label: "1bk", start: 138.62, end: 139.79 },
+    { label: "1bl", start: 140.04, end: 147.39 },
+    { label: "1bm", start: 147.64, end: 149.59 },
+    { label: "1bn", start: 149.84, end: 151.73 },
+    { label: "1bo", start: 151.98, end: 153.55 },
+    { label: "1bp", start: 153.8, end: 158.57 },
+    { label: "1bq", start: 158.82, end: 159.85 },
+    { label: "1br", start: 160.1, end: 162.85 },
+    { label: "1bs", start: 163.1, end: 165.71 },
+    { label: "1bt", start: 165.96, end: 166.61 },
+    { label: "1bu", start: 166.86, end: 167.63 },
+    { label: "1bv", start: 167.88, end: 168.49 },
+    { label: "1bw", start: 168.74, end: 170.13 },
+    { label: "1bx", start: 170.38, end: 175.91 },
+    { label: "1by", start: 176.16, end: 179.83 },
+    { label: "1bz", start: 180.08, end: 180.83 },
+    { label: "1ca", start: 181.08, end: 183.01 },
+    { label: "1cb", start: 183.26, end: 185.41 },
+    { label: "1cc", start: 185.66, end: 190.49 },
+    { label: "1cd", start: 190.74, end: 193.17 },
+    { label: "1ce", start: 193.42, end: 196.79 },
+    { label: "1cf", start: 197.04, end: 198.09 },
+    { label: "1cg", start: 198.34, end: 200.03 },
+    { label: "1ch", start: 200.28, end: 201.89 },
+    { label: "1ci", start: 202.14, end: 206.03 },
+    { label: "1cj", start: 206.28, end: 209.57 },
+    { label: "1ck", start: 209.82, end: 213.75 },
+    { label: "1cl", start: 214, end: 214.53 },
+    { label: "1cm", start: 214.78, end: 216.59 },
+    { label: "1cn", start: 216.84, end: 217.43 },
+    { label: "1co", start: 217.68, end: 219.95 },
+    { label: "1cp", start: 220.2, end: 225.11 },
+    { label: "1cq", start: 225.36, end: 229.03 },
+    { label: "1cr", start: 229.28, end: 230.87 },
+    { label: "1cs", start: 231.12, end: 234.39 },
+    { label: "1ct", start: 234.64, end: 239.77 },
+    { label: "1cu", start: 240.02, end: 242.03 },
+    { label: "1cv", start: 242.28, end: 242.73 },
+    { label: "1cw", start: 242.98, end: 245.45 },
+    { label: "1cx", start: 245.7, end: 247.57 },
+    { label: "1cy", start: 247.82, end: 248.89 },
+    { label: "1cz", start: 249.14, end: 250.81 },
+    { label: "1da", start: 251.06, end: 251.89 },
+    { label: "1db", start: 252.14, end: 254.63 },
+    { label: "1dc", start: 254.88, end: 257.31 },
+    { label: "1dd", start: 257.56, end: 258.25 },
+    { label: "1de", start: 258.5, end: 259.39 },
+    { label: "1df", start: 259.64, end: 261.61 },
+    { label: "1dg", start: 261.86, end: 263.01 },
+    { label: "1dh", start: 263.26, end: 264.53 },
+    { label: "1di", start: 264.78, end: 265.99 },
+    { label: "1dj", start: 266.24, end: 268.07 },
+    { label: "1dk", start: 268.32, end: 271.19 },
+    { label: "1dl", start: 271.44, end: 273.87 },
+    { label: "1dm", start: 274.12, end: 277.93 },
+    { label: "1dn", start: 278.18, end: 279.05 },
+    { label: "1do", start: 279.3, end: 282.13 },
+    { label: "1dp", start: 282.38, end: 283.79 },
+    { label: "1dq", start: 284.04, end: 285.93 },
+    { label: "1dr", start: 286.18, end: 288.73 },
+    { label: "1ds", start: 288.98, end: 291.23 },
+    { label: "1dt", start: 291.48, end: 301.79 },
+    { label: "1du", start: 302.04, end: 304.27 },
+    { label: "1dv", start: 304.52, end: 308.77 },
+    { label: "1dw", start: 309.02, end: 311.23 },
+    { label: "1dx", start: 311.48, end: 312.79 },
+    { label: "1dy", start: 313.04, end: 315.61 },
+    { label: "1dz", start: 315.86, end: 325.87 },
+    { label: "1ea", start: 326.12, end: 334.63 },
+    { label: "1eb", start: 334.88, end: 337.27 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 337.27;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "23-B023-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='22-B022-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='22-B022-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;landa donkili. .&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='24-B024-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='24-B024-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B023-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="it">landa donkili</span>.</div> <div id="T1b" class="txs">. .</div></div>
+<div class="m"><div id="T1c" class="txs">Nsiirin,</div> <div id="T1d" class="txs">nsiirin</div></div>
+<div class="m"><div id="T1e" class="txs">N’y’a bila suruku ka wɔlɔnin jalan kan.</div></div>
+<div class="m"><div id="T1f" class="txs">Musokɔrɔba dɔɔ tun be suruku ka dugu gɛrɛfɛ.</div> <div id="T1g" class="txs">Misiw tun ka c’a fɛ.</div> <div id="T1h" class="txs">Suruku yaalatɔ,</div> <div id="T1i" class="txs">taara bɔ a kan,</div> <div id="T1j" class="txs">ka misi nunu ye.</div> <div id="T1k" class="txs">Suruku ye ceguya sɔrɔ,</div> <div id="T1l" class="txs">a bina misiw nunu dumu.</div></div>
+<div class="m"><div id="T1m" class="txs">A ye wɔlɔnin faga ka wusu k'a ta ka t’a kalifa musokɔrɔba ma,</div> <div id="T1n" class="txs">ko :</div> <div id="T1o" class="txs">n bamuso ɲuman,</div> <div id="T1p" class="txs">sabali ka n ka wɔlɔnin nin minɛ ka bila n ye wa&nbsp;?</div> <div id="T1q" class="txs">N bi taa dugu la kana minɛ.</div></div>
+<div class="m"><div id="T1r" class="txs">Musokɔrɔba ma ko :</div> <div id="T1s" class="txs">n deen,</div> <div id="T1t" class="txs">o te basi ye.</div></div>
+<div class="m"><div id="T1u" class="txs">Musokɔrɔba ye suruku ka wɔ nin minɛ ka bila dɔrɔn ka bɔ.</div> <div id="T1v" class="txs">A ka wulu y'a ta k’a dumu.</div></div>
+<div class="m"><div id="T1w" class="txs">Wulu fɛ dɔrɔn,</div> <div id="T1x" class="txs">suruku sera ko :</div> <div id="T1y" class="txs">n Baa n nana folifa minɛ.</div></div>
+<div class="m"><div id="T1z" class="txs">Musokɔrɔba ko :</div> <div id="T1aa" class="txs">n ka wulu y’a ɲimi.</div> <div id="T1ab" class="txs">Suruku ko :</div> <div id="T1ac" class="txs">n bi wulu nin ta wɔlɔnin nɔɔn na.</div> <div id="T1ad" class="txs">Musokɔrɔba ko :</div> <div id="T1ae" class="txs">a minɛ&nbsp;!</div></div>
+<div class="m"><div id="T1af" class="txs">Suruku ye wulu minɛ ka taa dun.</div></div>
+<div class="m"><div id="T1ag" class="txs">O dugu sa gwɛ wulafɛ,</div> <div id="T1ah" class="txs">suruku bɛnana tun ko :</div> <div id="T1ai" class="txs">n naa,</div> <div id="T1aj" class="txs">n ka wɔlɔnin.</div></div>
+<div class="m"><div id="T1ak" class="txs">Musokɔrɔba ko :</div> <div id="T1al" class="txs">wɔlɔnin jumɛn tun&nbsp;?</div> <div id="T1am" class="txs">Kunu n y'i ka wɔlɔnin jurusara d'i ma,</div> <div id="T1an" class="txs">bii tun i ko wɔlɔnin.</div></div>
+<div class="m"><div id="T1ao" class="txs">Suruku y'a ɲiinw bɔ k'a ɲaa wule musokɔrɔba la,</div> <div id="T1ap" class="txs">a siranna ko :</div> <div id="T1aq" class="txs">ta misi kelen minɛ.</div> <div id="T1ar" class="txs">Suruku taara minɛ ka taa n'a bi yɛlɛ.</div></div>
+<div class="m"><div id="T1as" class="txs">Kabini suruku y’a ye,</div> <div id="T1at" class="txs">musokɔrɔba siranna cɛ.</div> <div id="T1au" class="txs">Loon bɛɛ,</div> <div id="T1av" class="txs">wulufɛ a bina misi kelen minɛ,</div> <div id="T1aw" class="txs">a ka wɔlɔninjanin kunkɔrɔ.</div> <div id="T1ax" class="txs">Suruku baama musokɔrɔba ka misikulu la foo ka na to den kelen.</div></div>
+<div class="m"><div id="T1ay" class="txs">Musokɔrɔba y’o kelennin nin minɛ k'a siri ka sigi ka to ka kasi.</div> <div id="T1az" class="txs">Dɔɔni jara yaalatɔ nana b'a kan ko :</div> <div id="T1ba" class="txs">nnau mun.</div> <div id="T1bb" class="txs">lo kɛra i la i bi kasi ten fɔɔ ka ɲɛɛ wulen&nbsp;?</div></div>
+<div class="m"><div id="T1bc" class="txs">Musokɔrɔba ko :</div> <div id="T1bd" class="txs">n deen suruku lo ye,</div> <div id="T1be" class="txs">ni ka misiw bɛɛ dumu k’a tɔɔ to kelen,</div> <div id="T1bf" class="txs">a bina o fana minɛ bi wulafɛ,</div> <div id="T1bg" class="txs">ole kosɔn n bi kasira,</div><div id="T1bh" class="txs">fɛɛn wɛrɛ ti n fɛ tun.</div></div>
+<div class="m"><div id="T1bi" class="txs">Jara ko :</div> <div id="T1bj" class="txs">a dun sɔrɔla di e ni suruku cɛ&nbsp;?</div></div>
+<div class="m"><div id="T1bk" class="txs">Musokɔrɔba ko :</div> <div id="T1bl" class="txs">suruku nana wɔlɔnin fitini janin dɔɔ le di ko n ka bila a ye k'a bi taa dugu dɔɔ la ka n’a minɛ&nbsp;?</div> <div id="T1bm" class="txs">N y’a bila n ka wulu y’a ɲimi.</div> <div id="T1bn" class="txs">Suruku nana wulu ni minɛ,</div> <div id="T1bo" class="txs">ani loon o loon,</div> <div id="T1bp" class="txs">o bi na n ka misi kelen minɛ wɔlɔnin nɔna ka n’a to tora kelen nin ye.</div> <div id="T1bq" class="txs">Jara ko :</div> <div id="T1br" class="txs">misi fooni i bi n sir'a nɔɔ lo.</div> <div id="T1bs" class="txs">Musokɔrɔba ye misi fooni ka jara siri.</div> <div id="T1bt" class="txs">O loon,</div> <div id="T1bu" class="txs">suu kora,</div> <div id="T1bv" class="txs">suruku la,</div> <div id="T1bw" class="txs">a sɔrɔla ka na,</div> <div id="T1bx" class="txs">a setɔ dɔrɔn musokɔrɔba y'a bolo sin misi sirinin ma.</div> <div id="T1by" class="txs">Suruku taara fooni n'a bi teliya ka ta a soo.</div></div>
+<div class="m"><div id="T1bz" class="txs">Dɔɔni,</div> <div id="T1ca" class="txs">sonsani bɛnno,</div> <div id="T1cb" class="txs">nga sanni ani sonsani ka bɛn,</div> <div id="T1cc" class="txs">san manamana na ka kɛɲɛ suruku yɛlɛma na k'a b’a ka misi filɛ,</div> <div id="T1cd" class="txs">k'a ye ko nin te misi ye tɛ.</div> <div id="T1ce" class="txs">Ale kuntigi lo a ka sonsani ma,</div> <div id="T1cf" class="txs">n ka misi nin minɛ,</div> <div id="T1cg" class="txs">n bi don binna ka na.</div></div>
+<div class="m"><div id="T1ch" class="txs">Sonsani ye misi minɛ.</div> <div id="T1ci" class="txs">Suruku donna biin ka boli ka taa soo n'a bi dɔnkili lara ko :</div> <div id="T1cj" class="txs">n ye kunkurunin nigɛ ka jara d’a ma.</div></div>
+<div class="m"><div id="T1ck" class="txs">Sonsani fana nana kɔrɔsi ka ye ko misi tɛ,</div> <div id="T1cl" class="txs">jara lo.</div> <div id="T1cm" class="txs">A ye juru ﬁli k'a bi boli.</div> <div id="T1cn" class="txs">Jara ko :</div> <div id="T1co" class="txs">n'i ka boli a ka jug'i ma.</div> <div id="T1cp" class="txs">Sonsani siranna ka juru minɛ ka jara sanma foo suruku ka soo.</div></div>
+<div class="m"><div id="T1cq" class="txs">Suruku ye sonsani don’tɔ e ni jara ye dɔrɔn,</div> <div id="T1cr" class="txs">a k'a ka lukɔnɔ mɔgɔ ma :</div> <div id="T1cs" class="txs">ni min tɔra a ka kolo n daa t'a la.</div> <div id="T1ct" class="txs">Suruku n'a ka mɔgɔw bɛɛ panna ka dulon boon tii lɔgɔw kan.</div></div>
+<div class="m"><div id="T1cu" class="txs">Jara donn'a kɔ ka sonsani ka to k'u kona.</div> <div id="T1cv" class="txs">A ma kɔrɔtɔ.</div></div>
+<div class="m"><div id="T1cw" class="txs">Dɔɔni suruku ka deen fitini ko :</div> <div id="T1cx" class="txs">baba n bolo sɛgɛna.</div> <div id="T1cy" class="txs">Suruku ko :</div> <div id="T1cz" class="txs">i ka baba ti nne ye dɛ,</div> <div id="T1da" class="txs">a bi duguma.</div> <div id="T1db" class="txs">Surukudennin y'a yɛrɛ bila ka ben duguma,</div> <div id="T1dc" class="txs">jara y’o kuun ci ka bila fɔlɔ.</div> <div id="T1dd" class="txs">Dɔɔni,</div> <div id="T1de" class="txs">ale gwanna ko :</div> <div id="T1df" class="txs">baba nne bolo sɛgɛna.</div></div>
+<div class="m"><div id="T1dg" class="txs">Suruku ko :</div> <div id="T1dh" class="txs">i baba ye duguma,</div> <div id="T1di" class="txs">ale fana bena,</div> <div id="T1dj" class="txs">a fana fagara ka la a dɔgɔni kan.</div> <div id="T1dk" class="txs">Suruku ka deenw bɛɛ fagara ten ka tugu ɲɔgɔn kɔ.</div> <div id="T1dl" class="txs">Sisan suruku ka muso ko :</div> <div id="T1dm" class="txs">n cɛɛ n ti se tun n bolo bɛɛ fagara.</div> <div id="T1dn" class="txs">Suruku ko :</div> <div id="T1do" class="txs">i cɛɛ ye duguma ni bolow fagara n'i ser'a fɛ duguma,</div> <div id="T1dp" class="txs">a bi n'a ɲɛnabɔ yen.</div> <div id="T1dq" class="txs">Suruku muso fana benna.</div> <div id="T1dr" class="txs">Jara y'a kuun ci ka far'a deenw kan.</div></div>
+<div class="m"><div id="T1ds" class="txs">Suruku ka wati lo sera sisan,</div> <div id="T1dt" class="txs">a ko jara ta bugurigwɛ ɲini ka na bɔn duguma n jukɔrɔ n’o tɛ ni n benna n ka tulu bɛɛ na bɔn duguma gwansan.</div> <div id="T1du" class="txs">Jarai ye buguri cɛ ka bɔn.</div></div>
+<div class="m"><div id="T1dv" class="txs">Suruku y'a yɛrɛ bila ka ben a mankan bɔra ka puu,</div> <div id="T1dw" class="txs">buguri donna jara ɲaa na,</div> <div id="T1dx" class="txs">a tora ka josi.</div></div>
+<div class="m"><div id="T1dy" class="txs">Suruku fana bolira ka ta foo yɔrɔjan,</div> <div id="T1dz" class="txs">a benni y'a kɔ mugu o le tor'a kan ten ani suruku ye jara mankan mɛn,</div> <div id="T1ea" class="txs">a ti lɔ yɔrɔsurun na dɛ.</div></div>
+<div class="m"><div id="T1eb" class="txs">N'y'a sɔrɔ yɔrɔ min n y'a bila yen.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src=" https://media.ipsapps.org/dyu/dyu-audio/ora/Conte dioula 12.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

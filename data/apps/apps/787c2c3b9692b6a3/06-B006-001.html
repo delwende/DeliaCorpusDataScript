@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>80 Ni a tolila a kasa bi 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0.49, end: 2.86 },
+    { label: "1b", start: 3.11, end: 7.99 },
+    { label: "1c", start: 8.24, end: 14.1 },
+    { label: "1d", start: 14.35, end: 18.07 },
+    { label: "1e", start: 18.32, end: 22.8 },
+    { label: "1f", start: 23.05, end: 24.65 },
+    { label: "1g", start: 24.9, end: 31.88 },
+    { label: "1h", start: 32.13, end: 37.37 },
+    { label: "1i", start: 37.62, end: 45.23 },
+    { label: "1j", start: 45.48, end: 53.14 },
+    { label: "1k", start: 53.39, end: 60.22 },
+    { label: "1l", start: 60.47, end: 71.27 },
+    { label: "1m", start: 71.52, end: 80.61 },
+    { label: "1n", start: 80.86, end: 84.73 },
+    { label: "1o", start: 84.98, end: 89.48 },
+    { label: "1p", start: 89.73, end: 99.73 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0.49;
+var stopTime  = 99.73;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;80 Ni a tolila a kasa bi&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">80 Ni a </span><span class="bd">tolila</span><span class="bd"> a </span><span class="bd">kasa</span><span class="bd"> bi </span><span class="bd">bɔ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Lorsqu’il sera dévoilé au grand jour, tout le monde saura.</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Ni a </span><span class="bd">tolila</span><span class="bd"> a </span><span class="bd">kasa</span><span class="bd"> bi </span><span class="bd">bɔ</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">81 Ni </span><span class="bd">baa</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">cinnikɛ</span><span class="bd"> </span><span class="bd">wulu</span><span class="bd"> bi malo.</span></div></div>
+<div class="m"><div id="T1e" class="txs">Ne laissez personne faire votre tâche à votre place.</div> <div id="T1f" class="txs">C’est ridicule.</div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">Ni </span><span class="bd">baa</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">cinnikɛ</span><span class="bd"> </span><span class="bd">wulu</span><span class="bd"> bi </span><span class="bd">malo</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">82</span><span class="bd"> N</span><span class="bd">i </span><span class="bd">cɛgwana</span><span class="bd"> </span><span class="bd">kɔrɔtɔra</span><span class="bd"> </span><span class="bd">musoko</span><span class="bd"> ra, a </span><span class="bd">be</span><span class="bd"> </span><span class="bd">musokɔnɔman</span><span class="bd"> le </span><span class="bd">furu</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1i" class="txs">Si le célibataire se presse de se marier, il risquer d’épouser une femme enceinte.</div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">N</span><span class="bd">i </span><span class="bd">cɛgwana</span><span class="bd"> </span><span class="bd">kɔrɔtɔra</span><span class="bd"> </span><span class="bd">musoko</span><span class="bd"> ra, a </span><span class="bd">be</span><span class="bd"> </span><span class="bd">musokɔnɔman</span><span class="bd"> le </span><span class="bd">furu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">83</span><span class="bd"> </span><span class="bd">Ni </span><span class="bd">dulͻmibaga</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">kuma</span><span class="bd"> o </span><span class="bd">kuma</span><span class="bd"> fͻ, </span><span class="bd">dul</span><span class="bd">ͻ </span><span class="bd">minin</span><span class="bd"> </span><span class="bd">kͻfɛ</span><span class="bd">, a </span><span class="bd">tun</span><span class="bd"> </span><span class="bd">be</span><span class="bd"> a </span><span class="bd">kͻn</span><span class="bd">ͻ ka </span><span class="bd">kͻr</span><span class="bd">ͻ.</span></div></div>
+<div class="m"><div id="T1l" class="txs">Le soulard n’est pas assez bavard parce qu’il a bu seulement, mais parce qu’il avait des choses à dire , qu’il n’ose pas dire quand il est lucide. </div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">Ni </span><span class="bd">dulͻmibaga</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">kuma</span><span class="bd"> o </span><span class="bd">kuma</span><span class="bd"> fͻ, </span><span class="bd">dul</span><span class="bd">ͻ </span><span class="bd">minin</span><span class="bd"> </span><span class="bd">kͻfɛ</span><span class="bd">, a </span><span class="bd">tun</span><span class="bd"> </span><span class="bd">be</span><span class="bd"> a </span><span class="bd">kͻn</span><span class="bd">ͻ ka </span><span class="bd">kͻr</span><span class="bd">ͻ.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">84</span><span class="bd"> N</span><span class="bd">i dͻ ka </span><span class="bd">baa</span><span class="bd"> ma </span><span class="bd">sa</span><span class="bd">, dͻ ka </span><span class="bd">naan</span><span class="bd"> te </span><span class="bd">diya</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1o" class="txs">Le malheur des uns fait le bonheur des autres.</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">N</span><span class="bd">i dͻ ka </span><span class="bd">baa</span><span class="bd"> ma </span><span class="bd">sa</span><span class="bd">, dͻ ka </span><span class="bd">naan</span><span class="bd"> te </span><span class="bd">diya</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/prov dioula vol 3 80-84.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

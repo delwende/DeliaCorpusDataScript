@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 10</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "10a", start: 1388.32, end: 1389.83 },
+    { label: "10b", start: 1390.08, end: 1395.39 },
+    { label: "10c", start: 1395.64, end: 1397.35 },
+    { label: "10d", start: 1397.6, end: 1398.41 },
+    { label: "10e", start: 1398.66, end: 1403.17 },
+    { label: "10f", start: 1403.42, end: 1405.89 },
+    { label: "10g", start: 1406.14, end: 1407.77 },
+    { label: "10h", start: 1408.02, end: 1409.71 },
+    { label: "10i", start: 1409.96, end: 1410.93 },
+    { label: "10j", start: 1411.18, end: 1416.15 },
+    { label: "10k", start: 1416.4, end: 1420.93 },
+    { label: "10l", start: 1421.18, end: 1426.37 },
+    { label: "10m", start: 1426.62, end: 1431.73 },
+    { label: "10n", start: 1431.98, end: 1433.93 },
+    { label: "10o", start: 1434.18, end: 1436.41 },
+    { label: "10p", start: 1436.66, end: 1440.15 },
+    { label: "10q", start: 1440.4, end: 1446.65 },
+    { label: "10r", start: 1446.9, end: 1453.67 },
+    { label: "10s", start: 1453.92, end: 1457.69 },
+    { label: "10t", start: 1457.94, end: 1458.97 },
+    { label: "10u", start: 1459.22, end: 1461.99 },
+    { label: "10v", start: 1462.24, end: 1464.23 },
+    { label: "10w", start: 1464.48, end: 1467.69 },
+    { label: "10x", start: 1467.94, end: 1469.37 },
+    { label: "10y", start: 1469.62, end: 1473.95 },
+    { label: "10z", start: 1474.2, end: 1475.83 },
+    { label: "10aa", start: 1476.08, end: 1478.87 },
+    { label: "10ab", start: 1479.12, end: 1483.15 },
+    { label: "10ac", start: 1483.4, end: 1487.37 },
+    { label: "10ad", start: 1487.62, end: 1492.71 },
+    { label: "10ae", start: 1492.96, end: 1500.43 },
+    { label: "10af", start: 1500.68, end: 1504.95 },
+    { label: "10ag", start: 1505.2, end: 1506.45 },
+    { label: "10ah", start: 1506.7, end: 1512.51 },
+    { label: "10ai", start: 1512.76, end: 1520.91 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1388.32;
+var stopTime  = 1520.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-009.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;10&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-011.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image10.jpg" />
+
+<div class="m"><div id="T10a" class="txs"><span class="bd">L’héritage</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T10b" class="txs"><span class="it">En Christ nous sommes aussi </span><span class="bdit">devenus héritiers</span><span class="it">… </span>(Ephésiens 1, 11).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T10c" class="txs"><span class="bd">L’héritage chrétien,</span></div> <div id="T10d" class="txs"><span class="bd">c’est quoi&nbsp;?</span></div></div>
+<div class="m"><div id="T10e" class="txs">Ce sont des biens laissés par une personne décédée à des personnes encore vivantes,</div> <div id="T10f" class="txs">normalement à des membres de sa famille.</div></div>
+<div class="m"><div id="T10g" class="txs">Selon la Parole de Dieu,</div> <div id="T10h" class="txs">Dieu a un héritage pour nous,</div> <div id="T10i" class="txs">ses enfants.</div> <div id="T10j" class="txs">C’est le salut apporté par Jésus Christ qui nous donne droit à cet héritage.</div> <div id="T10k" class="txs">Tout ce que nous étudions dans cette brochure fait partie de cet héritage.</div> <div id="T10l" class="txs">Paul l’appelle un héritage de «&nbsp;glorieuses richesses&nbsp;» (Ephésiens 1, 18).</div></div>
+<div class="m"><div id="T10m" class="txs">Être héritiers veut dire que nous ne sommes pas encore en pleine possession de ces richesses.</div> <div id="T10n" class="txs">Mais si nous vivons avec Dieu,</div> <div id="T10o" class="txs">si Jésus et le Saint-Esprit habitent en nous,</div> <div id="T10p" class="txs">nous pouvons déjà gouter aux richesses de notre Père céleste.</div> <div id="T10q" class="txs">Comme un enfant qui vit au sein de sa famille peut déjà jouir des biens de son père dans une certaine mesure.</div>  <div id="T10r" class="txs">Et notre acquisition plénière de l’héritage céleste est promise par le Saint-Esprit (voir chapitre prochain).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T10s" class="txs">Actions pour que l’héritage devienne une richesse dans ta vie : </div></div>
+<div class="m"><div id="T10t" class="txs"><span class="it">-</span><span class="it"> la prière</span> :</div> <div id="T10u" class="txs">Remercie Dieu pour les richesses qu’il t’a données.</div> <div id="T10v" class="txs">Enumère-les une par une.</div> <div id="T10w" class="txs">Demande à Dieu de t’aider à mieux les utiliser.</div></div>
+<div class="m"><div id="T10x" class="txs"><span class="it">-</span><span class="it"> la lecture biblique</span> :</div> <div id="T10y" class="txs">Lis Ephésiens 1 et fais une liste de toutes les bénédictions spirituelles.</div></div>
+<div class="m"><div id="T10z" class="txs"><span class="it">-</span><span class="it"> réflexion personnelle</span> :</div> <div id="T10aa" class="txs">Est-ce qu’il y a des moments où tu te sens pauvre&nbsp;?</div> <div id="T10ab" class="txs">Est-ce que tu es jaloux des autres qui semblent avoir plus que toi&nbsp;?</div> <div id="T10ac" class="txs">Rappelle-toi que les richesses de Dieu sont à ta disposition.</div> <div id="T10ad" class="txs">Rappelle-toi que ce sont des richesses que personne ne peut voler et qui ne se gâtent pas.</div></div>
+<div class="m"><div id="T10ae" class="txs">A la fin de la journée prend du temps pour réfléchir lesquelles des richesses d’Ephésiens 1 tu as pu utiliser tout au long de la journée.</div> <div id="T10af" class="txs">Commence un petit cahier et note tous les jours les bénédictions de Dieu.</div></div>
+<div class="m"><div id="T10ag" class="txs"><span class="it">-</span><span class="it"> envers les autres</span> :</div> <div id="T10ah" class="txs">Dieu veut que nous partagions notre héritage spirituel avec notre famille et tes frères et sœurs en Christ.</div> <div id="T10ai" class="txs">Chaque matin choisis une richesse de ton héritage et cherche un moyen à la «&nbsp;<span class="it">donner </span>» à quelqu’un que tu rencontreras pendant la journée.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

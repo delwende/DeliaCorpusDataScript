@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 5</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "5a", start: 609.94, end: 610.95 },
+    { label: "5b", start: 611.2, end: 618.55 },
+    { label: "5c", start: 618.8, end: 620.55 },
+    { label: "5d", start: 620.8, end: 622.27 },
+    { label: "5e", start: 622.52, end: 623.99 },
+    { label: "5f", start: 624.24, end: 626.15 },
+    { label: "5g", start: 626.4, end: 628.79 },
+    { label: "5h", start: 629.04, end: 630.45 },
+    { label: "5i", start: 630.7, end: 635.07 },
+    { label: "5j", start: 635.32, end: 637.29 },
+    { label: "5k", start: 637.54, end: 641.01 },
+    { label: "5l", start: 641.26, end: 644.83 },
+    { label: "5m", start: 645.08, end: 646.93 },
+    { label: "5n", start: 647.18, end: 648.91 },
+    { label: "5o", start: 649.16, end: 650.87 },
+    { label: "5p", start: 651.12, end: 653.49 },
+    { label: "5q", start: 653.74, end: 655.47 },
+    { label: "5r", start: 655.72, end: 657.43 },
+    { label: "5s", start: 657.68, end: 658.35 },
+    { label: "5t", start: 658.6, end: 660.05 },
+    { label: "5u", start: 660.3, end: 661.67 },
+    { label: "5v", start: 661.92, end: 663.51 },
+    { label: "5w", start: 663.76, end: 664.73 },
+    { label: "5x", start: 664.98, end: 666.89 },
+    { label: "5y", start: 667.14, end: 668.81 },
+    { label: "5z", start: 669.06, end: 670.73 },
+    { label: "5aa", start: 670.98, end: 674.19 },
+    { label: "5ab", start: 674.44, end: 675.79 },
+    { label: "5ac", start: 676.04, end: 678.85 },
+    { label: "5ad", start: 679.1, end: 682.41 },
+    { label: "5ae", start: 682.66, end: 683.49 },
+    { label: "5af", start: 683.74, end: 686.29 },
+    { label: "5ag", start: 686.54, end: 690.15 },
+    { label: "5ah", start: 690.4, end: 691.79 },
+    { label: "5ai", start: 692.04, end: 696.09 },
+    { label: "5aj", start: 696.34, end: 697.49 },
+    { label: "5ak", start: 697.74, end: 701.09 },
+    { label: "5al", start: 701.34, end: 702.93 },
+    { label: "5am", start: 703.18, end: 704.27 },
+    { label: "5an", start: 704.52, end: 709.29 },
+    { label: "5ao", start: 709.54, end: 711.11 },
+    { label: "5ap", start: 711.36, end: 717.29 },
+    { label: "5aq", start: 717.54, end: 718.97 },
+    { label: "5ar", start: 719.22, end: 721.33 },
+    { label: "5as", start: 721.58, end: 725.19 },
+    { label: "5at", start: 725.44, end: 731.01 },
+    { label: "5au", start: 731.26, end: 732.47 },
+    { label: "5av", start: 732.72, end: 736.11 },
+    { label: "5aw", start: 736.36, end: 740.33 },
+    { label: "5ax", start: 740.58, end: 743.63 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 609.94;
+var stopTime  = 743.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-004.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;5&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-006.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image5.jpg" />
+
+<div class="m"><div id="T5a" class="txs"><span class="bd">Love</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T5b" class="txs"><span class="bdit">God loves us</span><span class="it"> and has always wanted us to become his sons through Jesus Christ</span> (Ephesians 1, 4 to 5).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T5c" class="txs"><span class="bd">What is God's love?</span></div></div>
+<div class="m"><div id="T5d" class="txs">God's love is perfect,</div> <div id="T5e" class="txs">infinite and pure.</div> <div id="T5f" class="txs">It's not just a feeling.</div> <div id="T5g" class="txs">God showed his love for us in a very,</div> <div id="T5h" class="txs">very important act:</div> <div id="T5i" class="txs">he gave his only son to save us (John 3, 16).</div></div>
+<div class="m"><div id="T5j" class="txs">- God's love is unconditional:</div> <div id="T5k" class="txs">he doesn't ask me to improve my life before he saves me!</div> <div id="T5l" class="txs">The unconditional nature of God's love never changes.</div> <div id="T5m" class="txs">God continues to love us,</div> <div id="T5n" class="txs">even if we fall into sin,</div> <div id="T5o" class="txs">even if we abandon him.</div> <div id="T5p" class="txs">His love for us remains the same.</div> <div id="T5q" class="txs">It doesn't diminish.</div></div>
+<div class="m"><div id="T5r" class="txs">- God's love is selfless,</div> <div id="T5s" class="txs">that is,</div> <div id="T5t" class="txs">it's focused on us.</div> <div id="T5u" class="txs">In giving his son,</div> <div id="T5v" class="txs">he didn't think of himself,</div> <div id="T5w" class="txs">but of us!</div> <div id="T5x" class="txs">And he continues to help us,</div> <div id="T5y" class="txs">to be of service to us.</div></div>
+<div class="m"><div id="T5z" class="txs">- God's love is enormous:</div> <div id="T5aa" class="txs">God loves us so much that he gave his most precious gift,</div> <div id="T5ab" class="txs">his only son.</div> <div id="T5ac" class="txs">There's nothing greater he could have done for us.</div></div>
+<div class="m"><div id="T5ad" class="txs"><span class="bd">Actions to make God's love a richness in your life:</span></div></div>
+<div class="m"><div id="T5ae" class="txs"><span class="it">- Prayer:</span></div> <div id="T5af" class="txs">Thank God every day for his love for you.</div> <div id="T5ag" class="txs">Pay attention to the little signs of God's love during the day.</div> <div id="T5ah" class="txs">At the end of the day,</div> <div id="T5ai" class="txs">write down the events that show God's love for you in a notebook and thank him.</div></div>
+<div class="m"><div id="T5aj" class="txs">- Bible reading:</div> <div id="T5ak" class="txs">Read Ephesians 3, 17 to 19.</div></div>
+<div class="m"><div id="T5al" class="txs"><span class="it">- personal reflection</span>:</div> <div id="T5am" class="txs">In this passage,</div> <div id="T5an" class="txs">the apostle Paul uses 2 images to encourage his readers to enjoy God's love:</div></div>
+<div class="m"><div id="T5ao" class="txs">- take root in this love:</div> <div id="T5ap" class="txs">just as a tree spreads its roots in the earth so as not to be blown away by the wind and to find nourishment...</div></div>
+<div class="m"><div id="T5aq" class="txs">- build on this love:</div> <div id="T5ar" class="txs">God's love is a solid foundation,</div> <div id="T5as" class="txs">enabling us to build and move forward in our spiritual life.</div></div>
+<div class="m"><div id="T5at" class="txs">Think about how these 2 images can help you live and experience God's love in everyday life.</div></div>
+<div class="m"><div id="T5au" class="txs"><span class="it">- Towards others:</span></div> <div id="T5av" class="txs">Share your testimony about God's love in your life with your friends,</div> <div id="T5aw" class="txs">your wife or husband or the brothers and sisters in your church.</div>  <div id="T5ax" class="txs">And show them through your actions that God loves them.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

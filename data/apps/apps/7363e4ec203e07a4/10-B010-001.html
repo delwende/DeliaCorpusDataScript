@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°9 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.13 },
+    { label: "1b", start: 2.38, end: 5.35 },
+    { label: "1c", start: 5.6, end: 6.55 },
+    { label: "1d", start: 6.8, end: 11.53 },
+    { label: "1e", start: 11.78, end: 12.63 },
+    { label: "1f", start: 12.88, end: 16.11 },
+    { label: "1g", start: 16.36, end: 18.17 },
+    { label: "1h", start: 18.42, end: 21.37 },
+    { label: "1i", start: 21.62, end: 24.21 },
+    { label: "1j", start: 24.46, end: 27.57 },
+    { label: "1k", start: 27.82, end: 30.05 },
+    { label: "1l", start: 30.3, end: 31.63 },
+    { label: "1m", start: 31.88, end: 32.71 },
+    { label: "1n", start: 32.96, end: 35.63 },
+    { label: "1o", start: 35.88, end: 36.55 },
+    { label: "1p", start: 36.8, end: 38.23 },
+    { label: "1q", start: 38.48, end: 40.75 },
+    { label: "1r", start: 41, end: 41.89 },
+    { label: "1s", start: 42.14, end: 47.95 },
+    { label: "1t", start: 48.2, end: 49.55 },
+    { label: "1u", start: 49.8, end: 53.23 },
+    { label: "1v", start: 53.48, end: 56.87 },
+    { label: "1w", start: 57.12, end: 57.95 },
+    { label: "1x", start: 58.2, end: 60.13 },
+    { label: "1y", start: 60.38, end: 61.67 },
+    { label: "1z", start: 61.92, end: 65.19 },
+    { label: "1aa", start: 65.44, end: 68.95 },
+    { label: "1ab", start: 69.2, end: 71.27 },
+    { label: "1ac", start: 71.52, end: 75.31 },
+    { label: "1ad", start: 75.56, end: 80.87 },
+    { label: "1ae", start: 81.12, end: 86.29 },
+    { label: "1af", start: 86.54, end: 87.19 },
+    { label: "1ag", start: 87.44, end: 88.83 },
+    { label: "1ah", start: 89.08, end: 98.57 },
+    { label: "1ai", start: 98.82, end: 100.71 },
+    { label: "1aj", start: 100.96, end: 103.39 },
+    { label: "1ak", start: 103.64, end: 105.15 },
+    { label: "1al", start: 105.4, end: 107.63 },
+    { label: "1am", start: 107.88, end: 108.75 },
+    { label: "1an", start: 109, end: 113.41 },
+    { label: "1ao", start: 113.66, end: 116.63 },
+    { label: "1ap", start: 116.88, end: 123.45 },
+    { label: "1aq", start: 123.7, end: 126.85 },
+    { label: "1ar", start: 127.1, end: 128.09 },
+    { label: "1as", start: 128.34, end: 129.87 },
+    { label: "1at", start: 130.12, end: 131.91 },
+    { label: "1au", start: 132.16, end: 134.07 },
+    { label: "1av", start: 134.32, end: 135.21 },
+    { label: "1aw", start: 135.46, end: 139.39 },
+    { label: "1ax", start: 139.64, end: 145.13 },
+    { label: "1ay", start: 145.38, end: 150.57 },
+    { label: "1az", start: 150.82, end: 152.59 },
+    { label: "1ba", start: 152.84, end: 158.51 },
+    { label: "1bb", start: 158.76, end: 166.67 },
+    { label: "1bc", start: 166.92, end: 168.19 },
+    { label: "1bd", start: 168.44, end: 169.73 },
+    { label: "1be", start: 169.98, end: 170.87 },
+    { label: "1bf", start: 171.12, end: 173.69 },
+    { label: "1bg", start: 173.94, end: 180.55 },
+    { label: "1bh", start: 180.8, end: 183.15 },
+    { label: "1bi", start: 183.4, end: 185.43 },
+    { label: "1bj", start: 185.68, end: 190.41 },
+    { label: "1bk", start: 190.66, end: 192.29 },
+    { label: "1bl", start: 192.54, end: 196.01 },
+    { label: "1bm", start: 196.26, end: 200.91 },
+    { label: "1bn", start: 201.16, end: 203.81 },
+    { label: "1bo", start: 204.06, end: 208.07 },
+    { label: "1bp", start: 208.32, end: 209.25 },
+    { label: "1bq", start: 209.5, end: 216.77 },
+    { label: "1br", start: 217.02, end: 223.39 },
+    { label: "1bs", start: 223.64, end: 224.81 },
+    { label: "1bt", start: 225.06, end: 229.99 },
+    { label: "1bu", start: 230.24, end: 231.09 },
+    { label: "1bv", start: 231.34, end: 237.17 },
+    { label: "1bw", start: 237.42, end: 239.07 },
+    { label: "1bx", start: 239.32, end: 240.53 },
+    { label: "1by", start: 240.78, end: 243.51 },
+    { label: "1bz", start: 243.76, end: 244.55 },
+    { label: "1ca", start: 244.8, end: 255.25 },
+    { label: "1cb", start: 255.5, end: 265.59 },
+    { label: "1cc", start: 265.84, end: 272.07 },
+    { label: "1cd", start: 272.32, end: 274.75 },
+    { label: "1ce", start: 275, end: 277.95 },
+    { label: "1cf", start: 278.2, end: 288.59 },
+    { label: "1cg", start: 288.84, end: 292.11 },
+    { label: "1ch", start: 292.36, end: 293.31 },
+    { label: "1ci", start: 293.56, end: 305.03 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 305.03;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "10-B010-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='09-B009-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°9&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B010-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°9 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Apprenez à connaître les petits voleurs d’argent.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="bdit">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Thérèse a un sac de riz dans sa réserve qu’elle garde pour manger plus tard.</span></div> <div id="T1e" class="txs"><span class="it">Un jour,</span></div> <div id="T1f" class="txs"><span class="it">sa fille voit un rat qui vole un grain de riz.</span></div> <div id="T1g" class="txs"><span class="it">Elle le rapporte à sa mère.</span></div> <div id="T1h" class="txs"><span class="it">Thérèse demande combien le rat a volé.</span></div> <div id="T1i" class="txs"><span class="it">La fille répond quelques grains seulement.</span></div> <div id="T1j" class="txs"><span class="it">Alors Thérèse lui dit que ce </span><span class="it">n’est  </span><span class="it">pas grave,</span></div> <div id="T1k" class="txs"><span class="it">quelques grains de riz c’est petit,</span></div> <div id="T1l" class="txs"><span class="it">elle peut laisser le rat.</span></div> <div id="T1m" class="txs"><span class="it">Chaque jour,</span></div> <div id="T1n" class="txs"><span class="it">le rat vient voler quelques grains de riz.</span></div> <div id="T1o" class="txs"><span class="it">Chaque jour,</span></div> <div id="T1p" class="txs"><span class="it">Thérèse dit que quelques grains,</span></div> <div id="T1q" class="txs"><span class="it">ça ne fait rien car c’est </span><span class="it">petit.</span></div>  <div id="T1r" class="txs"><span class="it"></span><span class="it">Finalement,</span></div> <div id="T1s" class="txs"><span class="it">c’est toute la famille de rats qui vient voler un peu de riz mais Thérèse n’y prête pas</span><span class="it"> </span><span class="it">attention.</span></div></div>
+<div class="m"><div id="T1t" class="txs"><span class="it">Quelque mois plus tard,</span></div> <div id="T1u" class="txs"><span class="it">quand Thérèse va dans la réserve pour prendre son sac de riz,</span></div> <div id="T1v" class="txs"><span class="it">elle constate qu’une grande partie du riz a été mangée.</span></div> <div id="T1w" class="txs"><span class="it">Les rats,</span></div> <div id="T1x" class="txs"><span class="it">en volant quelques grains chaque jour,</span></div> <div id="T1y" class="txs"><span class="it">ont fini par voler beaucoup.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1z" class="txs">Pourquoi Thérèse n’a pas lutté contre les rats?</div> <div id="T1aa" class="txs">Si le riz est une image pour parler de notre argent,</div> <div id="T1ab" class="txs">que peuvent représenter les rats?</div> <div id="T1ac" class="txs">Que nous apprend cette histoire sur notre gestion de l’argent?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ad" class="txs">Une grande partie de l’argent que l’on dépense disparait pour des petites dépenses inutiles.</div> <div id="T1ae" class="txs">On n’y fait pas attention car les petites dépenses semblent aussi petites qu’un grain de riz.</div> <div id="T1af" class="txs">Mais,</div> <div id="T1ag" class="txs">comme dans notre histoire,</div> <div id="T1ah" class="txs">il faut comprendre qu’un grain de riz + un grain de riz + un grain de riz finit par représenter une grande quantité de riz!</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ai" class="txs">Si nous voulons diminuer nos dépenses,</div> <div id="T1aj" class="txs">nous devons connaître les petits voleurs d’argent.</div> <div id="T1ak" class="txs">Dans l’histoire de Thérèse,</div> <div id="T1al" class="txs">les petits voleurs sont des rats.</div> <div id="T1am" class="txs">Dans notre vie,</div> <div id="T1an" class="txs">les petits voleurs peuvent être le prix des unités pour le téléphone,</div> <div id="T1ao" class="txs">l’argent dépensé pour le taxi- moto,</div> <div id="T1ap" class="txs">le bonbon payé aux enfants… Toutes ces choses qui coûtent seulement un peu d’argent.</div> <div id="T1aq" class="txs">Elles sont petites donc semblent peu importantes.</div> <div id="T1ar" class="txs">En réalité,</div> <div id="T1as" class="txs">elles ont de l’importance,</div> <div id="T1at" class="txs">car si on les met ensemble,</div> <div id="T1au" class="txs">elles ne sont plus si petites!</div></div>
+<div class="m"><div id="T1av" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1aw" class="txs">Ne pensez pas qu’une petite dépense n’a pas d’importance!</div> <div id="T1ax" class="txs">Réfléchissez à toutes les petites dépenses qui ne vous semblent pas importantes.</div> <div id="T1ay" class="txs">Il faut comprendre que ces petites dépenses représentent beaucoup d’argent sur une année.</div></div>
+<div class="m"><div id="T1az" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1ba" class="txs">Quelles sont les dépenses qui ne sont pas importantes à vos yeux car elles sont petites?</div> <div id="T1bb" class="txs">Faites la liste de toutes les petites choses dans votre semaine que vous dépensez sans réfléchir (taxi pour le marché,</div> <div id="T1bc" class="txs">sac plastique,</div> <div id="T1bd" class="txs">bonbon pour les enfants,</div> <div id="T1be" class="txs">sachet d’eau,</div> <div id="T1bf" class="txs">recharge pour le téléphone…)</div></div>
+<div class="p_Corpsdetexte"><div id="T1bg" class="txs">Avez-vous déjà calculé sur une année combien d’argent est dépensé pour ces dépenses insignifiantes?</div></div>
+<div class="m"><div id="T1bh" class="txs"><span class="ul">Exercice à</span><span class="ul"> </span><span class="ul">faire:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1bi" class="txs">Réfléchissez à un exemple concret :</div></div>
+<div class="m"><div id="T1bj" class="txs">1) Nommez quelque chose pour quoi vous dépensez souvent de l’argent,</div> <div id="T1bk" class="txs">mais sans y réfléchir,</div> <div id="T1bl" class="txs">car c’est une petite dépense qui a peu d’importance.</div></div>
+<div class="m"><div id="T1bm" class="txs">2) Combien dépensez-vous par semaine pour cette dépense?</div></div>
+<div class="m"><div id="T1bn" class="txs">3) Avec une calculatrice,</div> <div id="T1bo" class="txs">calculez combien vous dépensez pour cette chose sur une année.</div> <div id="T1bp" class="txs">Pour cela,</div> <div id="T1bq" class="txs">multipliez le montant de la semaine par 52 (si la dépense est régulière tout au long de l’année).</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1br" class="txs">Le montant obtenu est la somme que vous dépensez chaque année pour cette dépense sans importance.</div> <div id="T1bs" class="txs">Qu’en pensez-vous?</div> <div id="T1bt" class="txs">Est-ce que cette somme dépensée est vraiment insignifiante?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1bu" class="txs">Exemple:</div> <div id="T1bv" class="txs">Si chaque jour j’achète au marché un bonbon glacé ou un gâteau à manger sur la route,</div> <div id="T1bw" class="txs">je dépense pour cette dépense,</div> <div id="T1bx" class="txs">pourtant inutile,</div> <div id="T1by" class="txs">150 CFA par semaine.</div> <div id="T1bz" class="txs">En une année,</div> <div id="T1ca" class="txs">j’aurais dépensé plus de 7’800 CFA (150x52= 7’800) pour cette dépense inutile.</div> <div id="T1cb" class="txs">Le bonbon glacé ou le gâteau que je paye sans réfléchir au marché est donc comme un petit voleur qui me vole mon argent sans que je m’en rende compte.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1cc" class="txs">Si chaque jour je donne 25 CFA à chacun de mes 4 enfants pour se payer un bonbon,</div> <div id="T1cd" class="txs">cela fait 100 CFA par jour,</div> <div id="T1ce" class="txs">donc 700 CFA par semaine.</div> <div id="T1cf" class="txs">Cela veut dire que sur une année j’aurai dépensé 36’400 CFA (700x52) pour les bonbons des enfants.</div> <div id="T1cg" class="txs">36’400 CFA est une grande dépense,</div> <div id="T1ch" class="txs">n’est-ce pas?</div> <div id="T1ci" class="txs">Est-il sage de dépenser cet argent pour des bonbons si je n’ai pas assez d’argent pour payer ce qui est prioritaire (par exemple pour les envoyer à l’école)?</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/018_Conseil_n9.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

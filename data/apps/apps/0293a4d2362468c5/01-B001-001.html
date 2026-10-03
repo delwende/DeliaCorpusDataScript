@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>L’ÉVANGILE EXPOSÉ 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.21 },
+    { label: "1b", start: 2.46, end: 4.55 },
+    { label: "1c", start: 4.8, end: 6.35 },
+    { label: "1d", start: 6.6, end: 9.05 },
+    { label: "1e", start: 9.3, end: 11.41 },
+    { label: "1f", start: 11.66, end: 13.03 },
+    { label: "1g", start: 13.28, end: 22.53 },
+    { label: "1h", start: 22.78, end: 26.83 },
+    { label: "1i", start: 27.08, end: 28.83 },
+    { label: "1j", start: 29.08, end: 30.07 },
+    { label: "1k", start: 30.32, end: 31.07 },
+    { label: "1l", start: 31.32, end: 35.01 },
+    { label: "1m", start: 35.26, end: 35.93 },
+    { label: "1n", start: 36.18, end: 36.69 },
+    { label: "1o", start: 36.94, end: 37.91 },
+    { label: "1p", start: 38.16, end: 38.69 },
+    { label: "1q", start: 38.94, end: 42.35 },
+    { label: "1r", start: 42.6, end: 43.27 },
+    { label: "1s", start: 43.52, end: 44.81 },
+    { label: "1t", start: 45.06, end: 49.39 },
+    { label: "1u", start: 49.64, end: 56.49 },
+    { label: "1v", start: 56.74, end: 61.71 },
+    { label: "1w", start: 61.96, end: 62.63 },
+    { label: "1x", start: 62.88, end: 63.77 },
+    { label: "1y", start: 64.02, end: 65.83 },
+    { label: "1z", start: 66.08, end: 68.83 },
+    { label: "1aa", start: 69.08, end: 76.19 },
+    { label: "1ab", start: 76.44, end: 79.91 },
+    { label: "1ac", start: 80.16, end: 85.51 },
+    { label: "1ad", start: 85.76, end: 93.45 },
+    { label: "1ae", start: 93.7, end: 101.39 },
+    { label: "1af", start: 101.64, end: 107.93 },
+    { label: "1ag", start: 108.18, end: 112.93 },
+    { label: "1ah", start: 113.18, end: 116.65 },
+    { label: "1ai", start: 116.9, end: 119.87 },
+    { label: "1aj", start: 120.12, end: 124.49 },
+    { label: "1ak", start: 124.74, end: 131.97 },
+    { label: "1al", start: 132.22, end: 134.67 },
+    { label: "1am", start: 134.92, end: 138.95 },
+    { label: "1an", start: 139.2, end: 140.97 },
+    { label: "1ao", start: 141.22, end: 143.77 },
+    { label: "1ap", start: 144.02, end: 148.51 },
+    { label: "1aq", start: 148.76, end: 150.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 150.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;L’ÉVANGILE EXPOSÉ&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">L’ÉVANGILE EXPOSÉ SIMPLEMENT</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">aux</span><span class="bd"> musulmans et à tous</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Introduction</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Avant de pouvoir être reçu</span> dans un cœur,</div> <div id="T1e" class="txs">le message du salut doit être compris,</div> <div id="T1f" class="txs">au moins partiellement.</div> <div id="T1g" class="txs">Celui qui cherche à communiquer les vérités de l’Evangile devrait toujours avoir à l’esprit que le langage dans lequel il s’exprime correspond à un certain contexte,</div> <div id="T1h" class="txs">mais que le contexte des personnes auxquelles il s’adresse est peut-être différent,</div> <div id="T1i" class="txs">notamment sur le plan culturel et,</div> <div id="T1j" class="txs">plus encore,</div> <div id="T1k" class="txs">religieux.</div> <div id="T1l" class="txs">Nous avons beau penser que les grandes notions bibliques (Dieu,</div> <div id="T1m" class="txs">la prière,</div> <div id="T1n" class="txs">le salut,</div> <div id="T1o" class="txs">l’expiation,</div> <div id="T1p" class="txs">etc.)</div> <div id="T1q" class="txs">ont la même signification pour tous quel que soit leur contexte,</div> <div id="T1r" class="txs">dans les faits,</div> <div id="T1s" class="txs">il n’en est pas ainsi.</div> <div id="T1t" class="txs">L’image n’est-elle donc pas un bon moyen d’expliquer un concept&nbsp;?</div></div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">Cet ouvrage</span> propose un ensemble d’illustrations qui se sont avérées utiles pour annoncer l’Evangile aux musulmans.</div> <div id="T1v" class="txs">De même que Jésus utilisait des paraboles pour communiquer des vérités spirituelles,</div> <div id="T1w" class="txs">nous devrions,</div> <div id="T1x" class="txs">en tant que chrétiens,</div> <div id="T1y" class="txs">user de sagesse et faire de même,</div> <div id="T1z" class="txs">au bon moment et de la bonne manière.</div></div>
+<div class="m"><div id="T1aa" class="txs">Il est important que les chrétiens sachent ce qu’est la religion musulmane et qu’ils se familiarisent avec ses enseignements et ses pratiques.</div> <div id="T1ab" class="txs">Cela les aidera à mieux transmettre le message.</div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">Jésus</span> utilisait des paraboles pour stimuler la réflexion des personnes qui l’écoutaient.</div> <div id="T1ad" class="txs">Pourquoi ne ferions-nous pas de même pour amener les musulmans à réfléchir et à se poser des questions quant à leur position devant Dieu&nbsp;?</div> <div id="T1ae" class="txs">J’aimerais toutefois préciser qu’il importe de rester prudent lorsqu’on utilise des images pour expliquer des notions abstraites :</div> <div id="T1af" class="txs">elles doivent nous servir à expliquer un ou deux points difficiles mais ne devraient pas être utilisées de manière exagérée.</div> <div id="T1ag" class="txs">Car nous pourrions alors finir par semer la confusion dans l’esprit des gens.</div> <div id="T1ah" class="txs">Que Dieu soit glorifié par notre témoignage&nbsp;!</div> <div id="T1ai" class="txs">«&nbsp;Jésus dit toutes ces choses en paraboles à la foule,</div> <div id="T1aj" class="txs">et il ne lui parlait pas sans parabole&nbsp;» (Matthieu 13, 34).</div></div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">J’aimerais vous encourager</span> à me faire part de toute remarque ou suggestion que vous auriez quant au contenu de ce petit livre.</div> <div id="T1al" class="txs">Et si vous pensez à d’autres paraboles,</div> <div id="T1am" class="txs">métaphores ou allégories qui vous semblent utiles pour l’annonce de l’Evangile,</div> <div id="T1an" class="txs">n’hésitez pas à m’en informer.</div> <div id="T1ao" class="txs">Je vous en serai très reconnaissant.</div> <div id="T1ap" class="txs">Elles pourront en effet venir compléter une éventuelle prochaine édition.</div></div>
+<div class="m"><div id="T1aq" class="txs">Andreas Maurer</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/01 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

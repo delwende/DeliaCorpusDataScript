@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>9 e) Sujets divers 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.35 },
+    { label: "1b", start: 2.6, end: 6.51 },
+    { label: "1c", start: 6.76, end: 12.15 },
+    { label: "1d", start: 12.4, end: 21.59 },
+    { label: "1e", start: 21.84, end: 22.97 },
+    { label: "1f", start: 23.22, end: 30.79 },
+    { label: "1g", start: 31.04, end: 32.49 },
+    { label: "1h", start: 32.74, end: 34.47 },
+    { label: "1i", start: 34.72, end: 38.57 },
+    { label: "1j", start: 38.82, end: 40.55 },
+    { label: "1k", start: 40.8, end: 45.73 },
+    { label: "1l", start: 45.98, end: 47.81 },
+    { label: "1m", start: 48.06, end: 55.79 },
+    { label: "1n", start: 56.04, end: 57.95 },
+    { label: "1o", start: 58.2, end: 60.81 },
+    { label: "1p", start: 61.06, end: 64.23 },
+    { label: "1q", start: 64.48, end: 66.39 },
+    { label: "1r", start: 66.64, end: 68.85 },
+    { label: "1s", start: 69.1, end: 69.53 },
+    { label: "1t", start: 69.78, end: 71.09 },
+    { label: "1u", start: 71.34, end: 73.93 },
+    { label: "1v", start: 74.18, end: 79.45 },
+    { label: "1w", start: 79.7, end: 86.61 },
+    { label: "1x", start: 86.86, end: 90.45 },
+    { label: "1y", start: 90.7, end: 91.45 },
+    { label: "1z", start: 91.7, end: 95.43 },
+    { label: "1aa", start: 95.68, end: 97.75 },
+    { label: "1ab", start: 98, end: 101.85 },
+    { label: "1ac", start: 102.1, end: 104.75 },
+    { label: "1ad", start: 105, end: 108.01 },
+    { label: "1ae", start: 108.26, end: 112.71 },
+    { label: "1af", start: 112.96, end: 119.33 },
+    { label: "1ag", start: 119.58, end: 127.65 },
+    { label: "1ah", start: 127.9, end: 130.57 },
+    { label: "1ai", start: 130.82, end: 134.21 },
+    { label: "1aj", start: 134.46, end: 142.01 },
+    { label: "1ak", start: 142.26, end: 145.09 },
+    { label: "1al", start: 145.34, end: 147.85 },
+    { label: "1am", start: 148.1, end: 150.83 },
+    { label: "1an", start: 151.08, end: 152.21 },
+    { label: "1ao", start: 152.46, end: 154.49 },
+    { label: "1ap", start: 154.74, end: 157.65 },
+    { label: "1aq", start: 157.9, end: 164.17 },
+    { label: "1ar", start: 164.42, end: 165.37 },
+    { label: "1as", start: 165.62, end: 167.61 },
+    { label: "1at", start: 167.86, end: 170.49 },
+    { label: "1au", start: 170.74, end: 171.59 },
+    { label: "1av", start: 171.84, end: 172.99 },
+    { label: "1aw", start: 173.24, end: 174.83 },
+    { label: "1ax", start: 175.08, end: 177.37 },
+    { label: "1ay", start: 177.62, end: 181.13 },
+    { label: "1az", start: 181.38, end: 182.43 },
+    { label: "1ba", start: 182.68, end: 184.57 },
+    { label: "1bb", start: 184.82, end: 190.27 },
+    { label: "1bc", start: 190.52, end: 192.51 },
+    { label: "1bd", start: 192.76, end: 193.63 },
+    { label: "1be", start: 193.88, end: 194.25 },
+    { label: "1bf", start: 194.5, end: 199.65 },
+    { label: "1bg", start: 199.9, end: 201.31 },
+    { label: "1bh", start: 201.56, end: 203.65 },
+    { label: "1bi", start: 203.9, end: 210.05 },
+    { label: "1bj", start: 210.3, end: 215.35 },
+    { label: "1bk", start: 215.6, end: 217.25 },
+    { label: "1bl", start: 217.5, end: 218.29 },
+    { label: "1bm", start: 218.54, end: 222.87 },
+    { label: "1bn", start: 223.12, end: 225.07 },
+    { label: "1bo", start: 225.32, end: 226.67 },
+    { label: "1bp", start: 226.92, end: 232.21 },
+    { label: "1bq", start: 232.46, end: 233.31 },
+    { label: "1br", start: 233.56, end: 235.73 },
+    { label: "1bs", start: 235.98, end: 243.27 },
+    { label: "1bt", start: 243.52, end: 247.69 },
+    { label: "1bu", start: 247.94, end: 248.89 },
+    { label: "1bv", start: 249.14, end: 252.71 },
+    { label: "1bw", start: 252.96, end: 253.31 },
+    { label: "1bx", start: 253.56, end: 259.23 },
+    { label: "1by", start: 259.48, end: 261.77 },
+    { label: "1bz", start: 262.02, end: 269.43 },
+    { label: "1ca", start: 269.68, end: 272.87 },
+    { label: "1cb", start: 273.12, end: 273.93 },
+    { label: "1cc", start: 274.18, end: 279.27 },
+    { label: "1cd", start: 279.52, end: 283.95 },
+    { label: "1ce", start: 284.2, end: 290.57 },
+    { label: "1cf", start: 290.82, end: 296.49 },
+    { label: "1cg", start: 296.74, end: 302.33 },
+    { label: "1ch", start: 302.58, end: 303.37 },
+    { label: "1ci", start: 303.62, end: 304.81 },
+    { label: "1cj", start: 305.06, end: 306.09 },
+    { label: "1ck", start: 306.34, end: 309.77 },
+    { label: "1cl", start: 310.02, end: 314.63 },
+    { label: "1cm", start: 314.88, end: 316.67 },
+    { label: "1cn", start: 316.92, end: 317.85 },
+    { label: "1co", start: 318.1, end: 320.83 },
+    { label: "1cp", start: 321.08, end: 322.79 },
+    { label: "1cq", start: 323.04, end: 324.45 },
+    { label: "1cr", start: 324.7, end: 327.63 },
+    { label: "1cs", start: 327.88, end: 329.21 },
+    { label: "1ct", start: 329.46, end: 330.39 },
+    { label: "1cu", start: 330.64, end: 334.97 },
+    { label: "1cv", start: 335.22, end: 337.13 },
+    { label: "1cw", start: 337.38, end: 339.15 },
+    { label: "1cx", start: 339.4, end: 342.27 },
+    { label: "1cy", start: 342.52, end: 344.31 },
+    { label: "1cz", start: 344.56, end: 347.17 },
+    { label: "1da", start: 347.42, end: 348.65 },
+    { label: "1db", start: 348.9, end: 352.93 },
+    { label: "1dc", start: 353.18, end: 357.05 },
+    { label: "1dd", start: 357.3, end: 358.65 },
+    { label: "1de", start: 358.9, end: 359.59 },
+    { label: "1df", start: 359.84, end: 363.37 },
+    { label: "1dg", start: 363.62, end: 369.51 },
+    { label: "1dh", start: 369.76, end: 372.03 },
+    { label: "1di", start: 372.28, end: 382.97 },
+    { label: "1dj", start: 383.22, end: 386.71 },
+    { label: "1dk", start: 386.96, end: 391.05 },
+    { label: "1dl", start: 391.3, end: 392.31 },
+    { label: "1dm", start: 392.56, end: 397.77 },
+    { label: "1dn", start: 398.02, end: 399.79 },
+    { label: "1do", start: 400.04, end: 401.99 },
+    { label: "1dp", start: 402.24, end: 406.61 },
+    { label: "1dq", start: 406.86, end: 409.69 },
+    { label: "1dr", start: 409.94, end: 413.61 },
+    { label: "1ds", start: 413.86, end: 416.89 },
+    { label: "1dt", start: 417.14, end: 417.61 },
+    { label: "1du", start: 417.86, end: 418.97 },
+    { label: "1dv", start: 419.22, end: 422.25 },
+    { label: "1dw", start: 422.5, end: 425.45 },
+    { label: "1dx", start: 425.7, end: 427.31 },
+    { label: "1dy", start: 427.56, end: 428.31 },
+    { label: "1dz", start: 428.56, end: 431.31 },
+    { label: "1ea", start: 431.56, end: 432.17 },
+    { label: "1eb", start: 432.42, end: 435.21 },
+    { label: "1ec", start: 435.46, end: 437.85 },
+    { label: "1ed", start: 438.1, end: 440.85 },
+    { label: "1ee", start: 441.1, end: 445.51 },
+    { label: "1ef", start: 445.76, end: 446.67 },
+    { label: "1eg", start: 446.92, end: 448.73 },
+    { label: "1eh", start: 448.98, end: 452.59 },
+    { label: "1ei", start: 452.84, end: 456.07 },
+    { label: "1ej", start: 456.32, end: 461.71 },
+    { label: "1ek", start: 461.96, end: 464.75 },
+    { label: "1el", start: 465, end: 466.59 },
+    { label: "1em", start: 466.84, end: 467.53 },
+    { label: "1en", start: 467.78, end: 468.45 },
+    { label: "1eo", start: 468.7, end: 472.13 },
+    { label: "1ep", start: 472.38, end: 477.91 },
+    { label: "1eq", start: 478.16, end: 479.21 },
+    { label: "1er", start: 479.46, end: 482.21 },
+    { label: "1es", start: 482.46, end: 483.53 },
+    { label: "1et", start: 483.78, end: 487.45 },
+    { label: "1eu", start: 487.7, end: 489.05 },
+    { label: "1ev", start: 489.3, end: 491.35 },
+    { label: "1ew", start: 491.6, end: 493.43 },
+    { label: "1ex", start: 493.68, end: 498.03 },
+    { label: "1ey", start: 498.28, end: 502.11 },
+    { label: "1ez", start: 502.36, end: 507.63 },
+    { label: "1fa", start: 507.88, end: 511.63 },
+    { label: "1fb", start: 511.88, end: 513.03 },
+    { label: "1fc", start: 513.28, end: 515.27 },
+    { label: "1fd", start: 515.52, end: 518.53 },
+    { label: "1fe", start: 518.78, end: 520.47 },
+    { label: "1ff", start: 520.72, end: 523.75 },
+    { label: "1fg", start: 524, end: 526.25 },
+    { label: "1fh", start: 526.5, end: 529.67 },
+    { label: "1fi", start: 529.92, end: 531.27 },
+    { label: "1fj", start: 531.52, end: 534.43 },
+    { label: "1fk", start: 534.68, end: 536.77 },
+    { label: "1fl", start: 537.02, end: 538.15 },
+    { label: "1fm", start: 538.4, end: 539.51 },
+    { label: "1fn", start: 539.76, end: 542.27 },
+    { label: "1fo", start: 542.52, end: 542.77 },
+    { label: "1fp", start: 543.02, end: 545.41 },
+    { label: "1fq", start: 545.66, end: 548.31 },
+    { label: "1fr", start: 548.56, end: 549.17 },
+    { label: "1fs", start: 549.42, end: 551.91 },
+    { label: "1ft", start: 552.16, end: 553.73 },
+    { label: "1fu", start: 553.98, end: 555.11 },
+    { label: "1fv", start: 555.36, end: 556.93 },
+    { label: "1fw", start: 557.18, end: 559.03 },
+    { label: "1fx", start: 559.28, end: 563.37 },
+    { label: "1fy", start: 563.62, end: 566.57 },
+    { label: "1fz", start: 566.82, end: 571.17 },
+    { label: "1ga", start: 571.42, end: 572.99 },
+    { label: "1gb", start: 573.24, end: 575.45 },
+    { label: "1gc", start: 575.7, end: 578.49 },
+    { label: "1gd", start: 578.74, end: 582.31 },
+    { label: "1ge", start: 582.56, end: 585.61 },
+    { label: "1gf", start: 585.86, end: 587.69 },
+    { label: "1gg", start: 587.94, end: 590.75 },
+    { label: "1gh", start: 591, end: 593.21 },
+    { label: "1gi", start: 593.46, end: 594.27 },
+    { label: "1gj", start: 594.52, end: 595.83 },
+    { label: "1gk", start: 596.08, end: 605.09 },
+    { label: "1gl", start: 605.34, end: 606.11 },
+    { label: "1gm", start: 606.36, end: 612.07 },
+    { label: "1gn", start: 612.32, end: 614.57 },
+    { label: "1go", start: 614.82, end: 617.99 },
+    { label: "1gp", start: 618.24, end: 625.37 },
+    { label: "1gq", start: 625.62, end: 626.35 },
+    { label: "1gr", start: 626.6, end: 627.83 },
+    { label: "1gs", start: 628.08, end: 629.51 },
+    { label: "1gt", start: 629.76, end: 631.27 },
+    { label: "1gu", start: 631.52, end: 632.99 },
+    { label: "1gv", start: 633.24, end: 637.35 },
+    { label: "1gw", start: 637.6, end: 640.97 },
+    { label: "1gx", start: 641.22, end: 648.51 },
+    { label: "1gy", start: 648.76, end: 649.43 },
+    { label: "1gz", start: 649.68, end: 650.51 },
+    { label: "1ha", start: 650.76, end: 653.29 },
+    { label: "1hb", start: 653.54, end: 654.75 },
+    { label: "1hc", start: 655, end: 659.23 },
+    { label: "1hd", start: 659.48, end: 664.93 },
+    { label: "1he", start: 665.18, end: 666.97 },
+    { label: "1hf", start: 667.22, end: 668.91 },
+    { label: "1hg", start: 669.16, end: 670.07 },
+    { label: "1hh", start: 670.32, end: 670.97 },
+    { label: "1hi", start: 671.22, end: 672.03 },
+    { label: "1hj", start: 672.28, end: 672.35 },
+    { label: "1hk", start: 672.6, end: 672.81 },
+    { label: "1hl", start: 673.06, end: 673.83 },
+    { label: "1hm", start: 674.08, end: 675.39 },
+    { label: "1hn", start: 675.64, end: 675.71 },
+    { label: "1ho", start: 675.96, end: 677.87 },
+    { label: "1hp", start: 678.12, end: 679.23 },
+    { label: "1hq", start: 679.48, end: 679.48 },
+    { label: "1hr", start: 679.6, end: 679.83 },
+    { label: "1hs", start: 680.08, end: 680.55 },
+    { label: "1ht", start: 680.8, end: 681.11 },
+    { label: "1hu", start: 681.36, end: 682.99 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 682.99;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "44-B043-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='43-B042-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='43-B042-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;9 e) Sujets divers&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='45-B044-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='45-B044-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B043-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="ul"><span class="bdit">9</span></span><span class="ul"><span class="bdit"> </span></span><span class="ul"><span class="bdit">e)</span></span><span class="ul"><span class="bdit"> Sujets divers</span></span><span class="ul"><span class="bdit">.</span></span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Un bon moyen d’expliquer l’espérance de la vie éternelle</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Il y a toutes sortes de manières</span> d’utiliser la Bible pour transmettre le message du salut.</div> <div id="T1d" class="txs">Chaque chrétien est encouragé à sonder les Ecritures afin de savoir quelle histoire ou quelle image utiliser pour aider les musulmans à saisir la vérité.</div> <div id="T1e" class="txs">Bien entendu,</div> <div id="T1f" class="txs">il nous faut demander à Dieu son aide et nous laisser conduire par le Saint-Esprit pour que notre témoignage soit efficace et porte du fruit.</div> <div id="T1g" class="txs">L’exemple suivant,</div> <div id="T1h" class="txs">emprunté à Dave Foster,</div> <div id="T1i" class="txs">stimulera peut-être votre réflexion et vous encouragera à inventer,</div> <div id="T1j" class="txs">à partir du texte biblique,</div> <div id="T1k" class="txs">d’autres petites histoires ou allégories utiles pour expliquer l’Evangile aux musulmans.</div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">Entrer en matière</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1m" class="txs">On a souvent encouragé les chrétiens à entrer en matière en posant une question du type «&nbsp;examen de conscience&nbsp;» comme celle-ci :</div> <div id="T1n" class="txs">«&nbsp;Supposez que vous mouriez aujourd’hui,</div> <div id="T1o" class="txs">que vous vous retrouviez devant Dieu et qu’il vous demande :</div> <div id="T1p" class="txs">‘Pour quelle raison devrais-je te laisser entrer au ciel&nbsp;?’</div> <div id="T1q" class="txs">Que répondriez-vous&nbsp;?»</div> <div id="T1r" class="txs">Aussi bonne que soit cette question,</div> <div id="T1s" class="txs">elle peut,</div> <div id="T1t" class="txs">dans bien des situations,</div> <div id="T1u" class="txs">s’avérer trop directe et peu appropriée.</div> <div id="T1v" class="txs">Il y a moyen d’aborder le sujet de l’au-delà et de l’éternité avec plus de délicatesse,</div> <div id="T1w" class="txs">surtout si notre interlocuteur est susceptible ou s’il a déjà été échaudé par un témoignage chrétien un peu abrupt.</div></div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">Je recommande</span> les versets d’Ecclésiaste 3, 1 à 2,</div> <div id="T1y" class="txs">et verset 11 :</div> <div id="T1z" class="txs">«&nbsp;Il y a un moment pour tout et un temps pour toute activité sous le ciel :</div> <div id="T1aa" class="txs">un temps pour naître et un temps pour mourir,</div> <div id="T1ab" class="txs">un temps pour planter et un temps pour arracher ce qui a été planté (…).</div> <div id="T1ac" class="txs">Il fait toute chose belle au moment voulu.</div> <div id="T1ad" class="txs">Il a même mis dans leur cœur la pensée de l’éternité,</div> <div id="T1ae" class="txs">même si l’homme ne peut pas comprendre l’œuvre que Dieu accomplit du début à la fin.</div><div id="T1af" class="txs">&nbsp;» Ces paroles de sagesse du roi Salomon peuvent être une bonne entrée en matière pour parler de l’éternité.</div> <div id="T1ag" class="txs">Je les ai utilisées pour discuter avec différentes personnes du désir que nous avons tous naturellement de continuer à vivre après la mort.</div> <div id="T1ah" class="txs">Dans la plupart des cultures et des religions,</div> <div id="T1ai" class="txs">les gens n’ont qu’un vague espoir en ce qui concerne l’au-delà.</div> <div id="T1aj" class="txs">Car la deuxième partie du verset 11 dit bien que «&nbsp;l’homme ne peut pas comprendre l’œuvre que Dieu accomplit du début à la fin&nbsp;».</div></div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">Prenons maintenant</span> Ecclésiaste 7, 1 :</div> <div id="T1al" class="txs">«&nbsp;Une bonne réputation vaut mieux qu’un bon parfum,</div> <div id="T1am" class="txs">et le jour de la mort que le jour de la naissance.</div><div id="T1an" class="txs">&nbsp;» Ce texte,</div> <div id="T1ao" class="txs">de par l’expression «&nbsp;vaut mieux que&nbsp;»,</div> <div id="T1ap" class="txs">sous-entend l’existence d’une vie après la mort.</div> <div id="T1aq" class="txs">Il confirme l’énigmatique «&nbsp;pensée de l’éternité&nbsp;» mentionnée en Ecclésiaste 3, 11 qui,</div> <div id="T1ar" class="txs">au premier abord,</div> <div id="T1as" class="txs">laisse le lecteur perplexe.</div> <div id="T1at" class="txs">Car le rapport entre une bonne réputation,</div> <div id="T1au" class="txs">un bon parfum,</div> <div id="T1av" class="txs">la mort et la naissance,</div> <div id="T1aw" class="txs">ne nous apparaît pas d’emblée.</div></div>
+<div class="m"><div id="T1ax" class="txs"><span class="bd">En Proverbes 1</span><span class="bd">,</span></div><div id="T1ay" class="txs"><span class="bd">5</span> à <span class="bd">6</span>,</div> <div id="T1az" class="txs">Salomon explique pourquoi il parle parfois en énigmes :</div> <div id="T1ba" class="txs">«&nbsp;Que le sage écoute,</div> <div id="T1bb" class="txs">et il augmentera son savoir&nbsp;!</div> <div id="T1bc" class="txs">Celui qui est intelligent gagnera en habileté pour comprendre les proverbes et les paraboles,</div> <div id="T1bd" class="txs">les paroles des sages et leurs énigmes.</div><div id="T1be" class="txs">&nbsp;» Son but,</div> <div id="T1bf" class="txs">par-là,</div> <div id="T1bg" class="txs">est de susciter en nous des interrogations afin que nous soyons encouragés à chercher la vérité ou,</div> <div id="T1bh" class="txs">comme il le dit par ailleurs,</div> <div id="T1bi" class="txs">à «&nbsp;incliner notre cœur à l’intelligence,</div> <div id="T1bj" class="txs">à rechercher la sagesse comme l’argent et à la poursuivre comme un trésor&nbsp;» (Proverbes 2, 4).</div></div>
+<div class="m"><div id="T1bk" class="txs"><span class="bd">On retrouve ce genre</span> d’énigmes riches d’enseignement dans d’autres passages de l’Ecriture.</div> <div id="T1bl" class="txs">Au Psaume 49,</div> <div id="T1bm" class="txs">par exemple,</div> <div id="T1bn" class="txs">les descendants de Koré parlent «&nbsp;en énigmes&nbsp;» pour aborder les sujets de la vie,</div> <div id="T1bo" class="txs">de la mort et de la résurrection.</div> <div id="T1bp" class="txs">Et en Jean 4,</div> <div id="T1bq" class="txs">Jésus fait de même pour éveiller la curiosité de la femme samaritaine quant à la vie éternelle.</div> <div id="T1br" class="txs">Enfin,</div> <div id="T1bs" class="txs">en Colossiens 4, 5 à 6,</div> <div id="T1bt" class="txs">l’apôtre Paul nous exhorte à avoir envers les gens de l’extérieur une parole toujours «&nbsp;pleine de grâce et assaisonnée de sel&nbsp;».</div> <div id="T1bu" class="txs">Le terme «&nbsp;assaisonné&nbsp;» suscite là aussi une interrogation,</div> <div id="T1bv" class="txs">un intérêt.</div></div>
+<div class="m"><div id="T1bw" class="txs">Il est merveilleux de pouvoir stimuler la curiosité des gens et,</div> <div id="T1bx" class="txs">ainsi,</div> <div id="T1by" class="txs">de les encourager à chercher la vérité au sujet du bonheur éternel et du chemin pour y parvenir.</div></div>
+<div class="m"><div id="T1bz" class="txs"><span class="bd">Commencer la conversation</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ca" class="txs">Amener les gens à réfléchir à des versets qui semblent énigmatiques au premier abord est un bon moyen d’engager une discussion.</div> <div id="T1cb" class="txs">Une fois que nous avons éveillé chez eux un intérêt,</div> <div id="T1cc" class="txs">une curiosité,</div> <div id="T1cd" class="txs">nous pouvons en dire davantage au sujet de ce désir qu’a l’être humain de vivre après la mort.</div> <div id="T1ce" class="txs">Mais il est souvent nécessaire de passer par des étapes intermédiaires.</div> <div id="T1cf" class="txs">Voici quelques questions que nous pouvons poser pour orienter la conversation vers ce qui importe vraiment :</div></div>
+<div class="m"><div id="T1cg" class="txs">Est-ce que je peux vous demander ce que vous pensez d’une parole de sagesse écrite il y a 3000 ans&nbsp;?</div> <div id="T1ch" class="txs">(Vous pouvez remettre à votre ami une petite carte avec les versets d’Ecclésiaste 3, 1 à 2,</div> <div id="T1ci" class="txs">et verset 11 ;</div> <div id="T1cj" class="txs">7, 1.).</div></div>
+<div class="m"><div id="T1ck" class="txs">D’après vous,</div> <div id="T1cl" class="txs">ces paroles sont-elles pertinentes pour notre monde moderne&nbsp;?</div></div>
+<div class="m"><div id="T1cm" class="txs">N’est-il pas curieux de comparer un bon parfum et une bonne réputation&nbsp;?</div> <div id="T1cn" class="txs">Qu’est-ce que cela signifie,</div> <div id="T1co" class="txs">selon vous&nbsp;?</div></div>
+<div class="m"><div id="T1cp" class="txs">Après avoir réfléchi quelques instants,</div> <div id="T1cq" class="txs">la personne répondra peut-être :</div> <div id="T1cr" class="txs">«&nbsp;Avec un parfum de grand prix,</div> <div id="T1cs" class="txs">on peut faire bonne impression sur les autres pendant un temps,</div> <div id="T1ct" class="txs">mais cela ne dure pas.</div> <div id="T1cu" class="txs">En revanche,</div> <div id="T1cv" class="txs">une bonne réputation dure longtemps&nbsp;» (voir Proverbes 10, 7).</div></div>
+<div class="m"><div id="T1cw" class="txs">Un autre répondra peut-être :</div> <div id="T1cx" class="txs">«&nbsp;Si vous vivez une vie juste et bonne,</div> <div id="T1cy" class="txs">vous mourrez en paix et aurez une belle vie dans l’au-delà.</div> <div id="T1cz" class="txs">Mais si vous vivez dans le péché,</div> <div id="T1da" class="txs">vous n’aurez pas une belle vie après la mort.</div><div id="T1db" class="txs">&nbsp;» Pour le chrétien,</div> <div id="T1dc" class="txs">ces réponses permettront d’orienter la conversation dans la bonne direction,</div> <div id="T1dd" class="txs">même si elles sous-entendent certaines choses qu’il faudra rectifier.</div> <div id="T1de" class="txs">Dans un premier temps,</div> <div id="T1df" class="txs">toutefois,</div> <div id="T1dg" class="txs">nous pourrons nous contenter de dire que faire le bien est important.</div> <div id="T1dh" class="txs">Toute mauvaise compréhension de ce qu’est véritablement le bien pourra être corrigée en temps utile.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1di" class="txs"><span class="bd">Continuer la conversation</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dj" class="txs">Voici maintenant une suggestion pour établir un bon contact avec votre ami musulman et ouvrir la voie à une discussion sur d’autres versets en lien avec la vie après la mort.</div> <div id="T1dk" class="txs">Lisez Ecclésiaste 7, 2 à 4.</div> <div id="T1dl" class="txs">Ce texte apporte un éclairage sur le verset 1 du même chapitre,</div> <div id="T1dm" class="txs">cité précédemment,</div> <div id="T1dn" class="txs">et est une bonne introduction pour aborder trois autres textes que nous étudierons ci-après.</div> <div id="T1do" class="txs">Il s’agit de Marc 10,</div> <div id="T1dp" class="txs">Psaume 49 et Jean 4,</div> <div id="T1dq" class="txs">passages très utiles pour comprendre l’énigme d’Ecclésiaste 7, 1.</div></div>
+<div class="m"><div id="T1dr" class="txs"><span class="bd">Marc 10</span><span class="bd">,</span></div><div id="T1ds" class="txs"><span class="bd">17</span> à <span class="bd">31</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dt" class="txs">On trouve dans les deux textes de Proverbes 7 deux notions clés :</div> <div id="T1du" class="txs">la notion de vie éternelle et la notion de bonté.</div> <div id="T1dv" class="txs">Et,</div> <div id="T1dw" class="txs">chose intéressante,</div> <div id="T1dx" class="txs">toutes deux sont mises en valeur dans un autre passage biblique,</div> <div id="T1dy" class="txs">celui de Marc 10, 17 à 31.</div> <div id="T1dz" class="txs">Il rapporte qu’un jour,</div> <div id="T1ea" class="txs">un homme riche,</div> <div id="T1eb" class="txs">s’est jeté à genoux devant Jésus et lui a demandé :</div> <div id="T1ec" class="txs">«&nbsp;Bon maître (…),</div> <div id="T1ed" class="txs">que dois-je faire pour hériter de la vie éternelle&nbsp;?»</div> <div id="T1ee" class="txs">(Marc 10, 17).</div> <div id="T1ef" class="txs">Non seulement il s’est agenouillé devant Jésus,</div> <div id="T1eg" class="txs">mais il lui a manifesté aussi un grand respect en l’appelant «&nbsp;bon maître&nbsp;».</div></div>
+<div class="m"><div id="T1eh" class="txs">Pourtant,</div> <div id="T1ei" class="txs">il avait un cœur partagé.</div> <div id="T1ej" class="txs">Il n’était pas aussi consacré à Dieu qu’il le pensait.</div> <div id="T1ek" class="txs">Son attachement aux richesses a montré qu’en réalité,</div> <div id="T1el" class="txs">l’argent était son principal souci (voir Matthieu 6, 24).</div> <div id="T1em" class="txs">Il ne respectait donc pas le premier commandement,</div> <div id="T1en" class="txs">et encore moins les cinquième,</div> <div id="T1eo" class="txs">sixième,</div> <div id="T1ep" class="txs">septième,</div> <div id="T1eq" class="txs">huitième et neuvième (que Jésus cite explicitement).</div> <div id="T1er" class="txs">Il avait une trop haute opinion de sa propre bonté et de son obéissance à la loi de Dieu.</div> <div id="T1es" class="txs">Et finalement,</div> <div id="T1et" class="txs">l’appellation «&nbsp;bon maître&nbsp;» qu’il a utilisée,</div> <div id="T1eu" class="txs">interroge.</div> <div id="T1ev" class="txs">Car s’il avait vraiment fait l’expérience de la bonté de Jésus,</div> <div id="T1ew" class="txs">s’il le connaissait vraiment,</div> <div id="T1ex" class="txs">il aurait fait ce qu’il lui demandait.</div></div>
+<div class="m"><div id="T1ey" class="txs"><span class="bd">Psaume 49</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ez" class="txs">Cette même notion d’éternité est présente au Psaume 49.</div> <div id="T1fa" class="txs">Si les mots «&nbsp;vie éternelle&nbsp;» ne s’y trouvent pas textuellement,</div> <div id="T1fb" class="txs">le psalmiste exprime le profond désir qu’a tout être humain de vivre au-delà de la tombe.</div> <div id="T1fc" class="txs">Il souligne aussi le caractère inexorable de la mort.</div> <div id="T1fd" class="txs">Mais en même temps,</div> <div id="T1fe" class="txs">il déclare clairement sa foi en Dieu,</div> <div id="T1ff" class="txs">et le message est donc aussi porteur d’espérance.</div> <div id="T1fg" class="txs">Pour expliquer ce Psaume,</div> <div id="T1fh" class="txs">on peut commencer par poser deux questions toutes simples,</div> <div id="T1fi" class="txs">en lien avec deux thèmes fondamentaux :</div></div>
+<div class="m"><div id="T1fj" class="txs">Le psalmiste se trouve face à une énigme.</div> <div id="T1fk" class="txs">Laquelle&nbsp;?</div> <div id="T1fl" class="txs">Quel est le dilemme qu’il cherche à résoudre&nbsp;?</div></div>
+<div class="m"><div id="T1fm" class="txs">Comment y parvient-il&nbsp;?</div></div>
+<div class="m"><div id="T1fn" class="txs">Première clé,</div> <div id="T1fo" class="txs">il affirme avec foi :</div> <div id="T1fp" class="txs">«&nbsp;Mais Dieu rachètera mon âme du séjour des morts,</div> <div id="T1fq" class="txs">oui,</div> <div id="T1fr" class="txs">il me prendra&nbsp;» (verset 16).</div> <div id="T1fs" class="txs">La deuxième clé se trouve au dernier verset,</div> <div id="T1ft" class="txs">où il est dit :</div> <div id="T1fu" class="txs">«&nbsp;…l’homme ne comprend pas qu’il va vers sa fin&nbsp;».</div> <div id="T1fv" class="txs">Le verset dit aussi,</div> <div id="T1fw" class="txs">et c’est très important :</div> <div id="T1fx" class="txs">«&nbsp;…au milieu de son luxe&nbsp;».</div> <div id="T1fy" class="txs">Cela nous rappelle l’homme riche,</div> <div id="T1fz" class="txs">tant attaché à ses richesses qu’il ne pouvait voir clairement la réalité.</div> <div id="T1ga" class="txs">En mettant l’argent à la première place dans sa vie,</div> <div id="T1gb" class="txs">il ne se rendait pas compte qu’il désobéissait au premier commandement de Dieu&nbsp;!</div></div>
+<div class="m"><div id="T1gc" class="txs"><span class="bd">Jean 4</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1gd" class="txs">Les textes d’Ecclésiaste 3 ;</div> <div id="T1ge" class="txs">7 et de Psaume 49 nous parlent d’éternité,</div> <div id="T1gf" class="txs">notion que l’homme a du mal à saisir et qui le laisse perplexe.</div> <div id="T1gg" class="txs">Le thème est aussi abordé en Jean 4.</div> <div id="T1gh" class="txs">Contrairement à l’homme riche,</div> <div id="T1gi" class="txs">qui était très honoré au sein de la communauté juive,</div> <div id="T1gj" class="txs">la femme que Jésus a rencontrée au puits,</div> <div id="T1gk" class="txs">samaritaine,</div> <div id="T1gl" class="txs">était méprisée.</div> <div id="T1gm" class="txs">Car les Samaritains appartenaient à une sorte de secte dont l’enseignement s’éloignait sur certains points de la foi de leurs pères et de ce que prescrivait la Torah.</div> <div id="T1gn" class="txs">En outre,</div> <div id="T1go" class="txs">la femme se trouvait vraiment au bas de l’échelle sociale au sein de sa propre communauté religieuse.</div> <div id="T1gp" class="txs">Car elle vivait dans la débauche.</div> <div id="T1gq" class="txs">Elle avait déjà eu des relations avec cinq hommes différents,</div> <div id="T1gr" class="txs">et celui avec lequel elle partageait sa vie au moment du récit n’était pas son mari (voir les versets 17 à 18).</div> <div id="T1gs" class="txs">Pourtant,</div> <div id="T1gt" class="txs">en dépit des apparences,</div> <div id="T1gu" class="txs">au plus profond d’elle-même,</div> <div id="T1gv" class="txs">elle avait soif de l’eau de la vie,</div> <div id="T1gw" class="txs">soif de la vie éternelle,</div> <div id="T1gx" class="txs">à laquelle aspirait aussi l’homme riche et respectable dont nous avons parlé.</div></div>
+<div class="m"><div id="T1gy" class="txs">Lisez simplement cette histoire dans l’Evangile.</div> <div id="T1gz" class="txs">Laissez la Parole vivante et puissante de Dieu parler au cœur de votre ami musulman (voir Hébreux 4, 12).</div> <div id="T1ha" class="txs">Si,</div> <div id="T1hb" class="txs">de temps à autre,</div> <div id="T1hc" class="txs">vous faites une pause pour expliquer le contexte,</div> <div id="T1hd" class="txs">soyez concis.</div> <div id="T1he" class="txs">N’interrompez pas le fil de l’histoire par de nombreuses remarques.</div> <div id="T1hf" class="txs">Invitez votre ami à vous poser ses questions une fois que vous aurez terminé la lecture.</div></div>
+<div class="m"><div id="T1hg" class="txs">Le lien entre l’eau de la vie,</div> <div id="T1hh" class="txs">la vie éternelle et le salut est un thème essentiel à aborder.</div> <div id="T1hi" class="txs">Les articles suivants,</div> <div id="T1hj" class="txs">à lire en ligne (en anglais),</div> <div id="T1hk" class="txs">donnent des précisions utiles à ce sujet :</div> <div id="T1hl" class="txs"><a href="https://www.answering-islam.org/authors/clarke/timeless_truth.html" class="web-link">https:</div><div id="T1hm" class="txs">//www.</div><div id="T1hn" class="txs">answering-islam.</div><div id="T1ho" class="txs">org/authors/clarke/timeless_truth.</div><div id="T1hp" class="txs">html</a></div></div>
+<div class="m"><div id="T1hq" class="txs">et aussi l’article sur le site suivant:</div></div>
+<div class="m"><div id="T1hr" class="txs"><a href="https://www.answering-islam.org/authors/clarke/homeward.html" class="web-link">https:</div><div id="T1hs" class="txs">//www.</div><div id="T1ht" class="txs">answering-islam.</div><div id="T1hu" class="txs">org/authors/clarke/homeward.html</a>.</div></div>
+<div class="m">.</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/43 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

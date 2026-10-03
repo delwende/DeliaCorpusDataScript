@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Seensa 6</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "13-B013-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='12-B012-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-005.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Seensa&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;6&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-007.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B013-image6.jpg" />
+
+<div class="m"><span class="bd">Baraaruu</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Yesus</span><span class="it"> </span><span class="it">keessatti</span><span class="it"> </span><span class="it">karaa</span><span class="it"> </span><span class="it">dhiiga</span><span class="it"> </span><span class="it">isaa</span><span class="it"> </span><span class="it">furuu</span><span class="it"> </span><span class="it">qabna</span><span class="it"> </span>(Efesoon 1, 7).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Furmaanni maali?</span></div>
+<div class="m">Jechi "furii" jedhu qaama jechoota fayyina ibsaniiti. Jecha jechaatti, "fagoo hiikuu", "bilisa gochuu" jechuudha. Yaada furuu, akka garbaatti, gooftaa tokkotti hidhamee, kaffaltii maallaqaatiin bilisa ta’e kaasa. Namni cubbuu fi bu’aa isaaf garba, jechuunis du’a. Furiin humna cubbuu fi bu’aa seeraa isaa irraa bilisa isa taasisa.</div>
+<div class="m">Kiristoos hojii furuu isaa keessatti dhala namaa hundaaf gatii furuu kaffaleera. Gatiin isaa maalummaa isaa ilaalchisee ifatti agarsiifameera: dhiiga Kiristoos ti. Gatii kanaan waan furamneef isa kaffalee tajaajiluu qabna (1Qorontoos 7, 22 hanga 23).</div>
+<div class="m">Furmaanni yaada bu’uuraa sadii keessatti gabaabfamuu danda’a: (1) ilmi namaa waan tokko irraa furamuu, innis garbummaa cubbuu; (2) wanta tokkoon, kaffaltii gatii, jechuunis dhiiga Kiristoos kaffaluun ni furamu; (3) waan tokkoof, jechuunis bilisa ta’uuf furmaniiru. Erga bilisa bahanii booda garboota Gooftaa isaan fureef akka of godhan affeeramaniiru.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Fayyinni ykn furuun jireenya kee keessatti badhaadhina akka ta’uuf gochoota:</span></div>
+<div class="m"><span class="it">- Kadhannaa</span>: Kadhannaa kee guyyaa guyyaa keessatti cubbuu, du'a, xuraa'ummaa irraa waan si oolcheef Waaqayyoon galateeffachuu dandeessa...</div>
+<div class="m"><span class="it">- Dubbisa Macaafa Qulqulluu</span>: yeroo hunda seenaa du'a Yesus dubbisi, fakkeenyaaf Luqaas 23, 33 hanga 49. Mee namoota baay'ee keessa fannifamuu ilaalaa jirtutti of fakkeessi. Aarsaa guddaa Yesus dhiheesse of yaadachiisi.</div>
+<div class="m"><span class="it">- Calaqqee dhuunfaa</span>: Furmaata ilma isaa Yesuus irraa fayyadamteetta.</div>
+<div class="m">Garbummaa seexanaa jalaa si baase. Garuu dhuguma bilisa ta'aa? Ammallee "garba" Seexanaa ta'uu kee baruuf gargaarsa hafuura qulqulluutiin jireenya kee qoradhu. Ammas amala badaa Waaqayyoof ulfina hin kennine qabdaa?</div>
+<div class="m"><span class="it">- gara namoota birootti</span>: Fayyinni namoota biroof yommuu qoodamu daran gatii guddaa qaba. Fayyina Yesus yoo xiqqaate torbanitti al tokko nama ammallee isa hin beekneef beeksisi.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

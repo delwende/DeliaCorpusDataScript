@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°1 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.21 },
+    { label: "1b", start: 2.46, end: 5.29 },
+    { label: "1c", start: 5.54, end: 7.39 },
+    { label: "1d", start: 7.64, end: 8.39 },
+    { label: "1e", start: 8.64, end: 12.07 },
+    { label: "1f", start: 12.32, end: 16.03 },
+    { label: "1g", start: 16.28, end: 20.75 },
+    { label: "1h", start: 21, end: 24.03 },
+    { label: "1i", start: 24.28, end: 25.19 },
+    { label: "1j", start: 25.44, end: 27.35 },
+    { label: "1k", start: 27.6, end: 31.99 },
+    { label: "1l", start: 32.24, end: 33.21 },
+    { label: "1m", start: 33.46, end: 35.55 },
+    { label: "1n", start: 35.8, end: 41.59 },
+    { label: "1o", start: 41.84, end: 44.05 },
+    { label: "1p", start: 44.3, end: 48.77 },
+    { label: "1q", start: 49.02, end: 52.61 },
+    { label: "1r", start: 52.86, end: 60.19 },
+    { label: "1s", start: 60.44, end: 61.33 },
+    { label: "1t", start: 61.58, end: 64.53 },
+    { label: "1u", start: 64.78, end: 72.03 },
+    { label: "1v", start: 72.28, end: 74.47 },
+    { label: "1w", start: 74.72, end: 78.15 },
+    { label: "1x", start: 78.4, end: 80.29 },
+    { label: "1y", start: 80.54, end: 82.79 },
+    { label: "1z", start: 83.04, end: 86.93 },
+    { label: "1aa", start: 87.18, end: 92.61 },
+    { label: "1ab", start: 92.86, end: 96.03 },
+    { label: "1ac", start: 96.28, end: 100.39 },
+    { label: "1ad", start: 100.64, end: 103.31 },
+    { label: "1ae", start: 103.56, end: 109.57 },
+    { label: "1af", start: 109.82, end: 114.09 },
+    { label: "1ag", start: 114.34, end: 116.21 },
+    { label: "1ah", start: 116.46, end: 117.79 },
+    { label: "1ai", start: 118.04, end: 119.25 },
+    { label: "1aj", start: 119.5, end: 123.77 },
+    { label: "1ak", start: 124.02, end: 125.31 },
+    { label: "1al", start: 125.56, end: 127.05 },
+    { label: "1am", start: 127.3, end: 130.45 },
+    { label: "1an", start: 130.7, end: 132.17 },
+    { label: "1ao", start: 132.42, end: 133.97 },
+    { label: "1ap", start: 134.22, end: 136.81 },
+    { label: "1aq", start: 137.06, end: 139.89 },
+    { label: "1ar", start: 140.14, end: 142.65 },
+    { label: "1as", start: 142.9, end: 149.77 },
+    { label: "1at", start: 150.02, end: 151.81 },
+    { label: "1au", start: 152.06, end: 154.43 },
+    { label: "1av", start: 154.68, end: 156.79 },
+    { label: "1aw", start: 157.04, end: 163.23 },
+    { label: "1ax", start: 163.48, end: 167.67 },
+    { label: "1ay", start: 167.92, end: 171.19 },
+    { label: "1az", start: 171.44, end: 172.05 },
+    { label: "1ba", start: 172.3, end: 175.11 },
+    { label: "1bb", start: 175.36, end: 177.17 },
+    { label: "1bc", start: 177.42, end: 180.13 },
+    { label: "1bd", start: 180.38, end: 184.19 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 184.19;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°1&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°1 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Gardez la bonne attitude par rapport à l’argent :</span></div> <div id="T1c" class="txs"><span class="bd">N’aimez pas l’argent!</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1d" class="txs"><span class="bdit">Histoire:</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">Jean a été pendant plusieurs années aide-pasteur.</span></div> <div id="T1f" class="txs"><span class="it">Il a beaucoup aimé les gens et pris soin de la communauté.</span></div> <div id="T1g" class="txs"><span class="it">Quand il quitte son église pour aller se former à l’institut biblique,</span></div> <div id="T1h" class="txs"><span class="it">il reçoit des membres de l’église beaucoup de dons,</span></div> <div id="T1i" class="txs"><span class="it">de l’argent,</span></div> <div id="T1j" class="txs"><span class="it">de l’huile et du riz.</span></div></div>
+<div class="m"><div id="T1k" class="txs"><span class="it">Marc a été pendant plusieurs années le trésorier de son église.</span></div> <div id="T1l" class="txs"><span class="it">En cachette,</span></div> <div id="T1m" class="txs"><span class="it">il a détourné l’argent de l’église.</span></div> <div id="T1n" class="txs"><span class="it">Cet argent lui a permis de se payer une nouvelle moto et beaucoup de bien pour sa famille.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1o" class="txs"><span class="it">Que pensez-vous de ces histoires?</span></div><div id="T1p" class="txs">L’argent est-il toujours signe de la bénédiction de Dieu?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1q" class="txs">Tout appartient à Dieu et tout nous vient de Lui.</div> <div id="T1r" class="txs">Nous remercions Dieu pour tous les biens dont il nous comble et qui sont des signes de Sa bénédiction de Dieu.</div> <div id="T1s" class="txs">Pourtant,</div> <div id="T1t" class="txs">l’argent n’est pas toujours signe de bénédiction divine,</div> <div id="T1u" class="txs">par exemple si nous l’avons acquis injustement ou si cela prend la place de Dieu dans notre vie.</div></div>
+<div class="m"><div id="T1v" class="txs"><span class="ul">Versets </span><span class="ul">bibliques à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1w" class="txs"><span class="it">«&nbsp;Ne cherchez pas à posséder beaucoup de richesses sur la terre.</span></div> <div id="T1x" class="txs"><span class="it">(…) Là où tu mets tes richesses,</span></div> <div id="T1y" class="txs"><span class="it">c’est là aussi que tu mettras ton cœur.</span></div> <div id="T1z" class="txs"><span class="it">(…) Vous ne pouvez pas servir à la fois Dieu et l’argent.»</span></div><div id="T1aa" class="txs">(Mattieu 6.19,21,24)</div></div>
+<div class="p"><div id="T1ab" class="txs"><span class="it">«&nbsp;Celui qui aime l’argent n’en a jamais assez,</span></div> <div id="T1ac" class="txs"><span class="it">et celui qui aime la richesse n’est jamais satisfait de ce qu’il a.</span></div><div id="T1ad" class="txs"><span class="it">&nbsp;» </span>(Ecclésiastes 5.9)</div></div>
+<div class="p"><div id="T1ae" class="txs"><span class="it">«&nbsp;Il faut se contenter de ce qu’on a (…) Ceux qui veulent devenir riches tombent dans la tentation.</span></div> <div id="T1af" class="txs"><span class="it">De nombreux désirs stupides et dangereux les prennent au piège.</span></div> <div id="T1ag" class="txs"><span class="it">(…) La racine de tous les malheurs,</span></div> <div id="T1ah" class="txs"><span class="it">c’est l’amour de l’argent.</span></div><div id="T1ai" class="txs"><span class="it">&nbsp;» </span>(1Tim.</div><div id="T1aj" class="txs">6.6,9-10)</div></div>
+<div class="p"><div id="T1ak" class="txs"><span class="it">«&nbsp;Le jour de la mort,</span></div> <div id="T1al" class="txs"><span class="it">la richesse ne sert à rien,</span></div> <div id="T1am" class="txs"><span class="it">mais une conduite honnête délivre de la mort.</span></div><div id="T1an" class="txs"><span class="it">&nbsp;» </span>(Prov.</div><div id="T1ao" class="txs">11.4)</div></div>
+<div class="m"><div id="T1ap" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1aq" class="txs">Est-ce que l’argent rend véritablement heureux?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ar" class="txs">Qu’est-ce que «&nbsp;l’amour de l’argent&nbsp;»?</div> <div id="T1as" class="txs">Comment l’amour de l’argent peut devenir source de malheurs ou pousser quelqu’un à faire des mauvaises choses?</div> <div id="T1at" class="txs">Avez-vous des exemples?</div></div>
+<div class="p_Corpsdetexte"><div id="T1au" class="txs">Qu’est-ce qui est plus important que l’argent?</div></div>
+<div class="m"><div id="T1av" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1aw" class="txs">Souvenez-vous que l’argent peut être une bénédiction mais peut aussi être une malédiction dans votre vie.</div> <div id="T1ax" class="txs">Faites bien attention à ne pas avoir trop d’amour pour l’argent,</div> <div id="T1ay" class="txs">sans quoi vous risquez d’être prêt à tricher,</div> <div id="T1az" class="txs">mentir,</div> <div id="T1ba" class="txs">tromper en cherchant à vous enrichir.</div> <div id="T1bb" class="txs">Laissez Dieu à la première place&nbsp;!</div> <div id="T1bc" class="txs">Avant de chercher les bénédictions matérielles,</div> <div id="T1bd" class="txs">cherchez la justice de Dieu.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/010_Conseil_n1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

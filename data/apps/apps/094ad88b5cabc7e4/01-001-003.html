@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>241 Saame ne a wõdɩ fãa y 3</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "3a", start: 44.29, end: 48.12 },
+    { label: "3b", start: 48.37, end: 51.05 },
+    { label: "3c", start: 51.3, end: 56.72 },
+    { label: "3d", start: 56.97, end: 60.03 },
+    { label: "3e", start: 60.28, end: 62.69 },
+    { label: "3f", start: 62.94, end: 71.85 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 44.29;
+var stopTime  = 71.85;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-002.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;241 Saame ne a wõdɩ fãa y&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;3&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-004.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 241 a 280-image3.jpeg" />
+
+<div class="m"><div id="T3a" class="txs"><span class="bd">243</span><span class="bd"> Tab-</span><span class="bd">soab</span><span class="bd"> n </span><span class="bd">boond</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> b </span><span class="bd">wa</span><span class="bd"> </span><span class="bd">lemb</span><span class="bd"> n </span><span class="bd">gese</span><span class="bd">,</span></div><div id="T3b" class="txs"><span class="bd">sɩɩd</span><span class="bd"> </span><span class="bd">soab</span><span class="bd"> ka </span><span class="bd">baod</span><span class="bd"> </span><span class="bd">goam</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T3c" class="txs"><span class="bdit">(C’est le vendeur de tabac qui a besoin d’inviter ses clients à y gouter,</span></div> <div id="T3d" class="txs"><span class="bdit">celui du miel ne se donne pas cette peine).</span></div></div>
+<div class="m"><div id="T3e" class="txs"><span class="bd">Tab-</span><span class="bd">soab</span><span class="bd"> n </span><span class="bd">boond</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> b </span><span class="bd">wa</span><span class="bd"> </span><span class="bd">lemb</span><span class="bd"> n </span><span class="bd">gese</span><span class="bd">,</span></div><div id="T3f" class="txs"><span class="bd">sɩɩd</span><span class="bd"> </span><span class="bd">soab</span><span class="bd"> ka </span><span class="bd">baod</span><span class="bd"> </span><span class="bd">goam</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 241 a 280 avec musique2.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

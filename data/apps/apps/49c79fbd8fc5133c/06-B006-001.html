@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuse teewu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0 },
+    { label: "1b", start: 0.24, end: 2.13 },
+    { label: "1c", start: 2.38, end: 9.31 },
+    { label: "1d", start: 9.56, end: 10.83 },
+    { label: "1e", start: 11.08, end: 14.09 },
+    { label: "1f", start: 14.34, end: 30.47 },
+    { label: "1g", start: 30.72, end: 36.19 },
+    { label: "1h", start: 36.44, end: 42.15 },
+    { label: "1i", start: 42.4, end: 45.15 },
+    { label: "1j", start: 45.4, end: 53.23 },
+    { label: "1k", start: 53.48, end: 55.39 },
+    { label: "1l", start: 55.64, end: 58.93 },
+    { label: "1m", start: 59.18, end: 63.77 },
+    { label: "1n", start: 64.02, end: 67.11 },
+    { label: "1o", start: 67.36, end: 70.57 },
+    { label: "1p", start: 70.82, end: 78.13 },
+    { label: "1q", start: 78.38, end: 82.95 },
+    { label: "1r", start: 83.2, end: 90.79 },
+    { label: "1s", start: 91.04, end: 98.11 },
+    { label: "1t", start: 98.36, end: 121.43 },
+    { label: "1u", start: 121.68, end: 125.23 },
+    { label: "1v", start: 125.48, end: 126.45 },
+    { label: "1w", start: 126.7, end: 132.73 },
+    { label: "1x", start: 132.98, end: 134.45 },
+    { label: "1y", start: 134.7, end: 139.73 },
+    { label: "1z", start: 139.98, end: 142.81 },
+    { label: "1aa", start: 143.06, end: 168.15 },
+    { label: "1ab", start: 168.4, end: 169.99 },
+    { label: "1ac", start: 170.24, end: 176.19 },
+    { label: "1ad", start: 176.44, end: 186.51 },
+    { label: "1ae", start: 186.76, end: 187.75 },
+    { label: "1af", start: 188, end: 208.67 },
+    { label: "1ag", start: 208.92, end: 209.67 },
+    { label: "1ah", start: 209.92, end: 224.51 },
+    { label: "1ai", start: 224.76, end: 226.97 },
+    { label: "1aj", start: 227.22, end: 244.03 },
+    { label: "1ak", start: 244.28, end: 245.59 },
+    { label: "1al", start: 245.84, end: 249.03 },
+    { label: "1am", start: 249.28, end: 253.45 },
+    { label: "1an", start: 253.7, end: 260.99 },
+    { label: "1ao", start: 261.24, end: 265.87 },
+    { label: "1ap", start: 266.12, end: 273.55 },
+    { label: "1aq", start: 273.8, end: 275.65 },
+    { label: "1ar", start: 275.9, end: 277.75 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 277.75;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Kuse teewu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetitre"><div id="T1a" class="txs">Kuse teewu</div></div>
+<div class="p_contetexte"><div id="T1b" class="txs">Sukaaɓe gooɗom, ɗiɗo.</div> <div id="T1c" class="txs">Ɓe mburtii fa ɓe lohowoo; lohagol kam wonno filaade kujje ladde fa nyaama.</div> <div id="T1d" class="txs">Ɓe njaha.</div> <div id="T1e" class="txs">Ɓe njaha fa ɓe ngari e nokkuure.</div> <div id="T1f" class="txs">Ɓe tawi kuse teewu, na fitta, na wurtoo, naatii ley ngayka ni wurtoo, si fittii naatii ley ngayka ni wurtoo.</div> <div id="T1g" class="txs">Tawi le ɓe njolbii.</div> <div id="T1h" class="txs">Suka gooto o, wi'i: "En ƴakka kusel ngel.”</div> <div id="T1i" class="txs">Gooto o wi'i: "Hey!</div> <div id="T1j" class="txs">min kay miɗo hula ƴakkude tew dagu ngu; a yi'ii na fitta, na naata, na wurtoo, a anndaa fu to ƴuuri."</div> <div id="T1k" class="txs">Jaadiiko wi'i: "Min kay mi nyaamataa."</div> <div id="T1l" class="txs">Tan gooto o kam kay hooƴi kusel ngel ƴakki.</div> <div id="T1m" class="txs">Na ƴakka, reedu muuɗum na heewa.</div></div>
+<div class="p_contetexte"><div id="T1n" class="txs">Reedu heewi bumminii.</div> <div id="T1o" class="txs">Fay ummaade o waawaa.</div> <div id="T1p" class="txs">Jaadiiko o, ndaari o de wi'ii: "A yi'ii ya maani, mi haalaniino ma ta ngaɗaa; joonin noy podiɗɗen wadde ?</div> <div id="T1q" class="txs">A waawaa yaade wuro, mi waawaa ronndaade ma.</div> <div id="T1r" class="txs">Min kay ndelle, accu mi hoota wuro, mi haalanowa yimɓe, ngara ndaare.</div></div>
+<div class="p_contetexte"><div id="T1s" class="txs">Nde jaadiiko on ooncinoo fa hoota haalanowa yimɓe fu, o noddi ɗum:</div></div>
+<div class="p_contetexte"><div id="T1t" class="txs"><span class="it">Foofoo maaɗa ndelle,</span><span class="it"><br/></span><span class="it">Nyannde fu njaaɗa, </span><span class="it"><br/></span><span class="it">Njewtanaa kam inna am,</span><span class="it"><br/></span><span class="it">Njettanaa kam baaba am,</span><span class="it"><br/></span><span class="it">Njewtanaa kam diko..."</span></div></div>
+<div class="p_contetexte"><div id="T1u" class="txs">On du, nde o wiinoo noon fu, yurminii ɗum.</div> <div id="T1v" class="txs">O waawaa yoppude o.</div> <div id="T1w" class="txs">O yottii o ƴeɓti o, o bammbi faa o woɗɗowii.</div> <div id="T1x" class="txs">Tawi o tampii.</div> <div id="T1y" class="txs">O wi'i ɗum jon kay jooɗa, ɗo Alla joƴƴini ma, fa mi yaha wuro dey, mi haalowa.</div> <div id="T1z" class="txs">Nde o joƴƴinnoo ɗum o fuɗɗi yaadu fu, wi'ii mo:</div></div>
+<div class="p_contetexte"><div id="T1aa" class="txs"><span class="it">Foofoo maaɗa ndelle,</span><span class="it"><br/></span><span class="it">Nyannde fu njaaɗa, </span><span class="it"><br/></span><span class="it">Njewtanaa kam inna am,</span><span class="it"><br/></span><span class="it">Njettanaa kam baaba am,</span><span class="it"><br/></span><span class="it">Njewtanaa kam diko..."</span></div></div>
+<div class="p_contetexte"><div id="T1ab" class="txs">Tan, on yurminii ɗum.</div> <div id="T1ac" class="txs">O yotti o ƴeɓti mo gatin o bammbi faa, faa, faa ɓe mboɗɗowii.</div> <div id="T1ad" class="txs">Fa tawi ɓe mboɗɗaa wuro sanne; o wi'i jonkay mi tampii, jooɗa ɗo Alla joƴƴini ma, faa mi yaha dey, mi wara.</div> <div id="T1ae" class="txs">On wi'ii mo gadin:</div></div>
+<div class="p_contetexte"><div id="T1af" class="txs"><span class="it">Foofoo maaɗa ndelle,</span><span class="it"><br/></span><span class="it">Nyannde fu njaaɗa, </span><span class="it"><br/></span><span class="it">Njewtanaa kam inna am,</span><span class="it"><br/></span><span class="it">Njettanaa kam baaba am,</span><span class="it"><br/></span><span class="it">Njewtanaa kam diko..."</span></div></div>
+<div class="p_contetexte"><div id="T1ag" class="txs">Timmii gatin.</div> <div id="T1ah" class="txs">Nde o yimunoo fu, o waawaay gatin yaade; o yottii o ƴeɓti mo faa o yottini mo gaɗa wuro, ni gaɗa ɓaadeeji, joƴƴini mo, wi'i mo jonkay jooɗa ɗo Alla joƴƴini ma, fa mi yaha de mi wara.</div> <div id="T1ai" class="txs">Na o ummoo fa o yaha gatin, oo to wi'i:</div></div>
+<div class="p_contetexte"><div id="T1aj" class="txs"><span class="it">Foofoo maaɗa ndelle,</span><span class="it"><br/></span><span class="it">Nyannde fu njaaɗa, </span><span class="it"><br/></span><span class="it">Njewtanaa kam inna am,</span><span class="it"><br/></span><span class="it">Njettanaa kam baaba am,</span><span class="it"><br/></span><span class="it">Njewtanaa kam diko..."</span></div></div>
+<div class="p_contetexte"><div id="T1ak" class="txs">Timmii gatin!</div> <div id="T1al" class="txs">O waawaay yoppude ɗum gaɗa wuuro ɗoon.</div> <div id="T1am" class="txs">O ƴeɓti ɗum faa o yottini ɗum ley ɓaade muuɗum en.</div> <div id="T1an" class="txs">Nde o yottinnoo ɗum ley ɓaade fu, koreeji mburtii.</div> <div id="T1ao" class="txs">Na mburtoo, na nji'a ɗum, reedu muuɗum na feccoo.</div> <div id="T1ap" class="txs">Reedu nduun nde feccinoo fu, baɓɓatti ni, pooli ni, ko fiirata ɗum fu na wurtoo ley reedu muuɗum na fiira.</div></div>
+<div class="p_contetexte"><div id="T1aq" class="txs">Ni wonnoo kaddi ngol du.</div></div>
+<div class="p_Conteur"><div id="T1ar" class="txs">Tijjaani Ba</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/06_Kuse_Teewu.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

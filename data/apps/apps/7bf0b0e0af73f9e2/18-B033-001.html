@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>9) MANGER ET BOIRE 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.17 },
+    { label: "1b", start: 2.42, end: 3.57 },
+    { label: "1c", start: 3.82, end: 6.01 },
+    { label: "1d", start: 6.26, end: 11.53 },
+    { label: "1e", start: 11.78, end: 15.55 },
+    { label: "1f", start: 15.8, end: 17.67 },
+    { label: "1g", start: 17.92, end: 18.55 },
+    { label: "1h", start: 18.8, end: 19.33 },
+    { label: "1i", start: 19.58, end: 22.91 },
+    { label: "1j", start: 23.16, end: 26.91 },
+    { label: "1k", start: 27.16, end: 31.03 },
+    { label: "1l", start: 31.28, end: 34.49 },
+    { label: "1m", start: 34.74, end: 37.31 },
+    { label: "1n", start: 37.56, end: 39.01 },
+    { label: "1o", start: 39.26, end: 40.53 },
+    { label: "1p", start: 40.78, end: 42.53 },
+    { label: "1q", start: 42.78, end: 47.63 },
+    { label: "1r", start: 47.88, end: 52.19 },
+    { label: "1s", start: 52.44, end: 53.99 },
+    { label: "1t", start: 54.24, end: 55.39 },
+    { label: "1u", start: 55.64, end: 61.49 },
+    { label: "1v", start: 61.74, end: 65.73 },
+    { label: "1w", start: 65.98, end: 67.43 },
+    { label: "1x", start: 67.68, end: 71.73 },
+    { label: "1y", start: 71.98, end: 76.13 },
+    { label: "1z", start: 76.38, end: 76.73 },
+    { label: "1aa", start: 76.98, end: 77.53 },
+    { label: "1ab", start: 77.78, end: 77.99 },
+    { label: "1ac", start: 78.24, end: 79.63 },
+    { label: "1ad", start: 79.88, end: 81.33 },
+    { label: "1ae", start: 81.58, end: 86.07 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 86.07;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "18-B033-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='17-B009-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='17-B009-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;9) MANGER ET BOIRE&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B010-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B010-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B033-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">9) MANGER ET BOIRE</span></div></div>
+<div class="m"><div id="T1b" class="txs">Selon le pays,</div> <div id="T1c" class="txs">il existe différents plats typiques.</div> <div id="T1d" class="txs">De nombreuses personnes aiment accompagner leur repas d'un petit verre d'alcool de temps en temps.</div> <div id="T1e" class="txs">C'est également autorisé en public à partir de 16 ans.</div> <div id="T1f" class="txs">Les spiritueux (eau-de-vie,</div> <div id="T1g" class="txs">liqueurs,</div> <div id="T1h" class="txs">etc.)</div> <div id="T1i" class="txs">ne peuvent être consommés qu'à partir de 16 ou 18 ans.</div> <div id="T1j" class="txs">Mais il y a aussi beaucoup de gens qui ne boivent pas d'alcool.</div> <div id="T1k" class="txs">Il est toujours acceptable de refuser de boire de l'alcool.</div></div>
+<div class="m"><div id="T1l" class="txs">On mange aussi beaucoup de viande de porc en Europe.</div></div>
+<div class="m"><div id="T1m" class="txs">Si on a des doutes concernant la viande,</div> <div id="T1n" class="txs">on peut toujours demander.</div> <div id="T1o" class="txs">Presque partout,</div> <div id="T1p" class="txs">on trouve aussi des plats sans viande,</div> <div id="T1q" class="txs">car certains européens ont une alimentation végétarienne ou même végétalienne.</div></div>
+<div class="m"><div id="T1r" class="txs">Manger ou passer quelque chose de la main gauche n'est pas considéré comme mauvais,</div> <div id="T1s" class="txs">c'est tout à fait normal.</div> <div id="T1t" class="txs">En revanche,</div> <div id="T1u" class="txs">il est considéré comme impoli de siroter fortement en mangeant ou d’étendre la main au-dessus de la table.</div> <div id="T1v" class="txs">Si l'on a besoin de quelque chose que l'on ne peut pas atteindre soi-même,</div> <div id="T1w" class="txs">on le demande poliment.</div> <div id="T1x" class="txs">On fait attention à ne pas laisser tomber de miettes sur le sol.</div> <div id="T1y" class="txs">Souvent il y a des magasins bon marché (par exemple en Suisse,</div> <div id="T1z" class="txs">Denner,</div> <div id="T1aa" class="txs">Migros,</div> <div id="T1ab" class="txs">Coop,</div> <div id="T1ac" class="txs">Aldi et Lidl).</div> <div id="T1ad" class="txs">Dans les villes surtout,</div> <div id="T1ae" class="txs">on trouve également des magasins turcs et arabes proposant des aliments halal.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/09 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/09 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/09 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

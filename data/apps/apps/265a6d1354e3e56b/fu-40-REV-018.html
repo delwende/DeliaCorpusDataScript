@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holleede 18</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 8.65 },
+    { label: "1b", start: 8.9, end: 11.59 },
+    { label: "2a", start: 11.84, end: 14.59 },
+    { label: "2b", start: 14.84, end: 16.79 },
+    { label: "2c", start: 17.04, end: 19.87 },
+    { label: "2d", start: 20.12, end: 22.95 },
+    { label: "2e", start: 23.2, end: 25.83 },
+    { label: "2f", start: 26.08, end: 29.03 },
+    { label: "3a", start: 29.28, end: 32.71 },
+    { label: "3b", start: 32.96, end: 35.91 },
+    { label: "3c", start: 36.16, end: 40.39 },
+    { label: "3d", start: 40.64, end: 42.75 },
+    { label: "3e", start: 43, end: 47.01 },
+    { label: "4a", start: 47.26, end: 52.27 },
+    { label: "4b", start: 52.52, end: 55.47 },
+    { label: "4c", start: 55.72, end: 59.11 },
+    { label: "4d", start: 59.36, end: 62.65 },
+    { label: "5a", start: 62.9, end: 65.09 },
+    { label: "5b", start: 65.34, end: 68.09 },
+    { label: "5c", start: 68.34, end: 72.91 },
+    { label: "6a", start: 73.16, end: 75.43 },
+    { label: "6b", start: 75.68, end: 78.73 },
+    { label: "6c", start: 78.98, end: 81.83 },
+    { label: "6d", start: 82.08, end: 84.21 },
+    { label: "7a", start: 84.46, end: 88.17 },
+    { label: "7b", start: 88.42, end: 91.63 },
+    { label: "7c", start: 91.88, end: 95.03 },
+    { label: "7d", start: 95.28, end: 98.17 },
+    { label: "7e", start: 98.42, end: 100.99 },
+    { label: "7f", start: 101.24, end: 103.87 },
+    { label: "7g", start: 104.12, end: 107.45 },
+    { label: "8a", start: 107.7, end: 109.69 },
+    { label: "8b", start: 109.94, end: 112.71 },
+    { label: "8c", start: 112.96, end: 116.27 },
+    { label: "8d", start: 116.52, end: 118.63 },
+    { label: "8e", start: 118.88, end: 123.63 },
+    { label: "9a", start: 123.88, end: 133.41 },
+    { label: "9b", start: 133.66, end: 139.37 },
+    { label: "10a", start: 139.62, end: 144.37 },
+    { label: "10b", start: 144.62, end: 145.55 },
+    { label: "10c", start: 145.8, end: 147.33 },
+    { label: "10d", start: 147.58, end: 148.99 },
+    { label: "10e", start: 149.24, end: 154.31 },
+    { label: "10f", start: 154.56, end: 157.77 },
+    { label: "11", start: 158.02, end: 166.73 },
+    { label: "12", start: 166.98, end: 196.71 },
+    { label: "13", start: 196.96, end: 223.53 },
+    { label: "14a", start: 223.78, end: 226.87 },
+    { label: "14b", start: 227.12, end: 230.69 },
+    { label: "14c", start: 230.94, end: 237.19 },
+    { label: "15a", start: 237.44, end: 245.29 },
+    { label: "15b", start: 245.54, end: 247.45 },
+    { label: "16a", start: 247.7, end: 248.35 },
+    { label: "16b", start: 248.6, end: 249.73 },
+    { label: "16c", start: 249.98, end: 251.19 },
+    { label: "16d", start: 251.44, end: 263.65 },
+    { label: "17a", start: 263.9, end: 268.23 },
+    { label: "17b", start: 268.48, end: 281.55 },
+    { label: "18a", start: 281.8, end: 287.27 },
+    { label: "18b", start: 287.52, end: 291.35 },
+    { label: "19a", start: 291.6, end: 295.77 },
+    { label: "19b", start: 296.02, end: 300.51 },
+    { label: "19c", start: 300.76, end: 302.05 },
+    { label: "19d", start: 302.3, end: 303.51 },
+    { label: "19e", start: 303.76, end: 315.27 },
+    { label: "20a", start: 315.52, end: 318.51 },
+    { label: "20b", start: 318.76, end: 323.53 },
+    { label: "20c", start: 323.78, end: 326.85 },
+    { label: "21a", start: 327.1, end: 335.57 },
+    { label: "21b", start: 335.82, end: 341.67 },
+    { label: "22a", start: 341.92, end: 352.47 },
+    { label: "22b", start: 352.72, end: 356.95 },
+    { label: "22c", start: 357.2, end: 361.15 },
+    { label: "23a", start: 361.4, end: 364.75 },
+    { label: "23b", start: 365, end: 369.71 },
+    { label: "23c", start: 369.96, end: 376.55 },
+    { label: "23d", start: 376.8, end: 381.59 },
+    { label: "24", start: 381.84, end: 391.63 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+
+// Footnotes and Cross-references
+var footnotes = {
+    "F-0": "<div class=\"footnote-p\"><span class=\"fr\">18:22 </span><span class=\"fk\">Golloowo nyeenyuɗo </span><span class=\"ft\">wo gaɗoowo golle juuɗe hono cehoowo naa tafoowo jamɗe. </span></div>"
+};
+
+initFootnotes(footnotes);
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 22 }];
+var hasIntro = false;
+var baseRef  = "fu-40-REV-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='fu-39-JUD-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='fu-40-REV-017.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Holleede&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;18&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-40-REV-019.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="s1">No Baabiila halkirtee</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">18</div> <div id="T1a" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Caggal ɗuum, nji'umi maleyka goɗɗo keewɗo baawɗe ina ƴuura dow kammu ina jippoo.</div> <div id="T1b" class="txs">Darja makko jalbini adunaaru.</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2a" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>O ƴeewnii faa toowi, o wi'i:</div></div>
+<div class="q top-spacing"><div id="T2b" class="txs">«Baabiila halkii!</div></div>
+<div class="q"><div id="T2c" class="txs">Baabiila ngalluure mawnde ndeen halkii!</div></div>
+<div class="q"><div id="T2d" class="txs">Nde laatake joonnde ginnaaji,</div></div>
+<div class="q2"><div id="T2e" class="txs">suuɗorde ruuhuuji tuunuɗi fuu</div></div>
+<div class="q2"><div id="T2f" class="txs">e foondu tuunundu wanyaandu fuu!</div><span id="bookmarks2"></span></div><span id="bookmarks2"></span><a id="v3"></a>
+<div class="q-v"><div id="T3a" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>Sabo leyɗe ɗeen fuu culirii cabijam, caamii</div></div>
+<div class="q2"><div id="T3b" class="txs">saabe fijirde mayre nyaaɗunde.</div></div>
+<div class="q"><div id="T3c" class="txs">Kaanankooɓe adunaaru ɓeen njeenii e mayre.</div></div>
+<div class="q"><div id="T3d" class="txs">Luumotooɓe e adunaaru ɓeen fuu keɓii jawdi</div></div>
+<div class="q2"><div id="T3e" class="txs">saabe danyal mayre keewngal faa wittii ngaal.»</div><span id="bookmarks3"></span></div><span id="bookmarks3"></span><a id="v4"></a>
+<div class="p"><div id="T4a" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>Ndeen nanumi daande wonnde ƴuuri dow kammu, ina wi'a:</div></div>
+<div class="q top-spacing"><div id="T4b" class="txs">— Onon yimɓe am, njaltee e mayre!</div></div>
+<div class="q2"><div id="T4c" class="txs">Faa taa on kawtu e mayre hakkeeji,</div></div>
+<div class="q2"><div id="T4d" class="txs">faa taa masiibaaji mayre kewta on!</div><span id="bookmarks4"></span></div><span id="bookmarks4"></span><a id="v5"></a>
+<div class="q-v"><div id="T5a" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Sabo hakkeeji mayre ɗuuɗi,</div></div>
+<div class="q2"><div id="T5b" class="txs">ɗi njowundurii faa ɗi njottake kammu,</div></div>
+<div class="q2"><div id="T5c" class="txs">Laamɗo du yeggitaay golleeji mayre bonɗi ɗiin.</div><span id="bookmarks5"></span></div><span id="bookmarks5"></span><a id="v6"></a>
+<div class="q-v"><div id="T6a" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>Ngaɗee nde hono no nde waɗiri on ni!</div></div>
+<div class="q"><div id="T6b" class="txs">Njoɓtoɗon nde kile ɗiɗi e ko nde waɗi on!</div></div>
+<div class="q"><div id="T6c" class="txs">Ko nde siiwani on ley horde mayre ɗuum,</div></div>
+<div class="q2"><div id="T6d" class="txs">ciiwanee nde kile ɗiɗi!</div><span id="bookmarks6"></span></div><span id="bookmarks6"></span><a id="v7"></a>
+<div class="q-v"><div id="T7a" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>Torron nde, kebbinon mettorgal mayre</div></div>
+<div class="q2"><div id="T7b" class="txs">faa haddi no nde teddiniri hoore mayre,</div></div>
+<div class="q2"><div id="T7c" class="txs">faa fota e no nde wuurdi mbelirka.</div></div>
+<div class="q"><div id="T7d" class="txs">Sabo inde wi'a e ɓernde mayre:</div></div>
+<div class="q2"><div id="T7e" class="txs">«Inan miɗo jooɗii, wo mi kaananke debbo,</div></div>
+<div class="q2"><div id="T7f" class="txs">mi wanaa debbo mo gorum maayi,</div></div>
+<div class="q2"><div id="T7g" class="txs">abada mettorgal cuddu hewtataa kam.»</div><span id="bookmarks7"></span></div><span id="bookmarks7"></span><a id="v8"></a>
+<div class="q-v"><div id="T8a" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>Saabe no nde worri noon,</div></div>
+<div class="q"><div id="T8b" class="txs">masiibaaji mayre caaman dow mayre:</div></div>
+<div class="q2"><div id="T8c" class="txs">maayde e mettorgal e rafo.</div></div>
+<div class="q2"><div id="T8d" class="txs">Nde wuldete yiite,</div></div>
+<div class="q"><div id="T8e" class="txs">sabo Laamɗo Joomiraaɗo carotooɗo nde wo Jom semmbe.</div><span id="bookmarks8"></span></div>
+
+<div class="s"><div id="s2">Haala woyeede Baabiila</div></div><span id="bookmarks8"></span><a id="v9"></a>
+<div class="p"><div id="T9a" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>Kaanankooɓe adunaaru wonduɓe e mayre jeenu de kawti e mayre danyal ɓeen nji'an cuurki ngulu mayre.</div> <div id="T9b" class="txs">Wakkati oon, ɓe mboyan, ɓe piiran ɓerɗe maɓɓe mettorgal.</div><span id="bookmarks9"></span></div><span id="bookmarks9"></span><a id="v10"></a>
+<div class="p"><div id="T10a" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Ɓe ndaroto to toowti, sabo iɓe kula jukkungo mayre.</div> <div id="T10b" class="txs">Iɓe mbi'a:</div></div>
+<div class="p"><div id="T10c" class="txs">— Yoo yoy!</div> <div id="T10d" class="txs">Yoo yoy!</div> <div id="T10e" class="txs">Baabiila, ngalluure mawnde nde, ngalluure jogiinde semmbe nde!</div> <div id="T10f" class="txs">Nde jukkaama wakkati gooto tan!</div><span id="bookmarks10"></span></div><span id="bookmarks10"></span><a id="v11"></a>
+<div class="p"><div id="T11" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>Luumotooɓe e adunaaru ɓeen mboyan, cunanto nde, sabo fay gooto soodataa gineeji maɓɓe katin.</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>Gineeji maɓɓe wo kaŋŋe e cardi e kaaƴe dime e kaaƴe luulu e kaddule ɗaatuɗe e kaddule ciiɗe e kaddule hariiri tiiɗuɗe e kaddule boɗeeje e leɗɗe uurooje goɗɗe e gineeji moƴƴiniraaɗi nyiiƴe nyiibi e gineeji moƴƴiniraaɗi leɗɗe tiiɗuɗe coggu e jamɗe boɗeeje e jamɗe ɓaleeje e hayre wi'eteende marba.</div><span id="bookmarks12"></span> <a id="v13"></a><div id="T13" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Gineeji maɓɓe katin wo funngooji belnirɗi e uurnirɗi e gowe e nebbam uurɗam e uurdi miira e uurdi cuurtinteendi e cabijam e nebbam ɓiɓɓe jaytun e conndi alkama e aawdi alkama e na'i e baali e pucci e torkooji e maccuɓe e yonkiiji yimɓe.</div><span id="bookmarks13"></span></div><span id="bookmarks13"></span><a id="v14"></a>
+<div class="p"><div id="T14a" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>Luumotooɓe ɓeen mbi'i ngalluure ndeen:</div></div>
+<div class="p"><div id="T14b" class="txs">— Ko njiɗunoɗaa heɓude fuu woɗɗake ma:</div> <div id="T14c" class="txs">keewal mbelirka maa e dawla maa fuu halkii, a hewtataa ɗum abada katin.</div><span id="bookmarks14"></span></div><span id="bookmarks14"></span><a id="v15"></a>
+<div class="p"><div id="T15a" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>Luumotooɓe heɓuɓe jawdi e mayre ɓeen ndaroto to toowti, sabo ina kula jukkungo mayre.</div> <div id="T15b" class="txs">Ɓe mboyan, ɓe cunoto,</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16a" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>ɓe mbi'an:</div></div>
+<div class="p"><div id="T16b" class="txs">— Yoo yoy!</div> <div id="T16c" class="txs">Yoo yoy!</div> <div id="T16d" class="txs">Ngalluure mawnde nyaaƴiroore kaddule ɗaatuɗe e kaddule ciiɗe e kaddule boɗeeje, soɗortoonde kaŋŋe e kaaƴe dime e kaaƴe luulu!</div><span id="bookmarks16"></span> <a id="v17"></a><div id="T17a" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>E ley wakkati gooto tan, jawdi ndiin fuu halkaa!</div></div>
+<div class="p"><div id="T17b" class="txs">Dawranooɓe laanaaji ndiyam e yahooɓe ley majji e dogginooɓe ɓeen, kam e heɓooɓe neema muɓɓen e luumagol dow maayo ɓeen, ɓe fuu ɓe toowtan ɓe ndaroo.</div><span id="bookmarks17"></span> <a id="v18"></a><div id="T18a" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>Wakkati mo ɓe nji'ata cuurki ngulu mayre, ɓe mbullan, ɓe mbi'a:</div></div>
+<div class="p"><div id="T18b" class="txs">— Ngalluure ndeye nanndunoo e ngalluure mawnde nde?</div><span id="bookmarks18"></span></div><span id="bookmarks18"></span><a id="v19"></a>
+<div class="p"><div id="T19a" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>Ɓe ndufan leydi dow ko'e maɓɓe no ɓe poti metteede.</div> <div id="T19b" class="txs">Ɓe mboyan, ɓe cunoo, ɓe mbulla, ɓe mbi'a:</div></div>
+<div class="p"><div id="T19c" class="txs">— Yoo yoy!</div> <div id="T19d" class="txs">Yoo yoy!</div> <div id="T19e" class="txs">Ngalluure mawnde ndeen, nde keewal danyal muuɗum hokki jogiiɓe laanaaji e ley maayo fuu jawdi, e ley wakkati gooto tan, nde halkii!</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20a" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>Kammu, welta e halkeede mayre!</div> <div id="T20b" class="txs">Seniiɓe e nulaaɓe e annabaaɓe, onon du mbeltee!</div> <div id="T20c" class="txs">Sabo Laamɗo sarake nde ko nde waɗi on ɗuum!</div><span id="bookmarks20"></span></div><span id="bookmarks20"></span><a id="v21"></a>
+<div class="p"><div id="T21a" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Wakkati oon, maleyka jom semmbe hooƴi kaaƴal nanndungal e niisirde mawnde, de faɗɗiri ɗum semmbe ley maayo, wi'i:</div></div>
+<div class="p"><div id="T21b" class="txs">— Nii Baabiila ngalluure mawnde ndeen faɗɗirtee, nde yi'ataake abada katin!</div><span id="bookmarks21"></span> <a id="v22"></a><div id="T22a" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>Katin du, fay gooto nanataa ley mayre kolli hoɗooɓe gaaci naa yimooɓe naa fuufooɓe cereeli e barguuji.</div> <div id="T22b" class="txs">Golloowo nyeenyuɗo fay gooto yi'ataake katin e ley mayre.</div><div id="T22c" class="txs"><span class="footnote selectable" id="F-0"><sup>a</sup></span> Duko unduɗe nanataake katin e ley mayre.</div><span id="bookmarks22"></span> <a id="v23"></a><div id="T23a" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>Annoora lampal yaynataa ley mayre katin.</div> <div id="T23b" class="txs">Sawtu ɓaŋuɗo e ɓaŋaaɗo nanataake e mayre katin.</div></div>
+<div class="p"><div id="T23c" class="txs">Bone oon fuu hewtan Baabiila sabo luumotooɓe mayre ɓurnoo adunaaru fuu baawɗe.</div> <div id="T23d" class="txs">Wooɗi du, nde hiildii leyɗe fuu e ndaggadaaku mayre.</div><span id="bookmarks23"></span> <a id="v24"></a><div id="T24" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>Katin du, ƴiiƴam annabaaɓe e seniiɓe e waraaɓe ley adunaaru ɓeen fuu tawaama e mayre.</div><span id="bookmarks24"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/FUHSIMN1DA/B27___18_Apocalypse__FUHSIMN1DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

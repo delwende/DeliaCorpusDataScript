@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hayndeeji 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.47 },
+    { label: "1b", start: 0.72, end: 1.77 },
+    { label: "1c", start: 2.02, end: 4.63 },
+    { label: "1d", start: 4.88, end: 6.27 },
+    { label: "1e", start: 6.52, end: 8.73 },
+    { label: "1f", start: 8.98, end: 13.55 },
+    { label: "1g", start: 13.8, end: 15.51 },
+    { label: "1h", start: 15.76, end: 17.97 },
+    { label: "1i", start: 18.22, end: 20.75 },
+    { label: "1j", start: 21, end: 22.55 },
+    { label: "1k", start: 22.8, end: 26.55 },
+    { label: "1l", start: 26.8, end: 27.43 },
+    { label: "1m", start: 27.68, end: 28.81 },
+    { label: "1n", start: 29.06, end: 29.39 },
+    { label: "1o", start: 29.64, end: 33.63 },
+    { label: "1p", start: 33.88, end: 34.83 },
+    { label: "1q", start: 35.08, end: 38.81 },
+    { label: "1r", start: 39.06, end: 42.85 },
+    { label: "1s", start: 43.1, end: 45.03 },
+    { label: "1t", start: 45.28, end: 45.65 },
+    { label: "1u", start: 45.9, end: 47.21 },
+    { label: "1v", start: 47.46, end: 52.85 },
+    { label: "1w", start: 53.1, end: 55.05 },
+    { label: "1x", start: 55.3, end: 57.43 },
+    { label: "1y", start: 57.68, end: 58.45 },
+    { label: "1z", start: 58.7, end: 60.87 },
+    { label: "1aa", start: 61.12, end: 65.03 },
+    { label: "1ab", start: 65.28, end: 69.57 },
+    { label: "1ac", start: 69.82, end: 71.79 },
+    { label: "1ad", start: 72.04, end: 72.73 },
+    { label: "1ae", start: 72.98, end: 73.59 },
+    { label: "1af", start: 73.84, end: 76.91 },
+    { label: "1ag", start: 77.16, end: 77.91 },
+    { label: "1ah", start: 78.16, end: 79.21 },
+    { label: "1ai", start: 79.46, end: 84.59 },
+    { label: "1aj", start: 84.84, end: 88.47 },
+    { label: "1ak", start: 88.72, end: 89.99 },
+    { label: "1al", start: 90.24, end: 97.79 },
+    { label: "1am", start: 98.04, end: 99.65 },
+    { label: "1an", start: 99.9, end: 100.55 },
+    { label: "1ao", start: 100.8, end: 101.45 },
+    { label: "1ap", start: 101.7, end: 106.35 },
+    { label: "1aq", start: 106.6, end: 109.53 },
+    { label: "1ar", start: 109.78, end: 112.43 },
+    { label: "1as", start: 112.68, end: 118.67 },
+    { label: "1at", start: 118.92, end: 120.97 },
+    { label: "1au", start: 121.22, end: 122.81 },
+    { label: "1av", start: 123.06, end: 125.65 },
+    { label: "1aw", start: 125.9, end: 127.65 },
+    { label: "1ax", start: 127.9, end: 136.03 },
+    { label: "1ay", start: 136.28, end: 139.25 },
+    { label: "1az", start: 139.5, end: 143.23 },
+    { label: "1ba", start: 143.48, end: 147.69 },
+    { label: "1bb", start: 147.94, end: 149.63 },
+    { label: "1bc", start: 149.88, end: 152.31 },
+    { label: "1bd", start: 152.56, end: 155.45 },
+    { label: "1be", start: 155.7, end: 157.55 },
+    { label: "1bf", start: 157.8, end: 160.87 },
+    { label: "1bg", start: 161.12, end: 163.69 },
+    { label: "1bh", start: 163.94, end: 166.19 },
+    { label: "1bi", start: 166.44, end: 167.11 },
+    { label: "1bj", start: 167.36, end: 172.49 },
+    { label: "1bk", start: 172.74, end: 174.65 },
+    { label: "1bl", start: 174.9, end: 176.61 },
+    { label: "1bm", start: 176.86, end: 179.11 },
+    { label: "1bn", start: 179.36, end: 181.11 },
+    { label: "1bo", start: 181.36, end: 188.73 },
+    { label: "1bp", start: 188.98, end: 190.75 },
+    { label: "1bq", start: 191, end: 192.41 },
+    { label: "1br", start: 192.66, end: 193.85 },
+    { label: "1bs", start: 194.1, end: 197.91 },
+    { label: "1bt", start: 198.16, end: 201.95 },
+    { label: "1bu", start: 202.2, end: 205.41 },
+    { label: "1bv", start: 205.66, end: 207.53 },
+    { label: "1bw", start: 207.78, end: 210.85 },
+    { label: "1bx", start: 211.1, end: 211.51 },
+    { label: "1by", start: 211.76, end: 213.01 },
+    { label: "1bz", start: 213.26, end: 215.45 },
+    { label: "1ca", start: 215.7, end: 219.43 },
+    { label: "1cb", start: 219.68, end: 224.67 },
+    { label: "1cc", start: 224.92, end: 231.19 },
+    { label: "1cd", start: 231.44, end: 233.51 },
+    { label: "1ce", start: 233.76, end: 236.31 },
+    { label: "1cf", start: 236.56, end: 239.47 },
+    { label: "1cg", start: 239.72, end: 244.59 },
+    { label: "1ch", start: 244.84, end: 255.45 },
+    { label: "1ci", start: 255.7, end: 256.93 },
+    { label: "1cj", start: 257.18, end: 258.95 },
+    { label: "1ck", start: 259.2, end: 266.21 },
+    { label: "1cl", start: 266.46, end: 267.91 },
+    { label: "1cm", start: 268.16, end: 271.01 },
+    { label: "1cn", start: 271.26, end: 275.07 },
+    { label: "1co", start: 275.32, end: 284.85 },
+    { label: "1cp", start: 285.1, end: 289.03 },
+    { label: "1cq", start: 289.28, end: 291.43 },
+    { label: "1cr", start: 291.68, end: 295.05 },
+    { label: "1cs", start: 295.3, end: 296.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 296.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Hayndeeji&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetitre"><div id="T1a" class="txs">Hayndeeji</div></div>
+<div class="p_contetexte"><div id="T1b" class="txs">Waɗiino e jamaanuuji, suka tewtoowo anndal.</div> <div id="T1c" class="txs">O wi'i walaa fu ko o yiɗi so wanaa anndude ko woni e adunaaru.</div></div>
+<div class="p_contetexte"><div id="T1d" class="txs">O yehi to gorko mawɗo.</div> <div id="T1e" class="txs">O itti o fillanii ɗum.</div> <div id="T1f" class="txs">Gorko mawɗo men wi'i o yaha de o warta o fillanoo ɗum ko o yi'i.</div></div>
+<div class="p_contetexte"><div id="T1g" class="txs">Nyalaande dillol makko fini.</div> <div id="T1h" class="txs">O dilliri lettugal.</div> <div id="T1i" class="txs">So o waalii ɗo hannde, ni o waala to, jaango.</div> <div id="T1j" class="txs">Walaa fu ko o hiirnii so wanaa tewtiiru anndal.</div></div>
+<div class="p_contetexte"><div id="T1k" class="txs">Heddii suka gorko men wari tawi hayre raneere toy na waalii.</div> <div id="T1l" class="txs">O wi'i hee bawɗe laamɗo!</div> <div id="T1m" class="txs">ndaaree hayre rawniri.</div> <div id="T1n" class="txs">Ni o turii heɓa o ada nde.</div> <div id="T1o" class="txs">Ni hayre men fitti foɓii tiinde makko de fottowi yeeso.</div> <div id="T1p" class="txs">O memi adude nde, o hunngii.</div> <div id="T1q" class="txs">Ndeen noon o watti o wi'i, waɗii haynde nde haynaaki Alla.</div> <div id="T1r" class="txs">Hayre men wi'i o, ɗum koo haynaaki; yaw yeeso ko a yi'an ko haynii.</div></div>
+<div class="p_contetexte"><div id="T1s" class="txs">Suka gorko adi laawol.</div> <div id="T1t" class="txs">Na yaha.</div> <div id="T1u" class="txs">Na yaha faa woɗɗii.</div> <div id="T1v" class="txs">Wari o hawri jabaare na dogga, na doggida kure sappo e ɗiɗi.</div> <div id="T1w" class="txs">Huunde fu waɗay ɗum.</div> <div id="T1x" class="txs">O ɗaaƴi jabaare daroo.</div> <div id="T1y" class="txs">Jabaare darii.</div> <div id="T1z" class="txs">O wi'i ɗum waɗii ko haynii haynaaki Alla.</div> <div id="T1aa" class="txs">Noy de piɗaɗaa kure sappo e ɗiɗi, a boɓɓaaki sakko aan waatata&nbsp;?</div> <div id="T1ab" class="txs">Jabaare men wi'i o, ɗum koo haynaaki; yaw yeeso ko a yi'an ko haynii.</div></div>
+<div class="p_contetexte"><div id="T1ac" class="txs">Suka gorko men adi laawol.</div> <div id="T1ad" class="txs">Na yaha.</div> <div id="T1ae" class="txs">Na yaha faa woɗɗii.</div> <div id="T1af" class="txs">O wari o tawi jabaare wonnde na fiɗaa kural gootal na boɓɓii, waati na waalii.</div> <div id="T1ag" class="txs">O wi'i bawɗe laamɗo!</div> <div id="T1ah" class="txs">Jaka ko jabaare nde wi'unoo ɗum yo ngoonga.</div> <div id="T1ai" class="txs">Ɗum na yaadannoo kure sappo e ɗiɗi, boɓɓaaki sakko waatan, de ɗum kural gootal tan, de na waati na waalii.</div> <div id="T1aj" class="txs">Goɗɗum tawaa ɗoon, wi'i ɗum koo haynaaki.</div><div id="T1ak" class="txs">Yaw!</div> <div id="T1al" class="txs">So Alla jaɓii a yottowoke yeeso, a yi'owan ko ɓuri ɗum haynaade.</div></div>
+<div class="p_contetexte"><div id="T1am" class="txs">Suka gorko adi laawol.</div> <div id="T1an" class="txs">Na yaha.</div> <div id="T1ao" class="txs">Na yaha faa woɗɗii.</div> <div id="T1ap" class="txs">O wari o tawi gorko mawɗo mo duuɓi capanɗe jeenay na woni hakkunde sukaaɓe ɓe duuɓi sappo e sappo e ɗiɗɗiɗi.</div> <div id="T1aq" class="txs">Sukaaɓe ɓe, ƴommbe mbaɗɗii na ndoggina hano pucci ni.</div> <div id="T1ar" class="txs">Gorko nawɗo o, na jooɗii nder lekki.</div> <div id="T1as" class="txs">Sukaaɓe ɓe, camndondira pucci ɗi nay nay e tati tati, ndoggina de ngara ndaasoo yeeso gorko mawɗo o.</div> <div id="T1at" class="txs">Faa hakkunde naange hewta.</div> <div id="T1au" class="txs">Faa ɓe ngara ɓe coma.</div> <div id="T1av" class="txs">Ɓe ngara ɓe njooɗoo ɗakkol gorko mawɗo.</div> <div id="T1aw" class="txs">Warowa nyaamdu waddee.</div> <div id="T1ax" class="txs">Suka ngarɗo heɓa nyaama fu, itta lonngere wootere watta e le'al de sakitoo fuɗɗa nyaamde.</div></div>
+<div class="p_contetexte"><div id="T1ay" class="txs">Ko woni e le'al ɗum wonnoo nyaamdu gorko mawɗo.</div> <div id="T1az" class="txs">Haɗataa ɗum haarude, haɗataa sukaaɓe ɓe, haarude.</div> <div id="T1ba" class="txs">O jooɗii o ndaari.</div> <div id="T1bb" class="txs">O wi'i bawɗe laamɗo!</div> <div id="T1bc" class="txs">waɗii ko haynii haynaaki Alla.</div> <div id="T1bd" class="txs">Gorko mawɗo men wi'i o, ɗum koo haynaaki.</div> <div id="T1be" class="txs">Ko ɓuri ɗum haynaade na woni yeeso.</div> <div id="T1bf" class="txs">Ta termu hantude ko haynii so wanaa a hulataa tampiri.</div> <div id="T1bg" class="txs">Ko ɓuranoo kam ni kootaa wuro maa.</div></div>
+<div class="p_contetexte"><div id="T1bh" class="txs">Heddii suka gorko yedday.</div> <div id="T1bi" class="txs">O yeeƴii ɗo o ƴuurunoo.</div> <div id="T1bj" class="txs">O yottinoo fu, o jippowii ɗo gorko mawɗo, mo o wayninoo ko o tewtowan anndal o.</div> <div id="T1bk" class="txs">Ɓe njootondiri faa jootiiru timmi.</div> <div id="T1bl" class="txs">Gorko mawɗo wi'i a yehii tewtiiru anndal faa a wartii.</div> <div id="T1bm" class="txs">O wi'i mi yehii faa mi warti.</div> <div id="T1bn" class="txs">O wi'i ɗume nji'oyɗaa&nbsp;? </div></div>
+<div class="p_contetexte"><div id="T1bo" class="txs">Suka gorko jaabbbii o; o wi'i, hoore aranande fu, nde ndillunoo-mi, mi yi'aanaa hayre raneere toy toy.</div> <div id="T1bp" class="txs">Mbi'um waɗii hayre na rawna.</div> <div id="T1bq" class="txs">Turii-mi heɓa mi ada.</div> <div id="T1br" class="txs">Hayre fitti fii kam tiinde.</div> <div id="T1bs" class="txs">Termum faa waɗi koyngal tati, mi waaway adude nde.</div></div>
+<div class="p_contetexte"><div id="T1bt" class="txs">Gorko mawɗo wi'i hayre raneere toy nde, hollataanaa ibiliisa filataako ɓii-aadama remmbe.</div> <div id="T1bu" class="txs">Neɗɗo filotoo ɗum.</div></div>
+<div class="p_contetexte"><div id="T1bv" class="txs">Ni suka gorko wi'i, taaɓii.</div> <div id="T1bw" class="txs">Warowi hawri jabaare na doggida kure sappo e ɗiɗi.</div> <div id="T1bx" class="txs">A anndaa ngale ɓuri mawnude.</div> <div id="T1by" class="txs">Jabaare boɓɓaaki sakko waatan.</div> <div id="T1bz" class="txs">O wi'i waɗii ko haynii haynaaki Alla.</div> <div id="T1ca" class="txs">Jabaare wi'i, o yaha ko o yi'an ko ɓuri ɗuum haynaade.</div></div>
+<div class="p_contetexte"><div id="T1cb" class="txs">Gorko mawɗo wi'i jabaare nde njiwɗaa na yahada e kure sappo e ɗiɗi de waatay nde, yo ɓii-wuro.</div> <div id="T1cc" class="txs">Ɓii-wuro ko waɗi fu na munyanee faa waɗa kile sappo e ɗiɗi, de sakitee waɗee ko wattee fu.</div></div>
+<div class="p_contetexte"><div id="T1cd" class="txs">Ni suka gorko wi'i, taaɓii.</div> <div id="T1ce" class="txs">Gorko mawɗo ƴami ko o yi'i nde o taaɓinoo.</div> <div id="T1cf" class="txs">O wi'i nde taaɓinoo-mi, jabaare nji'um na waati na waali.</div> <div id="T1cg" class="txs">Ndaarum, tawum kural gootal ngal ɓuraa fay gootum, fiɗaa de waati.</div></div>
+<div class="p_contetexte"><div id="T1ch" class="txs">Gorko mawɗo wi'i, jabaare nde kural gootal wari nde, hollataanaa koo janano, ɗo yehi fu, nannga hoore muuɗum.</div> <div id="T1ci" class="txs">Golle gooto na waawi heddude ɗum.</div></div>
+<div class="p_contetexte"><div id="T1cj" class="txs">Ni suka gorko wi'i, taaɓii.</div> <div id="T1ck" class="txs">Warowi tawi gorko neejo na jooɗii ley lekki; sukaaɓe, ɓe duuɓi sappo sappo e sappo e ɗiɗɗiɗi na ndoggina ƴommbe na ngara na ndaasa yeeso muuɗum.</div> <div id="T1cl" class="txs">Nyaamdu waddee.</div> <div id="T1cm" class="txs">Gorko mawɗo, ittee lonngere lonngere hokkoree.</div> <div id="T1cn" class="txs">Kam haaran, haɗataa sukaaɓe du haarude.</div></div>
+<div class="p_contetexte"><div id="T1co" class="txs">Gorko mawɗo wi'i, gorko mo tawɗaa ley lekki o, oon won sifa gorko annduɗo ko gollata.</div> <div id="T1cp" class="txs">So neɗɗo anndii ko gollata, no sukaaɓe ngardi e muuɗum fu, na heƴi e muuɗum.</div> <div id="T1cq" class="txs">Kaa mo anndaa fu, wi'ataanaa yo gorko jayɗo.</div> <div id="T1cr" class="txs">So mawɗo jaasay, marataa sukaaɓe, marataa mawɓe.</div></div>
+<div class="p_Conteur"><div id="T1cs" class="txs">Yoɓi Isiyaaka Nyalbi</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/11_Haayndeeji.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

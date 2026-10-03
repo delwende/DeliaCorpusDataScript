@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>281  So-m-meng 21</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "21a", start: 426.92, end: 436.11 },
+    { label: "21b", start: 436.36, end: 440.37 },
+    { label: "21c", start: 440.62, end: 441.79 },
+    { label: "21d", start: 442.04, end: 444.87 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 426.92;
+var stopTime  = 444.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 42 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-020.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;281  So-m-meng&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;21&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-022.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes more 280 a 322-image21.jpg" />
+
+<div class="m"><div id="T21a" class="txs"><span class="bd">301</span><span class="bd">  </span><span class="bd"> </span><span class="bd">Moog</span><span class="bd"> </span><span class="bd">lim</span><span class="bd"> </span><span class="bd">koadeng</span><span class="bd"> </span><span class="bd">kõn</span><span class="bd"> </span><span class="bd">lim</span><span class="bd"> </span><span class="bd">a</span><span class="bd"> </span><span class="bd">koɛɛga</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T21b" class="txs"><span class="bdit">(L’herbe peut cacher une perdrix,</span></div> <div id="T21c" class="txs"><span class="bdit">non sa voix).</span></div></div>
+<div class="m"><div id="T21d" class="txs"><span class="bd">Moog</span><span class="bd"> </span><span class="bd">lim</span><span class="bd"> </span><span class="bd">koadeng</span><span class="bd"> </span><span class="bd">kõn</span><span class="bd"> </span><span class="bd">lim</span><span class="bd"> </span><span class="bd">a</span><span class="bd"> </span><span class="bd">koɛɛga</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 281 a 322 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

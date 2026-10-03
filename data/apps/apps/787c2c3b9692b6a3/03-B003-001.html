@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>61 Mɔgɔ, ni e seen yi e 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 1.03, end: 10.05 },
+    { label: "1b", start: 10.3, end: 15.26 },
+    { label: "1c", start: 15.51, end: 26.25 },
+    { label: "1d", start: 26.5, end: 32.9 },
+    { label: "1e", start: 33.15, end: 42.68 },
+    { label: "1f", start: 42.93, end: 53.34 },
+    { label: "1g", start: 53.59, end: 57.02 },
+    { label: "1h", start: 57.27, end: 65.8 },
+    { label: "1i", start: 66.05, end: 72.02 },
+    { label: "1j", start: 72.27, end: 76.29 },
+    { label: "1k", start: 76.54, end: 84.45 },
+    { label: "1l", start: 84.7, end: 92.43 },
+    { label: "1m", start: 92.68, end: 98.54 },
+    { label: "1n", start: 98.79, end: 103.67 },
+    { label: "1o", start: 103.92, end: 107.82 },
+    { label: "1p", start: 108.07, end: 118.07 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1.03;
+var stopTime  = 118.07;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;61 Mɔgɔ, ni e seen yi e&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">61 </span><span class="bd">Mɔgɔ</span><span class="bd">, ni e </span><span class="bd">seen</span><span class="bd"> </span><span class="bd">yi</span><span class="bd"> e ben, e bi </span><span class="bd">wuli</span><span class="bd">, </span><span class="bd">nga</span><span class="bd"> ni </span><span class="bd">daa</span><span class="bd"> </span><span class="bd">yi</span><span class="bd"> e ben, e </span><span class="bd">wuli</span><span class="bd"> man di.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Il faut faire attention à tout ce que vous dites.</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Mɔgɔ</span><span class="bd">, ni e </span><span class="bd">seen</span><span class="bd"> </span><span class="bd">yi</span><span class="bd"> e ben, e bi </span><span class="bd">wuli</span><span class="bd">, </span><span class="bd">nga</span><span class="bd"> ni </span><span class="bd">daa</span><span class="bd"> </span><span class="bd">yi</span><span class="bd"> e ben, e </span><span class="bd">wuli</span><span class="bd"> man di.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">62 </span><span class="bd">Mɔgɔkɔrɔbakuma</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">surukubo</span><span class="bd"> le </span><span class="bd">ye</span><span class="bd">, ni a mana </span><span class="bd">kɔrɔ</span><span class="bd">, a bi </span><span class="bd">gwɛ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1e" class="txs">La parole d’une vielle personne peut vous paraitre fausse aujourd’hui, mais au fil du temps, vous verrez que c’est de la vérité.</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">Mɔgɔkɔrɔbakuma</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">surukubo</span><span class="bd"> le </span><span class="bd">ye</span><span class="bd">, ni </span><span class="bd">a</span><span class="bd"> mana </span><span class="bd">kɔrɔ</span><span class="bd">, a bi </span><span class="bd">gwɛ</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">63</span><span class="bd"> </span><span class="bd">Misi</span><span class="bd"> </span><span class="bd">be</span><span class="bd"> joli to a </span><span class="bd">yɛrɛ</span><span class="bd"> la ka </span><span class="bd">nɔnɔ</span><span class="bd"> </span><span class="bd">bɔ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1h" class="txs">On peut se passer de ses problèmes, ses soucis, pour vivre une vie harmonieuse avec les autres.</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Misi</span><span class="bd"> </span><span class="bd">be</span><span class="bd"> joli to a </span><span class="bd">yɛrɛ</span><span class="bd"> la ka </span><span class="bd">nɔnɔ</span><span class="bd"> </span><span class="bd">bɔ</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">64 Mun ka di </span><span class="bd">nanbaranin</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> na n ta </span><span class="bd">kɔ</span><span class="bd">&nbsp;?</span></div></div>
+<div class="m"><div id="T1k" class="txs">Quel est le plus grand plaisir d’un handicapé mieux que quand tu lui que tu viens le prendre&nbsp;? </div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">Mun</span><span class="bd"> ka di </span><span class="bd">nanbaranin</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">na</span><span class="bd"> n </span><span class="bd">ta</span><span class="bd"> </span><span class="bd">kɔ</span><span class="bd">&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">67 N ka </span><span class="bd">fali</span><span class="bd"> mina, n bi </span><span class="bd">taga</span><span class="bd"> </span><span class="bd">ɲɛgɛnɛ</span><span class="bd"> </span><span class="bd">kɛ</span><span class="bd"> ka </span><span class="bd">na</span><span class="bd">, o te </span><span class="bd">mɔgɔ</span><span class="bd"> </span><span class="bd">kɛ</span><span class="bd"> </span><span class="bd">falitigi</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1n" class="txs">Ce qu’on prête ne vous appartient pas.</div> <div id="T1o" class="txs">Songez à remettre après usage.</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">N ka </span><span class="bd">fali</span><span class="bd"> mina, n bi </span><span class="bd">taga</span><span class="bd"> </span><span class="bd">ɲɛgɛnɛ</span><span class="bd"> </span><span class="bd">kɛ</span><span class="bd"> ka na, o te </span><span class="bd">mɔgɔ</span><span class="bd"> </span><span class="bd">kɛ</span><span class="bd"> </span><span class="bd">falitigi</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/prov dioula vol 3 61-67.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

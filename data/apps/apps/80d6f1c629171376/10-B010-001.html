@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>47 Golle bonɗo 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 10.25 },
+    { label: "1b", start: 10.5, end: 12.23 },
+    { label: "1c", start: 12.48, end: 16.79 },
+    { label: "1d", start: 17.04, end: 17.63 },
+    { label: "1e", start: 17.88, end: 23.87 },
+    { label: "1f", start: 24.12, end: 28.79 },
+    { label: "1g", start: 29.04, end: 35.35 },
+    { label: "1h", start: 35.6, end: 36.95 },
+    { label: "1i", start: 37.2, end: 38.03 },
+    { label: "1j", start: 38.28, end: 39.99 },
+    { label: "1k", start: 40.24, end: 42.15 },
+    { label: "1l", start: 42.4, end: 43.15 },
+    { label: "1m", start: 43.4, end: 49.75 },
+    { label: "1n", start: 50, end: 52.05 },
+    { label: "1o", start: 52.3, end: 55.79 },
+    { label: "1p", start: 56.04, end: 58.07 },
+    { label: "1q", start: 58.32, end: 60.81 },
+    { label: "1r", start: 61.06, end: 65.59 },
+    { label: "1s", start: 65.84, end: 68.63 },
+    { label: "1t", start: 68.88, end: 70.55 },
+    { label: "1u", start: 70.8, end: 75.95 },
+    { label: "1v", start: 76.2, end: 77.21 },
+    { label: "1w", start: 77.46, end: 81.07 },
+    { label: "1x", start: 81.32, end: 86.71 },
+    { label: "1y", start: 86.96, end: 88.91 },
+    { label: "1z", start: 89.16, end: 90.79 },
+    { label: "1aa", start: 91.04, end: 92.37 },
+    { label: "1ab", start: 92.62, end: 98.35 },
+    { label: "1ac", start: 98.6, end: 99.95 },
+    { label: "1ad", start: 100.2, end: 101.87 },
+    { label: "1ae", start: 102.12, end: 103.61 },
+    { label: "1af", start: 103.86, end: 106.17 },
+    { label: "1ag", start: 106.42, end: 112.93 },
+    { label: "1ah", start: 113.18, end: 115.45 },
+    { label: "1ai", start: 115.7, end: 116.45 },
+    { label: "1aj", start: 116.7, end: 117.95 },
+    { label: "1ak", start: 118.2, end: 119.51 },
+    { label: "1al", start: 119.76, end: 120.73 },
+    { label: "1am", start: 120.98, end: 123.81 },
+    { label: "1an", start: 124.06, end: 127.09 },
+    { label: "1ao", start: 127.34, end: 130.25 },
+    { label: "1ap", start: 130.5, end: 131.83 },
+    { label: "1aq", start: 132.08, end: 134.33 },
+    { label: "1ar", start: 134.58, end: 135.27 },
+    { label: "1as", start: 135.52, end: 138.01 },
+    { label: "1at", start: 138.26, end: 141.67 },
+    { label: "1au", start: 141.92, end: 144.75 },
+    { label: "1av", start: 145, end: 147.49 },
+    { label: "1aw", start: 147.74, end: 149.67 },
+    { label: "1ax", start: 149.92, end: 153.35 },
+    { label: "1ay", start: 153.6, end: 156.17 },
+    { label: "1az", start: 156.42, end: 158.33 },
+    { label: "1ba", start: 158.58, end: 161.13 },
+    { label: "1bb", start: 161.38, end: 164.01 },
+    { label: "1bc", start: 164.26, end: 165.39 },
+    { label: "1bd", start: 165.64, end: 168.49 },
+    { label: "1be", start: 168.74, end: 171.25 },
+    { label: "1bf", start: 171.5, end: 172.95 },
+    { label: "1bg", start: 173.2, end: 174.75 },
+    { label: "1bh", start: 175, end: 177.97 },
+    { label: "1bi", start: 178.22, end: 179.07 },
+    { label: "1bj", start: 179.32, end: 189.15 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 189.15;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "10-B010-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='09-B009-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;47 Golle bonɗo&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B010-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">47 </span><span class="bd">Golle bonɗo</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Waɗiino e jamaanuuji,</div> <div id="T1c" class="txs">gorko wonoo de walaa golle so wanaa uutoyde mayɓe.</div> <div id="T1d" class="txs">Arande,</div> <div id="T1e" class="txs">so mayɗo maayii ni yo nder wudere leppi palle wattetee faddem ufeede.</div> <div id="T1f" class="txs">So ɗum waraama heɓa ɗum ufee ni yo ceede ufidetee.</div> <div id="T1g" class="txs">Ndelle so mayɗo mooɓowaama ni gorko men acca faa reedu jemma de ɗum dillira janaale.</div> <div id="T1h" class="txs">So rewii faa yottoke,</div> <div id="T1i" class="txs">ni uuta mayɗo o,</div> <div id="T1j" class="txs">itta wudere ufiraande nde,</div> <div id="T1k" class="txs">de ada ceede ufidaaɗe mayɗo oon.</div></div>
+<div class="m"><div id="T1l" class="txs">Wari gorko o,</div> <div id="T1m" class="txs">walaa fu golle so wanaa sottude gineeji mayɓe uutaaɗi e janaale.</div> <div id="T1n" class="txs">Nih o wa'ri jawdi.</div> <div id="T1o" class="txs">Lettugal e gorgal fu haala jawdi makko yo haalete.</div> <div id="T1p" class="txs">Yimɓeeje fu ngari na kula o.</div> <div id="T1q" class="txs">Inniiko e baabiiko ngari kuli.</div> <div id="T1r" class="txs">Ɓe njamiri o saabu Alla o sela uutude mayɓe.</div></div>
+<div class="m"><div id="T1s" class="txs">Heddii nyalaaɗe na njaha na ngarta.</div> <div id="T1t" class="txs">Goɗɗo warowi maayi.</div> <div id="T1u" class="txs">Wattaa e moonyuure heere yahaa ufowaa,</div> <div id="T1v" class="txs">ufidaa ceede.</div> <div id="T1w" class="txs">Gorko men acci faa jenngi de dilliri janaale.</div></div>
+<div class="m"><div id="T1x" class="txs">Uutoowal mayɓe yottinoo janaale ni tewti ɗo saabeere heere nde heedi.</div> <div id="T1y" class="txs">O wari o yiiti.</div> <div id="T1z" class="txs">O fuɗɗi uutude.</div> <div id="T1aa" class="txs">Ni na o uuta.</div> <div id="T1ab" class="txs">Na o uuta faa o warowi na o yi'a wudere ufiraande mayɗo o na fuunta.</div> <div id="T1ac" class="txs">Ni na o uuta.</div> <div id="T1ad" class="txs">So o ɓadoke meemude wudere nde,</div> <div id="T1ae" class="txs">ni woɗɗoo ɓeedoo.</div> <div id="T1af" class="txs">Ni o naɗɗinoo e uutude.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ag" class="txs">Gorko men na haccoo wudere mayɗo e ceede na mbaalii de o hewtataa sako o adan.</div> <div id="T1ah" class="txs">Ni o watta o naɗɗinoo e wasude.</div> <div id="T1ai" class="txs">O mema.</div> <div id="T1aj" class="txs">O hunngoo.</div> <div id="T1ak" class="txs">O watta o mema.</div> <div id="T1al" class="txs">O hunngoo.</div> <div id="T1am" class="txs">Gorko men memi faa wari somi.</div> <div id="T1an" class="txs">Ndeen noon o miccii o tiggitii dow.</div> <div id="T1ao" class="txs">Na o yi'a hunnduko yanaande faa ɗo toowi.</div> <div id="T1ap" class="txs">Kulol ƴeenyi o.</div> <div id="T1aq" class="txs">O nyaagii Alla walla o wuytoo.</div></div>
+<div class="m"><div id="T1ar" class="txs">Arande nde,</div> <div id="T1as" class="txs">so mayɗo fukkinaama nder yanaande,</div> <div id="T1at" class="txs">leɗɗe deketee dow fadde leydi e watteede.</div> <div id="T1au" class="txs">Nde gorko men nyaaginoo Alla walla ɗum fu,</div> <div id="T1av" class="txs">yanaande nde fiɗi o.</div> <div id="T1aw" class="txs">O fiiri o hooti dow.</div> <div id="T1ax" class="txs">Leggal saabeere falii o fii hoore.</div> <div id="T1ay" class="txs">O yeeƴii o boɓɓii nder yanaande.</div> <div id="T1az" class="txs">Ni yanaande fiɗi o.</div> <div id="T1ba" class="txs">Ni leɗɗe palii o pii hoore.</div> <div id="T1bb" class="txs">Nih faa warowi nde yanaande fiɗunoo o fu,</div> <div id="T1bc" class="txs">o boɓɓowii yaasi.</div> <div id="T1bd" class="txs">Leɗɗe yanaande centii ndewi o na tappa.</div> <div id="T1be" class="txs">Na o halɓa ni na tappa o.</div> <div id="T1bf" class="txs">Leɗɗe saabeere ɗe,</div> <div id="T1bg" class="txs">pii o faa o hootowi wuro.</div></div>
+<div class="m"><div id="T1bh" class="txs">Ndelle paamee koo golle bonɗo walaa baasugu.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bi" class="txs">Alahaji A.</div> <div id="T1bj" class="txs">Sibiri Baganaa Jallo</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/10 ful cont vol2.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

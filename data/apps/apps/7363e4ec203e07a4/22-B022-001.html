@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°21 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.69 },
+    { label: "1b", start: 1.94, end: 3.95 },
+    { label: "1c", start: 4.2, end: 5.05 },
+    { label: "1d", start: 5.3, end: 7.11 },
+    { label: "1e", start: 7.36, end: 8.03 },
+    { label: "1f", start: 8.28, end: 10.11 },
+    { label: "1g", start: 10.36, end: 12.17 },
+    { label: "1h", start: 12.42, end: 15.47 },
+    { label: "1i", start: 15.72, end: 19.99 },
+    { label: "1j", start: 20.24, end: 22.17 },
+    { label: "1k", start: 22.42, end: 25.63 },
+    { label: "1l", start: 25.88, end: 26.87 },
+    { label: "1m", start: 27.12, end: 28.35 },
+    { label: "1n", start: 28.6, end: 32.01 },
+    { label: "1o", start: 32.26, end: 40.71 },
+    { label: "1p", start: 40.96, end: 42.99 },
+    { label: "1q", start: 43.24, end: 48.19 },
+    { label: "1r", start: 48.44, end: 53.29 },
+    { label: "1s", start: 53.54, end: 55.45 },
+    { label: "1t", start: 55.7, end: 58.23 },
+    { label: "1u", start: 58.48, end: 61.99 },
+    { label: "1v", start: 62.24, end: 67.03 },
+    { label: "1w", start: 67.28, end: 73.65 },
+    { label: "1x", start: 73.9, end: 76.55 },
+    { label: "1y", start: 76.8, end: 83.43 },
+    { label: "1z", start: 83.68, end: 85.11 },
+    { label: "1aa", start: 85.36, end: 89.53 },
+    { label: "1ab", start: 89.78, end: 90.91 },
+    { label: "1ac", start: 91.16, end: 92.87 },
+    { label: "1ad", start: 93.12, end: 94.57 },
+    { label: "1ae", start: 94.82, end: 95.99 },
+    { label: "1af", start: 96.24, end: 97.63 },
+    { label: "1ag", start: 97.88, end: 100.77 },
+    { label: "1ah", start: 101.02, end: 104.25 },
+    { label: "1ai", start: 104.5, end: 106.73 },
+    { label: "1aj", start: 106.98, end: 111.23 },
+    { label: "1ak", start: 111.48, end: 112.79 },
+    { label: "1al", start: 113.04, end: 114.65 },
+    { label: "1am", start: 114.9, end: 116.75 },
+    { label: "1an", start: 117, end: 118.95 },
+    { label: "1ao", start: 119.2, end: 121.15 },
+    { label: "1ap", start: 121.4, end: 122.61 },
+    { label: "1aq", start: 122.86, end: 123.75 },
+    { label: "1ar", start: 124, end: 125.43 },
+    { label: "1as", start: 125.68, end: 127.87 },
+    { label: "1at", start: 128.12, end: 129.13 },
+    { label: "1au", start: 129.38, end: 130.83 },
+    { label: "1av", start: 131.08, end: 135.39 },
+    { label: "1aw", start: 135.64, end: 139.29 },
+    { label: "1ax", start: 139.54, end: 142.35 },
+    { label: "1ay", start: 142.6, end: 143.73 },
+    { label: "1az", start: 143.98, end: 144.77 },
+    { label: "1ba", start: 145.02, end: 148.13 },
+    { label: "1bb", start: 148.38, end: 154.45 },
+    { label: "1bc", start: 154.7, end: 156.73 },
+    { label: "1bd", start: 156.98, end: 159.47 },
+    { label: "1be", start: 159.72, end: 161.21 },
+    { label: "1bf", start: 161.46, end: 163.53 },
+    { label: "1bg", start: 163.78, end: 164.97 },
+    { label: "1bh", start: 165.22, end: 167.11 },
+    { label: "1bi", start: 167.36, end: 169.19 },
+    { label: "1bj", start: 169.44, end: 171.53 },
+    { label: "1bk", start: 171.78, end: 174.23 },
+    { label: "1bl", start: 174.48, end: 176.51 },
+    { label: "1bm", start: 176.76, end: 177.91 },
+    { label: "1bn", start: 178.16, end: 179.85 },
+    { label: "1bo", start: 180.1, end: 182.97 },
+    { label: "1bp", start: 183.22, end: 191.51 },
+    { label: "1bq", start: 191.76, end: 194.17 },
+    { label: "1br", start: 194.42, end: 198.05 },
+    { label: "1bs", start: 198.3, end: 202.77 },
+    { label: "1bt", start: 203.02, end: 206.15 },
+    { label: "1bu", start: 206.4, end: 210.55 },
+    { label: "1bv", start: 210.8, end: 215.73 },
+    { label: "1bw", start: 215.98, end: 216.85 },
+    { label: "1bx", start: 217.1, end: 219.93 },
+    { label: "1by", start: 220.18, end: 221.61 },
+    { label: "1bz", start: 221.86, end: 224.01 },
+    { label: "1ca", start: 224.26, end: 226.01 },
+    { label: "1cb", start: 226.26, end: 230.17 },
+    { label: "1cc", start: 230.42, end: 235.73 },
+    { label: "1cd", start: 235.98, end: 239.69 },
+    { label: "1ce", start: 239.94, end: 240.75 },
+    { label: "1cf", start: 241, end: 246.03 },
+    { label: "1cg", start: 246.28, end: 248.09 },
+    { label: "1ch", start: 248.34, end: 251.33 },
+    { label: "1ci", start: 251.58, end: 253.59 },
+    { label: "1cj", start: 253.84, end: 258.61 },
+    { label: "1ck", start: 258.86, end: 259.95 },
+    { label: "1cl", start: 260.2, end: 263.45 },
+    { label: "1cm", start: 263.7, end: 268.39 },
+    { label: "1cn", start: 268.64, end: 272.37 },
+    { label: "1co", start: 272.62, end: 274.25 },
+    { label: "1cp", start: 274.5, end: 278.79 },
+    { label: "1cq", start: 279.04, end: 287.83 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 287.83;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "22-B022-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='21-B021-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='21-B021-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°21&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='23-B023-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='23-B023-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B022-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°21 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Anticipez les besoins futurs.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs">Histoire:</div></div>
+<div class="p"><div id="T1d" class="txs"><span class="it">Finda</span><span class="it"> est très heureuse.</span></div> <div id="T1e" class="txs"><span class="it">Cette année,</span></div> <div id="T1f" class="txs"><span class="it">les pluies ont été généreuses.</span></div> <div id="T1g" class="txs"><span class="it">Les récoltes ont été très bonnes.</span></div><div id="T1h" class="txs"><span class="it">Finda</span><span class="it"> a beaucoup de sacs de riz à la maison.</span></div> <div id="T1i" class="txs"><span class="it">Plus besoin de compter le nombre de mesures qu’elle prépare chaque jour.</span></div> <div id="T1j" class="txs"><span class="it">Il y a de la nourriture en abondance,</span></div> <div id="T1k" class="txs"><span class="it">sa famille va donc pouvoir manger en</span><span class="it"> </span><span class="it">abondance!</span></div></div>
+<div class="p"><div id="T1l" class="txs"><span class="it">Le dimanche,</span></div> <div id="T1m" class="txs"><span class="it">lors de la prière,</span></div> <div id="T1n" class="txs"><span class="it">le pasteur lit dans la Bible l’histoire de Joseph:</span></div> <div id="T1o" class="txs"><span class="it">Dieu lui dit de mettre de la nourriture de côté dans les saisons abondantes pour avoir des réserves pour les périodes creuses du futur.</span></div><div id="T1p" class="txs"><span class="it">Finda</span><span class="it"> est troublée.</span></div> <div id="T1q" class="txs"><span class="it">Elle se demande si cet enseignement de la Bible peut s’appliquer à sa vie.</span></div> <div id="T1r" class="txs"><span class="it">Dieu ne dit-il pas que nous devons lui faire confiance pour nos besoins de demain?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1s" class="txs">Que pensez-vous de cette histoire?</div> <div id="T1t" class="txs">Quel conseil voulez-vous donner à Finda?</div> <div id="T1u" class="txs">Faire des réserves est-il un manque de confiance en Dieu?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1v" class="txs">La Bible nous encourage à ne pas nous faire du souci pour nos besoins futurs,</div> <div id="T1w" class="txs">mais aussi à gérer sagement ce que nous avons aujourd’hui pour être plus à l’aise demain.</div></div>
+<div class="p_Corpsdetexte"><div id="T1x" class="txs">Nous ne devons pas être superstitieux:</div> <div id="T1y" class="txs">penser que des jours difficiles peuvent arriver ne font pas venir le malheur sur notre famille.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="ul">Versets </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1aa" class="txs"><span class="it">«&nbsp;Ne vous faites pas de souci pour votre vie ni pour votre corps.</span></div> <div id="T1ab" class="txs"><span class="it">Ne vous demandez pas:</span></div> <div id="T1ac" class="txs"><span class="it">Qu’est-ce que nous allons manger?</span></div> <div id="T1ad" class="txs"><span class="it">(…) Regardez les oiseaux.</span></div> <div id="T1ae" class="txs"><span class="it">Ils ne sèment pas,</span></div> <div id="T1af" class="txs"><span class="it">ils ne moissonnent pas.</span></div> <div id="T1ag" class="txs"><span class="it">Ils ne mettent pas de récoltes dans les greniers.</span></div> <div id="T1ah" class="txs"><span class="it">Et votre Père qui est dans les cieux les nourrit!</span></div> <div id="T1ai" class="txs"><span class="it">Vous valez beaucoup plus que les oiseaux.»</span></div><div id="T1aj" class="txs">(Matthieu 6, 25-27)</div></div>
+<div class="b">&nbsp;</div>
+<div class="p"><div id="T1ak" class="txs"><span class="it">«&nbsp;Regarde la fourmi,</span></div> <div id="T1al" class="txs"><span class="it">paresseux!</span></div> <div id="T1am" class="txs"><span class="it">Voix comment elle se conduit,</span></div> <div id="T1an" class="txs"><span class="it">et tu deviendras un sage.</span></div> <div id="T1ao" class="txs"><span class="it">La fourmi n’a pas de chef,</span></div> <div id="T1ap" class="txs"><span class="it">ni de surveillant,</span></div> <div id="T1aq" class="txs"><span class="it">ni de patron.</span></div> <div id="T1ar" class="txs"><span class="it">Pendant la bonne saison,</span></div> <div id="T1as" class="txs"><span class="it">elle amasse de la nourriture.</span></div> <div id="T1at" class="txs"><span class="it">Au moment de la récolte,</span></div> <div id="T1au" class="txs"><span class="it">elle fait des réserves.»</span></div><div id="T1av" class="txs">(Proverbes 6, 6-8)</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1aw" class="txs">Nous ne devons pas nous faire du souci pour ce que nous allons manger,</div> <div id="T1ax" class="txs">ni croire que faire des réserves nous met à l’abri de tout danger.</div> <div id="T1ay" class="txs">Nous mettons notre confiance en Dieu et non dans nos réserves.</div> <div id="T1az" class="txs">Par contre,</div> <div id="T1ba" class="txs">nous devons comprendre que la vie est faite de saisons:</div> <div id="T1bb" class="txs">il y a des périodes où la nourriture est abondante et d’autres où la nourriture se fait rare.</div></div>
+<div class="m"><div id="T1bc" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="m"><div id="T1bd" class="txs">Quand nous sommes à l’aise avec nos biens,</div> <div id="T1be" class="txs">que la saison est bonne,</div> <div id="T1bf" class="txs">à quoi cela peut être dû?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1bg" class="txs">Exemple:</div> <div id="T1bh" class="txs">nous avons eu des bonnes récoltes,</div> <div id="T1bi" class="txs">nous avons trouvé un travail,</div> <div id="T1bj" class="txs">personne n’a été malade…</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bk" class="txs">Quand nous vivons des temps difficiles,</div> <div id="T1bl" class="txs">à quoi cela peut être dû?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1bm" class="txs">Exemple:</div> <div id="T1bn" class="txs">les récoltes ont été mauvaises,</div> <div id="T1bo" class="txs">nous avons eu un décès dans la famille…</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bp" class="txs">Qu’avons-nous tendance à faire quand nous avons certaines choses en abondance (par exemple quand les récoltes ont été très bonnes)?</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bq" class="txs">En pensant à l’image de la fourmi,</div> <div id="T1br" class="txs">que devrions-nous faire dans les périodes plus abondantes?</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bs" class="txs">A quoi faut-il penser quand nous voulons conserver des choses?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1bt" class="txs">Nous devons garder les choses dans des bonnes conditions.</div> <div id="T1bu" class="txs">Les réserves de nourriture doivent être stockées à l’abri des animaux.</div> <div id="T1bv" class="txs">Les produits ne doivent pas avoir une date d’expiration courte (ex.:</div> <div id="T1bw" class="txs">médicaments).</div> <div id="T1bx" class="txs">L’argent doit être protégé des voleurs.</div></div>
+<div class="m"><div id="T1by" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1bz" class="txs">Notre vie a différentes saisons.</div> <div id="T1ca" class="txs">Quand nous avons beaucoup,</div> <div id="T1cb" class="txs">nous devons prévoir pour les périodes où nous risquons d’avoir moins.</div> <div id="T1cc" class="txs">Notre confiance en Dieu ne doit pas nous empêcher d’être sage et prévoyant.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1cd" class="txs">C’est ce conseil que Joseph a donné au roi d’Egypte.</div></div>
+<div class="m"><div id="T1ce" class="txs"><span class="it">«&nbsp;Mon roi,</span></div> <div id="T1cf" class="txs"><span class="it">cherche un homme intelligent et sage et donne-lui autorité sur l’Égypte.</span></div> <div id="T1cg" class="txs"><span class="it">Nomme aussi des agents.</span></div> <div id="T1ch" class="txs"><span class="it">Ils prendront un cinquième des récoltes du pays,</span></div> <div id="T1ci" class="txs"><span class="it">pendant les sept années de richesse.</span></div> <div id="T1cj" class="txs"><span class="it">Ils rassembleront toute la nourriture des sept bonnes années qui viennent.</span></div> <div id="T1ck" class="txs"><span class="it">(…) De cette façon,</span></div> <div id="T1cl" class="txs"><span class="it">l’Égypte aura des réserves pour les sept années de famine.</span></div> <div id="T1cm" class="txs"><span class="it">Ainsi la famine ne détruira pas le pays.</span></div><div id="T1cn" class="txs"><span class="it">&nbsp;»</span><span class="it"> </span>(Genèse 41, 33-36)</div></div>
+<div class="m"><div id="T1co" class="txs"><span class="ul">Exercice à</span><span class="ul"> </span><span class="ul">faire</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1cp" class="txs">Cherchez comment appliquer la sagesse de Joseph à votre propre vie.</div> <div id="T1cq" class="txs">Expliquez le principe de l’épargne à un proche et partagez-lui ce que vous voulez vivre dans ce domaine.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/030_Conseil_n21.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golle Nulaaɓe 9</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 10.59 },
+    { label: "1b", start: 10.84, end: 12.81 },
+    { label: "2a", start: 13.06, end: 18.81 },
+    { label: "2b", start: 19.06, end: 28.33 },
+    { label: "3", start: 28.58, end: 34.89 },
+    { label: "4a", start: 35.14, end: 38.03 },
+    { label: "4b", start: 38.28, end: 41.61 },
+    { label: "5a", start: 41.86, end: 43.15 },
+    { label: "5b", start: 43.4, end: 45.41 },
+    { label: "5c", start: 45.66, end: 48.69 },
+    { label: "5d", start: 48.94, end: 51.87 },
+    { label: "6a", start: 52.12, end: 54.85 },
+    { label: "6b", start: 55.1, end: 57.17 },
+    { label: "7a", start: 57.42, end: 62.51 },
+    { label: "7b", start: 62.76, end: 66.29 },
+    { label: "8a", start: 66.54, end: 71.63 },
+    { label: "8b", start: 71.88, end: 75.25 },
+    { label: "9a", start: 75.5, end: 77.47 },
+    { label: "9b", start: 77.72, end: 79.89 },
+    { label: "10a", start: 80.14, end: 84.33 },
+    { label: "10b", start: 84.58, end: 88.27 },
+    { label: "10c", start: 88.52, end: 89.67 },
+    { label: "10d", start: 89.92, end: 91.61 },
+    { label: "10e", start: 91.86, end: 93.77 },
+    { label: "11a", start: 94.02, end: 95.51 },
+    { label: "11b", start: 95.76, end: 105.55 },
+    { label: "12", start: 105.8, end: 113.11 },
+    { label: "13a", start: 113.36, end: 115.65 },
+    { label: "13b", start: 115.9, end: 123.55 },
+    { label: "14", start: 123.8, end: 130.05 },
+    { label: "15a", start: 130.3, end: 132.53 },
+    { label: "15b", start: 132.78, end: 137.83 },
+    { label: "15c", start: 138.08, end: 142.73 },
+    { label: "16", start: 142.98, end: 146.91 },
+    { label: "17a", start: 147.16, end: 152.89 },
+    { label: "17b", start: 153.14, end: 162.71 },
+    { label: "18a", start: 162.96, end: 168.01 },
+    { label: "18b", start: 168.26, end: 172.47 },
+    { label: "19a", start: 172.72, end: 175.23 },
+    { label: "19b", start: 175.48, end: 179.25 },
+    { label: "20a", start: 179.5, end: 183.59 },
+    { label: "20b", start: 183.84, end: 186.37 },
+    { label: "21a", start: 186.62, end: 190.05 },
+    { label: "21b", start: 190.3, end: 195.41 },
+    { label: "21c", start: 195.66, end: 201.77 },
+    { label: "22a", start: 202.02, end: 209.85 },
+    { label: "22b", start: 210.1, end: 212.93 },
+    { label: "23", start: 213.18, end: 217.59 },
+    { label: "24a", start: 217.84, end: 220.17 },
+    { label: "24b", start: 220.42, end: 226.19 },
+    { label: "25", start: 226.44, end: 235.97 },
+    { label: "26a", start: 236.22, end: 241.03 },
+    { label: "26b", start: 241.28, end: 247.07 },
+    { label: "27", start: 247.32, end: 258.75 },
+    { label: "28", start: 259, end: 268.43 },
+    { label: "29", start: 268.68, end: 277.43 },
+    { label: "30a", start: 277.68, end: 283.75 },
+    { label: "30b", start: 284, end: 286.55 },
+    { label: "31a", start: 286.8, end: 292.27 },
+    { label: "31b", start: 292.52, end: 299.73 },
+    { label: "32a", start: 299.98, end: 302.97 },
+    { label: "32b", start: 303.22, end: 306.05 },
+    { label: "33a", start: 306.3, end: 310.93 },
+    { label: "33b", start: 311.18, end: 313.43 },
+    { label: "34a", start: 313.68, end: 314.71 },
+    { label: "34b", start: 314.96, end: 317.91 },
+    { label: "34c", start: 318.16, end: 320.33 },
+    { label: "34d", start: 320.58, end: 322.99 },
+    { label: "35", start: 323.24, end: 328.19 },
+    { label: "36a", start: 328.44, end: 334.61 },
+    { label: "36b", start: 334.86, end: 337.21 },
+    { label: "36c", start: 337.46, end: 341.27 },
+    { label: "37a", start: 341.52, end: 343.93 },
+    { label: "37b", start: 344.18, end: 347.75 },
+    { label: "38a", start: 348, end: 354.85 },
+    { label: "38b", start: 355.1, end: 358.77 },
+    { label: "39a", start: 359.02, end: 361.27 },
+    { label: "39b", start: 361.52, end: 365.13 },
+    { label: "39c", start: 365.38, end: 376.35 },
+    { label: "40a", start: 376.6, end: 380.47 },
+    { label: "40b", start: 380.72, end: 383.93 },
+    { label: "40c", start: 384.18, end: 385.93 },
+    { label: "40d", start: 386.18, end: 391.45 },
+    { label: "41a", start: 391.7, end: 394.73 },
+    { label: "41b", start: 394.98, end: 402.49 },
+    { label: "42", start: 402.74, end: 407.33 },
+    { label: "43", start: 407.58, end: 413.67 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 28 }];
+var hasIntro = false;
+var baseRef  = "fu-18-ACT-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='fu-17-JHN-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='fu-18-ACT-008.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Golle Nulaaɓe&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;9&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-18-ACT-010.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-19-ROM-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="s1">No Sool tuubiri</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">9</div> <div id="T1a" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Sool ina heddii na haala haalaaji kulɓiniiɗi dow taalibaaɓe Joomiraaɗo ɓeen, na wi'a o waran ɗum'en.</div> <div id="T1b" class="txs">O yehi to Almaami Mawɗo.</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2a" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>O ŋaarii ɗum ɗerewol yamiroore nannoore mo cuuɗi Alhuudiyankooɓe baajorɗi gonɗi Damas.</div> <div id="T2b" class="txs">Hono nii, si o tawii toon yimɓe jokkuɓe laawol Iisaa, gorko e debbo fuu, o nannga ɗum'en, o haɓɓa, o yaara Urusaliima.</div><span id="bookmarks2"></span> <a id="v3"></a><div id="T3" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>Nde o yahunoo faa o ɓattitii Damas ndeen, wakkati gooto annoora ƴuuri dow kammu fiilii mo.</div><span id="bookmarks3"></span> <a id="v4"></a><div id="T4a" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>O saami e leydi, o nani daande ina wi'a mo:</div></div>
+<div class="p"><div id="T4b" class="txs">— Sool, Sool, ko waɗi de aɗa torra kam?</div><span id="bookmarks4"></span></div><span id="bookmarks4"></span><a id="v5"></a>
+<div class="p"><div id="T5a" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Sool ƴami:</div></div>
+<div class="p"><div id="T5b" class="txs">— Aan wo a moy, joomam?</div></div>
+<div class="p"><div id="T5c" class="txs">Nde o ƴamunoo ɗum fu, jaabu wari e makko:</div></div>
+<div class="p"><div id="T5d" class="txs">— Miin, wo mi Iisaa mo torrataa oon.</div><span id="bookmarks5"></span> <a id="v6"></a><div id="T6a" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>Umma naatu e ley ngalluure ndeen.</div> <div id="T6b" class="txs">Ɓe kaalante ko tilsi ngaɗaa.</div><span id="bookmarks6"></span></div><span id="bookmarks6"></span><a id="v7"></a>
+<div class="p"><div id="T7a" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>Worɓe wonduɓe e makko ɓeen nani daande ndeen ammaa nji'aay fay gooto.</div> <div id="T7b" class="txs">Ɓe ndarii, ɓe mbemmbaa faa ɓe muumɗi.</div><span id="bookmarks7"></span> <a id="v8"></a><div id="T8a" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>Sool ummii e leydi, ina feerti gite muuɗum ammaa yi'ataa fay huunde.</div> <div id="T8b" class="txs">Ndeen o ɗowaa, o nannaa Damas.</div><span id="bookmarks8"></span> <a id="v9"></a><div id="T9a" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>O waɗi balɗe tati o bumɗo.</div> <div id="T9b" class="txs">O nyaamaay, o yaraay.</div><span id="bookmarks9"></span></div><span id="bookmarks9"></span><a id="v10"></a>
+<div class="p"><div id="T10a" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Ley Damas ɗoon ina woodi taalibaajo bi'eteeɗo Ananiyas.</div> <div id="T10b" class="txs">E ley holleede, Joomiraaɗo noddi ɗum, wi'i:</div></div>
+<div class="p"><div id="T10c" class="txs">— Ananiyas!</div></div>
+<div class="p"><div id="T10d" class="txs">O jaabii, o wi'i:</div></div>
+<div class="p"><div id="T10e" class="txs">— Naam, Joomiraaɗo.</div><span id="bookmarks10"></span></div><span id="bookmarks10"></span><a id="v11"></a>
+<div class="p"><div id="T11a" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>Joomiraaɗo wi'i mo:</div></div>
+<div class="p"><div id="T11b" class="txs">— Umma rewu laawol bi'eteengol Dartiingol, naataa galle Yahuuda, piloɗaa gorko bi'eteeɗo Sool, jeyaaɗo Tarsus, sabo joonin imo waɗa du'aare.</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>O yi'i e ley holleede gorko bi'eteeɗo Ananiyas ina naata, ina yowa juuɗe muuɗum e makko faa o wumta.</div><span id="bookmarks12"></span></div><span id="bookmarks12"></span><a id="v13"></a>
+<div class="p"><div id="T13a" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Ananiyas jaabii, wi'i:</div></div>
+<div class="p"><div id="T13b" class="txs">— Joomiraaɗo, mi narrii yimɓe heewɓe haala gorko o e torraaji keewɗi ɗi o waɗi seniiɓe maa wonɓe Urusaliima.</div><span id="bookmarks13"></span> <a id="v14"></a><div id="T14" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>O wardii ɗo e yamiroore hooreeɓe almaami'en, faa o haɓɓa noddooɓe innde maa fuu.</div><span id="bookmarks14"></span></div><span id="bookmarks14"></span><a id="v15"></a>
+<div class="p"><div id="T15a" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>Ammaa Joomiraaɗo wi'i mo:</div></div>
+<div class="p"><div id="T15b" class="txs">— Yahu waɗoy no mbiimi ni, sabo mi suɓake gorko o faa o gollana kam.</div> <div id="T15c" class="txs">O anndina lenyi e kaanankooɓe e ɓiɓɓe Israa'iila du innde am.</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>Mi hollan mo na tilsi o torree torraaji keewɗi saabe am.</div><span id="bookmarks16"></span></div><span id="bookmarks16"></span><a id="v17"></a>
+<div class="p"><div id="T17a" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>Ndeen, Ananiyas yehi, naatowi suudu nduun, yowi juuɗe muuɗum e makko, wi'i:</div></div>
+<div class="p"><div id="T17b" class="txs">— Sakiike am Sool, Joomiraaɗo meeɗen Iisaa ɓangannooɗo ma e laawol nde ngarannoɗaa oon, nulii kam faa mbumtaa, keewaa Ruuhu Ceniiɗo.</div><span id="bookmarks17"></span></div><span id="bookmarks17"></span><a id="v18"></a>
+<div class="p"><div id="T18a" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>Wakkati oon fu, huunde wa'unde hono koɓolaaje nii hoɓɓitii e gite Sool.</div> <div id="T18b" class="txs">O wumti, o ummii, de o lootaa lootagal batisima.</div><span id="bookmarks18"></span> <a id="v19"></a><div id="T19a" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>O nyaami, de semmbe makko warti.</div> <div id="T19b" class="txs">O heddodii e taalibaaɓe wonɓe Damas ɓeen balɗe seeɗa.</div><span id="bookmarks19"></span></div>
+
+<div class="s"><div id="s2">No Sool waajorii kabaaru Iisaa ley Damas</div></div><span id="bookmarks19"></span><a id="v20"></a>
+<div class="p"><div id="T20a" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>Wakkati oon fu, Sool fuɗɗi waajaade ley cuuɗi baajorɗi.</div> <div id="T20b" class="txs">Imo wi'a Iisaa jaati woni Ɓii Laamɗo.</div><span id="bookmarks20"></span> <a id="v21"></a><div id="T21a" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Ɗum haaynii hettindaniiɓe mo ɓeen fuu, mbi'i:</div></div>
+<div class="p"><div id="T21b" class="txs">— Wanaa kanko wonnoo torrannooɗo goonɗinɓe Iisaa wonɓe ley Urusaliima oon naa?</div> <div id="T21c" class="txs">Wanaa faa o haɓɓa goonɗinɓe o yaara ɗum'en to hooreeɓe almaami'en waddi mo ɗo naa?</div><span id="bookmarks21"></span></div><span id="bookmarks21"></span><a id="v22"></a>
+<div class="p"><div id="T22a" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>De Sool ina heddii na ɓeydoroo semmbe e ley waaju muuɗum oon, faa ɗum jiiɓi Alhuudiyankooɓe wonɓe Damas ɓeen fuu.</div> <div id="T22b" class="txs">O laaɓinani ɓe Iisaa woni Almasiihu oon.</div><span id="bookmarks22"></span></div><span id="bookmarks22"></span><a id="v23"></a>
+<div class="p"><div id="T23" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>Balɗe njehi, ngarti, Alhuudiyankooɓe ndawridi faa mbara Sool.</div><span id="bookmarks23"></span> <a id="v24"></a><div id="T24a" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>Sool humpitii dabare maɓɓe ndeen.</div> <div id="T24b" class="txs">Yimɓe ina kayba dammbuɗe ngalluure ndeen jemma e nyalooma fuu, faa ɓe keɓa no ɓe mbarda mo.</div><span id="bookmarks24"></span> <a id="v25"></a><div id="T25" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>Jemma gooto taalibaaɓe makko kooƴi mo, ngatti mo e hanndeere, kaɓɓi ɓoggol, njaltiniri mo kokuwol piiliingol ngalluure ngool.</div><span id="bookmarks25"></span></div>
+
+<div class="s"><div id="s3">No taalibaaɓe wonɓe Urusaliima keɓiri hoolaade Sool</div></div><span id="bookmarks25"></span><a id="v26"></a>
+<div class="p"><div id="T26a" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>Nde Sool warnoo Urusaliima ndeen, muuyi hawritinde e taalibaaɓe Iisaa ɓeen.</div> <div id="T26b" class="txs">Ammaa ɓe fuu iɓe kula mo, ɓe koolaaki yalla o laatake taalibbo Iisaa goonga goonga.</div><span id="bookmarks26"></span> <a id="v27"></a><div id="T27" class="txs"><span class="v">27</span><span class="vsp">&nbsp;</span>Ndeen Barnabas yaari mo to nulaaɓe ɓeen, haalani ɗum'en no o yiiri Joomiraaɗo ina haalda e makko e laawol ngool, e no o waajorii haala Iisaa e cuusal ley Damas toon.</div><span id="bookmarks27"></span> <a id="v28"></a><div id="T28" class="txs"><span class="v">28</span><span class="vsp">&nbsp;</span>Caggal ɗuum, Sool wondi e maɓɓe, ina naata ina wurtoo ley galleeji maɓɓe Urusaliima, ina waajoroo haala Joomiraaɗo e cuusal.</div><span id="bookmarks28"></span> <a id="v29"></a><div id="T29" class="txs"><span class="v">29</span><span class="vsp">&nbsp;</span>Imo haalda e Alhuudiyankooɓe haalannooɓe geresankoore ɓeen, imo yeddundura e maɓɓe, de kamɓe kaa iɓe piloo warude mo.</div><span id="bookmarks29"></span> <a id="v30"></a><div id="T30a" class="txs"><span class="v">30</span><span class="vsp">&nbsp;</span>Nde sakiraaɓe makko goonɗinɓe ɓeen annditinnoo ɗum ndeen, njaari Sool Kaysariya.</div> <div id="T30b" class="txs">Caggal ɗuum, ɓe neli mo Tarsus.</div><span id="bookmarks30"></span></div><span id="bookmarks30"></span><a id="v31"></a>
+<div class="p"><div id="T31a" class="txs"><span class="v">31</span><span class="vsp">&nbsp;</span>Ndeen kawrital goonɗinɓe ngaal heɓi jam ley Yahuudiya e Galili, kam e Samariya fuu.</div> <div id="T31b" class="txs">Ngal ɓeydi semmbe, ngal yehi yeeso e kulol Joomiraaɗo, ngal ɓeydii heewude saabe ballal Ruuhu Ceniiɗo.</div><span id="bookmarks31"></span></div>
+
+<div class="s"><div id="s4">No Piyeer danniri yimɓe ley Lidda e Joffe</div></div><span id="bookmarks31"></span><a id="v32"></a>
+<div class="p"><div id="T32a" class="txs"><span class="v">32</span><span class="vsp">&nbsp;</span>Piyeer ina yiiloo e ley leydi ndiin fuu.</div> <div id="T32b" class="txs">O jippanii seniiɓe wonɓe Lidda ɓeen du.</div><span id="bookmarks32"></span> <a id="v33"></a><div id="T33a" class="txs"><span class="v">33</span><span class="vsp">&nbsp;</span>O tawi toon gorko nyawɗo mo ɓanndu muuɗum fuu waati, bi'eteeɗo Eneya.</div> <div id="T33b" class="txs">O waɗii duuɓi jeetati imo waalii.</div><span id="bookmarks33"></span> <a id="v34"></a><div id="T34a" class="txs"><span class="v">34</span><span class="vsp">&nbsp;</span>Piyeer wi'i mo:</div></div>
+<div class="p"><div id="T34b" class="txs">— Eneya, Iisaa Almasiihu dannii ma!</div> <div id="T34c" class="txs">Umma, moƴƴin daɗɗo maa!</div></div>
+<div class="p"><div id="T34d" class="txs">Wakkati oon pay, o ummii.</div><span id="bookmarks34"></span> <a id="v35"></a><div id="T35" class="txs"><span class="v">35</span><span class="vsp">&nbsp;</span>Wonɓe Lidda e ngenndi Saron fuu nji'i mo, de tuubani Joomiraaɗo.</div><span id="bookmarks35"></span></div><span id="bookmarks35"></span><a id="v36"></a>
+<div class="p"><div id="T36a" class="txs"><span class="v">36</span><span class="vsp">&nbsp;</span>Ley wuro Joffe ina woodi taalibaajo debbo bi'eteeɗo Tabita (maanaa majjum woni «Lewla»).</div> <div id="T36b" class="txs">Ɗum woni Dorkas e geresankoore.</div> <div id="T36c" class="txs">Imo golla golleeji lobbi, imo waɗana talkaaɓe moƴƴere.</div><span id="bookmarks36"></span> <a id="v37"></a><div id="T37a" class="txs"><span class="v">37</span><span class="vsp">&nbsp;</span>E balɗe ɗeen o nyawi, o maayi.</div> <div id="T37b" class="txs">O lootaa, de o wallinaa ley suudu sooro tafon.</div><span id="bookmarks37"></span> <a id="v38"></a><div id="T38a" class="txs"><span class="v">38</span><span class="vsp">&nbsp;</span>Wuro Joffe ngoon woɗɗunduraa e Lidda, wooɗi du, taalibaaɓe ɓeen nani Piyeer ina woni to Lidda toon.</div> <div id="T38b" class="txs">Ndelle ɓe neli worɓe ɗiɗo ŋaaroo mo o yottoo ɗum'en law.</div><span id="bookmarks38"></span> <a id="v39"></a><div id="T39a" class="txs"><span class="v">39</span><span class="vsp">&nbsp;</span>Piyeer ummii, yaadi e maɓɓe.</div> <div id="T39b" class="txs">Nde ɓe njottinoo ndeen, ɓe njaari mo ley suudu sooro toon.</div> <div id="T39c" class="txs">Rewɓe talka'en ɓe goriraaɓe muɓɓen maayi ɓeen fuu ɓattii ɗum ina mboya, ina kolla ɗum saayaaji e kaddule goɗɗe ɗe Dorkas nyo'unoo nde wondunoo e muɓɓen ndeen.</div><span id="bookmarks39"></span> <a id="v40"></a><div id="T40a" class="txs"><span class="v">40</span><span class="vsp">&nbsp;</span>Piyeer wurtini yimɓe ɓeen fuu, hofii, ina du'oo.</div> <div id="T40b" class="txs">Caggal ɗuum, hucciti e maayɗo oon, wi'i:</div></div>
+<div class="p"><div id="T40c" class="txs">— Tabita, umma!</div></div>
+<div class="p"><div id="T40d" class="txs">Ndeen Tabita feerti gite muuɗum, yi'i Piyeer, ummii jooɗii.</div><span id="bookmarks40"></span> <a id="v41"></a><div id="T41a" class="txs"><span class="v">41</span><span class="vsp">&nbsp;</span>Piyeer nanngi junngo makko, ummini mo.</div> <div id="T41b" class="txs">Caggal ɗuum, o noddi seniiɓe ɓeen e rewɓe talkaaɓe ɓeen, o holli ɗum'en Tabita wo buurɗo.</div><span id="bookmarks41"></span> <a id="v42"></a><div id="T42" class="txs"><span class="v">42</span><span class="vsp">&nbsp;</span>Ɗum nanaama e ley Joffe fuu, heewɓe ngoonɗini Joomiraaɗo.</div><span id="bookmarks42"></span> <a id="v43"></a><div id="T43" class="txs"><span class="v">43</span><span class="vsp">&nbsp;</span>Piyeer ɓooyti Joffe balɗe keewɗe to ceeloowo guri bi'eteeɗo Simon.</div><span id="bookmarks43"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/FUHSIMN1DA/B05___09_Actes_______FUHSIMN1DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

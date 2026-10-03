@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 12</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "12a", start: 1559.2, end: 1560.13 },
+    { label: "12b", start: 1560.38, end: 1566.07 },
+    { label: "12c", start: 1566.32, end: 1568.09 },
+    { label: "12d", start: 1568.34, end: 1572.41 },
+    { label: "12e", start: 1572.66, end: 1577.11 },
+    { label: "12f", start: 1577.36, end: 1579.43 },
+    { label: "12g", start: 1579.68, end: 1582.93 },
+    { label: "12h", start: 1583.18, end: 1584.91 },
+    { label: "12i", start: 1585.16, end: 1586.51 },
+    { label: "12j", start: 1586.76, end: 1588.79 },
+    { label: "12k", start: 1589.04, end: 1591.43 },
+    { label: "12l", start: 1591.68, end: 1595.63 },
+    { label: "12m", start: 1595.88, end: 1599.37 },
+    { label: "12n", start: 1599.62, end: 1602.41 },
+    { label: "12o", start: 1602.66, end: 1604.65 },
+    { label: "12p", start: 1604.9, end: 1609.37 },
+    { label: "12q", start: 1609.62, end: 1614.13 },
+    { label: "12r", start: 1614.38, end: 1616.31 },
+    { label: "12s", start: 1616.56, end: 1618.53 },
+    { label: "12t", start: 1618.78, end: 1623.93 },
+    { label: "12u", start: 1624.18, end: 1627.13 },
+    { label: "12v", start: 1627.38, end: 1628.25 },
+    { label: "12w", start: 1628.5, end: 1631.69 },
+    { label: "12x", start: 1631.94, end: 1634.79 },
+    { label: "12y", start: 1635.04, end: 1636.15 },
+    { label: "12z", start: 1636.4, end: 1639.31 },
+    { label: "12aa", start: 1639.56, end: 1641.41 },
+    { label: "12ab", start: 1641.66, end: 1644.51 },
+    { label: "12ac", start: 1644.76, end: 1647.41 },
+    { label: "12ad", start: 1647.66, end: 1649.19 },
+    { label: "12ae", start: 1649.44, end: 1651.17 },
+    { label: "12af", start: 1651.42, end: 1656.71 },
+    { label: "12ag", start: 1656.96, end: 1660.79 },
+    { label: "12ah", start: 1661.04, end: 1661.23 },
+    { label: "12ai", start: 1661.48, end: 1662.67 },
+    { label: "12aj", start: 1662.92, end: 1663.87 },
+    { label: "12ak", start: 1664.12, end: 1664.83 },
+    { label: "12al", start: 1665.08, end: 1665.67 },
+    { label: "12am", start: 1665.92, end: 1666.15 },
+    { label: "12an", start: 1666.4, end: 1667.73 },
+    { label: "12ao", start: 1667.98, end: 1670.05 },
+    { label: "12ap", start: 1670.3, end: 1673.07 },
+    { label: "12aq", start: 1673.32, end: 1675.65 },
+    { label: "12ar", start: 1675.9, end: 1676.91 },
+    { label: "12as", start: 1677.16, end: 1681.53 },
+    { label: "12at", start: 1681.78, end: 1684.55 },
+    { label: "12au", start: 1684.8, end: 1686.65 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1559.2;
+var stopTime  = 1686.65;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-011.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;12&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-013.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image12.jpg" />
+
+<div class="m"><div id="T12a" class="txs"><span class="bd">Hope</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T12b" class="txs"><span class="it">So that you may know </span><span class="bdit">the hope</span><span class="it"> he gave you when he called you </span>(Ephesians 1, 18).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T12c" class="txs"><span class="bd">What is Christian hope?</span></div></div>
+<div class="m"><div id="T12d" class="txs">To hope is to firmly believe that a desire will soon be fulfilled.</div> <div id="T12e" class="txs">Christian hope is the expectation of the fulfillment of God's promises.</div> <div id="T12f" class="txs">Hope concerns all God's promises,</div> <div id="T12g" class="txs">but especially those concerning our life after death,</div> <div id="T12h" class="txs">in the presence of God and Jesus,</div> <div id="T12i" class="txs">the return of Jesus,</div> <div id="T12j" class="txs">the new earth and the new heaven.</div></div>
+<div class="m"><div id="T12k" class="txs">To hope means that it hasn't yet "<span class="it">happened</span>",</div> <div id="T12l" class="txs">but to believe with certainty that our expectations will be fulfilled.</div> <div id="T12m" class="txs">Such hope can have a profound influence on our lives.</div> <div id="T12n" class="txs">Instead of sinking into fear and anxiety,</div> <div id="T12o" class="txs">we can live in joy and peace.</div> <div id="T12p" class="txs">But we mustn't forget that the basis of our hope must be solid and reliable.</div> <div id="T12q" class="txs">If our hope is founded on other human beings or other forces than the living God,</div> <div id="T12r" class="txs">we are bound to be disappointed.</div> <div id="T12s" class="txs">Only a hope founded on God,</div> <div id="T12t" class="txs">on his Son Jesus and on the Holy Spirit guarantees the fulfillment of the promises awaited.</div></div>
+<div class="m"><div id="T12u" class="txs"><span class="bd">Actions to make hope a richness in your life:</span></div></div>
+<div class="m"><div id="T12v" class="txs"><span class="it">- Prayer:</span></div> <div id="T12w" class="txs">Thank God for his promises and the hope we have in him.</div> <div id="T12x" class="txs">Put your fears and worries in His hands.</div></div>
+<div class="m"><div id="T12y" class="txs"><span class="it">- Bible reading:</span></div> <div id="T12z" class="txs">Read the following verses and choose one to memorize:</div> <div id="T12aa" class="txs">John 10, 28;</div> <div id="T12ab" class="txs">Ephesians 3, 20 to 21;</div> <div id="T12ac" class="txs">Revelation 21, 4.</div></div>
+<div class="m"><div id="T12ad" class="txs"><span class="it">- Personal reflection:</span></div> <div id="T12ae" class="txs">Do you constantly worry?</div> <div id="T12af" class="txs">Do you live in fear that something bad might happen in your life or the lives of your loved ones?</div> <div id="T12ag" class="txs">There are many biblical examples of how God keeps his promises:</div> <div id="T12ah" class="txs">Noah,</div> <div id="T12ai" class="txs">Abraham and Sarah,</div> <div id="T12aj" class="txs">Jacob,</div> <div id="T12ak" class="txs">Joseph,</div> <div id="T12al" class="txs">Ruth,</div> <div id="T12am" class="txs">Hannah,</div> <div id="T12an" class="txs">Nehemiah...</div> <div id="T12ao" class="txs">Study one of these characters,</div> <div id="T12ap" class="txs">paying attention to how God accompanied this person,</div> <div id="T12aq" class="txs">especially during difficult times.</div></div>
+<div class="m"><div id="T12ar" class="txs"><span class="it">- To others:</span></div> <div id="T12as" class="txs">Make a pretty card with an encouraging Bible verse and give it to a friend in need.</div> <div id="T12at" class="txs">You can also send the verse by SMS,</div> <div id="T12au" class="txs">WhatsApp or other means.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>1) Le fonctionnement des 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.03 },
+    { label: "1b", start: 4.28, end: 8.45 },
+    { label: "1c", start: 8.7, end: 12.49 },
+    { label: "1d", start: 12.74, end: 15.19 },
+    { label: "1e", start: 15.44, end: 17.83 },
+    { label: "1f", start: 18.08, end: 19.73 },
+    { label: "1g", start: 19.98, end: 25.31 },
+    { label: "1h", start: 25.56, end: 29.13 },
+    { label: "1i", start: 29.38, end: 30.51 },
+    { label: "1j", start: 30.76, end: 33.15 },
+    { label: "1k", start: 33.4, end: 41.11 },
+    { label: "1l", start: 41.36, end: 44.25 },
+    { label: "1m", start: 44.5, end: 51.77 },
+    { label: "1n", start: 52.02, end: 53.81 },
+    { label: "1o", start: 54.06, end: 57.59 },
+    { label: "1p", start: 57.84, end: 63.91 },
+    { label: "1q", start: 64.16, end: 68.63 },
+    { label: "1r", start: 68.88, end: 72.17 },
+    { label: "1s", start: 72.42, end: 74.53 },
+    { label: "1t", start: 74.78, end: 77.83 },
+    { label: "1u", start: 78.08, end: 80.89 },
+    { label: "1v", start: 81.14, end: 83.23 },
+    { label: "1w", start: 83.48, end: 87.29 },
+    { label: "1x", start: 87.54, end: 91.23 },
+    { label: "1y", start: 91.48, end: 96.19 },
+    { label: "1z", start: 96.44, end: 98.11 },
+    { label: "1aa", start: 98.36, end: 100.19 },
+    { label: "1ab", start: 100.44, end: 101.89 },
+    { label: "1ac", start: 102.14, end: 103.75 },
+    { label: "1ad", start: 104, end: 106.05 },
+    { label: "1ae", start: 106.3, end: 111.87 },
+    { label: "1af", start: 112.12, end: 114.71 },
+    { label: "1ag", start: 114.96, end: 118.21 },
+    { label: "1ah", start: 118.46, end: 122.15 },
+    { label: "1ai", start: 122.4, end: 131.87 },
+    { label: "1aj", start: 132.12, end: 135.11 },
+    { label: "1ak", start: 135.36, end: 139.41 },
+    { label: "1al", start: 139.66, end: 148.79 },
+    { label: "1am", start: 149.04, end: 157.47 },
+    { label: "1an", start: 157.72, end: 160.59 },
+    { label: "1ao", start: 160.84, end: 162.63 },
+    { label: "1ap", start: 162.88, end: 166.73 },
+    { label: "1aq", start: 166.98, end: 172.25 },
+    { label: "1ar", start: 172.5, end: 181.67 },
+    { label: "1as", start: 181.92, end: 183.45 },
+    { label: "1at", start: 183.7, end: 190.87 },
+    { label: "1au", start: 191.12, end: 194.37 },
+    { label: "1av", start: 194.62, end: 202.05 },
+    { label: "1aw", start: 202.3, end: 211.21 },
+    { label: "1ax", start: 211.46, end: 213.31 },
+    { label: "1ay", start: 213.56, end: 224.37 },
+    { label: "1az", start: 224.62, end: 227.45 },
+    { label: "1ba", start: 227.7, end: 235.99 },
+    { label: "1bb", start: 236.24, end: 238.25 },
+    { label: "1bc", start: 238.5, end: 244.85 },
+    { label: "1bd", start: 245.1, end: 253.87 },
+    { label: "1be", start: 254.12, end: 255.01 },
+    { label: "1bf", start: 255.26, end: 258.21 },
+    { label: "1bg", start: 258.46, end: 260.05 },
+    { label: "1bh", start: 260.3, end: 263.09 },
+    { label: "1bi", start: 263.34, end: 274.73 },
+    { label: "1bj", start: 274.98, end: 276.85 },
+    { label: "1bk", start: 277.1, end: 281.03 },
+    { label: "1bl", start: 281.28, end: 284.23 },
+    { label: "1bm", start: 284.48, end: 288.87 },
+    { label: "1bn", start: 289.12, end: 291.95 },
+    { label: "1bo", start: 292.2, end: 296.39 },
+    { label: "1bp", start: 296.64, end: 298.63 },
+    { label: "1bq", start: 298.88, end: 301.15 },
+    { label: "1br", start: 301.4, end: 306.35 },
+    { label: "1bs", start: 306.6, end: 312.15 },
+    { label: "1bt", start: 312.4, end: 315.11 },
+    { label: "1bu", start: 315.36, end: 317.29 },
+    { label: "1bv", start: 317.54, end: 321.85 },
+    { label: "1bw", start: 322.1, end: 326.37 },
+    { label: "1bx", start: 326.62, end: 328.97 },
+    { label: "1by", start: 329.22, end: 330.43 },
+    { label: "1bz", start: 330.68, end: 333.79 },
+    { label: "1ca", start: 334.04, end: 336.01 },
+    { label: "1cb", start: 336.26, end: 342.63 },
+    { label: "1cc", start: 342.88, end: 346.59 },
+    { label: "1cd", start: 346.84, end: 354.51 },
+    { label: "1ce", start: 354.76, end: 355.79 },
+    { label: "1cf", start: 356.04, end: 364.57 },
+    { label: "1cg", start: 364.82, end: 366.89 },
+    { label: "1ch", start: 367.14, end: 373.35 },
+    { label: "1ci", start: 373.6, end: 378.85 },
+    { label: "1cj", start: 379.1, end: 382.23 },
+    { label: "1ck", start: 382.48, end: 392.39 },
+    { label: "1cl", start: 392.64, end: 395.23 },
+    { label: "1cm", start: 395.48, end: 399.63 },
+    { label: "1cn", start: 399.88, end: 402.13 },
+    { label: "1co", start: 402.38, end: 405.91 },
+    { label: "1cp", start: 406.16, end: 412.15 },
+    { label: "1cq", start: 412.4, end: 414.83 },
+    { label: "1cr", start: 415.08, end: 416.51 },
+    { label: "1cs", start: 416.76, end: 421.77 },
+    { label: "1ct", start: 422.02, end: 427.09 },
+    { label: "1cu", start: 427.34, end: 430.29 },
+    { label: "1cv", start: 430.54, end: 432.55 },
+    { label: "1cw", start: 432.8, end: 438.97 },
+    { label: "1cx", start: 439.22, end: 440.81 },
+    { label: "1cy", start: 441.06, end: 443.39 },
+    { label: "1cz", start: 443.64, end: 448.23 },
+    { label: "1da", start: 448.48, end: 452.99 },
+    { label: "1db", start: 453.24, end: 455.21 },
+    { label: "1dc", start: 455.46, end: 458.79 },
+    { label: "1dd", start: 459.04, end: 460.43 },
+    { label: "1de", start: 460.68, end: 463.57 },
+    { label: "1df", start: 463.82, end: 466.29 },
+    { label: "1dg", start: 466.54, end: 469.29 },
+    { label: "1dh", start: 469.54, end: 471.31 },
+    { label: "1di", start: 471.56, end: 474.31 },
+    { label: "1dj", start: 474.56, end: 476.69 },
+    { label: "1dk", start: 476.94, end: 486.53 },
+    { label: "1dl", start: 486.78, end: 488.87 },
+    { label: "1dm", start: 489.12, end: 491.07 },
+    { label: "1dn", start: 491.32, end: 492.75 },
+    { label: "1do", start: 493, end: 495.13 },
+    { label: "1dp", start: 495.38, end: 501.31 },
+    { label: "1dq", start: 501.56, end: 505.41 },
+    { label: "1dr", start: 505.66, end: 510.81 },
+    { label: "1ds", start: 511.06, end: 514.91 },
+    { label: "1dt", start: 515.16, end: 517.85 },
+    { label: "1du", start: 518.1, end: 520.97 },
+    { label: "1dv", start: 521.22, end: 526.67 },
+    { label: "1dw", start: 526.92, end: 532.33 },
+    { label: "1dx", start: 532.58, end: 539.79 },
+    { label: "1dy", start: 540.04, end: 547.39 },
+    { label: "1dz", start: 547.64, end: 553.69 },
+    { label: "1ea", start: 553.94, end: 556.99 },
+    { label: "1eb", start: 557.24, end: 559.51 },
+    { label: "1ec", start: 559.76, end: 567.43 },
+    { label: "1ed", start: 567.68, end: 570.39 },
+    { label: "1ee", start: 570.64, end: 576.27 },
+    { label: "1ef", start: 576.52, end: 579.17 },
+    { label: "1eg", start: 579.42, end: 585.05 },
+    { label: "1eh", start: 585.3, end: 590.87 },
+    { label: "1ei", start: 591.12, end: 595.21 },
+    { label: "1ej", start: 595.46, end: 599.71 },
+    { label: "1ek", start: 599.96, end: 605.09 },
+    { label: "1el", start: 605.34, end: 607.91 },
+    { label: "1em", start: 608.16, end: 612.99 },
+    { label: "1en", start: 613.24, end: 617.63 },
+    { label: "1eo", start: 617.88, end: 618.65 },
+    { label: "1ep", start: 618.9, end: 626.43 },
+    { label: "1eq", start: 626.68, end: 632.09 },
+    { label: "1er", start: 632.34, end: 634.09 },
+    { label: "1es", start: 634.34, end: 635.39 },
+    { label: "1et", start: 635.64, end: 642.47 },
+    { label: "1eu", start: 642.72, end: 651.51 },
+    { label: "1ev", start: 651.76, end: 655.93 },
+    { label: "1ew", start: 656.18, end: 659.27 },
+    { label: "1ex", start: 659.52, end: 664.37 },
+    { label: "1ey", start: 664.62, end: 667.47 },
+    { label: "1ez", start: 667.72, end: 669.31 },
+    { label: "1fa", start: 669.56, end: 675.81 },
+    { label: "1fb", start: 676.06, end: 683.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 683.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "17-B017-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='16-B016-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Le fonctionnement des&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B018-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B018-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B017-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">1)</span><span class="bd"> Le fonctionnement des organes sexuels</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">En Genèse 1, 27 on lit :</div> <div id="T1c" class="txs">«&nbsp;<span class="it">Alors Dieu crée les humains à son image,</span></div> <div id="T1d" class="txs"><span class="it">et ils sont vraiment à l’image de Dieu.</span></div> <div id="T1e" class="txs"><span class="it">Il les crée homme et femme</span>.</div><div id="T1f" class="txs">&nbsp;» Au verset 31,</div> <div id="T1g" class="txs">Dieu regarde tout ce qu’il a fait et il voit que c’est une très bonne chose&nbsp;!</div></div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">Dieu nous a créés comme homme et comme femme</span>.</div> <div id="T1i" class="txs">Tous les deux,</div> <div id="T1j" class="txs">nous sommes créés à son image.</div> <div id="T1k" class="txs">Cela veut dire que nous avons la même valeur et la même importance en tant qu’homme et tant que femme.</div> <div id="T1l" class="txs">Il n’y a personne qui est plus important.</div> <div id="T1m" class="txs">Les femmes ont exactement la même valeur que les hommes parce que tous les deux ont été créés à l’image de Dieu.</div></div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">Nous sommes bien faits</span> ;</div> <div id="T1o" class="txs">il n’y a rien de faux ou de mauvais en nous.</div> <div id="T1p" class="txs">C’est Dieu lui-même qui nous a créés et il exprime cela au verset 31.</div> <div id="T1q" class="txs">La création de l’être humain est une très bonne chose.</div> <div id="T1r" class="txs">Lisez le Psaume 139,</div> <div id="T1s" class="txs">versets 13 à 16 :</div> <div id="T1t" class="txs">Nous sommes des créatures merveilleuses&nbsp;!</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">Mais l’homme et la femme sont créés différents.</span></div></div>
+<div class="m"><div id="T1v" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelles sont ces différences&nbsp;?</span></div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelle est la plus grande différence entre l’homme et la femme&nbsp;?</span></div></div>
+<div class="m"><div id="T1x" class="txs"><span class="it">La femme peut tomber en grossesse et avoir des enfants.</span></div> <div id="T1y" class="txs"><span class="it">C’est Dieu qui a accordé cette tâche et ce privilège à la femme.</span></div> <div id="T1z" class="txs"><span class="it">Mais pour cela,</span></div> <div id="T1aa" class="txs"><span class="it">elle a besoin de son mari.</span></div> <div id="T1ab" class="txs"><span class="it">On peut dire :</span></div> <div id="T1ac" class="txs"><span class="it">Pour avoir des enfants,</span></div> <div id="T1ad" class="txs"><span class="it">Dieu a prévu la famille</span>.</div></div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment Dieu a-t-il créé la femme et l’homme et comment leurs corps fonctionnent,</span></div> <div id="T1af" class="txs"><span class="bd">comment la femme peut tomber en grossesse&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ag" class="txs"><span class="bd">a) </span><span class="bd">La petite fille devient femme</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ah" class="txs">Une petite fille n’est pas encore prête pour avoir un enfant.</div> <div id="T1ai" class="txs">Elle est elle-même encore une enfant et elle doit grandir physiquement et aussi en vue de sa maturité émotionnelle et spirituelle.</div></div>
+<div class="m"><div id="T1aj" class="txs">Du point de vue du développement physique,</div> <div id="T1ak" class="txs">bien que toutes les femmes ne se développent pas au même rythme,</div> <div id="T1al" class="txs">on dit qu’une jeune femme est vraiment prête à avoir des enfants dans de bonnes conditions quand elle a environ 18 ans.</div></div>
+<div class="m"><div id="T1am" class="txs">Le corps d’une fille commence à se transformer intérieurement et extérieurement entre 11 et 14 ans.</div> <div id="T1an" class="txs">La fille se transforme en femme.</div></div>
+<div class="m"><div id="T1ao" class="txs"><span class="bd">À l’extérieur</span>,</div> <div id="T1ap" class="txs">on peut observer un grand changement dans son corps :</div> <div id="T1aq" class="txs">les seins commencent à se développer et les hanches deviennent plus larges.</div> <div id="T1ar" class="txs">Parallèlement les poils sous les bras commencent à pousser et aussi les poils au niveau du sexe apparaissent (les poils pubiens).</div></div>
+<div class="m"><div id="T1as" class="txs"><span class="bd">À l’intérieur</span>,</div> <div id="T1at" class="txs">il n’y a pas vraiment un changement parce que tous les organes sexuels sont déjà là depuis sa naissance.</div></div>
+<div class="m"><div id="T1au" class="txs">On peut s’imaginer ce processus comme suit :</div></div>
+<div class="m"><div id="T1av" class="txs">Chaque fille est équipée avec une petite maison (l’utérus) dans son ventre.</div> <div id="T1aw" class="txs">Cette maison a deux annexes (les ovaires) qui sont reliées à la maison par un chemin étroit (la trompe).</div></div>
+<div class="m"><div id="T1ax" class="txs">La maison est vide,</div> <div id="T1ay" class="txs">mais dans ces deux annexes se trouvent des milliers d’œufs (les ovules) qui attendent en dormant jusqu’à ce que la fille soit adolescente.</div></div>
+<div class="m"><div id="T1az" class="txs">Quand la fille a environ 14 ans,</div> <div id="T1ba" class="txs">les œufs se réveillent et un d’eux quitte l’annexe (<span class="bd">l’ovulation</span>) et se met en route vers la maison.</div> <div id="T1bb" class="txs">Quand l’œuf se met en route,</div> <div id="T1bc" class="txs">cette maison interne commence à préparer un petit nid (<span class="bd">la muqueuse utérine</span>).</div> <div id="T1bd" class="txs">Ce nid est préparé pour que cet œuf qui est en route de l’annexe puisse se coucher dedans (<span class="bd">la nidation</span>).</div></div>
+<div class="m"><div id="T1be" class="txs">Mais,</div> <div id="T1bf" class="txs">pour pouvoir rester plus longtemps dans ce nid,</div> <div id="T1bg" class="txs">il y a un défi.</div> <div id="T1bh" class="txs">En route jusqu’à l’arrivée dans la maison,</div> <div id="T1bi" class="txs">l’œuf doit trouver une semence qui s'unisse avec lui et qui la féconde (<span class="bd">la fécondation</span>) Si l’œuf ne trouve pas une semence en route,</div> <div id="T1bj" class="txs">en se couchant dans le nid,</div> <div id="T1bk" class="txs">la maison rejette ce nid avec cet œuf dehors.</div></div>
+<div class="m"><div id="T1bl" class="txs">Pour que le nid sorte et disparaisse en entier,</div> <div id="T1bm" class="txs">la maison verse un peu de sang qui accompagne le nid vers l’extérieur.</div> <div id="T1bn" class="txs">Ce processus prend plusieurs jours.</div> <div id="T1bo" class="txs">Jeter le nid est un processus qu’on appelle <span class="bd">avoir ses règles</span>.</div> <div id="T1bp" class="txs">Il est accompagné de sang,</div> <div id="T1bq" class="txs">même s'il n'est pas une blessure.</div> <div id="T1br" class="txs">Les règles durent plusieurs jours et font souvent mal au ventre de la fille.</div></div>
+<div class="m"><div id="T1bs" class="txs">La sortie de la maison s’appelle <span class="bd">le col de l’utérus</span> qui débouche dans <span class="bd">le vagin</span>.</div> <div id="T1bt" class="txs">Le nid et le sang qui l’accompagnent,</div> <div id="T1bu" class="txs">c’est-à-dire les règles,</div> <div id="T1bv" class="txs">sortent par le vagin et s’écoule du sexe de la femme.</div> <div id="T1bw" class="txs">(<span class="bd">L’urine</span> qui vient de la vessie ne sort pas par le vagin,</div> <div id="T1bx" class="txs">mais par un autre canal,</div> <div id="T1by" class="txs">l’urètre,</div> <div id="T1bz" class="txs">qui sort vers le haut du sexe de la femme.)</div></div>
+<div class="m"><div id="T1ca" class="txs">Après un certain temps,</div> <div id="T1cb" class="txs">l’annexe envoie un nouvel œuf en route et la maison commence à préparer un nouveau nid.</div> <div id="T1cc" class="txs">Ce processus se répète une fois chaque mois.</div> <div id="T1cd" class="txs">On nomme cela le cycle menstruel d’une femme (<span class="bd">menstruation</span>) ou avoir ses règles.</div></div>
+<div class="m"><div id="T1ce" class="txs">Donc,</div> <div id="T1cf" class="txs">si un œuf rencontre en route vers la maison une semence (<span class="bd">les spermatozoïdes</span> de l’homme) et que les deux s’unissent,</div> <div id="T1cg" class="txs">l’œuf est fécondé.</div> <div id="T1ch" class="txs">Il pourra alors se coucher dans le nid préparé et y rester pendant 9 mois.</div> <div id="T1ci" class="txs">Ensemble l’œuf et le nid grandissent et l’œuf se développe.</div> <div id="T1cj" class="txs">Ce sera le développement d’une grossesse.</div></div>
+<div class="m"><div id="T1ck" class="txs">Un ovule fécondé qui est accueilli par la muqueuse utérine s’appelle d’abord embryon puis fœtus.</div> <div id="T1cl" class="txs">C’est un petit enfant qui commence à grandir.</div></div>
+<div class="m"><div id="T1cm" class="txs">La muqueuse utérine est très irriguée par du sang,</div> <div id="T1cn" class="txs">c’est comme une peau très humide.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1co" class="txs"><span class="bd">b) </span><span class="bd">Le cycle menstruel</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1cp" class="txs">On pourrait comparer le cycle menstruel d’une femme aux deux saisons en Afrique.</div> <div id="T1cq" class="txs">Ici nous avons deux saisons :</div> <div id="T1cr" class="txs">la sécheresse et la pluie.</div></div>
+<div class="m"><div id="T1cs" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Pendant quelle saison tout commence à pousser&nbsp;?</span></div></div>
+<div class="m"><div id="T1ct" class="txs">La sécheresse empêche que la semence et la plante ne poussent et grandissent.</div> <div id="T1cu" class="txs">C’est un peu la même chose avec la femme.</div> <div id="T1cv" class="txs">Non pas chaque année,</div> <div id="T1cw" class="txs">mais chaque mois le corps de la femme fait l’expérience de la sécheresse et de la pluie.</div></div>
+<div class="m"><div id="T1cx" class="txs">Petit à petit,</div> <div id="T1cy" class="txs">quelques jours après la fin des règles,</div> <div id="T1cz" class="txs">un liquide sort du vagin et rend la culotte humide.</div> <div id="T1da" class="txs">La quantité de ce liquide varie d’une femme à une autre.</div></div>
+<div class="m"><div id="T1db" class="txs">C'est la saison des pluies,</div> <div id="T1dc" class="txs">le temps fertile pour les femmes qui commence.</div> <div id="T1dd" class="txs">Pendant ce temps,</div> <div id="T1de" class="txs">la femme peut facilement tomber en grossesse.</div> <div id="T1df" class="txs">Tandis que pendant la sécheresse,</div> <div id="T1dg" class="txs">elle ne peut pas du tout devenir enceinte.</div></div>
+<div class="m"><div id="T1dh" class="txs"><span class="bd">L’explication</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1di" class="txs">Pour que l’ovule puisse se mettre en route,</div> <div id="T1dj" class="txs">il a besoin d’humidité.</div> <div id="T1dk" class="txs">Le sperme qui entre dans le vagin et qui veut rencontrer l’ovule a aussi besoin de cette humidité pour avancer.</div> <div id="T1dl" class="txs">Pendant la sécheresse,</div> <div id="T1dm" class="txs">les deux ne peuvent pas avancer.</div></div>
+<div class="m"><div id="T1dn" class="txs">Alors,</div> <div id="T1do" class="txs">comme la pluie commence un jour,</div> <div id="T1dp" class="txs">le col de l'utérus commence à produire un liquide qui s’appelle <span class="bd">la glaire cervicale</span>.</div> <div id="T1dq" class="txs">Et avec cette glaire qui se répand partout,</div> <div id="T1dr" class="txs">l’ovule et le sperme peuvent bien avancer et se rencontrer dans la trompe.</div> <div id="T1ds" class="txs">Et comme ça une grossesse peut se préparer.</div> <div id="T1dt" class="txs">Pendant le temps de cette production,</div> <div id="T1du" class="txs">un peu de glaire sort toujours du vagin.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dv" class="txs"><span class="bd">c</span><span class="bd">) </span><span class="bd">La vieillesse - La ménopause qui touche la femme</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dw" class="txs">La ménopause commence environ vers quarante-cinq à cinquante ans.</div> <div id="T1dx" class="txs">Les règles n’arrivent plus aussi régulièrement et après quelque temps elles s’arrêtent complètement.</div> <div id="T1dy" class="txs">Cela veut dire que le cycle menstruel de la femme est arrêté et qu’elle n’aura plus d’ovulation.</div> <div id="T1dz" class="txs">Dès ce moment la femme peut continuer d’avoir des rapports sexuels avec son mari,</div> <div id="T1ea" class="txs">mais comme il n’y a plus d’ovulation,</div> <div id="T1eb" class="txs">il n’y aura pas de grossesse.</div></div>
+<div class="m"><div id="T1ec" class="txs"><span class="bd">Les signes de ce processus sont les suivants</span> (même s’ils peuvent être différents d’une femme à une autre) :</div></div>
+<div class="m"><div id="T1ed" class="txs">• La femme se sent souvent fatiguée.</div></div>
+<div class="m"><div id="T1ee" class="txs">• Certaines femmes commencent à grossir même si elles ne mangent pas plus qu’avant.</div></div>
+<div class="m"><div id="T1ef" class="txs">• Elle a souvent mal à la tête.</div></div>
+<div class="m"><div id="T1eg" class="txs">• Son corps chauffe par moment et elle transpire tout à coup très fort.</div></div>
+<div class="m"><div id="T1eh" class="txs">• Elle a souvent peur et son cœur commence tout à coup à battre très fort.</div></div>
+<div class="m"><div id="T1ei" class="txs">• Son sommeil est dérangé et elle se réveille souvent.</div></div>
+<div class="m"><div id="T1ej" class="txs">• Quelques femmes ont des douleurs pendant le rapport sexuel.</div></div>
+<div class="m"><div id="T1ek" class="txs">Tous ces signes arrivent et repartent irrégulièrement.</div></div>
+<div class="m"><div id="T1el" class="txs">Au moment de la ménopause,</div> <div id="T1em" class="txs">beaucoup de femmes ont peur et elles pensent à une maladie grave.</div> <div id="T1en" class="txs">Mais tout ce processus n’est pas une maladie qui amène à la mort,</div> <div id="T1eo" class="txs">non,</div> <div id="T1ep" class="txs">c’est un processus absolument naturel et normal qui touche toutes les femmes plus âgées.</div> <div id="T1eq" class="txs">Il faut le supporter sans soucis parce qu’après un certain temps,</div> <div id="T1er" class="txs">les symptômes disparaissent.</div> <div id="T1es" class="txs">Aussi,</div> <div id="T1et" class="txs">il ne faut pas du tout arrêter d’avoir des rapports sexuels avec son mari et se séparer pendant la nuit.</div></div>
+<div class="m"><div id="T1eu" class="txs">La peur que le sperme reste dans le ventre de la femme après le rapport et que le ventre sera gonflé n’est pas juste.</div> <div id="T1ev" class="txs">Le sperme arrive seulement aux trompes et depuis là,</div> <div id="T1ew" class="txs">il est repoussé vers le vagin et il en sort.</div> <div id="T1ex" class="txs">C’est l’humidité que la femme ressent le lendemain après le rapport.</div></div>
+<div class="m"><div id="T1ey" class="txs">Mais à cause de ce changement hormonal,</div> <div id="T1ez" class="txs">chez beaucoup de femmes,</div> <div id="T1fa" class="txs">le vagin verse moins de liquide pendant le rapport et cela dérange l’acte sexuel.</div> <div id="T1fb" class="txs">On peut utiliser une pommade pour lubrifier le vagin ainsi qu’éviter la douleur pendant le rapport.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/13 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/13 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/13 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

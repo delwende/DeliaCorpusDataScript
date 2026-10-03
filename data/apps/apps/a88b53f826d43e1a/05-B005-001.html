@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000B63">
+<title>57 Bua tonma wan da 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.93, end: 12.12 },
+    { label: "1b", start: 12.37, end: 15.87 },
+    { label: "1c", start: 16.12, end: 20.08 },
+    { label: "1d", start: 20.33, end: 32.63 },
+    { label: "1e", start: 32.88, end: 40.44 },
+    { label: "1f", start: 40.69, end: 50.67 },
+    { label: "1g", start: 50.92, end: 58.32 },
+    { label: "1h", start: 58.57, end: 67.62 },
+    { label: "1i", start: 67.88, end: 77.93 },
+    { label: "1j", start: 78.18, end: 89.42 },
+    { label: "1k", start: 89.67, end: 98.83 },
+    { label: "1l", start: 99.08, end: 109.84 },
+    { label: "1m", start: 110.09, end: 118.69 },
+    { label: "1n", start: 118.94, end: 124.15 },
+    { label: "1o", start: 124.4, end: 128.96 },
+    { label: "1p", start: 129.21, end: 134.93 },
+    { label: "1q", start: 135.18, end: 143.74 },
+    { label: "1r", start: 143.99, end: 152.57 },
+    { label: "1s", start: 152.82, end: 158.92 },
+    { label: "1t", start: 159.17, end: 167.53 },
+    { label: "1u", start: 167.78, end: 175.61 },
+    { label: "1v", start: 175.86, end: 180.57 },
+    { label: "1w", start: 180.82, end: 185.4 },
+    { label: "1x", start: 185.65, end: 194.36 },
+    { label: "1y", start: 194.61, end: 205.19 },
+    { label: "1z", start: 205.44, end: 212.49 },
+    { label: "1aa", start: 212.74, end: 217.44 },
+    { label: "1ab", start: 217.69, end: 221.97 },
+    { label: "1ac", start: 222.22, end: 233.81 },
+    { label: "1ad", start: 234.06, end: 243.05 },
+    { label: "1ae", start: 243.3, end: 247.51 },
+    { label: "1af", start: 247.76, end: 256.58 },
+    { label: "1ag", start: 256.83, end: 266.05 },
+    { label: "1ah", start: 266.3, end: 271.55 },
+    { label: "1ai", start: 271.8, end: 278.38 },
+    { label: "1aj", start: 278.62, end: 287.72 },
+    { label: "1ak", start: 287.97, end: 295.69 },
+    { label: "1al", start: 295.94, end: 301.1 },
+    { label: "1am", start: 301.35, end: 308.76 },
+    { label: "1an", start: 309.01, end: 316.57 },
+    { label: "1ao", start: 316.82, end: 322.19 },
+    { label: "1ap", start: 322.44, end: 333.31 },
+    { label: "1aq", start: 333.56, end: 337.53 },
+    { label: "1ar", start: 337.78, end: 345.28 },
+    { label: "1as", start: 345.53, end: 353.16 },
+    { label: "1at", start: 353.41, end: 359.59 },
+    { label: "1au", start: 359.84, end: 368.66 },
+    { label: "1av", start: 368.91, end: 375.93 },
+    { label: "1aw", start: 376.18, end: 378.92 },
+    { label: "1ax", start: 379.17, end: 382.11 },
+    { label: "1ay", start: 382.36, end: 388.15 },
+    { label: "1az", start: 388.4, end: 390.79 },
+    { label: "1ba", start: 391.04, end: 400.02 },
+    { label: "1bb", start: 400.27, end: 406.94 },
+    { label: "1bc", start: 407.19, end: 410.54 },
+    { label: "1bd", start: 410.79, end: 410.79 },
+    { label: "1be", start: 416.42, end: 426.42 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 3.93;
+var stopTime  = 426.42;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;57 Bua tonma wan da&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">57 Bua tonma wan da sangbanlo yuli</span>.</div></div>
+<div class="m"><div id="T1b" class="txs">C'est celui qui est pressé qui achète la tête du chien.</div></div>
+<div class="m"><div id="T1c" class="txs">Sens : si tu es pressé tu n'auras pas tout ce que tu veux.</div></div>
+<div class="m"><div id="T1d" class="txs">Emploi : se dit à quelqu'un qui est trop pressé de recevoir quelque chose, par exemple, si tu engages quelqu'un pour un travail et qu'il veut l'argent de suite sans rien faire, tu pourras lui dire ce proverbe.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">Bua tonma wan da sangbanlo yuli</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">58 Nilo yaa maadi mii goa ñoagu o la buliñoagundili</span>.</div></div>
+<div class="m"><div id="T1g" class="txs">Si quelqu'un dit je n'ai pas dormi la nuit, il se moque des bois qui maintiennent le sécot/natte de porte.</div></div>
+<div class="m"><div id="T1h" class="txs">Sens et emploi : celui qui se plaint à propos de n'importe quoi devant quelqu'un qui est plus malheureux que lui, le plus malheureux pourra lui dire ce proverbe.</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Nilo yaa maadi mii goa ñoagu o la buliñoagundili</span>.</div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">59 Jawaaganganli ki bani ki buliñoakoali kandima pa, se o podi ya yoguni</span>.</div></div>
+<div class="m"><div id="T1k" class="txs">Un jeune entêté à faire ce qu'on lui défend ne sait pas que l'enjambement du seuil de la porte est difficile sauf quand il sera vieux.</div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">Jawaaganganli ki bani ki buliñoakoali kandima pa, se o podi ya yoguni</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">60 </span><span class="bd">Ki</span><span class="bd"> nungi yaa ŋani li nan cie li bunkpanli wani</span>.</div></div>
+<div class="m"><div id="T1n" class="txs">Un visage qui n'est pas beau est plus que l'os occipital.</div></div>
+<div class="m"><div id="T1o" class="txs">Sens : Se dit de celui qui veut être plus que son camarade.</div> <div id="T1p" class="txs">Celui qui possède effectivement plus pourra lui dire ce proverbe.</div></div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">Ki</span><span class="bd"> nungi yaa ŋani li nan cie li bunkpanli wani</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">61 Diedaano buoli ki ye die yua waagi ye.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs">Il n' y a pas de réserve de chef de concession, mais il existe quelqu’un qui a vieilli.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs"><span class="bd">Diedaano buoli ki ye die yua waagi ye.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">62 Pua lia manma ki ba caali n ni</span>.</div></div>
+<div class="m"><div id="T1v" class="txs">Une femme se retire de la rosée pour tomber dans un puits.</div></div>
+<div class="m"><div id="T1w" class="txs">Sens : se dit à quelqu'un qui évite quelque chose pour tomber ailleurs.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">Pua lia manma ki ba caali n ni</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">63 </span><span class="bd">Ban n ya </span><span class="bd">caa caali n ni n nan bani puoba n wuu ki bi mula n cuubi naani.</span></div></div>
+<div class="m"><div id="T1z" class="txs">Même si je ne vais pas au puits, je connais où le derrière des femmes se dirige quand elles se lèvent.</div></div>
+<div class="m"><div id="T1aa" class="txs">Sens: Même si je n'ai pas d'argent, je sais ce que c'est que l'argent.</div> <div id="T1ab" class="txs">On n'apprend pas à quelqu'un une chose qu'il connait déjà.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">Ban n ya </span><span class="bd">caa caali n ni n nan bani puoba n wuu ki bi mula n cuubi naani.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">64 A ya ye o kpenu po a baani o ŋudo muuli n nua naani po.</span></div></div>
+<div class="m"><div id="T1ae" class="txs">Si tu es au marigot, tu sais où le derrière de celui qui lave regarde.</div></div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">A ya ye o kpenu po a baani o ŋudo muuli n nua naani po.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ag" class="txs"><span class="bd">65 Caano yaa piidi wula bi dotieba n cedi o leni nanga</span>.</div></div>
+<div class="m"><div id="T1ah" class="txs">Si l’étranger trouve de l'or que les villageois laissent la haine.</div></div>
+<div class="m"><div id="T1ai" class="txs">Sens : l'étranger dira ce proverbe aux villageois qui voudraient lui prendre ce qu'il a gagné.</div></div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">Caano yaa piidi wula bi dotieba n cedi o leni nanga</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">66 Cedi lan kuugi n di leni bi canba</span>.</div></div>
+<div class="m"><div id="T1al" class="txs">Attends que ça refroidisse, celui-là mange avec les étrangers.</div></div>
+<div class="m"><div id="T1am" class="txs"><span class="bd">Cedi lan kuugi n di leni bi canba</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1an" class="txs"><span class="bd">67 Ka lan soangi wain ya di len canba</span>.</div></div>
+<div class="m"><div id="T1ao" class="txs">Assieds-toi que ça refroidisse celui-là mange avec les étrangers.</div></div>
+<div class="m"><div id="T1ap" class="txs">Sens : Mieux vaut manger rapidement sa nourriture que de la laisser refroidir et s'exposer à voir arriver des étrangers avec lesquels il faudra partager.</div></div>
+<div class="m"><div id="T1aq" class="txs">Emploi : Se dit à une personne qui refuse de manger vite sa part.</div></div>
+<div class="m"><div id="T1ar" class="txs"><span class="bd">Ka lan soangi wain ya di len canba</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1as" class="txs"><span class="bd">68 Caano bandi diedaano fanma caana yaa waani o</span>.</div></div>
+<div class="m"><div id="T1at" class="txs">Si l’étranger connait l'imbécilité du chef de concession, c'est sa femme qui le lui a dit.</div></div>
+<div class="m"><div id="T1au" class="txs"><span class="bd">Caano bandi diedaano fanma caana yaa waani o</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1av" class="txs"><span class="bd">69 Caanii pagi se o waagi.</span></div> <div id="T1aw" class="txs"><span class="bd">(Caani paagi gari wa bindi)</span>.</div></div>
+<div class="m"><div id="T1ax" class="txs">Un hôte est loué s'il demeure longtemps.</div></div>
+<div class="m"><div id="T1ay" class="txs">Sens : Se dit à quelqu'un qui veut être félicité alors qu'on ne connait pas encore sa conduite.</div></div>
+<div class="m"><div id="T1az" class="txs"><span class="bd">Caanii pagi se o waagi.</span></div> <div id="T1ba" class="txs"><span class="bd">(Caani paagi gari wa bindi)</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bb" class="txs"><span class="bd">70 Caano waadi o cua leni ti</span>.</div></div>
+<div class="m"><div id="T1bc" class="txs">Le froid de l'étranger il est venu avec.</div></div>
+<div class="m"><div id="T1bd" class="txs">Sens : si un étranger se plaint du froid il est venu sans ce qui peut le protéger.</div></div>
+<div class="m"><div id="T1be" class="txs"><span class="bd">Caano waadi o cua leni ti</span>.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/05 prov bonny vol1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

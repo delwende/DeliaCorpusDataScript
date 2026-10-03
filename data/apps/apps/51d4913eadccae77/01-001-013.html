@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>201 Koob sã n noomẽ, roog 13</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "13a", start: 253.31, end: 257.15 },
+    { label: "13b", start: 257.4, end: 259.58 },
+    { label: "13c", start: 259.83, end: 261.98 },
+    { label: "13d", start: 262.23, end: 270.77 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 253.31;
+var stopTime  = 270.77;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-012.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;201 Koob sã n noomẽ, roog&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;13&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-014.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 201 a 240-image13.jpeg" />
+
+<div class="m"><div id="T13a" class="txs"><span class="bd">213 </span><span class="bd">Pʋʋg</span><span class="bd"> </span><span class="bd">kinkirg</span><span class="bd"> ka </span><span class="bd">teeg</span><span class="bd"> </span><span class="bd">pʋʋg</span><span class="bd"> </span><span class="bd">sag-basdem</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T13b" class="txs"><span class="bdit">(Les esprits dans un champ,</span></div> <div id="T13c" class="txs"><span class="bdit">ne dépendent pas des miettes).</span></div></div>
+<div class="m"><div id="T13d" class="txs"><span class="bd">Pʋʋg</span><span class="bd"> </span><span class="bd">kinkirg</span><span class="bd"> ka </span><span class="bd">teeg</span><span class="bd"> </span><span class="bd">pʋʋg</span><span class="bd"> </span><span class="bd">sag-basdem</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 201 a 240 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

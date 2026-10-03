@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prov 1-40 13</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "13a", start: 280.34, end: 282.77 },
+    { label: "13b", start: 283.02, end: 285.47 },
+    { label: "13c", start: 285.72, end: 288.15 },
+    { label: "13d", start: 288.4, end: 289.79 },
+    { label: "13e", start: 290.04, end: 293.65 },
+    { label: "13f", start: 293.9, end: 295.49 },
+    { label: "13g", start: 295.74, end: 298.35 },
+    { label: "13h", start: 298.6, end: 306.67 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 280.34;
+var stopTime  = 306.67;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-012.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Prov 1-40&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;13&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-014.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 1-40-image13.jpg" />
+
+<div class="m"><div id="T13a" class="txs"><span class="bd">13 Ned sã n kẽnd kiu-kiu,</span></div> <div id="T13b" class="txs"><span class="bd">bɩ a tẽ</span><span class="bd">eg lama-lama yelle.</span></div></div>
+<div class="m"><div id="T13c" class="txs"><span class="bdit">(Si quelqu’un marche à grands pas,</span></div> <div id="T13d" class="txs"><span class="bdit">parce que fort,</span></div> <div id="T13e" class="txs"><span class="bdit">il doit songer aux jours où il marchera à petits pas,</span></div> <div id="T13f" class="txs"><span class="bdit">faute d’énergie).</span></div></div>
+<div class="m"><div id="T13g" class="txs"><span class="bd">Ned sã n kẽnd kiu-kiu,</span></div> <div id="T13h" class="txs"><span class="bd">bɩ a tẽ</span><span class="bd">eg lama-lama yelle.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 1 a 40 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

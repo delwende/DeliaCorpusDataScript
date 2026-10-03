@@ -76,6 +76,20 @@ LANG_CANON = {
 TIMING_RE = re.compile(r'label:\s*"([^"]+)"\s*,\s*start:\s*([\d.]+)\s*,\s*end:\s*([\d.]+)')
 # Bundled third-party libraries carry no language data.
 VENDOR_JS_RE = re.compile(r"(jquery|popcorn|tooltipster|bootstrap|modernizr|\.min\.js$|^sw\.js$|^pwa-main\.js$)", re.I)
+# Detecting French lines inside local-language apps (proverb apps read each proverb, then its
+# French translation). Orthography is the strongest signal: Burkina orthographies use letters
+# French never does, while é/è/à/ç and elisions (l', qu') do not occur in them. Function words
+# shared with local languages (a, de, du, si, on…) are deliberately excluded.
+FRENCH_WORDS = {
+    "le", "la", "les", "des", "et", "est", "un", "une", "il", "elle", "que", "qui", "pas", "dans", "pour",
+    "sur", "au", "aux", "ce", "cette", "son", "sa", "ses", "avec", "mais", "plus", "tout", "vous", "nous",
+    "ils", "sont", "ont", "leur", "être", "fait", "comme", "quand", "je", "tu", "mon", "ton", "votre",
+    "notre", "très", "bien", "peut", "faut", "celui", "jamais", "rien", "autre", "même", "sans", "chez",
+    "par", "où", "ne", "se", "à",
+}
+LOCAL_LETTERS_RE = re.compile("[ɛɔŋɲɓɗƴʋɩãẽĩõũƐƆŊƝƁƊƳ]")
+FRENCH_ACCENT_RE = re.compile("[éèêàçùâîôûœ]")
+FRENCH_ELISION_RE = re.compile(r"\b(l|d|qu|c|n|s|j|m|t|jusqu|lorsqu)['’]\w", re.I)
 # A language named in a media filename beats the app folder code (e.g. English audio under /fra/).
 FILENAME_LANG_RE = re.compile(r"(english|anglais|fran[cç]ais|french|moor[eé]|dioula|jula|fulfulde)", re.I)
 
@@ -648,6 +662,21 @@ def app_language(meta: dict[str, str], media_name: str = "") -> str:
     return canon_lang(meta.get("language", ""))
 
 
+def is_french(text: str) -> bool:
+    if LOCAL_LETTERS_RE.search(text):
+        return False
+    low = text.lower()
+    toks = [w for w in re.split(r"[^\w]+", low) if w]
+    if not toks:
+        return False
+    accents = len(FRENCH_ACCENT_RE.findall(low))
+    if len(toks) < 3:
+        return accents > 0
+    ratio = sum(w in FRENCH_WORDS for w in toks) / len(toks)
+    elisions = bool(FRENCH_ELISION_RE.search(low))
+    return ratio >= 0.3 or (ratio >= 0.12 and (accents > 0 or elisions)) or accents >= 2 or (elisions and accents > 0)
+
+
 def parse_timed_audio_page(html: str, meta: dict[str, str], idx: AssetIndex, rel_source: str) -> list[Unit]:
     """One unit per timed phrase: transcript text + audio file + start/end seconds."""
     soup = BeautifulSoup(html, "html.parser")
@@ -676,6 +705,22 @@ def parse_timed_audio_page(html: str, meta: dict[str, str], idx: AssetIndex, rel
             source_page=meta.get("source_page", ""), app_url=meta.get("app_url", ""), source_file=rel_source,
             evidence="timed_audio_segment", confidence=0.95, notes=title,
         ).finalize())
+    if lang not in {"fr", "en"}:
+        french = [is_french(u.text) for u in units]
+        for u, fr in zip(units, french):
+            if fr:
+                u.language = "fr"
+        # Strictly alternating pages (local, French, local, French…) read each line then its
+        # translation; pair them as separate text units, kept for review.
+        if any(french) and all(a != b for a, b in zip(french, french[1:])):
+            for prev, cur, fr in zip(units, units[1:], french[1:]):
+                if fr:
+                    units.append(Unit(
+                        language=prev.language, variant=prev.variant, collection=prev.collection,
+                        record_order=prev.record_order, text=prev.text, translation_fr=cur.text,
+                        source_page=prev.source_page, app_url=prev.app_url, source_file=rel_source,
+                        evidence="adjacent_french_segment", confidence=0.75, notes=title,
+                    ).finalize())
     return units
 
 

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°25 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.43 },
+    { label: "1b", start: 2.68, end: 6.35 },
+    { label: "1c", start: 6.6, end: 7.73 },
+    { label: "1d", start: 7.98, end: 12.11 },
+    { label: "1e", start: 12.36, end: 16.47 },
+    { label: "1f", start: 16.72, end: 21.07 },
+    { label: "1g", start: 21.32, end: 26.27 },
+    { label: "1h", start: 26.52, end: 33.19 },
+    { label: "1i", start: 33.44, end: 36.75 },
+    { label: "1j", start: 37, end: 39.13 },
+    { label: "1k", start: 39.38, end: 42.19 },
+    { label: "1l", start: 42.44, end: 46.23 },
+    { label: "1m", start: 46.48, end: 52.37 },
+    { label: "1n", start: 52.62, end: 56.83 },
+    { label: "1o", start: 57.08, end: 58.77 },
+    { label: "1p", start: 59.02, end: 65.05 },
+    { label: "1q", start: 65.3, end: 70.57 },
+    { label: "1r", start: 70.82, end: 72.21 },
+    { label: "1s", start: 72.46, end: 75.11 },
+    { label: "1t", start: 75.36, end: 77.39 },
+    { label: "1u", start: 77.64, end: 80.27 },
+    { label: "1v", start: 80.52, end: 87.59 },
+    { label: "1w", start: 87.84, end: 91.69 },
+    { label: "1x", start: 91.94, end: 94.39 },
+    { label: "1y", start: 94.64, end: 96.65 },
+    { label: "1z", start: 96.9, end: 99.09 },
+    { label: "1aa", start: 99.34, end: 103.91 },
+    { label: "1ab", start: 104.16, end: 104.47 },
+    { label: "1ac", start: 104.72, end: 105.25 },
+    { label: "1ad", start: 105.5, end: 109.57 },
+    { label: "1ae", start: 109.82, end: 113.59 },
+    { label: "1af", start: 113.84, end: 115.71 },
+    { label: "1ag", start: 115.96, end: 119.03 },
+    { label: "1ah", start: 119.28, end: 121.91 },
+    { label: "1ai", start: 122.16, end: 122.81 },
+    { label: "1aj", start: 123.06, end: 124.85 },
+    { label: "1ak", start: 125.1, end: 129.23 },
+    { label: "1al", start: 129.48, end: 134.71 },
+    { label: "1am", start: 134.96, end: 136.61 },
+    { label: "1an", start: 136.86, end: 141.29 },
+    { label: "1ao", start: 141.54, end: 143.85 },
+    { label: "1ap", start: 144.1, end: 145.69 },
+    { label: "1aq", start: 145.94, end: 148.19 },
+    { label: "1ar", start: 148.44, end: 152.15 },
+    { label: "1as", start: 152.4, end: 154.23 },
+    { label: "1at", start: 154.48, end: 159.53 },
+    { label: "1au", start: 159.78, end: 160.47 },
+    { label: "1av", start: 160.72, end: 161.59 },
+    { label: "1aw", start: 161.84, end: 162.85 },
+    { label: "1ax", start: 163.1, end: 164.01 },
+    { label: "1ay", start: 164.26, end: 167.51 },
+    { label: "1az", start: 167.76, end: 170.21 },
+    { label: "1ba", start: 170.46, end: 172.05 },
+    { label: "1bb", start: 172.3, end: 175.03 },
+    { label: "1bc", start: 175.28, end: 177.95 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 177.95;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "26-B026-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='25-B025-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='25-B025-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°25&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='27-B027-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='27-B027-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B026-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°25 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Ne cherchez pas à vous comparer ou vous montrer.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs">Histoire:</div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Paul va aux funérailles d’un pasteur de la commune.</span></div> <div id="T1e" class="txs"><span class="it">Il a prévu de donner </span><span class="it">50</span><span class="it">’000 CFA à la famille du défunt.</span></div> <div id="T1f" class="txs"><span class="it">Lorsque les dons de chacun sont annoncés au micro,</span></div> <div id="T1g" class="txs"><span class="it">il entend qu’un de ses anciens amis a donné </span><span class="it">100</span><span class="it">’000 CFA.</span></div> <div id="T1h" class="txs"><span class="it">Paul se dit qu’il ne peut pas donner moins que son ami et qu’il doit même être capable de donner plus.</span></div> <div id="T1i" class="txs"><span class="it">Il décide alors de donner </span><span class="it">120</span><span class="it">’000 CFA.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1j" class="txs">Que pensez-vous de cette histoire?</div> <div id="T1k" class="txs">Pourquoi Paul a-t-il donné plus d’argent?</div> <div id="T1l" class="txs">Quelle était la vraie motivation du don de Paul?</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1m" class="txs"><span class="it">Nous passons beaucoup de temps à nous comparer et nous cherchons à être important aux yeux des autres.</span></div> <div id="T1n" class="txs"><span class="it">Cela peut créer de grands problèmes dans la gestion de nos biens:</span></div> <div id="T1o" class="txs"><span class="it">Comme dans l’histoire de Paul,</span></div> <div id="T1p" class="txs"><span class="it">nous risquons de manquer de sagesse et dépenser trop d’argent seulement pour être vu des</span> autres.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1q" class="txs">Nos biens ne doivent pas être un moyen de nous montrer supérieur aux autres.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1r" class="txs">Si nous faisons un don,</div> <div id="T1s" class="txs">nous ne devons pas le faire avec orgueil.</div> <div id="T1t" class="txs">Si nous achetons une chose,</div> <div id="T1u" class="txs">ce n’est pas pour impressionner tout le monde.</div></div>
+<div class="p_Corpsdetexte"><div id="T1v" class="txs">Nous comparer et vouloir être important aux yeux des autres est un manque de sagesse qui risque de nous appauvrir:</div> <div id="T1w" class="txs">Nous allons dépenser beaucoup d’argent pour des choses inutiles,</div> <div id="T1x" class="txs">seulement pour que les hommes nous admirent.</div></div>
+<div class="m"><div id="T1y" class="txs"><span class="ul">Versets </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1z" class="txs"><span class="it">«&nbsp;Quand tu donnes de l’argent aux pauvres,</span></div> <div id="T1aa" class="txs"><span class="it">ne cherche pas à te faire remarquer… Ce que tu donnes reste secret.</span></div> <div id="T1ab" class="txs"><span class="it">Dieu,</span></div> <div id="T1ac" class="txs"><span class="it">ton Père,</span></div> <div id="T1ad" class="txs"><span class="it">voit ce que tu fais en secret et il te récompensera.»</span></div><div id="T1ae" class="txs">(Matthieu 6, 2,4)</div></div>
+<div class="p"><div id="T1af" class="txs"><span class="it">Le Seigneur dit à Samuel:</span></div> <div id="T1ag" class="txs"><span class="it">«&nbsp;Je ne juge pas comme les êtres humains.</span></div> <div id="T1ah" class="txs"><span class="it">Les gens font attention à ce qui se voit,</span></div> <div id="T1ai" class="txs"><span class="it">mais moi,</span></div> <div id="T1aj" class="txs"><span class="it">je regarde le fond du cœur.</span></div><div id="T1ak" class="txs"><span class="it">&nbsp;»</span><span class="it"> </span>(1Samuel 16, 7)</div></div>
+<div class="p"><div id="T1al" class="txs"><span class="it">«&nbsp;Ne faites rien pour passer devant les autres ou pour que les autres vous admirent,</span></div> <div id="T1am" class="txs"><span class="it">cela ne vaut rien.</span></div><div id="T1an" class="txs"><span class="it">&nbsp;» </span>(Philippiens 2, 3)</div></div>
+<div class="m"><div id="T1ao" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<ul>
+  <li class="zuli1">Quand je fais un don,</div> <div id="T1ap" class="txs">quelle doit être ma motivation?</div> <div id="T1aq" class="txs">Suis-je prêt à donner de l’argent discrètement,</div> <div id="T1ar" class="txs">sans le dire à tout le monde?</li></div>
+  <li class="zuli1">Quelles sont les choses que je paie pour être comme les autres ou les dépasser?</div> <div id="T1as" class="txs">(habits,</div> <div id="T1at" class="txs">téléphone,</div> <div id="T1au" class="txs">voiture…)</li>
+</ul></div>
+<div class="m"><div id="T1av" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1aw" class="txs">Ne vous comparez pas aux autres quand vous donnez.</div> <div id="T1ax" class="txs">Donnez par amour et compassion,</div> <div id="T1ay" class="txs">et non pour être vu.</div></div>
+<div class="p_Corpsdetexte"><div id="T1az" class="txs">Ne dépensez pas pour impressionner les autres,</div> <div id="T1ba" class="txs">par orgueil.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/034_Conseil_n25.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

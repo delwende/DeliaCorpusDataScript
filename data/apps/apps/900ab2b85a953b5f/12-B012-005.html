@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Utangulizi 5</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "12-B012-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='11-B011-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-004.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Utangulizi&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;5&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-006.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B012-image5.jpg" />
+
+<div class="m"><span class="bd">Upendo</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bdit">Mungu</span><span class="bdit"> </span><span class="bdit">anatupenda</span><span class="it">na</span><span class="it"> </span><span class="it">ametutaka</span><span class="it"> siku </span><span class="it">zote</span><span class="it"> </span><span class="it">tuwe</span><span class="it"> </span><span class="it">wana</span><span class="it"> wake </span><span class="it">kwa</span><span class="it"> </span><span class="it">njia</span><span class="it"> </span><span class="it">ya</span><span class="it"> Yesu Kristo</span> (Waefeso 1, 4 hadi 5).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Upendo </span><span class="bd">wa</span><span class="bd"> </span><span class="bd">Mungu</span><span class="bd"> </span><span class="bd">ni</span><span class="bd"> </span><span class="bd">nini</span><span class="bd">?</span></div>
+<div class="m">Upendo wa Mungu ni mkamilifu, hauna mwisho na safi. Sio hisia tu. Mungu alionyesha upendo wake kwetu kwa tendo la muhimu sana: alimtoa mwanawe wa pekee ili atuokoe (Yohana 3, 16).</div>
+<div class="m">- Upendo wa Mungu hauna masharti: haniulizi niboreshe maisha yangu kabla hajaniokoa! Asili isiyo na masharti ya upendo wa Mungu haibadiliki kamwe. Mungu anaendelea kutupenda, hata tukianguka katika dhambi, hata kama tutamwacha. Upendo wake kwetu unabaki pale pale. Haipungui.</div>
+<div class="m">- Upendo wa Mungu hauna ubinafsi, yaani, unalenga sisi. Katika kutoa mwanawe, hakujifikiria yeye mwenyewe, bali sisi! Na anaendelea kutusaidia, kuwa wa huduma kwetu.</div>
+<div class="m">- Upendo wa Mungu ni mkubwa sana: Mungu anatupenda sana hivi kwamba alitoa zawadi yake ya thamani zaidi, mwana wake wa pekee. Hakuna kubwa zaidi ambayo angeweza kutufanyia.</div>
+<div class="m"><span class="bd">Vitendo</span><span class="bd"> </span><span class="bd">vya</span><span class="bd"> </span><span class="bd">kufanya</span><span class="bd"> </span><span class="bd">upendo</span><span class="bd"> </span><span class="bd">wa</span><span class="bd"> </span><span class="bd">Mungu</span><span class="bd"> </span><span class="bd">kuwa</span><span class="bd"> </span><span class="bd">utajiri</span><span class="bd"> </span><span class="bd">katika</span><span class="bd"> </span><span class="bd">maisha</span><span class="bd"> </span><span class="bd">yako</span><span class="bd">:</span></div>
+<div class="m"><span class="it">- </span><span class="it">Maombi:</span>Mshukuru Mungu kila siku kwa upendo wake kwako. Zingatia ishara ndogo za upendo wa Mungu wakati wa mchana. Mwishoni mwa siku, andika matukio ambayo yanaonyesha upendo wa Mungu kwako katika daftari na kumshukuru.</div>
+<div class="m">- Usomaji wa Biblia: Soma Waefeso 3, 17 hadi 19 .</div>
+<div class="m"><span class="it">- </span><span class="it">tafakari</span><span class="it"> </span><span class="it">ya</span><span class="it"> </span><span class="it">kibinafsi</span>: Katika kifungu hiki, mtume Paulo anatumia picha 2 ili kuwatia moyo wasomaji wake kufurahia upendo wa Mungu:</div>
+<div class="m">weka mizizi katika upendo huu: kama vile mti uenezavyo mizizi yake katika ardhi, usipeperushwe na upepo na kupata riziki.</div>
+<div class="m">- Jenga juu ya upendo huu: Upendo wa Mungu ni msingi imara, unaotuwezesha kujenga na kusonga mbele katika maisha yetu ya kiroho.</div>
+<div class="m">Fikiria jinsi picha hizi 2 zinavyoweza kukusaidia kuishi na kupata uzoefu wa upendo wa Mungu katika maisha ya kila siku.</div>
+<div class="m"><span class="it">- Kwa </span><span class="it">wengine:</span>Shiriki ushuhuda wako kuhusu upendo wa Mungu katika maisha yako na marafiki zako, mke au mume wako au ndugu na dada katika kanisa lako. Na waonyeshe kwa matendo yako kwamba Mungu anawapenda.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

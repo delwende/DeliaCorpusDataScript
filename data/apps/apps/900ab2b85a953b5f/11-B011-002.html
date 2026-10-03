@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image2.jpg" />
+
+<div class="m"><span class="bd">Elezione</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Siamo scelti da Dio, prima della fondazione del mondo, in Cristo, per essere santi</span><span class="it"> </span>(Efesini 1, 4).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Cos'è l'elezione?</span></div>
+<div class="m">L’elezione è una dottrina difficile da comprendere. È importante non soffermarsi sul motivo per cui alcuni sono stati eletti e altri no. La sovranità di Dio significa che non potremmo mai comprendere tutte le sue azioni.</div>
+<div class="m">Ciò che è importante ricordare riguardo a questa dottrina:</div>
+<div class="m">- La salvezza inizia da Dio. Ha preso l'iniziativa per salvare l'uomo. Siamo così corrotti dal peccato che ci è impossibile fare il primo passo.</div>
+<div class="m">- Questa è un'azione che Dio fa solo e per se stesso.</div>
+<div class="m">- Non usa gli stessi criteri del nostro mondo nelle sue scelte (1 Corinzi 1, 26 a 29).</div>
+<div class="m">- L'elezione di Dio ha uno scopo. Ci ha scelto per glorificarlo, per servirlo e per compiere opere buone.</div>
+<div class="m"><span class="bd">Azioni per rendere le elezioni una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera:</span><span class="it"> </span>Ringrazia Dio ogni giorno perché sei uno dei Suoi prescelti.</div>
+<div class="m">Chiedi il suo aiuto per vivere in modo degno di uno degli eletti di Dio.</div>
+<div class="m"><span class="it">- Lettura della Bibbia</span>: Leggi 1 Corinzi 1, 26 a 31. Questi versetti ci insegnano che Dio non sceglie come sceglie il mondo. Quali sono i suoi criteri di scelta? Solo perché Dio non sceglie ciò che è “forte” non significa che non ci consideri.</div>
+<div class="m">Leggi Isaia 43, 4 e memorizzalo.</div>
+<div class="m"><span class="it">- Riflessione personale</span>: Hai la sensazione che gli altri - tuo marito o tua moglie, i tuoi superiori o colleghi, i membri della tua chiesa - non ti considerino? Ricorda che sei uno degli "eletti" di Dio. Sei molto importante per Dio. Ti considera. Sei prezioso ai Suoi occhi. La tua importanza non dipende dai tuoi diplomi, dalla tua posizione sociale o dai tuoi beni materiali, ma è semplicemente per grazia che Dio ti ha scelto. Se stai attento, lo noterai nella tua vita di tutti i giorni!</div>
+<div class="m"><span class="it">-Verso gli altri</span>: Trattate i vostri fratelli e sorelle spirituali, che sono anche gli eletti di Dio, con rispetto e amore! Non disprezzare chi è debole. Piuttosto, mostra loro che sono preziosi agli occhi di Dio e della Chiesa.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

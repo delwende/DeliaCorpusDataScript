@@ -1,0 +1,17 @@
+var books = [
+  { name: "1 A bon chat, bon rat", ref: "01-B001-001.html" },
+  { name: "16 Au village où il n'y a", ref: "02-B002-001.html" },
+  { name: "31 C'est en forgeant", ref: "03-B003-001.html" },
+  { name: "46 Dans le doute", ref: "04-B004-001.html" },
+  { name: "61 Il faut battre le fer", ref: "05-B005-001.html" },
+  { name: "76 Il vaut mieux aller au", ref: "06-B006-001.html" },
+  { name: "91 La plus belle fille du", ref: "07-B007-001.html" },
+  { name: "106 Le manche neuf cause", ref: "08-B008-001.html" },
+  { name: "121 Les bons comptes font", ref: "09-B009-001.html" },
+  { name: "136 Loin des yeux, loin", ref: "10-B010-001.html" },
+  { name: "151 On ne prête qu'aux", ref: "11-B011-001.html" },
+  { name: "166 Quand deux éléphants", ref: "12-B012-001.html" },
+  { name: "181 Qui se ressemble", ref: "13-B013-001.html" },
+  { name: "196 Si tu as cinq femmes", ref: "14-B014-001.html" },
+  { name: "211 Un clou chasse", ref: "15-B015-001.html" },
+];

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Debbo cennditiiɗo 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.39 },
+    { label: "1b", start: 0.64, end: 3.09 },
+    { label: "1c", start: 3.34, end: 5.83 },
+    { label: "1d", start: 6.08, end: 9.75 },
+    { label: "1e", start: 10, end: 13.91 },
+    { label: "1f", start: 14.16, end: 16.23 },
+    { label: "1g", start: 16.48, end: 21.47 },
+    { label: "1h", start: 21.72, end: 23.17 },
+    { label: "1i", start: 23.42, end: 30.71 },
+    { label: "1j", start: 30.96, end: 37.03 },
+    { label: "1k", start: 37.28, end: 41.11 },
+    { label: "1l", start: 41.36, end: 50.67 },
+    { label: "1m", start: 50.92, end: 58.75 },
+    { label: "1n", start: 59, end: 61.47 },
+    { label: "1o", start: 61.72, end: 66.07 },
+    { label: "1p", start: 66.32, end: 70.23 },
+    { label: "1q", start: 70.48, end: 76.39 },
+    { label: "1r", start: 76.64, end: 77.71 },
+    { label: "1s", start: 77.96, end: 80.67 },
+    { label: "1t", start: 80.92, end: 84.43 },
+    { label: "1u", start: 84.68, end: 87.21 },
+    { label: "1v", start: 87.46, end: 90.23 },
+    { label: "1w", start: 90.48, end: 96.35 },
+    { label: "1x", start: 96.6, end: 97.47 },
+    { label: "1y", start: 97.72, end: 99.87 },
+    { label: "1z", start: 100.12, end: 102.79 },
+    { label: "1aa", start: 103.04, end: 105.47 },
+    { label: "1ab", start: 105.72, end: 107.97 },
+    { label: "1ac", start: 108.22, end: 114.87 },
+    { label: "1ad", start: 115.12, end: 115.95 },
+    { label: "1ae", start: 116.2, end: 118.95 },
+    { label: "1af", start: 119.2, end: 127.87 },
+    { label: "1ag", start: 128.12, end: 129.59 },
+    { label: "1ah", start: 129.84, end: 133.51 },
+    { label: "1ai", start: 133.76, end: 135.79 },
+    { label: "1aj", start: 136.04, end: 140.03 },
+    { label: "1ak", start: 140.28, end: 142.51 },
+    { label: "1al", start: 142.76, end: 144.03 },
+    { label: "1am", start: 144.28, end: 145.07 },
+    { label: "1an", start: 145.32, end: 146.29 },
+    { label: "1ao", start: 146.54, end: 152.59 },
+    { label: "1ap", start: 152.84, end: 157.89 },
+    { label: "1aq", start: 158.14, end: 161.69 },
+    { label: "1ar", start: 161.94, end: 164.07 },
+    { label: "1as", start: 164.32, end: 171.87 },
+    { label: "1at", start: 172.12, end: 178.05 },
+    { label: "1au", start: 178.3, end: 183.87 },
+    { label: "1av", start: 184.12, end: 187.45 },
+    { label: "1aw", start: 187.7, end: 190.15 },
+    { label: "1ax", start: 190.4, end: 200.4 },
+    { label: "1ay", start: 190.4, end: 191.11 },
+    { label: "1az", start: 191.36, end: 196.23 },
+    { label: "1ba", start: 196.48, end: 207.23 },
+    { label: "1bb", start: 207.48, end: 210.79 },
+    { label: "1bc", start: 211.04, end: 215.23 },
+    { label: "1bd", start: 215.48, end: 215.59 },
+    { label: "1be", start: 215.84, end: 218.31 },
+    { label: "1bf", start: 218.56, end: 224.51 },
+    { label: "1bg", start: 224.76, end: 225.95 },
+    { label: "1bh", start: 226.2, end: 234.03 },
+    { label: "1bi", start: 234.28, end: 241.39 },
+    { label: "1bj", start: 241.64, end: 244.55 },
+    { label: "1bk", start: 244.8, end: 245.27 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 245.27;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Debbo cennditiiɗo&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetitre"><div id="T1a" class="txs">Debbo cennditiiɗo</div></div>
+<div class="p_contetexte"><div id="T1b" class="txs">Debbo wonnoo, dey maraanaa baali, be'i e coppe.</div> <div id="T1c" class="txs">Goriiko jogaaki fay gootum.</div> <div id="T1d" class="txs">O wi'i goorko o, kee kanko kaa o heddataako hakkunde yimɓe.</div> <div id="T1e" class="txs">So wanaa o jooɗoo ley laddee.</div> <div id="T1f" class="txs">Goorko o, sallii.</div> <div id="T1g" class="txs">O joggii goorko faa wari jaɓi.</div></div>
+<div class="p_contetexte"><div id="T1h" class="txs">Heddii ɓe kooti ladde.</div> <div id="T1i" class="txs">Ɓe njooɗowii toon.</div> <div id="T1j" class="txs">Ɓe tawaa toon faa nyannde gom woɓɓe puɗɗi ni ngara ɗo maɓɓe nyalooma.</div> <div id="T1k" class="txs">Jon kaa o tawi wannaa tagaaɓe.</div> <div id="T1l" class="txs">Kam kaa fini nyande gom haɓɓi gineejim wi'i debbo o, so a hootan kaa heɓina faa kooten, so a hontataa du, min kaa mi hootii.</div> <div id="T1m" class="txs">Debbo o, wi'i o yaha o yoppida ɗum kam kaa baalim, be'im e coffem.</div> <div id="T1n" class="txs">Heƴii ɗum ko faddoo.</div></div>
+<div class="p_contetexte"><div id="T1o" class="txs">So weeti, ni bonneeji ladde ngara nyallida e makko.</div> <div id="T1p" class="txs">Ngari mbii ngaran ɓe kiiraa.</div> <div id="T1q" class="txs">O wi'i ɓe ngara ke kanko du o heɓɓan ɓe o hirda.</div> <div id="T1r" class="txs">So o heɓii ni na o yiɗi.</div> <div id="T1s" class="txs">Jon kaa hiirnoo ni ɓe ngari.</div> <div id="T1t" class="txs">Jaka dammucce ɗe, na anndi ke wanaa tagaaɓe.</div> <div id="T1u" class="txs">Ɓe ngarnoo fu, ɓe mbi'i kiirii jam.</div></div>
+<div class="p_contetexte"><div id="T1v" class="txs">Heddii baali mbi'i debbo o, hiiray ɗo.</div> <div id="T1w" class="txs">Debbo jom sawru kummbaldu linngilimti linngilim, ni ɓe nduuɗii.</div> <div id="T1x" class="txs">Weeti.</div> <div id="T1y" class="txs">Wennoo ni o yehi weendu.</div> <div id="T1z" class="txs">O yahunoo weendu ni o haawri ɓe.</div> <div id="T1aa" class="txs">Be mbii min ngarii dey min tawayma.</div> <div id="T1ab" class="txs">Baali maa mbi'i a walaa ɗoon.</div></div>
+<div class="p_contetexte"><div id="T1ac" class="txs">O wartunoo ni o naŋŋii baali mawɗi o sonnii.</div> <div id="T1ad" class="txs">O yoppi ɓiɓɓe mumɓɓoy.</div> <div id="T1ae" class="txs">Hirnoo ni ɓe ngari, ɓe njottinoo ni ɓe mbi'i kiirii jam.</div> <div id="T1af" class="txs">Ni ɓiɓɓe baali mbi'i: "Debbo koo hiiray gaa, debbo jom sawru kummbaldu linngilimti linngilim.</div> <div id="T1ag" class="txs">Heddii ɓe nduuɗii.</div></div>
+<div class="p_contetexte"><div id="T1ah" class="txs">Ɓe mduuɗinoo fu weeti.</div> <div id="T1ai" class="txs">Watti o ye'hi weendu o hawroy bonneeji ɗii gasin.</div> <div id="T1aj" class="txs">Ɓe mbi'i ɓe ngarii dey ɓiɓɓe baali ɗi mbi'i a walaa ɗoon.</div> <div id="T1ak" class="txs">O nanngi ɓiɓɓe baali o sonni.</div> <div id="T1al" class="txs">O wi'i so hiirii hande ni ngaron.</div> <div id="T1am" class="txs">Hiirnoo ni ɓe ngari.</div> <div id="T1an" class="txs">ɓe mbi'i kiirii jam.</div> <div id="T1ao" class="txs">Be'i ɗi, mbi'i debbo koo hiiray ɗoo; debbo jom sawru kummbaldu linngilimti linngilim; heddii ɓe nduuɗii.</div></div>
+<div class="p_contetexte"><div id="T1ap" class="txs">Wennoo ni ɓe kawri debbo; ɓe mbi'i min ngarii dey be'i maa mbi'i a walaa ɗoon dey min nduuɗii.</div> <div id="T1aq" class="txs">Deɓɓo o, wi'i weetii ni ngaron.</div> <div id="T1ar" class="txs">Wennoo ni o nanngi be'i makko o sonni.</div> <div id="T1as" class="txs">Hiirnoo ni ɓe njehi, ɓe kiirni jam; ni ɓiɓɓe be'i makko mbi'i debbo koo hiiray ɗo.</div> <div id="T1at" class="txs">Debbo jom sawru kummbaldu linngilimti linngilim; ni ɓe nduuɗii.</div></div>
+<div class="p_contetexte"><div id="T1au" class="txs">Wennoo ni ɓe kawri debbo; ɓe mbi'i min ngarii dey ɓiɓɓe be'i maa mbii a walaa ɗoon dey min nduuɗii.</div> <div id="T1av" class="txs">Debbo o, wi'i weetii ni ngaron.</div> <div id="T1aw" class="txs">Wennoo ni o nanngi ɓiɓɓe be'i makko o sonni.</div></div>
+<div class="p_contetexte"><div id="T1ax" class="txs">Hiirno ni ɓe njehi, ɓe kiirni jam.</div> <div id="T1ay" class="txs">Ni coppi makko mbi'i debbo koo hiiray ɗo.</div> <div id="T1az" class="txs">Debbo jom sawru kummbaldu linngilimti linngilim; ni ɓe nduuɗii.</div> <div id="T1ba" class="txs">Wennoo ni ɓe kawri debbo; ɓe mbi'i min ngarii dey coppe maa mbii a walaa ɗoon dey min nduuɗii.</div> <div id="T1bb" class="txs">Debbo o wi'i weetii ni ngaron.</div> <div id="T1bc" class="txs">Wennoo ni o nanngi coppe makko o hirsi. </div></div>
+<div class="p_contetexte"><div id="T1bd" class="txs">Hiiri.</div> <div id="T1be" class="txs">Ɓe ngari ɓe mbi'i kiirii jam; ɓe ɓadii ni o ummii o nooti.</div> <div id="T1bf" class="txs">Jon kaa ɓe ndaɗɗi sekko na ɓe kiiraa.</div> <div id="T1bg" class="txs">Bonneeji ngari mbi'i en taalondira.</div> <div id="T1bh" class="txs">Ɓe puɗɗi na ɓe taalondira ɗoo ni mawndu ndu wari wi'i: "Miin joggel, oo to wi'i aan koyngel."</div> <div id="T1bi" class="txs">Niini yaa, min joggel aan koyngel, ni ɓe karii debbo.</div></div>
+<div class="p_contetexte"><div id="T1bj" class="txs">So a wi'ii a yiɗɗaa yimɓe fu, hoore maa woonnoo a yiɗɗaa.</div></div>
+<div class="p_Conteur"><div id="T1bk" class="txs">Tijjaani Ba</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/02_Debbo_cennditii_Do.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>Introduction 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.21 },
+    { label: "1b", start: 2.46, end: 5.43 },
+    { label: "1c", start: 5.68, end: 7.65 },
+    { label: "1d", start: 7.9, end: 10.67 },
+    { label: "1e", start: 10.92, end: 12.61 },
+    { label: "1f", start: 12.86, end: 14.33 },
+    { label: "1g", start: 14.58, end: 19.83 },
+    { label: "1h", start: 20.08, end: 25.21 },
+    { label: "1i", start: 25.46, end: 34.25 },
+    { label: "1j", start: 34.5, end: 36.11 },
+    { label: "1k", start: 36.36, end: 39.93 },
+    { label: "1l", start: 40.18, end: 44.49 },
+    { label: "1m", start: 44.74, end: 47.23 },
+    { label: "1n", start: 47.48, end: 52.59 },
+    { label: "1o", start: 52.84, end: 56.69 },
+    { label: "1p", start: 56.94, end: 61.71 },
+    { label: "1q", start: 61.96, end: 63.85 },
+    { label: "1r", start: 64.1, end: 65.35 },
+    { label: "1s", start: 65.6, end: 68.67 },
+    { label: "1t", start: 68.92, end: 72.35 },
+    { label: "1u", start: 72.6, end: 75.55 },
+    { label: "1v", start: 75.8, end: 78.81 },
+    { label: "1w", start: 79.06, end: 83.09 },
+    { label: "1x", start: 83.34, end: 87.21 },
+    { label: "1y", start: 87.46, end: 92.77 },
+    { label: "1z", start: 93.02, end: 102.15 },
+    { label: "1aa", start: 102.4, end: 104.21 },
+    { label: "1ab", start: 104.46, end: 108.57 },
+    { label: "1ac", start: 108.82, end: 110.27 },
+    { label: "1ad", start: 110.52, end: 113.81 },
+    { label: "1ae", start: 114.06, end: 116.65 },
+    { label: "1af", start: 116.9, end: 121.03 },
+    { label: "1ag", start: 121.28, end: 123.13 },
+    { label: "1ah", start: 123.38, end: 128.35 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 128.35;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Introduction</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Les Mutilations Génitales Féminines,</div> <div id="T1c" class="txs">couramment appelées «&nbsp;excision&nbsp;»,</div> <div id="T1d" class="txs">concernent des millions de femmes et de jeunes filles,</div> <div id="T1e" class="txs">sur différents continents.</div></div>
+<div class="m"><div id="T1f" class="txs">Dans ces pays,</div> <div id="T1g" class="txs">beaucoup de familles excisent leurs filles simplement parce que cela est la tradition.</div> <div id="T1h" class="txs">Elles ont de mauvaises connaissances et ignorent les conséquences de cette pratique. </div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs">L’excision est une mutilation car elle consiste à l’ablation des organes génitaux externes de la femme/fille.</div> <div id="T1j" class="txs">Normalement,</div> <div id="T1k" class="txs">on subit une intervention lorsque l’on est malade.</div> <div id="T1l" class="txs">L’opération est alors faite pour aider à la guérison.</div> <div id="T1m" class="txs">L’excision est le contraire:</div> <div id="T1n" class="txs">elle crée une grande blessure sans la raison d’une maladie.</div> <div id="T1o" class="txs">Faut-il couper le bras ou le nez d’une femme pour la rendre belle&nbsp;? </div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1p" class="txs">Les causes de la pratique de l’excision sont à la fois culturelle,</div> <div id="T1q" class="txs">religieuse et sociale.</div> <div id="T1r" class="txs">Pourtant,</div> <div id="T1s" class="txs">contrairement à ce que beaucoup de personnes croient,</div> <div id="T1t" class="txs">l’excision n’est pourtant pas un acte religieux.</div> <div id="T1u" class="txs">La pratique traditionnelle de l’excision,</div> <div id="T1v" class="txs">appelée à tort la «&nbsp;circoncision des filles&nbsp;»,</div> <div id="T1w" class="txs">a commencé longtemps avant l’islam et même le christianisme.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1x" class="txs">Ce matériel pédagogique a été conçu en Guinée,</div> <div id="T1y" class="txs">dans le travail de sensibilisation au sein de l’Eglise protestante évangélique.</div> <div id="T1z" class="txs">Cette ressource est mise à disposition de tous ceux qui veulent se joindre aux efforts de sensibilisation et de lutte contre l’excision.</div> <div id="T1aa" class="txs">Le langage simple,</div> <div id="T1ab" class="txs">les images et les questions veulent faciliter les discussions.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ac" class="txs">Ensemble,</div> <div id="T1ad" class="txs">travaillons à faire disparaître cette coutume.</div> <div id="T1ae" class="txs">Osons parler de cette pratique,</div> <div id="T1af" class="txs">parlons de ses conséquences et combattons les fausses croyances. </div></div>
+<div class="m"><div id="T1ag" class="txs">Protégeons les filles,</div> <div id="T1ah" class="txs">soutenons les victimes et encourageons les familles qui renoncent à l’excision&nbsp;!</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Introduction WhatsApp Audio.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

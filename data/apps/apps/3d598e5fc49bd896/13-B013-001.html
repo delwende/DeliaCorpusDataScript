@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>28 LES DEUX AMIS 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.67 },
+    { label: "1b", start: 2.92, end: 11.29 },
+    { label: "1c", start: 11.54, end: 17.09 },
+    { label: "1d", start: 17.34, end: 25.71 },
+    { label: "1e", start: 25.96, end: 35.91 },
+    { label: "1f", start: 36.16, end: 39.71 },
+    { label: "1g", start: 39.96, end: 42.77 },
+    { label: "1h", start: 43.02, end: 50.79 },
+    { label: "1i", start: 51.04, end: 54.73 },
+    { label: "1j", start: 54.98, end: 68.09 },
+    { label: "1k", start: 68.34, end: 75.81 },
+    { label: "1l", start: 76.06, end: 85.51 },
+    { label: "1m", start: 85.76, end: 91.31 },
+    { label: "1n", start: 91.56, end: 95.17 },
+    { label: "1o", start: 95.42, end: 107.67 },
+    { label: "1p", start: 107.92, end: 111.85 },
+    { label: "1q", start: 112.1, end: 119.05 },
+    { label: "1r", start: 119.3, end: 124.07 },
+    { label: "1s", start: 124.32, end: 136.37 },
+    { label: "1t", start: 136.62, end: 140.59 },
+    { label: "1u", start: 140.84, end: 151.43 },
+    { label: "1v", start: 151.68, end: 165.03 },
+    { label: "1w", start: 165.28, end: 182.67 },
+    { label: "1x", start: 182.92, end: 195.95 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 195.95;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "13-B013-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='12-B012-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;28 LES DEUX AMIS&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B013-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">28 LES DEUX AMIS</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Dans un village vivaient deux amis inséparables, fortement liés depuis leur enfance.</div></div>
+<div class="m"><div id="T1c" class="txs">Un jour, ils décidèrent de faire un voyage ensemble.</div> <div id="T1d" class="txs">Ils traversèrent nuits et jours des contrées et se plaisaient à découvrir le monde.</div> <div id="T1e" class="txs">À un certain moment, ils décidèrent de marquer un arrêt à un endroit pour se reposer.</div></div>
+<div class="m"><div id="T1f" class="txs">Là, éclata une bagarre entre eux.</div> <div id="T1g" class="txs">L’un donna une belle gifle à l’autre.</div> <div id="T1h" class="txs">Celui qui a reçu la gifle se courba sur une nappe de sable et écrit :</div> <div id="T1i" class="txs">«&nbsp;<span class="it">A</span><span class="it">ujourd’hui, mon meilleur ami m'a donné une gifle</span>&nbsp;».</div></div>
+<div class="m"><div id="T1j" class="txs">Ils se pardonnèrent et continuèrent leur chemin, convaincus que «&nbsp;<span class="it">même la bouche et les dents sont toujours ensemble mais souvent elles se disputent</span>&nbsp;».</div> <div id="T1k" class="txs">Après trois jours de parcours, ils s’arrêtèrent encore pour prendre un petit repos.</div> <div id="T1l" class="txs">Celui qu’on avait giflé, en voyant un marigot dans les parages, décida de se baigner.</div> <div id="T1m" class="txs">Comme il ne savait pas nager, il commença à se noyer.</div> <div id="T1n" class="txs">Son ami plongea et le sauva.</div> <div id="T1o" class="txs">Quand il reprit connaissance, il alla sur une grosse pierre qui se trouvait à côté du marigot et écrivit ainsi :</div> <div id="T1p" class="txs">«&nbsp;<span class="it">A</span><span class="it">ujourd’hui mon meilleur ami m’a sauvé la vie</span>&nbsp;».</div></div>
+<div class="m"><div id="T1q" class="txs">Son ami qui l’observait, s’approcha de lui et lui posa la question :</div> <div id="T1r" class="txs">«&nbsp;<span class="it">Mon ami, explique-moi car je veux comprendre.</span></div> <div id="T1s" class="txs"><span class="it">Quand je t’avais giflé, tu avais écrit sur le sable, maintenant que je t’ai sauvé la vie tu écris sur une pierre </span>».</div></div>
+<div class="m"><div id="T1t" class="txs">Il répondit, c'est pourtant simple :</div> <div id="T1u" class="txs">«&nbsp;<span class="it">Q</span><span class="it">uand quelqu’un te fait quelque chose du mal, cela te fait certes mal</span><span class="it">,</span><span class="it"> mais il faut le marquer à un endroit où tu pourras l’oublier.</span></div> <div id="T1v" class="txs"><span class="it">Voilà pourquoi j’avais écrit sur le sable</span><span class="it">,</span><span class="it"> car je savais que la pluie et le vent viendront l’effacer et je pardonnerai en même temps.</span></div> <div id="T1w" class="txs"><span class="it">Par contre, quand une personne t</span><span class="it">e</span><span class="it"> fait du bien, il faut tâcher de le noter où tu n’oublieras jamais</span><span class="it">,</span><span class="it"> car si tu l’oublies ce sera de l’ingratitude et un signe de l’irrespect</span>&nbsp;».</div></div>
+<div class="m"><div id="T1x" class="txs">Son ami fut heureux de savoir qu’il avait un meilleur homme comme ami et il continua à apprendre beaucoup avec cet homme qui était plein de sagesse.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 28 Les deux amis.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#AD4428">
+<title>31 C'est en forgeant 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 2.73, end: 7.89 },
+    { label: "1b", start: 8.14, end: 14.67 },
+    { label: "1c", start: 14.92, end: 22 },
+    { label: "1d", start: 22.25, end: 28.61 },
+    { label: "1e", start: 28.86, end: 34.42 },
+    { label: "1f", start: 34.67, end: 41.24 },
+    { label: "1g", start: 41.49, end: 47.54 },
+    { label: "1h", start: 47.79, end: 55.87 },
+    { label: "1i", start: 56.12, end: 63.29 },
+    { label: "1j", start: 63.54, end: 68.7 },
+    { label: "1k", start: 68.95, end: 74.56 },
+    { label: "1l", start: 74.81, end: 80.86 },
+    { label: "1m", start: 81.11, end: 87.1 },
+    { label: "1n", start: 87.35, end: 93.43 },
+    { label: "1o", start: 93.68, end: 99.07 },
+    { label: "1p", start: 99.32, end: 108.13 },
+    { label: "1q", start: 108.38, end: 114.75 },
+    { label: "1r", start: 115, end: 122.18 },
+    { label: "1s", start: 122.43, end: 128.19 },
+    { label: "1t", start: 128.44, end: 134.44 },
+    { label: "1u", start: 134.69, end: 140.22 },
+    { label: "1v", start: 140.47, end: 145.88 },
+    { label: "1w", start: 146.13, end: 152.44 },
+    { label: "1x", start: 152.69, end: 158.56 },
+    { label: "1y", start: 158.81, end: 165.54 },
+    { label: "1z", start: 165.79, end: 170.39 },
+    { label: "1aa", start: 170.64, end: 177.62 },
+    { label: "1ab", start: 177.87, end: 187.57 },
+    { label: "1ac", start: 187.82, end: 193.92 },
+    { label: "1ad", start: 194.17, end: 204.17 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 2.73;
+var stopTime  = 204.17;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;31 C'est en forgeant&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">31 </span><span class="bd">C'est en forgeant qu'on devient forgeron</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">à force de s'exercer à une chose, on y devient habile.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style2"><div id="T1c" class="txs"><span class="c_CharacterStyle1"><span class="bd">32 </span></span><span class="c_CharacterStyle1"><span class="bd">C'est en saison sèche qu'on se lie d'amitié avec le piroguier,</span></span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Style2"><div id="T1d" class="txs"><span class="c_CharacterStyle1"><span class="bd">se</span></span><span class="c_CharacterStyle1"> faire des amis quand on </span><span class="c_CharacterStyle1">n'a pas besoin d'eux peut être utile.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="c_CharacterStyle1"><span class="bd">33 </span></span><span class="bd">C'est le ton qui fait la chanson</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs">c'est la manière dont on dit les choses qui marque l'intention véritable.</div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">34 </span><span class="bd">C'est l'hôpital qui se moque de la charité</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1h" class="txs">se dit de celui qui raille la misère d'autrui, bien qu’il soit lui-même aussi misérable.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style2"><div id="T1i" class="txs"><span class="c_CharacterStyle1"><span class="bd">35 </span></span><span class="c_CharacterStyle1"><span class="bd">Ceux qui s'aiment ne se cachent pas leur nudité,</span></span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style2"><div id="T1j" class="txs"><span class="c_CharacterStyle1"><span class="bd">il</span></span><span class="c_CharacterStyle1"> n'y a pas de secrets pour ceux qui </span><span class="c_CharacterStyle1">s'aiment.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="c_CharacterStyle1"><span class="bd">36 </span></span><span class="bd">Chacun pour soi et Dieu pour tous</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1l" class="txs">laissons à Dieu le soin de s'occuper des autres.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1m" class="txs"><span class="bd">37 </span><span class="bd">Chaque filet d'eau a son chemin,</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Style1"><div id="T1n" class="txs"><span class="bd">chacun</span> doit suivre la voie qui est la sienne.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">38 </span><span class="bd">Charbonnier est maître chez soi</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1p" class="txs">le maître de maison est libre d'agir comme il l'entend dans sa propre demeure.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">39 </span><span class="bd">Charité bien ordonnée commence par soi-même</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1r" class="txs">avant de songer aux autres, il faut songer à soi.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">40 </span><span class="bd">Chat échaudé craint l'eau froide</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs">on redoute même l'apparence de ce qui vous a déjà nui.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">41 </span><span class="bd">Chose promise, chose due</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1v" class="txs">on est obligé de faire Ce qu'on a promis.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">42 </span><span class="bd">Cœur qui soupire n'a pas ce qu'il désire</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1x" class="txs">les soupirs que l'on pousse prouvent qu'on n'est pas satisfait.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">43 </span><span class="bd">Comme on connaît les saints, on les honore</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1z" class="txs">on traite chacun selon son caractère.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aa" class="txs"><span class="bd">44 </span><span class="bd">Comme on fait son lit, on se couche</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ab" class="txs">il faut s'attendre, en bien ou en mal, à ce qu’on s'est préparé à soi-même par sa conduite.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">45 </span><span class="bd">Comparaison n'est pas raison</span>,</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs">une comparaison ne prouve rien.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/03 prov fr avec mus.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

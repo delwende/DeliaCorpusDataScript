@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>14 Les conséquences (2 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.23 },
+    { label: "1b", start: 2.48, end: 4.59 },
+    { label: "1c", start: 4.84, end: 6.03 },
+    { label: "1d", start: 6.28, end: 8.57 },
+    { label: "1e", start: 8.82, end: 12.77 },
+    { label: "1f", start: 13.02, end: 17.27 },
+    { label: "1g", start: 17.52, end: 21.07 },
+    { label: "1h", start: 21.32, end: 24.41 },
+    { label: "1i", start: 24.66, end: 30.95 },
+    { label: "1j", start: 31.2, end: 35.07 },
+    { label: "1k", start: 35.32, end: 40.43 },
+    { label: "1l", start: 40.68, end: 44.99 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 44.99;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "15-B015-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;14 Les conséquences (2&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B016-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B015-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">14 Les conséquences (2):</span></div> <div id="T1b" class="txs"><span class="bd">la souffrance de la femme</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1c" class="txs"><span class="it">Questions:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">- Que voyez-vous sur le dessin?</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">- Quelles sont les souffrances d’une </span><span class="it">fi</span><span class="it">lle pendant l’excision?</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="it">- Quelles peuvent être les souffrances de la femme après l’excision?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs">L’image nous montre une femme qui souffre.</div></div>
+<div class="m"><div id="T1h" class="txs">L’excision est très douloureuse.</div> <div id="T1i" class="txs">Elle se fait sans aucune anesthésie et provoque de grandes douleurs chez la fille.</div></div>
+<div class="m"><div id="T1j" class="txs">Les douleurs peuvent durer longtemps après l’excision,</div> <div id="T1k" class="txs">à cause des infections ou des douleurs lors des rapports sexuels ou des règles.</div></div>
+<div class="m"><div id="T1l" class="txs">Certaines femmes souffrent toute leur vie à cause de l’excision.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/14AUD-20230320-WA0003.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+var books = [
+  { name: "1 Nziirin nziirin", ref: "01-B001-001.html" },
+  { name: "2 Nziirin nziirin", ref: "02-B002-001.html" },
+  { name: "3 Nziirin nziirin", ref: "03-B003-001.html" },
+  { name: "4 Nziirin nziirin", ref: "04-B004-001.html" },
+  { name: "5 Nziirin nziirin", ref: "05-B005-001.html" },
+  { name: "6 Nziirin nziirin", ref: "06-B006-001.html" },
+  { name: "7 Nziirin nziirin", ref: "07-B007-001.html" },
+  { name: "8 Nziirin nziirin", ref: "08-B008-001.html" },
+  { name: "9 Nziirin nziirin", ref: "09-B009-001.html" },
+  { name: "10 Nziirin nziirin", ref: "10-B010-001.html" },
+  { name: "11 Nziirin nziirin", ref: "11-B011-001.html" },
+  { name: "12 Nziirin nziirin", ref: "12-B012-001.html" },
+  { name: "13 Nziirin nziirin", ref: "13-B013-001.html" },
+  { name: "14 Nziirin nziirin", ref: "14-B014-001.html" },
+];

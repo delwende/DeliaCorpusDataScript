@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>מבוא 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "10-B010-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='09-B009-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-015.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;מבוא&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B010-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">מבוא</span></div>
+<div class="b">&nbsp;</div>
+<div class="m">האיגרת לאפסים מופנית לנוצרים "הנתונים בסכנה לסבול מתת תזונה רוחנית, משום שאינם מנצלים את מאגר המזון והסחורה הרוחנית העצומה העומדת לרשותם. האיגרת לאפסים כונתה " הבנק של המאמין, פנקס הצ'קים, חדר האוצרות של התנ"ך, מכתב נפלא זה מספר לנוצרים על העושר הגדול, הירושה והמלאות שיש להם בישוע המשיח ובכנסייתו. הוא אומר להם מה יש להם ומה עליהם לעשות כדי לנכס אותו ." (ג'ון מקארטור).</div>
+<div class="m">זה לא עושר גשמי, אלא עושר רוחני. אפסוס הייתה עיר חשובה מאוד, אחת מחמש ערי המפתח של האימפריה הרומית. זו הייתה ללא ספק העיר הגדולה ביותר (מלבד רומא) שפול ביקר בה. הוא היה כל כך עשיר עד שהוא נקרא "בנק אסיה". סוחרים הגיעו מכל עבר לקנות ולמכור את מרכולתם. ותיירים ביקרו כדי להתפעל ממקדש המוקדש לאלה ארטמיס, אחד מ-7 פלאי תבל באותה תקופה. במכתבו, השליח פאולוס בהחלט רצה להראות לבני הכנסייה באפסוס, מוקפים בעושר חומרי רב, שהשמחה ושביעות הרצון של נוצרי אינם מבוססים על החומר. הוא רצה להזכיר להם את העושר האמיתי שיש לנו במשיח, עושר שלא מתקלקל ושאף אחד לא יכול לגנוב!</div>
+<div class="m">נושא זה רלוונטי גם היום. העולם של היום היה גורם לנו להאמין שכסף מביא אושר! אבל דבר אלוהים אומר לנו שזהו שקר. נכון, כסף יכול לקנות לנו דברים שהופכים את חיי היומיום שלנו לקלים יותר, אבל לכסף אין אונים מול הקשיים, הסבל והאתגרים הגדולים של חיינו עלי אדמות.</div>
+<div class="m">פסוק המפתח באפסיים הוא ממש בהתחלה: ברוך אלוהים ואביו של אדוננו ישוע המשיח, שבירך אותנו בכל ברכה רוחנית בשמים במשיח. אפסיים 1, 3</div>
+<div class="m">בישוע יש לנו את כל הברכה הרוחנית! ובפסוקים הבאים, פאולוס נותן לנו פרטים נוספים על הברכות הללו. בגרסה היוונית המקורית של התנ"ך, פסוקים 3 עד 14 בפרק הראשון של האפסיים הם משפט בודד! לפי פאולוס, רשימת העושר הרוחני לאלה "במשיח" ארוכה: בחירה ויעודה מראש; אימוץ; אהבה; גְאוּלָה; סְלִיחָה; חן; חכמה ותבונה; יְרוּשָׁה; רוח הקודש; כּוֹחַ; התקווה והכנסייה.</div>
+<div class="m">בעמודים הבאים, נלמד את האמיתות המקראיות הללו, אך לא רק בתור דוקטרינות או ידע לראשנו. במקום זאת, אנו נחפש לגלות כיצד הם יכולים להפוך לעושר אמיתי עבור חיי היומיום שלנו עם פעולות יומיומיות.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

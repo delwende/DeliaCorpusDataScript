@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Nhanganyaya 5</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "17-B016-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='16-B021-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='17-B016-004.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Nhanganyaya&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;5&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='17-B016-006.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B016-image5.jpg" />
+
+<div class="m"><span class="bd">Rudo</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Mwari</span><span class="it"> </span><span class="it">anotidauye</span><span class="it"> </span><span class="it">agara</span><span class="it"> </span><span class="it">achida</span><span class="it"> </span><span class="it">kuti</span><span class="it"> </span><span class="it">tive</span><span class="it"> </span><span class="it">vanakomana</span><span class="it"> </span><span class="it">vake</span><span class="it"> </span><span class="it">kubudikidza</span><span class="it"> </span><span class="it">naJesu</span><span class="it"> </span><span class="it">Kristu</span><span class="it"> </span>(VaEfeso 1, 4-5).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Chii </span><span class="bd">chinonzi</span><span class="bd"> </span><span class="bd">rudo</span><span class="bd"> </span><span class="bd">rwaMwari</span><span class="bd">?</span></div>
+<div class="m">Rudo rwaMwari rwakakwana, haruna magumo uye rwakachena. Hakusi kungonzwa. Mwari akaratidza rudo rwake kwatiri nechiito chinokosha zvikuru: akapa mwanakomana wake mumwe oga kuti atiponese (Johane 3, 16 ).</div>
+<div class="m">- Rudo rwaMwari haruna magumo: haandibvunze kuti ndivandudze hupenyu hwangu asati andiponesa! Chimiro chisingachinji cherudo rwaMwari hachichinji. Mwari anoramba achitida, kunyange tikawira muchivi, kunyange tikamusiya. Rudo rwake kwatiri runoramba rwakafanana. Hazvideredze.</div>
+<div class="m">- Rudo rwaMwari haruna udyire, ndiko kuti, rwakanangana nesu. Mukupa mwanakomana wake, haana kufunga nezvake, asi isu! Uye anoramba achitibatsira, kuti ave webasa kwatiri.</div>
+<div class="m">Rudo rwaMwari rwakakura: Mwari anotida zvokuti akapa chipo chake chinokosha kupfuura zvose, mwanakomana wake mumwe chete. Hapana chimwe chinhu chikuru chaangadai akatiitira.</div>
+<div class="m"><span class="bd">Zviito</span><span class="bd"> </span><span class="bd">zvekuita</span><span class="bd"> </span><span class="bd">kuti</span><span class="bd"> </span><span class="bd">rudo</span><span class="bd"> </span><span class="bd">rwaMwari</span><span class="bd"> </span><span class="bd">rufume</span><span class="bd"> </span><span class="bd">muhupenyu</span><span class="bd"> </span><span class="bd">hwako</span><span class="bd">: </span></div>
+<div class="m"><span class="it">- </span><span class="it">Munamato</span><span class="it">: </span>Tenda Mwari zuva nezuva nekuda kwerudo rwavo kwauri. Teerera kune zviratidzo zviduku zverudo rwaMwari mukati mezuva. Pakupera kwezuva, nyora pasi zviitiko zvinoratidza rudo rwaMwari kwauri mubhuku rokunyorera womutenda.</div>
+<div class="m">- Kuverenga Bhaibheri: Verenga VaEfeso 3, 17 kusvika ku19.</div>
+<div class="m"><span class="it">- </span><span class="it">kufungisisa</span><span class="it"> </span><span class="it">pachako</span>: Mundima iyi, muapostora Pauro anoshandisa mifananidzo miviri kukurudzira vaverengi vake kuti vanakidzwe norudo rwaMwari: </div>
+<div class="m">- dzika midzi murudo urwu: semuti unoparadzira midzi yawo muvhu kuti urege kupeperetswa nemhepo uye kuwana chikafu ...</div>
+<div class="m">- kuvaka parudo urwu: Rudo rwaMwari ndirwo hwaro hwakasimba, runotigonesa kuvaka nekufambira mberi muhupenyu hwedu hwemweya.</div>
+<div class="m">Funga nezvekuti mifananidzo iyi miviri ingakubatsira sei kurarama uye kuona rudo rwaMwari muhupenyu hwemazuva ese.</div>
+<div class="m"><span class="it">- Kune </span><span class="it">vamwe</span><span class="it">: </span>Govera uchapupu hwako pamusoro perudo rwaMwari muupenyu hwako neshamwari dzako, mudzimai wako kana murume wako kana mabhuratha nemasisita muchechi mako. Uye varatidze nezviito zvako kuti Mwari vanovada.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

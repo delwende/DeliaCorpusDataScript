@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>2 a) Illustrations pour 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.21 },
+    { label: "1b", start: 4.46, end: 6.37 },
+    { label: "1c", start: 6.62, end: 13.63 },
+    { label: "1d", start: 13.88, end: 16.77 },
+    { label: "1e", start: 17.02, end: 25.61 },
+    { label: "1f", start: 25.86, end: 30.31 },
+    { label: "1g", start: 30.56, end: 33.87 },
+    { label: "1h", start: 34.12, end: 34.71 },
+    { label: "1i", start: 34.96, end: 35.57 },
+    { label: "1j", start: 35.82, end: 38.19 },
+    { label: "1k", start: 38.44, end: 39.89 },
+    { label: "1l", start: 40.14, end: 44.65 },
+    { label: "1m", start: 44.9, end: 46.57 },
+    { label: "1n", start: 46.82, end: 50.19 },
+    { label: "1o", start: 50.44, end: 53.67 },
+    { label: "1p", start: 53.92, end: 56.75 },
+    { label: "1q", start: 57, end: 58.85 },
+    { label: "1r", start: 59.1, end: 60.35 },
+    { label: "1s", start: 60.6, end: 61.13 },
+    { label: "1t", start: 61.38, end: 65.51 },
+    { label: "1u", start: 65.76, end: 68.65 },
+    { label: "1v", start: 68.9, end: 69.77 },
+    { label: "1w", start: 70.02, end: 75.97 },
+    { label: "1x", start: 76.22, end: 77.85 },
+    { label: "1y", start: 78.1, end: 80.35 },
+    { label: "1z", start: 80.6, end: 81.29 },
+    { label: "1aa", start: 81.54, end: 82.93 },
+    { label: "1ab", start: 83.18, end: 84.71 },
+    { label: "1ac", start: 84.96, end: 86.27 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 86.27;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2 a) Illustrations pour&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="ul"><span class="bdit">2</span></span><span class="ul"><span class="bdit"> </span></span><span class="ul"><span class="bdit">a</span></span><span class="ul"><span class="bdit">)</span></span><span class="ul"><span class="bdit"> Illustrations pour mieux comprendre qui est Jésus-Christ</span></span><span class="bdit">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">La serrure et la clé</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Aucun véritable chrétien ou musulman</span> n’affirmera jamais que Jésus serait né d’une union physique entre Dieu et Marie.</div> <div id="T1d" class="txs">C’est une chose totalement inconcevable.</div> <div id="T1e" class="txs">Il pourra donc être utile d’utiliser une image pour aider les musulmans à comprendre dans quel sens la Bible utilise l’expression «&nbsp;Fils de Dieu&nbsp;».</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">Le mot </span>«&nbsp;<span class="bdit">kutshi</span><span class="bdit"> </span>» signifie «&nbsp;<span class="it">serrure</span>&nbsp;» en malaisien.</div> <div id="T1g" class="txs">Et le mot «&nbsp;<span class="it">clé</span>&nbsp;» se traduit «&nbsp;<span class="it">ana </span><span class="it">kutshi</span><span class="it"> </span>»,</div> <div id="T1h" class="txs">ce qui,</div> <div id="T1i" class="txs">littéralement,</div> <div id="T1j" class="txs">signifie «&nbsp;<span class="it">fils d’une serrure</span>&nbsp;».</div> <div id="T1k" class="txs">Mais bien entendu,</div> <div id="T1l" class="txs">aucun habitant de Malaisie ne pense que la clé naît d’une union entre deux serrures&nbsp;!</div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">Ce que les mots</span> veulent dire,</div> <div id="T1n" class="txs">c’est qu’il y a un lien entre la serrure et la clé.</div> <div id="T1o" class="txs">Les deux objets se complètent et appartiennent l’un à l’autre.</div> <div id="T1p" class="txs">Une serrure sans clé est incomplète.</div> <div id="T1q" class="txs">Elle ne sert à rien&nbsp;!</div></div>
+<div class="m"><div id="T1r" class="txs">Autre exemple,</div> <div id="T1s" class="txs">en arabe,</div> <div id="T1t" class="txs">le terme «&nbsp;voyageur&nbsp;» se dit littéralement «&nbsp;fils de la route&nbsp;»,</div> <div id="T1u" class="txs">expression idiomatique que chacun comprend.</div> <div id="T1v" class="txs">De même,</div> <div id="T1w" class="txs">dans la Bible l’expression «&nbsp;Fils de Dieu&nbsp;» désigne Jésus (voir Matthieu 3, 16 à 17 ;</div> <div id="T1x" class="txs">Matthieu 11, 27 ;</div> <div id="T1y" class="txs">Matthieu 14, 33 ;</div> <div id="T1z" class="txs">Marc 1, 1 ;</div> <div id="T1aa" class="txs">Luc 1, 35 ;</div> <div id="T1ab" class="txs">Jean 1, 34 ;</div> <div id="T1ac" class="txs">Actes 9, 20).</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/05 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

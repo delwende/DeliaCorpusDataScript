@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>d) Les méthodes 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.47 },
+    { label: "1b", start: 2.72, end: 11.41 },
+    { label: "1c", start: 11.66, end: 16.25 },
+    { label: "1d", start: 16.5, end: 17.63 },
+    { label: "1e", start: 17.88, end: 20.11 },
+    { label: "1f", start: 20.36, end: 21.27 },
+    { label: "1g", start: 21.52, end: 30.11 },
+    { label: "1h", start: 30.36, end: 34.25 },
+    { label: "1i", start: 34.5, end: 38.35 },
+    { label: "1j", start: 38.6, end: 40.97 },
+    { label: "1k", start: 41.22, end: 48.05 },
+    { label: "1l", start: 48.3, end: 50.05 },
+    { label: "1m", start: 50.3, end: 57.15 },
+    { label: "1n", start: 57.4, end: 60.97 },
+    { label: "1o", start: 61.22, end: 64.85 },
+    { label: "1p", start: 65.1, end: 74.29 },
+    { label: "1q", start: 74.54, end: 79.45 },
+    { label: "1r", start: 79.7, end: 84.77 },
+    { label: "1s", start: 85.02, end: 87.77 },
+    { label: "1t", start: 88.02, end: 95.17 },
+    { label: "1u", start: 95.42, end: 97.59 },
+    { label: "1v", start: 97.84, end: 99.31 },
+    { label: "1w", start: 99.56, end: 101.71 },
+    { label: "1x", start: 101.96, end: 105.75 },
+    { label: "1y", start: 106, end: 107.19 },
+    { label: "1z", start: 107.44, end: 112.79 },
+    { label: "1aa", start: 113.04, end: 114.61 },
+    { label: "1ab", start: 114.86, end: 118.95 },
+    { label: "1ac", start: 119.2, end: 123.35 },
+    { label: "1ad", start: 123.6, end: 132.13 },
+    { label: "1ae", start: 132.38, end: 134.73 },
+    { label: "1af", start: 134.98, end: 138.15 },
+    { label: "1ag", start: 138.4, end: 142.41 },
+    { label: "1ah", start: 142.66, end: 146.57 },
+    { label: "1ai", start: 146.82, end: 148.21 },
+    { label: "1aj", start: 148.46, end: 150.51 },
+    { label: "1ak", start: 150.76, end: 153.41 },
+    { label: "1al", start: 153.66, end: 161.01 },
+    { label: "1am", start: 161.26, end: 162.21 },
+    { label: "1an", start: 162.46, end: 166.57 },
+    { label: "1ao", start: 166.82, end: 176.25 },
+    { label: "1ap", start: 176.5, end: 178.59 },
+    { label: "1aq", start: 178.84, end: 183.47 },
+    { label: "1ar", start: 183.72, end: 185.93 },
+    { label: "1as", start: 186.18, end: 187.99 },
+    { label: "1at", start: 188.24, end: 192.11 },
+    { label: "1au", start: 192.36, end: 194.79 },
+    { label: "1av", start: 195.04, end: 198.61 },
+    { label: "1aw", start: 198.86, end: 201.33 },
+    { label: "1ax", start: 201.58, end: 204.91 },
+    { label: "1ay", start: 205.16, end: 211.75 },
+    { label: "1az", start: 212, end: 217.19 },
+    { label: "1ba", start: 217.44, end: 223.71 },
+    { label: "1bb", start: 223.96, end: 225.89 },
+    { label: "1bc", start: 226.14, end: 229.89 },
+    { label: "1bd", start: 230.14, end: 234.31 },
+    { label: "1be", start: 234.56, end: 238.35 },
+    { label: "1bf", start: 238.6, end: 247.19 },
+    { label: "1bg", start: 247.44, end: 257.99 },
+    { label: "1bh", start: 258.24, end: 261.71 },
+    { label: "1bi", start: 261.96, end: 265.21 },
+    { label: "1bj", start: 265.46, end: 270.65 },
+    { label: "1bk", start: 270.9, end: 274.85 },
+    { label: "1bl", start: 275.1, end: 283.49 },
+    { label: "1bm", start: 283.74, end: 285.19 },
+    { label: "1bn", start: 285.44, end: 286.87 },
+    { label: "1bo", start: 287.12, end: 289.49 },
+    { label: "1bp", start: 289.74, end: 292.79 },
+    { label: "1bq", start: 293.04, end: 294.45 },
+    { label: "1br", start: 294.7, end: 297.83 },
+    { label: "1bs", start: 298.08, end: 302.11 },
+    { label: "1bt", start: 302.36, end: 304.43 },
+    { label: "1bu", start: 304.68, end: 311.47 },
+    { label: "1bv", start: 311.72, end: 313.39 },
+    { label: "1bw", start: 313.64, end: 330.35 },
+    { label: "1bx", start: 330.6, end: 338.27 },
+    { label: "1by", start: 338.52, end: 340.19 },
+    { label: "1bz", start: 340.44, end: 342.61 },
+    { label: "1ca", start: 342.86, end: 345.09 },
+    { label: "1cb", start: 345.34, end: 352.31 },
+    { label: "1cc", start: 352.56, end: 362.13 },
+    { label: "1cd", start: 362.38, end: 364.83 },
+    { label: "1ce", start: 365.08, end: 370.19 },
+    { label: "1cf", start: 370.44, end: 372.19 },
+    { label: "1cg", start: 372.44, end: 374.47 },
+    { label: "1ch", start: 374.72, end: 379.65 },
+    { label: "1ci", start: 379.9, end: 380.99 },
+    { label: "1cj", start: 381.24, end: 383.79 },
+    { label: "1ck", start: 384.04, end: 388.51 },
+    { label: "1cl", start: 388.76, end: 396.71 },
+    { label: "1cm", start: 396.96, end: 401.79 },
+    { label: "1cn", start: 402.04, end: 408.61 },
+    { label: "1co", start: 408.86, end: 417.81 },
+    { label: "1cp", start: 418.06, end: 419.69 },
+    { label: "1cq", start: 419.94, end: 426.91 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 426.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "25-B025-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='24-B024-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='24-B024-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;d) Les méthodes&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='26-B026-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='26-B026-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B025-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">d) </span><span class="bd">Les méthodes artificielles</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Les méthodes artificielles sont des méthodes mécaniques ou hormonales qui empêchent la fertilisation de l’ovule dans l’utérus,</div> <div id="T1c" class="txs">et des barrières qui bloquent physiquement l’entrée du sperme dans l’utérus.</div></div>
+<ol start="1">
+  <li class="zoli1"><span class="bd"> </span><span class="bd">Le préservatif (capote,</span></div> <div id="T1d" class="txs"><span class="bd">condom)</span><span class="bd">.</span></li>
+</ol></div>
+<div class="m"><div id="T1e" class="txs">Le préservatif est un petit sac en caoutchouc utilisé par l’homme pour empêcher le sperme d’entrer dans le vagin de la femme.</div></div>
+<div class="m"><div id="T1f" class="txs">Les préservatifs qui sont fabriqués en latex sont les meilleurs.</div></div>
+<div class="m"><div id="T1g" class="txs">• Il faut contrôler que le date limite d’utilisation n’est pas dépassée.</div></div>
+<div class="m"><div id="T1h" class="txs">• Il faut l’utiliser seulement une fois.</div></div>
+<div class="m"><div id="T1i" class="txs">• Si le paquet n’est pas en bon état ou le caoutchouc n’est pas acceptable ou satisfaisant,</div> <div id="T1j" class="txs">il ne faut pas l’utiliser.</div></div>
+<div class="m"><div id="T1k" class="txs">• C’est bon de lubrifier le préservatif pour qu’il glisse avec de la salive ou un lubrifiant adapté,</div> <div id="T1l" class="txs">mais pas avec de l’huile.</div></div>
+<div class="b">&nbsp;</div>
+<ol start="2">
+  <li class="zoli1"><span class="bd"> </span><span class="bd">Diaphragme et crème spermicide</span><span class="bd">.</span></li>
+</ol>
+<div class="m"><div id="T1m" class="txs">Le diaphragme est une coupe peu profonde en caoutchouc flexible que la femme porte dans son vagin au moment des relations.</div> <div id="T1n" class="txs">Il couvre l’ouverture du col de l’utérus empêchant ainsi le sperme d’entrer.</div> <div id="T1o" class="txs">Il est utilisé avec un spermicide qui tuera les spermatozoïdes.</div> <div id="T1p" class="txs">Les diaphragmes sont réutilisables.</div> <div id="T1q" class="txs">Ils ont des tailles différentes et un agent de santé doit aider à la femme à trouver celui qui lui convient.</div> <div id="T1r" class="txs">Les diaphragmes peuvent se percer,</div> <div id="T1s" class="txs">surtout après un an.</div> <div id="T1t" class="txs">Il est bon de le vérifier souvent.</div> <div id="T1u" class="txs">Il faut le remplacer s’il devient dur ou sec,</div> <div id="T1v" class="txs">ou il s’est percé.</div> <div id="T1w" class="txs">Après l'avoir porté il faut le nettoyer avec de l’eau et du savon.</div></div>
+<div class="b">&nbsp;</div>
+<ol start="3">
+  <li class="zoli1"><span class="bd"> </span><span class="bd">L’injection</span><span class="bd">.</span></li>
+</ol>
+<div class="m"><div id="T1x" class="txs">• L’injection qu’on trouve en Afrique contient des hormones féminines.</div></div>
+<div class="m"><div id="T1y" class="txs">• C'est une méthode vraiment efficace pour éviter une grossesse.</div></div>
+<div class="m"><div id="T1z" class="txs">• La première injection doit être faite pendant le saignement mensuel ou pendant l’allaitement si la femme n’a pas encore commencé ses règles.</div></div>
+<div class="m"><div id="T1aa" class="txs">• Pour s’assurer contre la grossesse,</div> <div id="T1ab" class="txs">il faut recevoir l’injection chaque 3 mois.</div></div>
+<div class="m"><div id="T1ac" class="txs">Les femmes qui utilisent les injections peuvent connaître :</div></div>
+<div class="m"><div id="T1ad" class="txs">• Des saignements irréguliers ou même plus abondants</div></div>
+<div class="m"><div id="T1ae" class="txs">• Pas de saignements</div></div>
+<div class="m"><div id="T1af" class="txs">• Une augmentation du poids</div></div>
+<div class="m"><div id="T1ag" class="txs">• Lorsqu’une femme décide d’être enceinte,</div> <div id="T1ah" class="txs">elle peut arrêter l’injection mais c’est possible qu’elle ne tombe pas enceinte tout de suite.</div></div>
+<div class="b">&nbsp;</div>
+<ol start="4">
+  <li class="zoli1"><span class="bd"> </span><span class="bd">La pilule</span><span class="bd">.</span></li>
+</ol>
+<div class="m"><div id="T1ai" class="txs">La pilule contient des œstrogènes et de la progestérone.</div> <div id="T1aj" class="txs">Ce sont des hormones synthétiques produites en laboratoire et semblables aux hormones naturelles de l’ovaire pendant le cycle.</div> <div id="T1ak" class="txs">Elles empêchent l’ovulation,</div> <div id="T1al" class="txs">faisant ainsi artificiellement ce qui se passe au cours de la grossesse.</div></div>
+<div class="m"><div id="T1am" class="txs">• Il y a deux formes de pilule.</div> <div id="T1an" class="txs">Pour les femmes en bonne santé,</div> <div id="T1ao" class="txs">qui n’allaitent pas et qui ont moins de 35 ans,</div> <div id="T1ap" class="txs">la forme combinée est la meilleure.</div></div>
+<div class="m"><div id="T1aq" class="txs">• Pour les femmes qui allaitent et les femmes plus âgées,</div> <div id="T1ar" class="txs">la forme simple est recommandée.</div></div>
+<div class="m"><div id="T1as" class="txs">• La forme combinée a 21 pilules actives,</div> <div id="T1at" class="txs">et 7 pilules qui ne contiennent que du fer (qui est bon pour la partie rouge du sang).</div></div>
+<div class="m"><div id="T1au" class="txs">• La forme simple contient 28 pilules qui sont toutes les mêmes.</div></div>
+<div class="m"><div id="T1av" class="txs">• Il faut commencer le paquet pendant les règles et prendre la pilule au même moment chaque jour.</div></div>
+<div class="m"><div id="T1aw" class="txs">• Si vous oubliez une pilule,</div> <div id="T1ax" class="txs">il faut la prendre dès que vous vous rappelez,</div> <div id="T1ay" class="txs">mais il faut éviter les rapports ou utiliser un condom pendant une semaine.</div></div>
+<div class="m"><div id="T1az" class="txs">• Si vous avez de la diarrhée et ou des vomissements,</div> <div id="T1ba" class="txs">il faut continuer à prendre les pilules mais il faut utiliser les préservatifs pendant une semaine après votre rétablissement.</div></div>
+<div class="m"><div id="T1bb" class="txs">• Normalement une femme va saigner vers la fin d’un paquet mais il est également possible qu’elle ne saigne pas ou qu’elle saigne irrégulièrement.</div></div>
+<div class="m"><div id="T1bc" class="txs">• La pilule peut être arrêtée quand la femme veut.</div></div>
+<div class="b">&nbsp;</div>
+<ol start="5">
+  <li class="zoli1"><span class="bd"> </span><span class="bd">L’implant contraceptif</span><span class="bd">.</span></li>
+</ol>
+<div class="m"><div id="T1bd" class="txs">L'implant contraceptif est une méthode de contraception efficace et simple.</div> <div id="T1be" class="txs">Il fonctionne sur le même principe que l’injection ou la pilule.</div> <div id="T1bf" class="txs">Il s’agit d’un petit bâtonnet en plastique de 4 cm de long introduit sous la peau du bras avec une aiguille.</div> <div id="T1bg" class="txs">L’insertion,</div> <div id="T1bh" class="txs">faite par un médecin,</div> <div id="T1bi" class="txs">est rapide et peu douloureuse.</div> <div id="T1bj" class="txs">L’implant contraceptif contient une hormone,</div> <div id="T1bk" class="txs">la progestérone,</div> <div id="T1bl" class="txs">qui est diffusée de manière continue dans le corps.</div> <div id="T1bm" class="txs">Il permet de prévenir une grossesse pour une durée de 3 ans.</div></div>
+<div class="m"><div id="T1bn" class="txs">Si vous souhaitez tomber enceinte,</div> <div id="T1bo" class="txs">l’implant contraceptif peut être retiré facilement et à tout moment par un docteur.</div></div>
+<div class="b">&nbsp;</div>
+<ol start="6">
+  <li class="zoli1"><span class="bd"> </span><span class="bd">La stérilisation</span><span class="bd">.</span></li>
+</ol>
+<div class="m"><div id="T1bp" class="txs">La stérilisation de l’homme (vasectomie) ou de la femme (ligature des trompes) est une intervention chirurgicale qui met un terme définitif à la capacité de procréer (il ne sera donc plus possible d’avoir des enfants).</div></div>
+<div class="m"><div id="T1bq" class="txs"><span class="bd">La stérilisation de l’homme</span> consiste en une petite incision faite des deux côtés des bourses.</div> <div id="T1br" class="txs">Le canal déférent,</div> <div id="T1bs" class="txs">situé directement sous la peau,</div> <div id="T1bt" class="txs">est sectionné et ligaturé.</div> <div id="T1bu" class="txs">Les spermatozoïdes produits dans les testicules ne peuvent plus arriver dans le liquide séminal (sperme).</div></div>
+<div class="m"><div id="T1bv" class="txs"><span class="bd">La stérilisation féminine</span> consiste à ligaturer les trompes de telle sorte qu’ovule et sperme ne puissent plus se rencontrer.</div> <div id="T1bw" class="txs">L’intervention se fait par section.</div></div>
+<div class="m"><div id="T1bx" class="txs">Les deux interventions n’influencent pas la vie sexuelle de la femme,</div> <div id="T1by" class="txs">ni celle de l’homme.</div> <div id="T1bz" class="txs">Le corps ne change pas d'apparence.</div> <div id="T1ca" class="txs">Les sensations sexuelles et la virilité ne sont pas touchées par l’opération.</div></div>
+<div class="m"><div id="T1cb" class="txs"><span class="bd">Conclusion</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1cc" class="txs">Dans le premier chapitre de la Genèse,</div> <div id="T1cd" class="txs">Dieu nous ordonne de dominer et de bien gérer sa création.</div></div>
+<div class="m"><div id="T1ce" class="txs">La contraception est une des possibilités que nous avons pour dominer tout en gérant bien la vie.</div> <div id="T1cf" class="txs">Elle aide les femmes à se reposer entre les différentes grossesses.</div> <div id="T1cg" class="txs">Elle aide à protéger la santé des enfants à cause de l'espacement des naissances.</div> <div id="T1ch" class="txs">Et elle aide les familles à prendre leurs responsabilités pour bien élever leurs enfants et gérer leurs biens matériels avec sagesse.</div></div>
+<div class="m"><div id="T1ci" class="txs">À cause de ces raisons,</div> <div id="T1cj" class="txs">il faut dire que la contraception est dans la volonté de Dieu qui nous aime et qui veut notre bonheur.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/21 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/21 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/21 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

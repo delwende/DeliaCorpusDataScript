@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>6) GERER LES BIENS DE SA 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.15 },
+    { label: "1b", start: 3.4, end: 4.95 },
+    { label: "1c", start: 5.2, end: 6.61 },
+    { label: "1d", start: 6.86, end: 9.03 },
+    { label: "1e", start: 9.28, end: 13.79 },
+    { label: "1f", start: 14.04, end: 19.69 },
+    { label: "1g", start: 19.94, end: 21.77 },
+    { label: "1h", start: 22.02, end: 26.23 },
+    { label: "1i", start: 26.48, end: 27.75 },
+    { label: "1j", start: 28, end: 33.91 },
+    { label: "1k", start: 34.16, end: 36.91 },
+    { label: "1l", start: 37.16, end: 39.95 },
+    { label: "1m", start: 40.2, end: 40.99 },
+    { label: "1n", start: 41.24, end: 43.57 },
+    { label: "1o", start: 43.82, end: 46.25 },
+    { label: "1p", start: 46.5, end: 48.27 },
+    { label: "1q", start: 48.52, end: 51.29 },
+    { label: "1r", start: 51.54, end: 53.17 },
+    { label: "1s", start: 53.42, end: 57.59 },
+    { label: "1t", start: 57.84, end: 61.57 },
+    { label: "1u", start: 61.82, end: 65.35 },
+    { label: "1v", start: 65.6, end: 67.49 },
+    { label: "1w", start: 67.74, end: 69.85 },
+    { label: "1x", start: 70.1, end: 72.39 },
+    { label: "1y", start: 72.64, end: 75.15 },
+    { label: "1z", start: 75.4, end: 80.13 },
+    { label: "1aa", start: 80.38, end: 82.81 },
+    { label: "1ab", start: 83.06, end: 84.23 },
+    { label: "1ac", start: 84.48, end: 85.31 },
+    { label: "1ad", start: 85.56, end: 87.65 },
+    { label: "1ae", start: 87.9, end: 88.67 },
+    { label: "1af", start: 88.92, end: 92.51 },
+    { label: "1ag", start: 92.76, end: 94.21 },
+    { label: "1ah", start: 94.46, end: 95.93 },
+    { label: "1ai", start: 96.18, end: 98.67 },
+    { label: "1aj", start: 98.92, end: 102.09 },
+    { label: "1ak", start: 102.34, end: 103.35 },
+    { label: "1al", start: 103.6, end: 105.23 },
+    { label: "1am", start: 105.48, end: 108.01 },
+    { label: "1an", start: 108.26, end: 110.85 },
+    { label: "1ao", start: 111.1, end: 112.33 },
+    { label: "1ap", start: 112.58, end: 119.39 },
+    { label: "1aq", start: 119.64, end: 120.49 },
+    { label: "1ar", start: 120.74, end: 122.83 },
+    { label: "1as", start: 123.08, end: 125.53 },
+    { label: "1at", start: 125.78, end: 135.07 },
+    { label: "1au", start: 135.32, end: 137.77 },
+    { label: "1av", start: 138.02, end: 139.93 },
+    { label: "1aw", start: 140.18, end: 141.89 },
+    { label: "1ax", start: 142.14, end: 143.29 },
+    { label: "1ay", start: 143.54, end: 147.59 },
+    { label: "1az", start: 147.84, end: 150.43 },
+    { label: "1ba", start: 150.68, end: 151.69 },
+    { label: "1bb", start: 151.94, end: 154.49 },
+    { label: "1bc", start: 154.74, end: 156.91 },
+    { label: "1bd", start: 157.16, end: 158.79 },
+    { label: "1be", start: 159.04, end: 160.09 },
+    { label: "1bf", start: 160.34, end: 162.43 },
+    { label: "1bg", start: 162.68, end: 163.27 },
+    { label: "1bh", start: 163.52, end: 164.13 },
+    { label: "1bi", start: 164.38, end: 166.19 },
+    { label: "1bj", start: 166.44, end: 167.57 },
+    { label: "1bk", start: 167.82, end: 168.69 },
+    { label: "1bl", start: 168.94, end: 169.97 },
+    { label: "1bm", start: 170.22, end: 171.31 },
+    { label: "1bn", start: 171.56, end: 173.47 },
+    { label: "1bo", start: 173.72, end: 174.93 },
+    { label: "1bp", start: 175.18, end: 176.01 },
+    { label: "1bq", start: 176.26, end: 178.29 },
+    { label: "1br", start: 178.54, end: 179.23 },
+    { label: "1bs", start: 179.48, end: 180.01 },
+    { label: "1bt", start: 180.26, end: 181.31 },
+    { label: "1bu", start: 181.56, end: 182.59 },
+    { label: "1bv", start: 182.84, end: 184.97 },
+    { label: "1bw", start: 185.22, end: 186.17 },
+    { label: "1bx", start: 186.42, end: 187.55 },
+    { label: "1by", start: 187.8, end: 188.45 },
+    { label: "1bz", start: 188.7, end: 189.27 },
+    { label: "1ca", start: 189.52, end: 190.43 },
+    { label: "1cb", start: 190.68, end: 192.33 },
+    { label: "1cc", start: 192.58, end: 193.97 },
+    { label: "1cd", start: 194.22, end: 196.91 },
+    { label: "1ce", start: 197.16, end: 198.11 },
+    { label: "1cf", start: 198.36, end: 199.61 },
+    { label: "1cg", start: 199.86, end: 202.99 },
+    { label: "1ch", start: 203.24, end: 204.31 },
+    { label: "1ci", start: 204.56, end: 206.63 },
+    { label: "1cj", start: 206.88, end: 208.11 },
+    { label: "1ck", start: 208.36, end: 212.49 },
+    { label: "1cl", start: 212.74, end: 214.99 },
+    { label: "1cm", start: 215.24, end: 216.65 },
+    { label: "1cn", start: 216.9, end: 218.09 },
+    { label: "1co", start: 218.34, end: 222.05 },
+    { label: "1cp", start: 222.3, end: 223.47 },
+    { label: "1cq", start: 223.72, end: 225.33 },
+    { label: "1cr", start: 225.58, end: 227.87 },
+    { label: "1cs", start: 228.12, end: 230.75 },
+    { label: "1ct", start: 231, end: 238.61 },
+    { label: "1cu", start: 238.86, end: 241.87 },
+    { label: "1cv", start: 242.12, end: 245.07 },
+    { label: "1cw", start: 245.32, end: 246.25 },
+    { label: "1cx", start: 246.5, end: 247.91 },
+    { label: "1cy", start: 248.16, end: 251.57 },
+    { label: "1cz", start: 251.82, end: 256.79 },
+    { label: "1da", start: 257.04, end: 257.91 },
+    { label: "1db", start: 258.16, end: 260.43 },
+    { label: "1dc", start: 260.68, end: 261.69 },
+    { label: "1dd", start: 261.94, end: 263.25 },
+    { label: "1de", start: 263.5, end: 267.69 },
+    { label: "1df", start: 267.94, end: 271.21 },
+    { label: "1dg", start: 271.46, end: 273.97 },
+    { label: "1dh", start: 274.22, end: 278.45 },
+    { label: "1di", start: 278.7, end: 282.53 },
+    { label: "1dj", start: 282.78, end: 283.71 },
+    { label: "1dk", start: 283.96, end: 285.07 },
+    { label: "1dl", start: 285.32, end: 286.79 },
+    { label: "1dm", start: 287.04, end: 291.49 },
+    { label: "1dn", start: 291.74, end: 292.83 },
+    { label: "1do", start: 293.08, end: 293.99 },
+    { label: "1dp", start: 294.24, end: 295.43 },
+    { label: "1dq", start: 295.68, end: 296.81 },
+    { label: "1dr", start: 297.06, end: 297.89 },
+    { label: "1ds", start: 298.14, end: 299.03 },
+    { label: "1dt", start: 299.28, end: 300.49 },
+    { label: "1du", start: 300.74, end: 304.45 },
+    { label: "1dv", start: 304.7, end: 309.73 },
+    { label: "1dw", start: 309.98, end: 312.19 },
+    { label: "1dx", start: 312.44, end: 313.75 },
+    { label: "1dy", start: 314, end: 315.09 },
+    { label: "1dz", start: 315.34, end: 315.89 },
+    { label: "1ea", start: 316.14, end: 320.81 },
+    { label: "1eb", start: 321.06, end: 324.59 },
+    { label: "1ec", start: 324.84, end: 328.13 },
+    { label: "1ed", start: 328.38, end: 336.03 },
+    { label: "1ee", start: 336.28, end: 338.85 },
+    { label: "1ef", start: 339.1, end: 340.83 },
+    { label: "1eg", start: 341.08, end: 343.23 },
+    { label: "1eh", start: 343.48, end: 344.71 },
+    { label: "1ei", start: 344.96, end: 348.65 },
+    { label: "1ej", start: 348.9, end: 356.43 },
+    { label: "1ek", start: 356.68, end: 357.93 },
+    { label: "1el", start: 358.18, end: 361.55 },
+    { label: "1em", start: 361.8, end: 363.13 },
+    { label: "1en", start: 363.38, end: 369.79 },
+    { label: "1eo", start: 370.04, end: 371.35 },
+    { label: "1ep", start: 371.6, end: 373.95 },
+    { label: "1eq", start: 374.2, end: 381.19 },
+    { label: "1er", start: 381.44, end: 382.15 },
+    { label: "1es", start: 382.4, end: 383.39 },
+    { label: "1et", start: 383.64, end: 385.19 },
+    { label: "1eu", start: 385.44, end: 387.59 },
+    { label: "1ev", start: 387.84, end: 393.11 },
+    { label: "1ew", start: 393.36, end: 395.63 },
+    { label: "1ex", start: 395.88, end: 402.13 },
+    { label: "1ey", start: 402.38, end: 403.11 },
+    { label: "1ez", start: 403.36, end: 405.07 },
+    { label: "1fa", start: 405.32, end: 409.83 },
+    { label: "1fb", start: 410.08, end: 413.69 },
+    { label: "1fc", start: 413.94, end: 415.21 },
+    { label: "1fd", start: 415.46, end: 416.63 },
+    { label: "1fe", start: 416.88, end: 420.57 },
+    { label: "1ff", start: 420.82, end: 423.65 },
+    { label: "1fg", start: 423.9, end: 426.51 },
+    { label: "1fh", start: 426.76, end: 429.11 },
+    { label: "1fi", start: 429.36, end: 432.61 },
+    { label: "1fj", start: 432.86, end: 434.39 },
+    { label: "1fk", start: 434.64, end: 438.93 },
+    { label: "1fl", start: 439.18, end: 441.87 },
+    { label: "1fm", start: 442.12, end: 449.11 },
+    { label: "1fn", start: 449.36, end: 452.87 },
+    { label: "1fo", start: 453.12, end: 455.55 },
+    { label: "1fp", start: 455.8, end: 459.23 },
+    { label: "1fq", start: 459.48, end: 460.75 },
+    { label: "1fr", start: 461, end: 466.03 },
+    { label: "1fs", start: 466.28, end: 472.21 },
+    { label: "1ft", start: 472.46, end: 475.05 },
+    { label: "1fu", start: 475.3, end: 478.41 },
+    { label: "1fv", start: 478.66, end: 479.97 },
+    { label: "1fw", start: 480.22, end: 485.13 },
+    { label: "1fx", start: 485.38, end: 486.29 },
+    { label: "1fy", start: 486.54, end: 489.25 },
+    { label: "1fz", start: 489.5, end: 492.33 },
+    { label: "1ga", start: 492.58, end: 498.11 },
+    { label: "1gb", start: 498.36, end: 503.65 },
+    { label: "1gc", start: 503.9, end: 505.73 },
+    { label: "1gd", start: 505.98, end: 507.61 },
+    { label: "1ge", start: 507.86, end: 508.51 },
+    { label: "1gf", start: 508.76, end: 511.71 },
+    { label: "1gg", start: 511.96, end: 519.51 },
+    { label: "1gh", start: 519.76, end: 522.15 },
+    { label: "1gi", start: 522.4, end: 525.35 },
+    { label: "1gj", start: 525.6, end: 531.03 },
+    { label: "1gk", start: 531.28, end: 533.17 },
+    { label: "1gl", start: 533.42, end: 533.97 },
+    { label: "1gm", start: 534.22, end: 542.15 },
+    { label: "1gn", start: 542.4, end: 544.51 },
+    { label: "1go", start: 544.76, end: 545.37 },
+    { label: "1gp", start: 545.62, end: 550.37 },
+    { label: "1gq", start: 550.62, end: 552.71 },
+    { label: "1gr", start: 552.96, end: 556.63 },
+    { label: "1gs", start: 556.88, end: 560.05 },
+    { label: "1gt", start: 560.3, end: 561.33 },
+    { label: "1gu", start: 561.58, end: 564.21 },
+    { label: "1gv", start: 564.46, end: 567.15 },
+    { label: "1gw", start: 567.4, end: 570.77 },
+    { label: "1gx", start: 571.02, end: 572.05 },
+    { label: "1gy", start: 572.3, end: 576.39 },
+    { label: "1gz", start: 576.64, end: 578.01 },
+    { label: "1ha", start: 578.26, end: 580.69 },
+    { label: "1hb", start: 580.94, end: 583.21 },
+    { label: "1hc", start: 583.46, end: 584.35 },
+    { label: "1hd", start: 584.6, end: 586.21 },
+    { label: "1he", start: 586.46, end: 588.67 },
+    { label: "1hf", start: 588.92, end: 596.05 },
+    { label: "1hg", start: 596.3, end: 603.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 603.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "31-B031-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='30-B030-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='30-B030-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;6) GERER LES BIENS DE SA&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='32-B032-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='32-B032-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B031-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">6)</span><span class="bd"> GERER LES BIENS DE SA FAMILLE</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Le plan financier</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Objectifs visés</span></div></div>
+<div class="m"><div id="T1d" class="txs">Que les couples comprennent que :</div></div>
+<div class="m"><div id="T1e" class="txs">1) Il y a des principes de la parole de Dieu en référence à nos biens.</div></div>
+<div class="m"><div id="T1f" class="txs">2) La gestion des biens est inclue dans le partage total vécu dans le mariage.</div></div>
+<div class="m"><div id="T1g" class="txs">3) Planifier,</div> <div id="T1h" class="txs">faire des provisions et entretenir les biens est la volonté de Dieu.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Introduction</span></div></div>
+<div class="m"><div id="T1j" class="txs">Ce n'est pas la première fois qu'au début d’une leçon nous nous orientons vers le commencement du monde.</div> <div id="T1k" class="txs">C'est Dieu lui-même qui a créé le ciel et la terre.</div></div>
+<div class="m"><div id="T1l" class="txs">Réfléchissons à l'histoire des premiers êtres humains.</div> <div id="T1m" class="txs">Au début,</div> <div id="T1n" class="txs">leur manière de vivre était excellente :</div> <div id="T1o" class="txs">la nourriture était abondante dans le jardin ;</div> <div id="T1p" class="txs">pour la construction d'une cabane,</div> <div id="T1q" class="txs">il y avait assez de bambou et de paille,</div> <div id="T1r" class="txs">et s'il arrivait une question,</div> <div id="T1s" class="txs">chaque jour il y avait la précieuse présence de Dieu en personne.</div> <div id="T1t" class="txs">Dieu leur avait indiqué de remplir la terre et de la dominer.</div></div>
+<div class="m"><div id="T1u" class="txs">Malheureusement les êtres humains ont écouté le serpent,</div> <div id="T1v" class="txs">et Dieu les a chassés du paradis.</div> <div id="T1w" class="txs">Cela a amené beaucoup de changements.</div> <div id="T1x" class="txs">Il n’y avait pas d’autre jardin déjà cultivé.</div> <div id="T1y" class="txs">Les rencontres avec Dieu sont devenues rares.</div> <div id="T1z" class="txs">Mais ils n'ont pas oublié les impressions du jardin construit par Dieu lui-même,</div> <div id="T1aa" class="txs">et ils ont commencé à labourer la terre,</div> <div id="T1ab" class="txs">à cultiver,</div> <div id="T1ac" class="txs">à sélectionner.</div> <div id="T1ad" class="txs">C'était le début de l'agriculture.</div></div>
+<div class="m"><div id="T1ae" class="txs">Pourtant,</div> <div id="T1af" class="txs">avec l’entrée du mal dans le monde et dans le cœur de l’homme,</div> <div id="T1ag" class="txs">les choses se sont empirées.</div> <div id="T1ah" class="txs">A un certain moment,</div> <div id="T1ai" class="txs">Dieu a regretté d’avoir créé les êtres humains ;</div> <div id="T1aj" class="txs">il a détruit la terre en envoyant une pluie terrible :</div> <div id="T1ak" class="txs">le déluge.</div> <div id="T1al" class="txs">Seuls Noé et sa famille,</div> <div id="T1am" class="txs">accompagnés de couples de tous les animaux,</div> <div id="T1an" class="txs">ont survécu à cause de leur vie pieuse,</div> <div id="T1ao" class="txs">honnête et fidèle.</div> <div id="T1ap" class="txs">Et Dieu a promis à Noé et à sa descendance après lui de ne plus détruire tout ce qui est vivant par une inondation.</div></div>
+<div class="m"><div id="T1aq" class="txs">De nouveau,</div> <div id="T1ar" class="txs">les plantations ont commencé à pousser ;</div> <div id="T1as" class="txs">la terre est redevenue riche et féconde.</div> <div id="T1at" class="txs">Nous lisons en Genèse 8, 21 à 22 que le Seigneur respire la bonne odeur du sacrifice et il dit en Lui-même :</div> <div id="T1au" class="txs">«&nbsp;<span class="it">L'Éternel sentit une odeur agréable,</span></div> <div id="T1av" class="txs"><span class="it">et l'Éternel dit en son cœur :</span></div> <div id="T1aw" class="txs"><span class="it">Je ne maudirai plus le sol,</span></div> <div id="T1ax" class="txs"><span class="it">à cause de l'homme,</span></div> <div id="T1ay" class="txs"><span class="it">parce que le cœur de l'homme est disposé au mal dès sa jeunesse ;</span></div> <div id="T1az" class="txs"><span class="it">et je ne frapperai plus tout ce qui est vivant,</span></div> <div id="T1ba" class="txs"><span class="it">comme je l'ai fait.</span></div> <div id="T1bb" class="txs"><span class="it">Tant que la terre subsistera,</span></div> <div id="T1bc" class="txs"><span class="it">les semailles et la moisson,</span></div> <div id="T1bd" class="txs"><span class="it">le froid et la chaleur,</span></div> <div id="T1be" class="txs"><span class="it">l'été et l'hiver,</span></div> <div id="T1bf" class="txs"><span class="it">le jour et la nuit ne cesseront pas</span><span class="it"> </span><span class="it">»</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1bg" class="txs">Aujourd’hui,</div> <div id="T1bh" class="txs">en Afrique,</div> <div id="T1bi" class="txs">il y a beaucoup de gens qui disent :</div> <div id="T1bj" class="txs">«&nbsp;<span class="it">Je suis pauvre</span>.</div><div id="T1bk" class="txs">&nbsp;» En tout cas,</div> <div id="T1bl" class="txs">personne ne dit :</div> <div id="T1bm" class="txs">«&nbsp;<span class="it">Je suis riche,</span></div> <div id="T1bn" class="txs"><span class="it">j'ai beaucoup plus que je n’ai besoin,</span></div> <div id="T1bo" class="txs"><span class="it">je ne manque de rien </span>» <span class="it">!</span></div></div>
+<div class="m"><div id="T1bp" class="txs">Pourquoi&nbsp;?</div> <div id="T1bq" class="txs">Dieu a-t-il retiré sa promesse,</div> <div id="T1br" class="txs">sa richesse,</div> <div id="T1bs" class="txs">ses biens,</div> <div id="T1bt" class="txs">sa bénédiction&nbsp;?</div> <div id="T1bu" class="txs">Réfléchissons :</div> <div id="T1bv" class="txs">l’Afrique est extrêmement riche.</div> <div id="T1bw" class="txs">Dans le sous-sol,</div> <div id="T1bx" class="txs">on trouve de l'or,</div> <div id="T1by" class="txs">du diamant,</div> <div id="T1bz" class="txs">du fer,</div> <div id="T1ca" class="txs">de la bauxite.</div> <div id="T1cb" class="txs">Dans presque tout le pays,</div> <div id="T1cc" class="txs">la terre est cultivable.</div> <div id="T1cd" class="txs">Il y a de l’eau en abondance presque partout.</div> <div id="T1ce" class="txs">Tout pousse,</div> <div id="T1cf" class="txs">plus qu'on a besoin.</div> <div id="T1cg" class="txs">Alors pourquoi trouve-t-on des gens qui disent :</div> <div id="T1ch" class="txs">«&nbsp;<span class="it">Je suis pauvre&nbsp;»&nbsp;?</span></div></div>
+<div class="m"><div id="T1ci" class="txs">Le problème n’est pas du côté de Dieu,</div> <div id="T1cj" class="txs">il se trouve chez nous.</div> <div id="T1ck" class="txs">Le problème n'est pas le manque de richesse et de fertilité de la terre.</div> <div id="T1cl" class="txs">Le problème se trouve de notre côté :</div> <div id="T1cm" class="txs">l’esprit de pauvreté,</div> <div id="T1cn" class="txs">la mauvaise gestion,</div> <div id="T1co" class="txs">l’injustice sociale dans le partage des richesses de la terre…</div></div>
+<div class="m"><div id="T1cp" class="txs">Dès le début,</div> <div id="T1cq" class="txs">Dieu avait donné cet ordre :</div> <div id="T1cr" class="txs">«&nbsp;<span class="it">Remplissez la terre et dominez-la</span>.</div><div id="T1cs" class="txs">&nbsp;» Arrêtons-nous sur ces deux expressions :</div></div>
+<div class="m"><div id="T1ct" class="txs">«&nbsp;<span class="bd">Remplir la terre</span>&nbsp;» – ici on trouve le grand "oui" de Dieu pour chaque enfant qui s'annonce chez nous.</div> <div id="T1cu" class="txs">Chaque enfant est le bienvenu de la part de Dieu.</div> <div id="T1cv" class="txs">Il n'y a pas de soucis face à un grand nombre de gens.</div> <div id="T1cw" class="txs">Cependant,</div> <div id="T1cx" class="txs">pour un couple chrétien,</div> <div id="T1cy" class="txs">faire des enfants de façon responsable est à encourager.</div></div>
+<div class="m"><div id="T1cz" class="txs">Dieu a lié ce «&nbsp;oui&nbsp;» pour les enfants avec la deuxième expression :</div> <div id="T1da" class="txs">«&nbsp;<span class="bd">Dominez-la&nbsp;!</span></div><div id="T1db" class="txs">&nbsp;» ou «&nbsp;rendez-vous en maîtres&nbsp;».</div> <div id="T1dc" class="txs">Autrement dit :</div> <div id="T1dd" class="txs">«&nbsp;<span class="bd">Gérez les biens</span>&nbsp;».</div> <div id="T1de" class="txs">C’est aux être humain qu’il revient d’être maître de la terre,</div> <div id="T1df" class="txs">c’est-à-dire de «&nbsp;dominer&nbsp;» la situation,</div> <div id="T1dg" class="txs">de bien gérer les biens que Dieu nous confie.</div> <div id="T1dh" class="txs">Ces deux ordres signifient donc <span class="bd">qu'il faut prendre nos responsabilités</span>.</div> <div id="T1di" class="txs">Prendre la responsabilité pour l’administration de la terre,</div> <div id="T1dj" class="txs">pour nous-même,</div> <div id="T1dk" class="txs">pour notre famille,</div> <div id="T1dl" class="txs">pour ce que nous possédons.</div> <div id="T1dm" class="txs">Avoir des enfants est directement lié à prendre la responsabilité pour eux,</div> <div id="T1dn" class="txs">pour leur nourriture,</div> <div id="T1do" class="txs">leur logement,</div> <div id="T1dp" class="txs">leur sécurité…</div></div>
+<div class="m"><div id="T1dq" class="txs">Certains disent :</div> <div id="T1dr" class="txs">«&nbsp;<span class="it">Gérer,</span></div> <div id="T1ds" class="txs"><span class="it">planifier,</span></div> <div id="T1dt" class="txs"><span class="it">cela ne sert à rien</span>&nbsp;»,</div> <div id="T1du" class="txs">ou «&nbsp;<span class="it">l’épargne est un manque de confiance en Dieu </span>».</div> <div id="T1dv" class="txs">D'autres ne réfléchissent pas à garder le riz pour la semence et ils disent :</div> <div id="T1dw" class="txs">«&nbsp;<span class="it">J</span><span class="it">e prends la vie jour après jour.</span></div> <div id="T1dx" class="txs"><span class="it">Je mange le riz,</span></div> <div id="T1dy" class="txs"><span class="it">et quand il est fini,</span></div> <div id="T1dz" class="txs"><span class="it">on verra</span>&nbsp;».</div> <div id="T1ea" class="txs">Celui qui parle comme ça ne connaît pas ce que Dieu veut pour la vie de tout homme,</div> <div id="T1eb" class="txs">et il n’a pas compris ses promesses qui ont une valeur énorme.</div></div>
+<div class="m"><div id="T1ec" class="txs">En Genèse 8, 21 à 22,</div> <div id="T1ed" class="txs">nous trouvons la garantie de Dieu qu'il vaut la peine de labourer et de semer sachant qu'il va «&nbsp;garantir&nbsp;» la récolte.</div> <div id="T1ee" class="txs">On pourrait discuter les méthodes d'agriculture,</div> <div id="T1ef" class="txs">mais le principe est clair.</div> <div id="T1eg" class="txs">Dieu a retiré la malédiction,</div> <div id="T1eh" class="txs">la terre est bénie.</div> <div id="T1ei" class="txs">Dieu reste fiable et nous allons gagner des fruits&nbsp;!</div> <div id="T1ej" class="txs">Ici aussi nous trouvons la garantie de Dieu qu’il vaut la peine de planifier notre vie en vue des évènements.</div></div>
+<div class="m"><div id="T1ek" class="txs">Prenons un exemple :</div> <div id="T1el" class="txs">L’école pour les enfants commence en Guinée au mois d’octobre.</div> <div id="T1em" class="txs">Et Dieu merci,</div> <div id="T1en" class="txs">le mois d’octobre se trouve toujours en automne après septembre et avant novembre n’est-ce pas&nbsp;?</div> <div id="T1eo" class="txs">L’année passée,</div> <div id="T1ep" class="txs">un ou deux jours avant la rentrée,</div> <div id="T1eq" class="txs">une famille est venue nous demander de payer le transport pour leur fille qui voulait continuer l'école à Dalaba.</div> <div id="T1er" class="txs">Alors,</div> <div id="T1es" class="txs">nous avons aidé.</div> <div id="T1et" class="txs">Quelques jours plus tard,</div> <div id="T1eu" class="txs">cette famille est venue demander du lait.</div> <div id="T1ev" class="txs">La fille était partie pour Dalaba mais elle avait laissé son bébé avec sa famille.</div> <div id="T1ew" class="txs">Quel manque de planification&nbsp;!</div></div>
+<div class="m"><div id="T1ex" class="txs">D'autres s’y prennent au dernier instant pour trouver l'argent pour payer l’écolage pour leurs enfants :</div> <div id="T1ey" class="txs">les cahiers,</div> <div id="T1ez" class="txs">les tenues etc.</div> <div id="T1fa" class="txs">Mais à ce moment les cahiers coûtent cher et on ne trouve plus de tissu au marché…</div></div>
+<div class="m"><div id="T1fb" class="txs">Les enfants souffrent à cause de la mauvaise planification de leurs parents.</div> <div id="T1fc" class="txs">Ce n’est pas facile,</div> <div id="T1fd" class="txs">mais Dieu est fiable.</div> <div id="T1fe" class="txs">Et d’après Genèse 8, 21 à 22,</div> <div id="T1ff" class="txs">il nous a demandé d’être fiables à notre tour,</div> <div id="T1fg" class="txs">fidèles et de bons administrateurs.</div> <div id="T1fh" class="txs">Et si j’ai mis au monde cinq enfants,</div> <div id="T1fi" class="txs">ma responsabilité devant Dieu et envers ma famille,</div> <div id="T1fj" class="txs">c’est de gérer les moyens,</div> <div id="T1fk" class="txs">de planifier pour être prêt en octobre quand l’école commence.</div></div>
+<div class="m"><div id="T1fl" class="txs">Dieu est fidèle et grâce à cela,</div> <div id="T1fm" class="txs">les hommes ont observé et ils ont constaté la fidélité et la régularité des mouvements de la lune,</div> <div id="T1fn" class="txs">du soleil et des saisons pour planifier nos activités.</div></div>
+<div class="m"><div id="T1fo" class="txs">Notre Dieu n’est pas arbitraire.</div> <div id="T1fp" class="txs">Il a établi les choses clairement et de manière fiable.</div> <div id="T1fq" class="txs">En tant que chrétiens,</div> <div id="T1fr" class="txs">nous ne devons pas nous contenter de dire «&nbsp;<span class="it">Inch Allah</span>&nbsp;» ou «&nbsp;<span class="it">s’il plait à Dieu</span>&nbsp;».</div> <div id="T1fs" class="txs">Nous ne sommes pas victime du sort ou des caprices d’un dieu qui changerait tout le temps d’avis.</div> <div id="T1ft" class="txs">Nous connaissons le Dieu puissant et éternel.</div> <div id="T1fu" class="txs">Et cette connaissance nous donne la possibilité de gérer nos biens,</div> <div id="T1fv" class="txs">de planifier notre vie.</div> <div id="T1fw" class="txs">Elle nous permet de faire des réserves pour les situations dures et pour les cas imprévus.</div> <div id="T1fx" class="txs">Dans les Proverbes,</div> <div id="T1fy" class="txs">Salomon nous donne un exemple tiré du règne animal.</div> <div id="T1fz" class="txs">Il parle des fourmis qui sont très travailleuses,</div> <div id="T1ga" class="txs">elles cherchent la nourriture et font des réserves bien qu'elles n'aient pas de chef qui les surveille.</div> <div id="T1gb" class="txs">La Bible dit que nous devrions nous inspirer de la sagesse que Dieu a donnée aux fourmis&nbsp;!</div> <div id="T1gc" class="txs">(Proverbes 6,</div> <div id="T1gd" class="txs">versets 6 à 11).</div></div>
+<div class="m"><div id="T1ge" class="txs">Donc,</div> <div id="T1gf" class="txs">il est juste et bon pour le chrétien de planifier,</div> <div id="T1gg" class="txs">de prendre ses responsabilités pour sa propre famille – en premier pour ses enfants – ainsi que pour ses parents et pour l’Église.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1gh" class="txs"><span class="bd">1)</span><span class="bd"> Gérer les biens de sa famille</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1gi" class="txs">Selon Genèse 2, 24,</div> <div id="T1gj" class="txs">le but de Dieu pour le mariage est que l’homme et la femme ne soient qu’une seule personne.</div> <div id="T1gk" class="txs">Sur la base des Ecritures :</div></div>
+<div class="m"><div id="T1gl" class="txs">1.</div> <div id="T1gm" class="txs">Le mariage est l’engagement total et le partage total de votre être tout entier avec une autre personne,</div> <div id="T1gn" class="txs">jusqu’à ce que la mort vous sépare.</div></div>
+<div class="m"><div id="T1go" class="txs">2.</div> <div id="T1gp" class="txs">L’argent est inclus dans le «&nbsp;partage total&nbsp;» qui fait partie du mariage.</div> <div id="T1gq" class="txs">Dans tout ce qui concerne votre argent,</div> <div id="T1gr" class="txs">l’utilisation que vous en faites et votre attitude face à lui,</div> <div id="T1gs" class="txs">vous et votre conjoint devez former une seule personne.</div></div>
+<div class="m"><div id="T1gt" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">À discuter</span> :</div> <div id="T1gu" class="txs">Comment un couple gère ses biens matériels&nbsp;?</div> <div id="T1gv" class="txs">Quelles sont des coutumes par rapport à ce sujet&nbsp;?</div></div>
+<div class="m"><div id="T1gw" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quels sont des difficultés ou les défis dans votre gestion&nbsp;?</span></div></div>
+<div class="m"><div id="T1gx" class="txs"><span class="it">(Eventuellement :</span></div> <div id="T1gy" class="txs"><span class="it">Séparez les hommes et les femmes et laissez-les discuter en groupe)</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1gz" class="txs">La transparence,</div> <div id="T1ha" class="txs">dans le domaine des finances comme dans d’autres,</div> <div id="T1hb" class="txs">favorise aussi l’unité dans le couple.</div> <div id="T1hc" class="txs">En effet,</div> <div id="T1hd" class="txs">si on cache nos revenus,</div> <div id="T1he" class="txs">et donc nos dépenses à notre conjoint,</div> <div id="T1hf" class="txs">c’est la porte ouverte à des dissimulations qui peuvent nous conduire à l’infidélité ou à l’adultère.</div> <div id="T1hg" class="txs">Il est difficile de parler de véritable unité dans le couple s’il n’y a pas de transparence au niveau des finances et des biens.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/26 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/26 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/26 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

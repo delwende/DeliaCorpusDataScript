@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 4</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "4a", start: 455.08, end: 456.31 },
+    { label: "4b", start: 456.56, end: 457.67 },
+    { label: "4c", start: 457.92, end: 464.07 },
+    { label: "4d", start: 464.32, end: 465.85 },
+    { label: "4e", start: 466.1, end: 468.25 },
+    { label: "4f", start: 468.5, end: 472.31 },
+    { label: "4g", start: 472.56, end: 476.39 },
+    { label: "4h", start: 476.64, end: 480.79 },
+    { label: "4i", start: 481.04, end: 483.45 },
+    { label: "4j", start: 483.7, end: 486.77 },
+    { label: "4k", start: 487.02, end: 489.83 },
+    { label: "4l", start: 490.08, end: 494.13 },
+    { label: "4m", start: 494.38, end: 500.09 },
+    { label: "4n", start: 500.34, end: 504.03 },
+    { label: "4o", start: 504.28, end: 508.03 },
+    { label: "4p", start: 508.28, end: 509.71 },
+    { label: "4q", start: 509.96, end: 513.97 },
+    { label: "4r", start: 514.22, end: 518.63 },
+    { label: "4s", start: 518.88, end: 521.07 },
+    { label: "4t", start: 521.32, end: 525.97 },
+    { label: "4u", start: 526.22, end: 528.49 },
+    { label: "4v", start: 528.74, end: 531.09 },
+    { label: "4w", start: 531.34, end: 534.81 },
+    { label: "4x", start: 535.06, end: 538.21 },
+    { label: "4y", start: 538.46, end: 544.71 },
+    { label: "4z", start: 544.96, end: 551.03 },
+    { label: "4aa", start: 551.28, end: 554.49 },
+    { label: "4ab", start: 554.74, end: 555.61 },
+    { label: "4ac", start: 555.86, end: 558.49 },
+    { label: "4ad", start: 558.74, end: 562.23 },
+    { label: "4ae", start: 562.48, end: 565.05 },
+    { label: "4af", start: 565.3, end: 566.91 },
+    { label: "4ag", start: 567.16, end: 568.31 },
+    { label: "4ah", start: 568.56, end: 571.87 },
+    { label: "4ai", start: 572.12, end: 577.39 },
+    { label: "4aj", start: 577.64, end: 579.09 },
+    { label: "4ak", start: 579.34, end: 584.55 },
+    { label: "4al", start: 584.8, end: 586.37 },
+    { label: "4am", start: 586.62, end: 591.09 },
+    { label: "4an", start: 591.34, end: 592.27 },
+    { label: "4ao", start: 592.52, end: 593.73 },
+    { label: "4ap", start: 593.98, end: 595.89 },
+    { label: "4aq", start: 596.14, end: 597.35 },
+    { label: "4ar", start: 597.6, end: 603.03 },
+    { label: "4as", start: 603.28, end: 609.69 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 455.08;
+var stopTime  = 609.69;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-003.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;4&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-005.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image4.jpg" />
+
+<div class="m"><div id="T4a" class="txs"><span class="bd">Adoption</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T4b" class="txs"><span class="it">In his love,</span></div> <div id="T4c" class="txs"><span class="it">God has predestined us to be </span><span class="bdit">his adopted</span><span class="it"> children through Jesus Christ</span> (Ephesians 1.5).</div></div>
+<div class="m"><div id="T4d" class="txs"><span class="bd">What is adoption?</span></div></div>
+<div class="m"><div id="T4e" class="txs">In the time of the apostle Paul,</div> <div id="T4f" class="txs">childless couples frequently adopted a son who became their heir.</div> <div id="T4g" class="txs">Even if the adoptive son's biological parents were still alive,</div> <div id="T4h" class="txs">they no longer had any rights over him once the adoption was completed.</div> <div id="T4i" class="txs">Plenary adoption is a legal act.</div> <div id="T4j" class="txs">The child does not simply change the family.</div> <div id="T4k" class="txs">There is a complete break with the old family.</div> <div id="T4l" class="txs">The adopted child changes his or her name and receives a new birth certificate.</div> <div id="T4m" class="txs">He or she is no longer entitled to inheritance from his or her biological family,</div> <div id="T4n" class="txs">but is fully integrated into the lineage of his or her new family.</div> <div id="T4o" class="txs">The old family no longer has any rights over him or her.</div> <div id="T4p" class="txs">In some countries,</div> <div id="T4q" class="txs">biological parents no longer even have the right to see their child.</div> <div id="T4r" class="txs">Paul uses this social custom to teach the following biblical truths:</div></div>
+<div class="m"><div id="T4s" class="txs">- We are chosen before we are born,</div> <div id="T4t" class="txs">but we become God's children by adoption the moment we accept God's salvation.</div></div>
+<div class="m"><div id="T4u" class="txs">- We are fully children of God.</div> <div id="T4v" class="txs">The break with the past is complete.</div> <div id="T4w" class="txs">Our "old family" no longer has any power over us. </div></div>
+<div class="m"><div id="T4x" class="txs">- Adoption was made possible by Christ's death.</div> <div id="T4y" class="txs">It took place the moment we believed and became members of God's family (Romans 8, 15),</div> <div id="T4z" class="txs">but it will be fully realized when we put on our resurrection body (Romans 8, 23).</div></div>
+<div class="m"><div id="T4aa" class="txs"><span class="bd">Actions to make adoption a richness in your life:</span></div></div>
+<div class="m"><div id="T4ab" class="txs"><span class="it">- Prayer:</span></div> <div id="T4ac" class="txs">Thank God for your new spiritual family.</div>  <div id="T4ad" class="txs">Speak the names of those who have become true fathers and mothers,</div> <div id="T4ae" class="txs">brothers and sisters in the church for you.</div> <div id="T4af" class="txs">Thank God for them.</div></div>
+<div class="m"><div id="T4ag" class="txs"><span class="it">- Bible reading:</span></div> <div id="T4ah" class="txs">Read Ephesians 4, 17 to 32.</div> <div id="T4ai" class="txs">Make a first list of behaviors from the old family that are no longer allowed in the new family,</div> <div id="T4aj" class="txs">the family of God.</div> <div id="T4ak" class="txs">Then make a second list of behaviors you must learn as sons and daughters of God's family.</div></div>
+<div class="m"><div id="T4al" class="txs"><span class="it">- Personal reflection:</span></div> <div id="T4am" class="txs">Examine your life to see if you still have any of the behaviors of your old life.</div> <div id="T4an" class="txs">If so,</div> <div id="T4ao" class="txs">seek to change them,</div> <div id="T4ap" class="txs">with the help of the Holy Spirit.</div></div>
+<div class="m"><div id="T4aq" class="txs"><span class="it">- towards others:</span></div> <div id="T4ar" class="txs">Ask God to show you who in your church needs a spiritual father or mother or brother or sister.</div> <div id="T4as" class="txs">Draw close to that person and accompany him or her in life as you would a brother or sister in your natural family.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

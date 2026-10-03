@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000B63">
+<title>85 Dadaano ki fani cie 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 4.79, end: 10.97 },
+    { label: "1b", start: 11.22, end: 17.02 },
+    { label: "1c", start: 17.27, end: 22.4 },
+    { label: "1d", start: 22.65, end: 26.89 },
+    { label: "1e", start: 27.14, end: 34.62 },
+    { label: "1f", start: 34.87, end: 40.5 },
+    { label: "1g", start: 40.75, end: 44.12 },
+    { label: "1h", start: 44.37, end: 48.08 },
+    { label: "1i", start: 48.33, end: 53.65 },
+    { label: "1j", start: 53.9, end: 60.27 },
+    { label: "1k", start: 60.52, end: 68.23 },
+    { label: "1l", start: 68.48, end: 73.42 },
+    { label: "1m", start: 73.67, end: 76.13 },
+    { label: "1n", start: 76.38, end: 83.15 },
+    { label: "1o", start: 83.4, end: 91.72 },
+    { label: "1p", start: 91.97, end: 98.68 },
+    { label: "1q", start: 98.93, end: 103.72 },
+    { label: "1r", start: 103.97, end: 112.21 },
+    { label: "1s", start: 112.46, end: 120.94 },
+    { label: "1t", start: 121.19, end: 129.11 },
+    { label: "1u", start: 129.36, end: 135.06 },
+    { label: "1v", start: 135.31, end: 140.8 },
+    { label: "1w", start: 141.05, end: 149.61 },
+    { label: "1x", start: 149.86, end: 156.5 },
+    { label: "1y", start: 156.75, end: 160.84 },
+    { label: "1z", start: 161.09, end: 165.69 },
+    { label: "1aa", start: 165.94, end: 169.17 },
+    { label: "1ab", start: 169.42, end: 176.82 },
+    { label: "1ac", start: 177.07, end: 183.99 },
+    { label: "1ad", start: 184.24, end: 191.87 },
+    { label: "1ae", start: 192.12, end: 198.6 },
+    { label: "1af", start: 198.85, end: 203.71 },
+    { label: "1ag", start: 203.96, end: 212 },
+    { label: "1ah", start: 212.25, end: 221.46 },
+    { label: "1ai", start: 221.71, end: 229.22 },
+    { label: "1aj", start: 229.47, end: 237.99 },
+    { label: "1ak", start: 238.24, end: 248.42 },
+    { label: "1al", start: 248.67, end: 258.51 },
+    { label: "1am", start: 258.76, end: 265.27 },
+    { label: "1an", start: 265.52, end: 274.53 },
+    { label: "1ao", start: 274.78, end: 281.1 },
+    { label: "1ap", start: 281.35, end: 285.38 },
+    { label: "1aq", start: 285.63, end: 287.84 },
+    { label: "1ar", start: 288.09, end: 294.22 },
+    { label: "1as", start: 294.47, end: 301.01 },
+    { label: "1at", start: 301.26, end: 304.77 },
+    { label: "1au", start: 305.02, end: 313.1 },
+    { label: "1av", start: 313.35, end: 319.43 },
+    { label: "1aw", start: 319.68, end: 325.19 },
+    { label: "1ax", start: 325.44, end: 331.04 },
+    { label: "1ay", start: 331.29, end: 337.08 },
+    { label: "1az", start: 337.33, end: 344.83 },
+    { label: "1ba", start: 345.08, end: 353.35 },
+    { label: "1bb", start: 353.6, end: 359.56 },
+    { label: "1bc", start: 359.81, end: 368.66 },
+    { label: "1bd", start: 368.91, end: 375.54 },
+    { label: "1be", start: 375.79, end: 379.7 },
+    { label: "1bf", start: 379.95, end: 389.95 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 4.79;
+var stopTime  = 389.95;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;85 Dadaano ki fani cie&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">85 </span><span class="bd">Dadaano</span><span class="bd"> </span><span class="bd">k</span><span class="bd">i</span><span class="bd"> </span><span class="bd">fani</span><span class="bd"> </span><span class="bd">cie</span><span class="bd"> </span><span class="bd">«</span><span class="bd">Tieni</span><span class="bd">»</span>.</div></div>
+<div class="m"><div id="T1b" class="txs">Le vendeur de dolo ne sera pas plus malin que l'acheteur qui dit «sers-moi».</div></div>
+<div class="m"><div id="T1c" class="txs">Sens : L'acheteur peut payer crédit sans que le vendeur ne le sache.</div></div>
+<div class="m"><div id="T1d" class="txs">Emploi : se dit à un commerçant qui se croit plus malin que l'acheteur.</div></div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">Dadaano</span><span class="bd"> </span><span class="bd">k</span><span class="bd">i</span><span class="bd"> </span><span class="bd">fani</span><span class="bd"> </span><span class="bd">cie</span><span class="bd"> </span><span class="bd">«</span><span class="bd">Tieni</span><span class="bd">»</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">86 Dari </span><span class="bd">ki</span><span class="bd"> n dari </span><span class="bd">paari</span><span class="bd"> </span><span class="bd">yiega</span>.</div></div>
+<div class="m"><div id="T1g" class="txs">Tire que je tire divise la calebasse.</div></div>
+<div class="m"><div id="T1h" class="txs">Sens : se dit à une personne qui en provoque une autre.</div> <div id="T1i" class="txs">Si la personne ne veut pas disputer avec elle, elle pourra lui dire ce proverbe.</div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">Dari </span><span class="bd">ki</span><span class="bd"> n dari </span><span class="bd">paari</span><span class="bd"> </span><span class="bd">yiega</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">87 A </span><span class="bd">ñima</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">dagidi</span><span class="bd"> a </span><span class="bd">walima</span><span class="bd"> an fa a </span><span class="bd">nunga</span>.</div></div>
+<div class="m"><div id="T1l" class="txs">Si l'eau ne suffit pas pour ton bain mouille toi le visage.</div></div>
+<div class="m"><div id="T1m" class="txs">Sens : Agis selon tes moyens.</div></div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">A </span><span class="bd">ñima</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">dagidi</span><span class="bd"> a </span><span class="bd">walima</span><span class="bd"> an fa a </span><span class="bd">nunga</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">88 </span><span class="bd">Dajekuado</span><span class="bd"> kan </span><span class="bd">fandi</span><span class="bd"> </span><span class="bd">cie</span><span class="bd"> «</span><span class="bd">cua</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> n le»</span>.</div></div>
+<div class="m"><div id="T1p" class="txs">Un vendeur ne peut pas être plus malin que celui qui lui dit «viens que je voie».</div></div>
+<div class="m"><div id="T1q" class="txs">Sens : se dit à un vendeur qui se croit plus malin qu'un acheteur.</div></div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">Dajekuado</span><span class="bd"> kan </span><span class="bd">fandi</span><span class="bd"> </span><span class="bd">cie</span><span class="bd"> «</span><span class="bd">cua</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> n le»</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">89 </span><span class="bd">Dajenkuonli</span><span class="bd"> </span><span class="bd">diema</span><span class="bd"> </span><span class="bd">bulo</span><span class="bd"> o </span><span class="bd">paadi</span><span class="bd"> </span><span class="bd">leni</span><span class="bd"> yali</span>.</div></div>
+<div class="m"><div id="T1t" class="txs">Si un bois sec coupé s'appuie contre le bulo (fétiche) il est séparé d'une hache.</div></div>
+<div class="m"><div id="T1u" class="txs">Sens : si un inférieur s'appuie sur un supérieur, il n'a plus peur de rien.</div></div>
+<div class="m"><div id="T1v" class="txs">Emploi : se dit à quelqu'un qui n'a pas de force et qui est appuyé sur un plus fort que lui.</div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">Dajenkuonli</span><span class="bd"> </span><span class="bd">diema</span><span class="bd"> </span><span class="bd">bulo</span><span class="bd"> o </span><span class="bd">paadi</span><span class="bd"> </span><span class="bd">leni</span><span class="bd"> yali</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">90 </span><span class="bd">Dajenyenli</span><span class="bd"> kan </span><span class="bd">loli</span><span class="bd"> </span><span class="bd">baabu</span>.</div></div>
+<div class="m"><div id="T1y" class="txs">Un seul morceau de bois ne sera pas lié avec une corde.</div> <div id="T1z" class="txs">On ne lie pas avec une corde un seul morceau de bois.</div></div>
+<div class="m"><div id="T1aa" class="txs">Sens : trop peu ne permet pas d'entreprendre.</div></div>
+<div class="m"><div id="T1ab" class="txs">Emploi : S’il n'y a pas assez de personnes pour entrer dans le camion ou le bus, le camion ne partira pas.</div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">Dajenyenli</span><span class="bd"> kan </span><span class="bd">loli</span><span class="bd"> </span><span class="bd">baabu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">91 </span><span class="bd">Wulo</span><span class="bd"> </span><span class="bd">gubi</span><span class="bd"> </span><span class="bd">daagu</span><span class="bd"> o </span><span class="bd">gubi</span><span class="bd"> o </span><span class="bd">dakpakaagu</span>.</div></div>
+<div class="m"><div id="T1ae" class="txs">La gueule tapée tient un bois, elle tient le bâton qui va servir à la tuer.</div></div>
+<div class="m"><div id="T1af" class="txs">Sens : Un plus fort peut dire ce proverbe à un moins fort que lui.</div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="bd">Wulo</span><span class="bd"> </span><span class="bd">gubi</span><span class="bd"> </span><span class="bd">daagu</span><span class="bd"> o </span><span class="bd">gubi</span><span class="bd"> o </span><span class="bd">dakpakaagu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">92 A </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">tugi</span><span class="bd"> </span><span class="bd">dalongu</span><span class="bd"> </span><span class="bd">len</span><span class="bd"> </span><span class="bd">ñanciadi</span><span class="bd"> a kan </span><span class="bd">baa</span><span class="bd"> </span><span class="bd">yua</span><span class="bd"> n </span><span class="bd">baa</span><span class="bd"> </span><span class="bd">gaa</span><span class="bd"> a po</span>.</div></div>
+<div class="m"><div id="T1ai" class="txs">Si tu portes un bois rempli de petites fourmis, tu n'auras personne qui le prenne pour toi.</div></div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">A </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">tugi</span><span class="bd"> </span><span class="bd">dalongu</span><span class="bd"> </span><span class="bd">len</span><span class="bd"> </span><span class="bd">ñanciadi</span><span class="bd"> a kan </span><span class="bd">baa</span><span class="bd"> </span><span class="bd">yua</span><span class="bd"> n </span><span class="bd">baa</span><span class="bd"> </span><span class="bd">gaa</span><span class="bd"> a po</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">93 </span><span class="bd">Dalongu</span><span class="bd"> cadi </span><span class="bd">wa</span><span class="bd"> </span><span class="bd">tugi</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> nua li </span><span class="bd">c</span><span class="bd">ain</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">buali</span><span class="bd"> «</span><span class="bd">Cua</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> n </span><span class="bd">ga</span><span class="bd"> a po»</span>.</div></div>
+<div class="m"><div id="T1al" class="txs">Le bois creux rempli de fourmis, celui qui le porte n'est pas tranquille, à plus forte raison celui qui dit&nbsp;: «viens que je prenne pour toi».</div></div>
+<div class="m"><div id="T1am" class="txs">Emploi : se dit à quelqu'un qui demande de venir loger chez mon tuteur qui est mauvais.</div></div>
+<div class="m"><div id="T1an" class="txs"><span class="bd">Dalongu</span><span class="bd"> cadi </span><span class="bd">wa</span><span class="bd"> </span><span class="bd">tugi</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> nua li </span><span class="bd">c</span><span class="bd">ain</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">buali</span><span class="bd"> «</span><span class="bd">Cua</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> n </span><span class="bd">ga</span><span class="bd"> a po»</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ao" class="txs"><span class="bd">94 </span><span class="bd">Dandogu</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">Wangi</span><span class="bd"> </span><span class="bd">ganu</span>.</div></div>
+<div class="m"><div id="T1ap" class="txs">La patrie ne se montre pas de la main gauche.</div></div>
+<div class="m"><div id="T1aq" class="txs">Sens : On doit toujours respecter sa patrie.</div></div>
+<div class="m"><div id="T1ar" class="txs"><span class="bd">Dandogu</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">Wangi</span><span class="bd"> </span><span class="bd">ganu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1as" class="txs"><span class="bd">95 Cie </span><span class="bd">ŋmaalo</span><span class="bd"> tie </span><span class="bd">dangidi</span>.</div></div>
+<div class="m"><div id="T1at" class="txs">Cueillir la lune est une illusion.</div></div>
+<div class="m"><div id="T1au" class="txs"><span class="bd">Cie </span><span class="bd">ŋmaalo</span><span class="bd"> tie </span><span class="bd">dangidi</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1av" class="txs"><span class="bd">96 N </span><span class="bd">danli</span><span class="bd"> </span><span class="bd">ciaga</span><span class="bd"> n </span><span class="bd">togidi</span><span class="bd"> o </span><span class="bd">fe</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">togidi</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1aw" class="txs">La danse de mon ami je l'imite mais non sa honte.</div></div>
+<div class="m"><div id="T1ax" class="txs">Sens : tu peux imiter ce que ton ami fait de bien, mais non ce qu'il fait de mal.</div></div>
+<div class="m"><div id="T1ay" class="txs">Emploi: se dit à quelqu'un qui dit qu'il va prendre les responsabilités de son ami.</div></div>
+<div class="m"><div id="T1az" class="txs"><span class="bd">N </span><span class="bd">danli</span><span class="bd"> </span><span class="bd">ciaga</span><span class="bd"> n </span><span class="bd">togidi</span><span class="bd"> o </span><span class="bd">fe</span><span class="bd"> </span><span class="bd">ki</span><span class="bd"> </span><span class="bd">togidi</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ba" class="txs"><span class="bd">97 A </span><span class="bd">danli</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">yegi</span><span class="bd"> </span><span class="bd">leni</span><span class="bd"> a </span><span class="bd">yibali</span><span class="bd"> an </span><span class="bd">taani</span><span class="bd"> bi </span><span class="bd">kuli</span><span class="bd"> </span><span class="bd">yenma</span>.</div></div>
+<div class="m"><div id="T1bb" class="txs">Si ton ami va de compagnie avec ton ennemi, considère les comme amis.</div></div>
+<div class="m"><div id="T1bc" class="txs"><span class="bd">A </span><span class="bd">danli</span><span class="bd"> </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">yegi</span><span class="bd"> </span><span class="bd">leni</span><span class="bd"> a </span><span class="bd">yibali</span><span class="bd"> an </span><span class="bd">taani</span><span class="bd"> bi </span><span class="bd">kuli</span><span class="bd"> </span><span class="bd">yenma</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bd" class="txs"><span class="bd">98 A </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">danli</span><span class="bd"> </span><span class="bd">sugido</span><span class="bd"> a moko </span><span class="bd">baa</span><span class="bd"> tua </span><span class="bd">sugido</span>.</div></div>
+<div class="m"><div id="T1be" class="txs">Si tu es l'ami d'un voleur toi aussi tu deviendras voleur.</div></div>
+<div class="m"><div id="T1bf" class="txs"><span class="bd">A </span><span class="bd">yaa</span><span class="bd"> </span><span class="bd">danli</span><span class="bd"> </span><span class="bd">sugido</span><span class="bd"> a moko </span><span class="bd">baa</span><span class="bd"> tua </span><span class="bd">sugido</span>.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/07 prov bonny vol1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

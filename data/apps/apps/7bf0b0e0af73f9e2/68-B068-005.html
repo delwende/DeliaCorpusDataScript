@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) مرحبا 5</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "68-B068-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='67-B067-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='68-B068-004.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) مرحبا&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;5&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='68-B068-006.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='69-B069-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B068-image5.jpeg" />
+
+<div class="m"><span class="bd">5) يحب المرء أن يكون خاصًا</span></div>
+<div class="m">وليس المقصود أن يكون الأمر قاسياً عندما يقوم الأوروبيون بحماية خصوصيتهم. على سبيل المثال، يحبون الجلوس بمفردهم في الحافلة، وإغلاق أبوابهم في المكتب، والعديد منهم لا يريدون أن يقترب منهم أشخاص لا يعرفونهم في الشارع. يتم الحفاظ على مسافة ودية عند التعامل مع بعضهم البعض. ولهذا السبب، من غير المرجح أن تتم دعوتك على الفور إلى المنزل من قبل جيرانك أو معارفك.</div>
+<div class="m">وكذلك ليس من المعتاد أن نصل إلى بيوت الأصدقاء والمعارف بشكل غير متوقع؛ تتمثل العادة في تحديد موعد أو الإعلان عن نفسك عبر الهاتف لمعرفة ما إذا كان الصديق أو المعارف يمكنه أو يريد استقبالك.</div>
+<div class="m">يريد الآباء أيضًا هذه الخصوصية لأطفالهم. ليس من المعتاد تقديم الحلوى لأطفال الحي أو لمسهم. من الأفضل أن تسأل الوالدين مسبقًا عما هو مقبول.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

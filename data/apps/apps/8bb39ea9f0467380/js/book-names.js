@@ -1,0 +1,16 @@
+var books = [
+  { name: "I telimi mi gulimancema n", ref: "01-B001-001.html" },
+  { name: "2) Bu telinliebu", ref: "02-B002-001.html" },
+  { name: "3) Bu telin tabu", ref: "03-B003-001.html" },
+  { name: "4) Bu telinabu ", ref: "04-B004-001.html" },
+  { name: "5) A telinbunda ", ref: "05-B005-001.html" },
+  { name: "6) Bu telinmubu", ref: "06-B006-001.html" },
+  { name: "7) Bu telinluolibu", ref: "07-B007-001.html" },
+  { name: "8) Bu telinlelebu", ref: "08-B008-001.html" },
+  { name: "9) Bu telinniinbu", ref: "09-B009-001.html" },
+  { name: "10) Bu telinyiabu", ref: "10-B010-001.html" },
+  { name: "11) Bu telinpiigibu", ref: "11-B011-001.html" },
+  { name: "12) Piiga n telinyenbu", ref: "12-B012-001.html" },
+  { name: "13) A telinbunda", ref: "13-B013-001.html" },
+  { name: "14) Bu telinpiiga n", ref: "14-B014-001.html" },
+];

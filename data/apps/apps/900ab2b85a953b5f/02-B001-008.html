@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 8</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "8a", start: 1016.3, end: 1017.43 },
+    { label: "8b", start: 1017.68, end: 1020.09 },
+    { label: "8c", start: 1020.34, end: 1021.77 },
+    { label: "8d", start: 1022.02, end: 1026.71 },
+    { label: "8e", start: 1026.96, end: 1028.83 },
+    { label: "8f", start: 1029.08, end: 1034.61 },
+    { label: "8g", start: 1034.86, end: 1038.01 },
+    { label: "8h", start: 1038.26, end: 1039.87 },
+    { label: "8i", start: 1040.12, end: 1041.31 },
+    { label: "8j", start: 1041.56, end: 1043.51 },
+    { label: "8k", start: 1043.76, end: 1044.81 },
+    { label: "8l", start: 1045.06, end: 1047.79 },
+    { label: "8m", start: 1048.04, end: 1053.05 },
+    { label: "8n", start: 1053.3, end: 1058.59 },
+    { label: "8o", start: 1058.84, end: 1061.55 },
+    { label: "8p", start: 1061.8, end: 1064.63 },
+    { label: "8q", start: 1064.88, end: 1068.51 },
+    { label: "8r", start: 1068.76, end: 1072.03 },
+    { label: "8s", start: 1072.28, end: 1074.91 },
+    { label: "8t", start: 1075.16, end: 1079.47 },
+    { label: "8u", start: 1079.72, end: 1083.81 },
+    { label: "8v", start: 1084.06, end: 1085.63 },
+    { label: "8w", start: 1085.88, end: 1089.13 },
+    { label: "8x", start: 1089.38, end: 1092.47 },
+    { label: "8y", start: 1092.72, end: 1093.57 },
+    { label: "8z", start: 1093.82, end: 1096.99 },
+    { label: "8aa", start: 1097.24, end: 1098.79 },
+    { label: "8ab", start: 1099.04, end: 1101.57 },
+    { label: "8ac", start: 1101.82, end: 1105.23 },
+    { label: "8ad", start: 1105.48, end: 1107.09 },
+    { label: "8ae", start: 1107.34, end: 1110.07 },
+    { label: "8af", start: 1110.32, end: 1112.39 },
+    { label: "8ag", start: 1112.64, end: 1113.77 },
+    { label: "8ah", start: 1114.02, end: 1123.49 },
+    { label: "8ai", start: 1123.74, end: 1125.37 },
+    { label: "8aj", start: 1125.62, end: 1127.43 },
+    { label: "8ak", start: 1127.68, end: 1130.39 },
+    { label: "8al", start: 1130.64, end: 1132.77 },
+    { label: "8am", start: 1133.02, end: 1136.17 },
+    { label: "8an", start: 1136.42, end: 1138.75 },
+    { label: "8ao", start: 1139, end: 1142.07 },
+    { label: "8ap", start: 1142.32, end: 1143.87 },
+    { label: "8aq", start: 1144.12, end: 1147.75 },
+    { label: "8ar", start: 1148, end: 1151.73 },
+    { label: "8as", start: 1151.98, end: 1153.17 },
+    { label: "8at", start: 1153.42, end: 1161.21 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1016.3;
+var stopTime  = 1161.21;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-007.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;8&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-009.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image8.jpg" />
+
+<div class="m"><div id="T8a" class="txs"><span class="bd">Grace</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T8b" class="txs"><span class="it">In him we have redemption through his blood,</span></div> <div id="T8c" class="txs"><span class="it">the forgiveness of sins,</span></div> <div id="T8d" class="txs"><span class="it">according to the riches of his </span><span class="bdit">grace</span> (Ephesians 1, 4 to 5).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T8e" class="txs"><span class="bd">What is God's grace?</span></div></div>
+<div class="m"><div id="T8f" class="txs">Grace means receiving God's salvation completely apart from any merit or act on our part.</div> <div id="T8g" class="txs">God has done everything in Jesus' name for us.</div> <div id="T8h" class="txs">Salvation is a gift,</div> <div id="T8i" class="txs">not a reward.</div> <div id="T8j" class="txs">Salvation is God's work,</div> <div id="T8k" class="txs">a finished work;</div> <div id="T8l" class="txs">we can neither add to it nor take away from it.</div> <div id="T8m" class="txs">We are saved by grace (Ephesians 2, 5 and verses 8 to 9),</div> <div id="T8n" class="txs">AND we live and serve by grace (Ephesians 3, 2 and verses 7 to 8).</div> <div id="T8o" class="txs">God's grace doesn't stop at salvation,</div> <div id="T8p" class="txs">but continues to work in our everyday lives.</div> <div id="T8q" class="txs">God's blessings in our lives are not rewards for our obedience,</div> <div id="T8r" class="txs">good works or active participation in church life.</div> <div id="T8s" class="txs">God blesses us by pure grace.</div></div>
+<div class="m"><div id="T8t" class="txs">Obedience to God and good works have an important place in our lives.</div> <div id="T8u" class="txs">BUT if I act while thinking in my heart only of what I can "<span class="it">win</span>" with God,</div> <div id="T8v" class="txs">I'm on the wrong track.</div> <div id="T8w" class="txs">The motivation God is looking for is to please Him.</div></div>
+<div class="m"><div id="T8x" class="txs"><span class="bd">Actions to make grace a richness in your life:</span></div></div>
+<div class="m"><div id="T8y" class="txs"><span class="it">- Prayer:</span></div> <div id="T8z" class="txs">Make a list of everything God has given you by pure grace,</div> <div id="T8aa" class="txs">without you deserving it.</div> <div id="T8ab" class="txs">Thank God for everything on the list.</div> <div id="T8ac" class="txs">Make a second list of everything you'd like to have or do.</div> <div id="T8ad" class="txs">Give the list to God.</div> <div id="T8ae" class="txs">Tell him you don't deserve any of these things,</div> <div id="T8af" class="txs">but you're counting on his grace!</div></div>
+<div class="m"><div id="T8ag" class="txs"><span class="it">- Bible reading:</span></div> <div id="T8ah" class="txs">Read 1 Corinthians 15, 8 to 10 and 2 Corinthians 12, 8 to 10 and discover how the apostle Paul experienced God's grace in his life.</div></div>
+<div class="m"><div id="T8ai" class="txs"><span class="it">- personal reflection:</span></div> <div id="T8aj" class="txs">We're influenced by our world,</div> <div id="T8ak" class="txs">which tells us "You deserve this because you did that",</div> <div id="T8al" class="txs">"You're good because you're qualified"...</div> <div id="T8am" class="txs">BUT God tells us "Everything you have I gave you.</div> <div id="T8an" class="txs">You didn't do anything to deserve it.</div> <div id="T8ao" class="txs">I didn't give you this job because you're qualified,</div> <div id="T8ap" class="txs">but because I love you."</div> <div id="T8aq" class="txs">Think about whether you're really living fully on God's grace.</div> <div id="T8ar" class="txs">Are you obeying God to please him or to gain something from him?</div></div>
+<div class="m"><div id="T8as" class="txs"><span class="it">- towards others:</span></div> <div id="T8at" class="txs">Share this meaning of God's grace with brothers and sisters who are discouraged because they failed an exam or missed out on something they longed for.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

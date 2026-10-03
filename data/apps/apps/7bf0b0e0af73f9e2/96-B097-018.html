@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Välkommen 18</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "96-B097-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='95-B096-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='96-B097-017.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Välkommen&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;18&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='96-B097-019.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='97-B098-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B097-image18.jpeg" />
+
+<div class="m"><span class="bd">18) VAD BETYDER DESSA SYMBOLER?</span></div>
+<div class="m">Det översta tecknet 1) betyder sjukhus. Varje sjukhus har också en akutmottagning som är öppen hela tiden för akuta fall. Om du inte längre kan köra till sjukhuset själv, ring nödnumret (till exempel 112) så kommer ambulans.</div>
+<div class="m">Tecknet 2) betyder apotek. Det är här du kan få rätt medicin mot till exempel en enkel förkylning eller råd om hur du ska behandla ett sår.</div>
+<div class="m">Skylt 3): Parkeringsplatser och sittplatser på bussen med denna skylt är reserverade för rullstolsburna och andra personer med funktionsnedsättning och bör lämnas fria. Plats skapas även för gravida kvinnor och äldre.</div>
+<div class="m">Skylt 4): Det finns en toalett här, men ingen dusch. Män går på herrtoaletten, kvinnor på damtoalett. Att kissa och bajsa offentligt anses vara skamligt och kan straffas. Endast toalettpapper slängs i toaletten, allt annat skräp (inklusive bindor och tamponger) i soptunnan bredvid.</div>
+<div class="m">Skylten 5): Rökning är förbjuden! På restauranger är rökning endast tillåten i vissa angivna områden, rökning är inte heller tillåten överallt på järnvägsstationer. Rök inte bredvid barn, gravida kvinnor och icke-rökare av respekt. Cigarettfimpar hör hemma i ett askfat.</div>
+<div class="m">Tecken 6): Kranvatten är normalt säkert att dricka i Europa eftersom det inte innehåller några bakterier. Du bör dock avstå från att dricka vatten från kranar med detta tecken.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

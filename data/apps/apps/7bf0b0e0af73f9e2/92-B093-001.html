@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Добро пожаловать 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "92-B093-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='91-B092-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='91-B092-033.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Добро пожаловать&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='92-B093-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='93-B094-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B093-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">1) Добро пожаловать!</span></div>
+<div class="m">Узнайте, как живут европейцы и во что они верят.</div>
+<div class="m">Это приложение представляет собой предложение. Он создан потому, что нам здесь важны люди из других стран. Мы хотим дать вам представление о европейской культуре, потому что некоторые вещи в нашей культуре могут вызвать у вас вопросы. Это неудивительно, ведь в каждой культуре многие вещи происходят по правилам, которые местные жители знают изнутри, но которые нигде явно не прописаны. Такие правила и ценности существуют повсюду. Мы хотели бы описать некоторые из них из Европы в этом приложении. Конечно, некоторые европейцы ведут себя иначе. Но вот несколько типичных моделей поведения. Люди из других стран также поделились с нами рядом наблюдений.</div>
+<div class="m">Как авторы, мы воображаем, что вы и мы встретились в поезде или в кафе - или, может быть, мы сидим за едой и болтаем, и, конечно, на самом деле мы сидели за столом с людьми из самых разных стран, слушали и разговаривали. Мы сознательно публикуем это приложение как христиане, как люди, следующие за Иисусом. Мы также пишем кое-что об этом в этом приложении. Потому что мы также слышали много вопросов о нашей вере за обеденным столом. Многие европейцы также с нетерпением ждут реальных встреч с вами. Они с нетерпением ждут возможности узнать что-нибудь о вашей культуре. Например, многие ценят чувство гостеприимства и семьи, которое люди из других стран привозят с собой в Европу. Мы надеемся жить хорошо вместе.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

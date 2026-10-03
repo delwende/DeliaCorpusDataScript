@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Leçon 1 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 0;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Leçon 1&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">Leçon 1</span></div>
+<div class="m"><span class="bd">Comment faut-il aimer&nbsp;?</span></div>
+<div class="m"><span class="bd">Texte biblique</span> : Luc 10:25-37</div>
+<div class="m"><span class="ul"><span class="bdit">Verset à apprendre</span></span><span class="ul"><span class="it"> : Tu dois aimer ton prochain comme toi-même. Luc </span></span><span class="ul"><span class="it">10:</span></span><span class="ul"><span class="it">27</span></span></div>
+<div class="m"><span class="bd">But de la leçon</span> : Que les enfants apprennent à aimer leur prochain de façon pratique.</div>
+<div class="m"><span class="bd">Prise de contact</span> : Poser la question&nbsp;: Qui est notre prochain&nbsp;? (Tous ceux qui restent à côte de nous 1 parents, freres et sœurs, voisins, camarades d'école etc.)</div>
+<div class="m"><span class="bd">Récit biblique</span> :</div>
+<div class="m"><span class="bdit">1) Le voyageur. (</span><span class="bdit">v.</span><span class="bdit"> 30)</span></div>
+<div class="m">Un homme, qui habite à Jérusalem quitte sa famille pour se rendre à Jéricho. Ce chemin est désert, et sauvage. Quelques arbustes le long de la route, beaucoup de pierres, mais pas de maison. Notre voyageur est seul.</div>
+<div class="m">Le long de cette route il y a souvent des voleurs qui se cachent derrière les arbustes et sautent sur les voyageurs pour les voler.</div>
+<div class="m">Notre voyageur est un peu craintif, mais il pense à ses affaires, à sa famille et marche rapidement.</div>
+<div class="m">Tout-à-coup, quelqu'un saute sur lui, lui sert la gorge, arrache ses vêtements, le bal, prend son sac et disparaît. Le pauvre homme est blessé, étendu au bord du chemin à moitié mort. Il est trop faible pour appeler. Si personne ne passe par là, il mourra.</div>
+<div class="m"><span class="bdit">2) Le prêtre. (</span><span class="bdit">v.</span><span class="bdit"> 31)</span></div>
+<div class="m">Un moment après, il entend quelqu'un approcher. C'est un homme qui arrive lui aussi de Jérusalem. C'est un prêtre qui est allé prier au temple, donc c'est un serviteur de Dieu. Certainement il aura pitié du blesse.</div>
+<div class="m">Le blessé lève la tête et crie : «&nbsp;Au secours&nbsp;». Mais le prêtre détourne la tête, passe de l'autre côté du chemin et continue sa route.</div>
+<div class="m"><span class="bdit">3) Le </span><span class="bdit">Iévite</span><span class="bdit">. (</span><span class="bdit">v.</span><span class="bdit"> 32)</span></div>
+<div class="m">De nouveau, on entend des pas. Cette fois c'est un lévite, un serviteur des prêtres. Lui aussi a été au temple. C'est aussi un serviteur de Dieu. Alors le blesse crie à nouveau : «&nbsp;Au secours, au secours&nbsp;!»</div>
+<div class="m">Mais le lévite n'est pas meilleur que le prêtre. Lui aussi se détourne et passe rapidement. Le blessé est seul. Il gémit. Personne n'aura donc pitié de lui&nbsp;?</div>
+<div class="m"><span class="bdit">4) Le samaritain. (V. 33-35)</span></div>
+<div class="m">Un troisième homme passe. Il est monté sur un âne. L'aidera-t-il celui-là&nbsp;? C'est un samaritain, un homme d'un pays étranger, donc un ennemi. Quand le blesse le voit, il repose sa tête, il n'appelle même pas. Cet homme ne lui aidera pas, puisque c'est un étranger.</div>
+<div class="m">Pourtant le samaritain regarde. Il arrête son âne, descend et dit : «&nbsp;Ah&nbsp;! le pauvre homme, qu'est-ce qui t'est arrivé&nbsp;? Tu ne peux pas marcher, viens, je vais t'aider.&nbsp;»</div>
+<div class="m">L'homme s'agenouille, essuie le sang du blessé, le met sur son âne et marche à côte pour veiller à ce qu'il ne tombe pas. Il marche lentement, jusqu’à ce qu'il trouve une auberge. Le samaritain porte l'homme blesse dans la maison, le met dans un lit et prend soin de lui.</div>
+<div class="m">Le lendemain, comme il doit continuer son chemin, il donne de l'argent à l’aubergiste pour qu'il continue à le soigner.</div>
+<div class="m"><span class="bd">Application :</span></div>
+<div class="m">Lequel de ces trois hommes a obéi à Dieu&nbsp;? (Le samaritain.) Il l'a fait parce qu'il aimait Dieu et son prochain. Suivons son exemple.</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

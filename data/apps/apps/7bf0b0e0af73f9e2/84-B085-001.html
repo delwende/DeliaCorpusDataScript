@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Selamat datang 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "84-B085-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='83-B084-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='83-B084-033.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Selamat datang&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='84-B085-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='85-B086-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B085-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">1) Selamat </span><span class="bd">datang</span><span class="bd">!</span></div>
+<div class="m">Ketahui cara hidup orang Eropah dan apa yang mereka percaya.</div>
+<div class="m">Permohonan ini adalah tawaran. Ia dicipta kerana orang dari negara lain adalah penting bagi kami di sini. Kami ingin memberi anda gambaran tentang budaya Eropah, kerana beberapa perkara tentang budaya kami mungkin menimbulkan persoalan untuk anda. Ini tidak menghairankan, kerana dalam setiap budaya, banyak perkara berlaku mengikut peraturan yang diketahui oleh penduduk tempatan, tetapi yang tidak ditulis secara jelas di mana-mana. Peraturan dan nilai sedemikian wujud di mana-mana. Kami ingin menerangkan sebahagian daripada mereka dari Eropah dalam aplikasi ini. Sudah tentu, sesetengah orang Eropah berkelakuan berbeza. Tetapi berikut adalah beberapa corak tingkah laku biasa. Orang dari negara lain juga telah berkongsi beberapa pemerhatian dengan kami.</div>
+<div class="m">Sebagai pengarang, kami membayangkan bahawa anda dan kami telah bertemu di dalam kereta api atau di kafe - atau mungkin kami sedang duduk makan dan berbual, dan sudah tentu kami sebenarnya telah duduk semeja dengan orang dari negara yang sangat berbeza dan mendengar dan bercakap. Kami secara sedar menerbitkan aplikasi ini sebagai orang Kristian, sebagai orang yang mengikut Yesus. Kami juga menulis sesuatu tentang perkara ini dalam apl ini. Kerana kita juga telah mendengar banyak persoalan tentang iman kita di meja makan. Ramai orang Eropah juga menantikan pertemuan sebenar dengan anda. Mereka tidak sabar-sabar untuk mengenali sesuatu budaya anda. Contohnya, ramai yang menghargai keramahan dan kekeluargaan yang dibawa oleh orang dari negara lain ke Eropah. Kami berharap untuk hidup dengan baik bersama.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

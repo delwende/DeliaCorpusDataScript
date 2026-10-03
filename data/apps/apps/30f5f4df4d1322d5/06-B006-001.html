@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#AD4428">
+<title>Kãab-wẽnse la tʋya 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 4.08, end: 9.71 },
+    { label: "1b", start: 9.96, end: 12.2 },
+    { label: "1c", start: 12.45, end: 15.38 },
+    { label: "1d", start: 15.63, end: 25.84 },
+    { label: "1e", start: 26.09, end: 35.73 },
+    { label: "1f", start: 35.98, end: 39.88 },
+    { label: "1g", start: 40.13, end: 52.18 },
+    { label: "1h", start: 52.43, end: 58.69 },
+    { label: "1i", start: 58.94, end: 63.29 },
+    { label: "1j", start: 63.54, end: 73.23 },
+    { label: "1k", start: 73.48, end: 79.15 },
+    { label: "1l", start: 79.4, end: 83.6 },
+    { label: "1m", start: 83.85, end: 93.3 },
+    { label: "1n", start: 93.55, end: 98.51 },
+    { label: "1o", start: 98.76, end: 102.61 },
+    { label: "1p", start: 102.86, end: 112.53 },
+    { label: "1q", start: 112.78, end: 118.49 },
+    { label: "1r", start: 118.74, end: 123.08 },
+    { label: "1s", start: 123.33, end: 133.98 },
+    { label: "1t", start: 134.23, end: 139.96 },
+    { label: "1u", start: 140.21, end: 143.41 },
+    { label: "1v", start: 143.66, end: 153.42 },
+    { label: "1w", start: 153.67, end: 159.37 },
+    { label: "1x", start: 159.62, end: 164.34 },
+    { label: "1y", start: 164.59, end: 173.9 },
+    { label: "1z", start: 174.15, end: 180.21 },
+    { label: "1aa", start: 180.46, end: 185.15 },
+    { label: "1ab", start: 185.4, end: 193.23 },
+    { label: "1ac", start: 193.48, end: 200.09 },
+    { label: "1ad", start: 200.34, end: 204.46 },
+    { label: "1ae", start: 204.71, end: 214.01 },
+    { label: "1af", start: 214.26, end: 220.53 },
+    { label: "1ag", start: 220.78, end: 223.76 },
+    { label: "1ah", start: 224.01, end: 233.82 },
+    { label: "1ai", start: 234.07, end: 239.9 },
+    { label: "1aj", start: 240.15, end: 244.71 },
+    { label: "1ak", start: 244.96, end: 259.07 },
+    { label: "1al", start: 259.32, end: 265.12 },
+    { label: "1am", start: 265.38, end: 269.39 },
+    { label: "1an", start: 269.64, end: 278.43 },
+    { label: "1ao", start: 278.68, end: 284.85 },
+    { label: "1ap", start: 285.1, end: 291.19 },
+    { label: "1aq", start: 291.44, end: 298.31 },
+    { label: "1ar", start: 298.56, end: 307.04 },
+    { label: "1as", start: 307.29, end: 311.01 },
+    { label: "1at", start: 311.26, end: 323.15 },
+    { label: "1au", start: 323.4, end: 329.25 },
+    { label: "1av", start: 329.5, end: 333.75 },
+    { label: "1aw", start: 334, end: 342.36 },
+    { label: "1ax", start: 342.61, end: 352.61 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 4.08;
+var stopTime  = 352.61;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Kãab-wẽnse la tʋya&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Kãab-</span><span class="bd">w</span><span class="bd">ẽnse la tʋya</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">1 Sũpĩim-goanga</span>.</div></div>
+<div class="m"><div id="T1c" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1d" class="txs">- Vẽer woto tɩ f rɩg yaoogẽ goanga.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">2 M wĩir vuug ka, n vuug ka, n ning kar-badg sʋka.</span></div></div>
+<div class="m"><div id="T1f" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1g" class="txs">- Pʋgd-rãmb yuug ka n yuug ka, tɩ b ning po-raoog more.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">3 M kug-toor koom</span>.</div></div>
+<div class="m"><div id="T1i" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1j" class="txs">- Yik yibeoog pĩnd n fʋrg nin-feoog koom.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">4 M pusumpuug bendre.</span></div></div>
+<div class="m"><div id="T1l" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1m" class="txs">- F na ki tɩ b wẽ f yaoog pondre.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">5 M silmiig rãam</span>.</div></div>
+<div class="m"><div id="T1o" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1p" class="txs">- Kẽ kãoogẽ n fʋrs bĩnd kaam.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">6 M sĩ vũud ne bolle</span>.</div></div>
+<div class="m"><div id="T1r" class="txs">- M zɩ-a</div></div>
+<div class="m"><div id="T1s" class="txs">- Vẽer woto tɩ zu-bʋk soab yãrd ne rũmdi.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs"><span class="bd">7 M kãn-saalg pa yũnugi</span>.</div></div>
+<div class="m"><div id="T1u" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1v" class="txs">- Wẽnd na kõ-f ye-sorbr ka yẽnde.</div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">8 M sãbg luund bãoogẽ</span>.</div></div>
+<div class="m"><div id="T1x" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1y" class="txs">- Vẽer woto tɩ f ma zug kugund yaoogẽ.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1z" class="txs"><span class="bd">9 M Wilinwiig ra-yaka</span>.</div></div>
+<div class="m"><div id="T1aa" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1ab" class="txs">- Wẽnd na kõ-f solenkẽeg ra-yɩta.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">10 M tiuudg na zũndu</span>.</div></div>
+<div class="m"><div id="T1ad" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1ae" class="txs">- F na kʋ noaag n moe f rɛɛmb ne kõbdo.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">11 M rãn</span><span class="bd">d</span><span class="bd">-vãoogo</span>.</div></div>
+<div class="m"><div id="T1ag" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1ah" class="txs">- F na ki ne f bĩnd fuugu.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ai" class="txs"><span class="bd">12 M lɩk n pa lɩka</span>.</div></div>
+<div class="m"><div id="T1aj" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1ak" class="txs">- Fo yãa mam bĩndã n tuk f so-buka, n kẽnd n dɩtẽ tɩ nooma, bas bal tɩ sata.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1al" class="txs"><span class="bd">13 M gõnem-gõnem pid yagre</span>.</div></div>
+<div class="m"><div id="T1am" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1an" class="txs">- Sẽn dog-a foo, rog wʋbre.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ao" class="txs"><span class="bd">14 M gõnem-gõnem pid yagre</span>.</div></div>
+<div class="m"><div id="T1ap" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1aq" class="txs">- Sẽn dog-a foo rog faoore.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ar" class="txs"><span class="bd">15 M sĩmbilã sẽn dɩgã m kɩls-a bɩ m doog-a</span>.</div></div>
+<div class="m"><div id="T1as" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1at" class="txs">- F sẽn mi n yã sãan n tar kɩr-kɩrã f kãoong bɩ f noaaga.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1au" class="txs"><span class="bd">16 M kuto-baanga (kutoaag sẽn baage).</span></div></div>
+<div class="m"><div id="T1av" class="txs">- M zɩ-a.</div></div>
+<div class="m"><div id="T1aw" class="txs">- F sag-võ-bɛdã yĩnga, Wẽnd na sãam-fo.</div></div>
+<div class="m"><div id="T1ax" class="txs">.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/mos/mosora-audio/06 devin avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

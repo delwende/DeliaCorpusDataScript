@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 3</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-002.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;3&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-004.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image3.jpg" />
+
+<div class="m"><span class="bd">Predestinazione</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Nel suo amore, Dio ci ha </span><span class="bdit">predestinati</span><span class="it"> ad essere suoi figli adottivi attraverso Gesù Cristo</span><span class="it"> </span>(Efesini 1, 5).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Cos'è la predestinazione?</span></div>
+<div class="m">La predestinazione è legata all’elezione. Mentre l’elezione riguarda più il passato, ciò che è accaduto, ciò che già sappiamo (siamo gli eletti di Dio), la predestinazione riguarda il futuro, ciò che Dio ha ordinato per le nostre vite.</div>
+<div class="m">La parola tradotta "predestinare" nella Parola di Dio deriva dalla parola greca "<span class="it">proorizo</span>", che significa "<span class="it">determinare in anticipo</span>", "<span class="it">ordinare</span>", "<span class="it">decidere in anticipo</span>". Come l’elezione, la predestinazione non è facile da comprendere. Predestinare significa fissare in anticipo il proprio destino. Noi, gli eletti di Dio, siamo predestinati a diventare figli di Dio.</div>
+<div class="m">La predestinazione sottolinea che Dio ci ha scelto per qualcosa. Dio ha un piano per la vita di ciascuno dei suoi figli. Ha pianificato tutto in anticipo. Non devo preoccuparmi Dio ha il controllo del mio futuro. E i suoi piani per la mia vita sono ottimi. Molto meglio di quanto possa immaginare.</div>
+<div class="m">Perdere il piano di Dio per la mia vita non significa che Dio mi abbandonerà o che perderò la salvezza, ma potrei perdere le grandi benedizioni di Dio.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Azioni per rendere la predestinazione una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera</span>: Prima di pregare, scrivi su un pezzo di carta tutto ciò che vorresti fare, a breve e lungo termine. Metti tutto nelle mani di Dio. Chiedigli di mostrarti se i tuoi piani sono anche i SUOI piani.</div>
+<div class="m"><span class="it">- Lettura della Bibbia:</span><span class="it"> </span>Leggi il Salmo 139. Cosa ti insegna questo Salmo sulla relazione di Dio con te e sui Suoi piani futuri per te?</div>
+<div class="m"><span class="it">- riflessione personale</span>: Esamina il tuo cuore. Tutta la tua felicità dipende dal successo dei tuoi piani? Ricorda che Dio potrebbe avere un altro piano per la tua vita. Confidi in Dio per il tuo futuro? Le preoccupazioni ti tengono sveglio la notte e non puoi lavorare durante il giorno? Sarai pronto ad abbandonare uno dei tuoi piani se Dio ti mostra un'altra strada?</div>
+<div class="m"><span class="it">-verso gli altri</span>: Se non sei sicuro di quale sia la volontà di Dio per te, chiedi consiglio a un fratello o una sorella in Cristo. Inoltre, cerca aiuto per coloro che devono prendere decisioni importanti sul loro futuro.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

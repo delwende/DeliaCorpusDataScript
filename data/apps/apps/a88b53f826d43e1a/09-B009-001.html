@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000B63">
+<title>113 Fantamcaali kali ti 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.77, end: 12.22 },
+    { label: "1b", start: 12.47, end: 16.61 },
+    { label: "1c", start: 16.86, end: 21.61 },
+    { label: "1d", start: 21.86, end: 29.15 },
+    { label: "1e", start: 29.4, end: 38.32 },
+    { label: "1f", start: 38.57, end: 43.72 },
+    { label: "1g", start: 43.97, end: 46.68 },
+    { label: "1h", start: 46.93, end: 54.13 },
+    { label: "1i", start: 54.38, end: 56.76 },
+    { label: "1j", start: 57.01, end: 66.62 },
+    { label: "1k", start: 66.87, end: 75.62 },
+    { label: "1l", start: 75.87, end: 82.62 },
+    { label: "1m", start: 82.87, end: 86.88 },
+    { label: "1n", start: 87.13, end: 93.62 },
+    { label: "1o", start: 93.87, end: 103.15 },
+    { label: "1p", start: 103.4, end: 112.29 },
+    { label: "1q", start: 112.54, end: 118.33 },
+    { label: "1r", start: 118.58, end: 123.4 },
+    { label: "1s", start: 123.65, end: 128.2 },
+    { label: "1t", start: 128.45, end: 136.56 },
+    { label: "1u", start: 136.81, end: 145.54 },
+    { label: "1v", start: 145.79, end: 151.16 },
+    { label: "1w", start: 151.41, end: 160.14 },
+    { label: "1x", start: 160.39, end: 167.5 },
+    { label: "1y", start: 167.75, end: 171.61 },
+    { label: "1z", start: 171.86, end: 179.47 },
+    { label: "1aa", start: 179.72, end: 188.57 },
+    { label: "1ab", start: 188.82, end: 192.82 },
+    { label: "1ac", start: 193.07, end: 199.78 },
+    { label: "1ad", start: 200.03, end: 203.65 },
+    { label: "1ae", start: 203.9, end: 212.85 },
+    { label: "1af", start: 213.1, end: 220.5 },
+    { label: "1ag", start: 220.75, end: 225.19 },
+    { label: "1ah", start: 225.44, end: 234.08 },
+    { label: "1ai", start: 234.33, end: 244.62 },
+    { label: "1aj", start: 244.87, end: 253.18 },
+    { label: "1ak", start: 253.43, end: 260.32 },
+    { label: "1al", start: 260.57, end: 269.87 },
+    { label: "1am", start: 270.12, end: 277.27 },
+    { label: "1an", start: 277.52, end: 281.77 },
+    { label: "1ao", start: 282.02, end: 285.66 },
+    { label: "1ap", start: 285.91, end: 294.9 },
+    { label: "1aq", start: 295.15, end: 302.58 },
+    { label: "1ar", start: 302.83, end: 306.84 },
+    { label: "1as", start: 307.09, end: 315.36 },
+    { label: "1at", start: 315.61, end: 324.31 },
+    { label: "1au", start: 324.56, end: 328.83 },
+    { label: "1av", start: 329.08, end: 334.2 },
+    { label: "1aw", start: 334.45, end: 342.48 },
+    { label: "1ax", start: 342.73, end: 350.11 },
+    { label: "1ay", start: 350.36, end: 354.23 },
+    { label: "1az", start: 354.48, end: 358.18 },
+    { label: "1ba", start: 358.43, end: 363.03 },
+    { label: "1bb", start: 363.28, end: 369.82 },
+    { label: "1bc", start: 370.07, end: 378.22 },
+    { label: "1bd", start: 378.47, end: 384.75 },
+    { label: "1be", start: 385, end: 390.27 },
+    { label: "1bf", start: 390.52, end: 395.16 },
+    { label: "1bg", start: 395.41, end: 405.41 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 3.77;
+var stopTime  = 405.41;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "09-B009-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='08-B008-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;113 Fantamcaali kali ti&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B009-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">113 Fantamcaali kali ti kuriluangu</span><span class="bd"> cua</span>.</div></div>
+<div class="m"><div id="T1b" class="txs">Pour puiser dans le puits du feu ; il te faut une puisette en fer.</div></div>
+<div class="m"><div id="T1c" class="txs">Emploi : A un ennemi qui te veut du mal, tu pourras dire ce proverbe.</div></div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Fantamcaali kali ti kuriluangu</span><span class="bd"> cua</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">114 A yaa yedi : Mi fantama sia ni a sugidi a fantana</span>.</div></div>
+<div class="m"><div id="T1f" class="txs">Si tu dis : le feu m'a brûlé, tu te moques des pierres du foyer.</div></div>
+<div class="m"><div id="T1g" class="txs">Sens : Il y a toujours plus malheureux que soi.</div></div>
+<div class="m"><div id="T1h" class="txs">Emploi : Se dit à quelqu'un qui a quelque chose et qui se plaint encore, parce qu'il trouve que ce n'est pas suffisant.</div> <div id="T1i" class="txs">Celui qui n'a rien que va-t-il dire&nbsp;?</div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">A yaa yedi : Mi fantama sia ni a sugidi a fantana</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">115 Fawaama yaa tie penmangu o tafagu baa guli </span><span class="bd">i</span><span class="bd"> tiidi</span>.</div></div>
+<div class="m"><div id="T1l" class="txs">Si le fait de souffler sur le rasoir le fait couper, le vent fait tomber les arbres.</div></div>
+<div class="m"><div id="T1m" class="txs">Sens et emploi : Si tu connais quelque chose, un autre connait mieux que toi.</div> <div id="T1n" class="txs">A celui qui prétend tout connaitre, un autre mieux informé, peut lui dire ce proverbe.</div></div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">Fawaama yaa tie penmangu o tafagu baa guli </span><span class="bd">i</span><span class="bd"> tiidi</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">116 Yen jiini fawaama yibali kan l</span><span class="bd">e</span><span class="bd">bidi </span><span class="bd">la </span><span class="bd">wulugu</span>.</div></div>
+<div class="m"><div id="T1q" class="txs">Dieu envoie la fraîcheur, l'ennemi ne la changera pas en chaleur.</div></div>
+<div class="m"><div id="T1r" class="txs">Sens : si quelqu'un a ce qui est bien, son ennemi ne pourra rien contre lui.</div></div>
+<div class="m"><div id="T1s" class="txs">Celui qui a eu quelque chose de bien, pourra dire ce proverbe.</div></div>
+<div class="m"><div id="T1t" class="txs"><span class="bd">Yen jiini fawaama yibali kan l</span><span class="bd">e</span><span class="bd">bidi </span><span class="bd">la </span><span class="bd">wulugu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">117 I ñiani n kaa ye nain i guda mo fidi li kain</span>.</div></div>
+<div class="m"><div id="T1v" class="txs">Là où ne sont pas les porcs-épics les hérissons font le malin.</div></div>
+<div class="m"><div id="T1w" class="txs"><span class="bd">I ñiani n kaa ye nain i guda mo fidi li kain</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">118 Gua nan nua o f</span><span class="bd">u</span><span class="bd">n</span><span class="bd">di</span><span class="bd">ma pa</span>.</div></div>
+<div class="m"><div id="T1y" class="txs">Celui qui fait semblant de dormir est dur à réveiller.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="bd">Gua nan nua o f</span><span class="bd">u</span><span class="bd">n</span><span class="bd">di</span><span class="bd">ma pa</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aa" class="txs"><span class="bd">119 Foliga yaa juani o bani ki naŋanma pieni</span>.</div></div>
+<div class="m"><div id="T1ab" class="txs">Même si le peul est aveugle il sait que le lait est blanc.</div></div>
+<div class="m"><div id="T1ac" class="txs">Sens : De quelque façon qu'un enfant soit orgueilleux, il sait que son père et sa mère sont plus grands que lui.</div></div>
+<div class="m"><div id="T1ad" class="txs">Emploi : se dit à un enfant qui désobéit à ses parents.</div></div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">Foliga yaa juani o bani ki naŋanma pieni</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">120 Foljuamo ne Utienu n kpaa o po</span>.</div></div>
+<div class="m"><div id="T1ag" class="txs">Les zébus du peul aveugle, Dieu les garde à sa place.</div></div>
+<div class="m"><div id="T1ah" class="txs">Sens et emploi : Si quelqu'un a un seul enfant et que la maladie tombe sur le village et épargne cet enfant, les gens pourront dire ce proverbe.</div></div>
+<div class="m"><div id="T1ai" class="txs"><span class="bd">Foljuamo ne Utienu n kpaa o po</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">121 Pedi li foagi kan goa fuali po se a yaa pedi ki li koabi</span>.</div></div>
+<div class="m"><div id="T1ak" class="txs">Couper ce qui est long ne fait pas retourner en brousse, sauf si tu as coupé ce qui est court.</div></div>
+<div class="m"><div id="T1al" class="txs"><span class="bd">Pedi li foagi kan goa fuali po se a yaa pedi ki li koabi</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1am" class="txs"><span class="bd">122 Bi fuli bi tugidi kan sa moamoani</span>.</div></div>
+<div class="m"><div id="T1an" class="txs">Ils trainent leur ventre à terre et ne disent pas la vérité.</div></div>
+<div class="m"><div id="T1ao" class="txs">Sens : Même quand on souffre on ne dit pas toujours ce qu'on a.</div></div>
+<div class="m"><div id="T1ap" class="txs"><span class="bd">Bi fuli bi tugidi kan sa moamoani</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aq" class="txs"><span class="bd">123 Yua jagini o luomo kan fuli o tana tii po</span>.</div></div>
+<div class="m"><div id="T1ar" class="txs">Celui qui est grimpé sur l'éléphant ne traîne pas ses pieds à terre.</div></div>
+<div class="m"><div id="T1as" class="txs"><span class="bd">Yua jagini o luomo kan fuli o tana tii po</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1at" class="txs"><span class="bd">124 A yaa fundi yua gua nua o fundima pa</span>.</div></div>
+<div class="m"><div id="T1au" class="txs">Si tu réveilles celui qui fait semblant de dormir, c'est dur de le réveiller.</div></div>
+<div class="m"><div id="T1av" class="txs">Sens : Se dit à quelqu'un à qui tu demandes de faire quelque chose qu'il ne veut pas.</div></div>
+<div class="m"><div id="T1aw" class="txs"><span class="bd">A yaa fundi yua gua nua o fundima pa</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ax" class="txs"><span class="bd">125 Gaa waamu cie an dua koma.</span></div></div>
+<div class="m"><div id="T1ay" class="txs">Prends un peu vaut mieux que de se coucher avec la faim.</div></div>
+<div class="m"><div id="T1az" class="txs">Sens : Donner peu vaut mieux que de ne rien donner.</div></div>
+<div class="m"><div id="T1ba" class="txs">Emploi : Celui qui aura reçu un peu pourra dire ce proverbe.</div></div>
+<div class="m"><div id="T1bb" class="txs"><span class="bd">Gaa waamu cie an dua koma</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bc" class="txs"><span class="bd">126 Taamo kan gaadi len o biaga</span>.</div></div>
+<div class="m"><div id="T1bd" class="txs">Le cheval ne deviendra pas fou avec le mors, (parce qu'il va lui abimer la bouche).</div></div>
+<div class="m"><div id="T1be" class="txs">Sens : L'enfant ne se disputera pas avec son père, parce qu'il sera puni.</div></div>
+<div class="m"><div id="T1bf" class="txs">Emploi : Le père dira ce proverbe à son enfant qui veut l'embêter.</div></div>
+<div class="m"><div id="T1bg" class="txs"><span class="bd">Taamo kan gaadi len o biaga</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/09 prov bonny vol1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>8) TRANSPORTS PUBLICS 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.11 },
+    { label: "1b", start: 2.36, end: 6.63 },
+    { label: "1c", start: 6.88, end: 9.31 },
+    { label: "1d", start: 9.56, end: 13.93 },
+    { label: "1e", start: 14.18, end: 17.31 },
+    { label: "1f", start: 17.56, end: 18.31 },
+    { label: "1g", start: 18.56, end: 22.09 },
+    { label: "1h", start: 22.34, end: 25.29 },
+    { label: "1i", start: 25.54, end: 26.45 },
+    { label: "1j", start: 26.7, end: 29.55 },
+    { label: "1k", start: 29.8, end: 34.81 },
+    { label: "1l", start: 35.06, end: 37.45 },
+    { label: "1m", start: 37.7, end: 39.53 },
+    { label: "1n", start: 39.78, end: 41.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 41.39;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "16-B032-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='15-B008-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='15-B008-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;8) TRANSPORTS PUBLICS&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='17-B009-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='17-B009-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B032-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">8) TRANSPORTS PUBLICS</span></div></div>
+<div class="m"><div id="T1b" class="txs">Chaque ville a un système légèrement différent pour les bus et les trains.</div> <div id="T1c" class="txs">Ils partent généralement à l'heure.</div> <div id="T1d" class="txs">Les retards sont généralement signalés à partir de trois minutes.</div> <div id="T1e" class="txs">Les horaires sont affichés aux arrêts.</div> <div id="T1f" class="txs">Les billets de train,</div> <div id="T1g" class="txs">de bus ou de tram s'achètent souvent à un distributeur automatique,</div> <div id="T1h" class="txs">parfois aussi à un guichet ou par internet.</div> <div id="T1i" class="txs">Parfois,</div> <div id="T1j" class="txs">il faut faire tamponner les billets avant le voyage.</div> <div id="T1k" class="txs">La plupart des gens sont prêts à aider si on leur demande de l'aide dans ce contexte.</div> <div id="T1l" class="txs">Les billets ne sont pas toujours contrôlés,</div> <div id="T1m" class="txs">mais si l'on est surpris sans billet,</div> <div id="T1n" class="txs">on doit payer une amende.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/08 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/08 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/08 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

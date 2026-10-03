@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 8</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-007.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;8&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-009.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image8.jpg" />
+
+<div class="m"><span class="bd">G</span><span class="bd">razia di Dio</span></div>
+<div class="m"><span class="it">In Lui abbiamo la redenzione mediante il suo sangue, il perdono dei peccati, secondo la ricchezza della sua grazia</span><span class="it"> </span>(Efesini 1, 4 a 5).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Cos'è la grazia di Dio?</span></div>
+<div class="m">Grazia significa ricevere la salvezza di Dio completamente indipendentemente da qualsiasi merito o atto da parte nostra. Dio ha fatto tutto nel nome di Gesù per noi. La salvezza è un dono, non una ricompensa. La salvezza è l'opera di Dio, un'opera compiuta; non possiamo né aggiungervi né togliere nulla. Siamo salvati per grazia (Efesini 2, 5 e versetti da 8 a 9), E viviamo e serviamo per grazia (Efesini 3, 2 e versetti da 7 a 8). La grazia di Dio non si ferma alla salvezza, ma continua ad operare nella nostra vita quotidiana. Le benedizioni di Dio nella nostra vita non sono ricompense per la nostra obbedienza, le nostre buone opere o la partecipazione attiva alla vita della chiesa. Dio ci benedice per pura grazia.</div>
+<div class="m">L'obbedienza a Dio e le buone opere hanno un posto importante nella nostra vita. MA se agisco pensando nel mio cuore solo a ciò che posso “<span class="it">vincere</span>” con Dio, sono sulla strada sbagliata. La motivazione che Dio cerca è compiacerlo.</div>
+<div class="m"><span class="bd">Azioni per rendere la grazia una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera:</span><span class="it"> </span>Fai un elenco di tutto ciò che Dio ti ha dato per pura grazia, senza che tu lo meriti. Grazie a Dio per tutto quello che c'è sulla lista. Fai un secondo elenco di tutto ciò che vorresti avere o fare. Date la lista a Dio. Digli che non meriti nessuna di queste cose, ma conti sulla sua grazia!</div>
+<div class="m"><span class="it">- Lettura della Bibbia:</span><span class="it"> </span>Leggi 1 Corinzi 15, da 8 a 10 e 2 Corinzi 12, da 8 a 10 e scopri come l'apostolo Paolo ha sperimentato la grazia di Dio nella sua vita.</div>
+<div class="m"><span class="it">- riflessione personale:</span><span class="it"> </span>Siamo influenzati dal nostro mondo, che ci dice "Ti meriti questo perché hai fatto quello", "Sei bravo perché sei qualificato"... MA Dio ci dice "Tutto quello che hai te lo ho dato. Non l'hai fatto". Non fare nulla per meritartelo. Non ti ho dato questo lavoro perché sei qualificato, ma perché ti amo." Pensa se stai davvero vivendo pienamente grazie alla grazia di Dio. Stai ubbidendo a Dio per compiacerlo o per ottenere qualcosa da lui?</div>
+<div class="m"><span class="it">- verso gli altri:</span><span class="it"> </span>Condividi questo significato della grazia di Dio con i fratelli e le sorelle che sono scoraggiati perché non hanno superato un esame o hanno perso qualcosa che desideravano.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

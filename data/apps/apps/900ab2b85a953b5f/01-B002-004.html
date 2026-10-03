@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 4</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "4a", start: 482.1, end: 483.55 },
+    { label: "4b", start: 483.8, end: 484.99 },
+    { label: "4c", start: 485.24, end: 489.43 },
+    { label: "4d", start: 489.68, end: 491.93 },
+    { label: "4e", start: 492.18, end: 493.39 },
+    { label: "4f", start: 493.64, end: 494.45 },
+    { label: "4g", start: 494.7, end: 501.07 },
+    { label: "4h", start: 501.32, end: 505.37 },
+    { label: "4i", start: 505.62, end: 507.45 },
+    { label: "4j", start: 507.7, end: 509.65 },
+    { label: "4k", start: 509.9, end: 512.95 },
+    { label: "4l", start: 513.2, end: 516.39 },
+    { label: "4m", start: 516.64, end: 520.11 },
+    { label: "4n", start: 520.36, end: 524.89 },
+    { label: "4o", start: 525.14, end: 528.49 },
+    { label: "4p", start: 528.74, end: 532.53 },
+    { label: "4q", start: 532.78, end: 535.79 },
+    { label: "4r", start: 536.04, end: 540.99 },
+    { label: "4s", start: 541.24, end: 546.29 },
+    { label: "4t", start: 546.54, end: 548.81 },
+    { label: "4u", start: 549.06, end: 554.11 },
+    { label: "4v", start: 554.36, end: 556.89 },
+    { label: "4w", start: 557.14, end: 560.09 },
+    { label: "4x", start: 560.34, end: 564.39 },
+    { label: "4y", start: 564.64, end: 568.27 },
+    { label: "4z", start: 568.52, end: 575.17 },
+    { label: "4aa", start: 575.42, end: 582.19 },
+    { label: "4ab", start: 582.44, end: 586.31 },
+    { label: "4ac", start: 586.56, end: 587.57 },
+    { label: "4ad", start: 587.82, end: 591.09 },
+    { label: "4ae", start: 591.34, end: 594.73 },
+    { label: "4af", start: 594.98, end: 597.21 },
+    { label: "4ag", start: 597.46, end: 599.39 },
+    { label: "4ah", start: 599.64, end: 601.15 },
+    { label: "4ai", start: 601.4, end: 604.39 },
+    { label: "4aj", start: 604.64, end: 610.45 },
+    { label: "4ak", start: 610.7, end: 612.01 },
+    { label: "4al", start: 612.26, end: 613.15 },
+    { label: "4am", start: 613.4, end: 619.17 },
+    { label: "4an", start: 619.42, end: 621.15 },
+    { label: "4ao", start: 621.4, end: 625.93 },
+    { label: "4ap", start: 626.18, end: 626.95 },
+    { label: "4aq", start: 627.2, end: 628.33 },
+    { label: "4ar", start: 628.58, end: 630.35 },
+    { label: "4as", start: 630.6, end: 631.83 },
+    { label: "4at", start: 632.08, end: 639.13 },
+    { label: "4au", start: 639.38, end: 646.51 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 482.1;
+var stopTime  = 646.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-003.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;4&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-005.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image4.jpg" />
+
+<div class="m"><div id="T4a" class="txs"><span class="bd">L’adoption</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T4b" class="txs"><span class="it">Dans son amour,</span></div> <div id="T4c" class="txs"><span class="it">Dieu nous a prédestinés à être </span><span class="bdit">ses enfants adoptifs</span><span class="it"> par Jésus-Christ.</span></div> <div id="T4d" class="txs">(Ephésiens 1, 5).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T4e" class="txs"><span class="bd">L’adoption,</span></div> <div id="T4f" class="txs"><span class="bd">c’est quoi&nbsp;?</span></div></div>
+<div class="m"><div id="T4g" class="txs">A l’époque de l’apôtre Paul les couples sans enfant adoptaient fréquemment un fils qui devenait leur héritier.</div> <div id="T4h" class="txs">Même si les parents biologiques du fils adoptif étaient encore en vie,</div> <div id="T4i" class="txs">ils n'avaient plus aucun droit sur lui,</div> <div id="T4j" class="txs">une fois l'adoption conclue.</div> <div id="T4k" class="txs">L’adoption plénière est un acte légal.</div> <div id="T4l" class="txs">L’enfant ne change pas simplement la famille.</div> <div id="T4m" class="txs">Il y a une rupture totale avec l’ancienne famille.</div> <div id="T4n" class="txs">L’enfant adopté change de nom et reçoit un nouvel acte de naissance.</div> <div id="T4o" class="txs">Il n’a plus droit à l’héritage de sa famille biologique,</div> <div id="T4p" class="txs">mais il est pleinement intégré dans le lignage de sa nouvelle famille.</div> <div id="T4q" class="txs">L’ancienne famille n’a plus de droit sur lui.</div> <div id="T4r" class="txs">Dans certains pays les parents biologiques n’ont même plus le droit de voir leur enfant.</div> <div id="T4s" class="txs">Paul utilise cette coutume sociale pour enseigner les vérités bibliques suivantes :</div></div>
+<div class="m"><div id="T4t" class="txs">- Nous sommes élus avant notre naissance,</div> <div id="T4u" class="txs">mais nous devenons les enfants de Dieu par adoption au moment où nous acceptons le salut de Dieu.</div></div>
+<div class="m"><div id="T4v" class="txs">- Nous sommes pleinement enfants de Dieu.</div> <div id="T4w" class="txs">La rupture avec le passé est totale.</div></div>
+<div class="m"><div id="T4x" class="txs">Notre «&nbsp;ancienne famille&nbsp;» n’a plus de pouvoir sur nous. </div></div>
+<div class="m"><div id="T4y" class="txs">- L'adoption a été possible grâce à la mort de Christ.</div> <div id="T4z" class="txs">Elle s'est opérée au moment où nous avons cru et sommes devenus membres de la famille de Dieu (Romains 8, 15),</div> <div id="T4aa" class="txs">mais elle sera pleinement réalisée lorsque nous revêtirons notre corps de résurrection (Romains 8, 23).</div></div>
+<div class="m"><div id="T4ab" class="txs"><span class="bd">Actions pour que l’adoption devienne une richesse dans ta vie</span> :</div></div>
+<div class="m"><div id="T4ac" class="txs"><span class="it">-</span><span class="it"> la prière</span> :</div> <div id="T4ad" class="txs">Remercie Dieu pour ta nouvelle famille spirituelle.</div>  <div id="T4ae" class="txs">Prononce les noms de ceux qui sont devenus des vrais pères et mères,</div> <div id="T4af" class="txs">frères et sœurs dans l’église pour toi.</div> <div id="T4ag" class="txs">Remercie Dieu pour eux.</div></div>
+<div class="m"><div id="T4ah" class="txs"><span class="it">-</span><span class="it"> la lecture biblique</span> :</div> <div id="T4ai" class="txs">Lis Ephésiens 4, 17 à 32.</div> <div id="T4aj" class="txs">Fais une première liste des comportements de l’ancienne famille qui ne sont plus permis dans la nouvelle famille,</div> <div id="T4ak" class="txs">la famille de Dieu.</div> <div id="T4al" class="txs">Après,</div> <div id="T4am" class="txs">fais une deuxième liste des comportements que tu dois apprendre en tant que fils et fille de la famille de Dieu.</div></div>
+<div class="m"><div id="T4an" class="txs"><span class="it">-</span><span class="it"> réflexion personnelle</span> :</div> <div id="T4ao" class="txs">Examine ta vie pour voir si tu as toujours des comportements de ton ancienne vie.</div> <div id="T4ap" class="txs">Si oui,</div> <div id="T4aq" class="txs">cherche à les changer,</div> <div id="T4ar" class="txs">avec l’aide du Saint-Esprit.</div></div>
+<div class="m"><div id="T4as" class="txs"><span class="it">-</span><span class="it"> envers les autres</span> :</div> <div id="T4at" class="txs">Demande à Dieu de te montrer qui dans ton église a besoin d’un père spirituel ou une mère spirituelle ou un frère ou une sœur.</div> <div id="T4au" class="txs">Approche-toi de cette personne et l’accompagne dans sa vie comme tu le ferais avec un frère ou une sœur de ta famille naturelle.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

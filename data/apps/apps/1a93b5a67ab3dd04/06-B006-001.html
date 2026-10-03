@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5E2900">
+<title>3. Une calebasse 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 193.95;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;3. Une calebasse&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">3. Une calebasse extraordinaire</span>.</div>
+<div class="m">Il y a bien longtemps, une calebasse avait poussé dans un village. Devenue grande, elle avalait tout ce qu'elle rencontrait sur son chemin. Tous avaient peur de la calebasse qui mange tout. Tous, les personnes et les animaux, avaient peur et se cachaient en entendant le bruit de la calebasse mangeuse.</div>
+<div class="m">Quant à elle, elle se promenait en chantant :«&nbsp;Tunméméré, tunméméré, sagajigi kamelma tunméméré&nbsp;».</div>
+<div class="m">Tout le monde fuyait à l'approche de la calebasse, tous se cachaient, tous avaient peur. Un jour, un petit bélier dit à sa mère : «&nbsp;Je répondrai aujourd'hui au chant de la calebasse.&nbsp;»</div>
+<div class="m">Sa mère lui dit qu'il est trop petit pour répondre et elle lui donne une grosse pierre en lui demandant de la briser. Le bélier réussit à la fendre en deux. Sa mère lui dit d'attendre une autre fois. Quelque temps après, le petit bélier renouvèle sa demande et sa mère lui donne une nouvelle pierre. Il réussit à la casser en plusieurs morceaux, mais sa mère le trouve encore faible.</div>
+<div class="m">Tous les villageois, hommes comme bêtes, restent toujours cachés, avec personne pour les protéger de la main de cette vilaine calebasse. Quelques années plus tard, le petit bélier dit encore à sa mère : «&nbsp;Maintenant que je suis fort, je vais répondre à son chant.&nbsp;» Sa mère lui donne une autre pierre plus grande que les précédentes. Le bélier, devenu grand et fort réussit à la briser en menus morceaux. Sa mère, satisfaite, lui permet de répondre au chant de la calebasse.</div>
+<div class="m">La calebasse extraordinaire continue toujours sa course en cherchant quelque chose à avaler. Le bélier est prêt. Il entend la calebasse chanter : «&nbsp;Tunméméré, tunméméré, sagajigi kamelma tuméméré.&nbsp;» La chanson finie, le bélier répond : «&nbsp;Tunméméré, tunméméré, mais sagajigi kamelma tunméméré, tunméméré&nbsp;».</div>
+<div class="m">La calebasse mangeuse, toute fâchée, se dirige en vitesse vers l'endroit d'où provient le bruit. Elle chante avec force, et le bélier fait de même. Les voilà face à face. Notre bélier recule et revient à toute vitesse en donnant un grand coup à la calebasse qui se brise comme la pierre, remettant tout ce qu'elle avait avalé. Tous ceux qui étaient cachés sortent en remerciant le petit, le grand et fort bélier.</div>
+<div class="m">Merci bélier : Nbaa, merci bélier: Nbaa&nbsp;!</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

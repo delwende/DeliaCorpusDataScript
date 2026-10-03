@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>6 Soaamb yʋ-baoore 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.29 },
+    { label: "1b", start: 2.54, end: 4.71 },
+    { label: "1c", start: 4.96, end: 6.95 },
+    { label: "1d", start: 7.2, end: 11.81 },
+    { label: "1e", start: 12.06, end: 14.19 },
+    { label: "1f", start: 14.44, end: 17.97 },
+    { label: "1g", start: 18.22, end: 20.79 },
+    { label: "1h", start: 21.04, end: 22.79 },
+    { label: "1i", start: 23.04, end: 24.71 },
+    { label: "1j", start: 24.96, end: 27.71 },
+    { label: "1k", start: 27.96, end: 29.19 },
+    { label: "1l", start: 29.44, end: 30.31 },
+    { label: "1m", start: 30.56, end: 32.55 },
+    { label: "1n", start: 32.8, end: 36.71 },
+    { label: "1o", start: 36.96, end: 38.85 },
+    { label: "1p", start: 39.1, end: 40.93 },
+    { label: "1q", start: 41.18, end: 43.27 },
+    { label: "1r", start: 43.52, end: 45.67 },
+    { label: "1s", start: 45.92, end: 53.55 },
+    { label: "1t", start: 53.8, end: 56.17 },
+    { label: "1u", start: 56.42, end: 60.51 },
+    { label: "1v", start: 60.76, end: 62.85 },
+    { label: "1w", start: 63.1, end: 64.81 },
+    { label: "1x", start: 65.06, end: 66.79 },
+    { label: "1y", start: 67.04, end: 68.97 },
+    { label: "1z", start: 69.22, end: 70.97 },
+    { label: "1aa", start: 71.22, end: 72.61 },
+    { label: "1ab", start: 72.86, end: 74.89 },
+    { label: "1ac", start: 75.14, end: 77.59 },
+    { label: "1ad", start: 77.84, end: 81.03 },
+    { label: "1ae", start: 81.28, end: 84.37 },
+    { label: "1af", start: 84.62, end: 87.13 },
+    { label: "1ag", start: 87.38, end: 89.99 },
+    { label: "1ah", start: 90.24, end: 94.65 },
+    { label: "1ai", start: 94.9, end: 96.83 },
+    { label: "1aj", start: 97.08, end: 99.53 },
+    { label: "1ak", start: 99.78, end: 102.91 },
+    { label: "1al", start: 103.16, end: 105.45 },
+    { label: "1am", start: 105.7, end: 107.41 },
+    { label: "1an", start: 107.66, end: 110.81 },
+    { label: "1ao", start: 111.06, end: 113.09 },
+    { label: "1ap", start: 113.34, end: 116.49 },
+    { label: "1aq", start: 116.74, end: 120.61 },
+    { label: "1ar", start: 120.86, end: 123.41 },
+    { label: "1as", start: 123.66, end: 124.97 },
+    { label: "1at", start: 125.22, end: 127.57 },
+    { label: "1au", start: 127.82, end: 134.19 },
+    { label: "1av", start: 134.44, end: 138.25 },
+    { label: "1aw", start: 138.5, end: 142.21 },
+    { label: "1ax", start: 142.46, end: 144.11 },
+    { label: "1ay", start: 144.36, end: 146.51 },
+    { label: "1az", start: 146.76, end: 151.23 },
+    { label: "1ba", start: 151.48, end: 154.53 },
+    { label: "1bb", start: 154.78, end: 158.19 },
+    { label: "1bc", start: 158.44, end: 160.41 },
+    { label: "1bd", start: 160.66, end: 162.93 },
+    { label: "1be", start: 163.18, end: 165.31 },
+    { label: "1bf", start: 165.56, end: 166.95 },
+    { label: "1bg", start: 167.2, end: 169.13 },
+    { label: "1bh", start: 169.38, end: 171.79 },
+    { label: "1bi", start: 172.04, end: 173.85 },
+    { label: "1bj", start: 174.1, end: 175.35 },
+    { label: "1bk", start: 175.6, end: 177.27 },
+    { label: "1bl", start: 177.52, end: 178.35 },
+    { label: "1bm", start: 178.6, end: 180.07 },
+    { label: "1bn", start: 180.32, end: 182.61 },
+    { label: "1bo", start: 182.86, end: 184.39 },
+    { label: "1bp", start: 184.64, end: 185.33 },
+    { label: "1bq", start: 185.58, end: 187.15 },
+    { label: "1br", start: 187.4, end: 188.83 },
+    { label: "1bs", start: 189.08, end: 191.05 },
+    { label: "1bt", start: 191.3, end: 193.75 },
+    { label: "1bu", start: 194, end: 195.91 },
+    { label: "1bv", start: 196.16, end: 198.59 },
+    { label: "1bw", start: 198.84, end: 199.93 },
+    { label: "1bx", start: 200.18, end: 202.79 },
+    { label: "1by", start: 203.04, end: 204.65 },
+    { label: "1bz", start: 204.9, end: 207.77 },
+    { label: "1ca", start: 208.02, end: 210.85 },
+    { label: "1cb", start: 211.1, end: 213.51 },
+    { label: "1cc", start: 213.76, end: 215.01 },
+    { label: "1cd", start: 215.26, end: 219.37 },
+    { label: "1ce", start: 219.62, end: 220.51 },
+    { label: "1cf", start: 220.76, end: 221.75 },
+    { label: "1cg", start: 222, end: 224.43 },
+    { label: "1ch", start: 224.68, end: 227.07 },
+    { label: "1ci", start: 227.32, end: 228.59 },
+    { label: "1cj", start: 228.84, end: 230.25 },
+    { label: "1ck", start: 230.5, end: 232.65 },
+    { label: "1cl", start: 232.9, end: 235.23 },
+    { label: "1cm", start: 235.48, end: 238.27 },
+    { label: "1cn", start: 238.52, end: 240.41 },
+    { label: "1co", start: 240.66, end: 242.31 },
+    { label: "1cp", start: 242.56, end: 243.79 },
+    { label: "1cq", start: 244.04, end: 244.99 },
+    { label: "1cr", start: 245.24, end: 247.55 },
+    { label: "1cs", start: 247.8, end: 250.81 },
+    { label: "1ct", start: 251.06, end: 253.63 },
+    { label: "1cu", start: 253.88, end: 256.35 },
+    { label: "1cv", start: 256.6, end: 261.99 },
+    { label: "1cw", start: 262.24, end: 265.23 },
+    { label: "1cx", start: 265.48, end: 269.47 },
+    { label: "1cy", start: 269.72, end: 271.97 },
+    { label: "1cz", start: 272.22, end: 273.83 },
+    { label: "1da", start: 274.08, end: 277.33 },
+    { label: "1db", start: 277.58, end: 279.23 },
+    { label: "1dc", start: 279.48, end: 281.33 },
+    { label: "1dd", start: 281.58, end: 283.63 },
+    { label: "1de", start: 283.88, end: 285.77 },
+    { label: "1df", start: 286.02, end: 288.15 },
+    { label: "1dg", start: 288.4, end: 293.11 },
+    { label: "1dh", start: 293.36, end: 295.67 },
+    { label: "1di", start: 295.92, end: 299.11 },
+    { label: "1dj", start: 299.36, end: 302.61 },
+    { label: "1dk", start: 302.86, end: 304.47 },
+    { label: "1dl", start: 304.72, end: 306.43 },
+    { label: "1dm", start: 306.68, end: 309.05 },
+    { label: "1dn", start: 309.3, end: 311.71 },
+    { label: "1do", start: 311.96, end: 316.11 },
+    { label: "1dp", start: 316.36, end: 318.57 },
+    { label: "1dq", start: 318.82, end: 319.99 },
+    { label: "1dr", start: 320.24, end: 321.63 },
+    { label: "1ds", start: 321.88, end: 324.05 },
+    { label: "1dt", start: 324.3, end: 326.21 },
+    { label: "1du", start: 326.46, end: 327.93 },
+    { label: "1dv", start: 328.18, end: 331.69 },
+    { label: "1dw", start: 331.94, end: 334.87 },
+    { label: "1dx", start: 335.12, end: 336.43 },
+    { label: "1dy", start: 336.68, end: 339.19 },
+    { label: "1dz", start: 339.44, end: 341.79 },
+    { label: "1ea", start: 342.04, end: 344.03 },
+    { label: "1eb", start: 344.28, end: 346.05 },
+    { label: "1ec", start: 346.3, end: 347.89 },
+    { label: "1ed", start: 348.14, end: 350.21 },
+    { label: "1ee", start: 350.46, end: 352.51 },
+    { label: "1ef", start: 352.76, end: 354.49 },
+    { label: "1eg", start: 354.74, end: 357.97 },
+    { label: "1eh", start: 358.22, end: 362.21 },
+    { label: "1ei", start: 362.46, end: 363.63 },
+    { label: "1ej", start: 363.88, end: 364.83 },
+    { label: "1ek", start: 365.08, end: 366.69 },
+    { label: "1el", start: 366.94, end: 367.83 },
+    { label: "1em", start: 368.08, end: 369.43 },
+    { label: "1en", start: 369.68, end: 371.37 },
+    { label: "1eo", start: 371.62, end: 372.95 },
+    { label: "1ep", start: 373.2, end: 375.75 },
+    { label: "1eq", start: 376, end: 378.11 },
+    { label: "1er", start: 378.36, end: 381.09 },
+    { label: "1es", start: 381.34, end: 384.79 },
+    { label: "1et", start: 385.04, end: 387.73 },
+    { label: "1eu", start: 387.98, end: 391.73 },
+    { label: "1ev", start: 391.98, end: 396.41 },
+    { label: "1ew", start: 396.66, end: 398.53 },
+    { label: "1ex", start: 398.78, end: 399.91 },
+    { label: "1ey", start: 400.16, end: 401.65 },
+    { label: "1ez", start: 401.9, end: 403.75 },
+    { label: "1fa", start: 404, end: 405.63 },
+    { label: "1fb", start: 405.88, end: 407.61 },
+    { label: "1fc", start: 407.86, end: 409.69 },
+    { label: "1fd", start: 409.94, end: 411.35 },
+    { label: "1fe", start: 411.6, end: 413.09 },
+    { label: "1ff", start: 413.34, end: 414.91 },
+    { label: "1fg", start: 415.16, end: 418.65 },
+    { label: "1fh", start: 418.9, end: 420.63 },
+    { label: "1fi", start: 420.88, end: 422.27 },
+    { label: "1fj", start: 422.52, end: 425.77 },
+    { label: "1fk", start: 426.02, end: 428.07 },
+    { label: "1fl", start: 428.32, end: 430.87 },
+    { label: "1fm", start: 431.12, end: 432.65 },
+    { label: "1fn", start: 432.9, end: 435.91 },
+    { label: "1fo", start: 436.16, end: 438.49 },
+    { label: "1fp", start: 438.74, end: 440.59 },
+    { label: "1fq", start: 440.84, end: 445.51 },
+    { label: "1fr", start: 445.76, end: 451.01 },
+    { label: "1fs", start: 451.26, end: 453.79 },
+    { label: "1ft", start: 454.04, end: 455.57 },
+    { label: "1fu", start: 455.82, end: 459.03 },
+    { label: "1fv", start: 459.28, end: 462.67 },
+    { label: "1fw", start: 462.92, end: 470.05 },
+    { label: "1fx", start: 470.3, end: 473.77 },
+    { label: "1fy", start: 474.02, end: 476.67 },
+    { label: "1fz", start: 476.92, end: 479.71 },
+    { label: "1ga", start: 479.96, end: 481.43 },
+    { label: "1gb", start: 481.68, end: 483.83 },
+    { label: "1gc", start: 484.08, end: 485.57 },
+    { label: "1gd", start: 485.82, end: 488.09 },
+    { label: "1ge", start: 488.34, end: 489.51 },
+    { label: "1gf", start: 489.76, end: 492.79 },
+    { label: "1gg", start: 493.04, end: 494.99 },
+    { label: "1gh", start: 495.24, end: 497.73 },
+    { label: "1gi", start: 497.98, end: 500.17 },
+    { label: "1gj", start: 500.42, end: 502.21 },
+    { label: "1gk", start: 502.46, end: 505.93 },
+    { label: "1gl", start: 506.18, end: 508.63 },
+    { label: "1gm", start: 508.88, end: 511.13 },
+    { label: "1gn", start: 511.38, end: 515.43 },
+    { label: "1go", start: 515.68, end: 516.79 },
+    { label: "1gp", start: 517.04, end: 519.35 },
+    { label: "1gq", start: 519.6, end: 523.35 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 523.35;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;6 Soaamb yʋ-baoore&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">6 </span><span class="bd">Soaamb yʋ-baoore</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Soaamb dɛɛmb n wa n ki,</div> <div id="T1c" class="txs">tɩ b rat n maan a kʋʋre.</div> <div id="T1d" class="txs">Soaamb kẽngame n tɩ yeel a reem-dãmbã tɩ kʋʋrã daare,</div> <div id="T1e" class="txs">yẽ na n zomba katr n wa.</div> <div id="T1f" class="txs">T’a reem-dãmbã yeel-a t’a boog a yʋ-baoorã.</div> <div id="T1g" class="txs">T’a yet tɩ b bas tɩ b na yã.</div> <div id="T1h" class="txs">A sẽn yik be,</div> <div id="T1i" class="txs">a pa kul ye.</div> <div id="T1j" class="txs">A yaka a katr yirã n yeel-a:</div></div>
+<div class="m"><div id="T1k" class="txs">- M ba Katre,</div> <div id="T1l" class="txs">yãmb miime,</div> <div id="T1m" class="txs">mam dɛɛmb kʋʋr la a yopoe.</div> <div id="T1n" class="txs">M na n bõsame tɩ y wa yãag-ma.</div> <div id="T1o" class="txs">Rɩɩb na zĩndi,</div> <div id="T1p" class="txs">rãam na gãande.</div> <div id="T1q" class="txs">Sãmbg kae ye.</div> <div id="T1r" class="txs">Katr sẽn wʋm dẽ wã,</div> <div id="T1s" class="txs">a yã-raoogã sẽn ya wala kurg naoorã tol n kelmame t’a yet tɩ Wẽnd na kõ-d kʋʋrã raar ne laafɩ.</div></div>
+<div class="m"><div id="T1t" class="txs">Kʋʋrã daar yibeoog pĩnda,</div> <div id="T1u" class="txs">Soaamb yikame n bao tãnd n pãb n wʋlg n be a rũmdi,</div> <div id="T1v" class="txs">n zĩ a roog noore.</div> <div id="T1w" class="txs">Pa kaoose,</div> <div id="T1x" class="txs">la a katr sẽn be waoongẽ,</div> <div id="T1y" class="txs">n yet t’a yik tɩ b kẽnge.</div> <div id="T1z" class="txs">Tɩ soaamb yeel-a:</div></div>
+<div class="m"><div id="T1aa" class="txs">- M ba Katre,</div> <div id="T1ab" class="txs">yellã pa zems ye.</div> <div id="T1ac" class="txs">Mam paama sãmpogre.</div> <div id="T1ad" class="txs">Mam pa tõe n kẽn ye.</div> <div id="T1ae" class="txs">Yãmb pa ne mam dũmdã sẽn mod n zãensã sɩda?</div></div>
+<div class="m"><div id="T1af" class="txs">Katr sẽn wʋm dɩɩbã kibarã,</div> <div id="T1ag" class="txs">kʋʋrã kẽnd lebga tɩlae ne-a.</div> <div id="T1ah" class="txs">A yeelame tɩ rẽnda b modg n kẽng bala.</div> <div id="T1ai" class="txs">La sẽn ya woto wã,</div> <div id="T1aj" class="txs">bɩ soaamb zomb yẽ tɩ b kẽnge.</div></div>
+<div class="m"><div id="T1ak" class="txs">Mik soaamb ra sɩd segla a menga.</div> <div id="T1al" class="txs">A yik n dɩka gaare,</div> <div id="T1am" class="txs">n na n ning katre.</div> <div id="T1an" class="txs">Tɩ katr sok tɩ yaa bõe la rẽ?</div></div>
+<div class="m"><div id="T1ao" class="txs">Tɩ soaamb yeele:</div></div>
+<div class="m"><div id="T1ap" class="txs">- Yaa sẽn na yɩl tɩ bʋkd yãmb poorã wɛ.</div></div>
+<div class="m"><div id="T1aq" class="txs">Tɩ katr yet tɩ sã n ya boto bɩ a ningi.</div></div>
+<div class="m"><div id="T1ar" class="txs">Tɩ soaamb le rɩk salbre,</div> <div id="T1as" class="txs">n na n ning katre,</div> <div id="T1at" class="txs">t’a le sok tɩ rẽ me yaa bõe?</div> <div id="T1au" class="txs">Tɩ soaamb yeel-a tɩ bi-kãseng wala katr kõn kẽnd t'a pa wagend kõbr ye.</div> <div id="T1av" class="txs">La katr sakame t’a ning salbrã.</div></div>
+<div class="m"><div id="T1aw" class="txs">Katr wa n nee soaamb sẽn sẽbd a naoã sẽba.</div> <div id="T1ax" class="txs">T’a le soke:</div></div>
+<div class="m"><div id="T1ay" class="txs">- Wã me le yaa bõe yɛsa?</div></div>
+<div class="m"><div id="T1az" class="txs">Tɩ soaamb yeel-a tɩ yaa sẽn na n lɩgemd yẽ lʋgã.</div></div>
+<div class="m"><div id="T1ba" class="txs">Rɩɩbã tẽeb sẽn be yalem-daoogã zugẽ wã,</div> <div id="T1bb" class="txs">a pa ne tɩ soaamb mams-a-la ne wed-moaag ye.</div></div>
+<div class="m"><div id="T1bc" class="txs">Rẽ zuge masã,</div> <div id="T1bd" class="txs">a kẽeme n maneg n ning fu-paala,</div><div id="T1be" class="txs">A n wa yi n yɩk n zomb katre,</div> <div id="T1bf" class="txs">n yet tɩ b loog masã,</div> <div id="T1bg" class="txs">tɩ katr sɩd dɩk sore.</div></div>
+<div class="m"><div id="T1bh" class="txs">B sẽn wa n poog tengã,</div> <div id="T1bi" class="txs">soaamb ninga katr sẽba,</div> <div id="T1bj" class="txs">t’a kʋɩ tĩiga,</div> <div id="T1bk" class="txs">n ya burga-burga-burga,</div> <div id="T1bl" class="txs">n pasgd tẽngã,</div> <div id="T1bm" class="txs">n dabd kʋ-yirã.</div> <div id="T1bn" class="txs">Nebã sẽn yã woto wã,</div> <div id="T1bo" class="txs">b fãa tʋka bʋʋre,</div> <div id="T1bp" class="txs">n yete:</div></div>
+<div class="m"><div id="T1bq" class="txs">- M ba Soaamb wa yã,</div> <div id="T1br" class="txs">a zomba katre,</div> <div id="T1bs" class="txs">ad a sɩd yaa raoa!</div></div>
+<div class="m"><div id="T1bt" class="txs">Yaa rao tɛke!</div></div>
+<div class="m"><div id="T1bu" class="txs">A sẽn ta wã,</div> <div id="T1bv" class="txs">b reega katr n loe ne zãn-daoogo,</div> <div id="T1bw" class="txs">sɩmande wã,</div> <div id="T1bx" class="txs">n yaool n tall soaamb n kẽes zakẽ,</div> <div id="T1by" class="txs">n bao rɩɩb n kõ yẽ.</div></div>
+<div class="m"><div id="T1bz" class="txs">Soaamb wa n tẽega katr yelle,</div> <div id="T1ca" class="txs">n kɩt tɩ b wʋk kõabã n yi n zam-a.</div> <div id="T1cb" class="txs">Kell n yɩɩ woto tɩ,</div> <div id="T1cc" class="txs">zaabr ta.</div> <div id="T1cd" class="txs">La soaamb mii vẽeneg tɩ katr sẽn n pa paam n dɩ n tɩgã,</div> <div id="T1ce" class="txs">kulbã pa na n yɩ,</div> <div id="T1cf" class="txs">nana ye.</div> <div id="T1cg" class="txs">T’a na n maan dabaare.</div> <div id="T1ch" class="txs">A yikame n pãensdi n yita,</div> <div id="T1ci" class="txs">la a gomd a yembre:</div></div>
+<div class="m"><div id="T1cj" class="txs">- Ɩye&nbsp;!</div> <div id="T1ck" class="txs">Tɩ m yaa rɛɛm yĩnga,</div> <div id="T1cl" class="txs">mam wed-moaag la kʋʋda?</div></div>
+<div class="m"><div id="T1cm" class="txs">Yell a woto sakd sɩda?</div> <div id="T1cn" class="txs">Pa saagd ye.</div> <div id="T1co" class="txs">Ayo.</div> <div id="T1cp" class="txs">Sẽn na n yɩ,</div> <div id="T1cq" class="txs">n na n yɩ.</div> <div id="T1cr" class="txs">Mam pa sak ye.</div></div>
+<div class="m"><div id="T1cs" class="txs">Katr wʋma soaamb goamã fɩlʋ,</div> <div id="T1ct" class="txs">n bool-a n yet t’a kolg n togse.</div></div>
+<div class="m"><div id="T1cu" class="txs">- Yaa bõe n maane?</div></div>
+<div class="m"><div id="T1cv" class="txs">Tɩ soaamb togs-a tɩ b yeelame tɩ yẽ sẽn ya reem-kãsengã yĩnga,</div> <div id="T1cw" class="txs">yẽ wed-moaagã la b kʋʋd n dʋk reemã.</div> <div id="T1cx" class="txs">Tɩ katr yeel-a t’a yols wĩirã bilfu.</div> <div id="T1cy" class="txs">Tɩ soaamb sɩd yols wĩĩrã,</div> <div id="T1cz" class="txs">n lebg n kẽ.</div> <div id="T1da" class="txs">Katr wa n wʋma bʋʋr sẽn tʋkd zakẽ wã,</div> <div id="T1db" class="txs">t’a yet t’a ki ya.</div> <div id="T1dc" class="txs">A sẽn wẽ fuss,</div> <div id="T1dd" class="txs">wĩirã ﬁsgame t’a wudgi,</div> <div id="T1de" class="txs">n zoe n kẽ weoogã.</div></div>
+<div class="m"><div id="T1df" class="txs">A sẽn t’a põsẽ wã,</div> <div id="T1dg" class="txs">a tɩ bẽda soaamb sẽn na n tũ sor ning n kulã n gũud-a.</div></div>
+<div class="m"><div id="T1dh" class="txs">Zĩig sẽn wa n maag zãnga,</div> <div id="T1di" class="txs">soaamb dɩka sor n fɩɩndẽ la a kuiisẽ.</div> <div id="T1dj" class="txs">A sẽn wa n ta katr sẽn da be zĩig ningã,</div> <div id="T1dk" class="txs">katr yek-a lame,</div> <div id="T1dl" class="txs">n modg-a t’a rʋ tɩɩga,</div> <div id="T1dm" class="txs">n yeel-a t’a kao raad n wa t’a sẽ-a.</div></div>
+<div class="m"><div id="T1dn" class="txs">Sẽn maand n be bɩ&nbsp;?</div> <div id="T1do" class="txs">Tɩ soaamb sɩd dʋ n tar raadã kaoobo.</div></div>
+<div class="m"><div id="T1dp" class="txs">A wa n yaasa kuu,</div> <div id="T1dq" class="txs">n wa yeele:</div></div>
+<div class="m"><div id="T1dr" class="txs">- Ãa?</div> <div id="T1ds" class="txs">Yaa ka bɩ&nbsp;?</div></div>
+<div class="m"><div id="T1dt" class="txs">Tɩ katr yeel-a:</div></div>
+<div class="m"><div id="T1du" class="txs">- Bõn yoogã!</div> <div id="T1dv" class="txs">Kao raadã tao-tao la f sig ka ne f bʋʋrã.</div> <div id="T1dw" class="txs">F yet tɩ f tar rabaar la rũndã yẽ,</div> <div id="T1dx" class="txs">fo ki yã.</div></div>
+<div class="m"><div id="T1dy" class="txs">Soaamba le wa n tool n yeelame:</div></div>
+<div class="m"><div id="T1dz" class="txs">M ba Katr bɩ bõe?</div> <div id="T1ea" class="txs">A bee ka.</div></div>
+<div class="m"><div id="T1eb" class="txs">La sasa-kãngã,</div> <div id="T1ec" class="txs">rabeem yõka katre,</div> <div id="T1ed" class="txs">t’a sok tɩ yaa bõe.</div> <div id="T1ee" class="txs">Tɩ soaamb yeel-a:</div></div>
+<div class="m"><div id="T1ef" class="txs">- Yaa yelle.</div> <div id="T1eg" class="txs">Kʋʋrã rãmb sẽn pa paam yãmb kʋ-yirã,</div> <div id="T1eh" class="txs">b yiisa kom-bi-bɩɩs tɩ b wat ka sẽnẽ.</div> <div id="T1ei" class="txs">Ade:</div> <div id="T1ej" class="txs">goabga,</div> <div id="T1ek" class="txs">yaa bug-raad rãmba,</div> <div id="T1el" class="txs">rɩʋtgo,</div> <div id="T1em" class="txs">yaa kãna.</div> <div id="T1en" class="txs">Sẽn são-são,</div> <div id="T1eo" class="txs">yaa tɩrga.</div> <div id="T1ep" class="txs">Be yaa ra-bãan rãmbã.</div> <div id="T1eq" class="txs">Yãmb sã n dat n põse,</div> <div id="T1er" class="txs">rẽnda y yi ra-bãanã rãmb nengẽ.</div></div>
+<div class="m"><div id="T1es" class="txs">Mik ra-bãanã yaa pʋ-paall sẽn nan tuki,</div> <div id="T1et" class="txs">tɩ beoosã la raadã tond yãyy.</div> <div id="T1eu" class="txs">Katr kell muma a ninã n na n kẽ-a.</div> <div id="T1ev" class="txs">A wudgdame n tɩ fão beo-kãngã n tʋk n lʋɩ kõe,</div> <div id="T1ew" class="txs">n tik n yik n yeele:</div></div>
+<div class="m"><div id="T1ex" class="txs">- F lub yã,</div> <div id="T1ey" class="txs">la f kõn dɩk ye.</div></div>
+<div class="m"><div id="T1ez" class="txs">A sã n yeel woto,</div> <div id="T1fa" class="txs">rẽ t’a le loogame.</div> <div id="T1fb" class="txs">A talla woto,</div> <div id="T1fc" class="txs">n wa kell n tɩ lʋɩ n ki,</div> <div id="T1fd" class="txs">tɩ soaamb sigi,</div> <div id="T1fe" class="txs">n bao gõos n lud-a,</div> <div id="T1ff" class="txs">la a bas n looge.</div></div>
+<div class="m"><div id="T1fg" class="txs">Soaamb yel-baoor la a yʋ-baoor n sat bɩ&nbsp;?</div></div>
+<div class="m"><div id="T1fh" class="txs">A sẽn loog be,</div> <div id="T1fi" class="txs">a tɩ moona gʋga,</div> <div id="T1fj" class="txs">la a yel nebã tɩ yẽ tara tão-tɩ-põog tɩɩm.</div> <div id="T1fk" class="txs">Gʋgã raar yibeoogo,</div> <div id="T1fl" class="txs">yẽ n lʋɩ taoor n tar faoodg-faoodg,</div> <div id="T1fm" class="txs">tɩ nebã pʋgda.</div> <div id="T1fn" class="txs">A sẽn wa n kolg katr sẽn kiẽ wa,</div> <div id="T1fo" class="txs">a kɩtame tɩ kẽer kẽng rɩʋtgo,</div> <div id="T1fp" class="txs">tɩ kẽer kẽng goabga.</div> <div id="T1fq" class="txs">A Sẽn ta Katrã la a sẽn yãag a tãpã n yi-a loro,</div> <div id="T1fr" class="txs">n bas n zõond n kelem tɩ nebã fãa zoe n wa ges tão-tɩ-põoge.</div> <div id="T1fs" class="txs">Nebã sẽn zoe n wa ta,</div> <div id="T1ft" class="txs">b sɩd.</div> <div id="T1fu" class="txs">mika zũnzũy sẽn tar yĩgbu.</div></div>
+<div class="m"><div id="T1fv" class="txs">M ba Wãmb no-tʋʋn-nedã sẽn yã rẽ wã,</div> <div id="T1fw" class="txs">tao wala m noaag n yeelã t’a tɩ yeela we-naaba tɩ soaamb tara tao-tɩ-põog tɩɩm.</div> <div id="T1fx" class="txs">Tɩ we-naab yet tɩ soaamb modg t'a paam tɩɩmã.</div></div>
+<div class="m"><div id="T1fy" class="txs">Soaamb sẽn mik tɩ yaa woto wã,</div> <div id="T1fz" class="txs">a yeela we-naab tɩ tɩɩmã sã n na n dʋge,</div> <div id="T1ga" class="txs">rʋkã yɩg yaa sʋ-beelle,</div> <div id="T1gb" class="txs">pĩig kugri,</div> <div id="T1gc" class="txs">la wãamb zugu.</div> <div id="T1gd" class="txs">Soaamb kaa sʋ-beellã,</div> <div id="T1ge" class="txs">n dɩgl kugrã,</div> <div id="T1gf" class="txs">n yaool n yeel wãamb t’a kolg ne a zugã,</div> <div id="T1gg" class="txs">t'a rogɩ rʋkã.</div> <div id="T1gh" class="txs">Soaamb sẽn widg bugmã,</div> <div id="T1gi" class="txs">wãamb zugã sɩnga wɩngre,</div> <div id="T1gj" class="txs">t’a vurg bilfu.</div> <div id="T1gk" class="txs">Tɩ soaamb yeel-a t'a bas zugã sɩɩ,</div> <div id="T1gl" class="txs">la a ra maan n wa sãam tɩɩmã ye.</div> <div id="T1gm" class="txs">La sẽn zabdã.</div> <div id="T1gn" class="txs">Wãamb wa n kong n yikame n kʋɩ tĩiga,</div> <div id="T1go" class="txs">tɩ rʋkã lʋɩ,</div> <div id="T1gp" class="txs">tɩ b rig-a tɩ ka tol n paam-a ye.</div> <div id="T1gq" class="txs">Tɩ soaamb yeel we-naab tɩ tʋʋmdã sãamame.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/mos/audio/06 Kinda cont vol 1.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

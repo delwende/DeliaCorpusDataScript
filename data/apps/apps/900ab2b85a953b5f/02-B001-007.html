@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 7</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "7a", start: 880, end: 881.29 },
+    { label: "7b", start: 881.54, end: 886.47 },
+    { label: "7c", start: 886.72, end: 888.41 },
+    { label: "7d", start: 888.66, end: 891.13 },
+    { label: "7e", start: 891.38, end: 892.77 },
+    { label: "7f", start: 893.02, end: 893.99 },
+    { label: "7g", start: 894.24, end: 895.59 },
+    { label: "7h", start: 895.84, end: 900.33 },
+    { label: "7i", start: 900.58, end: 904.23 },
+    { label: "7j", start: 904.48, end: 906.15 },
+    { label: "7k", start: 906.4, end: 908.75 },
+    { label: "7l", start: 909, end: 910.87 },
+    { label: "7m", start: 911.12, end: 912.73 },
+    { label: "7n", start: 912.98, end: 916.49 },
+    { label: "7o", start: 916.74, end: 920.71 },
+    { label: "7p", start: 920.96, end: 926.53 },
+    { label: "7q", start: 926.78, end: 930.27 },
+    { label: "7r", start: 930.52, end: 933.75 },
+    { label: "7s", start: 934, end: 936.25 },
+    { label: "7t", start: 936.5, end: 938.09 },
+    { label: "7u", start: 938.34, end: 939.07 },
+    { label: "7v", start: 939.32, end: 941.57 },
+    { label: "7w", start: 941.82, end: 945.29 },
+    { label: "7x", start: 945.54, end: 947.05 },
+    { label: "7y", start: 947.3, end: 950.93 },
+    { label: "7z", start: 951.18, end: 953.27 },
+    { label: "7aa", start: 953.52, end: 954.67 },
+    { label: "7ab", start: 954.92, end: 959.25 },
+    { label: "7ac", start: 959.5, end: 962.75 },
+    { label: "7ad", start: 963, end: 963.85 },
+    { label: "7ae", start: 964.1, end: 967.93 },
+    { label: "7af", start: 968.18, end: 969.59 },
+    { label: "7ag", start: 969.84, end: 972.17 },
+    { label: "7ah", start: 972.42, end: 974.61 },
+    { label: "7ai", start: 974.86, end: 979.21 },
+    { label: "7aj", start: 979.46, end: 981.75 },
+    { label: "7ak", start: 982, end: 983.21 },
+    { label: "7al", start: 983.46, end: 986.99 },
+    { label: "7am", start: 987.24, end: 992.77 },
+    { label: "7an", start: 993.02, end: 994.57 },
+    { label: "7ao", start: 994.82, end: 997.61 },
+    { label: "7ap", start: 997.86, end: 999.43 },
+    { label: "7aq", start: 999.68, end: 1001.13 },
+    { label: "7ar", start: 1001.38, end: 1004.05 },
+    { label: "7as", start: 1004.3, end: 1005.75 },
+    { label: "7at", start: 1006, end: 1007.21 },
+    { label: "7au", start: 1007.46, end: 1011.63 },
+    { label: "7av", start: 1011.88, end: 1014.21 },
+    { label: "7aw", start: 1014.46, end: 1016.05 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 880;
+var stopTime  = 1016.05;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-006.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;7&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-008.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image7.jpg" />
+
+<div class="m"><div id="T7a" class="txs"><span class="bd">Forgiveness</span></div></div>
+<div class="m"><div id="T7b" class="txs"><span class="it">In Jesus we have the </span><span class="bdit">forgiveness of sins</span> (Ephesians 1, 7).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T7c" class="txs"><span class="bd">What is forgiveness?</span></div></div>
+<div class="m"><div id="T7d" class="txs">The word "forgive" means to erase everything,</div> <div id="T7e" class="txs">to wipe the slate clean,</div> <div id="T7f" class="txs">to give grace,</div> <div id="T7g" class="txs">to cancel a debt.</div> <div id="T7h" class="txs">Forgiveness is not granted because a guilty person deserves to be forgiven.</div> <div id="T7i" class="txs">Forgiveness is a decision not to hold a grudge against someone,</div> <div id="T7j" class="txs">despite what they have done.</div> <div id="T7k" class="txs">No one deserves to be forgiven.</div> <div id="T7l" class="txs">Forgiveness is an act of love,</div> <div id="T7m" class="txs">mercy and grace.</div></div>
+<div class="m"><div id="T7n" class="txs">The Bible tells us that we all need God's forgiveness.</div> <div id="T7o" class="txs">We have all committed sins (1 John 1, 8).</div> <div id="T7p" class="txs">Every sin is essentially an act of rebellion against God and ruins my relationship with him.</div> <div id="T7q" class="txs">And only his forgiveness can restore that relationship.</div> <div id="T7r" class="txs">God's forgiveness cannot be earned through good works.</div> <div id="T7s" class="txs">You can't buy God's forgiveness.</div> <div id="T7t" class="txs">You can only receive it,</div> <div id="T7u" class="txs">by faith,</div> <div id="T7v" class="txs">because of God's grace and mercy.</div> <div id="T7w" class="txs">All you have to do is ask God to forgive you through Jesus,</div> <div id="T7x" class="txs">believing that Jesus died,</div> <div id="T7y" class="txs">to offer you this forgiveness - and God will forgive you.</div> <div id="T7z" class="txs">God's forgiveness is total.</div> <div id="T7aa" class="txs">Once granted,</div> <div id="T7ab" class="txs">the sin that broke my relationship with God no longer exists before him.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T7ac" class="txs"><span class="bd">Actions to make forgiveness a richness in your life:</span></div></div>
+<div class="m"><div id="T7ad" class="txs"><span class="it">- Prayer:</span></div> <div id="T7ae" class="txs">Ask the Holy Spirit to show you if there are any sins in your life.</div> <div id="T7af" class="txs">If you find any,</div> <div id="T7ag" class="txs">ask God's forgiveness in Jesus.</div> <div id="T7ah" class="txs">Thank God for his forgiveness.</div> <div id="T7ai" class="txs">If you're still troubled by an old sin for which you've already asked forgiveness,</div> <div id="T7aj" class="txs">ask God to remove it from your mind. </div></div>
+<div class="m"><div id="T7ak" class="txs"><span class="it">-Bible reading:</span></div> <div id="T7al" class="txs">Read 1 John chapter 1, 8 to chapter 2, 2.</div> <div id="T7am" class="txs">Try to express in your own words what the apostle John is saying here about the forgiveness of our sins.</div></div>
+<div class="m"><div id="T7an" class="txs"><span class="it">- Personal reflection:</span></div> <div id="T7ao" class="txs">Be careful not to abuse God's forgiveness.</div> <div id="T7ap" class="txs">Don't say "<span class="it">It's all right,</span></div> <div id="T7aq" class="txs"><span class="it">God will forgive me</span>".</div> <div id="T7ar" class="txs">This attitude shows that you're mocking God,</div> <div id="T7as" class="txs">and God hates that.</div></div>
+<div class="m"><div id="T7at" class="txs"><span class="it">- Towards others:</span></div> <div id="T7au" class="txs">Visit those who have fallen into sin and are overwhelmed by what has happened.</div> <div id="T7av" class="txs">Encourage them with God's promises,</div> <div id="T7aw" class="txs">support them in prayer.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

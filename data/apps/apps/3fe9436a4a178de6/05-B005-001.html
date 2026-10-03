@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>05 LE PRIX DE LA 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.51 },
+    { label: "1b", start: 3.76, end: 10.75 },
+    { label: "1c", start: 11, end: 18.07 },
+    { label: "1d", start: 18.32, end: 22.95 },
+    { label: "1e", start: 23.2, end: 35.65 },
+    { label: "1f", start: 35.9, end: 40.39 },
+    { label: "1g", start: 40.64, end: 48.93 },
+    { label: "1h", start: 49.18, end: 53.19 },
+    { label: "1i", start: 53.44, end: 62.07 },
+    { label: "1j", start: 62.32, end: 80.67 },
+    { label: "1k", start: 80.92, end: 85.61 },
+    { label: "1l", start: 85.86, end: 90.63 },
+    { label: "1m", start: 90.88, end: 106.43 },
+    { label: "1n", start: 106.68, end: 119.51 },
+    { label: "1o", start: 119.76, end: 126.85 },
+    { label: "1p", start: 127.1, end: 132.25 },
+    { label: "1q", start: 132.5, end: 153.31 },
+    { label: "1r", start: 153.56, end: 159.93 },
+    { label: "1s", start: 160.18, end: 164.69 },
+    { label: "1t", start: 164.94, end: 168.43 },
+    { label: "1u", start: 168.68, end: 177.35 },
+    { label: "1v", start: 177.6, end: 187.23 },
+    { label: "1w", start: 187.48, end: 196.35 },
+    { label: "1x", start: 196.6, end: 203.87 },
+    { label: "1y", start: 204.12, end: 210.19 },
+    { label: "1z", start: 210.44, end: 222.09 },
+    { label: "1aa", start: 222.34, end: 232.29 },
+    { label: "1ab", start: 232.54, end: 237.27 },
+    { label: "1ac", start: 237.52, end: 242.71 },
+    { label: "1ad", start: 242.96, end: 257.47 },
+    { label: "1ae", start: 257.72, end: 260.43 },
+    { label: "1af", start: 260.68, end: 270.55 },
+    { label: "1ag", start: 270.8, end: 273.01 },
+    { label: "1ah", start: 273.26, end: 276.71 },
+    { label: "1ai", start: 276.96, end: 283.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 283.23;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;05 LE PRIX DE LA&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">05 LE PRIX DE LA MÉCHANCHETÉ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Deux frères orphelins vivaient ensemble en parfaite harmonie dans la cour parentale.</div> <div id="T1c" class="txs">L’aîné se maria avec une femme respectueuse, humble, sans caprices notoires.</div> <div id="T1d" class="txs">Elle était une femme bien éduquée.</div> <div id="T1e" class="txs">La vie à trois se passait normalement, car le respect, la tolérance, et la compréhension mutuelle étaient les choses les mieux partagées.</div> <div id="T1f" class="txs">Ces trois personnes s’aimaient et s’entendaient bien.</div> <div id="T1g" class="txs">Un jour, le cadet vient voir sa belle-sœur avec des gris-gris et lui dit ceci :</div> <div id="T1h" class="txs"><span class="it">«</span><span class="it"> J</span><span class="it">e sais que toi et mon frère vous vous entendez bien.</span></div> <div id="T1i" class="txs"><span class="it">Pour consolider cette entente, prends ce gris-gris et mets-le dans le plat préféré de ton mari&nbsp;»</span>.</div></div>
+<div class="m"><div id="T1j" class="txs">Deux jours après, pour tester le gris-gris, elle plongea tout le contenu de ce produit dans la sauce de son beau-frère avec une ferme conviction que la charité bien ordonnée commence par soi-même.</div> <div id="T1k" class="txs">Ce dernier dégusta son plat avec grand appétit.</div> <div id="T1l" class="txs">Aussitôt il sentit des maux de ventre terrifiants.</div> <div id="T1m" class="txs">Très vite, on l'amena chez le guérisseur et c’est sans succès que le grand frère et le guérisseur ont assisté au passage de la vie à la mort du jeune-homme.</div> <div id="T1n" class="txs">Le grand frère jusqu’à présent ignorant de ce qui s'était passé entre son petit frère et sa femme se mit en colère contre cette dernière.</div> <div id="T1o" class="txs">Il estima qu’elle était probablement la seule responsable de la mort de son seul frère.</div> <div id="T1p" class="txs">Il jura de venger son frère tout juste après l’enterrement.</div> <div id="T1q" class="txs">Dans ce village, avant d’enterrer un mort, on fait des rites interrogatoires qui consistent à ce que chacun des membres de la famille rassure la communauté qu’il n’est mêlé ni de près ni de loin à la disparition du défunt.</div></div>
+<div class="m"><div id="T1r" class="txs">Débout devant le cadavre, chacun jurait comme s’il prêtait serment.</div> <div id="T1s" class="txs">C’est ainsi que la femme fut conduite devant la dépouille.</div> <div id="T1t" class="txs">Elle leva la main et s'exprima en ces termes :</div> <div id="T1u" class="txs"><span class="it">«&nbsp;</span><span class="it">U</span><span class="it">n jour, mon beau-frère m</span><span class="it">’a remis</span><span class="it"> du gris- gris et </span><span class="it">m’a recommandé de le mélanger au repas de mon mari.</span></div> <div id="T1v" class="txs"><span class="it">Il </span><span class="it">soutenait que de</span><span class="it"> </span><span class="it">cette </span><span class="it">façon, mon mari et moi renforcerions notre amour et notre entente.</span></div> <div id="T1w" class="txs"><span class="it">Alors je me suis dit que si je m’entendais avec lui aussi</span><span class="it">,</span><span class="it"> cela ne serait pas de trop.</span></div> <div id="T1x" class="txs"><span class="it">Voilà pourquoi j’ai commencé par lui en mettant ce gris-gris dans son plat.</span></div> <div id="T1y" class="txs"><span class="it">Malheureusement, le résultat, c’est ce que vous constatez.</span></div><div id="T1z" class="txs"><span class="it">S</span><span class="it">i les faits que je viens de relater ne sont pas justes, que le fantôme de mon beau-fr</span><span class="it">è</span><span class="it">re me hante tout le reste de ma vie sur terre&nbsp;»</span>.</div> <div id="T1aa" class="txs">Son mari s’approcha timidement et lui demanda avec insistance si c’est ce qui s’est vraiment passé.</div> <div id="T1ab" class="txs">Elle répondit sans hésiter et jura de nouveau.</div> <div id="T1ac" class="txs">Son mari ordonna aux croque-morts d’attendre un instant.</div> <div id="T1ad" class="txs">Il rentra dans la case, en ressortit sans que l’assistance ne s’en aperçoive et assena le cadavre de quatre coups de gourdin avant de dire :</div> <div id="T1ae" class="txs">«&nbsp;<span class="it">Allez-y enterrer ce vautour</span>&nbsp;».</div> <div id="T1af" class="txs">Il y a donc des morts qui méritent des corrections comme si leur disparition n'était pas déjà suffisante.</div> <div id="T1ag" class="txs">La jalousie est un acte ignoble :</div> <div id="T1ah" class="txs">la mort atroce est souvent sa paie juste.</div> <div id="T1ai" class="txs">Il est donc mieux d'éviter ce vice pour mériter au moins un dernier hommage.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 05 Le prix de la mechancete.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

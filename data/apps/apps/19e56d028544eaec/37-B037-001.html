@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>2) Une bonne hygiène 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.25 },
+    { label: "1b", start: 2.5, end: 7.27 },
+    { label: "1c", start: 7.52, end: 11.23 },
+    { label: "1d", start: 11.48, end: 13.11 },
+    { label: "1e", start: 13.36, end: 15.01 },
+    { label: "1f", start: 15.26, end: 17.73 },
+    { label: "1g", start: 17.98, end: 19.07 },
+    { label: "1h", start: 19.32, end: 20.83 },
+    { label: "1i", start: 21.08, end: 23.73 },
+    { label: "1j", start: 23.98, end: 28.83 },
+    { label: "1k", start: 29.08, end: 35.81 },
+    { label: "1l", start: 36.06, end: 39.39 },
+    { label: "1m", start: 39.64, end: 41.39 },
+    { label: "1n", start: 41.64, end: 46.43 },
+    { label: "1o", start: 46.68, end: 53.65 },
+    { label: "1p", start: 53.9, end: 57.89 },
+    { label: "1q", start: 58.14, end: 60.23 },
+    { label: "1r", start: 60.48, end: 63.49 },
+    { label: "1s", start: 63.74, end: 68.05 },
+    { label: "1t", start: 68.3, end: 71.29 },
+    { label: "1u", start: 71.54, end: 73.69 },
+    { label: "1v", start: 73.94, end: 78.13 },
+    { label: "1w", start: 78.38, end: 83.97 },
+    { label: "1x", start: 84.22, end: 85.73 },
+    { label: "1y", start: 85.98, end: 89.15 },
+    { label: "1z", start: 89.4, end: 91.77 },
+    { label: "1aa", start: 92.02, end: 93.37 },
+    { label: "1ab", start: 93.62, end: 97.13 },
+    { label: "1ac", start: 97.38, end: 99.09 },
+    { label: "1ad", start: 99.34, end: 101.81 },
+    { label: "1ae", start: 102.06, end: 108.71 },
+    { label: "1af", start: 108.96, end: 113.09 },
+    { label: "1ag", start: 113.34, end: 119.17 },
+    { label: "1ah", start: 119.42, end: 125.41 },
+    { label: "1ai", start: 125.66, end: 128.95 },
+    { label: "1aj", start: 129.2, end: 132.95 },
+    { label: "1ak", start: 133.2, end: 137.27 },
+    { label: "1al", start: 137.52, end: 140.41 },
+    { label: "1am", start: 140.66, end: 143.07 },
+    { label: "1an", start: 143.32, end: 144.83 },
+    { label: "1ao", start: 145.08, end: 146.33 },
+    { label: "1ap", start: 146.58, end: 147.47 },
+    { label: "1aq", start: 147.72, end: 148.27 },
+    { label: "1ar", start: 148.52, end: 149.11 },
+    { label: "1as", start: 149.36, end: 150.21 },
+    { label: "1at", start: 150.46, end: 152.63 },
+    { label: "1au", start: 152.88, end: 154.89 },
+    { label: "1av", start: 155.14, end: 158.33 },
+    { label: "1aw", start: 158.58, end: 159.43 },
+    { label: "1ax", start: 159.68, end: 161.83 },
+    { label: "1ay", start: 162.08, end: 166.89 },
+    { label: "1az", start: 167.14, end: 168.63 },
+    { label: "1ba", start: 168.88, end: 172.85 },
+    { label: "1bb", start: 173.1, end: 177.17 },
+    { label: "1bc", start: 177.42, end: 178.31 },
+    { label: "1bd", start: 178.56, end: 179.05 },
+    { label: "1be", start: 179.3, end: 182.33 },
+    { label: "1bf", start: 182.58, end: 183.57 },
+    { label: "1bg", start: 183.82, end: 188.65 },
+    { label: "1bh", start: 188.9, end: 190.21 },
+    { label: "1bi", start: 190.46, end: 197.19 },
+    { label: "1bj", start: 197.44, end: 200.71 },
+    { label: "1bk", start: 200.96, end: 204.19 },
+    { label: "1bl", start: 204.44, end: 206.13 },
+    { label: "1bm", start: 206.38, end: 209.37 },
+    { label: "1bn", start: 209.62, end: 211.71 },
+    { label: "1bo", start: 211.96, end: 215.91 },
+    { label: "1bp", start: 216.16, end: 221.05 },
+    { label: "1bq", start: 221.3, end: 225.41 },
+    { label: "1br", start: 225.66, end: 227.49 },
+    { label: "1bs", start: 227.74, end: 230.27 },
+    { label: "1bt", start: 230.52, end: 235.15 },
+    { label: "1bu", start: 235.4, end: 237.49 },
+    { label: "1bv", start: 237.74, end: 239.93 },
+    { label: "1bw", start: 240.18, end: 244.41 },
+    { label: "1bx", start: 244.66, end: 250.09 },
+    { label: "1by", start: 250.34, end: 252.39 },
+    { label: "1bz", start: 252.64, end: 260.51 },
+    { label: "1ca", start: 260.76, end: 267.43 },
+    { label: "1cb", start: 267.68, end: 272.85 },
+    { label: "1cc", start: 273.1, end: 274.21 },
+    { label: "1cd", start: 274.46, end: 277.39 },
+    { label: "1ce", start: 277.64, end: 280.11 },
+    { label: "1cf", start: 280.36, end: 282.31 },
+    { label: "1cg", start: 282.56, end: 288.05 },
+    { label: "1ch", start: 288.3, end: 291.51 },
+    { label: "1ci", start: 291.76, end: 298.79 },
+    { label: "1cj", start: 299.04, end: 304.11 },
+    { label: "1ck", start: 304.36, end: 309.31 },
+    { label: "1cl", start: 309.56, end: 315.89 },
+    { label: "1cm", start: 316.14, end: 317.87 },
+    { label: "1cn", start: 318.12, end: 319.73 },
+    { label: "1co", start: 319.98, end: 323.81 },
+    { label: "1cp", start: 324.06, end: 325.73 },
+    { label: "1cq", start: 325.98, end: 328.25 },
+    { label: "1cr", start: 328.5, end: 331.75 },
+    { label: "1cs", start: 332, end: 333.43 },
+    { label: "1ct", start: 333.68, end: 338.81 },
+    { label: "1cu", start: 339.06, end: 343.97 },
+    { label: "1cv", start: 344.22, end: 345.83 },
+    { label: "1cw", start: 346.08, end: 351.49 },
+    { label: "1cx", start: 351.74, end: 355.51 },
+    { label: "1cy", start: 355.76, end: 356.91 },
+    { label: "1cz", start: 357.16, end: 360.83 },
+    { label: "1da", start: 361.08, end: 367.91 },
+    { label: "1db", start: 368.16, end: 371.69 },
+    { label: "1dc", start: 371.94, end: 373.77 },
+    { label: "1dd", start: 374.02, end: 376.03 },
+    { label: "1de", start: 376.28, end: 379.11 },
+    { label: "1df", start: 379.36, end: 383.69 },
+    { label: "1dg", start: 383.94, end: 387.25 },
+    { label: "1dh", start: 387.5, end: 388.53 },
+    { label: "1di", start: 388.78, end: 389.85 },
+    { label: "1dj", start: 390.1, end: 391.05 },
+    { label: "1dk", start: 391.3, end: 392.79 },
+    { label: "1dl", start: 393.04, end: 395.99 },
+    { label: "1dm", start: 396.24, end: 398.51 },
+    { label: "1dn", start: 398.76, end: 400.79 },
+    { label: "1do", start: 401.04, end: 411.79 },
+    { label: "1dp", start: 412.04, end: 415.35 },
+    { label: "1dq", start: 415.6, end: 418.07 },
+    { label: "1dr", start: 418.32, end: 420.19 },
+    { label: "1ds", start: 420.44, end: 426.15 },
+    { label: "1dt", start: 426.4, end: 427.73 },
+    { label: "1du", start: 427.98, end: 429.37 },
+    { label: "1dv", start: 429.62, end: 432.17 },
+    { label: "1dw", start: 432.42, end: 437.13 },
+    { label: "1dx", start: 437.38, end: 442.01 },
+    { label: "1dy", start: 442.26, end: 445.25 },
+    { label: "1dz", start: 445.5, end: 448.45 },
+    { label: "1ea", start: 448.7, end: 451.73 },
+    { label: "1eb", start: 451.98, end: 453.27 },
+    { label: "1ec", start: 453.52, end: 456.81 },
+    { label: "1ed", start: 457.06, end: 458.29 },
+    { label: "1ee", start: 458.54, end: 472.83 },
+    { label: "1ef", start: 473.08, end: 474.73 },
+    { label: "1eg", start: 474.98, end: 480.45 },
+    { label: "1eh", start: 480.7, end: 484.29 },
+    { label: "1ei", start: 484.54, end: 489.15 },
+    { label: "1ej", start: 489.4, end: 492.69 },
+    { label: "1ek", start: 492.94, end: 494.79 },
+    { label: "1el", start: 495.04, end: 496.85 },
+    { label: "1em", start: 497.1, end: 502.03 },
+    { label: "1en", start: 502.28, end: 507.43 },
+    { label: "1eo", start: 507.68, end: 511.87 },
+    { label: "1ep", start: 512.12, end: 513.05 },
+    { label: "1eq", start: 513.3, end: 516.85 },
+    { label: "1er", start: 517.1, end: 520.11 },
+    { label: "1es", start: 520.36, end: 526.57 },
+    { label: "1et", start: 526.82, end: 529.75 },
+    { label: "1eu", start: 530, end: 534.89 },
+    { label: "1ev", start: 535.14, end: 538.23 },
+    { label: "1ew", start: 538.48, end: 542.55 },
+    { label: "1ex", start: 542.8, end: 546.01 },
+    { label: "1ey", start: 546.26, end: 547.17 },
+    { label: "1ez", start: 547.42, end: 552.77 },
+    { label: "1fa", start: 553.02, end: 559.39 },
+    { label: "1fb", start: 559.64, end: 565.07 },
+    { label: "1fc", start: 565.32, end: 568.95 },
+    { label: "1fd", start: 569.2, end: 574.81 },
+    { label: "1fe", start: 575.06, end: 577.31 },
+    { label: "1ff", start: 577.56, end: 579.13 },
+    { label: "1fg", start: 579.38, end: 582.25 },
+    { label: "1fh", start: 582.5, end: 586.25 },
+    { label: "1fi", start: 586.5, end: 592.03 },
+    { label: "1fj", start: 592.28, end: 594.43 },
+    { label: "1fk", start: 594.68, end: 598.07 },
+    { label: "1fl", start: 598.32, end: 605.21 },
+    { label: "1fm", start: 605.46, end: 606.55 },
+    { label: "1fn", start: 606.8, end: 613.09 },
+    { label: "1fo", start: 613.34, end: 615.65 },
+    { label: "1fp", start: 615.9, end: 618.29 },
+    { label: "1fq", start: 618.54, end: 620.87 },
+    { label: "1fr", start: 621.12, end: 621.55 },
+    { label: "1fs", start: 621.8, end: 622.07 },
+    { label: "1ft", start: 622.32, end: 625.05 },
+    { label: "1fu", start: 625.3, end: 627.31 },
+    { label: "1fv", start: 627.56, end: 629.05 },
+    { label: "1fw", start: 629.3, end: 630.11 },
+    { label: "1fx", start: 630.36, end: 633.67 },
+    { label: "1fy", start: 633.92, end: 637.03 },
+    { label: "1fz", start: 637.28, end: 638.89 },
+    { label: "1ga", start: 639.14, end: 642.31 },
+    { label: "1gb", start: 642.56, end: 647.55 },
+    { label: "1gc", start: 647.8, end: 652.67 },
+    { label: "1gd", start: 652.92, end: 657.23 },
+    { label: "1ge", start: 657.48, end: 663.39 },
+    { label: "1gf", start: 663.64, end: 665.45 },
+    { label: "1gg", start: 665.7, end: 670.11 },
+    { label: "1gh", start: 670.36, end: 672.55 },
+    { label: "1gi", start: 672.8, end: 680.01 },
+    { label: "1gj", start: 680.26, end: 685.05 },
+    { label: "1gk", start: 685.3, end: 689.61 },
+    { label: "1gl", start: 689.86, end: 692.21 },
+    { label: "1gm", start: 692.46, end: 694.43 },
+    { label: "1gn", start: 694.68, end: 700.05 },
+    { label: "1go", start: 700.3, end: 702.07 },
+    { label: "1gp", start: 702.32, end: 704.41 },
+    { label: "1gq", start: 704.66, end: 711.61 },
+    { label: "1gr", start: 711.86, end: 715.07 },
+    { label: "1gs", start: 715.32, end: 717.67 },
+    { label: "1gt", start: 717.92, end: 722.97 },
+    { label: "1gu", start: 723.22, end: 724.67 },
+    { label: "1gv", start: 724.92, end: 727.19 },
+    { label: "1gw", start: 727.44, end: 731.21 },
+    { label: "1gx", start: 731.46, end: 733.77 },
+    { label: "1gy", start: 734.02, end: 738.99 },
+    { label: "1gz", start: 739.24, end: 745.39 },
+    { label: "1ha", start: 745.64, end: 747.79 },
+    { label: "1hb", start: 748.04, end: 749.33 },
+    { label: "1hc", start: 749.58, end: 754.31 },
+    { label: "1hd", start: 754.56, end: 757.65 },
+    { label: "1he", start: 757.9, end: 759.53 },
+    { label: "1hf", start: 759.78, end: 761.87 },
+    { label: "1hg", start: 762.12, end: 765.73 },
+    { label: "1hh", start: 765.98, end: 770.23 },
+    { label: "1hi", start: 770.48, end: 772.41 },
+    { label: "1hj", start: 772.66, end: 773.41 },
+    { label: "1hk", start: 773.66, end: 777.17 },
+    { label: "1hl", start: 777.42, end: 779.55 },
+    { label: "1hm", start: 779.8, end: 783.09 },
+    { label: "1hn", start: 783.34, end: 788.57 },
+    { label: "1ho", start: 788.82, end: 792.37 },
+    { label: "1hp", start: 792.62, end: 795.33 },
+    { label: "1hq", start: 795.58, end: 804.37 },
+    { label: "1hr", start: 804.62, end: 808.55 },
+    { label: "1hs", start: 808.8, end: 809.53 },
+    { label: "1ht", start: 809.78, end: 811.93 },
+    { label: "1hu", start: 812.18, end: 818.69 },
+    { label: "1hv", start: 818.94, end: 829.41 },
+    { label: "1hw", start: 829.66, end: 834.73 },
+    { label: "1hx", start: 834.98, end: 841.01 },
+    { label: "1hy", start: 841.26, end: 843.97 },
+    { label: "1hz", start: 844.22, end: 846.11 },
+    { label: "1ia", start: 846.36, end: 849.25 },
+    { label: "1ib", start: 849.5, end: 851.71 },
+    { label: "1ic", start: 851.96, end: 854.09 },
+    { label: "1id", start: 854.34, end: 859.41 },
+    { label: "1ie", start: 859.66, end: 863.01 },
+    { label: "1if", start: 863.26, end: 869.23 },
+    { label: "1ig", start: 869.48, end: 871.89 },
+    { label: "1ih", start: 872.14, end: 874.09 },
+    { label: "1ii", start: 874.34, end: 876.77 },
+    { label: "1ij", start: 877.02, end: 881.99 },
+    { label: "1ik", start: 882.24, end: 885.85 },
+    { label: "1il", start: 886.1, end: 893.69 },
+    { label: "1im", start: 893.94, end: 894.87 },
+    { label: "1in", start: 895.12, end: 898.21 },
+    { label: "1io", start: 898.46, end: 904.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 904.39;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "37-B037-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='36-B036-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='36-B036-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2) Une bonne hygiène&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='38-B038-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='38-B038-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B037-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">2)</span><span class="bd"> Une bonne hygiène</span></div></div>
+<div class="m"><div id="T1b" class="txs">Une bonne hygiène permet d’éviter les maladies et de rester en bonne santé.</div> <div id="T1c" class="txs">L’enfant a besoin d’apprendre à avoir une bonne hygiène.</div></div>
+<div class="m"><div id="T1d" class="txs">Il faut à l’enfant :</div></div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">L’hygiène corporelle :</span></div></div>
+<div class="m"><div id="T1f" class="txs">Il s’agit de la propreté du corps.</div> <div id="T1g" class="txs">Par exemple,</div> <div id="T1h" class="txs">lorsqu’on transpire,</div> <div id="T1i" class="txs">la peau évacue de la sueur par les pores.</div> <div id="T1j" class="txs">La sueur est un liquide salé qui retient la poussière et la saleté.</div> <div id="T1k" class="txs">Elle se colle à la peau et peut provoquer des maladies et favoriser la naissance de petites bêtes appelées parasites.</div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">Les poux</span> sont dans les cheveux et se nourrissent de sang.</div> <div id="T1m" class="txs">Ils démangent beaucoup l’enfant.</div> <div id="T1n" class="txs">Il faut couper les cheveux ou utiliser un produit spécial pour les éliminer.</div></div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">La teigne</span> fait tomber les cheveux par plaques et <span class="bd">la gale </span>est une maladie qui provoque des démangeaisons.</div> <div id="T1p" class="txs">Il faut utiliser des traitements spéciaux pour soigner ces maladies.</div></div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">Toutes ces maladies (les poux,</span></div> <div id="T1r" class="txs"><span class="bd">la teigne et la gale) sont contagieuses.</span></div></div>
+<div class="m"><div id="T1s" class="txs">Il y a aussi <span class="bd">la chique</span> qui peut être évitée en portant des chaussures,</div> <div id="T1t" class="txs">en se lavant les pieds et en se coupant les ongles.</div></div>
+<div class="m"><div id="T1u" class="txs"><span class="bd">Pour éviter toutes ces maladies</span>,</div> <div id="T1v" class="txs">il faut se laver chaque jour avec de l’eau propre et du savon.</div> <div id="T1w" class="txs">Il faut aussi toujours porter des habits propres et changer souvent les vêtements de corps.</div></div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">L’hygiène dentaire</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1y" class="txs">Pour éviter la carie dentaire et les maux de dent,</div> <div id="T1z" class="txs">il faut se brosser régulièrement les dents,</div> <div id="T1aa" class="txs">après chaque repas,</div> <div id="T1ab" class="txs">et éviter de manger les aliments trop chauds et trop froids. </div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">L’hygiène du sommeil</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ad" class="txs">L’enfant doit à dormir suffisamment.</div> <div id="T1ae" class="txs">L’idéal serait d’aller tôt au lit la nuit et avoir un temps de repos et de sommeil pendant le jour.</div> <div id="T1af" class="txs">Il faut apprendre à l’enfant une discipline de repos et de sommeil.</div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">L’hygiène alimentaire (voir une alimentation saine et équilibrée)</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">Une bonne hygiène permet de rester en bonne santé et de favoriser une bonne croissance.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ai" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qui est responsable de la bonne hygiène des enfants&nbsp;?</span></div></div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">A partir de quel âge un enfant peut-il se laver lui-même&nbsp;?</span></div></div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quel temps est favorable pour s'occuper de son hygiène corporelle&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1al" class="txs"><span class="bd">3)</span><span class="bd"> </span><span class="bd">Quelques maladies répandues</span></div></div>
+<div class="m"><div id="T1am" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelles sont les maladies très répandues,</span></div> <div id="T1an" class="txs"><span class="bd">mais faciles à éviter&nbsp;?</span></div></div>
+<div class="m"><div id="T1ao" class="txs">La dysenterie,</div> <div id="T1ap" class="txs">la diarrhée,</div> <div id="T1aq" class="txs">le rhume,</div> <div id="T1ar" class="txs">la toux,</div> <div id="T1as" class="txs">les vers,</div> <div id="T1at" class="txs">le paludisme…</div></div>
+<div class="m"><div id="T1au" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelle est l’origine de ces maladies&nbsp;?</span></div></div>
+<div class="m"><div id="T1av" class="txs"><span class="bd">L’origine des certaines maladies sont les microbes,</span></div> <div id="T1aw" class="txs"><span class="bd">les bactéries,</span></div> <div id="T1ax" class="txs"><span class="bd">les virus et les parasites.</span></div></div>
+<div class="m"><div id="T1ay" class="txs">Les microbes et les bactéries sont tellement petits que nos yeux ne peuvent pas les voir,</div> <div id="T1az" class="txs">ils sont invisibles.</div> <div id="T1ba" class="txs">Mais ils se multiplient à grande vitesse quand les conditions sont favorables.</div> <div id="T1bb" class="txs">Les microbes sont très nombreux et ils existent dans l’air,</div> <div id="T1bc" class="txs">dans la terre,</div> <div id="T1bd" class="txs">dans l’eau,</div> <div id="T1be" class="txs">sur le corps ou dans le corps des animaux,</div> <div id="T1bf" class="txs">dans les plantes,</div> <div id="T1bg" class="txs">sur notre corps ou dans notre corps où ils entrent par le nez,</div> <div id="T1bh" class="txs">la bouche ou les plaies.</div></div>
+<div class="m"><div id="T1bi" class="txs">Certains microbes sont nuisibles à l’homme car ils provoquent des maladies en se développant dans l’organisme.</div></div>
+<div class="m"><div id="T1bj" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Dans quel environnement les microbes se multiplient-ils&nbsp;?</span></div></div>
+<div class="m"><div id="T1bk" class="txs">Ils se trouvent dans les déchets et dans les ordures,</div> <div id="T1bl" class="txs">et surtout dans les selles.</div> <div id="T1bm" class="txs">Ils se multiplient rapidement dans l’humidité.</div></div>
+<div class="m"><div id="T1bn" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment les microbes se distribuent&nbsp;?</span></div></div>
+<div class="m"><div id="T1bo" class="txs"><span class="it">Montrer l’exemple avec de la farine sur la main en saluant les autres&nbsp;!</span></div></div>
+<div class="m"><div id="T1bp" class="txs"><span class="bd">- Avec des mains non lavées</span> après les toilettes ou après avoir lavé un enfant.</div> <div id="T1bq" class="txs">Les microbes restent sur les mains et tombent sur ce qu’on touche.</div> <div id="T1br" class="txs">Par exemple la nourriture.</div> <div id="T1bs" class="txs">Si on mange maintenant cette nourriture,</div> <div id="T1bt" class="txs">les microbes entrent dans l’estomac et provoquent des perturbations dans le ventre.</div> <div id="T1bu" class="txs">Il peut y avoir ensuite la diarrhée,</div> <div id="T1bv" class="txs">le vomissement ou la dysenterie.</div> <div id="T1bw" class="txs">C’est pourquoi il est très important de se laver régulièrement les mains,</div> <div id="T1bx" class="txs">en particulier après avoir été à la toilette ou avant de préparer la nourriture.</div></div>
+<div class="m"><div id="T1by" class="txs"><span class="bd">- Avec les crachats et le rhume</span>.</div> <div id="T1bz" class="txs">C’est pourquoi il est important de tousser ou éternuer dans le creux du coude ou dans un mouchoir jetable.</div></div>
+<div class="m"><div id="T1ca" class="txs"><span class="bd">- Avec les insectes nuisibles </span>comme les mouches qui cherchent la nourriture sur les déchets et les selles.</div> <div id="T1cb" class="txs">Les microbes et les bactéries se collent à leurs pattes et les accompagnent ensuite.</div></div>
+<div class="m"><div id="T1cc" class="txs">Par exemples :</div></div>
+<div class="m"><div id="T1cd" class="txs"><span class="bd">Si la mouche se promène sur la nourriture</span>,</div> <div id="T1ce" class="txs">elle laisse tomber les microbes dedans.</div> <div id="T1cf" class="txs">Si on mange cette nourriture,</div> <div id="T1cg" class="txs">les microbes entrent dans l’estomac et provoquent des perturbations dans le ventre,</div> <div id="T1ch" class="txs">qui sont la diarrhée et le vomissement ou la dysenterie.</div></div>
+<div class="m"><div id="T1ci" class="txs"><span class="bd">Si la mouche se promène sur la blessure</span> d’un enfant elle laisse tomber les microbes dans cette blessure.</div> <div id="T1cj" class="txs">Les microbes commencent à se multiplier tout de suite et la blessure commence à s’infecter.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ck" class="txs"><span class="bd">4)</span><span class="bd"> </span><span class="bd">Les parasites intestinaux causant des maladies</span></div></div>
+<div class="m"><div id="T1cl" class="txs">Certaines maladies sont causées par les parasites qui vivent dans l’intestin sous forme de vers.</div> <div id="T1cm" class="txs">Nous avons par exemples :</div></div>
+<div class="m"><div id="T1cn" class="txs"><span class="bd">-L’ankylostome</span> :</div> <div id="T1co" class="txs">ce vers pénètre dans le corps en perçant la peau des pieds,</div> <div id="T1cp" class="txs">quand on marche pieds nus.</div> <div id="T1cq" class="txs">Il se nourrit du sang du malade,</div> <div id="T1cr" class="txs">provoquant une anémie et des douleurs au ventre.</div></div>
+<div class="m"><div id="T1cs" class="txs"><span class="bd">-L’oxyure</span> :</div> <div id="T1ct" class="txs">ce parasite pénètre dans le corps par la bouche à travers les aliments mal lavés et l’eau non potable.</div> <div id="T1cu" class="txs">Il vit près de l’anus et provoque des démangeaisons.</div></div>
+<div class="m"><div id="T1cv" class="txs"><span class="bd">-L’ascaris</span> :</div> <div id="T1cw" class="txs">il pénètre dans le corps lorsque nous mangeons des aliments mal lavés et de l’eau non potable.</div> <div id="T1cx" class="txs">Il provoque la diarrhée et parfois il perfore l’intestin.</div></div>
+<div class="m"><div id="T1cy" class="txs"><span class="bd">-Le ténia</span> :</div> <div id="T1cz" class="txs">le ténia vit dans la viande de porc et de bœuf.</div> <div id="T1da" class="txs">En mangeant de la viande mal cuite on avale des œufs de ténia qui vont se développer dans l’intestin de l’homme.</div> <div id="T1db" class="txs">Le ténia provoque l’amaigrissement et des diarrhées.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dc" class="txs"><span class="bd">-Les trichocéphales</span> :</div> <div id="T1dd" class="txs">ces vers provoquent la diarrhée.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1de" class="txs"><span class="bd">5)</span><span class="bd"> </span><span class="bd">La dysenterie amibienne</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1df" class="txs">La dysenterie amibienne est une maladie contagieuse et fréquente.</div> <div id="T1dg" class="txs">Elle se manifeste par les violentes douleurs abdominales,</div> <div id="T1dh" class="txs">des crampes,</div> <div id="T1di" class="txs">de la fièvre,</div> <div id="T1dj" class="txs">de la fatigue,</div> <div id="T1dk" class="txs">une perte d’appétit,</div> <div id="T1dl" class="txs">des vomissements et une déshydratation.</div> <div id="T1dm" class="txs">Elle provoque des diarrhées fréquentes :</div> <div id="T1dn" class="txs">les selles sont mêlées de sang.</div></div>
+<div class="m"><div id="T1do" class="txs">La dysenterie s’attrape en consommant des aliments contaminés par les excréments d’une personne malade ou en buvant de l’eau non potable des marigots ou des rivières.</div> <div id="T1dp" class="txs">Elle est provoquée par un parasite appelé amibe,</div> <div id="T1dq" class="txs">qui vit dans l’intestin et le foie.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dr" class="txs"><span class="bd">6)</span><span class="bd"> </span><span class="bd">La diarrhée</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ds" class="txs">La diarrhée est provoquée par les bactéries et les microbes venant des mouches,</div> <div id="T1dt" class="txs">des mains pas lavées,</div> <div id="T1du" class="txs">de l’eau non potable,</div> <div id="T1dv" class="txs">des selles et des nourritures pas lavées.</div></div>
+<div class="m"><div id="T1dw" class="txs"><span class="bd">La diarrhée peut tuer</span> un enfant en faisant perdre trop d’eau à son corps&nbsp;!</div> <div id="T1dx" class="txs">Il est essentiel de donner beaucoup à boire à un enfant qui a la diarrhée&nbsp;!</div></div>
+<div class="m"><div id="T1dy" class="txs"><span class="bd">Comment réagir à la diarrhée de l’enfant&nbsp;?</span></div></div>
+<div class="m"><div id="T1dz" class="txs">• Il faut continuer à allaiter l’enfant&nbsp;!</div></div>
+<div class="m"><div id="T1ea" class="txs">• Il faut donner aux enfants beaucoup à boire,</div> <div id="T1eb" class="txs">de l’eau potable,</div> <div id="T1ec" class="txs">des soupes (bouillon avec cube maggi),</div> <div id="T1ed" class="txs">du thé léger,</div> <div id="T1ee" class="txs">une solution de sels de réhydrations orale comme les SRO (orasel) – une boisson spéciale à acheter à la pharmacie par sachet ou à préparer soi-même selon la recette :</div> <div id="T1ef" class="txs">1 litre d’eau potable,</div> <div id="T1eg" class="txs">¼ cuillère de sel et 2 cuillères de sucre.</div> <div id="T1eh" class="txs">Bien mélanger et donner à l’enfant petit à petit.</div></div>
+<div class="m"><div id="T1ei" class="txs">• Il faut donner à manger à l’enfant plus grand de petites portions :</div> <div id="T1ej" class="txs">de la bouillie ou du riz avec des légumes bien cuits,</div> <div id="T1ek" class="txs">pas de sauce très grasse&nbsp;!</div></div>
+<div class="m"><div id="T1el" class="txs">• Dès que la diarrhée s’arrête,</div> <div id="T1em" class="txs">il est vital de donner plus de nourriture à l’enfant pour qu’il guérisse tout à fait.</div></div>
+<div class="m"><div id="T1en" class="txs">• On ne doit utiliser contre la diarrhée aucun autre médicament que les SRO&nbsp;!</div> <div id="T1eo" class="txs">La plupart des médicaments sont soit inutiles soit dangereux&nbsp;!</div> <div id="T1ep" class="txs">D’habitude,</div> <div id="T1eq" class="txs">la diarrhée disparaît d’elle-même au bout de quelques jours.</div> <div id="T1er" class="txs">Le véritable danger n’est pas la diarrhée en elle-même,</div> <div id="T1es" class="txs">mais la malnutrition et le fait que le corps de l’enfant perde tant de liquide&nbsp;!</div></div>
+<div class="m"><div id="T1et" class="txs">• Si la diarrhée est plus grave que d’habitude,</div> <div id="T1eu" class="txs">si elle dure plus longtemps que deux semaines ou si les selles contiennent du sang,</div> <div id="T1ev" class="txs">il faut faire appel à une personne qualifiée&nbsp;!</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ew" class="txs"><span class="bd">Comment se protège-t-on de ces parasites et de ces microbes&nbsp;?</span></div></div>
+<div class="m"><div id="T1ex" class="txs">Pour se protéger de tous ces parasites et microbes,</div> <div id="T1ey" class="txs">il faut :</div></div>
+<div class="m"><div id="T1ez" class="txs">• boire de l’eau potable des forages ou de puits propres et couverts.</div></div>
+<div class="m"><div id="T1fa" class="txs">• bien se laver les mains après la toilette ou après avoir lavé les selles d’un enfant.</div></div>
+<div class="m"><div id="T1fb" class="txs">• se laver les mains avec du savon avant de préparer ou de commencer à manger&nbsp;!</div></div>
+<div class="m"><div id="T1fc" class="txs">• bien laver les fruits et les légumes avant de les manger.</div></div>
+<div class="m"><div id="T1fd" class="txs">• bien cuire la viande avant de la manger et laver tous les aliments avec de l’eau potable.</div></div>
+<div class="m"><div id="T1fe" class="txs">• couvrir les nourritures contre les mouches.</div></div>
+<div class="m"><div id="T1ff" class="txs">• ne pas marcher pieds nus.</div></div>
+<div class="m"><div id="T1fg" class="txs">• ne pas se baigner dans de l’eau stagnante.</div></div>
+<div class="m"><div id="T1fh" class="txs">• utiliser la toilette couverte pour faire les selles.</div></div>
+<div class="m"><div id="T1fi" class="txs">• ranger les déchets et les ordures ou jeter dans une poubelle ou dans un trou,</div> <div id="T1fj" class="txs">les brûler régulièrement&nbsp;!</div></div>
+<div class="m"><div id="T1fk" class="txs">• couvrir les plaies avec un tissu contre les mouches.</div></div>
+<div class="m"><div id="T1fl" class="txs">• Donner à l’enfant (chaque 3mois) le Mebendazole comme prévention contre les différents vers.</div></div>
+<div class="m"><div id="T1fm" class="txs"><span class="bd">NB :</span></div> <div id="T1fn" class="txs"><span class="bd">Pour diminuer les insectes et les microbes nuisibles il faut garder les environs propres,</span></div> <div id="T1fo" class="txs"><span class="bd">ne pas jeter les déchets partout,</span></div> <div id="T1fp" class="txs"><span class="bd">faire les selles dans l</span><span class="bd">a</span><span class="bd"> </span><span class="bd">toilette</span><span class="bd">,</span></div> <div id="T1fq" class="txs"><span class="bd">ne pas laisser les animaux (moutons,</span></div> <div id="T1fr" class="txs"><span class="bd">chèvres,</span></div> <div id="T1fs" class="txs"><span class="bd">porcs,</span></div> <div id="T1ft" class="txs"><span class="bd">bœufs) se promener devant les maisons&nbsp;!</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1fu" class="txs"><span class="bd">7)</span><span class="bd"> </span><span class="bd">Le rhume,</span></div> <div id="T1fv" class="txs"><span class="bd">la toux et la fièvre</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1fw" class="txs">Le rhume,</div> <div id="T1fx" class="txs">la toux et la fièvre sont des maladies contagieuses,</div> <div id="T1fy" class="txs">qui se transmettent par des personnes malades.</div> <div id="T1fz" class="txs">Quand un malade tousse,</div> <div id="T1ga" class="txs">il jette les gouttes de sa bouche autour de lui.</div> <div id="T1gb" class="txs">Ces gouttes contiennent des bactéries ou des virus qui provoquent ces maladies.</div></div>
+<div class="m"><div id="T1gc" class="txs"><span class="bd">Comment doit-t-on se comporter quand on est atteint de l’une de ces maladies&nbsp;?</span></div></div>
+<div class="m"><div id="T1gd" class="txs">• Il faut tousser ou éternuer dans le creux du coude&nbsp;!</div></div>
+<div class="m"><div id="T1ge" class="txs">• Il faut utiliser sa propre cuillère et sa propre tasse jusqu’à sa guérison.</div></div>
+<div class="m"><div id="T1gf" class="txs">• Il faut beaucoup boire,</div> <div id="T1gg" class="txs">de l’eau potable ou du thé tiède (menthe ou herbes).</div></div>
+<div class="m"><div id="T1gh" class="txs">• Pour faire baisser la fièvre,</div> <div id="T1gi" class="txs">il faut que l’enfant porte des habits légers et qu’il ne soit pas trop couvert (en fonction la température).</div></div>
+<div class="m"><div id="T1gj" class="txs">• Il faut laver le corps chaud de l’enfant régulièrement avec de l’eau froide.</div></div>
+<div class="m"><div id="T1gk" class="txs">• Si la fièvre ne baisse pas on donne un peu de paracétamol,</div> <div id="T1gl" class="txs">selon les conseils du pharmacien.</div></div>
+<div class="m"><div id="T1gm" class="txs">• <span class="bd">Chez les petits enfants</span> :</div> <div id="T1gn" class="txs">il faut bien faire attention et ne pas mélanger les symptômes du rhume avec le paludisme.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1go" class="txs"><span class="bd">8)</span><span class="bd"> </span><span class="bd">Le paludisme</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1gp" class="txs"><span class="bd">Le responsable du paludisme</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1gq" class="txs">Le paludisme est une maladie qui se transmet par la piqûre du moustique féminin appelé anophèle.</div> <div id="T1gr" class="txs">Si le moustique pique une personne malade du palud,</div> <div id="T1gs" class="txs">il aspire le sang et en même temps,</div> <div id="T1gt" class="txs">il absorbe les microbes nommés plasmodium qui se trouvent dans le sang.</div> <div id="T1gu" class="txs">A partir de ce moment,</div> <div id="T1gv" class="txs">le moustique est porteur des microbes.</div> <div id="T1gw" class="txs">Si ce moustique pique une personne en bonne santé,</div> <div id="T1gx" class="txs">il introduit le microbe sous la peau.</div> <div id="T1gy" class="txs">La personne piquée est alors contaminée et le microbe commence à se multiplier.</div> <div id="T1gz" class="txs">Le plasmodium attaque et détruit les globules rouges du sang et le malade s’anémie.</div> <div id="T1ha" class="txs">Il risque une infection du foie,</div> <div id="T1hb" class="txs">souvent mortelle.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1hc" class="txs"><span class="bd">Les petits enfants sont très menacés parce qu’ils n’ont pas encore beaucoup de sang.</span></div> <div id="T1hd" class="txs"><span class="bd">Après quelques jours de palud sans traitement,</span></div> <div id="T1he" class="txs"><span class="bd">ils peuvent mourir.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1hf" class="txs"><span class="bd">Les symptômes du paludisme</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1hg" class="txs">Le palu se manifeste par de brusques accès de fièvre,</div> <div id="T1hh" class="txs">des frissons qui s’accompagnent de maux de tête et de courbatures.</div> <div id="T1hi" class="txs">Le malade a souvent la nausée,</div> <div id="T1hj" class="txs">il vomit,</div> <div id="T1hk" class="txs">et sa température s’élève à 40°C.</div> <div id="T1hl" class="txs">Après une abondante transpiration,</div> <div id="T1hm" class="txs">la température redevient normale et les douleurs cessent.</div> <div id="T1hn" class="txs">Ces symptômes durent plusieurs heures et reviennent à intervalles réguliers.</div></div>
+<div class="m"><div id="T1ho" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Pourquoi les petits enfants sont très menacés par le paludisme&nbsp;?</span></div></div>
+<div class="m"><div id="T1hp" class="txs">Les microbes du paludisme détruisent le sang.</div> <div id="T1hq" class="txs">Comme un petit enfant n’a pas encore beaucoup de sang (un litre et demi seulement) celui-ci sera rapidement détruit et l’enfant,</div> <div id="T1hr" class="txs">affaibli pendant quelque jour et manquant de sang,</div> <div id="T1hs" class="txs">meurt.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ht" class="txs"><span class="bd">Le traitement du paludisme</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1hu" class="txs">Il faut tout de suite traiter le paludisme avec des médicaments antipaludéens en tout cas chez les enfants&nbsp;!</div> <div id="T1hv" class="txs">On le traite avec Fansidar/Melaxime ou Artesunate-Amodiaquine par comprimés.</div> <div id="T1hw" class="txs">(Chloroquine et Nivaquine ne sont plus recommandés à cause des résistances.)</div></div>
+<div class="m"><div id="T1hx" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Il faut avoir des médicaments antipaludéens en réserve à la maison surtout pour les petits enfants&nbsp;!</span></div></div>
+<div class="m"><div id="T1hy" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment diminuer la fièvre et la douleur&nbsp;?</span></div></div>
+<div class="m"><div id="T1hz" class="txs">On donne du paracétamol,</div> <div id="T1ia" class="txs">mais le paracétamol ne combat pas le paludisme&nbsp;!</div> <div id="T1ib" class="txs">Il soigne seulement les symptômes.</div></div>
+<div class="m"><div id="T1ic" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment éviter le paludisme&nbsp;?</span></div></div>
+<div class="m"><div id="T1id" class="txs">Il faut dormir sous une moustiquaire et porter des vêtements longs à la tombée de la nuit,</div> <div id="T1ie" class="txs">pomper de l’insecticide dans la maison régulièrement.</div> <div id="T1if" class="txs">On peut aussi placer aux fenêtres un cadre grillagé pour empêcher les moustiques d’entrer.</div></div>
+<div class="m"><div id="T1ig" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment lutter contre le paludisme&nbsp;?</span></div></div>
+<div class="m"><div id="T1ih" class="txs">Pour lutter contre le palud,</div> <div id="T1ii" class="txs">il faut empêcher l’anophèle de naître&nbsp;!</div> <div id="T1ij" class="txs">Comme les moustiques mettent leurs œufs dans de l’eau stagnante et des flaques d’eau :</div> <div id="T1ik" class="txs"><span class="bd">il faut assécher les flaques d’eau près des habitations&nbsp;!</span></div></div>
+<div class="m"><div id="T1il" class="txs">Il faut aussi traiter le plus rapidement possible les cas de palu dans la famille ou dans le village.</div> <div id="T1im" class="txs">En effet,</div> <div id="T1in" class="txs">si un moustique pique une personne qui a la maladie,</div> <div id="T1io" class="txs">il pourra facilement transmettre le palud à une autre personne vivant à proximité.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/32 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/32 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/32 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

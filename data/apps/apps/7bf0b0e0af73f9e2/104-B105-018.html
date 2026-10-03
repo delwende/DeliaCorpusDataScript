@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Chào mừng 18</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "104-B105-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='103-B104-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='104-B105-017.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Chào mừng&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;18&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='104-B105-019.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='105-B106-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B105-image18.jpeg" />
+
+<div class="m"><span class="bd">18) CÁC BIỂU TƯỢNG NÀY CÓ Ý NGHĨA GÌ?</span></div>
+<div class="m">Ký hiệu trên cùng 1) có nghĩa là bệnh viện. Mỗi bệnh viện cũng có khoa cấp cứu luôn mở cửa cho những trường hợp khẩn cấp. Nếu bạn không thể tự mình lái xe đến bệnh viện được nữa, hãy gọi số khẩn cấp (ví dụ 112) và xe cấp cứu sẽ đến.</div>
+<div class="m">Biển hiệu 2) có nghĩa là hiệu thuốc. Ví dụ, đây là nơi bạn có thể nhận được loại thuốc phù hợp để trị cảm lạnh đơn giản hoặc lời khuyên về cách điều trị vết thương.</div>
+<div class="m">Biển báo 3): Chỗ đỗ xe và chỗ ngồi trên xe buýt có biển báo này được dành riêng cho người sử dụng xe lăn và những người khuyết tật khác và nên được để trống. Không gian cũng được dành cho phụ nữ mang thai và người lớn tuổi.</div>
+<div class="m">Biển báo 4): Ở đây có nhà vệ sinh nhưng không có vòi sen. Nam đi vệ sinh nam, nữ đi vệ sinh nữ. Đi tiểu và đại tiện ở nơi công cộng được coi là hành vi đáng xấu hổ và có thể bị phạt. Chỉ có giấy vệ sinh được vứt vào bồn cầu, tất cả rác thải khác (kể cả khăn vệ sinh và băng vệ sinh) vào thùng bên cạnh.</div>
+<div class="m">Biển báo 5): Cấm hút thuốc! Trong các nhà hàng, chỉ được phép hút thuốc ở một số khu vực được chỉ định nhất định. Hút thuốc cũng không được phép ở mọi nơi trong nhà ga. Không hút thuốc cạnh trẻ em, phụ nữ mang thai và những người không hút thuốc vì sự tôn trọng. Tàn thuốc lá nên để trong gạt tàn.</div>
+<div class="m">Dấu hiệu 6): Nước máy thường an toàn để uống ở Châu Âu vì nó không chứa bất kỳ vi trùng nào. Tuy nhiên, bạn nên hạn chế uống nước từ vòi có biển báo này.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

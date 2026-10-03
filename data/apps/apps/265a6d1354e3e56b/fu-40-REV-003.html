@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holleede 3</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 6.87 },
+    { label: "1b", start: 7.12, end: 13.07 },
+    { label: "1c", start: 13.32, end: 15.17 },
+    { label: "1d", start: 15.42, end: 19.59 },
+    { label: "2a", start: 19.84, end: 20.91 },
+    { label: "2b", start: 21.16, end: 31.43 },
+    { label: "3a", start: 31.68, end: 37.19 },
+    { label: "3b", start: 37.44, end: 39.81 },
+    { label: "3c", start: 40.06, end: 47.43 },
+    { label: "4a", start: 47.68, end: 53.43 },
+    { label: "4b", start: 53.68, end: 60.11 },
+    { label: "5a", start: 60.36, end: 65.57 },
+    { label: "5b", start: 65.82, end: 70.01 },
+    { label: "5c", start: 70.26, end: 75.93 },
+    { label: "6", start: 76.18, end: 81.57 },
+    { label: "7a", start: 81.82, end: 87.17 },
+    { label: "7b", start: 87.42, end: 93.61 },
+    { label: "7c", start: 93.86, end: 96.81 },
+    { label: "7d", start: 97.06, end: 99.97 },
+    { label: "8a", start: 100.22, end: 102.21 },
+    { label: "8b", start: 102.46, end: 108.39 },
+    { label: "8c", start: 108.64, end: 114.39 },
+    { label: "9a", start: 114.64, end: 124.49 },
+    { label: "9b", start: 124.74, end: 128.29 },
+    { label: "9c", start: 128.54, end: 131.21 },
+    { label: "10a", start: 131.46, end: 135.57 },
+    { label: "10b", start: 135.82, end: 142.61 },
+    { label: "11a", start: 142.86, end: 144.53 },
+    { label: "11b", start: 144.78, end: 150.19 },
+    { label: "12a", start: 150.44, end: 155.91 },
+    { label: "12b", start: 156.16, end: 158.51 },
+    { label: "12c", start: 158.76, end: 163.71 },
+    { label: "12d", start: 163.96, end: 171.43 },
+    { label: "12e", start: 171.68, end: 175.17 },
+    { label: "13", start: 175.42, end: 181.53 },
+    { label: "14a", start: 181.78, end: 187.35 },
+    { label: "14b", start: 187.6, end: 198.69 },
+    { label: "15a", start: 198.94, end: 203.51 },
+    { label: "15b", start: 203.76, end: 207.01 },
+    { label: "16", start: 207.26, end: 212.43 },
+    { label: "17a", start: 212.68, end: 213.67 },
+    { label: "17b", start: 213.92, end: 218.73 },
+    { label: "17c", start: 218.98, end: 227.33 },
+    { label: "18a", start: 227.58, end: 236.33 },
+    { label: "18b", start: 236.58, end: 244.01 },
+    { label: "18c", start: 244.26, end: 250.21 },
+    { label: "19a", start: 250.46, end: 255.45 },
+    { label: "19b", start: 255.7, end: 258.39 },
+    { label: "20a", start: 258.64, end: 263.21 },
+    { label: "20b", start: 263.46, end: 272.95 },
+    { label: "21", start: 273.2, end: 285.41 },
+    { label: "22", start: 285.66, end: 292.63 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 22 }];
+var hasIntro = false;
+var baseRef  = "fu-40-REV-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='fu-39-JUD-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='fu-40-REV-002.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Holleede&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;3&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-40-REV-004.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+<div class="s2"><div id="s1">Ɓataaki to kawrital gonngal Sardis</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">3</div> <div id="T1a" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>— Winndan maleyka kawrital goonɗinɓe gonngal Sardis, mbi'aa:</div></div>
+<div class="mi"><div id="T1b" class="txs">«Inan haalaaji jogiiɗo ruuhuuji Laamɗo jeɗɗi e koode jeɗɗi:</div></div>
+<div class="pi"><div id="T1c" class="txs">Miɗo anndi golle maa.</div> <div id="T1d" class="txs">Aɗa wi'ee a buurɗo, tawee le a maayɗo.</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2a" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>Hakkil!</div> <div id="T2b" class="txs">Cemmbinɗinaa seeɗa mo njogiɗaa oon gilla waataay, sabo mi tawaay golle maa ina kiɓɓi yeeso Laamɗo am.</div><span id="bookmarks2"></span> <a id="v3"></a><div id="T3a" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>Ndelle, miccita no keɓirɗaa e no nanirɗaa Kabaaru Lobbo oon.</div> <div id="T3b" class="txs">Tuubu, de ngolliraa ɗum.</div> <div id="T3c" class="txs">Si a hakkilaay, mi wardan hono no gujjo ni, de a anndataa wakkati mo ngarammi maɓɓude ma.</div><span id="bookmarks3"></span> <a id="v4"></a><div id="T4a" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>Ammaa, aɗa woodi ɗo Sardis ɗoon yimɓe ɓe tuuninaay kaddule muɓɓen.</div> <div id="T4b" class="txs">Ɓe ɓornoto kaddule daneeje ɓe njaada e am, sabo iɓe poti e majjum.</div><span id="bookmarks4"></span> <a id="v5"></a><div id="T5a" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Hono noon jaaliiɗo fuu ɓornortoo kaddule daneeje.</div> <div id="T5b" class="txs">Abada mi tosataa innde muuɗum e dewtere nguurndam ndeen.</div> <div id="T5c" class="txs">Mi seedoto imo jeydaa e am yeeso Baaba am e maleyka'en muuɗum.</div><span id="bookmarks5"></span> <a id="v6"></a><div id="T6" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>Jom nowru fuu, nana ko Ruuhu haalanta kawrite goonɗinɓe ɗuum!»</div><span id="bookmarks6"></span></div>
+<div class="s2"><div id="s2">Ɓataaki to kawrital gonngal Filadelfi</div></div><span id="bookmarks6"></span><a id="v7"></a>
+<div class="p"><div id="T7a" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>— Winndan maleyka kawrital goonɗinɓe gonngal Filadelfi, mbi'aa:</div></div>
+<div class="mi"><div id="T7b" class="txs">«Inan haalaaji ceniiɗo goongante, tiigiiɗo cokitirgal Daawda.</div> <div id="T7c" class="txs">Si o omtii, fay gooto ommbataa.</div> <div id="T7d" class="txs">Si o ommbii, fay gooto omtataa.</div><span id="bookmarks7"></span></div><span id="bookmarks7"></span><a id="v8"></a>
+<div class="pi"><div id="T8a" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>Miɗo anndi golle maa.</div> <div id="T8b" class="txs">Ndaar, mi omtii dammbugal yeeso maa ngal fay gooto waawaa ommbude.</div> <div id="T8c" class="txs">Aan e famɗude semmbe fuu, a haybii konngol am, a yankiraay innde am.</div><span id="bookmarks8"></span> <a id="v9"></a><div id="T9a" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>Haya, mi neldete jeyaaɓe e kawrital rewooɓe Seyɗaani wiitotooɓe wo Alhuudiyankooɓe tawee ɓe fenooɓe, ɓe nganaa.</div> <div id="T9b" class="txs">Mi doolɗan ɓe ɓe ngara ɓe cujidowa to koyɗe maa.</div> <div id="T9c" class="txs">Ndeen ɓe paaman mi yiɗii ma.</div><span id="bookmarks9"></span> <a id="v10"></a><div id="T10a" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>A haybii ko njamirmaami ɗuum, a munyii sanne.</div> <div id="T10b" class="txs">Saabe ɗum, mi reenete e wakkati nde ɓillaare warata hora adunaaru faa ndaartindoo yimɓe fuu.</div><span id="bookmarks10"></span> <a id="v11"></a><div id="T11a" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>Mi ɓadake warude.</div> <div id="T11b" class="txs">Tinna e ko njogiɗaa ɗuum taa fay gooto teeta kufune maa jaalorgal.</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12a" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>Jaaliiɗo fuu, mi waɗan ɗum bimmbeere ley suudu Laamɗo am seniindu.</div> <div id="T12b" class="txs">O wurtataako e mayru abada.</div> <div id="T12c" class="txs">Mi winndan e dow makko innde Laamɗo am e innde ngalluure muuɗum.</div> <div id="T12d" class="txs">Ngalluure ndeen wo Urusaliima keso ƴuuroowo dow kammu to Laamɗo am de jippoo.</div> <div id="T12e" class="txs">Mi winndan e dow makko innde am heyre ndeen.</div><span id="bookmarks12"></span> <a id="v13"></a><div id="T13" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Jom nowru fuu, nana ko Ruuhu haalanta kawrite goonɗinɓe ɗuum!»</div><span id="bookmarks13"></span></div>
+<div class="s2"><div id="s3">Ɓataaki to kawrital gonngal Lawdikiya</div></div><span id="bookmarks13"></span><a id="v14"></a>
+<div class="p"><div id="T14a" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>— Winndan maleyka kawrital goonɗinɓe gonngal Lawdikiya, mbi'aa:</div></div>
+<div class="mi"><div id="T14b" class="txs">«Inan haalaaji bi'eteeɗo Aamiina oon, seedaaku koolniiɗo goongante, mo tageefo oon fuu laatorii saabe muuɗum:</div><span id="bookmarks14"></span></div><span id="bookmarks14"></span><a id="v15"></a>
+<div class="pi"><div id="T15a" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>Miɗo anndi golle maa, a feewaa a wulaa.</div> <div id="T15b" class="txs">Wo a laato peewuɗo naa bulɗo!</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>Saabe ko tawaa a feewaa a wulaa ɗuum, hunnduko am tuutete.</div><span id="bookmarks16"></span> <a id="v17"></a><div id="T17a" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>Aɗa wi'a:</div> <div id="T17b" class="txs">‹Mi jom jawdi, mi hawrundurii jawdi, mi haajaaka fay huunde.›</div> <div id="T17c" class="txs">Tawi le, a anndaa wo a mettuɗo hoore, a jurminiiɗo, a talkaajo, a bumɗo, a kolɗo!</div><span id="bookmarks17"></span> <a id="v18"></a><div id="T18a" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>Miɗo tindine, coodaa to am kaŋŋe laaɓiniraaɗo yiite, faa keɓaa jawdi ngoongalaari.</div> <div id="T18b" class="txs">Coodaa to am du kaddule daneeje ɓornoɗaa, faa cuuraa ɓanndu maa ɓoldu nduun e semteende.</div> <div id="T18c" class="txs">Katin du, coodaa to am nebbam faa mbujaa gite maa de keɓaa nji'aa.</div><span id="bookmarks18"></span> <a id="v19"></a><div id="T19a" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>Miin, miɗo fela yimɓe ɓe njiɗumi, miɗo dartina ɗum'en.</div> <div id="T19b" class="txs">Ndelle, tinnoɗaa, tuubaa!</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20a" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>Inani miɗo darii e dammbugal, miɗo salmina.</div> <div id="T20b" class="txs">Neɗɗo fuu nanɗo daande am de omti dammbugal, mi naatan to muuɗum, mi nyaamda e muuɗum, kam du nyaamda e am.</div><span id="bookmarks20"></span> <a id="v21"></a><div id="T21" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Jaaliiɗo fuu, mi hokkan ɗum jooɗodaade e am dow jooɗorgal am laamu, hono no miin du njaaloriimi de njooɗodiimi e Baaba am dow jooɗorgal muuɗum ni.</div><span id="bookmarks21"></span> <a id="v22"></a><div id="T22" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>Jom nowru fuu, nana ko Ruuhu haalanta kawrite goonɗinɓe ɗuum!»</div><span id="bookmarks22"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/FUHSIMN1DA/B27___03_Apocalypse__FUHSIMN1DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

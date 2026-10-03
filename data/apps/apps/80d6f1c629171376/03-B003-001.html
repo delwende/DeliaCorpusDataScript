@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>66 Bonde 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.67 },
+    { label: "1b", start: 4.92, end: 8.39 },
+    { label: "1c", start: 8.64, end: 16.21 },
+    { label: "1d", start: 16.46, end: 20.83 },
+    { label: "1e", start: 21.08, end: 23.83 },
+    { label: "1f", start: 24.08, end: 24.63 },
+    { label: "1g", start: 24.88, end: 26.15 },
+    { label: "1h", start: 26.4, end: 29.05 },
+    { label: "1i", start: 29.3, end: 32.47 },
+    { label: "1j", start: 32.72, end: 35.57 },
+    { label: "1k", start: 35.82, end: 38.81 },
+    { label: "1l", start: 39.06, end: 40.87 },
+    { label: "1m", start: 41.12, end: 45.19 },
+    { label: "1n", start: 45.44, end: 46.13 },
+    { label: "1o", start: 46.38, end: 48.15 },
+    { label: "1p", start: 48.4, end: 49.67 },
+    { label: "1q", start: 49.92, end: 51.11 },
+    { label: "1r", start: 51.36, end: 58.23 },
+    { label: "1s", start: 58.48, end: 60.93 },
+    { label: "1t", start: 61.18, end: 66.21 },
+    { label: "1u", start: 66.46, end: 69.13 },
+    { label: "1v", start: 69.38, end: 74.93 },
+    { label: "1w", start: 75.18, end: 80.31 },
+    { label: "1x", start: 80.56, end: 84.53 },
+    { label: "1y", start: 84.78, end: 86.39 },
+    { label: "1z", start: 86.64, end: 90.15 },
+    { label: "1aa", start: 90.4, end: 94.33 },
+    { label: "1ab", start: 94.58, end: 99.67 },
+    { label: "1ac", start: 99.92, end: 101.99 },
+    { label: "1ad", start: 102.24, end: 104.91 },
+    { label: "1ae", start: 105.16, end: 107.93 },
+    { label: "1af", start: 108.18, end: 111.43 },
+    { label: "1ag", start: 111.68, end: 113.87 },
+    { label: "1ah", start: 114.12, end: 118.63 },
+    { label: "1ai", start: 118.88, end: 122.77 },
+    { label: "1aj", start: 123.02, end: 125.61 },
+    { label: "1ak", start: 125.86, end: 127.63 },
+    { label: "1al", start: 127.88, end: 130.19 },
+    { label: "1am", start: 130.44, end: 133.17 },
+    { label: "1an", start: 133.42, end: 135.51 },
+    { label: "1ao", start: 135.76, end: 137.29 },
+    { label: "1ap", start: 137.54, end: 141.25 },
+    { label: "1aq", start: 141.5, end: 144.11 },
+    { label: "1ar", start: 144.36, end: 148.73 },
+    { label: "1as", start: 148.98, end: 152.91 },
+    { label: "1at", start: 153.16, end: 154.19 },
+    { label: "1au", start: 154.44, end: 155.51 },
+    { label: "1av", start: 155.76, end: 157.19 },
+    { label: "1aw", start: 157.44, end: 159.65 },
+    { label: "1ax", start: 159.9, end: 163.71 },
+    { label: "1ay", start: 163.96, end: 165.89 },
+    { label: "1az", start: 166.14, end: 169.11 },
+    { label: "1ba", start: 169.36, end: 172.25 },
+    { label: "1bb", start: 172.5, end: 174.67 },
+    { label: "1bc", start: 174.92, end: 179.73 },
+    { label: "1bd", start: 179.98, end: 182.91 },
+    { label: "1be", start: 183.16, end: 190.69 },
+    { label: "1bf", start: 190.94, end: 192.95 },
+    { label: "1bg", start: 193.2, end: 197.03 },
+    { label: "1bh", start: 197.28, end: 200.41 },
+    { label: "1bi", start: 200.66, end: 203.13 },
+    { label: "1bj", start: 203.38, end: 206.45 },
+    { label: "1bk", start: 206.7, end: 209.09 },
+    { label: "1bl", start: 209.34, end: 211.11 },
+    { label: "1bm", start: 211.36, end: 215.49 },
+    { label: "1bn", start: 215.74, end: 217.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 217.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;66 Bonde&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">66 Bonde</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Waɗiino e jamaanuuji,</div> <div id="T1c" class="txs">Alla hokkor en jamaanuuji lobbi.</div> <div id="T1d" class="txs">Ndemoowo wonnoo de deekum yo kulo Alla.</div> <div id="T1e" class="txs">So ndemoowo e dukum na njaha ngesa,</div> <div id="T1f" class="txs">debbo o,</div> <div id="T1g" class="txs">hebbina loondem ndiyam,</div> <div id="T1h" class="txs">ronndoo jipinowa hakkunde gesa.</div> <div id="T1i" class="txs">Jahalleeɓe ndewa njara,</div> <div id="T1j" class="txs">ndemuɗo ɗomɗi yaha yara.</div> <div id="T1k" class="txs">Noon nih faa haala makko waraana haalee.</div> <div id="T1l" class="txs">Yeru makko e hulude Alla walaa.</div></div>
+<div class="m"><div id="T1m" class="txs">Jaka ko haala kulol Alla dey-ndemoowo o,</div> <div id="T1n" class="txs">haaletee ɗum,</div> <div id="T1o" class="txs">mettii dey-koddom.</div> <div id="T1p" class="txs">Kiram ƴeenyii.</div> <div id="T1q" class="txs">Debbo kiroowo o,</div> <div id="T1r" class="txs">tewtowi mbarduɗum watti nder loonde dey ndemoowo e dullaangal mum.</div> <div id="T1s" class="txs">Dey-ndemoowo kaa yottinoo,</div> <div id="T1t" class="txs">adi loondem hebinni ndiyam dagu no e bada nih.</div> <div id="T1u" class="txs">O ronndii o joƴinoy hakkunde ngesa.</div> <div id="T1v" class="txs">Mbarduɗum soofi nder loonde e dullaangal adunaaru.</div></div>
+<div class="m"><div id="T1w" class="txs">Nde naange fuɗunoo faa na'i ɓiraa ɓirdaa,</div> <div id="T1x" class="txs">ɓii debbo kiroowo oori na'im.</div> <div id="T1y" class="txs">O duri ɗi.</div> <div id="T1z" class="txs">O duri ɗi faa naannge ɓantii.</div> <div id="T1aa" class="txs">O doomunoo ngesa ndemoowo ni o dogani loonde.</div> <div id="T1ab" class="txs">O yari fa o ɗomɗiti de o sakitii o jooti ndemoowo e koreejim.</div> <div id="T1ac" class="txs">Illa jootiiru yottaaki,</div> <div id="T1ad" class="txs">duroowo men fuɗɗi ɓoylagol.</div> <div id="T1ae" class="txs">Yo tuutan yo bawlan.</div> <div id="T1af" class="txs">Ni foortowii e leydi na talloo.</div> <div id="T1ag" class="txs">Yo ottan yo uuman.</div> <div id="T1ah" class="txs">Ndeen ndemoowo e koreejim annditi koo yo o naawete.</div> <div id="T1ai" class="txs">Fu ndoggi ngari kawri dow hoore makko.</div> <div id="T1aj" class="txs">Jom ngesa ƴami o ko hewtii o.</div> <div id="T1ak" class="txs">O itti o fillii.</div> <div id="T1al" class="txs">O wi'i yo ndiyam loonde nde,</div> <div id="T1am" class="txs">o facci o yari de naawu ummorii o.</div> <div id="T1an" class="txs">Duroowo na haalda,</div> <div id="T1ao" class="txs">na maaya.</div></div>
+<div class="m"><div id="T1ap" class="txs">Nde wootere ni dey ndemoowo fii nyonaango:</div> <div id="T1aq" class="txs">"Wuy mi boni!</div> <div id="T1ar" class="txs">Ɓi neɗɗo maani e neɗɗo maani maayii."</div> <div id="T1as" class="txs">Dey ndemoowo nyittoto yo fiifoto.</div> <div id="T1at" class="txs">Nyilɓere ga,</div> <div id="T1au" class="txs">gomngol ga.</div> <div id="T1av" class="txs">Duroowo o,</div> <div id="T1aw" class="txs">yo ɓii jaadiiko.</div> <div id="T1ax" class="txs">Narndanii o ba halal makko.</div> <div id="T1ay" class="txs">O wullan o deƴataa.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1az" class="txs">Ba neɓtan ni adunaaru diri hawri.</div> <div id="T1ba" class="txs">Wurooɓe nilanaama faa ngari.</div> <div id="T1bb" class="txs">Inna mayɗo o du warii.</div> <div id="T1bc" class="txs">Tawnoo ɓiyum na waalii ni fii nyonaago.</div> <div id="T1bd" class="txs">Wi'i waɗii ko mimsiti.</div> <div id="T1be" class="txs">O dawray ni o wi'i koo kanko wattunoo mbarduɗum nder loonde dey ndemoowo o.</div> <div id="T1bf" class="txs">O ƴamaa ko saabii.</div> <div id="T1bg" class="txs">O wi'i kanko e dey ndemoowo njaadata.</div> <div id="T1bh" class="txs">Yimɓe fu yo oo to njiɗi.</div> <div id="T1bi" class="txs">Fay gooto saynay o.</div> <div id="T1bj" class="txs">Ɗuum waɗi de o muuyi mettinde ɓeerndem.</div> <div id="T1bk" class="txs">Jaka e hoore makko heltata.</div></div>
+<div class="m"><div id="T1bl" class="txs">Ndelle celee kiram,</div> <div id="T1bm" class="txs">saboo kiram na wanna on ko on ummanaaki.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bn" class="txs">Kummbo Jallo</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/03 ful cont vol2.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

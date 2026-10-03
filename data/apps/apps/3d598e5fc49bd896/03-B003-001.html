@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>18 BON COMME TU L’AS ÉTÉ 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.93 },
+    { label: "1b", start: 3.18, end: 4.89 },
+    { label: "1c", start: 5.14, end: 9.47 },
+    { label: "1d", start: 9.72, end: 11.77 },
+    { label: "1e", start: 12.02, end: 20.67 },
+    { label: "1f", start: 20.92, end: 31.75 },
+    { label: "1g", start: 32, end: 36.27 },
+    { label: "1h", start: 36.52, end: 44.51 },
+    { label: "1i", start: 44.76, end: 49.09 },
+    { label: "1j", start: 49.34, end: 53.27 },
+    { label: "1k", start: 53.52, end: 56.29 },
+    { label: "1l", start: 56.54, end: 64.21 },
+    { label: "1m", start: 64.46, end: 72.07 },
+    { label: "1n", start: 72.32, end: 83.43 },
+    { label: "1o", start: 83.68, end: 88.07 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 88.07;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;18 BON COMME TU L’AS ÉTÉ&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">18 BON COMME TU L’AS ÉTÉ POUR MOI</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Un proverbe dit :</div> <div id="T1c" class="txs">«&nbsp;<span class="it">Ne fais jamais à quelqu’un ce que tu ne voudrais pas qu’on te fasse</span>&nbsp;».</div> <div id="T1d" class="txs">En <span class="it">mooré</span>, on dit :</div> <div id="T1e" class="txs">«&nbsp;<span class="it">C</span><span class="it">e que tu ne prendras pas pour passer la journée, il ne faut pas le donner à quelqu’un </span><span class="it">pour</span><span class="it"> passer la nuit avec</span>&nbsp;».</div></div>
+<div class="m"><div id="T1f" class="txs">Un homme qui a passé son existence à faire de la vie de son frère un enfer et qui sentait sa mort prochaine appela ce frère et lui dit :</div> <div id="T1g" class="txs">«&nbsp;<span class="it">M</span><span class="it">on cher frère, je sens que mon heure s’approche.</span></div> <div id="T1h" class="txs"><span class="it">Je te confie mon unique fils et je t’exhorte de prendre soin de lui, sois bon et aimable avec lui</span>&nbsp;».</div></div>
+<div class="m"><div id="T1i" class="txs">Son frère qui l’a écouté jusqu’au bout lui répondit :</div> <div id="T1j" class="txs">«&nbsp;<span class="it">O</span><span class="it">h, mon cher grand frère, ne t’en fais pas.</span></div> <div id="T1k" class="txs"><span class="it">Si c’est cela, tu n’as pas à t’inquiéter</span><span class="it">.</span></div><div id="T1l" class="txs"><span class="it"> Je serai bon avec lui exactement comme tu l’as été avec moi quand notre père m’a confié à toi </span>».</div></div>
+<div class="m"><div id="T1m" class="txs">Alors, l’homme se mit à pleurer, car il savait très bien le traitement auquel il avait soumis son frère.</div> <div id="T1n" class="txs">Pensant maintenant que son fils va subir le même sort, il imaginait déjà son calvaire, c’est pourquoi il a commencé à pleurer à sa place.</div> <div id="T1o" class="txs">Il faut donc faire du bien à tout moment, car le monde est petit.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 18  Bon comme tu l as ete pour moi.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

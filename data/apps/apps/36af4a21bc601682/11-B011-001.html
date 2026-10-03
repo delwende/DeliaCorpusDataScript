@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>71 Kunkuuru deel neyel 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 7, end: 11.15 },
+    { label: "1b", start: 11.4, end: 13.25 },
+    { label: "1c", start: 13.5, end: 15.31 },
+    { label: "1d", start: 15.56, end: 17.63 },
+    { label: "1e", start: 17.88, end: 23.01 },
+    { label: "1f", start: 23.26, end: 29.43 },
+    { label: "1g", start: 29.68, end: 33.87 },
+    { label: "1h", start: 34.12, end: 38.11 },
+    { label: "1i", start: 38.36, end: 40.57 },
+    { label: "1j", start: 40.82, end: 41.23 },
+    { label: "1k", start: 41.48, end: 41.93 },
+    { label: "1l", start: 42.18, end: 43.65 },
+    { label: "1m", start: 43.9, end: 48.79 },
+    { label: "1n", start: 49.04, end: 49.61 },
+    { label: "1o", start: 49.86, end: 53.33 },
+    { label: "1p", start: 53.58, end: 56.03 },
+    { label: "1q", start: 56.28, end: 61.17 },
+    { label: "1r", start: 61.42, end: 63.51 },
+    { label: "1s", start: 63.76, end: 65.29 },
+    { label: "1t", start: 65.54, end: 68.51 },
+    { label: "1u", start: 68.76, end: 71.39 },
+    { label: "1v", start: 71.64, end: 74.03 },
+    { label: "1w", start: 74.28, end: 76.81 },
+    { label: "1x", start: 77.06, end: 80.13 },
+    { label: "1y", start: 80.38, end: 83.29 },
+    { label: "1z", start: 83.54, end: 85.29 },
+    { label: "1aa", start: 85.54, end: 88.63 },
+    { label: "1ab", start: 88.88, end: 93.85 },
+    { label: "1ac", start: 94.1, end: 102.95 },
+    { label: "1ad", start: 103.2, end: 104.85 },
+    { label: "1ae", start: 105.1, end: 108.03 },
+    { label: "1af", start: 108.28, end: 110.35 },
+    { label: "1ag", start: 110.6, end: 112.09 },
+    { label: "1ah", start: 112.34, end: 114.67 },
+    { label: "1ai", start: 114.92, end: 119.31 },
+    { label: "1aj", start: 119.56, end: 123.35 },
+    { label: "1ak", start: 123.6, end: 129.71 },
+    { label: "1al", start: 129.96, end: 135.51 },
+    { label: "1am", start: 135.76, end: 136.83 },
+    { label: "1an", start: 137.08, end: 139.97 },
+    { label: "1ao", start: 140.22, end: 141.57 },
+    { label: "1ap", start: 141.82, end: 144.57 },
+    { label: "1aq", start: 144.82, end: 148.55 },
+    { label: "1ar", start: 148.8, end: 151.41 },
+    { label: "1as", start: 151.66, end: 154.97 },
+    { label: "1at", start: 155.22, end: 161.73 },
+    { label: "1au", start: 161.98, end: 170.99 },
+    { label: "1av", start: 171.24, end: 173.01 },
+    { label: "1aw", start: 173.26, end: 177.83 },
+    { label: "1ax", start: 178.08, end: 179.79 },
+    { label: "1ay", start: 180.04, end: 182.29 },
+    { label: "1az", start: 182.54, end: 187.15 },
+    { label: "1ba", start: 187.4, end: 189.55 },
+    { label: "1bb", start: 189.8, end: 192.91 },
+    { label: "1bc", start: 193.16, end: 195.77 },
+    { label: "1bd", start: 196.02, end: 200.05 },
+    { label: "1be", start: 200.3, end: 203.35 },
+    { label: "1bf", start: 203.6, end: 207.31 },
+    { label: "1bg", start: 207.56, end: 208.43 },
+    { label: "1bh", start: 208.68, end: 216.37 },
+    { label: "1bi", start: 216.62, end: 219.15 },
+    { label: "1bj", start: 219.4, end: 222.97 },
+    { label: "1bk", start: 223.22, end: 227.41 },
+    { label: "1bl", start: 227.66, end: 230.35 },
+    { label: "1bm", start: 230.6, end: 233.41 },
+    { label: "1bn", start: 233.66, end: 235.25 },
+    { label: "1bo", start: 235.5, end: 239.13 },
+    { label: "1bp", start: 239.38, end: 241.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 7;
+var stopTime  = 241.39;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;71 Kunkuuru deel neyel&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">71 </span><span class="bd">Kunkuuru deel neyel</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Waɗiino e jamaanuuji,</div> <div id="T1c" class="txs">Alla hokku en jamaanuuji lobbi.</div> <div id="T1d" class="txs">Sukaaɓe ɗiɗo njaadannoo.</div> <div id="T1e" class="txs">Wari nyannde gom ɓe ndewi debbo neejo na yaha weendu.</div> <div id="T1f" class="txs">Ɓe njottinoo ɓulli ni debbo neejo itti ndiyam heɓa wiccoo.</div></div>
+<div class="m"><div id="T1g" class="txs">Neyyel fuɗɗi wiccaade.</div> <div id="T1h" class="txs">Muuyi yigganeede kunkuurum.</div> <div id="T1i" class="txs">Heddii noddi suka gooto:</div> <div id="T1j" class="txs">"Hey,</div> <div id="T1k" class="txs">cukalel,</div> <div id="T1l" class="txs">war yigganam."</div> <div id="T1m" class="txs">Suka debbo ndaari kunkuuru neyyel faa wooɗi de siiɓii:</div> <div id="T1n" class="txs">"Kay,</div> <div id="T1o" class="txs">min kaa mi yiggataa kunkuuru tuunundu ndu.</div> <div id="T1p" class="txs">Ndaa ndu wa'i"!</div></div>
+<div class="m"><div id="T1q" class="txs">Deel neyyel waɗi ba nanay fay gootum.</div> <div id="T1r" class="txs">O wi'i suka ɗiɗaɓo o,</div> <div id="T1s" class="txs">wara yiggana o.</div> <div id="T1t" class="txs">Cukalel wari.</div> <div id="T1u" class="txs">Na yigga.</div> <div id="T1v" class="txs">Na yigga.</div> <div id="T1w" class="txs">O yoppi o wi'i maama,</div> <div id="T1x" class="txs">kunkuuru maa luuro waɗi.</div> <div id="T1y" class="txs">Neyyel jaabii:</div> <div id="T1z" class="txs">" Ɗume woni toon&nbsp;?</div> <div id="T1aa" class="txs">O wi'i ɓiɓɓe polle.</div> <div id="T1ab" class="txs">Neyyel wi'i ittu ɓiɓɓe polle ɗeen waddu.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ac" class="txs">Cukalel itti ɓiɓɓe polle hokki deel neyyel de fuɗɗiti yiggude.</div> <div id="T1ad" class="txs">Ni na yigga.</div> <div id="T1ae" class="txs">O watti o wi'i kunkuuru maa waɗii luuro,</div> <div id="T1af" class="txs">maama.</div> <div id="T1ag" class="txs">Neyyel jaabii:</div> <div id="T1ah" class="txs">" Ɗume woni toon&nbsp;?</div> <div id="T1ai" class="txs">O wi'i yo gawri muutiri nji'um toon.</div> <div id="T1aj" class="txs">Neyyel wi'i ittu ndi waddu.</div></div>
+<div class="m"><div id="T1ak" class="txs">Heddii o nokki gawri ndi o hokki deel neyyel.</div> <div id="T1al" class="txs">Neyyel itti gabbe muutiri ndi runni cukalel ngel de wi'i ngel:</div> <div id="T1am" class="txs">"Cukalel,</div> <div id="T1an" class="txs">a anndi koo weendu ndu na nyanngi.</div> <div id="T1ao" class="txs">Ko hewtii ma fu,</div> <div id="T1ap" class="txs">ittaa wabbere wootere paɗɗaa.</div> <div id="T1aq" class="txs">Alla jaɓii a heddataako.</div> <div id="T1ar" class="txs">Ni deel neyyel dilli.</div> <div id="T1as" class="txs">Sukaaɓe ɓe du adi laawol wuro.</div></div>
+<div class="m"><div id="T1at" class="txs">Illa cukaloy mboɗɗaaki ni ɓoy nji'i peeƴal na ɗuuti ɓoy.</div> <div id="T1au" class="txs">Peeƴal fuuntunoo e maɓɓe ni cukalel itti wabbere muutiri faɗɗi.</div> <div id="T1av" class="txs">Ni wuumoore diri ommbi,</div> <div id="T1aw" class="txs">heedi hakkunde maɓɓe e peeƴal.</div> <div id="T1ax" class="txs">Heddii ɓe ndaɗiri nih.</div> <div id="T1ay" class="txs">Ni na ɓe njaha.</div> <div id="T1az" class="txs">Ɓe ngari ɓe ceeki ladde heɓa ɓe njottilawoo wuro.</div> <div id="T1ba" class="txs">Jaka ɗo ɓe ndewi ɗo,</div> <div id="T1bb" class="txs">ɓunndu woni ɗoon de ɓe anndaa.</div> <div id="T1bc" class="txs">Huɗo uddi hunnduko ɓunndu fu.</div> <div id="T1bd" class="txs">Ɓe njottinoo ni ɓe mboɓɓii nder ɓunndu.</div></div>
+<div class="m"><div id="T1be" class="txs">Walaa fu ko walaa nder ɓunndu.</div> <div id="T1bf" class="txs">Ko hulataa Alla tan won walaa toon.</div> <div id="T1bg" class="txs">A anndaa,</div> <div id="T1bh" class="txs">bolle ɗe luwe ɓuri ɗudde naa laddeeji ndafaaɗi mboɓɓiiɗi toon ɓuri ɗudde.</div> <div id="T1bi" class="txs">Ɗo ɓe ndaari fu,</div> <div id="T1bj" class="txs">hunnduko aarii heɓa moɗa ɓe.</div> <div id="T1bk" class="txs">Cukalel itti wabbere muutiri wootere faɗɗi.</div> <div id="T1bl" class="txs">Ni ɗum faɗɗaa yaasi ɓunndu.</div> <div id="T1bm" class="txs">Jaadom du heddii nder ɓunndu,</div> <div id="T1bn" class="txs">boneeji nyaami ɗum.</div></div>
+<div class="m"><div id="T1bo" class="txs">Ndelle so suka yeddii mawɗo ni mimsitan.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bp" class="txs">Raamata Bari</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/11 Ful cont Absa.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

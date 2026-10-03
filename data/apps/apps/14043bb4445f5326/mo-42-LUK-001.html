@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luk 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1", start: 0, end: 9.77 },
+    { label: "2", start: 10.02, end: 18.33 },
+    { label: "3", start: 18.58, end: 31.51 },
+    { label: "4", start: 31.76, end: 36.45 },
+    { label: "5", start: 36.7, end: 50.91 },
+    { label: "6", start: 51.16, end: 63.23 },
+    { label: "7", start: 63.48, end: 70.71 },
+    { label: "8", start: 70.96, end: 74.71 },
+    { label: "9", start: 74.96, end: 83.47 },
+    { label: "10", start: 83.72, end: 88.35 },
+    { label: "11", start: 88.6, end: 94.35 },
+    { label: "12", start: 94.6, end: 99.43 },
+    { label: "13", start: 99.68, end: 112.51 },
+    { label: "14", start: 112.76, end: 117.47 },
+    { label: "15", start: 117.72, end: 130.07 },
+    { label: "16", start: 130.32, end: 134.71 },
+    { label: "17", start: 134.96, end: 149.65 },
+    { label: "18", start: 149.9, end: 159.91 },
+    { label: "19", start: 160.16, end: 169.71 },
+    { label: "20", start: 169.96, end: 183.19 },
+    { label: "21", start: 183.44, end: 189.71 },
+    { label: "22", start: 189.96, end: 201.43 },
+    { label: "23", start: 201.68, end: 205.59 },
+    { label: "24", start: 205.84, end: 213.45 },
+    { label: "25", start: 213.7, end: 225.95 },
+    { label: "26", start: 226.2, end: 233.27 },
+    { label: "27", start: 233.52, end: 241.03 },
+    { label: "28", start: 241.28, end: 249.27 },
+    { label: "29", start: 249.52, end: 254.71 },
+    { label: "30", start: 254.96, end: 263.67 },
+    { label: "31", start: 263.92, end: 269.71 },
+    { label: "32", start: 269.96, end: 280.11 },
+    { label: "33", start: 280.36, end: 286.75 },
+    { label: "34", start: 287, end: 292.23 },
+    { label: "35", start: 292.48, end: 307.51 },
+    { label: "36", start: 307.76, end: 318.83 },
+    { label: "37", start: 319.08, end: 323.79 },
+    { label: "38", start: 324.04, end: 334.27 },
+    { label: "39", start: 334.52, end: 341.25 },
+    { label: "40", start: 341.5, end: 345.19 },
+    { label: "41", start: 345.44, end: 353.41 },
+    { label: "42", start: 353.66, end: 362.47 },
+    { label: "43", start: 362.72, end: 367.61 },
+    { label: "44", start: 367.86, end: 373.91 },
+    { label: "45", start: 374.16, end: 382.93 },
+    { label: "46", start: 383.18, end: 388.07 },
+    { label: "47", start: 388.32, end: 393.27 },
+    { label: "48", start: 393.52, end: 408.07 },
+    { label: "49", start: 408.32, end: 415.59 },
+    { label: "50", start: 415.84, end: 423.63 },
+    { label: "51", start: 423.88, end: 430.39 },
+    { label: "52", start: 430.64, end: 434.15 },
+    { label: "53", start: 434.4, end: 443.51 },
+    { label: "54", start: 443.76, end: 450.03 },
+    { label: "55", start: 450.28, end: 457.71 },
+    { label: "56", start: 457.96, end: 464.47 },
+    { label: "57", start: 464.72, end: 469.19 },
+    { label: "58", start: 469.44, end: 477.61 },
+    { label: "59", start: 477.86, end: 486.37 },
+    { label: "60", start: 486.62, end: 491.03 },
+    { label: "61", start: 491.28, end: 496.63 },
+    { label: "62", start: 496.88, end: 503.47 },
+    { label: "63", start: 503.72, end: 509.87 },
+    { label: "64", start: 510.12, end: 516.27 },
+    { label: "65", start: 516.52, end: 525.87 },
+    { label: "66", start: 526.12, end: 536.87 },
+    { label: "67", start: 537.12, end: 541.83 },
+    { label: "68", start: 542.08, end: 548.67 },
+    { label: "69", start: 548.92, end: 556.17 },
+    { label: "70", start: 556.42, end: 562.39 },
+    { label: "71", start: 562.64, end: 568.27 },
+    { label: "72", start: 568.52, end: 577.79 },
+    { label: "73", start: 578.04, end: 584.91 },
+    { label: "74", start: 585.16, end: 594.63 },
+    { label: "75", start: 594.88, end: 600.79 },
+    { label: "76", start: 601.04, end: 612.23 },
+    { label: "77", start: 612.48, end: 617.75 },
+    { label: "78", start: 618, end: 626.35 },
+    { label: "79", start: 626.6, end: 631.79 },
+    { label: "80", start: 632.04, end: 642.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 24 }];
+var hasIntro = false;
+var baseRef  = "mo-42-LUK-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='mo-41-MRK-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='mo-41-MRK-016.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Luk&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='mo-42-LUK-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='mo-43-JHN-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+<div class="mt3"><span class="mt3">A Luk koe-noogã</span></div>
+<div class="b"></div>
+<div class="b"></div>
+
+<div class="s"><div id="s1">Koɛɛg a Teofill yĩnga</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">1</div> <div id="T1" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Neb wʋsg maoome n gʋls bũmb nins sẽn da zĩnd tõnd sʋkã,</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>a wa sẽn zems neb nins sẽn da yãa yellã hal a sɩngrẽ n lebg Wẽnnaam koe-moaandbã sẽn wilg tõndã.</div><span id="bookmarks2"></span> <a id="v3"></a><div id="T3" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>Teofill sõngo, mam sẽn fees bõn-kãens fãa hal b sɩngrẽ n bãng b sẽn yɩ to-to wã, mam tẽedame tɩ yaa neer tɩ mam me gʋls n tʋm yãmba,</div><span id="bookmarks3"></span> <a id="v4"></a><div id="T4" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>tɩ yãmb tõe n bãng sɩd tɩ bũmb nins yãmb sẽn da zãmsã yaa sɩda.</div><span id="bookmarks4"></span></div>
+
+<div class="s"><div id="s2">Malɛk pĩnd n togsa a Zãmbatiis rogem</div></div><span id="bookmarks4"></span><a id="v5"></a>
+<div class="p"><div id="T5" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Zude soolem naab Herood zamaanẽ, maan-kʋʋd a yembr n da bõe tɩ b boond a t'a Zakari, la a Yaa a Abiya buudu, la a pagã Yaa a Aarõ yagenga, t'a yʋʋr boondẽ t'a Elizabɛte.</div><span id="bookmarks5"></span> <a id="v6"></a><div id="T6" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>Bãmb b yiibã fãa yaa nin-tɩrs Wẽnnaam taoore. Bãmb saka Zu-soabã noorã ne b tõogã fãa tɩ ned ka tõe n dõd-b ye.</div><span id="bookmarks6"></span> <a id="v7"></a><div id="T7" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>La bãmb ka tar biig ye. Tɩ bõe a Elizabɛt da yaa kiiri, la bãmb b yiibã fãa kʋʋlame.</div><span id="bookmarks7"></span></div><span id="bookmarks7"></span><a id="v8"></a>
+<div class="p"><div id="T8" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>La a Zakari wakat taame t'a na n maan maan-kʋʋr tʋʋmd Wẽnnaam taoore.</div><span id="bookmarks8"></span> <a id="v9"></a><div id="T9" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>La bãmb maana bãnde, la bãndã yãka yẽnda wa sẽn zems maan-kʋʋdbã minungã t'a kẽ Wẽnnaam doogã pʋgã n yõog wisdu.</div><span id="bookmarks9"></span> <a id="v10"></a><div id="T10" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Zãma wã fãa ra bee yɩng n pʋʋsdẽ wisdã yõogr wakate.</div><span id="bookmarks10"></span> <a id="v11"></a><div id="T11" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>La Zu-soabã malɛk waa a Zakari nengẽ n yals wisdã yõogr tẽn-kugr dɩtgo.</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>La a Zakari sẽn yã malɛkã, a yɛɛsame tɩ rabeem yõk-a.</div><span id="bookmarks12"></span> <a id="v13"></a><div id="T13" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>La malɛkã yeela yẽnda yaa :</div></div>
+<div class="p">«&nbsp;Zakari, da zoe rabeem ye, bala, Wẽnnaam leoka fo pʋʋsgo. Fo pag a Elizabɛt na n doga bi-ribla, la bɩ f pʋd a yʋʋr t'a Zã.<span id="bookmarks13"></span> <a id="v14"></a><div id="T14" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>Fo na n paama sũ-no-kãseng yẽ yĩnga, la neb wʋsg na n paama sũ-noog a rogmã yĩnga.</div><span id="bookmarks14"></span> <a id="v15"></a><div id="T15" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>Bala, yẽ na n yɩɩ Zu-soabã nin-kãsenga, la a ka na n yũ rãam bɩ bũmb sẽn yilimd neng ye. La Sɩɩg-sõng na n pida yẽnda sẽn deng a ma sẽn na ka rog-a.</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>La Israyɛll yagens wʋsg na n deega Zu-soab a Wẽnnaam a Zã tʋʋmdã yĩnga.</div><span id="bookmarks16"></span> <a id="v17"></a><div id="T17" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>Yẽ na n kẽna Wẽnnaam taoor ne a Eli sɩɩgã la a pãngã, la a kɩt tɩ kamb ne b ba-rãmb zems taaba, la a wilg zãgsdbã tɩ b paam yam wa nin-tɩrse, la a segl neb Zu-soabã waoong yĩnga.</div><span id="bookmarks17"></span></div><span id="bookmarks17"></span><a id="v18"></a>
+<div class="p"><div id="T18" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>A Zakari soka malɛkã yaa : «&nbsp;Mam na n yɩɩ wãn n bãng bõn-kãnga&nbsp;? Bala, mam yaa nin-kẽema la mam pagã me kʋʋlame.</div><span id="bookmarks18"></span> <a id="v19"></a><div id="T19" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>La malɛkã leoka yẽnda yaa : «&nbsp;Mam Yaa a Gabiryɛll sẽn be Wẽnnaam taoore. Bãmb tʋma maam tɩ m wa gom ne foom la m togs foom koe-no-kãnga.</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>La gese, fo na n lebga muka, n ka le tõog n gom hal tɩ ta daar ning bõn-kãens sẽn na n pidsã, fo sẽn ka tẽ mam goamã yĩnga. La a wakat sãn ta, bãmb na n pids-a lame.&nbsp;»</div><span id="bookmarks20"></span></div><span id="bookmarks20"></span><a id="v21"></a>
+<div class="p"><div id="T21" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Wakat-kãnga, nebã gũu a Zakari yiib n sãmbd sẽn ya bũmb ning tɩ yẽ kaoosd Wẽnnaam doogẽ wã woto.</div><span id="bookmarks21"></span> <a id="v22"></a><div id="T22" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>La a sẽn yi, a ka tõe n gom ne bãmb ye, la bãmb mikame t'a yãa bõn-bãnd Wẽnnaam doogẽ wã. Yẽ bilsa bãmb ne a nusi, la a ket n yaa muka.</div><span id="bookmarks22"></span> <a id="v23"></a><div id="T23" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>La yẽ sẽn maan a tʋʋmd n sɛ, a kuila a yiri.</div><span id="bookmarks23"></span></div><span id="bookmarks23"></span><a id="v24"></a>
+<div class="p"><div id="T24" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>La ra-kãens sẽn looge, yẽ pag a Elizabɛt dɩka pʋga, la yẽ ka togs ned hal tɩ ta kiis a nu.</div><span id="bookmarks24"></span> <a id="v25"></a><div id="T25" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>La yẽ yeelame yaa : Ad bũmb ning Zu-soabã sẽn maan n kõ maam wakat ning bãmb sẽn yãk yam n dat n yiis bũmb ning sẽn da ya mam yãnd nebã sʋkã.&nbsp;»</div><span id="bookmarks25"></span></div>
+
+<div class="s"><div id="s3">Malɛk pĩnd n togsa a Zezi rogem</div></div><span id="bookmarks25"></span><a id="v26"></a>
+<div class="p"><div id="T26" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>La kiis a yoob soabã sẽn ta, Wẽnnaam tʋma malɛk a Gabiryɛll Galile tẽng a yembr sẽn boond tɩ Nazarɛte,</div><span id="bookmarks26"></span> <a id="v27"></a><div id="T27" class="txs"><span class="v">27</span><span class="vsp">&nbsp;</span>pʋg-sad a ye nengẽ, b sẽn da rɩk n kõ a Daviid yageng a Zozefo. Pʋg-sadã yʋʋr la a Maari.</div><span id="bookmarks27"></span> <a id="v28"></a><div id="T28" class="txs"><span class="v">28</span><span class="vsp">&nbsp;</span>Malɛkã waa a Maari nengẽ n yeele : «&nbsp;Mam pʋʋsda foom, fo sẽn ya ned Wẽnnaam sẽn barkã. Zu-soabã bee ne foom.&nbsp;»</div><span id="bookmarks28"></span> <a id="v29"></a><div id="T29" class="txs"><span class="v">29</span><span class="vsp">&nbsp;</span>La yẽ sẽn wʋm koe-kãnga, a yɛɛsa yẽnda t'a tagsdẽ tɩ pʋʋs-kãng yaa bõe pʋʋsgo.</div><span id="bookmarks29"></span> <a id="v30"></a><div id="T30" class="txs"><span class="v">30</span><span class="vsp">&nbsp;</span>Malɛkã yeela yẽnda yaa :</div></div>
+<div class="p">«&nbsp;Maari, da zoe rabeem ye, bala, Wẽnnaam bark bee ne foom.<span id="bookmarks30"></span> <a id="v31"></a><div id="T31" class="txs"><span class="v">31</span><span class="vsp">&nbsp;</span>La gese, fo na n dɩka pʋg n dog bi-ribla, n pʋd a yʋʋr t'a Zezi.</div><span id="bookmarks31"></span> <a id="v32"></a><div id="T32" class="txs"><span class="v">32</span><span class="vsp">&nbsp;</span>A na n yɩɩ nin-kãsengã, la b na n boond-a lame tɩ Sẽn-ka-a-to Biiga, la Zu-soab a Wẽnnaam na n kõo yẽ a yaab a Daviid naam.</div><span id="bookmarks32"></span> <a id="v33"></a><div id="T33" class="txs"><span class="v">33</span><span class="vsp">&nbsp;</span>Yẽ na n sooga a Zakoob buudã wakat fãa la a soolem ka na n sɛ abada.</div><span id="bookmarks33"></span> <a id="v34"></a><div id="T34" class="txs"><span class="v">34</span><span class="vsp">&nbsp;</span>A Maari soka malɛkã yaa : «&nbsp;Bõn-kãng na n yɩɩ wãn n zĩnd tɩ nan ka mi raoa&nbsp;?&nbsp;»</div><span id="bookmarks34"></span> <a id="v35"></a><div id="T35" class="txs"><span class="v">35</span><span class="vsp">&nbsp;</span>Malɛkã leoka yẽnda yaa : «&nbsp;Sɩɩg-sõng na n waa fo zugu, la Sẽn-ka-a-to pãng na n buii foom. Woto yĩnga, bi-sõng ning fo sẽn na n dogã, b na n boonda yẽd tɩ Wẽnnaam Biiga.</div><span id="bookmarks35"></span></div><span id="bookmarks35"></span><a id="v36"></a>
+<div class="p"><div id="T36" class="txs"><span class="v">36</span><span class="vsp">&nbsp;</span>Gese, fo kẽem a Elizabɛt me rɩka pʋg a kʋʋlem wakate, la a na n doga bi-ribla. B ra yetame t'a yaa kiri, la a tara kiis a yoob pʋg masã.</div><span id="bookmarks36"></span> <a id="v37"></a><div id="T37" class="txs"><span class="v">37</span><span class="vsp">&nbsp;</span>Bala, bũmb ka be Wẽnnaam sẽn ka tõe ye.&nbsp;»</div><span id="bookmarks37"></span> <a id="v38"></a><div id="T38" class="txs"><span class="v">38</span><span class="vsp">&nbsp;</span>A Maari yeelame yaa : «&nbsp;Mam yaa Zu-soabã tʋmtʋm-poaka. Bɩ y kɩt t'a yɩ woto ne maam wa yãmb sẽn yeelã.&nbsp;»</div></div>
+<div class="p">La malɛkã loogame n bas-a.<span id="bookmarks38"></span></div>
+
+<div class="s"><div id="s4">Maari kẽnga a Elizabɛt nengẽ</div></div><span id="bookmarks38"></span><a id="v39"></a>
+<div class="p"><div id="T39" class="txs"><span class="v">39</span><span class="vsp">&nbsp;</span>Wakat-kãnga, a Maari yikame n kẽng tao-tao n t'a Zude soolem tẽng a yembr sẽn be tãens sʋka.</div><span id="bookmarks39"></span> <a id="v40"></a><div id="T40" class="txs"><span class="v">40</span><span class="vsp">&nbsp;</span>Yẽ kẽe a Zakari zakẽ n pʋʋs a Elizabɛte.</div><span id="bookmarks40"></span> <a id="v41"></a><div id="T41" class="txs"><span class="v">41</span><span class="vsp">&nbsp;</span>La Elizabɛt sẽn wʋm a Maari pʋʋsgã, biigã sẽn be yẽ pʋgẽ wã lebgame, la a Elizabɛt pida ne Sɩɩg-sõngo.</div><span id="bookmarks41"></span> <a id="v42"></a><div id="T42" class="txs"><span class="v">42</span><span class="vsp">&nbsp;</span>Yẽ zẽka a koɛɛg n yeele :</div></div>
+<div class="p">«&nbsp;Wẽnnaam ninga fo zug bark pagbã fãa sʋka. La fo biigã yaa bark biiga.<span id="bookmarks42"></span> <a id="v43"></a><div id="T43" class="txs"><span class="v">43</span><span class="vsp">&nbsp;</span>A yɩɩ wãn tɩ m Zu-soabã ma wa wat m nengẽ&nbsp;?</div><span id="bookmarks43"></span> <a id="v44"></a><div id="T44" class="txs"><span class="v">44</span><span class="vsp">&nbsp;</span>Bala, gese, mam sẽn wʋm fo pʋʋsgã, biigã sẽn be mam pʋgẽ wã lebgame, sũ-noog yĩnga.</div><span id="bookmarks44"></span> <a id="v45"></a><div id="T45" class="txs"><span class="v">45</span><span class="vsp">&nbsp;</span>Bark bee ned ning sẽn tẽ wã zugu, bala, bũmb nins Zu-soabã sẽn togs yẽnda wã na n paama pidsgu.&nbsp;»</div><span id="bookmarks45"></span></div>
+
+<div class="s"><div id="s5">A Maari yɩɩlle</div></div><span id="bookmarks45"></span><a id="v46"></a>
+<div class="p"><div id="T46" class="txs"><span class="v">46</span><span class="vsp">&nbsp;</span>La a Maari yeelame yaa : Mam pẽgda Zu-soabã ne m sũur fãa.</div><span id="bookmarks46"></span> <a id="v47"></a><div id="T47" class="txs"><span class="v">47</span><span class="vsp">&nbsp;</span>La mam Sɩɩgã paama sũ-noog Wẽnnaam mam fãagdã yĩnga,</div><span id="bookmarks47"></span> <a id="v48"></a><div id="T48" class="txs"><span class="v">48</span><span class="vsp">&nbsp;</span>bãmb sẽn ges b tʋmtʋm-poakã a talemd pʋgẽ wã yĩnga. Bala, sẽn sɩng masã, zamaan fãa nebã na n yeelame tɩ bark bee ma zugu.</div><span id="bookmarks48"></span> <a id="v49"></a><div id="T49" class="txs"><span class="v">49</span><span class="vsp">&nbsp;</span>Bala, Wẽnnaam Sẽn-tõe-fãa maana bõn-kãsems mam yĩnga. Bãmb yʋʋr yaa sõngo,</div><span id="bookmarks49"></span> <a id="v50"></a><div id="T50" class="txs"><span class="v">50</span><span class="vsp">&nbsp;</span>la bãmb zoeta neb nins sẽn zoet Bãmbã nimbãaneg wakat fãa.</div><span id="bookmarks50"></span> <a id="v51"></a><div id="T51" class="txs"><span class="v">51</span><span class="vsp">&nbsp;</span>Bãmb wilga b pãng ne b kanga, la bãmb sãeega tɩtaam dãmbã.</div><span id="bookmarks51"></span> <a id="v52"></a><div id="T52" class="txs"><span class="v">52</span><span class="vsp">&nbsp;</span>Bãmb luba rĩm-dãmba, la b zẽka nin-talse.</div><span id="bookmarks52"></span> <a id="v53"></a><div id="T53" class="txs"><span class="v">53</span><span class="vsp">&nbsp;</span>Bãmb kɩtame tɩ kom sẽn tar-b rãmbã tɩg ne bũm-noodo. La bãmb kɩtame tɩ arzegs rãmbã loog zaalem.</div><span id="bookmarks53"></span> <a id="v54"></a><div id="T54" class="txs"><span class="v">54</span><span class="vsp">&nbsp;</span>Bãmb sõnga Israyɛll nebã sẽn ya b tʋmtʋmdbã. Bãmb tẽega</div><span id="bookmarks54"></span> <a id="v55"></a><div id="T55" class="txs"><span class="v">55</span><span class="vsp">&nbsp;</span>a Abraham ne a yagensã yell wakat fãa n maan-b neer wa b sẽn da yeel tõnd yaab-rãmbã.</div><span id="bookmarks55"></span> <a id="v56"></a><div id="T56" class="txs"><span class="v">56</span><span class="vsp">&nbsp;</span>A Maari zĩnda ne a Elizabɛt n kolg kiis a tãab n yaool n kuili. A Zãmbatiis rogem</div><span id="bookmarks56"></span></div>
+
+<div class="s"><div id="s6">A Zãmbatiis rogem</div></div><span id="bookmarks56"></span><a id="v57"></a>
+<div class="p"><div id="T57" class="txs"><span class="v">57</span><span class="vsp">&nbsp;</span>La a Elizabɛt rogem wakat taame t'a rog bi-ribla.</div><span id="bookmarks57"></span> <a id="v58"></a><div id="T58" class="txs"><span class="v">58</span><span class="vsp">&nbsp;</span>La a yagsã ne a roagdbã wʋmame tɩ Zu-soabã zoee a nimbãanega, la bãmb lagma ne-a n maan sũ-noogo.</div><span id="bookmarks58"></span></div><span id="bookmarks58"></span><a id="v59"></a>
+<div class="p"><div id="T59" class="txs"><span class="v">59</span><span class="vsp">&nbsp;</span>Dasem a nii daar sẽn ta, bãmb waame n na n kẽes biigã bãongo. La bãmb pʋda a yʋʋr t'a Zakari wa a ba yʋʋre,</div><span id="bookmarks59"></span> <a id="v60"></a><div id="T60" class="txs"><span class="v">60</span><span class="vsp">&nbsp;</span>la a ma wã yeelame yaa : «&nbsp;Ayo, pʋd-y-yã a yʋʋr t'a Zã.&nbsp;»</div><span id="bookmarks60"></span> <a id="v61"></a><div id="T61" class="txs"><span class="v">61</span><span class="vsp">&nbsp;</span>Bãmb yeela yẽnda yaa : «&nbsp;Fo roagdbã ned baa a ye ka tar yʋ-kãng ye.</div><span id="bookmarks61"></span> <a id="v62"></a><div id="T62" class="txs"><span class="v">62</span><span class="vsp">&nbsp;</span>La bãmb bilga a ba n dat n bãng yẽ sẽn dat tɩ b pʋd a yʋʋr tɩ bũmb ninga.</div><span id="bookmarks62"></span> <a id="v63"></a><div id="T63" class="txs"><span class="v">63</span><span class="vsp">&nbsp;</span>A Zakari kosa walg n gʋls n yeele : «&nbsp;A yʋʋr la a Zã.&nbsp;» La bãmb fãa yɛɛsame.</div><span id="bookmarks63"></span> <a id="v64"></a><div id="T64" class="txs"><span class="v">64</span><span class="vsp">&nbsp;</span>La wakat-kãng bala, a Zakari yaaga a noore, la a zelemd lakame, a yẽ gomame n pẽg Wẽnnaam.</div><span id="bookmarks64"></span> <a id="v65"></a><div id="T65" class="txs"><span class="v">65</span><span class="vsp">&nbsp;</span>Dabeem yõka a yagsa fãa. Koe-kãens saagame n ta Zude soolem tẽns fãa sẽn be tãens sũkã, la nebã goma bõn-kãens fãa yell ne taaba.</div><span id="bookmarks65"></span> <a id="v66"></a><div id="T66" class="txs"><span class="v">66</span><span class="vsp">&nbsp;</span>La neb nins fãa sẽn wʋmã bĩnga koe-kãens b sũyã pʋs n yeele : «&nbsp;Bi-kãngã na n yɩɩ bõe biiga&nbsp;?&nbsp;» La Zu-soabã bark bee ne-a.</div><span id="bookmarks66"></span></div>
+
+<div class="s"><div id="s7">A Zakari bãngr goama</div></div><span id="bookmarks66"></span><a id="v67"></a>
+<div class="p"><div id="T67" class="txs"><span class="v">67</span><span class="vsp">&nbsp;</span>La yẽ ba a Zakari pida ne Sɩɩg-sõngo, la yẽ togsa bãngr goam n yeele :</div><span id="bookmarks67"></span> <a id="v68"></a><div id="T68" class="txs"><span class="v">68</span><span class="vsp">&nbsp;</span>Pẽgr Zu-soabã sẽn ya Israyɛll Wẽnnaamã, bãmb sẽn wa n fãag b nebã yĩnga.</div><span id="bookmarks68"></span> <a id="v69"></a><div id="T69" class="txs"><span class="v">69</span><span class="vsp">&nbsp;</span>La bãmb kõo tõnd Fãagd sẽn ya kãsenga, sẽn yi bãmb tʋmtʋmd a Daviide buud sʋka.</div><span id="bookmarks69"></span> <a id="v70"></a><div id="T70" class="txs"><span class="v">70</span><span class="vsp">&nbsp;</span>Wa bãmb sẽn da togs ne b no-rɛɛs-sõmyã wã noy hal kʋdemd wakatã,</div><span id="bookmarks70"></span> <a id="v71"></a><div id="T71" class="txs"><span class="v">71</span><span class="vsp">&nbsp;</span>bãmb yaa Fãagda sẽn fãagd tõnd ne d bɛɛbã la ne neb nins fãa sẽn kis tõndã.</div><span id="bookmarks71"></span> <a id="v72"></a><div id="T72" class="txs"><span class="v">72</span><span class="vsp">&nbsp;</span>Yaa woto la bãmb wilg b nimbãan-zoeer ne tõnd yaab-rãmbã, la bãmb tẽega bãmb kãab-sõngã.</div><span id="bookmarks72"></span> <a id="v73"></a><div id="T73" class="txs"><span class="v">73</span><span class="vsp">&nbsp;</span>Bãmb da wẽena ne tõnd yaab a Abraham n yeel tɩ</div><span id="bookmarks73"></span> <a id="v74"></a><div id="T74" class="txs"><span class="v">74</span><span class="vsp">&nbsp;</span>tõnd na n paama fãagr d bɛɛbã nugẽ, la bãmb na n kõo tõnd pãng tɩ d sak bãmba tɩ rabeem kaẽ ye,</div><span id="bookmarks74"></span> <a id="v75"></a><div id="T75" class="txs"><span class="v">75</span><span class="vsp">&nbsp;</span>la d kẽn bãmb taoor daar fãa ne sõmblem la tɩrlem d yõor tɛka.</div><span id="bookmarks75"></span> <a id="v76"></a><div id="T76" class="txs"><span class="v">76</span><span class="vsp">&nbsp;</span>La biiga, b na n boola foom tɩ Sẽn-ka-a-to no-rɛɛsa. Bala, fo na n renga Zu-soabã taoor n maneg bãmb soayã,</div><span id="bookmarks76"></span> <a id="v77"></a><div id="T77" class="txs"><span class="v">77</span><span class="vsp">&nbsp;</span>N vẽneg bãmb nebã ne b fãagrã sẽn wat ne b yel-wẽnã sugrã yelle.</div><span id="bookmarks77"></span> <a id="v78"></a><div id="T78" class="txs"><span class="v">78</span><span class="vsp">&nbsp;</span>Yaa tõnd Wẽnnaam nimbãan-zoeerã yĩng la b kɩt tɩ vẽenem sẽn wẽnd wĩntoog yi yĩngr n wa tõnd nengẽ,</div><span id="bookmarks78"></span> <a id="v79"></a><div id="T79" class="txs"><span class="v">79</span><span class="vsp">&nbsp;</span>n kõ neb nins sẽn be lik ne kũum maasmẽ wã vẽenem, la a wilg tõnd tɩ d tũ laafɩ sore.</div><span id="bookmarks79"></span></div><span id="bookmarks79"></span><a id="v80"></a>
+<div class="p"><div id="T80" class="txs"><span class="v">80</span><span class="vsp">&nbsp;</span>La biigã bɩtame la a yam paasdame. La a zĩnda weoogẽ hal tɩ ta daar ning a sẽn puk Israyɛll nebã sʋkã.</div><span id="bookmarks80"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/MHMBSBN2DA/B03___01_Luc_________MHMBSBN2DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

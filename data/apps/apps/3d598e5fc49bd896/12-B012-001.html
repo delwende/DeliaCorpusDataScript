@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>27 LE SINGE ET LES 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.73 },
+    { label: "1b", start: 2.98, end: 5.75 },
+    { label: "1c", start: 6, end: 15.11 },
+    { label: "1d", start: 15.36, end: 22.67 },
+    { label: "1e", start: 22.92, end: 38.13 },
+    { label: "1f", start: 38.38, end: 43.67 },
+    { label: "1g", start: 43.92, end: 48.73 },
+    { label: "1h", start: 48.98, end: 58.27 },
+    { label: "1i", start: 58.52, end: 66.35 },
+    { label: "1j", start: 66.6, end: 73.55 },
+    { label: "1k", start: 73.8, end: 81.91 },
+    { label: "1l", start: 82.16, end: 83.21 },
+    { label: "1m", start: 83.46, end: 89.81 },
+    { label: "1n", start: 90.06, end: 94.39 },
+    { label: "1o", start: 94.64, end: 102.37 },
+    { label: "1p", start: 102.62, end: 112.07 },
+    { label: "1q", start: 112.32, end: 121.37 },
+    { label: "1r", start: 121.62, end: 132.37 },
+    { label: "1s", start: 132.62, end: 148.31 },
+    { label: "1t", start: 148.56, end: 162.63 },
+    { label: "1u", start: 162.88, end: 166.55 },
+    { label: "1v", start: 166.8, end: 171.95 },
+    { label: "1w", start: 172.2, end: 179.25 },
+    { label: "1x", start: 179.5, end: 185.11 },
+    { label: "1y", start: 185.36, end: 197.79 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 197.79;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "12-B012-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='11-B011-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;27 LE SINGE ET LES&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B012-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">27 LE SINGE ET LES LIONCEAUX</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Une leçon de morale au roi</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs">Fils du roi de la forêt, un lionceau est un prince parmi tous les petits animaux de la contrée.</div></div>
+<div class="m"><div id="T1d" class="txs">Comme tout bon prince sur le territoire de son père, il n’y a pas de zone interdite.</div> <div id="T1e" class="txs">C’est dans cette logique que les petits du lion se baladaient partout et se pavanaient dans tous les coins de la forêt, car leur père leur avait rassuré que rien ne leur arriverait.</div></div>
+<div class="m"><div id="T1f" class="txs">Chaque jour, les lionceaux étaient abandonnés à eux-mêmes.</div> <div id="T1g" class="txs">Seulement cette liberté ne plaisait pas au singe.</div></div>
+<div class="m"><div id="T1h" class="txs">C’est ainsi qu’à chaque fois qu’il rencontrait les petits lionceaux, rodant seuls, il leur faisait la morale :</div> <div id="T1i" class="txs">«&nbsp;<span class="it">D</span><span class="it">i</span><span class="it">tes à votre père de mieux s’occuper de vous en essayant de vous encadrer.</span></div> <div id="T1j" class="txs"><span class="it">Sinon, un jour vous pourrez être victime d’un hors la loi</span>&nbsp;».</div> <div id="T1k" class="txs">Mais quand les lionceaux rendaient compte à leur père, celui-ci rougissait et répondait :</div> <div id="T1l" class="txs">«&nbsp;<span class="it">Bêtise</span><span class="it"> !</span></div><div id="T1m" class="txs"><span class="it"> Ce petit </span><span class="it">prétentieux</span><span class="it"> saura de quel bois je me chauffe si je le croise.</span></div> <div id="T1n" class="txs"><span class="it">Qui osera toucher à un des poils de l’un de vous ?</span></div> <div id="T1o" class="txs"><span class="it">Je suis le roi de la forêt et vous, mes enfants, êtes des princes de ce lieu.</span></div> <div id="T1p" class="txs"><span class="it">Celui qui ose, verra qu’on n’offense pas les princes sur le territoire de leur père.</span></div> <div id="T1q" class="txs"><span class="it">On dit généralement que rien n’arrive à un petit scorpion gisant sur le dos de sa mère</span>&nbsp;».</div></div>
+<div class="m"><div id="T1r" class="txs">Les petits retournaient chaque fois dire au singe que le lion n’avait peur de personne et qu’ils étaient en sécurité.</div> <div id="T1s" class="txs">Comme cela se répétait, le singe décida de montrer au roi lion que «&nbsp;<span class="it">le plus fort n’est jamais assez fort pour dominer les autres que s’il </span><span class="it">transforme</span><span class="it"> souvent son droit en devoir</span>&nbsp;».</div></div>
+<div class="m"><div id="T1t" class="txs">Il chercha des fouets (bois verts), saisit les lionceaux dans leur errance et  les frappa de telle sorte qu’ils perdirent connaissance.</div> <div id="T1u" class="txs">Au même moment, le lion survint.</div> <div id="T1v" class="txs">Le singe sauta sur les branches de l’arbre le plus proche.</div> <div id="T1w" class="txs">Le lion qui ne pouvait pas y accéder se mit à rougir autour.</div> <div id="T1x" class="txs">Il finit par se fatiguer et partit sans pouvoir se venger.</div></div>
+<div class="m"><div id="T1y" class="txs">Le singe donna par-là la preuve que quel que soit le pouvoir qu’on a, il faut toujours le subordonner à la prudence.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 27 le singe et les lionceaux.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 A liɓataa kam, mi 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.38, end: 17.41 },
+    { label: "1b", start: 17.66, end: 30.24 },
+    { label: "1c", start: 30.49, end: 42.17 },
+    { label: "1d", start: 42.42, end: 53.2 },
+    { label: "1e", start: 53.45, end: 65.58 },
+    { label: "1f", start: 65.83, end: 76.14 },
+    { label: "1g", start: 76.39, end: 88.14 },
+    { label: "1h", start: 88.39, end: 99.48 },
+    { label: "1i", start: 99.73, end: 110.62 },
+    { label: "1j", start: 110.88, end: 122.31 },
+    { label: "1k", start: 122.56, end: 131.44 },
+    { label: "1l", start: 131.69, end: 137.67 },
+    { label: "1m", start: 137.92, end: 150.13 },
+    { label: "1n", start: 150.38, end: 169.32 },
+    { label: "1o", start: 169.57, end: 180.8 },
+    { label: "1p", start: 181.05, end: 192.44 },
+    { label: "1q", start: 192.69, end: 207.03 },
+    { label: "1r", start: 207.28, end: 218.02 },
+    { label: "1s", start: 218.27, end: 229.66 },
+    { label: "1t", start: 229.91, end: 239.91 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 3.38;
+var stopTime  = 239.91;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1 A liɓataa kam, mi&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">1 A liɓataa kam, mi liɓataa ma : ɗuum kay, on kulondir.</div></div>
+<div class="m"><div id="T1b" class="txs">2 A waawaa ɓurde neɗɗo toowude, de ɓuraa ɗum raɓɓiɗinde.</div></div>
+<div class="m"><div id="T1c" class="txs">3 A yiɗaa cuule aɗa yiɗi ɓellinngal.</div></div>
+<div class="m"><div id="T1d" class="txs">4 A yiɗaa jollooru, aɗa yiɗi ko woni nder jollooru.</div></div>
+<div class="m"><div id="T1e" class="txs">5 Acciraaɗo ngam Alla, dewgal mum hoyataa.</div></div>
+<div class="m"><div id="T1f" class="txs">6 Acciroowo ngam Alla, ɗakkete.</div></div>
+<div class="m"><div id="T1g" class="txs">7 Aɗa yiɗi nananeede ba egguɗo nagge woote.</div></div>
+<div class="m"><div id="T1h" class="txs">8 Aɗa anndi ko kaalataa, de a anndaa ko njaabeteɗaa.</div></div>
+<div class="m"><div id="T1i" class="txs">9 Aɗa diwna ba ɗokko hocci gite.</div></div>
+<div class="m"><div id="T1j" class="txs">10 Aɗa metti fay seeɗa e reedu.</div></div>
+<div class="m"><div id="T1k" class="txs">11 Aɗa waawi wi’ude a yiɗaa njuumndi, de a waawaa wi’ude njumndi welaa.</div></div>
+<div class="m"><div id="T1l" class="txs">12 Aduna ɓuri kural yaawude.</div></div>
+<div class="m"><div id="T1m" class="txs">13 Aduna hannde laatoke pobbi, ndu hen fu, nangana hoore mum.</div></div>
+<div class="m"><div id="T1n" class="txs">14 Aduna hannde o, so a wi'ii ngoonga tan kaalataa, no junuubaaji maa pamɗiri fuh, na tawu yigraaɓe maa da ɓuri famɗude.</div></div>
+<div class="m"><div id="T1o" class="txs">15 Aduna wanaa jinni de na hulɓina.</div></div>
+<div class="m"><div id="T1p" class="txs">16 Aduna yo lacol soltooru : nanngee, ɓora.</div></div>
+<div class="m"><div id="T1q" class="txs">17 Adunaaru hannde wuuraanaa nguurndam laddeeji : wootoru fu filanoo hoore muuɗum.</div></div>
+<div class="m"><div id="T1r" class="txs">18 Alhaali na ɓuri bi’aangol.</div></div>
+<div class="m"><div id="T1s" class="txs">19 Alla reenataanaa ndeentiiɗo.</div></div>
+<div class="m"><div id="T1t" class="txs">20 Alla daɗinam e Alla hokkam, wanaa gootum.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/01 prov fulf vol1.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

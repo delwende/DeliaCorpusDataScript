@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poolel 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.61 },
+    { label: "1b", start: 2.86, end: 8.21 },
+    { label: "1c", start: 8.46, end: 11.97 },
+    { label: "1d", start: 12.22, end: 17.51 },
+    { label: "1e", start: 17.76, end: 23.77 },
+    { label: "1f", start: 24.02, end: 33.89 },
+    { label: "1g", start: 34.14, end: 41.61 },
+    { label: "1h", start: 41.86, end: 44.85 },
+    { label: "1i", start: 45.1, end: 50.07 },
+    { label: "1j", start: 50.32, end: 53.23 },
+    { label: "1k", start: 53.48, end: 60.05 },
+    { label: "1l", start: 60.3, end: 75.19 },
+    { label: "1m", start: 75.44, end: 77.43 },
+    { label: "1n", start: 77.68, end: 85.01 },
+    { label: "1o", start: 85.26, end: 89.27 },
+    { label: "1p", start: 89.52, end: 90.97 },
+    { label: "1q", start: 91.22, end: 97.21 },
+    { label: "1r", start: 97.46, end: 99.99 },
+    { label: "1s", start: 100.24, end: 102.15 },
+    { label: "1t", start: 102.4, end: 112.91 },
+    { label: "1u", start: 113.16, end: 115.05 },
+    { label: "1v", start: 115.3, end: 118.45 },
+    { label: "1w", start: 118.7, end: 119.71 },
+    { label: "1x", start: 119.96, end: 129.63 },
+    { label: "1y", start: 129.88, end: 130.63 },
+    { label: "1z", start: 130.88, end: 132.17 },
+    { label: "1aa", start: 132.42, end: 144.59 },
+    { label: "1ab", start: 144.84, end: 146.03 },
+    { label: "1ac", start: 146.28, end: 157.09 },
+    { label: "1ad", start: 157.34, end: 161.05 },
+    { label: "1ae", start: 161.3, end: 170.39 },
+    { label: "1af", start: 170.64, end: 173.51 },
+    { label: "1ag", start: 173.76, end: 181.99 },
+    { label: "1ah", start: 182.24, end: 189.29 },
+    { label: "1ai", start: 189.54, end: 191.15 },
+    { label: "1aj", start: 191.4, end: 193.83 },
+    { label: "1ak", start: 194.08, end: 197.15 },
+    { label: "1al", start: 197.4, end: 208.15 },
+    { label: "1am", start: 208.4, end: 211.29 },
+    { label: "1an", start: 211.54, end: 212.27 },
+    { label: "1ao", start: 212.52, end: 218.31 },
+    { label: "1ap", start: 218.56, end: 224.59 },
+    { label: "1aq", start: 224.84, end: 228.57 },
+    { label: "1ar", start: 228.82, end: 235.39 },
+    { label: "1as", start: 235.64, end: 237.27 },
+    { label: "1at", start: 237.52, end: 243.91 },
+    { label: "1au", start: 244.16, end: 247.03 },
+    { label: "1av", start: 247.28, end: 249.23 },
+    { label: "1aw", start: 249.48, end: 250.27 },
+    { label: "1ax", start: 250.52, end: 252.97 },
+    { label: "1ay", start: 253.22, end: 253.99 },
+    { label: "1az", start: 254.24, end: 256.43 },
+    { label: "1ba", start: 256.68, end: 256.68 },
+    { label: "1bb", start: 256.84, end: 258.97 },
+    { label: "1bc", start: 259.22, end: 262.31 },
+    { label: "1bd", start: 262.56, end: 262.59 },
+    { label: "1be", start: 262.84, end: 266.23 },
+    { label: "1bf", start: 266.48, end: 266.48 },
+    { label: "1bg", start: 266.68, end: 272.05 },
+    { label: "1bh", start: 272.3, end: 272.35 },
+    { label: "1bi", start: 272.6, end: 273.75 },
+    { label: "1bj", start: 274, end: 277.29 },
+    { label: "1bk", start: 277.54, end: 278.89 },
+    { label: "1bl", start: 279.14, end: 285.45 },
+    { label: "1bm", start: 285.7, end: 292.01 },
+    { label: "1bn", start: 292.26, end: 293.55 },
+    { label: "1bo", start: 293.8, end: 294.63 },
+    { label: "1bp", start: 294.88, end: 294.88 },
+    { label: "1bq", start: 295.12, end: 296.07 },
+    { label: "1br", start: 296.32, end: 296.91 },
+    { label: "1bs", start: 297.16, end: 301.03 },
+    { label: "1bt", start: 301.28, end: 302.03 },
+    { label: "1bu", start: 302.28, end: 304.11 },
+    { label: "1bv", start: 304.36, end: 308.89 },
+    { label: "1bw", start: 309.14, end: 310.81 },
+    { label: "1bx", start: 311.06, end: 315.39 },
+    { label: "1by", start: 315.64, end: 317.15 },
+    { label: "1bz", start: 317.4, end: 334.01 },
+    { label: "1ca", start: 334.26, end: 341.01 },
+    { label: "1cb", start: 341.26, end: 345.01 },
+    { label: "1cc", start: 345.26, end: 348.81 },
+    { label: "1cd", start: 349.06, end: 351.83 },
+    { label: "1ce", start: 352.08, end: 356.35 },
+    { label: "1cf", start: 356.6, end: 358.27 },
+    { label: "1cg", start: 358.52, end: 359.11 },
+    { label: "1ch", start: 359.36, end: 362.11 },
+    { label: "1ci", start: 362.36, end: 363.47 },
+    { label: "1cj", start: 363.72, end: 367.11 },
+    { label: "1ck", start: 367.36, end: 368.79 },
+    { label: "1cl", start: 369.04, end: 371.25 },
+    { label: "1cm", start: 371.5, end: 377.17 },
+    { label: "1cn", start: 377.42, end: 379.23 },
+    { label: "1co", start: 379.48, end: 382.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 382.39;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Poolel&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetitre"><div id="T1a" class="txs">Poolel</div></div>
+<div class="p_contetexte"><div id="T1b" class="txs">Nyannde gooɗom, goɗɗo na wi'e Laamɗo.</div> <div id="T1c" class="txs">O waɗi ngesa ɓenndunga sanne.</div> <div id="T1d" class="txs">Gure ton fu, ngesa makko ɓuri ɓenndude.</div> <div id="T1e" class="txs">Tan nyannde gom pooli fu mbi'i njahan nyaamowa ngesa Laamɗo.</div></div>
+<div class="p_contetexte"><div id="T1f" class="txs">Tawi Poolel gootel gooɗom, pooli ngari panti ɗum, mbi'i ɗum war nyaamowen ngesa Laamɗo.</div> <div id="T1g" class="txs">Tawi poolel ngel le, kam kay leeɓelel fu walaa, gilla rimanoo fay leeɓolol walaa; wi'i noy ngaɗan-mi kom yaha&nbsp;?</div> <div id="T1h" class="txs">Fay leeɓolol mi walaa; mi waawaa tokkude on.</div> <div id="T1i" class="txs">Tan pooli fu kawriti, mono fu itti leeɓolol wuƴii ngel.</div> <div id="T1j" class="txs">Jaɓu leeɓelel leeɓelel de tokkaa min.</div></div>
+<div class="p_contetexte"><div id="T1k" class="txs">Pooli fu kokki ɗum leeɓolol leeɓolol faa kam du heɓi leeɓi, tan fiiri tokki pooli.</div> <div id="T1l" class="txs">Ɓe njehi ngesa Laamɗo, ɓe nyaama, pooli ɗin na nyaama na nyaama, na nyaama, faa jom ngesa du, Laamɗo on, nde warno fu, waɗi: "Huu!"</div> <div id="T1m" class="txs">Tan pooli fu piiri.</div> <div id="T1n" class="txs">Piiruɗo fu, wara to poolel teeta leeɓol mum dillida.</div> <div id="T1o" class="txs">Ɗi fu ɗi teeti leebololji majji tan Poolel heddii walaa leebol fay gootol.</div> <div id="T1p" class="txs">Saami ley ngesa.</div></div>
+<div class="p_contetexte"><div id="T1q" class="txs">Tan jom ngesa, mbiiteeɗo Laamɗo on, yottii tawi poolel na fukkii.</div> <div id="T1r" class="txs">Wi'i Poolel, ɗume ngattaa ɗo&nbsp;?</div> <div id="T1s" class="txs">Tan Poolel jaabii wi'i o: </div></div>
+<div class="p_contetexte"><div id="T1t" class="txs"><span class="it">Pooli fu piiri njoppi kam gesel Laamɗo</span><span class="it"><br/></span><span class="it">Ko liililoo</span><span class="it"><br/></span><span class="it">Teeti kam leeɓoloy mum</span><span class="it"><br/></span><span class="it">Ko liililoo.</span></div></div>
+<div class="p_contetexte"><div id="T1u" class="txs">Fu Laamɗo on wii mo: "Noy&nbsp;?</div> <div id="T1v" class="txs">Poolel, yimu mi nana gadin."</div> <div id="T1w" class="txs">Tan poolel wi'a:</div></div>
+<div class="p_contetexte"><div id="T1x" class="txs"><span class="it">Pooli fu piiri njoppi kam gesel Laamɗo</span><span class="it"><br/></span><span class="it">Ko liililoo</span><span class="it"><br/></span><span class="it">Teeti kam leeɓoloy mum</span><span class="it"><br/></span><span class="it">Ko liililoo.</span></div></div>
+<div class="p_contetexte"><div id="T1y" class="txs">Ɓii!</div> <div id="T1z" class="txs">jimol ngol welii mo sanne.</div> <div id="T1aa" class="txs">Tan o hooƴi poolel, o hoori suudu makko, baade makko, o watti ɗum ley lukaare makko, o wi'i poolel yimu gatin mi nana.</div> <div id="T1ab" class="txs">Tan polel wi'i:</div></div>
+<div class="p_contetexte"><div id="T1ac" class="txs"><span class="it">Pooli fu piiri njoppi kam gesel Laamɗo</span><span class="it"><br/></span><span class="it">Ko liililoo</span><span class="it"><br/></span><span class="it">Teeti kam leeɓoloy mum</span><span class="it"><br/></span><span class="it">Ko liililoo.</span></div></div>
+<div class="p_contetexte"><div id="T1ad" class="txs">Tan o ommbi lukaare.</div></div>
+<div class="p_contetexte"><div id="T1ae" class="txs">Suubaka fu, si o dawa tan o wara o wi'a poolel yimana mo; poolel yimana mo, tan o ommba.</div> <div id="T1af" class="txs">Poolel na won ley lukaare na nyaama gawri, na nyaama.</div> <div id="T1ag" class="txs">Subaka fu poolel na yimana mo, na weli mo, ni poolel na nyaama, ni leeɓi muuɗum na puɗa, ni poolel na nyaama, leeɓi muuɗum na puɗa.</div> <div id="T1ah" class="txs">Faa nyannde gom wari o yuurnii o ndaari o tawi wallaahi Poolel ngel joonin kay fayii sanne.</div> <div id="T1ai" class="txs">Waɗii leeɓi.</div> <div id="T1aj" class="txs">Jon kay o muuyii nyaamde ɗum.</div> <div id="T1ak" class="txs">O waɗi na yima: </div></div>
+<div class="p_contetexte"><div id="T1al" class="txs"><span class="it">Pooli fu piiri njoppi kam gesel Laamɗo</span><span class="it"><br/></span><span class="it">Ko liililoo</span><span class="it"><br/></span><span class="it">Teeti kam leeɓoloy mum</span><span class="it"><br/></span><span class="it">Ko liililoo.</span></div></div>
+<div class="p_contetexte"><div id="T1am" class="txs">O ommbi o wi'i joonin kay Poolel yonii nyaameede.</div></div>
+<div class="p_contetexte"><div id="T1an" class="txs">Timmii.</div> <div id="T1ao" class="txs">O yehi ladde fa o teenowa leɗɗe jon kay o wara o duppa Poolel makko sabu mawnii.</div> <div id="T1ap" class="txs">Nde o dillunoo fu deekiraaɓe makko ɗiɗo ngari; kamɓen du, na nanannoo weeti fu poolel na yimana mo.</div> <div id="T1aq" class="txs">Tan njottii mbi'i: "Poolel, yiman min minen du nih."</div> <div id="T1ar" class="txs">Poolel wi'i mi yimataa si wanaa omton kam mi yi'a yaasin hannden kay; ɓe mbi'i wooɗii; wurta!</div> <div id="T1as" class="txs">Poolel wurtii, yimani ɓe faa wooɗi:</div></div>
+<div class="p_contetexte"><div id="T1at" class="txs"><span class="it">Pooli fu piiri njoppi kam gesel Laamɗo</span><span class="it"><br/></span><span class="it">Ko liililoo</span><span class="it"><br/></span><span class="it">Teeti kam leeɓoloy mum</span><span class="it"><br/></span><span class="it">Ko liililoo.</span></div></div>
+<div class="p_contetexte"><div id="T1au" class="txs">Ɓe mbi'i wallaahi Poolel, aɗa weli daande, yimu gadin.</div> <div id="T1av" class="txs">Poolel wi'i accee kam mi hoɗa dow suudu min du mi foofa seeɗa.</div> <div id="T1aw" class="txs">Ɓe mbi'i wooɗii.</div></div>
+<div class="p_contetexte"><div id="T1ax" class="txs">Poolel wurtii hoɗi dow suudu ton; ɓe mbi'i yimu ni poolel.</div> <div id="T1ay" class="txs">Poolel wi'i wooɗii:</div></div>
+<div class="p_contetexte"><div id="T1az" class="txs"><span class="it">Pooli fu piiri njoppi kam gesel Laamɗo</span><span class="it"><br/></span><span class="it">Ko liililoo</span><span class="it"><br/></span><span class="it">Teeti kam leeɓoloy mum</span><span class="it"><br/></span><span class="it">Ko liililoo.</span></div></div>
+<div class="p_contetexte"><div id="T1ba" class="txs">Ɓe mbi'i: "Ɓii!</div> <div id="T1bb" class="txs">Poolel, aɗa weli daande, yiman min gati; min cawtaay.</div> <div id="T1bc" class="txs">Poolel wi'i accee kam mi hoɗa dow yooboonde suudu, min du, mi foofa seeɗa.</div> <div id="T1bd" class="txs">Ɓe mbi'i wooɗii.</div></div>
+<div class="p_contetexte"><div id="T1be" class="txs">Poolel wurtii hoɗi dow yooboode suudu ton; ɓe mbi'i yimu ni poolel.</div> <div id="T1bf" class="txs">Polel wi'i wooɗii:</div></div>
+<div class="p_contetexte"><div id="T1bg" class="txs"><span class="it">Pooli fu piiri njoppi kam gesel Laamɗo</span><span class="it"><br/></span><span class="it">Ko liililoo</span><span class="it"><br/></span><span class="it">Teeti kam leeɓoloy mum</span><span class="it"><br/></span><span class="it">Ko liililoo.</span></div></div>
+<div class="p_contetexte"><div id="T1bh" class="txs">Ɓe mbi'i: "Ɓii!</div> <div id="T1bi" class="txs">Poolel, aɗa weli daande, yiman min gati, min cawtaay.</div> <div id="T1bj" class="txs">Poolel wi'i: "Accee mi ndaara yalla miɗo waawi fiirude faa mi yottoo lekki ki, mi warta.</div> <div id="T1bk" class="txs">Ɓe mbi'i yaw, ngaraa.</div></div>
+<div class="p_contetexte"><div id="T1bl" class="txs">Poolel fiiri faa woɗɗowii, yottii gadin, hoɗi; ɓe mbi'i ɗum yima tan yimani ɓe faa weli ɓe.</div> <div id="T1bm" class="txs">Poolel wi'i accee mi fiira faa mi yaha to dey, mi wara; ɓe mbi'i yaw de ngaraa.</div> <div id="T1bn" class="txs">Poolel fiiri.</div> <div id="T1bo" class="txs">Na ɓe nji'a na yaha.</div> <div id="T1bp" class="txs">Hey!</div> <div id="T1bq" class="txs">Poolel wartu nih.</div> <div id="T1br" class="txs">Toy!</div> <div id="T1bs" class="txs">Poolel kay ɓe nji'aay ɗum gadin, halkowii. </div></div>
+<div class="p_contetexte"><div id="T1bt" class="txs">Ngoonga!</div> <div id="T1bu" class="txs">ɓe anndaa fu noy ɓe ngatta.</div> <div id="T1bv" class="txs">Ɓe anndi goriiɓe wartii fu, woolde na won ɗoon.</div> <div id="T1bw" class="txs">Jon kay noy ɓe ngatta&nbsp;?</div> <div id="T1bx" class="txs">Ɓe ommbi lukaare, ɓe naati jonkay ley ladde ɓe piloo Poolel.</div> <div id="T1by" class="txs">Ɓe njiitaay Poolel.</div> <div id="T1bz" class="txs">Ɓe njehi ley gese; ɓe piloo ɓe nji'aay, si wanaa ɓe kawri ɓe nanngi, dulguwal ɓe ngari ɓe ngatti ley lukaare ɓe ommbi.</div></div>
+<div class="p_contetexte"><div id="T1ca" class="txs">Wanaa haala, gorko mawɗo du wartowi faa jemma; muuyaay Poolel yimana ɗum jemma ndeen.</div> <div id="T1cb" class="txs">Fukkini leɗɗe muuɗum, acci faa weeti.</div> <div id="T1cc" class="txs">Yottinoo fu, omtaay lukaare fey de wi'i: "Poolel yimanam."</div> <div id="T1cd" class="txs">Tawi dulguwal won ton, wi'i:</div></div>
+<div class="p_contetexte"><div id="T1ce" class="txs"><span class="it">Duduk, dudduk, duk</span><span class="it"><br/></span><span class="it">Ɓiɓɓe am kakondiri cobbe belɗe mi haaraay.</span></div></div>
+<div class="p_contetexte"><div id="T1cf" class="txs">O wi'i: “Hey!</div> <div id="T1cg" class="txs">ɗume won ɗum&nbsp;?</div> <div id="T1ch" class="txs">Poolel, yimu, yimu mi nana nih!"</div> <div id="T1ci" class="txs">Dulguwal wi'i:</div></div>
+<div class="p_contetexte"><div id="T1cj" class="txs"><span class="it">Duduk, dudduk, duk</span><span class="it"><br/></span><span class="it">Ɓiɓɓe am kakondiri cobbe belɗe mi haaraay.</span></div></div>
+<div class="p_contetexte"><div id="T1ck" class="txs">O wi'i: “Ko won ɗum&nbsp;?"</div> <div id="T1cl" class="txs">O omti o tawi dulguwal.</div> <div id="T1cm" class="txs">O nanngi ɗum o fii looci de o naati o sankiti deekiraaɓe makko.</div></div>
+<div class="p_contetexte"><div id="T1cn" class="txs">Ni wonno haddi taalol ngol.</div></div>
+<div class="p_Conteur"><div id="T1co" class="txs">Tijjaani Ba</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/04_Poolel.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5E2900">
+<title>Introduction 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 0;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">Introduction</span></div>
+<div class="m">Un mot à l’endroit des responsables de jeunesse, des enseignants et des parents.</div>
+<div class="m">Dans certains pays d'Afrique, plus de la moitié de notre jeunesse n'atteindra pas l'âge de 40 ans. Pourquoi&nbsp;? Parce qu'ils ont contracté une maladie qu'ils ne méritaient pas - le SIDA. Elle a mis fin à leur vie et à celle de leurs partenaires sexuels avant qu'ils n'aient commencé leur vie d'adulte.</div>
+<div class="m">Lorsque ceci arrive, nous avons échoué tous à leur éducation. Nous n'avons pas aimé notre jeunesse au point de lui donner des faits clairs, honnêtes sur le SIDA et ses modes de transmission au sein des communautés ; surtout sur les rapports sexuels. Souvent notre culture, nos peurs, et notre manque de compréhension nous empêchent de parler à nos jeunes et de les guider comme il le faut. En tant que parents, enseignants et responsables de jeunesse, la responsabilité d'éducation des jeunes nous incombe. Il est important de donner à manger à un adolescent. Il est autant important de l'aider à préserver sa santé.</div>
+<div class="m">Cette application permettra de leur venir en aide. Il s'agit d'un guide qui expose le plan merveilleux de Dieu pour la vie sexuelle d'une personne jeune. Obéir au plan de Dieu dans le cadre des rapports sexuels est la meilleure stratégie de prévention contre le SIDA.</div>
+<div class="m">Cette application est destinée à l'usage des parents, d'enseignants, moniteurs d'école de dimanche, aux encadreurs de jeunes et aux jeunes eux-mêmes. Les questions traitées sont des problèmes que chaque jeune rencontre : grandir, comprendre les parents, faire face à la pression des pairs, gérer sa sexualité.</div>
+<div class="m">L’appli comporte 8 chapitres comprenant chacun deux récits : un récit tiré de la vie communautaire et l'autre de la Parole de Dieu. Nous vous encourageons à réfléchir sur ces récits et à échanger avec les jeunes. Ensuite, vous renforcerez leur compréhension sur les questions telles que la pression des pairs, la sexualité, et le SIDA. Enfin, il sera demandé aux jeunes, dans chaque chapitre, d'appliquer sur ce qu’ils ont appris. Nous apprenons mieux en réfléchissant.</div>
+<div class="m">Tout en étudiant et en appliquant ce qu'ils ont appris sur le sexe et la vérité de Dieu, nous prions pour que nos jeunes valorisent et choisissent la vie.</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>2) Bu telinliebu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.85 },
+    { label: "1b", start: 1.1, end: 7.51 },
+    { label: "1c", start: 7.76, end: 19.63 },
+    { label: "1d", start: 19.88, end: 77.59 },
+    { label: "1e", start: 77.84, end: 118.81 },
+    { label: "1f", start: 119.06, end: 126.43 },
+    { label: "1g", start: 126.68, end: 142.43 },
+    { label: "1h", start: 142.68, end: 153.75 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 153.75;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2) Bu telinliebu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">2) </span><span class="bd">Bu </span><span class="bd">telinliebu</span>.</div></div>
+<div class="m"><div id="T1b" class="txs">Kunkuli leni kulijagmargu n den ye.</div></div>
+<div class="m"><div id="T1c" class="txs">Dayenli kunkuli n yedi kulijagmargu n bua han ciani pianbabado denpo min ban piani n coda.</div></div>
+<div class="m"><div id="T1d" class="txs">Wan yedi too la pia tagili kulijagmargu didi sua ke kunkuli tie taaceli yo wan jagi ke oba gedi ki han o kunkuli n yedi o wan cedi saala li ya fa ban yegi ki gedi wan yie kunkuli mo n yedi o ke la pia tagili ki mo n ban duotani o kunkulilieba ban caligi u sanu hali ki ban pundi pianmoabado deni kulijagmaro n ta usanu osua ke i kani kuli kunkula n caligi.</div></div>
+<div class="m"><div id="T1e" class="txs">Kulijagmaro wani pundi yo ki sua ke kunkuli ka ki piandi o coda wan da go bigi ki bua bandi kunkuli ya ye likani bi o ye wan cili i yani kunkuli n bantuo opo hali pianbabado deni wan didi go yugi ki ban jagini bu cancantibu po ki yini kunkuli n ban tuo hali deni.</div> <div id="T1f" class="txs">O pali n be wan waani ke o kan go piani.</div></div>
+<div class="m"><div id="T1g" class="txs">Lani n kunkuli n pia a coda ya mo n yugi tabi o puoli lan kpandi tua bon fangu la coda n ye kulijagmargu po hali dinle.</div></div>
+<div class="m"><div id="T1h" class="txs">I tundi yi ya pia kundi kundi tielo yi dogu nni kali yua kuli nfaami o bonhanla o na hani.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/02 CONTE.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

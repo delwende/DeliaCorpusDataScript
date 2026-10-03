@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6 Bolokelen ti bugu cɛ 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.87 },
+    { label: "1b", start: 4.12, end: 6.85 },
+    { label: "1c", start: 7.1, end: 10.35 },
+    { label: "1d", start: 10.6, end: 13.77 },
+    { label: "1e", start: 14.02, end: 18.73 },
+    { label: "1f", start: 18.98, end: 21.79 },
+    { label: "1g", start: 22.04, end: 24.81 },
+    { label: "1h", start: 25.06, end: 30.45 },
+    { label: "1i", start: 30.7, end: 33.63 },
+    { label: "1j", start: 33.88, end: 37.21 },
+    { label: "1k", start: 37.46, end: 41.93 },
+    { label: "1l", start: 42.18, end: 46.23 },
+    { label: "1m", start: 46.48, end: 51.21 },
+    { label: "1n", start: 51.46, end: 55.21 },
+    { label: "1o", start: 55.46, end: 61.59 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 61.59;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;6 Bolokelen ti bugu cɛ&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">6</span><span class="bd"> </span><span class="bd">Bolokelen</span><span class="bd"> ti </span><span class="bd">bugu</span><span class="bd"> </span><span class="bd">cɛ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="it">L’union fait la force</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Bolokelen ti bugu cɛ</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">7</span><span class="bd"> </span><span class="bd">Cɛɛ</span><span class="bd"> ma </span><span class="bd">ɲi</span><span class="bd"> </span><span class="bd">cɛɛ</span><span class="bd"> bolo</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">Quoi de plus vilain quand un homme torture un autre homme</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">Cɛɛ ma ɲi cɛɛ bolo</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">8</span><span class="bd"> </span><span class="bd">Cɛya</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">gundo</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1h" class="txs"><span class="it">La qualité d’homme mérite qu’on garde certains secrets</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">Cɛya ye gundo ye</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">9</span><span class="bd"> </span><span class="bd">Daan bi fali kuu sama na</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1k" class="txs"><span class="it">Il faut de la modération dans toute chose</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">Daan bi fali kuu sama na</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">10</span><span class="bd"> </span><span class="bd">Digi</span><span class="bd"> </span><span class="bd">daan</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">dɛnɛ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1n" class="txs"><span class="it">Toute oppression a une limite</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">Digi</span><span class="bd"> </span><span class="bd">daan</span><span class="bd"> </span><span class="bd">ye</span><span class="bd"> </span><span class="bd">dɛnɛ</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/prov_vol1_06_a_10.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

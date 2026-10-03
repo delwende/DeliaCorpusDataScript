@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°6 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.87 },
+    { label: "1b", start: 2.12, end: 4.29 },
+    { label: "1c", start: 4.54, end: 5.41 },
+    { label: "1d", start: 5.66, end: 12.55 },
+    { label: "1e", start: 12.8, end: 13.67 },
+    { label: "1f", start: 13.92, end: 20.19 },
+    { label: "1g", start: 20.44, end: 22.67 },
+    { label: "1h", start: 22.92, end: 24.99 },
+    { label: "1i", start: 25.24, end: 27.67 },
+    { label: "1j", start: 27.92, end: 30.29 },
+    { label: "1k", start: 30.54, end: 32.11 },
+    { label: "1l", start: 32.36, end: 33.43 },
+    { label: "1m", start: 33.68, end: 35.77 },
+    { label: "1n", start: 36.02, end: 37.91 },
+    { label: "1o", start: 38.16, end: 39.49 },
+    { label: "1p", start: 39.74, end: 40.43 },
+    { label: "1q", start: 40.68, end: 42.19 },
+    { label: "1r", start: 42.44, end: 44.77 },
+    { label: "1s", start: 45.02, end: 46.31 },
+    { label: "1t", start: 46.56, end: 51.35 },
+    { label: "1u", start: 51.6, end: 52.55 },
+    { label: "1v", start: 52.8, end: 53.45 },
+    { label: "1w", start: 53.7, end: 54.67 },
+    { label: "1x", start: 54.92, end: 56.99 },
+    { label: "1y", start: 57.24, end: 59.49 },
+    { label: "1z", start: 59.74, end: 63.61 },
+    { label: "1aa", start: 63.86, end: 66.85 },
+    { label: "1ab", start: 67.1, end: 68.53 },
+    { label: "1ac", start: 68.78, end: 71.71 },
+    { label: "1ad", start: 71.96, end: 73.33 },
+    { label: "1ae", start: 73.58, end: 77.03 },
+    { label: "1af", start: 77.28, end: 78.35 },
+    { label: "1ag", start: 78.6, end: 82.07 },
+    { label: "1ah", start: 82.32, end: 83.67 },
+    { label: "1ai", start: 83.92, end: 87.25 },
+    { label: "1aj", start: 87.5, end: 89.77 },
+    { label: "1ak", start: 90.02, end: 91.87 },
+    { label: "1al", start: 92.12, end: 93.91 },
+    { label: "1am", start: 94.16, end: 95.91 },
+    { label: "1an", start: 96.16, end: 102.47 },
+    { label: "1ao", start: 102.72, end: 107.03 },
+    { label: "1ap", start: 107.28, end: 109.39 },
+    { label: "1aq", start: 109.64, end: 114.45 },
+    { label: "1ar", start: 114.7, end: 116.43 },
+    { label: "1as", start: 116.68, end: 118.35 },
+    { label: "1at", start: 118.6, end: 120.25 },
+    { label: "1au", start: 120.5, end: 121.45 },
+    { label: "1av", start: 121.7, end: 126.37 },
+    { label: "1aw", start: 126.62, end: 131.05 },
+    { label: "1ax", start: 131.3, end: 132.97 },
+    { label: "1ay", start: 133.22, end: 136.07 },
+    { label: "1az", start: 136.32, end: 140.47 },
+    { label: "1ba", start: 140.72, end: 142.77 },
+    { label: "1bb", start: 143.02, end: 149.03 },
+    { label: "1bc", start: 149.28, end: 152.19 },
+    { label: "1bd", start: 152.44, end: 157.01 },
+    { label: "1be", start: 157.26, end: 158.15 },
+    { label: "1bf", start: 158.4, end: 161.43 },
+    { label: "1bg", start: 161.68, end: 168.63 },
+    { label: "1bh", start: 168.88, end: 170.55 },
+    { label: "1bi", start: 170.8, end: 172.23 },
+    { label: "1bj", start: 172.48, end: 173.19 },
+    { label: "1bk", start: 173.44, end: 175.11 },
+    { label: "1bl", start: 175.36, end: 179.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 179.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°6&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°6 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Comparez les entrées et les sorties.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="bdit">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Chaque jour Bintou s’occupe de préparer la nourriture pour sa famille avec ce que son mari lui donne.</span></div> <div id="T1e" class="txs"><span class="it">Aujourd’hui,</span></div> <div id="T1f" class="txs"><span class="it">elle veut préparer 3 mesures de riz pour nourrir ses enfants et accueillir les visiteurs.</span></div> <div id="T1g" class="txs"><span class="it">Son mari lui donne 2 mesures de riz.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1h" class="txs">Quel est le problème de Bintou?</div> <div id="T1i" class="txs">Quelles solutions peut-elle trouver?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1j" class="txs">Quand vous pensez à votre foyer,</div> <div id="T1k" class="txs">vous avez compris qu’il y a :</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1l" class="txs"><span class="ul">des entrées</span>:</div> <div id="T1m" class="txs">tout ce qui entre dans votre maison,</div> <div id="T1n" class="txs">ce que vous gagnez (salaire,</div> <div id="T1o" class="txs">bénéfice du commerce,</div> <div id="T1p" class="txs">récolte,</div> <div id="T1q" class="txs">don reçu…).</div> <div id="T1r" class="txs">Ce sont les revenus de la famille.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="ul">des sorties</span>:</div> <div id="T1t" class="txs">tout l’argent ou les biens qui sont utilisés par votre famille (nourriture,</div> <div id="T1u" class="txs">écolage,</div> <div id="T1v" class="txs">maladie,</div> <div id="T1w" class="txs">déplacements,</div> <div id="T1x" class="txs">cas sociaux…).</div> <div id="T1y" class="txs">Ce sont les dépenses de la famille.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1z" class="txs">Si nous comparons les entrées et les sorties d’une famille,</div> <div id="T1aa" class="txs">trois situations sont possibles:</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ab" class="txs"><span class="ul"><span class="it">Situation 1</span></span><span class="it"> </span>:</div> <div id="T1ac" class="txs">Les entrées sont plus grandes que les dépenses.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ad" class="txs"><span class="ul"><span class="it">Situation 2</span></span><span class="it"> </span>:</div> <div id="T1ae" class="txs">Les entrées sont aussi grandes que les dépenses.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1af" class="txs"><span class="ul"><span class="it">Situation 3</span></span><span class="it"> </span>:</div> <div id="T1ag" class="txs">Les entrées sont plus petites que les dépenses.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ah" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1ai" class="txs">Que pensez-vous de chacune de ces 3 situations :</div> <div id="T1aj" class="txs">est-elle bonne ou problématique?</div> <div id="T1ak" class="txs">Quand la situation est mauvaise,</div> <div id="T1al" class="txs">quelle solution doit être trouvée?</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1am" class="txs">Pour être à l’aise,</div> <div id="T1an" class="txs">nous devons au moins chercher l’équilibre entre les entrées et les sorties (<span class="it">situation 2</span>).</div> <div id="T1ao" class="txs">Si les entrées sont plus  grandes que les dépenses (<span class="it">situation 1</span>),</div> <div id="T1ap" class="txs">nous pourrons faire face aux imprévus.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1aq" class="txs">Si les dépenses sont plus grandes que les revenus (<span class="it">situation 3</span>),</div> <div id="T1ar" class="txs">cette situation n’est pas bonne.</div> <div id="T1as" class="txs">Pour résoudre ce problème,</div> <div id="T1at" class="txs">deux solutions sont possibles.</div> <div id="T1au" class="txs">Il faut:</div></div>
+<div class="m"><div id="T1av" class="txs">soit augmenter les entrées (<span class="it">voir les conseils 14 à</span><span class="it"> </span><span class="it">17</span>)</div></div>
+<div class="m"><div id="T1aw" class="txs">soit diminuer les sorties (<span class="it">voir les conseils 8 à</span><span class="it"> </span><span class="it">13</span>)</div></div>
+<div class="p_Corpsdetexte"><div id="T1ax" class="txs">Dans l’histoire de Bintou,</div> <div id="T1ay" class="txs">soit il faut diminuer ce que chacun mange,</div> <div id="T1az" class="txs">soit il faut augmenter ce qu’elle reçoit pour la préparation.</div></div>
+<div class="m"><div id="T1ba" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="m"><div id="T1bb" class="txs">Quelle est la situation de votre famille (<span class="it">situation 1, 2 ou 3</span>)?</div></div>
+<div class="p_Corpsdetexte"><div id="T1bc" class="txs">Si vos dépenses sont beaucoup plus grandes que vos revenus,</div> <div id="T1bd" class="txs">avez-vous des idées pour augmenter les revenus ou diminuer les dépenses?</div></div>
+<div class="m"><div id="T1be" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1bf" class="txs">Comparez les revenus et les dépenses de votre famille.</div> <div id="T1bg" class="txs">Si les sorties (dépenses) sont toujours plus élevées que les entrées (revenus) (<span class="it">situation 3</span>),</div> <div id="T1bh" class="txs">cette situation n’est pas bonne et il faut agir:</div> <div id="T1bi" class="txs">il faut soit augmenter les entrées,</div> <div id="T1bj" class="txs">soit diminuer les sorties.</div> <div id="T1bk" class="txs">La situation ne va pas s’améliorer toute seule.</div> <div id="T1bl" class="txs">Vous devez faire quelque chose!</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/015_Conseil_n6.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

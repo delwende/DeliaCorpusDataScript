@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luk 24</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1", start: 0, end: 11.05 },
+    { label: "2", start: 11.3, end: 15.03 },
+    { label: "3", start: 15.28, end: 18.95 },
+    { label: "4", start: 19.2, end: 26.03 },
+    { label: "5", start: 26.28, end: 35.59 },
+    { label: "6", start: 35.84, end: 45.47 },
+    { label: "7", start: 45.72, end: 56.95 },
+    { label: "8", start: 57.2, end: 59.15 },
+    { label: "9", start: 59.4, end: 67.63 },
+    { label: "10", start: 67.88, end: 80.15 },
+    { label: "11", start: 80.4, end: 84.35 },
+    { label: "12", start: 84.6, end: 99.51 },
+    { label: "13", start: 99.76, end: 108.79 },
+    { label: "14", start: 109.04, end: 111.87 },
+    { label: "15", start: 112.12, end: 118.63 },
+    { label: "16", start: 118.88, end: 123.75 },
+    { label: "17", start: 124, end: 129.79 },
+    { label: "18", start: 130.04, end: 139.51 },
+    { label: "19", start: 139.76, end: 150.99 },
+    { label: "20", start: 151.24, end: 160.43 },
+    { label: "21", start: 160.68, end: 170.99 },
+    { label: "22", start: 171.24, end: 177.67 },
+    { label: "23", start: 177.92, end: 184.55 },
+    { label: "24", start: 184.8, end: 195.63 },
+    { label: "25", start: 195.88, end: 204.35 },
+    { label: "26", start: 204.6, end: 208.27 },
+    { label: "27", start: 208.52, end: 219.31 },
+    { label: "28", start: 219.56, end: 223.79 },
+    { label: "29", start: 224.04, end: 236.15 },
+    { label: "30", start: 236.4, end: 242.67 },
+    { label: "31", start: 242.92, end: 248.79 },
+    { label: "32", start: 249.04, end: 258.31 },
+    { label: "33", start: 258.56, end: 266.03 },
+    { label: "34", start: 266.28, end: 272.43 },
+    { label: "35", start: 272.68, end: 280.35 },
+    { label: "36", start: 280.6, end: 287.85 },
+    { label: "37", start: 288.1, end: 293.33 },
+    { label: "38", start: 293.58, end: 300.15 },
+    { label: "39", start: 300.4, end: 309.11 },
+    { label: "40", start: 309.36, end: 313.35 },
+    { label: "41", start: 313.6, end: 322.91 },
+    { label: "42", start: 323.16, end: 326.71 },
+    { label: "43", start: 326.96, end: 331.59 },
+    { label: "44", start: 331.84, end: 348.33 },
+    { label: "45", start: 348.58, end: 354.09 },
+    { label: "46", start: 354.34, end: 364.65 },
+    { label: "47", start: 364.9, end: 368.63 },
+    { label: "48", start: 368.88, end: 371.15 },
+    { label: "49", start: 371.4, end: 379.91 },
+    { label: "50", start: 380.16, end: 386.55 },
+    { label: "51", start: 386.8, end: 391.35 },
+    { label: "52", start: 391.6, end: 399.39 },
+    { label: "53", start: 399.64, end: 407.39 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 24 }];
+var hasIntro = false;
+var baseRef  = "mo-42-LUK-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='mo-41-MRK-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='mo-42-LUK-023.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Luk&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;24&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='mo-43-JHN-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='mo-43-JHN-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="s1">A Zezi vʋʋgre</div></div>
+<div class="r"><div id="r1">= <span class="reflink"><a href="mo-40-MAT-028.html#v1">Mat 28.1-10</a></span>; <span class="reflink"><a href="mo-41-MRK-016.html#v1">Mar 16.1-8</a></span>; <span class="reflink"><a href="mo-43-JHN-020.html#v1">Zã 20.1-10</a></span> =</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">24</div> <div id="T1" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Yopoe sɩngr daarã yibeoog pĩnda, bãmb kẽnga yaoogẽ wã ne tɩdar zom ning bãmb sẽn dag n seglã.</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>La bãmb yãame tɩ kugrã lakame n bas yaoogã noore.</div><span id="bookmarks2"></span> <a id="v3"></a><div id="T3" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>La bãmb sẽn kẽ, bãmb ka yã Zu-soab a Zezi kũumã ye.</div><span id="bookmarks3"></span> <a id="v4"></a><div id="T4" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>Bãmb sẽn ka mi b sẽn tagsd tɩ bũmb ninga, haya&nbsp;! Raop a yiib ne fut sẽn pɩnd yalsa bãmb sɛɛgẽ.</div><span id="bookmarks4"></span> <a id="v5"></a><div id="T5" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Rabeem yõka bãmb tɩ b yĩgimd n fõgen b nens tẽnga. La raopã soka bãmb yaa : «&nbsp;Yaa bõe tɩ yãmb baood nin-vɩɩg kũum zĩigẽ&nbsp;?</div><span id="bookmarks5"></span> <a id="v6"></a><div id="T6" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>Bãmb ka be ka ye. B vʋʋgame. Bɩ y tẽeg bãmb sẽn da ket n be Galile n gom ne yãmbã, la b sẽn yeel tɩ</div><span id="bookmarks6"></span> <a id="v7"></a><div id="T7" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>yaa tɩlɛ tɩ b yõk Ninsaal Biigã n kõ yel-wẽn-maandb tɩ b ka da-pɩkã zugu, la tɩ b na n vʋʋga rasem a tãab daarã.&nbsp;»</div><span id="bookmarks7"></span> <a id="v8"></a><div id="T8" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>La bãmb tẽega a Zezi goamã.</div><span id="bookmarks8"></span></div><span id="bookmarks8"></span><a id="v9"></a>
+<div class="p"><div id="T9" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>La bãmb yii yaoogã zĩigẽ n lebg n leb piig la a yembrã nengẽ n tɩ togs bãmb ne neb a taabã bõn-kãens fãa.</div><span id="bookmarks9"></span> <a id="v10"></a><div id="T10" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Yaa a Maari sẽn yi Magdala, ne a Zanne, la a Zak ma a Maari, ne pagb a taabã sẽn be ne bãmbã n togs tẽn-tʋmdbã bõn-kãense.</div><span id="bookmarks10"></span> <a id="v11"></a><div id="T11" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>Tẽn-tʋmdbã gesa pagbã goamã wa gom-vɩɩdo, bãmb ka tẽ ye.</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>[La a Pɩyɛɛr yikame n wudg n ta yaoogẽ wã. La yẽ sẽn zõonde, yẽ yãa peen-peelsa sẽn dɩg vɩʋʋgo. La yẽ lebg n leba yiri, la yẽ yɛɛsa ne bũmb ning sẽn maanã.]</div><span id="bookmarks12"></span></div>
+
+<div class="s"><div id="s2">Emayus kẽnde</div></div>
+<div class="r"><div id="r2">= <span class="reflink"><a href="mo-41-MRK-016.html#v12">Mar 16.12-13</a></span> =</div></div><span id="bookmarks12"></span><a id="v13"></a>
+<div class="p"><div id="T13" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>La gese, baraar bala, karen-biis a yiib rabda tẽng sẽn boond tɩ Emayus sẽn zems kilometr piig la a yembr ne Zeruzalɛm.</div><span id="bookmarks13"></span> <a id="v14"></a><div id="T14" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>La bãmb yẽsa ne taab ne bũmb nins fãa sẽn maanã.</div><span id="bookmarks14"></span> <a id="v15"></a><div id="T15" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>La bãmb sẽn yẽsd ne taab n dat n bãng bõn-kãens võore, a Zezi kolgame n kẽnd ne bãmba.</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>La bãmb yam ludame tɩ bãmb ka bãng tɩ yaa a Zezi ye.</div><span id="bookmarks16"></span> <a id="v17"></a><div id="T17" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>A Zezi soka bãmb yaa : «&nbsp;Yãmb kẽndame n yẽsd ne taab tɩ bõe tɩ y nens gãnem woto&nbsp;?&nbsp;»</div><span id="bookmarks17"></span> <a id="v18"></a><div id="T18" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>La bãmb ned a yembr sẽn boond t'a Keleopas leoka a Zezi yaa : «&nbsp;Yaa yãmb y ye bal n be Zeruzalɛm n ka bãng bũmb ning sẽn maan masã wã bii&nbsp;?&nbsp;»</div><span id="bookmarks18"></span> <a id="v19"></a><div id="T19" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>A Zezi soka bãmb yaa : «&nbsp;Yaa bõe yelle&nbsp;?&nbsp;» La bãmb leokame yaa : «&nbsp;Nazarɛt dao a Zezi yellã. Bãmb da yaa Wẽnnaam no-rɛɛs sẽn tar pãng ne tʋʋma, la ne goam Wẽnnaam taoor la nebã fãa taoore.</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>La maan-kʋʋdbã kãsem-dãmbã ne tõnd tẽn-soaadbã yõka bãmb n kɩs tɩ b kao bãmb bʋʋd tɩ b zems kũum, la b kaa bãmb da-pɩk zugu.</div><span id="bookmarks20"></span> <a id="v21"></a><div id="T21" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Tõnd da tẽedame tɩ yaa bãmb n na n fãag Israyɛllle. La sẽn paase, gese, a yaa rasem a tãab rũndã la bõn-kãens maan-yã.</div><span id="bookmarks21"></span> <a id="v22"></a><div id="T22" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>La pagb kẽer me sẽn be tõnd sʋkã yɛɛsa tõnd wʋsgo. Bãmb sɩd kẽnga yaoogẽ wã yibeoog pĩnda,</div><span id="bookmarks22"></span> <a id="v23"></a><div id="T23" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>n tɩ ka yã bãmb kũumã ye. La bãmb wa n yeelame tɩ b yãa malegs tɩ b togs tɩ bãmb vɩɩme.</div><span id="bookmarks23"></span> <a id="v24"></a><div id="T24" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>La tõnd neb kẽer kẽnga yaoogã zĩigẽ n tɩ mik tɩ yaa wa pagbã sẽn da yeelã bala. Bãmb ka yã a Zezi ye.&nbsp;»</div><span id="bookmarks24"></span> <a id="v25"></a><div id="T25" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>Dẽ, a Zezi yeela bãmb yaa : «&nbsp;Yãmb bãngr paoodame, la yãmb ka tẽed bũmb nins fãa Wẽnnaam no-rɛɛsdbã sẽn togsã naana ye.</div><span id="bookmarks25"></span> <a id="v26"></a><div id="T26" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>Ka tɩlɛ tɩ Kiristu sak to-kãense yaool n deeg b naamã laa&nbsp;?&nbsp;»</div><span id="bookmarks26"></span> <a id="v27"></a><div id="T27" class="txs"><span class="v">27</span><span class="vsp">&nbsp;</span>La bãmb sɩnga ne a Moyiiz la Wẽnnaam no-rɛɛsdbã fãag n bilg Gʋls-sõmyã fãa sẽn wilgd bãmb yellã võyã.</div><span id="bookmarks27"></span></div><span id="bookmarks27"></span><a id="v28"></a>
+<div class="p"><div id="T28" class="txs"><span class="v">28</span><span class="vsp">&nbsp;</span>La bãmb sẽn kolg tẽng ning bãmb sẽn dabdã, a Zezi maana wa b na n loogame.</div><span id="bookmarks28"></span> <a id="v29"></a><div id="T29" class="txs"><span class="v">29</span><span class="vsp">&nbsp;</span>La bãmb pẽdga a Zezi n yeele : «&nbsp;Sig-y ne tõndo, bala, yaa zaabre, la wĩndgã rat n kẽeme. La bãmb kẽ n siga ne bãmba.</div><span id="bookmarks29"></span> <a id="v30"></a><div id="T30" class="txs"><span class="v">30</span><span class="vsp">&nbsp;</span>La bãmb sẽn zĩnd n na n dɩ ne bãmba, bãmb dɩka bur n pʋʋs Wẽnnaam bark n kao n kõ bãmba.</div><span id="bookmarks30"></span> <a id="v31"></a><div id="T31" class="txs"><span class="v">31</span><span class="vsp">&nbsp;</span>La bãmb yam vẽnegame tɩ b bãng a Zezi, la a Zezi menemã bãmb taoore.</div><span id="bookmarks31"></span> <a id="v32"></a><div id="T32" class="txs"><span class="v">32</span><span class="vsp">&nbsp;</span>La bãmb yeela taab yaa : «&nbsp;Tõnd ka paam sũ-no-kãsenga, bãmb sẽn gom ne tõnd sorã zugu, la bãmb sẽn bilg tõnd Gʋls-sõmyã sɩda&nbsp;?&nbsp;»</div><span id="bookmarks32"></span></div><span id="bookmarks32"></span><a id="v33"></a>
+<div class="p"><div id="T33" class="txs"><span class="v">33</span><span class="vsp">&nbsp;</span>Wakat-kãng bala, bãmb yikame n lebg n leb Zeruzalɛm, la bãmb yãa piig la a yembrã ne neb nins sẽn be ne bãmbã sẽn tigim</div><span id="bookmarks33"></span> <a id="v34"></a><div id="T34" class="txs"><span class="v">34</span><span class="vsp">&nbsp;</span>n yetẽ tɩ : «&nbsp;Hakɩɩka, Zu-soabã vʋʋgame, la bãmb vẽnega b meng ne a Sɩmo.&nbsp;»</div><span id="bookmarks34"></span> <a id="v35"></a><div id="T35" class="txs"><span class="v">35</span><span class="vsp">&nbsp;</span>La bãmb togsa bãmb bũmb nins sẽn maan bãmb sorã zugã, la bãmb sẽn yɩ wãn n bãng a Zezi bãmb sẽn kao burã wakatã.</div><span id="bookmarks35"></span></div>
+
+<div class="s"><div id="s3">A Zezi puka b meng ne b karen-biisã</div></div>
+<div class="r"><div id="r3">= <span class="reflink"><a href="mo-40-MAT-028.html#v16">Mat 28.16-20</a></span>; <span class="reflink"><a href="mo-41-MRK-016.html#v14">Mar 16.14-18</a></span>; <span class="reflink"><a href="mo-43-JHN-020.html#v19">Zã 20.19-23</a></span>; Tʋʋm 1.6-8 =</div></div><span id="bookmarks35"></span><a id="v36"></a>
+<div class="p"><div id="T36" class="txs"><span class="v">36</span><span class="vsp">&nbsp;</span>Bãmb sẽn gomd woto, a Zezi meng yalsa bãmb sʋk [n yeel bãmb yaa : «&nbsp;Bɩ y paam laafɩ.&nbsp;»]</div><span id="bookmarks36"></span> <a id="v37"></a><div id="T37" class="txs"><span class="v">37</span><span class="vsp">&nbsp;</span>Dabeem yõka bãmb hal tɩ b yɛɛs n tẽed tɩ bãmb yãa kɩɩma.</div><span id="bookmarks37"></span> <a id="v38"></a><div id="T38" class="txs"><span class="v">38</span><span class="vsp">&nbsp;</span>La a Zezi yeela bãmb yaa : «&nbsp;Yaa bõe tɩ yãmb yɛɛsdẽ, la yaa bõe tɩ yãmb tagsd woto&nbsp;?</div><span id="bookmarks38"></span> <a id="v39"></a><div id="T39" class="txs"><span class="v">39</span><span class="vsp">&nbsp;</span>Bɩ y ges mam nusã ne m naoã. Yaa maam bala. Sɩɩs-y maam n gese. Kɩɩm ka tar nemd ne kõab wa yãmb sẽn yã mam sẽn tarã ye.&nbsp;»</div><span id="bookmarks39"></span> <a id="v40"></a><div id="T40" class="txs"><span class="v">40</span><span class="vsp">&nbsp;</span>La b sẽn gomd woto, bãmb wilga bãmb b nusã ne b naoã.</div><span id="bookmarks40"></span> <a id="v41"></a><div id="T41" class="txs"><span class="v">41</span><span class="vsp">&nbsp;</span>La bãmb sẽn ket n ka tẽ sũ-noogã yĩnga, la b sẽn ket n yɛɛsdẽ a Zezi soka bãmb yaa : «&nbsp;Yãmb tara rɩɩb ka&nbsp;?&nbsp;»</div><span id="bookmarks41"></span> <a id="v42"></a><div id="T42" class="txs"><span class="v">42</span><span class="vsp">&nbsp;</span>La bãmb kõo bãmb zĩm-sẽedg ne sɩɩd bilfu.</div><span id="bookmarks42"></span> <a id="v43"></a><div id="T43" class="txs"><span class="v">43</span><span class="vsp">&nbsp;</span>La a Zezi deegame n dɩ bãmb taoore.</div><span id="bookmarks43"></span></div><span id="bookmarks43"></span><a id="v44"></a>
+<div class="p"><div id="T44" class="txs"><span class="v">44</span><span class="vsp">&nbsp;</span>La a Zezi yeela bãmb yaa : «&nbsp;Koe-kãngã yaa koɛɛg ning mam sẽn da yeel yãmb mam sẽn da be ne yãmbã, tɩ yaa tɩlɛ tɩ bũmb nins fãa sẽn gʋls a Moyiiz tõogã ne Wẽnnaam no-rɛɛsdbã la Yɩɩn-sõmyã sɛbã pʋs n wilgd mam yellã paam pidsgã.&nbsp;»</div><span id="bookmarks44"></span> <a id="v45"></a><div id="T45" class="txs"><span class="v">45</span><span class="vsp">&nbsp;</span>La b vẽnega bãmb yam tɩ b bãng Gʋls-sõmyã.</div><span id="bookmarks45"></span> <a id="v46"></a><div id="T46" class="txs"><span class="v">46</span><span class="vsp">&nbsp;</span>La bãmb yeelame yaa : «&nbsp;A gʋlsame tɩ yaa tɩlɛ tɩ Kirist namse, la b na n vʋʋga dasem a tãab daare, la neb na n sɩnga Zeruzalɛm n moon</div><span id="bookmarks46"></span> <a id="v47"></a><div id="T47" class="txs"><span class="v">47</span><span class="vsp">&nbsp;</span>yam tekr ne sugr kosg la yel-wẽnã sugr koɛɛgã ne bãmb yʋʋr buudã fãa sʋka.</div><span id="bookmarks47"></span> <a id="v48"></a><div id="T48" class="txs"><span class="v">48</span><span class="vsp">&nbsp;</span>Yãmb yaa bõn-kãens kaset dãmda.</div><span id="bookmarks48"></span> <a id="v49"></a><div id="T49" class="txs"><span class="v">49</span><span class="vsp">&nbsp;</span>La gese, mam na n tʋma yãmb bũmb ning m Ba sẽn da kãabã. Bɩ yãmb pa Zeruzalɛm hal n deeg pãng sẽn yit yĩngri.&nbsp;»</div><span id="bookmarks49"></span></div>
+
+<div class="s"><div id="s4">A Zezi zẽkre</div></div>
+<div class="r"><div id="r4">= <span class="reflink"><a href="mo-41-MRK-016.html#v19">Mar 16.19-20</a></span>; Tʋʋm 1.9-11 =</div></div><span id="bookmarks49"></span><a id="v50"></a>
+<div class="p"><div id="T50" class="txs"><span class="v">50</span><span class="vsp">&nbsp;</span>A Zezi talla bãmb hal tɩ ta Betani, la b zẽka b nus n ning bãmb zut barka.</div><span id="bookmarks50"></span> <a id="v51"></a><div id="T51" class="txs"><span class="v">51</span><span class="vsp">&nbsp;</span>La bãmb sẽn ningd bãmb zut barka, b basa bãmb n zẽk n kẽng arzãna.</div><span id="bookmarks51"></span></div><span id="bookmarks51"></span><a id="v52"></a>
+<div class="p"><div id="T52" class="txs"><span class="v">52</span><span class="vsp">&nbsp;</span>A Zezi karen-biisã sẽn waoog bãmb n sɛ, b lebg n leba Zeruzalɛm ne sũ-no-kãsenga.</div><span id="bookmarks52"></span> <a id="v53"></a><div id="T53" class="txs"><span class="v">53</span><span class="vsp">&nbsp;</span>La bãmb da bee Wẽnnaam doogã pʋgẽ daar fãa n pẽgd Wẽnnaam.</div><span id="bookmarks53"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/MHMBSBN2DA/B03___24_Luc_________MHMBSBN2DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

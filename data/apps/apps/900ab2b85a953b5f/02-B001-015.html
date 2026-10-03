@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 15</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "15a", start: 1980.42, end: 1982.31 },
+    { label: "15b", start: 1982.56, end: 1982.91 },
+    { label: "15c", start: 1983.16, end: 1984.07 },
+    { label: "15d", start: 1984.32, end: 1984.75 },
+    { label: "15e", start: 1985, end: 1985.87 },
+    { label: "15f", start: 1986.12, end: 1986.59 },
+    { label: "15g", start: 1986.84, end: 1987.97 },
+    { label: "15h", start: 1988.22, end: 1988.75 },
+    { label: "15i", start: 1989, end: 1989.73 },
+    { label: "15j", start: 1989.98, end: 1990.51 },
+    { label: "15k", start: 1990.76, end: 1991.35 },
+    { label: "15l", start: 1991.6, end: 1992.19 },
+    { label: "15m", start: 1992.44, end: 1993.19 },
+    { label: "15n", start: 1993.44, end: 1994.07 },
+    { label: "15o", start: 1994.32, end: 1995.19 },
+    { label: "15p", start: 1995.44, end: 1995.79 },
+    { label: "15q", start: 1996.04, end: 1996.79 },
+    { label: "15r", start: 1997.04, end: 1997.47 },
+    { label: "15s", start: 1997.72, end: 1999.25 },
+    { label: "15t", start: 1999.5, end: 1999.99 },
+    { label: "15u", start: 2000.24, end: 2001.09 },
+    { label: "15v", start: 2001.34, end: 2001.87 },
+    { label: "15w", start: 2002.12, end: 2003.21 },
+    { label: "15x", start: 2003.46, end: 2003.99 },
+    { label: "15y", start: 2004.24, end: 2004.77 },
+    { label: "15z", start: 2005.02, end: 2005.67 },
+    { label: "15aa", start: 2005.92, end: 2006.57 },
+    { label: "15ab", start: 2006.82, end: 2007.59 },
+    { label: "15ac", start: 2007.84, end: 2008.87 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-014.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;15&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image15.jpg" />
+
+<div class="m"><div id="T15a" class="txs"><span class="bd">Table of Contents</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T15b" class="txs">1.</div> <div id="T15c" class="txs">Introduction</div></div>
+<div class="m"><div id="T15d" class="txs">2.</div> <div id="T15e" class="txs">The election</div></div>
+<div class="m"><div id="T15f" class="txs">3.</div> <div id="T15g" class="txs">Predestination</div></div>
+<div class="m"><div id="T15h" class="txs">4.</div> <div id="T15i" class="txs">Adoption</div></div>
+<div class="m"><div id="T15j" class="txs">5.</div> <div id="T15k" class="txs">Love</div></div>
+<div class="m"><div id="T15l" class="txs">6.</div> <div id="T15m" class="txs">Redemption</div></div>
+<div class="m"><div id="T15n" class="txs">7.</div> <div id="T15o" class="txs">Forgiveness</div></div>
+<div class="m"><div id="T15p" class="txs">8.</div> <div id="T15q" class="txs">Grace</div></div>
+<div class="m"><div id="T15r" class="txs">9.</div> <div id="T15s" class="txs">Wisdom and intelligence</div></div>
+<div class="m"><div id="T15t" class="txs">10.</div> <div id="T15u" class="txs">Inheritance</div></div>
+<div class="m"><div id="T15v" class="txs">11.</div> <div id="T15w" class="txs">The Holy Spirit</div></div>
+<div class="m"><div id="T15x" class="txs">12.</div> <div id="T15y" class="txs">Hope</div></div>
+<div class="m"><div id="T15z" class="txs">13.</div> <div id="T15aa" class="txs">Power</div></div>
+<div class="m"><div id="T15ab" class="txs">14.</div> <div id="T15ac" class="txs">The church</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

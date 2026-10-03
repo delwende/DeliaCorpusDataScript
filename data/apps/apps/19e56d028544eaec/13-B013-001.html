@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>4) COMMUNICATION 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.05 },
+    { label: "1b", start: 3.3, end: 6.87 },
+    { label: "1c", start: 7.12, end: 9.65 },
+    { label: "1d", start: 9.9, end: 12.53 },
+    { label: "1e", start: 12.78, end: 16.63 },
+    { label: "1f", start: 16.88, end: 19.25 },
+    { label: "1g", start: 19.5, end: 24.27 },
+    { label: "1h", start: 24.52, end: 28.69 },
+    { label: "1i", start: 28.94, end: 32.29 },
+    { label: "1j", start: 32.54, end: 35.71 },
+    { label: "1k", start: 35.96, end: 37.51 },
+    { label: "1l", start: 37.76, end: 40.69 },
+    { label: "1m", start: 40.94, end: 41.85 },
+    { label: "1n", start: 42.1, end: 42.73 },
+    { label: "1o", start: 42.98, end: 43.75 },
+    { label: "1p", start: 44, end: 44.95 },
+    { label: "1q", start: 45.2, end: 46.61 },
+    { label: "1r", start: 46.86, end: 55.51 },
+    { label: "1s", start: 55.76, end: 60.05 },
+    { label: "1t", start: 60.3, end: 63.33 },
+    { label: "1u", start: 63.58, end: 64.77 },
+    { label: "1v", start: 65.02, end: 66.57 },
+    { label: "1w", start: 66.82, end: 69.27 },
+    { label: "1x", start: 69.52, end: 72.43 },
+    { label: "1y", start: 72.68, end: 87.75 },
+    { label: "1z", start: 88, end: 89.75 },
+    { label: "1aa", start: 90, end: 94.39 },
+    { label: "1ab", start: 94.64, end: 97.29 },
+    { label: "1ac", start: 97.54, end: 102.75 },
+    { label: "1ad", start: 103, end: 106.89 },
+    { label: "1ae", start: 107.14, end: 108.03 },
+    { label: "1af", start: 108.28, end: 110.75 },
+    { label: "1ag", start: 111, end: 112.69 },
+    { label: "1ah", start: 112.94, end: 114.09 },
+    { label: "1ai", start: 114.34, end: 115.93 },
+    { label: "1aj", start: 116.18, end: 120.51 },
+    { label: "1ak", start: 120.76, end: 123.27 },
+    { label: "1al", start: 123.52, end: 125.23 },
+    { label: "1am", start: 125.48, end: 127.85 },
+    { label: "1an", start: 128.1, end: 129.19 },
+    { label: "1ao", start: 129.44, end: 132.19 },
+    { label: "1ap", start: 132.44, end: 134.43 },
+    { label: "1aq", start: 134.68, end: 136.69 },
+    { label: "1ar", start: 136.94, end: 140.83 },
+    { label: "1as", start: 141.08, end: 142.99 },
+    { label: "1at", start: 143.24, end: 144.09 },
+    { label: "1au", start: 144.34, end: 145.45 },
+    { label: "1av", start: 145.7, end: 152.45 },
+    { label: "1aw", start: 152.7, end: 158.17 },
+    { label: "1ax", start: 158.42, end: 159.47 },
+    { label: "1ay", start: 159.72, end: 162.63 },
+    { label: "1az", start: 162.88, end: 168.59 },
+    { label: "1ba", start: 168.84, end: 170.47 },
+    { label: "1bb", start: 170.72, end: 175.29 },
+    { label: "1bc", start: 175.54, end: 182.33 },
+    { label: "1bd", start: 182.58, end: 187.09 },
+    { label: "1be", start: 187.34, end: 189.31 },
+    { label: "1bf", start: 189.56, end: 190.47 },
+    { label: "1bg", start: 190.72, end: 192.33 },
+    { label: "1bh", start: 192.58, end: 195.91 },
+    { label: "1bi", start: 196.16, end: 197.31 },
+    { label: "1bj", start: 197.56, end: 199.81 },
+    { label: "1bk", start: 200.06, end: 201.97 },
+    { label: "1bl", start: 202.22, end: 212.43 },
+    { label: "1bm", start: 212.68, end: 218.95 },
+    { label: "1bn", start: 219.2, end: 220.91 },
+    { label: "1bo", start: 221.16, end: 222.19 },
+    { label: "1bp", start: 222.44, end: 223.97 },
+    { label: "1bq", start: 224.22, end: 225.97 },
+    { label: "1br", start: 226.22, end: 230.71 },
+    { label: "1bs", start: 230.96, end: 233.47 },
+    { label: "1bt", start: 233.72, end: 237.15 },
+    { label: "1bu", start: 237.4, end: 239.97 },
+    { label: "1bv", start: 240.22, end: 241.61 },
+    { label: "1bw", start: 241.86, end: 243.53 },
+    { label: "1bx", start: 243.78, end: 245.07 },
+    { label: "1by", start: 245.32, end: 246.39 },
+    { label: "1bz", start: 246.64, end: 247.75 },
+    { label: "1ca", start: 248, end: 248.91 },
+    { label: "1cb", start: 249.16, end: 250.51 },
+    { label: "1cc", start: 250.76, end: 251.61 },
+    { label: "1cd", start: 251.86, end: 253.45 },
+    { label: "1ce", start: 253.7, end: 254.95 },
+    { label: "1cf", start: 255.2, end: 256.03 },
+    { label: "1cg", start: 256.28, end: 257.23 },
+    { label: "1ch", start: 257.48, end: 259.33 },
+    { label: "1ci", start: 259.58, end: 260.49 },
+    { label: "1cj", start: 260.74, end: 262.37 },
+    { label: "1ck", start: 262.62, end: 263.75 },
+    { label: "1cl", start: 264, end: 264.87 },
+    { label: "1cm", start: 265.12, end: 265.91 },
+    { label: "1cn", start: 266.16, end: 266.83 },
+    { label: "1co", start: 267.08, end: 267.99 },
+    { label: "1cp", start: 268.24, end: 269.73 },
+    { label: "1cq", start: 269.98, end: 272.13 },
+    { label: "1cr", start: 272.38, end: 273.37 },
+    { label: "1cs", start: 273.62, end: 274.83 },
+    { label: "1ct", start: 275.08, end: 275.79 },
+    { label: "1cu", start: 276.04, end: 286.04 },
+    { label: "1cv", start: 276.04, end: 278.33 },
+    { label: "1cw", start: 278.58, end: 282.57 },
+    { label: "1cx", start: 282.82, end: 286.19 },
+    { label: "1cy", start: 286.44, end: 292.01 },
+    { label: "1cz", start: 292.26, end: 294.71 },
+    { label: "1da", start: 294.96, end: 299.05 },
+    { label: "1db", start: 299.3, end: 302.01 },
+    { label: "1dc", start: 302.26, end: 306.27 },
+    { label: "1dd", start: 306.52, end: 311.51 },
+    { label: "1de", start: 311.76, end: 315.15 },
+    { label: "1df", start: 315.4, end: 322.53 },
+    { label: "1dg", start: 322.78, end: 328.89 },
+    { label: "1dh", start: 329.14, end: 331.59 },
+    { label: "1di", start: 331.84, end: 337.09 },
+    { label: "1dj", start: 337.34, end: 342.87 },
+    { label: "1dk", start: 343.12, end: 345.83 },
+    { label: "1dl", start: 346.08, end: 348.33 },
+    { label: "1dm", start: 348.58, end: 352.43 },
+    { label: "1dn", start: 352.68, end: 353.43 },
+    { label: "1do", start: 353.68, end: 354.91 },
+    { label: "1dp", start: 355.16, end: 357.53 },
+    { label: "1dq", start: 357.78, end: 360.83 },
+    { label: "1dr", start: 361.08, end: 363.81 },
+    { label: "1ds", start: 364.06, end: 367.87 },
+    { label: "1dt", start: 368.12, end: 369.17 },
+    { label: "1du", start: 369.42, end: 374.33 },
+    { label: "1dv", start: 374.58, end: 376.53 },
+    { label: "1dw", start: 376.78, end: 378.27 },
+    { label: "1dx", start: 378.52, end: 379.99 },
+    { label: "1dy", start: 380.24, end: 383.43 },
+    { label: "1dz", start: 383.68, end: 386.47 },
+    { label: "1ea", start: 386.72, end: 389.17 },
+    { label: "1eb", start: 389.42, end: 392.07 },
+    { label: "1ec", start: 392.32, end: 393.61 },
+    { label: "1ed", start: 393.86, end: 398.11 },
+    { label: "1ee", start: 398.36, end: 401.91 },
+    { label: "1ef", start: 402.16, end: 407.21 },
+    { label: "1eg", start: 407.46, end: 408.31 },
+    { label: "1eh", start: 408.56, end: 411.27 },
+    { label: "1ei", start: 411.52, end: 414.13 },
+    { label: "1ej", start: 414.38, end: 415.61 },
+    { label: "1ek", start: 415.86, end: 417.85 },
+    { label: "1el", start: 418.1, end: 419.89 },
+    { label: "1em", start: 420.14, end: 423.43 },
+    { label: "1en", start: 423.68, end: 424.77 },
+    { label: "1eo", start: 425.02, end: 427.07 },
+    { label: "1ep", start: 427.32, end: 429.57 },
+    { label: "1eq", start: 429.82, end: 431.93 },
+    { label: "1er", start: 432.18, end: 434.45 },
+    { label: "1es", start: 434.7, end: 437.31 },
+    { label: "1et", start: 437.56, end: 439.79 },
+    { label: "1eu", start: 440.04, end: 442.95 },
+    { label: "1ev", start: 443.2, end: 446.03 },
+    { label: "1ew", start: 446.28, end: 448.25 },
+    { label: "1ex", start: 448.5, end: 449.81 },
+    { label: "1ey", start: 450.06, end: 452.39 },
+    { label: "1ez", start: 452.64, end: 454.11 },
+    { label: "1fa", start: 454.36, end: 455.89 },
+    { label: "1fb", start: 456.14, end: 457.01 },
+    { label: "1fc", start: 457.26, end: 458.47 },
+    { label: "1fd", start: 458.72, end: 461.63 },
+    { label: "1fe", start: 461.88, end: 464.33 },
+    { label: "1ff", start: 464.58, end: 469.13 },
+    { label: "1fg", start: 469.38, end: 470.89 },
+    { label: "1fh", start: 471.14, end: 474.25 },
+    { label: "1fi", start: 474.5, end: 476.95 },
+    { label: "1fj", start: 477.2, end: 478.43 },
+    { label: "1fk", start: 478.68, end: 480.77 },
+    { label: "1fl", start: 481.02, end: 485.89 },
+    { label: "1fm", start: 486.14, end: 491.11 },
+    { label: "1fn", start: 491.36, end: 493.61 },
+    { label: "1fo", start: 493.86, end: 495.71 },
+    { label: "1fp", start: 495.96, end: 497.49 },
+    { label: "1fq", start: 497.74, end: 499.33 },
+    { label: "1fr", start: 499.58, end: 500.53 },
+    { label: "1fs", start: 500.78, end: 503.35 },
+    { label: "1ft", start: 503.6, end: 507.79 },
+    { label: "1fu", start: 508.04, end: 509.97 },
+    { label: "1fv", start: 510.22, end: 511.41 },
+    { label: "1fw", start: 511.66, end: 514.55 },
+    { label: "1fx", start: 514.8, end: 516.03 },
+    { label: "1fy", start: 516.28, end: 519.43 },
+    { label: "1fz", start: 519.68, end: 521.93 },
+    { label: "1ga", start: 522.18, end: 525.41 },
+    { label: "1gb", start: 525.66, end: 526.89 },
+    { label: "1gc", start: 527.14, end: 531.43 },
+    { label: "1gd", start: 531.68, end: 534.27 },
+    { label: "1ge", start: 534.52, end: 539.09 },
+    { label: "1gf", start: 539.34, end: 541.65 },
+    { label: "1gg", start: 541.9, end: 554.75 },
+    { label: "1gh", start: 555, end: 558.63 },
+    { label: "1gi", start: 558.88, end: 564.29 },
+    { label: "1gj", start: 564.54, end: 566.89 },
+    { label: "1gk", start: 567.14, end: 570.87 },
+    { label: "1gl", start: 571.12, end: 575.17 },
+    { label: "1gm", start: 575.42, end: 583.95 },
+    { label: "1gn", start: 584.2, end: 585.91 },
+    { label: "1go", start: 586.16, end: 588.47 },
+    { label: "1gp", start: 588.72, end: 592.85 },
+    { label: "1gq", start: 593.1, end: 595.05 },
+    { label: "1gr", start: 595.3, end: 600.19 },
+    { label: "1gs", start: 600.44, end: 601.59 },
+    { label: "1gt", start: 601.84, end: 607.07 },
+    { label: "1gu", start: 607.32, end: 615.91 },
+    { label: "1gv", start: 616.16, end: 617.41 },
+    { label: "1gw", start: 617.66, end: 619.45 },
+    { label: "1gx", start: 619.7, end: 621.07 },
+    { label: "1gy", start: 621.32, end: 622.21 },
+    { label: "1gz", start: 622.46, end: 625.59 },
+    { label: "1ha", start: 625.84, end: 629.41 },
+    { label: "1hb", start: 629.66, end: 632.19 },
+    { label: "1hc", start: 632.44, end: 636.71 },
+    { label: "1hd", start: 636.96, end: 643.97 },
+    { label: "1he", start: 644.22, end: 646.27 },
+    { label: "1hf", start: 646.52, end: 652.45 },
+    { label: "1hg", start: 652.7, end: 657.41 },
+    { label: "1hh", start: 657.66, end: 659.31 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 659.31;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "13-B013-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='12-B012-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;4) COMMUNICATION&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B013-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">4</span><span class="bd">)</span><span class="bd"> COMMUNICATION,</span></div> <div id="T1b" class="txs"><span class="bd">TRANSPARENCE ET CONFIANCE AU SEIN DU COUPLE</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">Objectifs visés</span></div></div>
+<div class="m"><div id="T1d" class="txs">Que les couples comprennent que :</div></div>
+<div class="m"><div id="T1e" class="txs">1)  Dieu est le plus grand communicateur,</div> <div id="T1f" class="txs">Jésus lui-même est la Parole.</div></div>
+<div class="m"><div id="T1g" class="txs">2)  La base d’une bonne relation est la communication.</div></div>
+<div class="m"><div id="T1h" class="txs">3)  Il y a trois niveaux de la communication.</div></div>
+<div class="m"><div id="T1i" class="txs">4)  Pour atteindre ces trois niveaux,</div> <div id="T1j" class="txs">il faut parler ensemble chaque jour.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">Introduction</span></div></div>
+<div class="m"><div id="T1l" class="txs">Dieu a créé le monde avec beaucoup de soin.</div> <div id="T1m" class="txs">La terre,</div> <div id="T1n" class="txs">les eaux,</div> <div id="T1o" class="txs">les arbres,</div> <div id="T1p" class="txs">les animaux,</div> <div id="T1q" class="txs">les êtres humains.</div> <div id="T1r" class="txs">Puis Dieu observa son œuvre et constata que c’était très bien (Genèse 1, 31).</div> <div id="T1s" class="txs">Il y a un aspect de la création que nous trouvons partout dans la Bible,</div> <div id="T1t" class="txs">de la première page jusqu'à la dernière :</div><div id="T1u" class="txs"><span class="bd"> la parole,</span></div> <div id="T1v" class="txs"><span class="bd">la communication&nbsp;!</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1w" class="txs">Tout a commencé avec la parole.</div> <div id="T1x" class="txs">Dieu est le plus grand communicateur :</div> <div id="T1y" class="txs">Genèse 1 verset 3, 6, 9, 14, 20, 24, 26, 28 :</div> <div id="T1z" class="txs">Dieu dit et la chose arrive&nbsp;!</div></div>
+<div class="m"><div id="T1aa" class="txs">En Jean 1, 1 Jésus lui-même est décrit comme «&nbsp;Parole&nbsp;».</div></div>
+<div class="m"><div id="T1ab" class="txs">Si vous observez un peu l’environnement :</div> <div id="T1ac" class="txs">La création est remplie de communication :</div> <div id="T1ad" class="txs">le chant des oiseaux ou l’aboiement du chien marquent la communication.</div></div>
+<div class="m"><div id="T1ae" class="txs">Evidemment,</div> <div id="T1af" class="txs">la création communique d’une manière limitée,</div> <div id="T1ag" class="txs">mais elle communique.</div></div>
+<div class="m"><div id="T1ah" class="txs">Seulement,</div> <div id="T1ai" class="txs">pour nous les êtres humains,</div> <div id="T1aj" class="txs">quelquefois les paroles que nous proférons n'ont pas la même valeur.</div> <div id="T1ak" class="txs">Nous les utilisons pour dire la vérité,</div> <div id="T1al" class="txs">mais aussi pour mentir,</div> <div id="T1am" class="txs">tricher ou blesser les autres.</div></div>
+<div class="m"><div id="T1an" class="txs">Parfois,</div> <div id="T1ao" class="txs">nous refusons de parler pour nous exprimer,</div> <div id="T1ap" class="txs">pour donner une information,</div> <div id="T1aq" class="txs">ou pour résoudre les conflits.</div> <div id="T1ar" class="txs">Nous interrompons le dialogue si nous sommes fâchés ou déçus,</div> <div id="T1as" class="txs">ou si nous avons des problèmes.</div></div>
+<div class="m"><div id="T1at" class="txs">Pour nous,</div> <div id="T1au" class="txs">hommes et femmes,</div> <div id="T1av" class="txs">il est écrit que Dieu nous a créés «&nbsp;<span class="it">à son image</span>&nbsp;» – que nous lui ressemblons vraiment.</div> <div id="T1aw" class="txs">Cela veut dire que le caractère divin de la communication est en nous aussi :</div> <div id="T1ax" class="txs">comme couples,</div> <div id="T1ay" class="txs">famille ou amis.</div> <div id="T1az" class="txs">Dieu a prévu que notre vie soit pleine de communication entre nous en tant que couple ;</div> <div id="T1ba" class="txs">et entre Dieu et nous.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bb" class="txs">En particulier en tant que couple chrétien et famille chrétienne,</div> <div id="T1bc" class="txs">il nous est demandé de maintenir une bonne communication avec notre conjoint et avec nos enfants.</div> <div id="T1bd" class="txs">Nos habitudes culturelles ont tendance à nous empêcher d’aller dans ce sens.</div> <div id="T1be" class="txs">Mais étant chrétiens,</div> <div id="T1bf" class="txs">c’est la Bible,</div> <div id="T1bg" class="txs">et non nos coutumes,</div> <div id="T1bh" class="txs">qui doit nous conduire et façonner nos relations.</div></div>
+<div class="m"><div id="T1bi" class="txs">En vérité,</div> <div id="T1bj" class="txs">nous sommes créés à l'image de Dieu.</div> <div id="T1bk" class="txs">C'est à nous de choisir :</div> <div id="T1bl" class="txs">rester dans les habitudes de notre culture ou de notre famille – ou changer pour ce que Dieu veut en obéissant à sa Parole.</div> <div id="T1bm" class="txs">Cette leçon vous encouragera à commencer et à continuer à communiquer comme Dieu l'a prévu.</div> <div id="T1bn" class="txs">A dire des paroles fiables,</div> <div id="T1bo" class="txs">sérieuses,</div> <div id="T1bp" class="txs">de qualité ;</div> <div id="T1bq" class="txs">«&nbsp;oui = oui,</div> <div id="T1br" class="txs">et non = non&nbsp;» (Matthieu 5, 37).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bs" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que la communication&nbsp;?</span></div> <div id="T1bt" class="txs">C’est une action pour entrer en contact,</div> <div id="T1bu" class="txs">donner et recevoir des informations,</div> <div id="T1bv" class="txs">échanger des idées.</div></div>
+<div class="m"><div id="T1bw" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Pourquoi communique-t-on&nbsp;?</span></div> <div id="T1bx" class="txs">Pour s’informer,</div> <div id="T1by" class="txs">s’encourager,</div> <div id="T1bz" class="txs">se comprendre,</div> <div id="T1ca" class="txs">éduquer,</div> <div id="T1cb" class="txs">échanger des idées,</div> <div id="T1cc" class="txs">planifier,</div> <div id="T1cd" class="txs">prendre des décisions,</div> <div id="T1ce" class="txs">donner un message,</div> <div id="T1cf" class="txs">consoler,</div> <div id="T1cg" class="txs">corriger...</div></div>
+<div class="m"><div id="T1ch" class="txs"><span class="bd">✓</span><span class="bd"> Avec quoi communique-t-on&nbsp;?</span></div> <div id="T1ci" class="txs">La parole,</div> <div id="T1cj" class="txs">les signes (gestes),</div> <div id="T1ck" class="txs">les attitudes,</div> <div id="T1cl" class="txs">le téléphone,</div> <div id="T1cm" class="txs">la radio,</div> <div id="T1cn" class="txs">les lettres,</div> <div id="T1co" class="txs">les e-mails,</div> <div id="T1cp" class="txs">les réseaux sociaux, …</div></div>
+<div class="m"><div id="T1cq" class="txs"><span class="bd">✓</span><span class="bd"> Comment faut-il communiquer&nbsp;?</span></div> <div id="T1cr" class="txs">Clairement,</div> <div id="T1cs" class="txs">dans la vérité,</div> <div id="T1ct" class="txs">le respect,</div> <div id="T1cu" class="txs">...</div></div>
+<div class="m"><div id="T1cv" class="txs"><span class="bd">✓</span><span class="bd"> Quand faut-il communiquer&nbsp;?</span></div> <div id="T1cw" class="txs">Communiquer tout le temps est nécessaire.</div> <div id="T1cx" class="txs">Cependant il faut le faire dans les circonstances appropriées&nbsp;!</div> <div id="T1cy" class="txs">Avant de communiquer il faut savoir ce qu’il faut dire et comment le dire.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cz" class="txs"><span class="bd">1) </span><span class="bd">La communication</span></div></div>
+<div class="m"><div id="T1da" class="txs"><span class="bd">Pour avoir une profonde unité entre les conjoints,</span></div> <div id="T1db" class="txs"><span class="bd">il faut pratiquer une bonne communication.</span></div></div>
+<div class="m"><div id="T1dc" class="txs">On peut lire en Amos 3, 3 :</div> <div id="T1dd" class="txs">«&nbsp;<span class="it">Deux hommes marchent-ils ensemble sans s'être concertés&nbsp;?</span></div><div id="T1de" class="txs">&nbsp;».</div> <div id="T1df" class="txs">Comment prendre des décisions sans communication&nbsp;?</div></div>
+<div class="m"><div id="T1dg" class="txs">Nous avons observé que la plupart des échecs dans la vie du couple a pour cause la mauvaise communication.</div> <div id="T1dh" class="txs">Et que la plupart des succès dans la relation conjugale découle d'un bon système de communication.</div></div>
+<div class="m"><div id="T1di" class="txs"><span class="bd">Les trois niveaux de la communication</span></div></div>
+<div class="m"><div id="T1dj" class="txs"><span class="it">(Tirés de «&nbsp;Mariage et actes d’amour&nbsp;» de Bruce et Carol Britten)</span><span class="it">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dk" class="txs">Nous parlons de trois niveaux de communication avec des types de conversations différents.</div> <div id="T1dl" class="txs">Pour chaque situation ou chaque rencontre,</div> <div id="T1dm" class="txs">nous choisissons ce qui est adapté.</div> <div id="T1dn" class="txs">Chaque conversation a sa place et son importance.</div> <div id="T1do" class="txs">Donc,</div> <div id="T1dp" class="txs">au sein du couple,</div> <div id="T1dq" class="txs">il y a différentes conversations.</div> <div id="T1dr" class="txs">C'est une question de profondeur dans la relation.</div></div>
+<div class="m"><div id="T1ds" class="txs">Depuis que le péché est entré dans le monde,</div> <div id="T1dt" class="txs">il est facile de se cacher et difficile de communiquer.</div> <div id="T1du" class="txs">Cependant,</div> <div id="T1dv" class="txs">le Seigneur nous y aide pour atteindre le niveau le plus élevé de la communication.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dw" class="txs"><span class="bd">a) </span><span class="bd">Niveau 1 :</span></div> <div id="T1dx" class="txs"><span class="bd">Parler des événements</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dy" class="txs"><span class="it">(Faire des saynètes)</span></div></div>
+<div class="m"><div id="T1dz" class="txs">· Conversation superficielle ou des clichés.</div></div>
+<div class="m"><div id="T1ea" class="txs">· Partage des faits et des informations.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1eb" class="txs">Le moyen le plus simple pour communiquer,</div> <div id="T1ec" class="txs">c'est de raconter des évènements de la journée.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ed" class="txs">Par exemple :</div> <div id="T1ee" class="txs">Madame raconte à son mari sa rencontre avec les femmes dans l'église.</div> <div id="T1ef" class="txs">Que s’est-il passé ou qu'est-ce qu'on a fait&nbsp;?</div> <div id="T1eg" class="txs">Monsieur parle de son travail et d'un collègue qui est tombé malade.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1eh" class="txs">Non seulement,</div> <div id="T1ei" class="txs">il faudra raconter les évènements de votre journée,</div> <div id="T1ej" class="txs">mais être prêt à écouter l'autre.</div> <div id="T1ek" class="txs">Bien sûr,</div> <div id="T1el" class="txs">pour manifester l'intérêt à l'autre,</div> <div id="T1em" class="txs">il faudra poser des questions.</div> <div id="T1en" class="txs">Poser des questions est essentiel pour bien communiquer.</div></div>
+<div class="m"><div id="T1eo" class="txs">Par exemple :</div> <div id="T1ep" class="txs">Si le mari arrive du travail,</div> <div id="T1eq" class="txs">sa femme pourrait lui demander :</div> <div id="T1er" class="txs">«&nbsp;<span class="it">Comment vas-tu aujourd'hui&nbsp;?</span></div> <div id="T1es" class="txs"><span class="it">Comment s'est passée ta journée&nbsp;?</span></div><div id="T1et" class="txs">&nbsp;» Le mari pourrait poser cette question :</div> <div id="T1eu" class="txs">«&nbsp;<span class="it">Qu'est-ce que tu as fait aujourd'hui&nbsp;?</span></div> <div id="T1ev" class="txs"><span class="it">Comment cela s’est-il passé avec les enfants&nbsp;?</span>»</div> <div id="T1ew" class="txs">Donner des informations est très important&nbsp;!</div></div>
+<div class="m"><div id="T1ex" class="txs"><span class="bd">b) </span><span class="bd">Niveau 2</span><span class="bd"> </span><span class="bd">:</span></div> <div id="T1ey" class="txs"><span class="bd">Parler de soi ;</span></div> <div id="T1ez" class="txs"><span class="bd">partager des idées et des opinions</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1fa" class="txs"><span class="it">(Faire des saynètes)</span></div></div>
+<div class="m"><div id="T1fb" class="txs">· Parole de soutien,</div> <div id="T1fc" class="txs">d'encouragement,</div> <div id="T1fd" class="txs">de motivation.</div></div>
+<div class="m"><div id="T1fe" class="txs">· Planification ou prise de décision.</div></div>
+<div class="m"><div id="T1ff" class="txs">· Partage d’idées ou d’opinions.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1fg" class="txs">Le deuxième niveau de la communication c'est lorsqu'on parle de soi :</div> <div id="T1fh" class="txs">nos projets d’avenir,</div> <div id="T1fi" class="txs">nos problèmes au travail ou avec l’argent,</div> <div id="T1fj" class="txs">les choses qui nous préoccupent vraiment.</div></div>
+<div class="m"><div id="T1fk" class="txs">Par exemple :</div> <div id="T1fl" class="txs"><span class="it">on discute de ce qu'on va faire,</span></div> <div id="T1fm" class="txs"><span class="it">si un enfant a des problèmes à l'école ou si on a un problème avec les parents.</span></div> <div id="T1fn" class="txs"><span class="it">Si on a des problèmes au travail ou si on voudrait changer quelque chose</span>…</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1fo" class="txs"><span class="bd">c) </span><span class="bd">Niveau 3</span><span class="bd"> </span><span class="bd">:</span></div> <div id="T1fp" class="txs"><span class="bd">Parler de ses sentiments</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1fq" class="txs"><span class="it">(Faire des saynètes)</span></div></div>
+<div class="m"><div id="T1fr" class="txs">· Parole pour corriger,</div> <div id="T1fs" class="txs">instruire,</div> <div id="T1ft" class="txs">reprendre et exhorter.</div></div>
+<div class="m"><div id="T1fu" class="txs">· Désaccords ou discussion de sujets controversés.</div></div>
+<div class="m"><div id="T1fv" class="txs">· Partage de sentiments,</div> <div id="T1fw" class="txs">de jugements.</div></div>
+<div class="m"><div id="T1fx" class="txs">· Demander pardon et pardonner.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1fy" class="txs">Souvent,</div> <div id="T1fz" class="txs">si on discute les questions qui nous inquiètent,</div> <div id="T1ga" class="txs">on ne tombe pas tout de suite d'accord.</div> <div id="T1gb" class="txs">Ce n'est pas une raison pour terminer la communication.</div> <div id="T1gc" class="txs">Au contraire,</div> <div id="T1gd" class="txs">il faut continuer la discussion pour trouver une bonne solution.</div> <div id="T1ge" class="txs">Ce processus peut durer un peu,</div> <div id="T1gf" class="txs">mais il est important de prendre le temps et de ne pas s’interrompre.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1gg" class="txs">Bruce Britten écrit :</div> <div id="T1gh" class="txs">«&nbsp;<span class="it">Cela est possible si nous sommes déterminés à continuer de discuter avec la parole douce et aimable jusqu'à ce que nous tombions d'accord et prenions une décision.</span></div><div id="T1gi" class="txs">&nbsp;» Même si on considère que le mari est le chef de sa femme,</div> <div id="T1gj" class="txs">l’homme apprendra à écouter sa femme et il ne lui imposera pas ses idées.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1gk" class="txs">A ce stade de la communication,</div> <div id="T1gl" class="txs">nous partageons aussi nos sentiments l'un avec l'autre ;</div> <div id="T1gm" class="txs">nous ouvrons la porte de notre cœur à notre partenaire,</div> <div id="T1gn" class="txs">lui permettant ainsi de voir au plus profond de nous-même et de nous connaître tels que nous sommes vraiment.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1go" class="txs">Un exemple :</div> <div id="T1gp" class="txs">Un mari a dit un jour à sa femme :</div> <div id="T1gq" class="txs">«&nbsp;Aujourd'hui mon frère s'est fâché et m'a accusé,</div> <div id="T1gr" class="txs">et mon père l’a soutenu.</div><div id="T1gs" class="txs">&nbsp;» Ce rapport d'un fait était le niveau 1 de la communication.</div></div>
+<div class="m"><div id="T1gt" class="txs">Ensuite,</div> <div id="T1gu" class="txs">lui et sa femme ont discuté pour savoir comment résoudre ce problème avec la famille.</div> <div id="T1gv" class="txs">Cette discussion a lieu au niveau 2 de la communication parce qu'ils parlent d'eux-mêmes et de leurs parents.</div></div>
+<div class="m"><div id="T1gw" class="txs">Après cela,</div> <div id="T1gx" class="txs">sa femme lui a demandé :</div> <div id="T1gy" class="txs">«&nbsp;<span class="it">Mais quels sont,</span></div> <div id="T1gz" class="txs"><span class="it">à présent,</span></div> <div id="T1ha" class="txs"><span class="it">tes sentiments envers ton frère et ton père&nbsp;?</span></div><div id="T1hb" class="txs">&nbsp;» Le mari a répondu qu'il se faisait du souci,</div> <div id="T1hc" class="txs">craignant que sa famille ne se divise.</div> <div id="T1hd" class="txs">Ce partage de sentiments se situe au niveau 3 de la communication.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1he" class="txs"><span class="bd">Le mariage est formidable quand on atteint le niveau 3 où on partage ses sentiments avec l'autre.</span></div> <div id="T1hf" class="txs"><span class="bd">A ce stade de communication,</span></div> <div id="T1hg" class="txs"><span class="bd">les jours sont multipliés par deux puisque le bonheur de l'un s'ajoute au bonheur de l'autre.</span></div> <div id="T1hh" class="txs"><span class="bd">Et nos peines sont diminuées de moitié puisqu'on les partage : on porte le fardeau à deux.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/10 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/10 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/10 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

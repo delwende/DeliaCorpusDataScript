@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>Personal intercultural 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.83 },
+    { label: "1b", start: 3.08, end: 10.27 },
+    { label: "1c", start: 10.52, end: 19.47 },
+    { label: "1d", start: 19.72, end: 21.03 },
+    { label: "1e", start: 21.28, end: 22.95 },
+    { label: "1f", start: 23.2, end: 27.07 },
+    { label: "1g", start: 27.32, end: 30.63 },
+    { label: "1h", start: 30.88, end: 36.47 },
+    { label: "1i", start: 36.72, end: 38.01 },
+    { label: "1j", start: 38.26, end: 40.79 },
+    { label: "1k", start: 41.04, end: 45.05 },
+    { label: "1l", start: 45.3, end: 49.33 },
+    { label: "1m", start: 49.58, end: 52.05 },
+    { label: "1n", start: 52.3, end: 55.91 },
+    { label: "1o", start: 56.16, end: 58.05 },
+    { label: "1p", start: 58.3, end: 62.59 },
+    { label: "1q", start: 62.84, end: 70.63 },
+    { label: "1r", start: 70.88, end: 78.03 },
+    { label: "1s", start: 78.28, end: 80.07 },
+    { label: "1t", start: 80.32, end: 82.71 },
+    { label: "1u", start: 82.96, end: 84.53 },
+    { label: "1v", start: 84.78, end: 86.21 },
+    { label: "1w", start: 86.46, end: 89.33 },
+    { label: "1x", start: 89.58, end: 90.31 },
+    { label: "1y", start: 90.56, end: 92.33 },
+    { label: "1z", start: 92.58, end: 96.31 },
+    { label: "1aa", start: 96.56, end: 99.15 },
+    { label: "1ab", start: 99.4, end: 101.41 },
+    { label: "1ac", start: 101.66, end: 103.23 },
+    { label: "1ad", start: 103.48, end: 104.63 },
+    { label: "1ae", start: 104.88, end: 105.77 },
+    { label: "1af", start: 106.02, end: 108.47 },
+    { label: "1ag", start: 108.72, end: 109.41 },
+    { label: "1ah", start: 109.66, end: 113.27 },
+    { label: "1ai", start: 113.52, end: 120.05 },
+    { label: "1aj", start: 120.3, end: 123.71 },
+    { label: "1ak", start: 123.96, end: 125.65 },
+    { label: "1al", start: 125.9, end: 128.25 },
+    { label: "1am", start: 128.5, end: 130.55 },
+    { label: "1an", start: 130.8, end: 132.65 },
+    { label: "1ao", start: 132.9, end: 137.69 },
+    { label: "1ap", start: 137.94, end: 142.39 },
+    { label: "1aq", start: 142.64, end: 144.77 },
+    { label: "1ar", start: 145.02, end: 148.65 },
+    { label: "1as", start: 148.9, end: 150.93 },
+    { label: "1at", start: 151.18, end: 152.39 },
+    { label: "1au", start: 152.64, end: 153.69 },
+    { label: "1av", start: 153.94, end: 156.93 },
+    { label: "1aw", start: 157.18, end: 159.93 },
+    { label: "1ax", start: 160.18, end: 161.49 },
+    { label: "1ay", start: 161.74, end: 164.15 },
+    { label: "1az", start: 164.4, end: 167.17 },
+    { label: "1ba", start: 167.42, end: 168.59 },
+    { label: "1bb", start: 168.84, end: 174.31 },
+    { label: "1bc", start: 174.56, end: 180.13 },
+    { label: "1bd", start: 180.38, end: 182.85 },
+    { label: "1be", start: 183.1, end: 185.01 },
+    { label: "1bf", start: 185.26, end: 189.37 },
+    { label: "1bg", start: 189.62, end: 192.75 },
+    { label: "1bh", start: 193, end: 197.27 },
+    { label: "1bi", start: 197.52, end: 199.47 },
+    { label: "1bj", start: 199.72, end: 204.25 },
+    { label: "1bk", start: 204.5, end: 210.71 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 210.71;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "61-B054-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='60-B063-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='60-B063-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Personal intercultural&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='62-B064-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='62-B064-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B054-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Personal intercultural contacts</span></div></div>
+<div class="m"><div id="T1b" class="txs">Harmony in intercultural contacts is not automatic because cultural reflexes and behaviors are often very different.</div> <div id="T1c" class="txs">We will now give some concrete indications that people from a culture where rule dominates should pay attention to when they are in contact with people from a culture of honor,</div> <div id="T1d" class="txs">and vice versa.</div></div>
+<div class="m"><div id="T1e" class="txs">On both sides,</div> <div id="T1f" class="txs">it is important to guard against hasty judgments and things left unsaid.</div> <div id="T1g" class="txs">We have to ask the question why are you doing this?</div> <div id="T1h" class="txs">In this way we will be able to understand the logic of the interlocutor and discover his methods.</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">For Europeans:</span></div> <div id="T1j" class="txs"><span class="bd">understanding people from another country</span></div></div>
+<div class="m"><div id="T1k" class="txs">It is very important to make people feel accepted and valued.</div> <div id="T1l" class="txs">The feeling of shame comes from feeling excluded from a community.</div> <div id="T1m" class="txs">This is what happens with migrants.</div> <div id="T1n" class="txs">The best antidote is to assure strangers that they belong.</div></div>
+<div class="m"><div id="T1o" class="txs">How to create trust?</div> <div id="T1p" class="txs">The best solution is to put yourself in the place of the interlocutor.</div> <div id="T1q" class="txs">People will open up more easily if we show them a sincere willingness to get to know them and if we avoid topics that are perceived as threatening.</div> <div id="T1r" class="txs">Being interested in the country of origin and the family allows them to build relationships through cultural values that they hold dear,</div> <div id="T1s" class="txs">and helps to touch the heart.</div> <div id="T1t" class="txs">Questions like “<span class="it">Why are you here?”</span></div> <div id="T1u" class="txs"><span class="it">How did you come?</span></div><div id="T1v" class="txs">&nbsp;» provoke distrust,</div> <div id="T1w" class="txs">they are reminiscent of interviews with migrants.</div> <div id="T1x" class="txs">Later,</div> <div id="T1y" class="txs">if the relationship develops,</div> <div id="T1z" class="txs">we can talk about these topics when the atmosphere is relaxed.</div></div>
+<div class="m"><div id="T1aa" class="txs"><span class="bd">Hospitality</span> creates consideration,</div> <div id="T1ab" class="txs">but each culture must be respected,</div> <div id="T1ac" class="txs">and in different ways.</div> <div id="T1ad" class="txs">For example,</div> <div id="T1ae" class="txs">in Africa,</div> <div id="T1af" class="txs">we honor our friends by traveling to see them;</div> <div id="T1ag" class="txs">in Europe,</div> <div id="T1ah" class="txs">we do this by opening our homes and thereby our private sphere.</div> <div id="T1ai" class="txs">It is worth asking what form hospitality takes in culture of the migrant and how it communicates consideration,</div> <div id="T1aj" class="txs">to try to find a meaningful point to begin the relationship.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs">Before inviting people,</div> <div id="T1al" class="txs">it is often useful to visit them at home,</div> <div id="T1am" class="txs">it shows them that they are important.</div> <div id="T1an" class="txs">Even after many years,</div> <div id="T1ao" class="txs">many foreigners have never seen a European interior and they feel this as rejection.</div> <div id="T1ap" class="txs">An invitation to a local family is therefore all the more appreciated.</div></div>
+<div class="m"><div id="T1aq" class="txs">In cultures sensitive to honor,</div> <div id="T1ar" class="txs">we avoid expressing criticism directly as much as possible,</div> <div id="T1as" class="txs">so as not to shock anyone.</div> <div id="T1at" class="txs">For example,</div> <div id="T1au" class="txs">after a party,</div> <div id="T1av" class="txs">before saying that something was not put away properly,</div> <div id="T1aw" class="txs">you can kindly inquire whether the party went well,</div> <div id="T1ax" class="txs">and be understanding,</div> <div id="T1ay" class="txs">citing fatigue at the end of the evening.</div> <div id="T1az" class="txs">It is important to avoid generalizing.</div> <div id="T1ba" class="txs">Remarks like:</div> <div id="T1bb" class="txs">“<span class="it">The kitchen was not clean</span>” are disproportionate when only one corner of the kitchen had been forgotten.</div> <div id="T1bc" class="txs">Good communication is most successful if the immediate reaction of discontent is dissipated.</div> <div id="T1bd" class="txs">To resolve more complicated issues,</div> <div id="T1be" class="txs">it is worth using a mediator.</div></div>
+<div class="m"><div id="T1bf" class="txs">In intercultural contacts there will always be disappointments.</div> <div id="T1bg" class="txs">This is due to the different expectations of everyone,</div> <div id="T1bh" class="txs">but also to the fact that there are people in the world with difficult personalities,</div> <div id="T1bi" class="txs">both locals and migrants.</div> <div id="T1bj" class="txs">It is wise not to set the bar too high for compliance with Western standards,</div> <div id="T1bk" class="txs">at least initially - foreigners are unfamiliar with them - and thus leave room for positive developments.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/31 Welcome Man voice.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/31 Welcome Man voice.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/31 Welcome Man voice.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

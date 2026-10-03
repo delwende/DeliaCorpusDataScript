@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galaatiyankooɓe 3</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 6.23 },
+    { label: "1b", start: 6.48, end: 8.57 },
+    { label: "1c", start: 8.82, end: 14.55 },
+    { label: "2a", start: 14.8, end: 17.11 },
+    { label: "2b", start: 17.36, end: 28.09 },
+    { label: "3a", start: 28.34, end: 31.01 },
+    { label: "3b", start: 31.26, end: 38.55 },
+    { label: "4a", start: 38.8, end: 42.39 },
+    { label: "4b", start: 42.64, end: 45.03 },
+    { label: "5", start: 45.28, end: 58.45 },
+    { label: "6a", start: 58.7, end: 60.35 },
+    { label: "6b", start: 60.6, end: 67.17 },
+    { label: "7a", start: 67.42, end: 69.17 },
+    { label: "7b", start: 69.42, end: 74.51 },
+    { label: "8a", start: 74.76, end: 82.89 },
+    { label: "8b", start: 83.14, end: 90.75 },
+    { label: "8c", start: 91, end: 95.03 },
+    { label: "9", start: 95.28, end: 102.29 },
+    { label: "10a", start: 102.54, end: 109.51 },
+    { label: "10b", start: 109.76, end: 111.53 },
+    { label: "10c", start: 111.78, end: 117.91 },
+    { label: "11a", start: 118.16, end: 124.81 },
+    { label: "11b", start: 125.06, end: 126.55 },
+    { label: "11c", start: 126.8, end: 129.67 },
+    { label: "12a", start: 129.92, end: 134.67 },
+    { label: "12b", start: 134.92, end: 140.07 },
+    { label: "13a", start: 140.32, end: 147.43 },
+    { label: "13b", start: 147.68, end: 149.05 },
+    { label: "13c", start: 149.3, end: 152.51 },
+    { label: "14", start: 152.76, end: 166.67 },
+    { label: "15a", start: 166.92, end: 172.19 },
+    { label: "15b", start: 172.44, end: 181.49 },
+    { label: "16a", start: 181.74, end: 189.31 },
+    { label: "16b", start: 189.56, end: 190.61 },
+    { label: "16c", start: 190.86, end: 199.09 },
+    { label: "16d", start: 199.34, end: 200.95 },
+    { label: "16e", start: 201.2, end: 203.65 },
+    { label: "17a", start: 203.9, end: 205.81 },
+    { label: "17b", start: 206.06, end: 216.83 },
+    { label: "18a", start: 217.08, end: 226.51 },
+    { label: "18b", start: 226.76, end: 231.41 },
+    { label: "19a", start: 231.66, end: 235.29 },
+    { label: "19b", start: 235.54, end: 243.89 },
+    { label: "19c", start: 244.14, end: 251.59 },
+    { label: "20a", start: 251.84, end: 255.47 },
+    { label: "20b", start: 255.72, end: 258.23 },
+    { label: "21a", start: 258.48, end: 264.09 },
+    { label: "21b", start: 264.34, end: 266.35 },
+    { label: "21c", start: 266.6, end: 276.65 },
+    { label: "22", start: 276.9, end: 288.35 },
+    { label: "23", start: 288.6, end: 296.69 },
+    { label: "24", start: 296.94, end: 307.21 },
+    { label: "25", start: 307.46, end: 313.85 },
+    { label: "26", start: 314.1, end: 320.47 },
+    { label: "27", start: 320.72, end: 328.99 },
+    { label: "28", start: 329.24, end: 345.43 },
+    { label: "29", start: 345.68, end: 355.07 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+
+// Footnotes and Cross-references
+var footnotes = {
+    "F-0": "<div class=\"footnote-p\"><span class=\"fr\">3:1 </span><span class=\"ft\">maanaa majjum wo waylitirde hakkillo neɗɗo ndaggadaaku.</span></div>",
+    "F-1": "<div class=\"footnote-p\"><span class=\"fr\">3:20 </span><span class=\"ft\">Curoowo fay gooto naataay e amaana mo Laamɗo hokki Ibrahiima oon.</span></div>"
+};
+
+initFootnotes(footnotes);
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 6 }];
+var hasIntro = false;
+var baseRef  = "fu-22-GAL-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='fu-21-2CO-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='fu-22-GAL-002.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Galaatiyankooɓe&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;3&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-22-GAL-004.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-23-EPH-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="s1">Haala jokkude Tawreeta Muusaa naa goonɗinde Iisaa</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">3</div> <div id="T1a" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Hey Galaatiyankooɓe, oɗon pamɗi hakkillo koy!</div> <div id="T1b" class="txs">Moy dabii on dabare nde<span class="footnote selectable" id="F-0"><sup>a</sup></span>?</div> <div id="T1c" class="txs">On cifanaama faa laaɓi tal no Iisaa Almasiihu tontiraa e leggal palaangal.</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2a" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>Njaabee kam ɗum ɗo tan:</div> <div id="T2b" class="txs">wo saabe ko njokkuɗon Tawreeta Muusaa keɓirɗon Ruuhu Ceniiɗo oon, naa on keɓirii mo saabe on nanii Kabaaru Lobbo de ngoonɗinɗon?</div><span id="bookmarks2"></span> <a id="v3"></a><div id="T3a" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>Ko saabii oɗon pamɗiri ni hakkillo?</div> <div id="T3b" class="txs">On puɗɗirii semmbe Ruuhu Laamɗo oon, de joonin kaa oɗon njiɗi timminirde e semmbe terɗe mon naa?</div><span id="bookmarks3"></span> <a id="v4"></a><div id="T4a" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>Ko hewtii on ɗuum fuu laatake ɓolum naa?</div> <div id="T4b" class="txs">Ɗum waawaa laataade ɓolum.</div><span id="bookmarks4"></span> <a id="v5"></a><div id="T5" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Kokkoowo on Ruuhu de na waɗa kaayeefiiji hakkunde mooɗon oon, na waɗa ɗum saabe on nanii Kabaaru Lobbo de ngoonɗinɗon, wanaa saabe on njokkii Tawreeta o waɗirta ɗum!</div><span id="bookmarks5"></span></div><span id="bookmarks5"></span><a id="v6"></a>
+<div class="p"><div id="T6a" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>Ina winndaa:</div> <div id="T6b" class="txs">«Ibrahiima goonɗinii Laamɗo, de Laamɗo hiisorii mo wo o ponnditiiɗo saabe majjum.»</div><span id="bookmarks6"></span> <a id="v7"></a><div id="T7a" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>Ndelle anndee:</div> <div id="T7b" class="txs">goonɗinirɓe hono nii, kam'en jaati ngoni ƴuwdi Ibrahiima.</div><span id="bookmarks7"></span> <a id="v8"></a><div id="T8a" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>Sappaama e ley Binndi, Laamɗo ndaardan yimɓe ɓe nganaa Alhuudiyankooɓe ɓeen fonnditiiɓe saabe goonɗinal muɓɓen.</div> <div id="T8b" class="txs">Ɗum waɗi de Binndi ɗiin kumpiti Ibrahiima kabaaru lobbo oon gilla waɗaay tafon, ɗi mbi'i:</div> <div id="T8c" class="txs">«Lenyi ɗiin fuu keɓiran barke saabe maaɗa.»</div><span id="bookmarks8"></span> <a id="v9"></a><div id="T9" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>Ndelle, goonɗinɓe fuu keɓan barke no Ibrahiima goonɗinɗo oon heɓiri barke ni.</div><span id="bookmarks9"></span></div><span id="bookmarks9"></span><a id="v10"></a>
+<div class="p"><div id="T10a" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Ammaa yowuɓe jikke muɓɓen e jokkude Tawreeta Muusaa ɓeen kuddi ina woni dow muɓɓen.</div> <div id="T10b" class="txs">Sabo ina winndaa:</div> <div id="T10c" class="txs">«Kuddi woodanii neɗɗo fuu mo jokkaay ko woni e dewtere Tawreeta ndeen faa hiɓɓi.»</div><span id="bookmarks10"></span> <a id="v11"></a><div id="T11a" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>Tannyoral, fay gooto ndaardataake wo ponnditiiɗo yeeso Laamɗo saabe Tawreeta.</div> <div id="T11b" class="txs">Sabo ina winndaa:</div> <div id="T11c" class="txs">«Ponnditiiɗo wuurdan goonɗinal.»</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12a" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>Tawreeta kaa yowaaki e goonɗinal, sabo ina winndaa:</div> <div id="T12b" class="txs">«Gaɗoowo jamirooje Tawreeta, kam wuurdata saabe majje.»</div><span id="bookmarks12"></span> <a id="v13"></a><div id="T13a" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Almasiihu soottitii en e kuddi ndi Tawreeta yowi dow meeɗen ndiin, e ley ko loomtanii en kuddi ndiin.</div> <div id="T13b" class="txs">Sabo ina winndaa:</div> <div id="T13c" class="txs">«Ɓilaaɗo e leggal palaangal fuu wo kuɗaaɗo.»</div><span id="bookmarks13"></span> <a id="v14"></a><div id="T14" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>Wo ɗuum Iisaa waɗi faa yimɓe ɓe nganaa Alhuudiyankooɓe ɓeen du keɓa barke mo Ibrahiima heɓi oon saabe Iisaa Almasiihu, keɓiren Ruuhu mo Laamɗo aadii hokkude ley goonɗinal oon.</div><span id="bookmarks14"></span></div>
+
+<div class="s"><div id="s2">Haala Tawreeta e amaana</div></div><span id="bookmarks14"></span><a id="v15"></a>
+<div class="p"><div id="T15a" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>Sakiraaɓe, miɗo sifanoo on ko woowi waɗude:</div> <div id="T15b" class="txs">si neɗɗo moƴƴinii talkuru ndongu faa sariya laamu jaɓii ɗum fu, fay gooto mooytataa ɗum, ɓeydataa ɗum fay huunde.</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16a" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>Wooɗi, Laamɗo waɗanii Ibrahiima e ƴuuruɗo e muuɗum amaanaaji.</div> <div id="T16b" class="txs">Binndi ɗiin mbi'aay:</div> <div id="T16c" class="txs">«Ƴuuruɓe e muuɗum» hono wo heewɓe ɗi cappii, wo gooto ni ɗi cappii nde ɗi mbi'unoo:</div> <div id="T16d" class="txs">«Ƴuuruɗo e maaɗa».</div> <div id="T16e" class="txs">Oon woni Almasiihu.</div><span id="bookmarks16"></span> <a id="v17"></a><div id="T17a" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>Inan ko njiɗumi wiide ɗuum:</div> <div id="T17b" class="txs">amaana mo Laamɗo haɓɓi oon, Tawreeta garɗo duuɓi keme nay e capanɗe tati caggal ɗuum oon haɓɓitataa ɗum, bonnataa amaana Laamɗo oon.</div><span id="bookmarks17"></span> <a id="v18"></a><div id="T18a" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>Sabo si ndongu ngu Laamɗo aadinoo nguun wo dow Tawreeta oon yowinoo, ngu yowaakano dow amaana oon.</div> <div id="T18b" class="txs">Ammaa wo saabe amaana Laamɗo hokkiri Ibrahiima ndongu nguun.</div><span id="bookmarks18"></span></div><span id="bookmarks18"></span><a id="v19"></a>
+<div class="p"><div id="T19a" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>Ndelle, ɗume Tawreeta Muusaa nafata?</div> <div id="T19b" class="txs">O ɓeydaama dow amaana faa o ɓangina hakkeeji fadde ƴuuruɗo e Ibrahiima podanaaɗo amaana oon e warde.</div> <div id="T19c" class="txs">Laamɗo rewnii Tawreeta oon faro maleyka'en de ɓeen kokki curoowo waddana o yimɓe.</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20a" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>Curoowo na holla wanaa neɗɗo gooto tan.</div> <div id="T20b" class="txs">Laamɗo kaa wo gooto.<span class="footnote selectable" id="F-1"><sup>b</sup></span></div><span id="bookmarks20"></span></div><span id="bookmarks20"></span><a id="v21"></a>
+<div class="p"><div id="T21a" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Ndelle, Tawreeta oon ina luttunduri e amaanaaji Laamɗo ɗiin naa?</div> <div id="T21b" class="txs">Luttunduraa koy!</div> <div id="T21c" class="txs">Sini yamiroore waawnde hokkude yimɓe nguurndam jippinanooma, ndaardeede ponnditiiɗo ƴuuranno e yamiroore ndeen jaati.</div><span id="bookmarks21"></span> <a id="v22"></a><div id="T22" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>Ammaa Binndi ɗiin mbi'ii hakke na dawrana huunde fuu, faa goonɗinɓe Iisaa Almasiihu ɓeen kokkee ko aadanaa ɗuum saabe goonɗinal muɓɓen.</div><span id="bookmarks22"></span></div><span id="bookmarks22"></span><a id="v23"></a>
+<div class="p"><div id="T23" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>Fadde wakkati goonɗinal e warude, en kawjanooma ley hawju Tawreeta faa goonɗinal ngaal ɓanginaa.</div><span id="bookmarks23"></span> <a id="v24"></a><div id="T24" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>Hono noon Tawreeta oon laatorii ɗowoowo en faa wakkati mo Almasiihu wari oon, faa ndaardeɗen fonnditiiɓe saabe goonɗinal.</div><span id="bookmarks24"></span> <a id="v25"></a><div id="T25" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>Joonin ko wakkati goonɗinal ngaal wari ɗuum, en njaltii e maral ɗowoowo oon.</div><span id="bookmarks25"></span></div><span id="bookmarks25"></span><a id="v26"></a>
+<div class="p"><div id="T26" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>Joonin on fuu wo on ɓiɓɓe Laamɗo saabe goonɗinal mooɗon Iisaa Almasiihu.</div><span id="bookmarks26"></span> <a id="v27"></a><div id="T27" class="txs"><span class="v">27</span><span class="vsp">&nbsp;</span>Onon waɗaaɓe batisima ley kawtal Almasiihu on fuu, o laatanake on hono kaddungal ngal ɓorniɗon.</div><span id="bookmarks27"></span> <a id="v28"></a><div id="T28" class="txs"><span class="v">28</span><span class="vsp">&nbsp;</span>Ndelle, walaa katin ko senndata Alhuudiyanke e mo wanaa Alhuudiyanke, naa dimo e diimaajo, naa gorko e debbo, sabo on fuu wo on gootum e ley kawtal mooɗon e Iisaa Almasiihu.</div><span id="bookmarks28"></span> <a id="v29"></a><div id="T29" class="txs"><span class="v">29</span><span class="vsp">&nbsp;</span>Si tawii Almasiihu jeyi on, wo on ƴuwdi Ibrahiima, on ndonan ko Laamɗo aadinoo ɗuum.</div><span id="bookmarks29"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/FUHSIMN1DA/B09___03_Galates_____FUHSIMN1DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

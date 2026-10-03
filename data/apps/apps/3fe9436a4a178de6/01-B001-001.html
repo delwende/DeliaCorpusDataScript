@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 LA CHAUVE-SOURIS ET 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.43 },
+    { label: "1b", start: 3.68, end: 7.43 },
+    { label: "1c", start: 7.68, end: 11.43 },
+    { label: "1d", start: 11.68, end: 21.55 },
+    { label: "1e", start: 21.8, end: 30.07 },
+    { label: "1f", start: 30.32, end: 37.55 },
+    { label: "1g", start: 37.8, end: 47.15 },
+    { label: "1h", start: 47.4, end: 51.83 },
+    { label: "1i", start: 52.08, end: 65.07 },
+    { label: "1j", start: 65.32, end: 76.29 },
+    { label: "1k", start: 76.54, end: 78.43 },
+    { label: "1l", start: 78.68, end: 89.99 },
+    { label: "1m", start: 90.24, end: 99.75 },
+    { label: "1n", start: 100, end: 101.55 },
+    { label: "1o", start: 101.8, end: 103.91 },
+    { label: "1p", start: 104.16, end: 116.19 },
+    { label: "1q", start: 116.44, end: 124.75 },
+    { label: "1r", start: 125, end: 135.95 },
+    { label: "1s", start: 136.2, end: 145.99 },
+    { label: "1t", start: 146.24, end: 151.11 },
+    { label: "1u", start: 151.36, end: 162.19 },
+    { label: "1v", start: 162.44, end: 164.35 },
+    { label: "1w", start: 164.6, end: 175.27 },
+    { label: "1x", start: 175.52, end: 196.35 },
+    { label: "1y", start: 196.6, end: 199.91 },
+    { label: "1z", start: 200.16, end: 203.51 },
+    { label: "1aa", start: 203.76, end: 211.35 },
+    { label: "1ab", start: 211.6, end: 217.79 },
+    { label: "1ac", start: 218.04, end: 224.23 },
+    { label: "1ad", start: 224.48, end: 230.31 },
+    { label: "1ae", start: 230.56, end: 236.67 },
+    { label: "1af", start: 236.92, end: 247.11 },
+    { label: "1ag", start: 247.36, end: 253.15 },
+    { label: "1ah", start: 253.4, end: 262.75 },
+    { label: "1ai", start: 263, end: 263.71 },
+    { label: "1aj", start: 263.96, end: 265.35 },
+    { label: "1ak", start: 265.6, end: 276.23 },
+    { label: "1al", start: 276.48, end: 277.99 },
+    { label: "1am", start: 278.24, end: 295.39 },
+    { label: "1an", start: 295.64, end: 302.39 },
+    { label: "1ao", start: 302.64, end: 312.71 },
+    { label: "1ap", start: 312.96, end: 323.67 },
+    { label: "1aq", start: 323.92, end: 330.75 },
+    { label: "1ar", start: 331, end: 347.59 },
+    { label: "1as", start: 347.84, end: 354.99 },
+    { label: "1at", start: 355.24, end: 374.67 },
+    { label: "1au", start: 374.92, end: 386.51 },
+    { label: "1av", start: 386.76, end: 397.95 },
+    { label: "1aw", start: 398.2, end: 405.35 },
+    { label: "1ax", start: 405.6, end: 417.47 },
+    { label: "1ay", start: 417.72, end: 423.99 },
+    { label: "1az", start: 424.24, end: 429.47 },
+    { label: "1ba", start: 429.72, end: 433.51 },
+    { label: "1bb", start: 433.76, end: 440.87 },
+    { label: "1bc", start: 441.12, end: 448.79 },
+    { label: "1bd", start: 449.04, end: 459.79 },
+    { label: "1be", start: 460.04, end: 470.03 },
+    { label: "1bf", start: 470.28, end: 478.15 },
+    { label: "1bg", start: 478.4, end: 482.31 },
+    { label: "1bh", start: 482.56, end: 492.83 },
+    { label: "1bi", start: 493.08, end: 496.67 },
+    { label: "1bj", start: 496.92, end: 502.79 },
+    { label: "1bk", start: 503.04, end: 508.15 },
+    { label: "1bl", start: 508.4, end: 509.95 },
+    { label: "1bm", start: 510.2, end: 513.03 },
+    { label: "1bn", start: 513.28, end: 521.23 },
+    { label: "1bo", start: 521.48, end: 526.79 },
+    { label: "1bp", start: 527.04, end: 546.63 },
+    { label: "1bq", start: 546.88, end: 558.23 },
+    { label: "1br", start: 558.48, end: 577.83 },
+    { label: "1bs", start: 578.08, end: 581.99 },
+    { label: "1bt", start: 582.24, end: 592.99 },
+    { label: "1bu", start: 593.24, end: 600.59 },
+    { label: "1bv", start: 600.84, end: 614.55 },
+    { label: "1bw", start: 614.8, end: 621.87 },
+    { label: "1bx", start: 622.12, end: 626.31 },
+    { label: "1by", start: 626.56, end: 645.67 },
+    { label: "1bz", start: 645.92, end: 674.59 },
+    { label: "1ca", start: 674.84, end: 676.83 },
+    { label: "1cb", start: 677.08, end: 696.35 },
+    { label: "1cc", start: 696.6, end: 704.39 },
+    { label: "1cd", start: 704.64, end: 712.87 },
+    { label: "1ce", start: 713.12, end: 725.67 },
+    { label: "1cf", start: 725.92, end: 728.55 },
+    { label: "1cg", start: 728.8, end: 736.15 },
+    { label: "1ch", start: 736.4, end: 750.47 },
+    { label: "1ci", start: 750.72, end: 759.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 759.23;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1 LA CHAUVE-SOURIS ET&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">1 </span><span class="bd">LA CHAUVE-SOURIS ET </span><span class="bd">L’</span><span class="bd">HIRONDELLE</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">En ces temps-là, la forêt était dense et effrayante.</div> <div id="T1c" class="txs">Il y avait beaucoup d’herbes et d’eau pour les animaux sauvages.</div> <div id="T1d" class="txs">La brousse était un territoire organisé avec ses règles de fonctionnement qui assuraient à chacun une certaine sécurité.</div></div>
+<div class="m"><div id="T1e" class="txs">Le seul problème était le manque de liberté totale dans la mesure où tout n’était pas autorisé.</div> <div id="T1f" class="txs">La liberté de mouvement de la population était limitée surtout en saison hivernale.</div> <div id="T1g" class="txs">Cette restriction de liberté d’aller partout dérangeait le sommeil d’un homme, qui d’ailleurs, la trouvait très grave.</div></div>
+<div class="m"><div id="T1h" class="txs">Le roi des oiseaux avait fait semer son vaste champ.</div> <div id="T1i" class="txs">Pour éviter que les gens ne marchent sur son champ et empêcher ainsi ses semences de bien pousser, il interdit à tout le monde de le traverser.</div> <div id="T1j" class="txs">Disons que cette décision du chef n’étonnait personne et ne dérangeait non plus personne puisque cela était ainsi depuis la nuit des temps.</div> <div id="T1k" class="txs">Tout le monde y obéissait.</div> <div id="T1l" class="txs">Cela était également un signe de respect à l’égard du souverain qui, en contrepartie, assurait la sécurité de tout le monde.</div></div>
+<div class="m"><div id="T1m" class="txs">Cette année encore, la tradition était de rigueur mais une seule personne la trouvait de trop.</div> <div id="T1n" class="txs">Elle comptait donc désobéir.</div> <div id="T1o" class="txs">C’était la chauve-souris.</div> <div id="T1p" class="txs">Comme c’était toujours un grand risque de s’opposer seul, elle entreprit de se trouver un complice qui n’était autre personne que sa grande ennemie, l’hirondelle.</div></div>
+<div class="m"><div id="T1q" class="txs">C’est ainsi que Yoara, la chauve- souris, alla voir Tunda, l’hirondelle et lui tint ces propos :</div> <div id="T1r" class="txs">«&nbsp;<span class="it">Tu vois, ma chère seule amie de la forêt, le chef exagère chaque année avec sa décision de ne pas traverser son champ.</span></div> <div id="T1s" class="txs"><span class="it">J'ai envie de ne pas la respecter parce que je trouve que le chef fait obstruction à notre liberté de mouvement.</span></div> <div id="T1t" class="txs"><span class="it">D’ailleurs cela représente un signe de grande dictature.</span></div> <div id="T1u" class="txs"><span class="it">Or la dictature, nous devons la combattre avec toutes les énergies dont notre corps et notre esprit disposent.</span></div> <div id="T1v" class="txs"><span class="it">Veux-tu être mon alliée&nbsp;?</span></div> <div id="T1w" class="txs"><span class="it">Si nous réussissons, nous deviendrons deux figures emblématiques qui auront apporté à notre peuple le changement dont il a besoin </span>».</div></div>
+<div class="m"><div id="T1x" class="txs">À ce discours quelque peu révolutionnaire et convainquant, la dame hirondelle tomba sous le charme de la noblesse de l’entreprise mais resta encore perplexe car à y penser aux conséquences, c’était un véritable acte de suicide.</div></div>
+<div class="m"><div id="T1y" class="txs">Alors, elle répondit, mais ainsi :</div> <div id="T1z" class="txs"><span class="it">«&nbsp;Il ne faut surtout pas rêver mon amie.</span></div> <div id="T1aa" class="txs"><span class="it">Tu sais bien que c'est devenu une coutume pour</span><span class="it"> </span><span class="it">nous et en tant que telle, on ne s</span><span class="it">’y </span><span class="it">oppose jamais.</span></div> <div id="T1ab" class="txs"><span class="it">Sinon, ce sont les</span><span class="it"> </span><span class="it">autres qui indiqueront aux générations futures nos tombes.</span></div> <div id="T1ac" class="txs"><span class="it">Et</span><span class="it"> d</span><span class="it">'ailleurs, je ne vois pas en quoi le c</span><span class="it">h</span><span class="it">ef est </span><span class="it">méchant</span><span class="it">.</span></div> <div id="T1ad" class="txs"><span class="it">Il nous invite</span><span class="it"> </span><span class="it">seulement </span><span class="it">à</span><span class="it"> ne pas </span><span class="it">empêcher</span><span class="it"> ses semis de pousser </span>».</div></div>
+<div class="m"><div id="T1ae" class="txs"><span class="it">«&nbsp;Qu</span><span class="it">’</span><span class="it">i</span><span class="it">l</span><span class="it"> aille en brousse cultiver s'il est aussi travailleur que cela.</span></div> <div id="T1af" class="txs"><span class="it">Ici</span><span class="it"> </span><span class="it">nous sommes libres et nous voulons jouir de notre </span><span class="it">liberté</span><span class="it"> en nous</span><span class="it"> </span><span class="it">transportant partout </span><span class="it">où</span><span class="it"> nous voulons nous </span><span class="it">y</span><span class="it"> rendre.</span></div> <div id="T1ag" class="txs"><span class="it">Et ce n'est </span><span class="it">pas</span><span class="it"> </span><span class="it">un </span><span class="it">ch</span><span class="it">ef paresseux comme </span><span class="it">le</span><span class="it"> nôtre qui va nous en </span><span class="it">empêcher</span><span class="it">.</span></div> <div id="T1ah" class="txs"><span class="it">Toi aussi</span><span class="it">, réfléchis</span><span class="it"> encore </span><span class="it">un </span><span class="it">tout petit peu et tu verras que </span><span class="it">j</span><span class="it">'ai parfaitement</span><span class="it"> </span><span class="it">raison </span>», répliqua Yoara.</div></div>
+<div class="m"><div id="T1ai" class="txs"><span class="it">Elle</span> ajouta :</div> <div id="T1aj" class="txs"><span class="it">«&nbsp;</span><span class="it">P</span><span class="it">assons </span><span class="it">à</span><span class="it"> l'acte</span><span class="it">.</span></div><div id="T1ak" class="txs"><span class="it"> Viens, nous allons ensemble traverser</span><span class="it"> </span><span class="it">des </span><span class="it">aujourd’hui</span><span class="it"> cette fameuse </span><span class="it">z</span><span class="it">one interdite du c</span><span class="it">he</span><span class="it">f et tu verras que</span><span class="it"> </span><span class="it">nous deviendrions des </span><span class="it">hé</span><span class="it">ros </span><span class="it">»</span>.</div></div>
+<div class="m"><div id="T1al" class="txs">Tunda refusa.</div> <div id="T1am" class="txs">Mais pas pour longtemps car non seulement elle manquait d'arguments mais elle était aussi séduite par la force de l’argumentaire de son ennemie qui voulait en fait lui jouer un sale tour.</div></div>
+<div class="m"><div id="T1an" class="txs">Les deux allèrent défier le chef en traversant en plein jour son fameux champ.</div> <div id="T1ao" class="txs">Les autres habitants qui les ont vues, disaient qu'elles avaient fini de vivre et qu’elles venaient de signer leur propre arrêté de mise à mort.</div></div>
+<div class="m"><div id="T1ap" class="txs">À peine qu’elles aient atteint l’autre côté du champ, elles furent accueillies par les gardiens armés de gourdins et de flèches.</div> <div id="T1aq" class="txs">Elles firent immédiatement conduites au palais où une sentence fatale fut prononcée.</div></div>
+<div class="m"><div id="T1ar" class="txs">Le chef décida que dès le lendemain, les deux provocatrices soient exécutées à la place publique pour que cela serve d’exemple de dissuasion aux éventuels postulants.</div> <div id="T1as" class="txs">C’est sans force et sans défense qu’elles furent amenées dans une prison pour attendre le jour-j.</div> <div id="T1at" class="txs">Si pour Tunda l’hirondelle, c’était vraiment un regret, pour le comploteur Yoara, le piège était en train de bien marcher parce que son objectif principal était de nuire à son ennemie qu’elle feignait d'appeler son amie.</div></div>
+<div class="m"><div id="T1au" class="txs">Elle était plutôt contente car elle avait échafaudé un plan pour tuer son ennemie et apparemment tout semblait baigner dans l’huile.</div></div>
+<div class="m"><div id="T1av" class="txs">Dans la prison, au beau milieu de la nuit, Yoara se mit à pleurer et à crier en se tordant de douleurs de <span class="it">so</span><span class="it">n </span><span class="it">œil droit</span>.</div> <div id="T1aw" class="txs">Elle attira ainsi l’attention des gardes qui vinrent lui demander ce qui se passait.</div> <div id="T1ax" class="txs">Elle expliqua tout en se tordant de plus bel de douleurs que son œil lui faisait très mal et cela l’empêchait même de dormir.</div> <div id="T1ay" class="txs">Les gardes lui ordonnèrent de se taire et repartirent dans leur retraite.</div> <div id="T1az" class="txs">Une minute après, Yoara se mit à crier plus fort.</div> <div id="T1ba" class="txs">Les gardes revinrent et lui tinrent ces propos :</div> <div id="T1bb" class="txs"><span class="it">«</span><span class="it"> </span><span class="it">S</span><span class="it">i tu recommence</span><span class="it">s</span><span class="it"> enc</span><span class="it">o</span><span class="it">re,</span><span class="it"> </span><span class="it">nous a</span><span class="it">ll</span><span class="it">ons </span><span class="it">t’enl</span><span class="it">ever </span><span class="it">l</span><span class="it">'œ</span><span class="it">i</span><span class="it">l </span><span class="it">malade </span><span class="it">pour que tu nous </span><span class="it">l</span><span class="it">ai</span><span class="it">ss</span><span class="it">e</span><span class="it">s</span><span class="it"> nous</span><span class="it"> </span><span class="it">reposer.</span></div><div id="T1bc" class="txs"><span class="it">Dans tous </span><span class="it">l</span><span class="it">es cas, ce</span><span class="it">l</span><span class="it">a ne change </span><span class="it">à</span><span class="it"> rien puisque tu seras tuée</span><span class="it"> </span><span class="it">demain dès </span><span class="it">l</span><span class="it">'aube </span>».</div></div>
+<div class="m"><div id="T1bd" class="txs">Cette décision des gardes était une vraie aubaine pour Yoara et elle lui permettait de faire un notable progrès dans son plan.</div></div>
+<div class="m"><div id="T1be" class="txs">En effet, dans la décision du chef, il avait été dit qu'elles devaient verser leur sang pour payer la désobéissance.</div> <div id="T1bf" class="txs">Pour Yoara, en se faisant enlever un œil, quand l’heure de l’exécution serait venue, le chef dit :</div> <div id="T1bg" class="txs"><span class="it">«</span><span class="it"> </span><span class="it">A</span><span class="it">yant déjà versé ton sang tu es libre</span>&nbsp;».</div></div>
+<div class="m"><div id="T1bh" class="txs">Bornée dans cette logique, Yoara se remit à crier de vive allure et de forte voix irritant ainsi les gardes.</div> <div id="T1bi" class="txs">Ils arrachèrent alors l’œil de Yoara.</div> <div id="T1bj" class="txs">Lorsqu’ils repartirent, Yoara se tourna vers Tunda et dit :</div> <div id="T1bk" class="txs"><span class="it">«&nbsp;Mon</span><span class="it"> amie, moi au moins</span><span class="it"> j’ai</span><span class="it"> la </span><span class="it">ch</span><span class="it">ance d 'être re</span><span class="it">l</span><span class="it">âc</span><span class="it">hée</span><span class="it"> demain.</span></div><div id="T1bl" class="txs"><span class="it">J</span><span class="it">'ai </span><span class="it">déjà</span><span class="it"> vers</span><span class="it">é</span><span class="it"> mon sang.</span></div> <div id="T1bm" class="txs"><span class="it">Mais</span><span class="it"> </span><span class="it">pour to</span><span class="it">i</span><span class="it">, je ne peux en dire autant.</span></div> <div id="T1bn" class="txs"><span class="it">Notre p</span><span class="it">roj</span><span class="it">et risque de </span><span class="it">t’</span><span class="it">emporter</span><span class="it"> </span><span class="it">et c'est vraiment avec regret que tu me quitteras demain pour </span><span class="it">l</span><span class="it">'au</span><span class="it">-</span><span class="it">de</span><span class="it">là</span><span class="it">.</span></div><div id="T1bo" class="txs"><span class="it"> J</span><span class="it">e suis vraiment </span><span class="it">déçue</span><span class="it"> que ce</span><span class="it">l</span><span class="it">a se termine de cette </span><span class="it">façon</span><span class="it">.</span></div> <div id="T1bp" class="txs"><span class="it">Maintenant,</span><span class="it"> </span><span class="it">si tu as une dernière </span><span class="it">vol</span><span class="it">ont</span><span class="it">é</span><span class="it"> </span><span class="it">à</span><span class="it"> transmettre </span><span class="it">à</span><span class="it"> ta</span><span class="it"> fa</span><span class="it">mi</span><span class="it">l</span><span class="it">le </span><span class="it">dis-</span><span class="it">l</span><span class="it">a</span><span class="it"> moi tout</span><span class="it"> </span><span class="it">de suite et demain, quand</span><span class="it"> j</span><span class="it">e serais </span><span class="it">libérée</span><span class="it">, </span><span class="it">j</span><span class="it">'irai directement </span><span class="it">l</span><span class="it">a </span><span class="it">l</span><span class="it">ui dire</span><span class="it"> </span><span class="it">car ce sera la seu</span><span class="it">l</span><span class="it">e c</span><span class="it">h</span><span class="it">ose que je pourrai faire pour te rendre</span><span class="it"> </span><span class="it">hommage.</span></div><div id="T1bq" class="txs"><span class="it">»</span></div></div>
+<div class="m"><div id="T1br" class="txs">C’est en ce moment seulement que l’hirondelle comprit qu’elle était l’objet d’une farce qui pouvait lui coûter la vie inutilement.</div> <div id="T1bs" class="txs">Mais sans paniquer, elle remercia Yoara et lui rassura qu’elle n'avait pas de dernière volonté car pour elle tout est entre les mains de Dieu qui est le plus grand juge et qui ne se trompe jamais.</div> <div id="T1bt" class="txs">Yoara insista encore mais l’autre resta stoïque.</div></div>
+<div class="m"><div id="T1bu" class="txs">Comme la nuit porte conseil, le chef au cours de la nuit essaya d’examiner l’acte des provocatrices et tira une leçon :</div> <div id="T1bv" class="txs">«&nbsp;Si ces deux ont agi ainsi, c’est que, c'est l'expression d 'une plainte commune.</div> <div id="T1bw" class="txs">Comme personne n'a eu le courage de me la dire en face, ces deux-là sont les plus courageuses et méritent plutôt une décoration au lieu du châtiment.</div> <div id="T1bx" class="txs">Elles ont osé exprimer très haut ce que les autres murmuraient très bas.</div> <div id="T1by" class="txs">Ma décision est catégorique, je vais les libérer&nbsp;».</div></div>
+<div class="m"><div id="T1bz" class="txs">Le matin, pendant que tout le monde s'était rendu au palais pour assister à la séance d’exécutions, le chef rendit sa décision publique et ordonna aux gardes de libérer les prisonnières.</div></div>
+<div class="m"><div id="T1ca" class="txs">Quand les gardes annoncèrent aux prisonnières la décision du chef et leur ordonnèrent de partir parce que désormais libres, pendant que Tunda remerciait et demandait aux mânes de ses ancêtres de prolonger la vie de leur vigilant chef, Yoara manifestait un signe de mécontentement.</div> <div id="T1cb" class="txs">Elle demanda aussitôt à voir le chef.</div></div>
+<div class="m"><div id="T1cc" class="txs">Quand ce dernier la reçut, il écouta attentivement sa plainte qui se résumait à ce que le chef maintienne sa décision et donc d’exécuter Tunda qui pour le moment est la seule à ne pas verser son sang.</div> <div id="T1cd" class="txs">Elle montra son œil arraché en témoins du prix qu’elle avait payé pour sa désobéissance.</div></div>
+<div class="m"><div id="T1ce" class="txs">Le souverain comprit les manigances de cette amie perfide et ordonna de la remettre en prison.</div> <div id="T1cf" class="txs">Il se félicita de la sage décision qu’il venait de prendre et décida de donner une très belle fête en honneur de Tunda l’innocente.</div> <div id="T1cg" class="txs">Il la nomma conseillère dans son palais.</div> <div id="T1ch" class="txs">Dans les relations humaines, il y a toujours une fourberie qui anime certains esprits.</div> <div id="T1ci" class="txs">Pour ne pas en être victime un jour, il faut avec soin examiner tous les projets qui nous sont soumis car notre adhésion nous engage et nous responsabilise. Celui qui se laisse séduire par de très belles démonstrations verbales peut un jour payer de sa vie.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 01 La chauve-souris et l'hirondelle.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

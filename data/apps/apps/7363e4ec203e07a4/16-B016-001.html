@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°15 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.87 },
+    { label: "1b", start: 2.12, end: 2.93 },
+    { label: "1c", start: 3.18, end: 4.25 },
+    { label: "1d", start: 4.5, end: 11.63 },
+    { label: "1e", start: 11.88, end: 15.95 },
+    { label: "1f", start: 16.2, end: 21.01 },
+    { label: "1g", start: 21.26, end: 21.83 },
+    { label: "1h", start: 22.08, end: 23.99 },
+    { label: "1i", start: 24.24, end: 25.63 },
+    { label: "1j", start: 25.88, end: 32.67 },
+    { label: "1k", start: 32.92, end: 34.25 },
+    { label: "1l", start: 34.5, end: 43.67 },
+    { label: "1m", start: 43.92, end: 45.43 },
+    { label: "1n", start: 45.68, end: 49.41 },
+    { label: "1o", start: 49.66, end: 52.23 },
+    { label: "1p", start: 52.48, end: 55.79 },
+    { label: "1q", start: 56.04, end: 58.73 },
+    { label: "1r", start: 58.98, end: 61.57 },
+    { label: "1s", start: 61.82, end: 63.43 },
+    { label: "1t", start: 63.68, end: 66.29 },
+    { label: "1u", start: 66.54, end: 69.87 },
+    { label: "1v", start: 70.12, end: 72.91 },
+    { label: "1w", start: 73.16, end: 76.47 },
+    { label: "1x", start: 76.72, end: 78.77 },
+    { label: "1y", start: 79.02, end: 82.67 },
+    { label: "1z", start: 82.92, end: 87.83 },
+    { label: "1aa", start: 88.08, end: 89.49 },
+    { label: "1ab", start: 89.74, end: 96.37 },
+    { label: "1ac", start: 96.62, end: 99.49 },
+    { label: "1ad", start: 99.74, end: 101.63 },
+    { label: "1ae", start: 101.88, end: 103.29 },
+    { label: "1af", start: 103.54, end: 107.35 },
+    { label: "1ag", start: 107.6, end: 108.27 },
+    { label: "1ah", start: 108.52, end: 111.07 },
+    { label: "1ai", start: 111.32, end: 114.03 },
+    { label: "1aj", start: 114.28, end: 116.59 },
+    { label: "1ak", start: 116.84, end: 118.89 },
+    { label: "1al", start: 119.14, end: 121.51 },
+    { label: "1am", start: 121.76, end: 125.93 },
+    { label: "1an", start: 126.18, end: 127.65 },
+    { label: "1ao", start: 127.9, end: 130.21 },
+    { label: "1ap", start: 130.46, end: 132.41 },
+    { label: "1aq", start: 132.66, end: 133.69 },
+    { label: "1ar", start: 133.94, end: 137.13 },
+    { label: "1as", start: 137.38, end: 139.89 },
+    { label: "1at", start: 140.14, end: 144.57 },
+    { label: "1au", start: 144.82, end: 148.35 },
+    { label: "1av", start: 148.6, end: 153.73 },
+    { label: "1aw", start: 153.98, end: 157.27 },
+    { label: "1ax", start: 157.52, end: 159.43 },
+    { label: "1ay", start: 159.68, end: 162.37 },
+    { label: "1az", start: 162.62, end: 165.27 },
+    { label: "1ba", start: 165.52, end: 166.33 },
+    { label: "1bb", start: 166.58, end: 168.17 },
+    { label: "1bc", start: 168.42, end: 170.59 },
+    { label: "1bd", start: 170.84, end: 171.93 },
+    { label: "1be", start: 172.18, end: 174.15 },
+    { label: "1bf", start: 174.4, end: 178.27 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 178.27;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "16-B016-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='15-B015-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°15&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='17-B017-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='17-B017-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B016-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°15 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Travaillez.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="it">Histoire:</span></div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Moïse a appris la mécanique mais n’a jamais eu le courage de travailler longtemps dans un atelier.</span></div> <div id="T1e" class="txs"><span class="it">Il n’est pas marié mais a une grande famille.</span></div> <div id="T1f" class="txs"><span class="it">Il y a toujours une cour où il peut aller pour manger quand il a faim.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="it">Un jour,</span></div> <div id="T1h" class="txs"><span class="it">il explique cela à son ami:</span></div> <div id="T1i" class="txs"><span class="it">«&nbsp;Pourquoi travailler?</span></div> <div id="T1j" class="txs"><span class="it">C’est plus important de visiter la famille et d’aller prier à l’église que de se fatiguer à travailler&nbsp;!</span></div> <div id="T1k" class="txs"><span class="it">Le travail n’est pas bon,</span></div> <div id="T1l" class="txs"><span class="it">c’est une punition que Dieu a donné à Adam et Eve à cause de leur péché… Dieu nous donne la famille et les amis pour prendre soin de nous.</span></div> <div id="T1m" class="txs"><span class="it">Si j’ai un besoin,</span></div> <div id="T1n" class="txs"><span class="it">je sais qu’il y aura toujours quelqu’un pour s’occuper de moi!</span></div><div id="T1o" class="txs"><span class="it"> </span><span class="it">»</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1p" class="txs">Que pensez-vous de l’attitude de Moïse?</div> <div id="T1q" class="txs">Pensez-vous que le travail est une punition du péché?</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1r" class="txs">La souffrance est apparue avec le péché,</div> <div id="T1s" class="txs">mais le travail n’est pas une conséquence du péché.</div> <div id="T1t" class="txs">Au moment de la création,</div> <div id="T1u" class="txs">avant que le péché soit dans le monde,</div> <div id="T1v" class="txs">Dieu a commandé à Adam et Eve de travailler.</div> <div id="T1w" class="txs">Et la Bible nous montre que Dieu lui-même travaille.</div></div>
+<div class="p_Corpsdetexte"><div id="T1x" class="txs">Nous ne devons pas compter seulement sur les autres pour vivre,</div> <div id="T1y" class="txs">manger et payer nos dépenses.</div> <div id="T1z" class="txs">Nous devons nous occuper de nous-même et être travailleur.</div> <div id="T1aa" class="txs">Nous devons chercher à prendre soin nous-même de nos enfants et de nos besoins.</div></div>
+<div class="m"><div id="T1ab" class="txs"><span class="ul">Verset </span><span class="ul">à</span><span class="ul"> </span><span class="ul">méditer:</span></div></div>
+<div class="p"><div id="T1ac" class="txs"><span class="it">«&nbsp;Le Seigneur Dieu prend l’homme et il le place dans le jardin d’Eden pour le cultiver et pour le garder.</span></div><div id="T1ad" class="txs"><span class="it">&nbsp;» </span>(Genèse 2.15)</div></div>
+<div class="p"><div id="T1ae" class="txs"><span class="it">«&nbsp; Celui  qui  ne  veut  pas  travailler,</span></div>  <div id="T1af" class="txs"><span class="it">qu’il  ne   mange   pas   non plus!</span></div><div id="T1ag" class="txs"><span class="it">&nbsp;»</span><span class="it"> </span>(2Thessaloniciens 3.10).</div></div>
+<div class="p"><div id="T1ah" class="txs"><span class="it">«&nbsp;Un jour,</span></div> <div id="T1ai" class="txs"><span class="it">je suis passé près du champ d’un paresseux,</span></div> <div id="T1aj" class="txs"><span class="it">près de la vigne d’un homme sans courage.</span></div> <div id="T1ak" class="txs"><span class="it">Les mauvaises herbes poussaient partout,</span></div> <div id="T1al" class="txs"><span class="it">tout était caché par les épines,</span></div> <div id="T1am" class="txs"><span class="it">le mur de pierres était tombé.</span></div> <div id="T1an" class="txs"><span class="it">J’ai réfléchi à ce que j’avais vu et j’en ai tiré cette leçon:</span></div> <div id="T1ao" class="txs"><span class="it">Tu dors un peu,</span></div> <div id="T1ap" class="txs"><span class="it">tu fermes les yeux un petit moment,</span></div> <div id="T1aq" class="txs"><span class="it">tu restes couché sans rien faire.</span></div> <div id="T1ar" class="txs"><span class="it">Pendant ce temps,</span></div> <div id="T1as" class="txs"><span class="it">la pauvreté arrive chez toi comme un promeneur,</span></div> <div id="T1at" class="txs"><span class="it">la misère te surprend comme un pillard.</span></div><div id="T1au" class="txs"><span class="it">&nbsp;» </span>(Proverbes 24.30-34).</div></div>
+<div class="p"><div id="T1av" class="txs"><span class="it">«&nbsp;Ceux qui cultivent leur champ ont beaucoup à manger.</span></div> <div id="T1aw" class="txs"><span class="it">Mais ceux qui courent après des choses inutiles manquent de bon sens.»</span></div><div id="T1ax" class="txs"><span class="it"> </span>(Proverbes 12.11).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ay" class="txs"><span class="ul">Questions à se</span><span class="ul"> </span><span class="ul">poser:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1az" class="txs">A quoi ressemble un homme travailleur?</div> <div id="T1ba" class="txs">A quoi ressemble un homme paresseux?</div> <div id="T1bb" class="txs">Et vous,</div> <div id="T1bc" class="txs">à qui ressemblez-vous?</div> <div id="T1bd" class="txs">Que pensez- vous du travail?</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1be" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1bf" class="txs">Ne négligez pas le travail. Ne soyez pas paresseux.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/024_Conseil_n15.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

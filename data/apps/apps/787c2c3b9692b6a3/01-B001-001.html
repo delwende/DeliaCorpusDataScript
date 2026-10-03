@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proverbes dioula – français 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0.46, end: 4.66 },
+    { label: "1b", start: 4.91, end: 9.76 },
+    { label: "1c", start: 10.01, end: 14.23 },
+    { label: "1d", start: 14.48, end: 22.98 },
+    { label: "1e", start: 23.23, end: 27.98 },
+    { label: "1f", start: 28.23, end: 35.25 },
+    { label: "1g", start: 35.5, end: 41.31 },
+    { label: "1h", start: 41.56, end: 45.65 },
+    { label: "1i", start: 45.9, end: 49.85 },
+    { label: "1j", start: 50.1, end: 55.99 },
+    { label: "1k", start: 56.24, end: 63.17 },
+    { label: "1l", start: 63.42, end: 67.8 },
+    { label: "1m", start: 68.05, end: 77.04 },
+    { label: "1n", start: 77.29, end: 80.82 },
+    { label: "1o", start: 81.07, end: 88.44 },
+    { label: "1p", start: 88.69, end: 98.69 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0.46;
+var stopTime  = 98.69;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Proverbes dioula – français&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Proverbes dioula – français volume 3.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">51</span><span class="bd"> </span><span class="bd">M</span><span class="bd">ɔgɔ</span><span class="bd"> </span><span class="bd">be</span><span class="bd"> </span><span class="bd">mɔgɔ</span><span class="bd"> </span><span class="bd">gwɛn</span><span class="bd"> </span><span class="bd">kasɔrɔ</span><span class="bd"> e ma </span><span class="bd">fɔ</span><span class="bd"> a ma </span><span class="bd">bɔ</span><span class="bd"> </span><span class="bd">yan</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs">Il y a mille manières de chasser quelqu’un.</div></div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Mɔgɔ</span><span class="bd"> be </span><span class="bd">mɔgɔ</span><span class="bd"> </span><span class="bd">gwɛn</span><span class="bd"> </span><span class="bd">kasɔrɔ</span><span class="bd"> e ma </span><span class="bd">fɔ</span><span class="bd"> a ma </span><span class="bd">bɔ</span><span class="bd"> </span><span class="bd">yan</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">52</span><span class="bd"> </span><span class="bd">M</span><span class="bd">ɔgɔ</span><span class="bd"> </span><span class="bd">be</span><span class="bd"> </span><span class="bd">wulujugu</span><span class="bd"> to a </span><span class="bd">tigi</span><span class="bd"> le </span><span class="bd">kanma</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1f" class="txs">On fait fi de certains défauts de l’autre pas grâce à lui mais à ses relations.</div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">M</span><span class="bd">ɔgɔ</span><span class="bd"> </span><span class="bd">be</span><span class="bd"> </span><span class="bd">wulujugu</span><span class="bd"> to a </span><span class="bd">tigi</span><span class="bd"> le </span><span class="bd">kanma</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">53</span><span class="bd"> </span><span class="bd">Mɔgɔ</span><span class="bd"> bi </span><span class="bd">jaman</span><span class="bd"> ka la </span><span class="bd">koo</span><span class="bd"> </span><span class="bd">dɔ</span><span class="bd"> le kan.</span></div></div>
+<div class="m"><div id="T1i" class="txs">On ne devient pas arrogant par hasard.</div></div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">Mɔgɔ</span><span class="bd"> bi </span><span class="bd">jaman</span><span class="bd"> ka la </span><span class="bd">koo</span><span class="bd"> </span><span class="bd">dɔ</span><span class="bd"> le kan.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">54 </span><span class="bd">Mɔgɔ</span><span class="bd"> bi pan </span><span class="bd">musokɔrɔninbo</span><span class="bd"> le </span><span class="bd">kan</span><span class="bd">, e ti se ka pan a ka </span><span class="bd">kuma</span><span class="bd"> </span><span class="bd">kan</span><span class="bd"> </span><span class="bd">dɛ</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1l" class="txs">On ne peut pas faire fi des paroles d’une vielle.</div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">Mɔgɔ</span><span class="bd"> bi pan </span><span class="bd">musokɔrɔninbo</span><span class="bd"> le </span><span class="bd">kan</span><span class="bd">, e ti se ka pan a ka </span><span class="bd">kuma</span><span class="bd"> </span><span class="bd">kan</span><span class="bd"> </span><span class="bd">dɛ</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">55 </span><span class="bd">Mɔgɔ</span><span class="bd"> bi se </span><span class="bd">koo</span><span class="bd"> </span><span class="bd">ra</span><span class="bd">, e bi </span><span class="bd">tɔ</span><span class="bd"> to.</span></div></div>
+<div class="m"><div id="T1o" class="txs">On peut avoir les moyens d’agir à tout instant mais, on peut décider de pardonner.</div></div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">Mɔgɔ</span><span class="bd"> bi se </span><span class="bd">koo</span><span class="bd"> </span><span class="bd">ra</span><span class="bd">, e bi </span><span class="bd">tɔ</span><span class="bd"> to.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/prov dioula vol 3 51-55.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

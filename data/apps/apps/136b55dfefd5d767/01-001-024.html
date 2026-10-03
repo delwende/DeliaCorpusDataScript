@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>281  So-m-meng 24</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "24a", start: 491.72, end: 504.49 },
+    { label: "24b", start: 504.74, end: 506.67 },
+    { label: "24c", start: 506.92, end: 513.99 },
+    { label: "24d", start: 514.24, end: 519.35 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 491.72;
+var stopTime  = 519.35;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 42 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-023.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;281  So-m-meng&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;24&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-025.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes more 280 a 322-image24.jpg" />
+
+<div class="m"><div id="T24a" class="txs"><span class="bd">304</span><span class="bd">  </span><span class="bd"> </span><span class="bd">Gãabg</span><span class="bd"> </span><span class="bd">yeelame</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> </span><span class="bd">ned</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n </span><span class="bd">deem</span><span class="bd"> </span><span class="bd">n</span><span class="bd"> </span><span class="bd">lobg</span><span class="bd"> </span><span class="bd">bɩ</span><span class="bd"> </span><span class="bd">f</span><span class="bd"> </span><span class="bd">reem</span><span class="bd"> </span><span class="bd">n</span><span class="bd"> </span><span class="bd">yɩke</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T24b" class="txs"><span class="bdit">(Pour le corbeau,</span></div><div id="T24c" class="txs"><span class="bdit">coup de pierre amusant fait appel à vol amusant).</span></div></div>
+<div class="m"><div id="T24d" class="txs"><span class="bd">Gãabg</span><span class="bd"> </span><span class="bd">yeelame</span><span class="bd"> </span><span class="bd">tɩ</span><span class="bd"> </span><span class="bd">ned</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n </span><span class="bd">deem</span><span class="bd"> </span><span class="bd">n</span><span class="bd"> </span><span class="bd">lobg</span><span class="bd"> </span><span class="bd">bɩ</span><span class="bd"> </span><span class="bd">f</span><span class="bd"> </span><span class="bd">reem</span><span class="bd"> </span><span class="bd">n</span><span class="bd"> </span><span class="bd">yɩke</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 281 a 322 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

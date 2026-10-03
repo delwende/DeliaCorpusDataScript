@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sammbo cuusu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.87 },
+    { label: "1b", start: 1.12, end: 4.95 },
+    { label: "1c", start: 5.2, end: 10.39 },
+    { label: "1d", start: 10.64, end: 13.71 },
+    { label: "1e", start: 13.96, end: 17.83 },
+    { label: "1f", start: 18.08, end: 21.49 },
+    { label: "1g", start: 21.74, end: 24.59 },
+    { label: "1h", start: 24.84, end: 27.91 },
+    { label: "1i", start: 28.16, end: 31.79 },
+    { label: "1j", start: 32.04, end: 39.81 },
+    { label: "1k", start: 40.06, end: 43.33 },
+    { label: "1l", start: 43.58, end: 48.03 },
+    { label: "1m", start: 48.28, end: 55.99 },
+    { label: "1n", start: 56.24, end: 58.15 },
+    { label: "1o", start: 58.4, end: 60.03 },
+    { label: "1p", start: 60.28, end: 64.03 },
+    { label: "1q", start: 64.28, end: 68.77 },
+    { label: "1r", start: 69.02, end: 71.17 },
+    { label: "1s", start: 71.42, end: 79.77 },
+    { label: "1t", start: 80.02, end: 81.39 },
+    { label: "1u", start: 81.64, end: 81.99 },
+    { label: "1v", start: 82.24, end: 83.63 },
+    { label: "1w", start: 83.88, end: 91.23 },
+    { label: "1x", start: 91.48, end: 92.77 },
+    { label: "1y", start: 93.02, end: 101.51 },
+    { label: "1z", start: 101.76, end: 104.95 },
+    { label: "1aa", start: 105.2, end: 106.85 },
+    { label: "1ab", start: 107.1, end: 108.11 },
+    { label: "1ac", start: 108.36, end: 109.57 },
+    { label: "1ad", start: 109.82, end: 115.43 },
+    { label: "1ae", start: 115.68, end: 118.17 },
+    { label: "1af", start: 118.42, end: 119.39 },
+    { label: "1ag", start: 119.64, end: 121.23 },
+    { label: "1ah", start: 121.48, end: 125.51 },
+    { label: "1ai", start: 125.76, end: 131.63 },
+    { label: "1aj", start: 131.88, end: 138.41 },
+    { label: "1ak", start: 138.66, end: 145.51 },
+    { label: "1al", start: 145.76, end: 147.83 },
+    { label: "1am", start: 148.08, end: 148.73 },
+    { label: "1an", start: 148.98, end: 150.79 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 150.79;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Sammbo cuusu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetitre"><div id="T1a" class="txs">Sammbo cuusu</div></div>
+<div class="p_contetexte"><div id="T1b" class="txs">Gorko gomma wonnoo na wi'ee Sammbo Cuusu.</div> <div id="T1c" class="txs">Sukka debbo makko du na wonii e ngendi mboɗɗundi.</div> <div id="T1d" class="txs">Debbo o, wi'ataakenaa Aysata Arba.</div> <div id="T1e" class="txs">Wari nyande gomma kanko e koddo makko ɓe njaadi toon.</div> <div id="T1f" class="txs">Be njaanoo fu ɓe tawi sukka debbo o, luumo wuro mumɓoy.</div> <div id="T1g" class="txs">O wi'i sukka debbo o, hanndee kaa na mi yiɗɗi njiiden.</div></div>
+<div class="p_contetexte"><div id="T1h" class="txs">Sukka debbo oon hokki Sammbo cuusu nokkuure.</div> <div id="T1i" class="txs">O wi'i gorgal wuro muɓoy ɓokki makki woni ɗoon na wondi e luuro; ɓe kawran ɗoon.</div> <div id="T1j" class="txs">Nde rewnoo faa jenngi seeɗaa fu, ƴoonde nangi nano nangi nyaamo, toɓi kaddi ko waawi fu.</div></div>
+<div class="p_contetexte"><div id="T1k" class="txs">Wawtu oon, nokku yo heewu dawaaɗi ladde.</div> <div id="T1l" class="txs">Sukka debbo oon du wari yehi toon, ɓokki toon.</div> <div id="T1m" class="txs">O wari o naati ley luuro ɓokki toon imo doomi sukka gorko oon.</div> <div id="T1n" class="txs">Jakka ladeeru rimmi ley luuro ɓokki ɗoon.</div> <div id="T1o" class="txs">O lutti bogo gooto na o jooɗii.</div> <div id="T1p" class="txs">Laddeeru nduu du, ko rimi ɗum, ɓiɓɓem nyaamataa fu goɗɗum so wanaa teewu ɓii-Aadama.</div></div>
+<div class="p_contetexte"><div id="T1q" class="txs">Laddeeru wari warti waancule muuɗum tawi imo jooɗii ɗoon.</div> <div id="T1r" class="txs">Laddeeru ƴami ɗume foti wannude ma nih.</div> <div id="T1s" class="txs">O wi'i so ngoongaa ni hakkunde makko e yigoo; amaanu ɓe ngaddunoo faa ɓe kawra ɗo dey, ɗuum waddi kam dey mi yi'ay ɗum tay.</div> <div id="T1t" class="txs">O ƴami toy ɗum wonni.</div> <div id="T1u" class="txs">O wi'i ndii to ngendi.</div> <div id="T1v" class="txs">O holli ɗum inde ngendi ndiin.</div></div>
+<div class="p_contetexte"><div id="T1w" class="txs">Laddeeru ndu wi'i gaɗa ni a bonnay aadi a waɗɗii o ammaanu ni en andan aadi.</div> <div id="T1x" class="txs">Mi adete mi yaara toon.</div> <div id="T1y" class="txs">So ni a yehi, welo-welo hakkunde maa e gorko waɗowi a haali ke miin addi ma waddi fu, dow ɗo kaalataa ɗoon maayataa.</div> <div id="T1z" class="txs">Nokku fu ɗo uffowaɗaa mi waran mi utee mi hokke ɓiɓɓe am.</div></div>
+<div class="p_contetexte"><div id="T1aa" class="txs">O wi'i ndelle o bonnataa aadi ammaanu.</div> <div id="T1ab" class="txs">Laddeeru ndu, turii.</div> <div id="T1ac" class="txs">O waɗɗii ndu.</div> <div id="T1ad" class="txs">Joggii o faa ɓe camndii suudu sukka goorko; o heddii o fitti o tirgitii o naati suudu sukka gorko.</div> <div id="T1ae" class="txs">O ƴami o, noy ni ngaɗɗaa dey warɗaa ɗo, koyɗe maa ngaɗay looppe.</div></div>
+<div class="p_contetexte"><div id="T1af" class="txs">O jaɓay haalde.</div> <div id="T1ag" class="txs">Sukka gorko wi'i joonin kaa a jammbi kam.</div> <div id="T1ah" class="txs">O wi'i ammaanu hakkude men o, mi haalante, ɗum minnyantaa kam jam.</div> <div id="T1ai" class="txs">Laddeeru addi kam waddi dey ndu wi'aanaa so mi haali fu, ɗum minnyantaa kam jam.</div> <div id="T1aj" class="txs">Dow ɗo o haali ɗoon ni o heddii o maayi; ɗo o waayi ɗoon ni heddii sukka gorko makko e koddo muuɗum ummii ɓe mbasani o, ɓe mooɓi o.</div> <div id="T1ak" class="txs">Dow to ɓe mooɓi o ɗo ni laddeeru ndu yottii tawi sukka gorko o na darodii e jogolam ni hawri e laddeeru ndu, heddii wari ndu.</div></div>
+<div class="p_contetexte"><div id="T1al" class="txs">Heddii Allaa du e bawɗe muuɗum sukka debbo oon du ƴuuti.</div> <div id="T1am" class="txs">Nih ɗum yaari.</div></div>
+<div class="p_Conteur"><div id="T1an" class="txs">Tijjaani Ba</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/01_Samb_cuuso.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

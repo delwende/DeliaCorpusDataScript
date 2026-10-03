@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#138808">
+<title>Conseil n°10 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.63 },
+    { label: "1b", start: 1.88, end: 4.17 },
+    { label: "1c", start: 4.42, end: 5.35 },
+    { label: "1d", start: 5.6, end: 9.55 },
+    { label: "1e", start: 9.8, end: 16.67 },
+    { label: "1f", start: 16.92, end: 20.51 },
+    { label: "1g", start: 20.76, end: 22.71 },
+    { label: "1h", start: 22.96, end: 25.61 },
+    { label: "1i", start: 25.86, end: 30.75 },
+    { label: "1j", start: 31, end: 40.65 },
+    { label: "1k", start: 40.9, end: 43.73 },
+    { label: "1l", start: 43.98, end: 45.69 },
+    { label: "1m", start: 45.94, end: 47.79 },
+    { label: "1n", start: 48.04, end: 53.19 },
+    { label: "1o", start: 53.44, end: 53.87 },
+    { label: "1p", start: 54.12, end: 55.09 },
+    { label: "1q", start: 55.34, end: 57.17 },
+    { label: "1r", start: 57.42, end: 60.33 },
+    { label: "1s", start: 60.58, end: 64.31 },
+    { label: "1t", start: 64.56, end: 80.77 },
+    { label: "1u", start: 81.02, end: 87.09 },
+    { label: "1v", start: 87.34, end: 91.73 },
+    { label: "1w", start: 91.98, end: 93.95 },
+    { label: "1x", start: 94.2, end: 97.03 },
+    { label: "1y", start: 97.28, end: 101.77 },
+    { label: "1z", start: 102.02, end: 102.91 },
+    { label: "1aa", start: 103.16, end: 105.31 },
+    { label: "1ab", start: 105.56, end: 108.33 },
+    { label: "1ac", start: 108.58, end: 112.79 },
+    { label: "1ad", start: 113.04, end: 116.29 },
+    { label: "1ae", start: 116.54, end: 123.15 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 123.15;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Conseil n°10&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Conseil n°10 :</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Luttez contre les petits voleurs d’argent.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1c" class="txs"><span class="it">Histoire:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1d" class="txs"><span class="it">Si nous reprenons l’histoire de Thérèse (conseil n°9),</span></div> <div id="T1e" class="txs"><span class="it">quel conseil vous pouvez donner à Thérèse si elle vous dit qu’un rat mange petit à petit son</span><span class="it"> </span><span class="it">riz?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1f" class="txs">Si vous savez qu’un rat vient voler dans votre réserve de riz,</div> <div id="T1g" class="txs">il faut le combattre&nbsp;!</div> <div id="T1h" class="txs">Vous n’allez pas laisser le rat manger votre réserve.</div> <div id="T1i" class="txs">Vous voulez que votre riz serve à nourrir votre famille et non le rat!</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1j" class="txs">Vous pouvez avoir suffisamment de réserves pour nourrir votre famille mais vous allez souffrir de la faim si vous laissez des voleurs agir!</div></div>
+<div class="p_Corpsdetexte"><div id="T1k" class="txs">Maintenant que vous connaissez les petits voleurs d’argent,</div> <div id="T1l" class="txs">il faut lutter contre!</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1m" class="txs"><span class="ul">Exercice à</span><span class="ul"> </span><span class="ul">faire:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1n" class="txs">Pour chaque petit voleur d’argent que vous avez nommé (frais de communication,</div> <div id="T1o" class="txs">bonbon,</div> <div id="T1p" class="txs">taxi-moto,</div> <div id="T1q" class="txs">sachet d’eau…),</div> <div id="T1r" class="txs">réfléchissez comment vous allez lutter contre,</div> <div id="T1s" class="txs">en renonçant ou limitant les dépenses dans ces domaines.</div></div>
+<div class="b">&nbsp;</div>
+<div class="p_Corpsdetexte"><div id="T1t" class="txs">Vous pouvez décider de ne plus dépenser pour certaines dépenses inutiles (par exemple prendre un petit bidon d’eau avec vous plutôt que de payer quand vous vous déplacez) ou vous pouvez décider de limiter ces dépenses (par exemple,</div> <div id="T1u" class="txs">vous ne prenez plus toujours la moto pour vous déplacer mais vous allez plus souvent à pied;</div> <div id="T1v" class="txs">vous ne donnez plus d’argent à vos enfants à chaque fois qu’ils vous en demandent,</div> <div id="T1w" class="txs">mais seulement une fois par semaine;</div> <div id="T1x" class="txs">vous limitez vos frais de communication).</div></div>
+<div class="p_Corpsdetexte"><div id="T1y" class="txs">Décidez ce que vous allez limiter et tenez-vous à ces résolutions!</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="ul">Conseil:</span></div></div>
+<div class="p_Corpsdetexte"><div id="T1aa" class="txs">Luttez contre les petits voleurs d’argent.</div> <div id="T1ab" class="txs">Réduisez les petites dépenses inutiles.</div> <div id="T1ac" class="txs">C’est une façon simple et sage de diminuer les dépenses de la famille!</div></div>
+<div class="p_Corpsdetexte"><div id="T1ad" class="txs">Si ces dépenses concernent d’autres personnes de la famille,</div> <div id="T1ae" class="txs">prenez le temps de leur expliquer pourquoi vous voulez changer vos habitudes.</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/019_Conseil_n10.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

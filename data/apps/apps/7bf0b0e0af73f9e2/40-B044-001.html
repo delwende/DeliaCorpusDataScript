@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>20) LE SALUT VIENT 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.67 },
+    { label: "1b", start: 1.92, end: 4.75 },
+    { label: "1c", start: 5, end: 7.25 },
+    { label: "1d", start: 7.5, end: 10.61 },
+    { label: "1e", start: 10.86, end: 14.75 },
+    { label: "1f", start: 15, end: 16.93 },
+    { label: "1g", start: 17.18, end: 20.73 },
+    { label: "1h", start: 20.98, end: 21.73 },
+    { label: "1i", start: 21.98, end: 23.57 },
+    { label: "1j", start: 23.82, end: 28.21 },
+    { label: "1k", start: 28.46, end: 29.57 },
+    { label: "1l", start: 29.82, end: 31.17 },
+    { label: "1m", start: 31.42, end: 33.83 },
+    { label: "1n", start: 34.08, end: 37.51 },
+    { label: "1o", start: 37.76, end: 39.63 },
+    { label: "1p", start: 39.88, end: 42.37 },
+    { label: "1q", start: 42.62, end: 45.41 },
+    { label: "1r", start: 45.66, end: 49.45 },
+    { label: "1s", start: 49.7, end: 51.97 },
+    { label: "1t", start: 52.22, end: 55.93 },
+    { label: "1u", start: 56.18, end: 57.27 },
+    { label: "1v", start: 57.52, end: 61.69 },
+    { label: "1w", start: 61.94, end: 64.45 },
+    { label: "1x", start: 64.7, end: 68.51 },
+    { label: "1y", start: 68.76, end: 70.59 },
+    { label: "1z", start: 70.84, end: 74.07 },
+    { label: "1aa", start: 74.32, end: 75.41 },
+    { label: "1ab", start: 75.66, end: 78.11 },
+    { label: "1ac", start: 78.36, end: 79.91 },
+    { label: "1ad", start: 80.16, end: 81.91 },
+    { label: "1ae", start: 82.16, end: 83.65 },
+    { label: "1af", start: 83.9, end: 86.05 },
+    { label: "1ag", start: 86.3, end: 89.03 },
+    { label: "1ah", start: 89.28, end: 91.37 },
+    { label: "1ai", start: 91.62, end: 93.97 },
+    { label: "1aj", start: 94.22, end: 95.89 },
+    { label: "1ak", start: 96.14, end: 98.61 },
+    { label: "1al", start: 98.86, end: 100.83 },
+    { label: "1am", start: 101.08, end: 102.19 },
+    { label: "1an", start: 102.44, end: 109.13 },
+    { label: "1ao", start: 109.38, end: 112.41 },
+    { label: "1ap", start: 112.66, end: 115.65 },
+    { label: "1aq", start: 115.9, end: 118.31 },
+    { label: "1ar", start: 118.56, end: 120.25 },
+    { label: "1as", start: 120.5, end: 124.55 },
+    { label: "1at", start: 124.8, end: 125.69 },
+    { label: "1au", start: 125.94, end: 130.75 },
+    { label: "1av", start: 131, end: 136.79 },
+    { label: "1aw", start: 137.04, end: 138.43 },
+    { label: "1ax", start: 138.68, end: 140.91 },
+    { label: "1ay", start: 141.16, end: 143.81 },
+    { label: "1az", start: 144.06, end: 147.01 },
+    { label: "1ba", start: 147.26, end: 149.19 },
+    { label: "1bb", start: 149.44, end: 150.75 },
+    { label: "1bc", start: 151, end: 155.05 },
+    { label: "1bd", start: 155.3, end: 156.07 },
+    { label: "1be", start: 156.32, end: 158.69 },
+    { label: "1bf", start: 158.94, end: 159.65 },
+    { label: "1bg", start: 159.9, end: 162.83 },
+    { label: "1bh", start: 163.08, end: 167.11 },
+    { label: "1bi", start: 167.36, end: 169.03 },
+    { label: "1bj", start: 169.28, end: 171.67 },
+    { label: "1bk", start: 171.92, end: 172.87 },
+    { label: "1bl", start: 173.12, end: 175.93 },
+    { label: "1bm", start: 176.18, end: 177.13 },
+    { label: "1bn", start: 177.38, end: 180.65 },
+    { label: "1bo", start: 180.9, end: 182.25 },
+    { label: "1bp", start: 182.5, end: 184.19 },
+    { label: "1bq", start: 184.44, end: 184.89 },
+    { label: "1br", start: 185.14, end: 186.11 },
+    { label: "1bs", start: 186.36, end: 188.41 },
+    { label: "1bt", start: 188.66, end: 190.19 },
+    { label: "1bu", start: 190.44, end: 191.73 },
+    { label: "1bv", start: 191.98, end: 192.59 },
+    { label: "1bw", start: 192.84, end: 194.25 },
+    { label: "1bx", start: 194.5, end: 197.17 },
+    { label: "1by", start: 197.42, end: 199.75 },
+    { label: "1bz", start: 200, end: 202.03 },
+    { label: "1ca", start: 202.28, end: 203.61 },
+    { label: "1cb", start: 203.86, end: 204.39 },
+    { label: "1cc", start: 204.64, end: 206.29 },
+    { label: "1cd", start: 206.54, end: 208.37 },
+    { label: "1ce", start: 208.62, end: 212.27 },
+    { label: "1cf", start: 212.52, end: 214.33 },
+    { label: "1cg", start: 214.58, end: 215.23 },
+    { label: "1ch", start: 215.48, end: 217.67 },
+    { label: "1ci", start: 217.92, end: 220.61 },
+    { label: "1cj", start: 220.86, end: 224.91 },
+    { label: "1ck", start: 225.16, end: 230.67 },
+    { label: "1cl", start: 230.92, end: 233.23 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 233.23;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "40-B044-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='39-B020-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='39-B020-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;20) LE SALUT VIENT&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='41-B021-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='41-B021-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B044-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">20) LE SALUT VIENT</span></div></div>
+<div class="m"><div id="T1b" class="txs">Lorsque Adam et Eve vivaient dans le jardin de Dieu,</div> <div id="T1c" class="txs">ils n’ont pas respecté les règles de Dieu.</div> <div id="T1d" class="txs">Ils voulaient être comme Dieu et décider eux-mêmes.</div> <div id="T1e" class="txs">C'est ainsi que le péché est entré dans le monde.</div> <div id="T1f" class="txs">L'homme a donc une nature pécheresse.</div> <div id="T1g" class="txs">Et la communion entre Dieu et l'homme a ainsi été perturbée,</div> <div id="T1h" class="txs">souillée.</div> <div id="T1i" class="txs">Mais partout dans la Bible,</div> <div id="T1j" class="txs">les prophètes annoncent un sauveur qui rétablira la communion entre l’homme et Dieu.</div> <div id="T1k" class="txs">Ce sauveur,</div> <div id="T1l" class="txs">c'est Jésus-Christ.</div></div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">JESUS EST DU CÔTÉ DES FAIBLES</span></div></div>
+<div class="m"><div id="T1n" class="txs">Jésus-Christ est le sujet principal de la Bible.</div> <div id="T1o" class="txs">Il est la Parole de Dieu.</div> <div id="T1p" class="txs">Il a été prédit par les prophètes.</div> <div id="T1q" class="txs">La Bible dit à propos de l'action de Jésus :</div> <div id="T1r" class="txs">"Car tous les prophètes et la loi ont annoncé ce temps" (La Bible.</div> <div id="T1s" class="txs">Matthieu 11, 13).</div> <div id="T1t" class="txs">C'est finalement dans la ville de Bethléem qu'il vient au monde.</div> <div id="T1u" class="txs">La Bible dit :</div> <div id="T1v" class="txs">"Jésus est venu chercher et sauver ce qui était perdu" (La Bible.</div> <div id="T1w" class="txs">Luc 19,10).</div> <div id="T1x" class="txs">La Bible décrit comment il est allé vers les malades et les marginaux,</div> <div id="T1y" class="txs">vers les pécheurs et les faibles.</div> <div id="T1z" class="txs">Il a guéri des malades et même ressuscité des morts.</div> <div id="T1aa" class="txs">Et finalement,</div> <div id="T1ab" class="txs">il a lui-même vaincu la mort.</div></div>
+<div class="m"><div id="T1ac" class="txs"><span class="bd">LE SALUT EST ASSURÉ</span></div></div>
+<div class="m"><div id="T1ad" class="txs">Lorsque son heure est venue,</div> <div id="T1ae" class="txs">Jésus s'est laissé capturer,</div> <div id="T1af" class="txs">fouetter et clouer sur la croix.</div> <div id="T1ag" class="txs">Sa mission était d'apporter le salut.</div> <div id="T1ah" class="txs">Il était prêt à le faire.</div> <div id="T1ai" class="txs">La Bible dit qu'il est mort sur la croix,</div> <div id="T1aj" class="txs">qu'il a été déposé dans un tombeau,</div> <div id="T1ak" class="txs">mais qu'il est ressuscité le troisième jour.</div> <div id="T1al" class="txs">Il est revenu à la vie.</div> <div id="T1am" class="txs">Dans la Bible,</div> <div id="T1an" class="txs">il est appelé "l'agneau de Dieu" parce qu'il s'est sacrifié et qu'il a libéré les hommes de leur culpabilité une fois pour toutes.</div> <div id="T1ao" class="txs">Il a vaincu la mort et le péché pour toujours.</div> <div id="T1ap" class="txs">Seul homme à avoir été parfait et sans péché,</div> <div id="T1aq" class="txs">Jésus a souffert à la place des hommes.</div> <div id="T1ar" class="txs">Il a payé pour eux.</div> <div id="T1as" class="txs">Celui qui croit en Jésus-Christ voit son cœur purifié.</div> <div id="T1at" class="txs">Et ainsi,</div> <div id="T1au" class="txs">la communion que Dieu voulait vivre avec les hommes dès le tout début est à nouveau possible.</div> <div id="T1av" class="txs">La Bible dit que celui qui croit en lui peut être sûr et certain qu'il vivra avec lui pour toujours,</div> <div id="T1aw" class="txs">même après la mort.</div></div>
+<div class="m"><div id="T1ax" class="txs"><span class="bd">JÉSUS A FAIT DES MIRACLES</span></div></div>
+<div class="m"><div id="T1ay" class="txs">Jésus est né en tant qu'homme dans une étable,</div> <div id="T1az" class="txs">car sa famille n'avait pas trouvé de meilleur endroit.</div> <div id="T1ba" class="txs">Jésus était un homme.</div> <div id="T1bb" class="txs">Mais dans la Bible,</div> <div id="T1bc" class="txs">Jésus ne cesse de déclarer qu'il est plus qu'un homme et se place à l'égal de Dieu.</div> <div id="T1bd" class="txs">Il dit :</div> <div id="T1be" class="txs">"Je suis le pain de vie" et à un autre endroit,</div> <div id="T1bf" class="txs">il dit même :</div> <div id="T1bg" class="txs">"Je suis la résurrection et la vie" (La Bible.</div> <div id="T1bh" class="txs">Jean 6,51 et 11,25).</div></div>
+<div class="m"><div id="T1bi" class="txs">S'il n'était qu'un homme,</div> <div id="T1bj" class="txs">il ne pourrait pas affirmer de telles choses.</div> <div id="T1bk" class="txs">De plus,</div> <div id="T1bl" class="txs">il a fait des miracles qu'un homme ne pourrait pas faire.</div></div>
+<div class="m"><div id="T1bm" class="txs">Un jour,</div> <div id="T1bn" class="txs">des gens lui ont amené un paralytique sur une civière.</div> <div id="T1bo" class="txs">Voyant leur foi,</div> <div id="T1bp" class="txs">Jésus dit au paralytique :</div> <div id="T1bq" class="txs">"Courage,</div> <div id="T1br" class="txs">mon fils&nbsp;!</div> <div id="T1bs" class="txs">Tes péchés sont pardonnés."</div></div>
+<div class="m"><div id="T1bt" class="txs">Mais quelques hommes sages,</div> <div id="T1bu" class="txs">secrètement indignés,</div> <div id="T1bv" class="txs">pensèrent :</div> <div id="T1bw" class="txs">"C'est un blasphème&nbsp;!"</div></div>
+<div class="m"><div id="T1bx" class="txs"><span class="c_usfmv">Jésus discerna ce qu</span>’ils pensaient et dit :</div> <div id="T1by" class="txs">«&nbsp;Pourquoi avez-vous ces mauvaises pensées&nbsp;?</div> <div id="T1bz" class="txs">Est-il plus facile de dire :</div> <div id="T1ca" class="txs">“Tes péchés sont pardonnés”,</div> <div id="T1cb" class="txs">ou de dire :</div> <div id="T1cc" class="txs">“Lève-toi et marche”&nbsp;?</div> <div id="T1cd" class="txs">Mais je veux que vous le sachiez :</div> <div id="T1ce" class="txs">le <span class="c_usfmw">Fils</span><span class="c_usfmw"> de l’</span>homme a le pouvoir sur la terre de pardonner les péchés.</div><div id="T1cf" class="txs">&nbsp;» Il dit alors au paralysé :</div> <div id="T1cg" class="txs">«&nbsp;Lève-toi,</div> <div id="T1ch" class="txs">prends ta civière et rentre chez toi&nbsp;!»</div> <div id="T1ci" class="txs">L’homme se leva et s’en alla chez lui.</div></div>
+<div class="m"><div id="T1cj" class="txs">Les gens qui avaient assisté à la scène furent saisis de respect.</div> <div id="T1ck" class="txs">Ils glorifièrent Dieu de leur avoir envoyé un homme doté d'une telle autorité (La Bible.</div> <div id="T1cl" class="txs">Matthieu 9, 1-7).</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/20 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/20 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/20 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

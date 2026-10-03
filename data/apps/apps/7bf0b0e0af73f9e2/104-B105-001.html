@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Chào mừng 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "104-B105-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='103-B104-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='103-B104-033.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Chào mừng&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='104-B105-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='105-B106-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B105-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">1) Chào mừng!</span></div>
+<div class="m">Khám phá cách người châu Âu sống và những gì họ tin tưởng.</div>
+<div class="m">Ứng dụng này là một đề nghị. Nó được tạo ra bởi vì mọi người từ các quốc gia khác rất quan trọng đối với chúng tôi ở đây. Chúng tôi muốn cung cấp cho bạn cái nhìn sâu sắc về văn hóa châu Âu, bởi vì một số điều về văn hóa của chúng tôi có thể đặt ra câu hỏi cho bạn. Điều này không có gì đáng ngạc nhiên, bởi vì trong mọi nền văn hóa, có nhiều điều xảy ra theo những quy tắc mà người dân địa phương biết từ trong ra ngoài nhưng lại không được viết ra rõ ràng ở bất cứ đâu. Những quy tắc và giá trị như vậy tồn tại ở khắp mọi nơi. Chúng tôi muốn mô tả một số trong số họ từ Châu Âu trong ứng dụng này. Tất nhiên, một số người châu Âu cư xử khác. Nhưng đây là một số kiểu hành vi điển hình. Mọi người từ các quốc gia khác cũng đã chia sẻ một số quan sát với chúng tôi.</div>
+<div class="m">Với tư cách là tác giả, chúng tôi tưởng tượng rằng bạn và chúng tôi đã gặp nhau trên tàu hoặc trong quán cà phê - hoặc có lẽ chúng tôi đang ngồi trong bữa ăn và trò chuyện, và tất nhiên chúng tôi đã thực sự ngồi cùng bàn với những người đến từ những quốc gia rất khác nhau và lắng nghe và trò chuyện. Chúng tôi có ý thức xuất bản ứng dụng này với tư cách là những Cơ đốc nhân, với tư cách là những người theo Chúa Giê-su. Chúng tôi cũng viết điều gì đó về điều này trong ứng dụng này. Bởi vì chúng ta cũng đã nghe nhiều câu hỏi về đức tin của mình tại bàn ăn. Nhiều người châu Âu cũng mong chờ được gặp bạn thực sự. Họ mong muốn được biết điều gì đó về văn hóa của bạn. Ví dụ, nhiều người đánh giá cao tinh thần hiếu khách và tình cảm gia đình mà người dân từ các quốc gia khác mang theo khi đến Châu Âu. Chúng tôi mong muốn được sống tốt cùng nhau.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

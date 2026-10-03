@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soni so Alla waray, kaana 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.45 },
+    { label: "1b", start: 2.7, end: 6.51 },
+    { label: "1c", start: 6.76, end: 10.69 },
+    { label: "1d", start: 10.94, end: 19.29 },
+    { label: "1e", start: 19.54, end: 21.15 },
+    { label: "1f", start: 21.4, end: 27.17 },
+    { label: "1g", start: 27.42, end: 28.75 },
+    { label: "1h", start: 29, end: 33.07 },
+    { label: "1i", start: 33.32, end: 35.81 },
+    { label: "1j", start: 36.06, end: 37.83 },
+    { label: "1k", start: 38.08, end: 41.95 },
+    { label: "1l", start: 42.2, end: 44.35 },
+    { label: "1m", start: 44.6, end: 48.65 },
+    { label: "1n", start: 48.9, end: 50.87 },
+    { label: "1o", start: 51.12, end: 53.07 },
+    { label: "1p", start: 53.32, end: 57.95 },
+    { label: "1q", start: 58.2, end: 60.33 },
+    { label: "1r", start: 60.58, end: 62.43 },
+    { label: "1s", start: 62.68, end: 63.19 },
+    { label: "1t", start: 63.44, end: 66.43 },
+    { label: "1u", start: 66.68, end: 70.59 },
+    { label: "1v", start: 70.84, end: 72.99 },
+    { label: "1w", start: 73.24, end: 77.19 },
+    { label: "1x", start: 77.44, end: 78.71 },
+    { label: "1y", start: 78.96, end: 82.63 },
+    { label: "1z", start: 82.88, end: 83.23 },
+    { label: "1aa", start: 83.48, end: 86.35 },
+    { label: "1ab", start: 86.6, end: 86.95 },
+    { label: "1ac", start: 87.2, end: 90.01 },
+    { label: "1ad", start: 90.26, end: 93.21 },
+    { label: "1ae", start: 93.46, end: 94.11 },
+    { label: "1af", start: 94.36, end: 96.07 },
+    { label: "1ag", start: 96.32, end: 98.99 },
+    { label: "1ah", start: 99.24, end: 100.11 },
+    { label: "1ai", start: 100.36, end: 101.59 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 101.59;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "03-B003-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='02-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Soni so Alla waray, kaana&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B003-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="p_contetitre"><div id="T1a" class="txs">Soni so Alla waray, kaananke warataa!</div></div>
+<div class="p_contetexte"><div id="T1b" class="txs">Goɗɗo wonnoo de, wawtu fu o wi'ataanaa soni Alla waray, ni kaananke warataa.</div> <div id="T1c" class="txs">Jakka na ɗum metti kaanankee hunnde.</div> <div id="T1d" class="txs">Heddii kaananke itti fiyaare muuɗum, kam du finaatawaare muuɗum abada, maamam maayi yoppi ɓiɗɗo addi, noon ni faa tukki o.</div> <div id="T1e" class="txs">O addi fiyaare ndeen, o reeni o.</div> <div id="T1f" class="txs">Reenunoo o fu, kaananke acci faa o dilli de wi'i goɗɗo soosoo addowa fiyaare nde, faɗɗa e maayo.</div> <div id="T1g" class="txs">Heɓa wara ƴamta o.</div> <div id="T1h" class="txs">So tawii tawaaka na o resi nde ni wara o.</div> <div id="T1i" class="txs">Nde o faɗɗunoo nde fu liinga moɗi nde.</div></div>
+<div class="p_contetexte"><div id="T1j" class="txs">Suka gorko du wallaa nyaamdu so wanaa liƴƴi.</div> <div id="T1k" class="txs">Goɗɗo goma yaata na awoo dey, so awoken faa kiikiiɗe ni fanta sottira o.</div> <div id="T1l" class="txs">Fiyaare faɗɗaama liinga moɗii ɗum.</div> <div id="T1m" class="txs">Awottooɗo awooken heɓii linga ngaan fantii sottirii o.</div> <div id="T1n" class="txs">O huttunoo nga ni o tawi fiyaare nder reedu liinnga.</div> <div id="T1o" class="txs">O wi'i ndaa fiyaaree nde, way ba nde ndeenanoo-mi nde.</div> <div id="T1p" class="txs">O ummii jon kaa o ndaaroy to o resunoo to, o tawi fiyaare kaananke wallaa toon.</div> <div id="T1q" class="txs">Heddii o tummbiti fiyaare o resii faa waɗi daggu balɗe jeɗɗi.</div></div>
+<div class="p_contetexte"><div id="T1r" class="txs">Nyannde gom ni kaananke nilani suka gorko.</div> <div id="T1s" class="txs">O yottinoo ni o wi'aa o wadda fiyaare.</div> <div id="T1t" class="txs">O wi'i ayyo faa o hoota dey, o wadda fiyaare.</div> <div id="T1u" class="txs">Kaananke wi'i ndelle o ɗuutee ko na anndi koo o doggal.</div> <div id="T1v" class="txs">O yottinoo ni o tummbiti fiyaare o waddi.</div> <div id="T1w" class="txs">Kaanankee ƴammi: "Noy ngaɗɗaa dey kewtuɗaa fiyaare nde&nbsp;?</div> <div id="T1x" class="txs">O jaabii: "Noy waɗɗunoo hey&nbsp;?"</div> <div id="T1y" class="txs">Kaananke wi'i mi waɗɗaanonaa fiyaare nde tummbitaa de yahaa faɗɗowaa maayo too, heɓa mi ware.</div> <div id="T1z" class="txs">O ƴami ko saabii.</div> <div id="T1aa" class="txs">Ko mbi'aataa ko so Alla waray ni kaananke warataa ɗum wellaa kam; ɗuum saabii.</div></div>
+<div class="p_contetexte"><div id="T1ab" class="txs">Suka gorko wi'i gasii.</div> <div id="T1ac" class="txs">Ndelle, nde ni nde faɗɗowanoo, liinga moɗi nde.</div> <div id="T1ad" class="txs">Awotooɗo o, nde awowinoo fu heɓi liinga ngaa wari sottiri kam.</div> <div id="T1ae" class="txs">Min du coodum liinga ngaan.</div> <div id="T1af" class="txs">Kuttum liinga ngaan dey tawum fiyaare ndeen ley reedu magga.</div> <div id="T1ag" class="txs">Min kaa faa hannde, hannde e jaango fu, kaan keddii-mi nam jeerfoo.</div> <div id="T1ah" class="txs">Soni so Alla waray fu, kaananke warataa!</div></div>
+<div class="p_Conteur"><div id="T1ai" class="txs">Tijjaani Ba</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/03_Soni_Alla_waraay.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 9</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "9a", start: 1238.52, end: 1240.89 },
+    { label: "9b", start: 1241.14, end: 1241.75 },
+    { label: "9c", start: 1242, end: 1244.15 },
+    { label: "9d", start: 1244.4, end: 1247.69 },
+    { label: "9e", start: 1247.94, end: 1250.09 },
+    { label: "9f", start: 1250.34, end: 1252.33 },
+    { label: "9g", start: 1252.58, end: 1253.41 },
+    { label: "9h", start: 1253.66, end: 1257.21 },
+    { label: "9i", start: 1257.46, end: 1262.89 },
+    { label: "9j", start: 1263.14, end: 1265.37 },
+    { label: "9k", start: 1265.62, end: 1267.41 },
+    { label: "9l", start: 1267.66, end: 1272.93 },
+    { label: "9m", start: 1273.18, end: 1278.63 },
+    { label: "9n", start: 1278.88, end: 1282.49 },
+    { label: "9o", start: 1282.74, end: 1284.71 },
+    { label: "9p", start: 1284.96, end: 1287.49 },
+    { label: "9q", start: 1287.74, end: 1296.53 },
+    { label: "9r", start: 1296.78, end: 1303.31 },
+    { label: "9s", start: 1303.56, end: 1304.43 },
+    { label: "9t", start: 1304.68, end: 1311.15 },
+    { label: "9u", start: 1311.4, end: 1316.11 },
+    { label: "9v", start: 1316.36, end: 1317.39 },
+    { label: "9w", start: 1317.64, end: 1321.65 },
+    { label: "9x", start: 1321.9, end: 1325.45 },
+    { label: "9y", start: 1325.7, end: 1327.13 },
+    { label: "9z", start: 1327.38, end: 1327.95 },
+    { label: "9aa", start: 1328.2, end: 1328.93 },
+    { label: "9ab", start: 1329.18, end: 1331.73 },
+    { label: "9ac", start: 1331.98, end: 1340.19 },
+    { label: "9ad", start: 1340.44, end: 1341.93 },
+    { label: "9ae", start: 1342.18, end: 1345.09 },
+    { label: "9af", start: 1345.34, end: 1351.37 },
+    { label: "9ag", start: 1351.62, end: 1353.35 },
+    { label: "9ah", start: 1353.6, end: 1358.21 },
+    { label: "9ai", start: 1358.46, end: 1359.75 },
+    { label: "9aj", start: 1360, end: 1362.11 },
+    { label: "9ak", start: 1362.36, end: 1369.81 },
+    { label: "9al", start: 1370.06, end: 1373.91 },
+    { label: "9am", start: 1374.16, end: 1375.39 },
+    { label: "9an", start: 1375.64, end: 1380.75 },
+    { label: "9ao", start: 1381, end: 1388.07 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1238.52;
+var stopTime  = 1388.07;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-008.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;9&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-010.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image9.jpg" />
+
+<div class="m"><div id="T9a" class="txs"><span class="bd">La sagesse et l’intelligence</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T9b" class="txs"><span class="it">Oui,</span></div> <div id="T9c" class="txs"><span class="it">Dieu nous a couverts de ses bienfaits.</span></div> <div id="T9d" class="txs"><span class="it">Il nous a </span><span class="bdit">donné toute la sagesse et l’intelligence</span>.</div> <div id="T9e" class="txs">(Ephésiens 1, 8)</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T9f" class="txs"><span class="bd">La sagesse et l’intelligence,</span></div> <div id="T9g" class="txs"><span class="bd">c’est quoi&nbsp;?</span></div></div>
+<div class="m"><div id="T9h" class="txs">A la base de la sagesse et de l’intelligence est la connaissance,</div> <div id="T9i" class="txs">c’est-à-dire une accumulation d’informations qui s’obtient par l’éducation ou l’expérience.</div> <div id="T9j" class="txs">Il y a ceux qui confondent connaissance,</div> <div id="T9k" class="txs">intelligence et sagesse.</div> <div id="T9l" class="txs">Ils pensent que la connaissance mène automatiquement à l’intelligence et même à la sagesse.</div> <div id="T9m" class="txs">Mais pour être considéré comme intelligent il ne suffit pas seulement d’accumuler les connaissances,</div> <div id="T9n" class="txs">il faut aussi les comprendre et savoir comment les utiliser.</div> <div id="T9o" class="txs">C’est ça l’intelligence.</div> <div id="T9p" class="txs">La sagesse va encore plus loin.</div> <div id="T9q" class="txs">Être sage veut dire avoir le discernement quand et comment appliquer les connaissances acquises et pouvoir transmettre ses connaissances et le discernement à d’autres.</div> <div id="T9r" class="txs">La Parole de Dieu nous enseigne que Dieu peut et veut nous donner l’intelligence et la sagesse MAIS avec le but de le connaitre,</div> <div id="T9s" class="txs">le Dieu vivant,</div> <div id="T9t" class="txs">de connaitre son plan de salut et les richesses qu’il a réservées pour nous (voir aussi Ephésiens 1, 17 à 20).</div></div>
+<div class="m"><div id="T9u" class="txs">Actions pour que la sagesse et l’intelligence deviennent des richesses dans ta vie : </div></div>
+<div class="m"><div id="T9v" class="txs"><span class="it">-</span><span class="it"> la prière</span> :</div> <div id="T9w" class="txs">Remercie Dieu pour la sagesse et l’intelligence qu’il t’a déjà données.</div> <div id="T9x" class="txs">Demande à ce qu’il te montre comment utiliser tes connaissances,</div> <div id="T9y" class="txs">acquises à l’école biblique,</div> <div id="T9z" class="txs">à l’église,</div> <div id="T9aa" class="txs">aux conférences,</div> <div id="T9ab" class="txs">à tes études personnelles… pour sa gloire. </div></div>
+<div class="m"><div id="T9ac" class="txs">Demande aussi à ce que Dieu puisse encore augmenter ton intelligence en vue de mieux comprendre sa Parole et transmettre tes connaissances à d’autres.</div></div>
+<div class="m"><div id="T9ad" class="txs"><span class="it">-</span><span class="it"> la lecture biblique</span> :</div> <div id="T9ae" class="txs">Lis 1 Corinthiens 1, 18 à 25.</div> <div id="T9af" class="txs">Ces paroles de l’apôtre Paul nous rappellent que la sagesse de Dieu est différente de celle de notre monde.</div></div>
+<div class="m"><div id="T9ag" class="txs"><span class="it">-</span><span class="it"> réflexion personnelle</span> :</div> <div id="T9ah" class="txs">L’intelligence et la sagesse sont très considérées et recherchées dans notre monde.</div> <div id="T9ai" class="txs">Mais ATTENTION :</div> <div id="T9aj" class="txs">ce n’est pas la même chose qu’avec Dieu.</div> <div id="T9ak" class="txs">Examine ton cœur avec l’aide du Saint-Esprit pour découvrir ce qui te motive dans ta recherche d’agrandir tes connaissances.</div> <div id="T9al" class="txs">Rappelle-toi que Dieu veut que tu cherches d’abord à le connaitre.</div></div>
+<div class="m"><div id="T9am" class="txs"><span class="it">-</span><span class="it"> envers les autres</span> :</div> <div id="T9an" class="txs">Réfléchis à ce que tu as appris les dernières semaines à l’église ou pendant d’autres enseignements.</div> <div id="T9ao" class="txs">Note une leçon importante qui a fait une différence dans ta vie et partage-la avec un membre de ta famille ou un ami.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

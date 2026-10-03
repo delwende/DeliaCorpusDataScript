@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>29 QUAND LA MAISON DU 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.71 },
+    { label: "1b", start: 3.96, end: 15.19 },
+    { label: "1c", start: 15.44, end: 23.29 },
+    { label: "1d", start: 23.54, end: 32.57 },
+    { label: "1e", start: 32.82, end: 38.19 },
+    { label: "1f", start: 38.44, end: 44.87 },
+    { label: "1g", start: 45.12, end: 50.75 },
+    { label: "1h", start: 51, end: 59.87 },
+    { label: "1i", start: 60.12, end: 63.09 },
+    { label: "1j", start: 63.34, end: 73.79 },
+    { label: "1k", start: 74.04, end: 83.91 },
+    { label: "1l", start: 84.16, end: 88.99 },
+    { label: "1m", start: 89.24, end: 96.11 },
+    { label: "1n", start: 96.36, end: 101.39 },
+    { label: "1o", start: 101.64, end: 104.75 },
+    { label: "1p", start: 105, end: 109.75 },
+    { label: "1q", start: 110, end: 116.77 },
+    { label: "1r", start: 117.02, end: 121.35 },
+    { label: "1s", start: 121.6, end: 139.35 },
+    { label: "1t", start: 139.6, end: 146.51 },
+    { label: "1u", start: 146.76, end: 156.83 },
+    { label: "1v", start: 157.08, end: 164.77 },
+    { label: "1w", start: 165.02, end: 170.55 },
+    { label: "1x", start: 170.8, end: 188.63 },
+    { label: "1y", start: 188.88, end: 195.03 },
+    { label: "1z", start: 195.28, end: 200.53 },
+    { label: "1aa", start: 200.78, end: 206.37 },
+    { label: "1ab", start: 206.62, end: 212.63 },
+    { label: "1ac", start: 212.88, end: 221.49 },
+    { label: "1ad", start: 221.74, end: 230.55 },
+    { label: "1ae", start: 230.8, end: 237.21 },
+    { label: "1af", start: 237.46, end: 246.73 },
+    { label: "1ag", start: 246.98, end: 254.41 },
+    { label: "1ah", start: 254.66, end: 256.59 },
+    { label: "1ai", start: 256.84, end: 270.75 },
+    { label: "1aj", start: 271, end: 277.91 },
+    { label: "1ak", start: 278.16, end: 284.37 },
+    { label: "1al", start: 284.62, end: 297.11 },
+    { label: "1am", start: 297.36, end: 306.03 },
+    { label: "1an", start: 306.28, end: 316.17 },
+    { label: "1ao", start: 316.42, end: 327.09 },
+    { label: "1ap", start: 327.34, end: 336.43 },
+    { label: "1aq", start: 336.68, end: 342.41 },
+    { label: "1ar", start: 342.66, end: 345.01 },
+    { label: "1as", start: 345.26, end: 354.43 },
+    { label: "1at", start: 354.68, end: 358.59 },
+    { label: "1au", start: 358.84, end: 365.35 },
+    { label: "1av", start: 365.6, end: 371.03 },
+    { label: "1aw", start: 371.28, end: 396.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 396.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "14-B014-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='13-B013-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;29 QUAND LA MAISON DU&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B014-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">29 QUAND LA MAISON DU VOISIN BR</span><span class="bd">Û</span><span class="bd">LE</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Une sagesse populaire moaga dit que «&nbsp;<span class="it">l</span><span class="it">orsqu’on</span><span class="it"> lance un caillou dans un public, c</span><span class="it">h</span><span class="it">acun doit se contenter de protéger sa tête</span>&nbsp;».</div> <div id="T1c" class="txs">Cela veut dire en clair que notre instinct de survie nous oblige à nous occuper d’abord de nous.</div> <div id="T1d" class="txs">Or, il y a des situations où il faut aider l’autre d’abord si nous voulons vivre tranquillement.</div></div>
+<div class="m"><div id="T1e" class="txs">Tous les animaux savent très bien que l’homme est leur premier ennemi.</div> <div id="T1f" class="txs">Il les exploite, les tue et les maltraite de mille manières.</div> <div id="T1g" class="txs">Même les animaux qui vivent en permanence avec l’homme n’y sont pas à l’abri.</div> <div id="T1h" class="txs">L’homme, maître du chien, du mouton, du cheval, du coq et de la chèvre était tombé gravement malade.</div> <div id="T1i" class="txs">Mais il n'avait pas d’enfant.</div> <div id="T1j" class="txs">Alors le chien sentant le danger venir alla voir les autres animaux et leur tint ce langage :</div> <div id="T1k" class="txs">«&nbsp;<span class="it">N</span><span class="it">otre maître est</span><span class="it"> </span><span class="it">malade, </span><span class="it">il </span><span class="it">faut </span><span class="it">qu’on fasse tout pour le soigner sinon s’il meurt cela ne sera pas bien pour nous</span>&nbsp;».</div> <div id="T1l" class="txs">À peine termina-t-il son dernier mot que les autres ripostèrent :</div> <div id="T1m" class="txs">«&nbsp;<span class="it">T</span><span class="it">u ne peux que dire cela car de</span><span class="it"> </span><span class="it">nous tous, tu es le plus aimé du maître.</span></div> <div id="T1n" class="txs"><span class="it">La preuve, quand il</span><span class="it"> </span><span class="it">mange, c'est à toi </span><span class="it">qu’il</span><span class="it"> donne les os.</span></div> <div id="T1o" class="txs"><span class="it">Il te donne aussi à</span><span class="it"> </span><span class="it">manger</span>&nbsp;».</div> <div id="T1p" class="txs">Le cheval témoignant sa haine contre l’homme ajouta :</div> <div id="T1q" class="txs">«&nbsp;<span class="it">R</span><span class="it">egarde-moi petit prétentieux de chien, </span><span class="it">c’est</span><span class="it"> sur</span><span class="it"> </span><span class="it">moi qu'il effectue tous ses déplacements.</span></div><div id="T1r" class="txs"><span class="it">J</span><span class="it">e suis son vélo,</span><span class="it"> </span><span class="it">sa moto, </span><span class="it">etc.</span></div><div id="T1s" class="txs"><span class="it"> </span><span class="it">J</span><span class="it">e suis obligé, même le jour où je suis malade,</span><span class="it"> </span><span class="it">de parcourir des distances que cet imbécile d</span><span class="it">’</span><span class="it">ho</span><span class="it">m</span><span class="it">me</span><span class="it">-</span><span class="it">là</span><span class="it"> </span><span class="it">veut, sinon il me frappera sans pitié et tu es là à nous parler</span><span class="it"> </span><span class="it">de s'occuper de lui.</span></div> <div id="T1t" class="txs"><span class="it">Il n'a </span><span class="it">qu’à</span><span class="it"> mourir et nous aurons, au</span><span class="it"> </span><span class="it">contraire, la paix et la liberté </span>».</div> <div id="T1u" class="txs">Chacun, tour à tour, passa en revue tous les tords et dommages que l'homme lui cause dans la vie de tous les jours.</div> <div id="T1v" class="txs">Ils rejetèrent tous la proposition du chien et souhaitèrent au contraire le pire pour leur maître.</div></div>
+<div class="m"><div id="T1w" class="txs">Le chien prit encore ses courages et leur tint ces propos :</div> <div id="T1x" class="txs">«&nbsp;<span class="it">Vous voyez, nos grands-pères nous ont enseignés</span><span class="it"> d’aider</span><span class="it"> le voisin à éteindre </span><span class="it">l’</span><span class="it">incendie qui brûle sa maison</span><span class="it">,</span><span class="it"> </span><span class="it">car on </span><span class="it">n’en</span><span class="it"> sait jamais quand est-ce que le vent va changer</span><span class="it"> </span><span class="it">de direction.</span></div> <div id="T1y" class="txs"><span class="it">En fait, vous pensez que </span><span class="it">l’homme</span><span class="it"> </span><span class="it">m’aime </span><span class="it">mais cela </span><span class="it">n’est</span><span class="it"> pas vrai.</span></div> <div id="T1z" class="txs"><span class="it">Regardez le travail que </span><span class="it">j’abats </span><span class="it">chaque nuit pour lui.</span></div><div id="T1aa" class="txs"><span class="it">C’</span><span class="it">est moi qui garde sa famille et vous</span><span class="it"> </span><span class="it">tous la nuit.</span></div> <div id="T1ab" class="txs"><span class="it">Vous au moins, vous avez des cases, et moi&nbsp;?</span></div><div id="T1ac" class="txs"><span class="it"> </span><span class="it">Tout ce </span><span class="it">qu’il</span><span class="it"> trouve comme récompense, </span><span class="it">c’est</span><span class="it"> me</span><span class="it"> </span><span class="it">donner des os </span><span class="it">en</span><span class="it"> lieu </span><span class="it">et place </span><span class="it">de la viande.</span></div> <div id="T1ad" class="txs"><span class="it">Mais, je</span><span class="it"> </span><span class="it">demeure convaincu que notre devoir est de le soigner sinon</span><span class="it"> </span><span class="it">sa mort </span><span class="it">n’arrangera</span><span class="it"> personne</span>&nbsp;».</div></div>
+<div class="m"><div id="T1ae" class="txs">Malgré cette argumentation, les autres restèrent infléchis.</div> <div id="T1af" class="txs">Ils promirent au contraire une bonne fête quand on viendrait à leur annoncer la mort de leur méchant maître.</div></div>
+<div class="m"><div id="T1ag" class="txs">Le chien alla demeurer dans son coin et l’irréparable se produisit :</div> <div id="T1ah" class="txs">l’homme décéda.</div> <div id="T1ai" class="txs">Quand les voisins étaient venus, ils ordonnèrent à un jeune d’aller rapidement prévenir tous les villages voisins pour que commencent les préparatifs de l’enterrement.</div> <div id="T1aj" class="txs">Pour aller si vite, il n’y avait pas d'autre moyen que le cheval.</div> <div id="T1ak" class="txs">Le jeune le chevaucha et commença la ronde des villages.</div> <div id="T1al" class="txs">Il voulait qu'il court tellement rapide à l’allure d’une voiture qu'il passait tout le temps à le frapper au dos avec un gourdin.</div> <div id="T1am" class="txs">Soudain, un de ses coups violant s’est abattu sur la nuque du cheval qui tomba raide mort.</div></div>
+<div class="m"><div id="T1an" class="txs">Tant bien que mal, l’information fut parvenue à tous les villages et la cérémonie de l’enterrement commença.</div> <div id="T1ao" class="txs">Le plus vieux ordonna qu'on attrape la chèvre, le mouton et le coq pour préparer le repas des croque-morts.</div></div>
+<div class="m"><div id="T1ap" class="txs">Avant même que l’enterrement n’eût lieu, tous les quatre animaux qui comptaient faire la fête furent tués.</div> <div id="T1aq" class="txs">Le chien qui avait attiré la sonnette d’alarme fut le seul rescapé.</div> <div id="T1ar" class="txs">Il se parla :</div> <div id="T1as" class="txs">«&nbsp;<span class="it">S</span><span class="it">i les autres </span><span class="it">m’avaient</span><span class="it"> suivi, </span><span class="it">l’homme </span><span class="it">ne serait pas mort et eux aussi ne le seraient.</span></div> <div id="T1at" class="txs"><span class="it">Décidément,</span><span class="it"> </span><span class="it">nos </span><span class="it">grands-pères</span><span class="it"> étaient des philosophes</span><span class="it"> </span><span class="it">:</span></div> <div id="T1au" class="txs"><span class="it">il faut aider le</span><span class="it"> </span><span class="it">voisin à </span><span class="it">éteindre</span><span class="it"> son feu sinon</span><span class="it"> </span>».</div></div>
+<div class="m"><div id="T1av" class="txs">Cela nous rappelle aussi un proverbe <span class="it">moaga</span> qui dit :</div> <div id="T1aw" class="txs">«&nbsp;Quand tu vois l’enfant du voisin qui grimpe l’arbre le soir, il faut le faire descendre même si tu le détestes sinon toi-même tu cours le risque de ne pas manger la nuit, car s’il tombe de l’arbre et qu’il meurt, aucune concession n’allumera le feu pour préparer un repas&nbsp;».</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 29 quand la maison du voisin brule.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

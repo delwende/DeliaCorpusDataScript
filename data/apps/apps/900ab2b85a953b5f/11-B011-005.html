@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 5</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-004.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;5&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-006.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image5.jpg" />
+
+<div class="m"><span class="bd">Amore</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bdit">Dio ci ama</span><span class="it"> </span><span class="it">e ha sempre voluto che diventassimo suoi figli attraverso Gesù Cristo</span><span class="it"> </span>(Efesini 1, 4 a 5).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Cos'è l'amore di Dio?</span></div>
+<div class="m">L'amore di Dio è perfetto, infinito e puro. Non è solo una sensazione. Dio ha mostrato il suo amore per noi in un atto molto, molto importante: ha dato il suo unico figlio per salvarci (Giovanni 3, 16).</div>
+<div class="m">- L'amore di Dio è incondizionato: non mi chiede di migliorare la mia vita prima di salvarmi! La natura incondizionata dell'amore di Dio non cambia mai. Dio continua ad amarci, anche se cadiamo nel peccato, anche se lo abbandoniamo. Il suo amore per noi rimane lo stesso. Non diminuisce.</div>
+<div class="m">- L'amore di Dio è disinteressato, cioè è concentrato su di noi. Nel donare suo figlio, non ha pensato a se stesso, ma a noi! E continua ad aiutarci, a servirci.</div>
+<div class="m">- L'amore di Dio è enorme: Dio ci ama così tanto che ci ha dato il suo dono più prezioso, il suo unico figlio. Non c'è niente di più grande che avrebbe potuto fare per noi.</div>
+<div class="m"><span class="bd">Azioni per rendere l'amore di Dio una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera:</span><span class="it"> </span>Ringrazia Dio ogni giorno per il suo amore per te. Presta attenzione ai piccoli segni dell'amore di Dio durante la giornata. Alla fine della giornata, scrivi su un quaderno gli eventi che mostrano l'amore di Dio per te e ringrazialo.</div>
+<div class="m">- Lettura della Bibbia: leggi Efesini 3, 17 a 19.</div>
+<div class="m"><span class="it">- riflessione personale</span>: In questo passaggio, l'apostolo Paolo utilizza 2 immagini per incoraggiare i suoi lettori a godere dell'amore di Dio:</div>
+<div class="m">- radicarsi in questo amore: come un albero allarga le sue radici nella terra per non essere portato via dal vento e per trovare nutrimento...</div>
+<div class="m">- costruire su questo amore: l'amore di Dio è un fondamento solido che ci permette di costruire e andare avanti nella nostra vita spirituale.</div>
+<div class="m">Pensa a come queste 2 immagini possono aiutarti a vivere e sperimentare l'amore di Dio nella vita di tutti i giorni.</div>
+<div class="m"><span class="it">- Verso gli altri:</span><span class="it"> </span>Condividi la tua testimonianza dell'amore di Dio nella tua vita con i tuoi amici, tua moglie o tuo marito o i fratelli e le sorelle della tua chiesa. E mostra loro attraverso le tue azioni che Dio li ama.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

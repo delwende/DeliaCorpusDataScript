@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>вступ 12</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "21-B022-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='20-B019-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='21-B022-011.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;вступ&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;12&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='21-B022-013.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='22-B020-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B022-image12.jpg" />
+
+<div class="m"><span class="bd">Надія</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Щоб ви знали, яку надію Він дав вам, коли покликав вас</span>(Ефесянам 1, 18).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Що таке християнська надія?</span></div>
+<div class="m">Сподіватися означає твердо вірити, що бажання незабаром здійсниться. Християнська надія — це очікування виконання Божих обітниць. Надія стосується всіх Божих обітниць, але особливо тих, що стосуються нашого життя після смерті, у присутності Бога та Ісуса, повернення Ісуса, нової землі та нового неба.</div>
+<div class="m">Сподіватися означає, що це ще не «сталося», але вірити з упевненістю, що наші очікування справдяться. Така надія може мати глибокий вплив на наше життя. Замість того, щоб занурюватися в страх і тривогу, ми можемо жити в радості та мирі. Але ми не повинні забувати, що основа нашої надії має бути міцною і надійною. Якщо наша надія ґрунтується на інших людях чи інших силах, ніж живий Бог, ми обов’язково будемо розчаровані. Тільки надія, заснована на Богові, на Його Сині Ісусі та Святому Дусі, гарантує виконання очікуваних обітниць.</div>
+<div class="m"><span class="bd">Дії, щоб зробити надію багатством у вашому житті:</span></div>
+<div class="m"><span class="it">- Молитва:</span>Дякую Богові за Його обіцянки та надію, яку ми маємо на Нього. Покладіть свої страхи і турботи в Його руки.</div>
+<div class="m"><span class="it">- Читання Біблії:</span>Прочитайте наступні вірші та виберіть один для запам’ятовування: Івана 10, 28; Ефесянам 3, 20-21; Об’явлення 21, 4.</div>
+<div class="m"><span class="it">- Особисті роздуми:</span>Ти постійно хвилюєшся? Ви живете в страху, що щось погане може статися у вашому житті чи житті ваших близьких? Є багато біблійних прикладів того, як Бог виконує свої обітниці: Ной, Авраам і Сарра, Яків, Йосип, Рут, Анна, Неемія... Вивчіть одного з цих персонажів, звернувши увагу на те, як Бог супроводжував цю людину, особливо у важкі часи.</div>
+<div class="m"><span class="it">- Іншим:</span>Зробіть красиву листівку з підбадьорливим біблійним віршем і подаруйте її другу, який цього потребує. Ви також можете надіслати вірш за допомогою SMS, WhatsApp або іншим способом.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

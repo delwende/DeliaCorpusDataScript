@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>3 Être d'accord et se 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.83 },
+    { label: "1b", start: 4.08, end: 7.63 },
+    { label: "1c", start: 7.88, end: 11.21 },
+    { label: "1d", start: 11.46, end: 14.63 },
+    { label: "1e", start: 14.88, end: 17.91 },
+    { label: "1f", start: 18.16, end: 19.81 },
+    { label: "1g", start: 20.06, end: 22.19 },
+    { label: "1h", start: 22.44, end: 25.73 },
+    { label: "1i", start: 25.98, end: 27.81 },
+    { label: "1j", start: 28.06, end: 29.53 },
+    { label: "1k", start: 29.78, end: 31.57 },
+    { label: "1l", start: 31.82, end: 34.67 },
+    { label: "1m", start: 34.92, end: 35.85 },
+    { label: "1n", start: 36.1, end: 37.55 },
+    { label: "1o", start: 37.8, end: 38.95 },
+    { label: "1p", start: 39.2, end: 40.17 },
+    { label: "1q", start: 40.42, end: 42.39 },
+    { label: "1r", start: 42.64, end: 44.67 },
+    { label: "1s", start: 44.92, end: 50.33 },
+    { label: "1t", start: 50.58, end: 51.55 },
+    { label: "1u", start: 51.8, end: 59.95 },
+    { label: "1v", start: 60.2, end: 61.99 },
+    { label: "1w", start: 62.24, end: 64.05 },
+    { label: "1x", start: 64.3, end: 67.59 },
+    { label: "1y", start: 67.84, end: 69.45 },
+    { label: "1z", start: 69.7, end: 72.99 },
+    { label: "1aa", start: 73.24, end: 78.77 },
+    { label: "1ab", start: 79.02, end: 82.95 },
+    { label: "1ac", start: 83.2, end: 88.71 },
+    { label: "1ad", start: 88.96, end: 91.79 },
+    { label: "1ae", start: 92.04, end: 95.73 },
+    { label: "1af", start: 95.98, end: 99.07 },
+    { label: "1ag", start: 99.32, end: 102.19 },
+    { label: "1ah", start: 102.44, end: 104.95 },
+    { label: "1ai", start: 105.2, end: 108.69 },
+    { label: "1aj", start: 108.94, end: 113.15 },
+    { label: "1ak", start: 113.4, end: 116.91 },
+    { label: "1al", start: 117.16, end: 119.21 },
+    { label: "1am", start: 119.46, end: 121.41 },
+    { label: "1an", start: 121.66, end: 123.21 },
+    { label: "1ao", start: 123.46, end: 125.79 },
+    { label: "1ap", start: 126.04, end: 129.37 },
+    { label: "1aq", start: 129.62, end: 137.13 },
+    { label: "1ar", start: 137.38, end: 142.27 },
+    { label: "1as", start: 142.52, end: 143.57 },
+    { label: "1at", start: 143.82, end: 146.45 },
+    { label: "1au", start: 146.7, end: 149.11 },
+    { label: "1av", start: 149.36, end: 152.37 },
+    { label: "1aw", start: 152.62, end: 154.55 },
+    { label: "1ax", start: 154.8, end: 156.29 },
+    { label: "1ay", start: 156.54, end: 157.83 },
+    { label: "1az", start: 158.08, end: 160.51 },
+    { label: "1ba", start: 160.76, end: 163.01 },
+    { label: "1bb", start: 163.26, end: 164.83 },
+    { label: "1bc", start: 165.08, end: 171.85 },
+    { label: "1bd", start: 172.1, end: 176.91 },
+    { label: "1be", start: 177.16, end: 178.37 },
+    { label: "1bf", start: 178.62, end: 185.57 },
+    { label: "1bg", start: 185.82, end: 190.49 },
+    { label: "1bh", start: 190.74, end: 192.37 },
+    { label: "1bi", start: 192.62, end: 195.55 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 195.55;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;3 Être d'accord et se&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">3 Être d'accord et se compléter</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">Si les deux conjoints sont d'accord et se complètent bien,</div> <div id="T1c" class="txs">cela leur procure de la joie de travailler ensemble&nbsp;!</div></div>
+<div class="m"><div id="T1d" class="txs">· Par exemple le travail pour la culture du riz :</div></div>
+<div class="m"><div id="T1e" class="txs"><span class="it">Qui prépare le terrain pour le bas-fond&nbsp;?</span></div> <div id="T1f" class="txs"><span class="it">Qui fait le semis&nbsp;?</span></div> <div id="T1g" class="txs"><span class="it">Qui fait le désherbage&nbsp;?</span></div> <div id="T1h" class="txs"><span class="it">Qui fait la préparation du repas pour les travailleurs&nbsp;?</span></div></div>
+<div class="m"><div id="T1i" class="txs"><span class="it">Qui faucille le riz&nbsp;?</span></div> <div id="T1j" class="txs"><span class="it">Qui le bat&nbsp;?</span></div> <div id="T1k" class="txs"><span class="it">Qui vanne le riz&nbsp;?</span></div> <div id="T1l" class="txs"><span class="it">Qui prépare pendant la récolte&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs">Donc,</div> <div id="T1n" class="txs">si un des deux,</div> <div id="T1o" class="txs">l'homme ou la femme,</div> <div id="T1p" class="txs">ne travaille pas bien,</div> <div id="T1q" class="txs">s'ils ne se complètent pas bien,</div> <div id="T1r" class="txs">il n’y aura pas un bon rendement.</div></div>
+<div class="m"><div id="T1s" class="txs">· Pouvons-nous dire que le travail de l’un est plus important que le travail de l’autre&nbsp;?</div></div>
+<div class="m"><div id="T1t" class="txs"><span class="it">Non,</span></div> <div id="T1u" class="txs"><span class="it">il faut bien travailler et se compléter parce que chaque travail est important même s’il est différent.</span></div> <div id="T1v" class="txs"><span class="it">Si une part manque,</span></div> <div id="T1w" class="txs"><span class="it">le reste va souffrir.</span></div></div>
+<div class="m"><div id="T1x" class="txs">· Pourquoi l’homme et la femme sont créés différents&nbsp;?</div></div>
+<div class="m"><div id="T1y" class="txs"><span class="it">Pour se compléter.</span></div></div>
+<div class="m"><div id="T1z" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que «&nbsp;se compléter&nbsp;» signifie pour un couple&nbsp;?</span></div></div>
+<div class="m"><div id="T1aa" class="txs"><span class="it">Se compléter signifie s'aider l’un l’autre dans la vie quotidienne.</span></div> <div id="T1ab" class="txs"><span class="it">Ça veut dire qu'on ne fait pas de différence entre les travaux,</span></div> <div id="T1ac" class="txs"><span class="it">on se soutient et on aide selon ses possibilités et ses besoins.</span></div></div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">En tant que couple on joue dans la même équipe&nbsp;!</span></div></div>
+<div class="m"><div id="T1ae" class="txs"><span class="it">Mais combien de couples jouent dans des équipes différentes&nbsp;?</span></div> <div id="T1af" class="txs"><span class="it">Ils se jettent même des obstacles devant les pieds&nbsp;?</span></div></div>
+<div class="m"><div id="T1ag" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment une équipe de football fonctionne-elle&nbsp;?</span></div></div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quel est le rôle du capitaine de l’équipe&nbsp;?</span></div></div>
+<div class="m"><div id="T1ai" class="txs"><span class="it">Non pas de diriger et de tout dominer,</span></div> <div id="T1aj" class="txs"><span class="it">mais plutôt d’encourager et de mettre en valeur chaque joueur.</span></div> <div id="T1ak" class="txs"><span class="it">C’est ainsi que doit être le rôle du père de famille,</span></div> <div id="T1al" class="txs"><span class="it">non seulement avec sa femme,</span></div> <div id="T1am" class="txs"><span class="it">mais aussi avec ses enfants.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1an" class="txs"><span class="bd">Prenons des exemples</span> :</div></div>
+<div class="m"><div id="T1ao" class="txs">1) Dimanche matin,</div> <div id="T1ap" class="txs">on est d’accord d’aller au culte avec les enfants :</div> <div id="T1aq" class="txs">Madame est très occupée avec les petits enfants et souvent elle doit quitter l’église à cause de cela.</div> <div id="T1ar" class="txs">Elle ne sait pas lire et pour recevoir de la nourriture spirituelle,</div> <div id="T1as" class="txs">c’est difficile.</div> <div id="T1at" class="txs">Comment le mari peut-il la soutenir&nbsp;?</div></div>
+<div class="m"><div id="T1au" class="txs">2) Dimanche matin,</div> <div id="T1av" class="txs">partager les travaux avant d’aller au culte :</div> <div id="T1aw" class="txs">Qui fait tous les travaux :</div> <div id="T1ax" class="txs">Allumer le feu,</div> <div id="T1ay" class="txs">chauffer de l’eau,</div> <div id="T1az" class="txs">préparer le petit déjeuner,</div> <div id="T1ba" class="txs">laver et habiller les enfants,</div> <div id="T1bb" class="txs">balayer la cour…&nbsp;?</div> <div id="T1bc" class="txs">Comment le mari peut-il aider afin que toute la famille arrive à l’heure et sans stress à l’église&nbsp;?</div></div>
+<div class="m"><div id="T1bd" class="txs">3) En rentrant le soir après avoir fait les travaux aux champs :</div> <div id="T1be" class="txs">Qui fait quoi&nbsp;?</div> <div id="T1bf" class="txs">Comment peut-on bien se compléter comme couple pour que madame ou monsieur ne soit pas trop fatigué&nbsp;?</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bg" class="txs">Mettez-vous debout et exprimer cela en serrant la main de votre conjoint.</div> <div id="T1bh" class="txs">«&nbsp;<span class="it">A partir d'aujourd’hui,</span></div> <div id="T1bi" class="txs"><span class="it">je vais jouer dans la même équipe que toi </span>»<span class="it"> </span><span class="it">!</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/05 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/05 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/05 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

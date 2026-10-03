@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introdução 12</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "15-B015-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-011.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introdução&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;12&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-013.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B021-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B015-image12.jpg" />
+
+<div class="m"><span class="bd">Ter esperança</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Para que você saiba </span><span class="it">a</span><span class="bdit"> </span><span class="bdit">esperança</span><span class="it"> que </span><span class="it">ele</span><span class="it"> </span><span class="it">te</span><span class="it"> </span><span class="it">deu</span><span class="it"> </span><span class="it">quando</span><span class="it"> </span><span class="it">te</span><span class="it"> </span><span class="it">ligou</span><span class="it">, </span>(Efésios 1, 18).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">O que é a esperança cristã?</span></div>
+<div class="m">Ter esperança é acreditar firmemente que um desejo logo será realizado. A esperança cristã é a expectativa do cumprimento das promessas de Deus. A esperança diz respeito a todas as promessas de Deus, mas especialmente àquelas que dizem respeito à nossa vida após a morte, na presença de Deus e de Jesus, ao retorno de Jesus, à nova terra e ao novo céu.</div>
+<div class="m">Ter esperança significa que ainda não “aconteceu”, mas sim acreditar com certeza que nossas expectativas serão cumpridas. Essa esperança pode ter uma influência profunda em nossas vidas. Em vez de afundarmos no medo e na ansiedade, podemos viver em alegria e paz. Mas não devemos esquecer que a base da nossa esperança deve ser sólida e confiável. Se a nossa esperança se baseia em outros seres humanos ou em outras forças que não o Deus vivo, estaremos fadados a ficar desapontados. Só uma esperança fundada em Deus, no seu Filho Jesus e no Espírito Santo garante o cumprimento das promessas esperadas.</div>
+<div class="m"><span class="bd">Ações para fazer da esperança uma riqueza em sua vida:</span></div>
+<div class="m"><span class="it">- Oração:</span>Agradeça a Deus por suas promessas e pela esperança que temos nele. Coloque seus medos e preocupações em Suas mãos.</div>
+<div class="m"><span class="it">- Leitura da Bíblia:</span>Leia os seguintes versículos e escolha um para memorizar: João 10, 28; Efésios 3, 20 a 21; Apocalipse 21, 4.</div>
+<div class="m"><span class="it">- Reflexão pessoal:</span>Você se preocupa constantemente? Você vive com medo de que algo ruim possa acontecer em sua vida ou na vida de seus entes queridos? Existem muitos exemplos bíblicos de como Deus cumpre suas promessas: Noé, Abraão e Sara, Jacó, José, Rute, Ana, Neemias... Estude um desses personagens, prestando atenção em como Deus acompanhou essa pessoa, principalmente nos momentos difíceis.</div>
+<div class="m"><span class="it">- Para outros:</span>Faça um lindo cartão com um versículo bíblico encorajador e entregue-o a um amigo necessitado. Você também pode enviar o versículo por SMS, WhatsApp ou outro meio.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

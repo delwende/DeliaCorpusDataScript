@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Seensa 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "13-B013-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='12-B012-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Seensa&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='14-B014-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B013-image2.jpg" />
+
+<div class="m"><span class="bd">Filannoo</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Nuyi Waaqayyoon filatamnee, osoo </span><span class="it">biyyi</span><span class="it"> </span><span class="it">lafaa</span><span class="it"> </span><span class="it">hin</span><span class="it"> </span><span class="it">hundeeffamne</span><span class="it">, </span><span class="it">Kiristoos</span><span class="it"> </span><span class="it">keessatti</span><span class="it">, </span><span class="it">qulqullaa’uuf</span><span class="it"> </span>(Efesoon 1, 4).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Filannoon maali?</span></div>
+<div class="m">Filannoon doktiriinii hubachuun rakkisaadha. Gariin maaliif filataman kaan immoo hin filatamne jedhanii fannifamuu dhiisuun barbaachisaadha. Olaantummaa Waaqayyoo gocha isaa hunda gonkumaa hubachuu hin dandeenyu jechuudha.</div>
+<div class="m">Waa'ee barumsa kanaa maaltu yaadatamuu qaba:</div>
+<div class="m">- Fayyinni Waaqayyoon jalqaba. Nama baraaruuf dursa fudhate. Cubbuun baay’ee waan manca’eef tarkaanfii jalqabaa fudhachuun nuuf hin danda’amu.</div>
+<div class="m">- Kun gocha Waaqayyo kophaa isaa fi ofii isaatiif hojjatudha.</div>
+<div class="m">- Filannoo isaa keessatti ulaagaa addunyaa keenyaa hin fayyadamu (1Qorontoos 1, 26 hanga 29).</div>
+<div class="m">- Filannoon Waaqayyoo kaayyoo qaba. Inni ulfina isaaf akka isa tajaajillu fi hojii gaarii akka hojjennu nu filateera.</div>
+<div class="m"><span class="bd">Filannoon jireenya kee keessatti badhaadhina akka ta'u gochoota:</span></div>
+<div class="m"><span class="it">- Kadhannaa:</span>Warra filatamoo isaa keessaa tokko ta'uu keetiif guyyaa hundumaa Waaqayyoon galateeffadhu.</div>
+<div class="m">Filattoota Waaqayyoo keessaa tokkoof malu jiraachuuf gargaarsa isaa gaafadhu.</div>
+<div class="m"><span class="it">- Dubbisa Macaafa Qulqulluu</span>: 1 Qorontos 1, 26 hanga 31 dubbisi.Keeyyattoonni kun Waaqayyo akka biyyi lafaa filatutti akka hin filanne nu barsiisu. Ulaagaaleen filannoo isaa maali? Waaqayyo waan "cimaa" ta'e waan hin filanneef qofa nu hin ilaalu jechuu miti.</div>
+<div class="m">Isaayaas 43, 4 dubbisiitii sammuutti qabadhu.</div>
+<div class="m"><span class="it">- Calaqqee dhuunfaa</span>: Namoonni kaan - abbaan manaa ykn haati manaa kee, hoggantoonni ykn hiriyyoonni kee, miseensonni waldaa keetii - akka si hin ilaalle sitti dhaga'amaa? "Warra filatamoo" Waaqayyoo keessaa tokko ta'uu kee yaadadhu. Waaqayyoof baay'ee barbaachisaadha. Inni si ilaala. Ija isaa duratti qaaliidha. Barbaachisummaan kee dippiloomaa kee, ejjennoo hawaasummaa kee ykn qabeenya qaama kee irratti kan hundaa'e osoo hin taane, Waaqayyo si filachuun isaa ayyaana qofa. Yoo of eeggannoo goote jireenya kee guyyaa guyyaa keessatti ni hubatta!</div>
+<div class="m"><span class="it">- Gara namoota birootti</span>: Obboloota kee fi obboleettota hafuuraa, isaanis filatamoo Waaqayyoo taʼan, kabajaa fi jaalalaan ilaali! Warra dadhabaa hin tuffatin. Kanaa mannaa, ija Waaqayyoo fi waldaa duratti gatii guddaa akka qaban isaanitti argisiisi.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

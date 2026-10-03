@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introducción 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "08-B008-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='07-B007-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introducción&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B008-image2.jpg" />
+
+<div class="m"><span class="bd">Elección</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Somos</span><span class="bdit"> elegidos</span><span class="it"> por Dios, antes de la fundación del mundo, en Cristo, para ser santos.</span><span class="it"> </span>(Efesios 1, 4).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">¿Qué es la elección?</span></div>
+<div class="m">La elección es una doctrina difícil de entender. Es importante no obsesionarse con por qué algunos han sido elegidos y otros no. La soberanía de Dios significa que nunca podremos entender todas sus acciones.</div>
+<div class="m">Lo que es importante recordar acerca de esta doctrina:</div>
+<div class="m">- La salvación comienza con Dios. Tomó la iniciativa de salvar al hombre. Estamos tan corrompidos por el pecado que nos resulta imposible dar el primer paso.</div>
+<div class="m">- Esta es una acción que Dios hace solo y para sí mismo.</div>
+<div class="m">- No utiliza los mismos criterios que nuestro mundo en sus elecciones (1 Corintios 1, 26 a 29).</div>
+<div class="m">- La elección de Dios tiene un propósito. Él nos ha elegido para glorificarlo, servirle y hacer buenas obras.</div>
+<div class="m"><span class="bd">Acciones para hacer de la elección una riqueza en tu vida:</span></div>
+<div class="m"><span class="it">- </span><span class="it">Oración</span><span class="it">:</span><span class="it"> </span>Gracias a Dios todos los días porque eres uno de sus elegidos.</div>
+<div class="m">Pide su ayuda para vivir dignamente de uno de los elegidos de Dios.</div>
+<div class="m"><span class="it">- lectura de la Biblia</span>: Lea 1 Corintios 1, 26 al 31. Estos versículos nos enseñan que Dios no elige como el mundo elige. ¿Cuáles son sus criterios de elección? Sólo porque Dios no elige lo que es "fuerte" no significa que no nos considere.</div>
+<div class="m">Lee Isaías 43, 4 y memorízalo.</div>
+<div class="m"><span class="it">- Reflexión personal</span>: ¿Sientes que los demás - tu esposo o esposa, tus superiores o colegas, los miembros de tu iglesia - no te consideran? Recuerda que eres uno de los "elegidos" de Dios. Eres muy importante para Dios. Él te considera. Eres precioso a sus ojos. Tu importancia no se basa en tus diplomas, tu posición social o tus posesiones materiales, sino que es simplemente por gracia que Dios te ha elegido. ¡Si tienes cuidado, lo notarás en tu vida diaria!</div>
+<div class="m"><span class="it">- Hacia otros</span>: ¡Trata a tus hermanos y hermanas espirituales, que también son los elegidos de Dios, con respeto y amor! No desprecies a los que son débiles. Más bien, muéstreles que son preciosos a los ojos de Dios y de la iglesia.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6C0000">
+<title>3) Illustrations pour 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.61 },
+    { label: "1b", start: 4.86, end: 11.35 },
+    { label: "1c", start: 11.6, end: 15.15 },
+    { label: "1d", start: 15.4, end: 21.73 },
+    { label: "1e", start: 21.98, end: 25.41 },
+    { label: "1f", start: 25.66, end: 27.09 },
+    { label: "1g", start: 27.34, end: 33.07 },
+    { label: "1h", start: 33.32, end: 34.45 },
+    { label: "1i", start: 34.7, end: 39.63 },
+    { label: "1j", start: 39.88, end: 41.07 },
+    { label: "1k", start: 41.32, end: 45.05 },
+    { label: "1l", start: 45.3, end: 47.03 },
+    { label: "1m", start: 47.28, end: 50.27 },
+    { label: "1n", start: 50.52, end: 53.67 },
+    { label: "1o", start: 53.92, end: 57.29 },
+    { label: "1p", start: 57.54, end: 59.27 },
+    { label: "1q", start: 59.52, end: 63.77 },
+    { label: "1r", start: 64.02, end: 64.91 },
+    { label: "1s", start: 65.16, end: 66.43 },
+    { label: "1t", start: 66.68, end: 69.29 },
+    { label: "1u", start: 69.54, end: 72.11 },
+    { label: "1v", start: 72.36, end: 73.07 },
+    { label: "1w", start: 73.32, end: 77.01 },
+    { label: "1x", start: 77.26, end: 80.99 },
+    { label: "1y", start: 81.24, end: 81.69 },
+    { label: "1z", start: 81.94, end: 82.39 },
+    { label: "1aa", start: 82.64, end: 84.11 },
+    { label: "1ab", start: 84.36, end: 85.81 },
+    { label: "1ac", start: 86.06, end: 86.89 },
+    { label: "1ad", start: 87.14, end: 89.59 },
+    { label: "1ae", start: 89.84, end: 90.75 },
+    { label: "1af", start: 91, end: 92.25 },
+    { label: "1ag", start: 92.5, end: 96.79 },
+    { label: "1ah", start: 97.04, end: 100.07 },
+    { label: "1ai", start: 100.32, end: 102.01 },
+    { label: "1aj", start: 102.26, end: 102.71 },
+    { label: "1ak", start: 102.96, end: 106.53 },
+    { label: "1al", start: 106.78, end: 108.27 },
+    { label: "1am", start: 108.52, end: 109.07 },
+    { label: "1an", start: 109.32, end: 109.95 },
+    { label: "1ao", start: 110.2, end: 110.93 },
+    { label: "1ap", start: 111.18, end: 112.21 },
+    { label: "1aq", start: 112.46, end: 115.17 },
+    { label: "1ar", start: 115.42, end: 117.51 },
+    { label: "1as", start: 117.76, end: 117.99 },
+    { label: "1at", start: 118.24, end: 118.55 },
+    { label: "1au", start: 118.8, end: 120.41 },
+    { label: "1av", start: 120.66, end: 122.43 },
+    { label: "1aw", start: 122.68, end: 126.75 },
+    { label: "1ax", start: 127, end: 129.47 },
+    { label: "1ay", start: 129.72, end: 131.21 },
+    { label: "1az", start: 131.46, end: 135.89 },
+    { label: "1ba", start: 136.14, end: 137.11 },
+    { label: "1bb", start: 137.36, end: 138.85 },
+    { label: "1bc", start: 139.1, end: 141.49 },
+    { label: "1bd", start: 141.74, end: 148.87 },
+    { label: "1be", start: 149.12, end: 151.45 },
+    { label: "1bf", start: 151.7, end: 156.11 },
+    { label: "1bg", start: 156.36, end: 157.27 },
+    { label: "1bh", start: 157.52, end: 158.23 },
+    { label: "1bi", start: 158.48, end: 159.45 },
+    { label: "1bj", start: 159.7, end: 162.19 },
+    { label: "1bk", start: 162.44, end: 164.81 },
+    { label: "1bl", start: 165.06, end: 167.13 },
+    { label: "1bm", start: 167.38, end: 169.35 },
+    { label: "1bn", start: 169.6, end: 170.57 },
+    { label: "1bo", start: 170.82, end: 172.07 },
+    { label: "1bp", start: 172.32, end: 174.39 },
+    { label: "1bq", start: 174.64, end: 177.41 },
+    { label: "1br", start: 177.66, end: 177.97 },
+    { label: "1bs", start: 178.22, end: 179.75 },
+    { label: "1bt", start: 180, end: 180.45 },
+    { label: "1bu", start: 180.7, end: 185.79 },
+    { label: "1bv", start: 186.04, end: 187.73 },
+    { label: "1bw", start: 187.98, end: 190.05 },
+    { label: "1bx", start: 190.3, end: 193.57 },
+    { label: "1by", start: 193.82, end: 197.81 },
+    { label: "1bz", start: 198.06, end: 201.31 },
+    { label: "1ca", start: 201.56, end: 207.37 },
+    { label: "1cb", start: 207.62, end: 210.83 },
+    { label: "1cc", start: 211.08, end: 211.89 },
+    { label: "1cd", start: 212.14, end: 214.53 },
+    { label: "1ce", start: 214.78, end: 217.77 },
+    { label: "1cf", start: 218.02, end: 221.19 },
+    { label: "1cg", start: 221.44, end: 225.91 },
+    { label: "1ch", start: 226.16, end: 231.77 },
+    { label: "1ci", start: 232.02, end: 232.99 },
+    { label: "1cj", start: 233.24, end: 233.61 },
+    { label: "1ck", start: 233.86, end: 237.39 },
+    { label: "1cl", start: 237.64, end: 238.49 },
+    { label: "1cm", start: 238.74, end: 239.43 },
+    { label: "1cn", start: 239.68, end: 240.89 },
+    { label: "1co", start: 241.14, end: 243.15 },
+    { label: "1cp", start: 243.4, end: 244.11 },
+    { label: "1cq", start: 244.36, end: 245.07 },
+    { label: "1cr", start: 245.32, end: 245.83 },
+    { label: "1cs", start: 246.08, end: 246.89 },
+    { label: "1ct", start: 247.14, end: 248.77 },
+    { label: "1cu", start: 249.02, end: 249.91 },
+    { label: "1cv", start: 250.16, end: 250.75 },
+    { label: "1cw", start: 251, end: 253.51 },
+    { label: "1cx", start: 253.76, end: 255.47 },
+    { label: "1cy", start: 255.72, end: 260.67 },
+    { label: "1cz", start: 260.92, end: 261.47 },
+    { label: "1da", start: 261.72, end: 263.85 },
+    { label: "1db", start: 264.1, end: 264.69 },
+    { label: "1dc", start: 264.94, end: 266.87 },
+    { label: "1dd", start: 267.12, end: 268.69 },
+    { label: "1de", start: 268.94, end: 271.11 },
+    { label: "1df", start: 271.36, end: 276.05 },
+    { label: "1dg", start: 276.3, end: 277.73 },
+    { label: "1dh", start: 277.98, end: 280.53 },
+    { label: "1di", start: 280.78, end: 281.57 },
+    { label: "1dj", start: 281.82, end: 287.03 },
+    { label: "1dk", start: 287.28, end: 293.61 },
+    { label: "1dl", start: 293.86, end: 296.83 },
+    { label: "1dm", start: 297.08, end: 301.31 },
+    { label: "1dn", start: 301.56, end: 305.25 },
+    { label: "1do", start: 305.5, end: 314.35 },
+    { label: "1dp", start: 314.6, end: 315.41 },
+    { label: "1dq", start: 315.66, end: 322.25 },
+    { label: "1dr", start: 322.5, end: 324.17 },
+    { label: "1ds", start: 324.42, end: 326.85 },
+    { label: "1dt", start: 327.1, end: 328.29 },
+    { label: "1du", start: 328.54, end: 330.87 },
+    { label: "1dv", start: 331.12, end: 333.61 },
+    { label: "1dw", start: 333.86, end: 335.57 },
+    { label: "1dx", start: 335.82, end: 337.91 },
+    { label: "1dy", start: 338.16, end: 339.87 },
+    { label: "1dz", start: 340.12, end: 341.61 },
+    { label: "1ea", start: 341.86, end: 344.99 },
+    { label: "1eb", start: 345.24, end: 346.67 },
+    { label: "1ec", start: 346.92, end: 347.39 },
+    { label: "1ed", start: 347.64, end: 351.95 },
+    { label: "1ee", start: 352.2, end: 360.83 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 360.83;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;3) Illustrations pour&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">3</span><span class="bd">) </span><span class="bd">Illustrations pour mieux comprendre la notion de Trinité</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">Il est difficile</span> de répondre de façon satisfaisante aux questions que posent les musulmans sur la Trinité.</div> <div id="T1c" class="txs">Le mot «&nbsp;Trinité&nbsp;» est un terme théologique.</div> <div id="T1d" class="txs">Il ne se trouve pas dans la Bible en tant que tel mais désigne une doctrine qui nous est révélée dans l’Ecriture.</div> <div id="T1e" class="txs">C’est un concept qui dépasse notre entendement humain.</div> <div id="T1f" class="txs">En tant que chrétiens,</div> <div id="T1g" class="txs">nous devons donc veiller à ne pas donner l’impression que nous pouvons expliquer l’inexplicable.</div> <div id="T1h" class="txs">La notion de Trinité,</div> <div id="T1i" class="txs">le fait que Dieu est «&nbsp;trois en un&nbsp;» par essence (l’expression n’est pas dans la Bible,</div> <div id="T1j" class="txs">mais elle aide à comprendre),</div> <div id="T1k" class="txs">apparaît clairement dans le Nouveau Testament lorsqu’il est fait mention du Père,</div> <div id="T1l" class="txs">du Fils et du Saint-Esprit.</div> <div id="T1m" class="txs">Mais cela ne nous donne pas beaucoup de précisions. </div></div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">On en trouve davantage</span> dans l’Ancien Testament.</div> <div id="T1o" class="txs">Trois noms sont utilisés pour Dieu dans le texte hébreu :</div><div id="T1p" class="txs"><span class="bd"> ’El</span> (410 fois),</div> <div id="T1q" class="txs"><span class="bd">’</span><span class="bd">Elah</span> (426 fois) et <span class="bd">’</span><span class="bd">Eloah</span> (45 fois).</div> <div id="T1r" class="txs"><span class="bd">Elohim</span>,</div> <div id="T1s" class="txs">pluriel du mot El,</div> <div id="T1t" class="txs">est employé quant à lui 2600 fois.</div> <div id="T1u" class="txs">L’Ancien Testament commence par ces mots :</div> <div id="T1v" class="txs">«&nbsp;Au commencement,</div> <div id="T1w" class="txs">Dieu [Elohim] créa le ciel et la terre&nbsp;» (Genèse 1, 1).</div> <div id="T1x" class="txs">La Trinité apparaît aussi en Genèse 1, 26,</div> <div id="T1y" class="txs">où il est dit :</div> <div id="T1z" class="txs">«&nbsp;Dieu dit :</div> <div id="T1aa" class="txs">‘<span class="bd">Faisons</span> l’homme à notre image,</div> <div id="T1ab" class="txs">à notre ressemblance&nbsp;»&nbsp;!</div> <div id="T1ac" class="txs">Plus loin,</div> <div id="T1ad" class="txs">au moment de la construction de la tour de Babel,</div> <div id="T1ae" class="txs">où littéralement :</div> <div id="T1af" class="txs">«&nbsp;L’Eternel (…) dit (…):</div> <div id="T1ag" class="txs"><span class="bd">Descendons</span> et là <span class="bd">brouillons</span> leur langage» (Genèse 11, 5 à 7).</div></div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">Le Nouveau Testament</span> nous aide à comprendre.</div> <div id="T1ai" class="txs">En Colossiens 1, 20,</div> <div id="T1aj" class="txs">il est dit :</div> <div id="T1ak" class="txs">«&nbsp;C’est en lui [le Fils] que tout a été créé dans le ciel et sur la terre,</div> <div id="T1al" class="txs">le visible et l’invisible,</div> <div id="T1am" class="txs">trônes,</div> <div id="T1an" class="txs">souverainetés,</div> <div id="T1ao" class="txs">dominations,</div> <div id="T1ap" class="txs">autorités.</div> <div id="T1aq" class="txs">Tout a été créé par lui et pour lui.</div><div id="T1ar" class="txs">&nbsp;» Et en Hébreux 1, 1 à 3,</div> <div id="T1as" class="txs">on lit :</div> <div id="T1at" class="txs">«&nbsp;Dieu,</div> <div id="T1au" class="txs">dans ces jours qui sont les derniers,</div> <div id="T1av" class="txs">nous a parlé par le Fils.</div> <div id="T1aw" class="txs">(…) Le Fils est le reflet de sa gloire et l’expression de sa personne,</div> <div id="T1ax" class="txs">il soutient tout par sa parole puissante.</div><div id="T1ay" class="txs">&nbsp;» En lisant ces textes,</div> <div id="T1az" class="txs">on voit très bien pourquoi le nom de Dieu est si souvent à la forme plurielle.</div> <div id="T1ba" class="txs">En outre,</div> <div id="T1bb" class="txs">Genèse 1, 2 précise :</div> <div id="T1bc" class="txs">«&nbsp;…l’Esprit de Dieu planait au-dessus de l’eau&nbsp;».</div></div>
+<div class="m"><div id="T1bd" class="txs"><span class="bd">Le texte d’Esaïe 63</span><span class="bd">,</span></div><div id="T1be" class="txs"><span class="bd">7</span><span class="bd"> à </span><span class="bd">10</span> apporte un éclairage supplémentaire sur ce mystère de la Trinité :</div> <div id="T1bf" class="txs">«&nbsp;Je rappellerai les bontés de <span class="bd">l’Eternel</span> (…).</div> <div id="T1bg" class="txs">Je dirai tous les bienfaits qu’il a accordés à la communauté d’Israël (…).</div> <div id="T1bh" class="txs">Il avait dit :</div> <div id="T1bi" class="txs">‘Assurément,</div> <div id="T1bj" class="txs">ils sont mon peuple,</div> <div id="T1bk" class="txs">des enfants qui ne s’adonneront pas au mensonge’,</div> <div id="T1bl" class="txs">et il a été un <span class="bd">sauveur</span> [Yechoua] pour eux.</div> <div id="T1bm" class="txs">(…) dans son amour et sa compassion (…),</div> <div id="T1bn" class="txs">il les a soutenus et portés.</div> <div id="T1bo" class="txs">Cependant,</div> <div id="T1bp" class="txs">ils se sont révoltés,</div> <div id="T1bq" class="txs">ils ont attristé son <span class="bd">Esprit saint</span>.</div><div id="T1br" class="txs">&nbsp;» Et en Matthieu 1, 21 à 23,</div> <div id="T1bs" class="txs">Dieu,</div> <div id="T1bt" class="txs">par l’intermédiaire d’un ange,</div> <div id="T1bu" class="txs">ordonne :</div> <div id="T1bv" class="txs">«&nbsp;… tu lui donneras le nom de Jésus [Yechoua] car c’est lui qui sauvera son peuple de ses péchés.</div> <div id="T1bw" class="txs">(…) on l’appellera Emmanuel,</div> <div id="T1bx" class="txs">ce qui signifie ‘<span class="bd">Dieu avec nous</span>’&nbsp;».</div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1by" class="txs"><span class="ul"><span class="bdit">Analogies qui expliquent la notion de Trinité</span></span><span class="ul"><span class="bdit">.</span></span></div></div>
+<div class="m"><div id="T1bz" class="txs"><span class="bd">Le chimiste dira</span> que la formule d’une goutte d’eau est H2O.</div> <div id="T1ca" class="txs">Le physicien dira qu’il s’agit d’un liquide.</div> <div id="T1cb" class="txs">Le chimiste regardera un cube de glace et affirmera qu’il s’agit de la même formule H2O.</div> <div id="T1cc" class="txs">Le physicien dira qu’il s’agit d’un solide.</div> <div id="T1cd" class="txs">Enfin,</div> <div id="T1ce" class="txs">face à un tube à essai rempli de vapeur,</div> <div id="T1cf" class="txs">le chimiste parviendra toujours à la même conclusion,</div> <div id="T1cg" class="txs">mais le physicien dira qu’il est en présence d’un gaz&nbsp;!</div></div>
+<div class="m"><div id="T1ch" class="txs"><span class="bd">Cela peut nous servir d’image</span> pour expliquer la notion de Trinité.</div> <div id="T1ci" class="txs">Tout comme la formule chimique de l’eau reste H2O quelle que soit sa consistance (liquide,</div> <div id="T1cj" class="txs">solide ou gazeuse),</div> <div id="T1ck" class="txs">Dieu,</div> <div id="T1cl" class="txs">quelle que soit la manière dont il se manifeste et se fait connaître,</div> <div id="T1cm" class="txs">reste Dieu.</div> <div id="T1cn" class="txs">L’eau,</div> <div id="T1co" class="txs">indispensable à la vie,</div> <div id="T1cp" class="txs">peut être comparée à Dieu le Père,</div> <div id="T1cq" class="txs">le Créateur ;</div> <div id="T1cr" class="txs">la glace,</div> <div id="T1cs" class="txs">à Jésus,</div> <div id="T1ct" class="txs">le Fils de Dieu,</div> <div id="T1cu" class="txs">qui est aussi le Sauveur.</div> <div id="T1cv" class="txs">Enfin,</div> <div id="T1cw" class="txs">la vapeur,</div> <div id="T1cx" class="txs">force bien réelle quoique souvent invisible,</div> <div id="T1cy" class="txs">peut faire penser au Saint-Esprit,</div> <div id="T1cz" class="txs">qui révèle Dieu à tous ceux qui le cherchent et donne au croyant la force de vivre une vie juste.</div> <div id="T1da" class="txs">Dieu,</div> <div id="T1db" class="txs">Jésus et le Saint-Esprit sont trois,</div> <div id="T1dc" class="txs">et pourtant,</div> <div id="T1dd" class="txs">ils partagent une seule et même nature :</div> <div id="T1de" class="txs">celle de Dieu lui-même&nbsp;!</div></div>
+<div class="m"><div id="T1df" class="txs"><span class="bd">La formule mathématique</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dg" class="txs">Certains musulmans disent qu’il est illogique et inconcevable que 1 = 3,</div> <div id="T1dh" class="txs">car selon les mathématiques,</div> <div id="T1di" class="txs">on obtient 3 en ajoutant 1+1+1 (un plus un,</div> <div id="T1dj" class="txs">plus un).</div> <div id="T1dk" class="txs">On pourra toutefois répondre que cette formule ne correspond pas à la nature de Dieu.</div> <div id="T1dl" class="txs">Car par quelle logique peut-on affirmer que l’addition convient pour «&nbsp;décrire&nbsp;» sa personne&nbsp;?</div> <div id="T1dm" class="txs">La multiplication semble plus appropriée :</div> <div id="T1dn" class="txs">demandons à nos amis musulmans ce que donne 1 x 1 x 1.</div> <div id="T1do" class="txs">Ils ne tarderont pas à répondre que le résultat est 1.</div> <div id="T1dp" class="txs">Cette analogie permettra de mettre en évidence l’injustifiable étroitesse d’esprit dont ils font souvent preuve vis-à-vis de la doctrine de la Trinité.</div> <div id="T1dq" class="txs">Ainsi,</div> <div id="T1dr" class="txs">une barrière pourra tomber et ils seront plus ouverts aux autres vérités de l’Ecriture que nous désirerons leur communiquer.</div></div>
+<div class="m"><div id="T1ds" class="txs"><span class="bd">Autres exemples</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dt" class="txs">L’être humain est constitué d’un corps,</div> <div id="T1du" class="txs">d’une âme et d’un esprit,</div> <div id="T1dv" class="txs">mais il reste toujours un seul être humain.</div></div>
+<div class="m"><div id="T1dw" class="txs">Le soleil est constitué de lumière,</div> <div id="T1dx" class="txs">de chaleur et de matière.</div></div>
+<div class="m"><div id="T1dy" class="txs">Un feu est constitué de bois,</div> <div id="T1dz" class="txs">de chaleur et de lumière.</div></div>
+<div class="m"><div id="T1ea" class="txs"><span class="bd">Conclusion</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1eb" class="txs"><span class="it">Même si ces images peuvent nous aider à mieux comprendre,</span></div> <div id="T1ec" class="txs"><span class="it">notre intelligence humaine,</span></div> <div id="T1ed" class="txs"><span class="it">limitée,</span></div> <div id="T1ee" class="txs"><span class="it">est incapable d’expliquer et de comprendre pleinement la personne de Dieu. Nous pouvons toutefois savoir que Dieu se manifeste souvent sous une forme trine et que ce «</span><span class="it"> </span><span class="it">trois en un</span><span class="it"> </span><span class="it">» se retrouve aussi dans la nature.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/07 Evangile fr.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

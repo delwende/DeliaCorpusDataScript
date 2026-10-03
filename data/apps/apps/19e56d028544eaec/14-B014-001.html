@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>2) Les obstacles à la 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 4.55 },
+    { label: "1b", start: 4.8, end: 6.47 },
+    { label: "1c", start: 6.72, end: 8.31 },
+    { label: "1d", start: 8.56, end: 11.99 },
+    { label: "1e", start: 12.24, end: 15.19 },
+    { label: "1f", start: 15.44, end: 17.23 },
+    { label: "1g", start: 17.48, end: 24.65 },
+    { label: "1h", start: 24.9, end: 26.75 },
+    { label: "1i", start: 27, end: 29.97 },
+    { label: "1j", start: 30.22, end: 33.47 },
+    { label: "1k", start: 33.72, end: 36.63 },
+    { label: "1l", start: 36.88, end: 40.85 },
+    { label: "1m", start: 41.1, end: 42.41 },
+    { label: "1n", start: 42.66, end: 47.51 },
+    { label: "1o", start: 47.76, end: 51.15 },
+    { label: "1p", start: 51.4, end: 56.51 },
+    { label: "1q", start: 56.76, end: 59.33 },
+    { label: "1r", start: 59.58, end: 60.71 },
+    { label: "1s", start: 60.96, end: 64.75 },
+    { label: "1t", start: 65, end: 66.53 },
+    { label: "1u", start: 66.78, end: 69.35 },
+    { label: "1v", start: 69.6, end: 72.63 },
+    { label: "1w", start: 72.88, end: 79.63 },
+    { label: "1x", start: 79.88, end: 82.33 },
+    { label: "1y", start: 82.58, end: 85.23 },
+    { label: "1z", start: 85.48, end: 86.75 },
+    { label: "1aa", start: 87, end: 91.49 },
+    { label: "1ab", start: 91.74, end: 93.95 },
+    { label: "1ac", start: 94.2, end: 96.01 },
+    { label: "1ad", start: 96.26, end: 98.05 },
+    { label: "1ae", start: 98.3, end: 101.23 },
+    { label: "1af", start: 101.48, end: 107.21 },
+    { label: "1ag", start: 107.46, end: 109.47 },
+    { label: "1ah", start: 109.72, end: 111.13 },
+    { label: "1ai", start: 111.38, end: 113.31 },
+    { label: "1aj", start: 113.56, end: 116.89 },
+    { label: "1ak", start: 117.14, end: 119.89 },
+    { label: "1al", start: 120.14, end: 121.77 },
+    { label: "1am", start: 122.02, end: 126.55 },
+    { label: "1an", start: 126.8, end: 128.63 },
+    { label: "1ao", start: 128.88, end: 131.53 },
+    { label: "1ap", start: 131.78, end: 134.81 },
+    { label: "1aq", start: 135.06, end: 139.31 },
+    { label: "1ar", start: 139.56, end: 142.83 },
+    { label: "1as", start: 143.08, end: 145.93 },
+    { label: "1at", start: 146.18, end: 149.45 },
+    { label: "1au", start: 149.7, end: 152.59 },
+    { label: "1av", start: 152.84, end: 154.23 },
+    { label: "1aw", start: 154.48, end: 155.55 },
+    { label: "1ax", start: 155.8, end: 163.63 },
+    { label: "1ay", start: 163.88, end: 166.19 },
+    { label: "1az", start: 166.44, end: 169.47 },
+    { label: "1ba", start: 169.72, end: 172.21 },
+    { label: "1bb", start: 172.46, end: 177.63 },
+    { label: "1bc", start: 177.88, end: 182.47 },
+    { label: "1bd", start: 182.72, end: 185.09 },
+    { label: "1be", start: 185.34, end: 189.71 },
+    { label: "1bf", start: 189.96, end: 191.47 },
+    { label: "1bg", start: 191.72, end: 192.21 },
+    { label: "1bh", start: 192.46, end: 196.19 },
+    { label: "1bi", start: 196.44, end: 197.89 },
+    { label: "1bj", start: 198.14, end: 202.15 },
+    { label: "1bk", start: 202.4, end: 205.05 },
+    { label: "1bl", start: 205.3, end: 207.89 },
+    { label: "1bm", start: 208.14, end: 214.51 },
+    { label: "1bn", start: 214.76, end: 219.29 },
+    { label: "1bo", start: 219.54, end: 221.85 },
+    { label: "1bp", start: 222.1, end: 224.99 },
+    { label: "1bq", start: 225.24, end: 226.93 },
+    { label: "1br", start: 227.18, end: 233.05 },
+    { label: "1bs", start: 233.3, end: 239.19 },
+    { label: "1bt", start: 239.44, end: 243.25 },
+    { label: "1bu", start: 243.5, end: 245.69 },
+    { label: "1bv", start: 245.94, end: 247.49 },
+    { label: "1bw", start: 247.74, end: 249.77 },
+    { label: "1bx", start: 250.02, end: 255.21 },
+    { label: "1by", start: 255.46, end: 260.57 },
+    { label: "1bz", start: 260.82, end: 268.07 },
+    { label: "1ca", start: 268.32, end: 280.81 },
+    { label: "1cb", start: 281.06, end: 286.07 },
+    { label: "1cc", start: 286.32, end: 288.73 },
+    { label: "1cd", start: 288.98, end: 290.81 },
+    { label: "1ce", start: 291.06, end: 292.97 },
+    { label: "1cf", start: 293.22, end: 294.71 },
+    { label: "1cg", start: 294.96, end: 300.53 },
+    { label: "1ch", start: 300.78, end: 302.97 },
+    { label: "1ci", start: 303.22, end: 307.43 },
+    { label: "1cj", start: 307.68, end: 310.85 },
+    { label: "1ck", start: 311.1, end: 313.29 },
+    { label: "1cl", start: 313.54, end: 315.35 },
+    { label: "1cm", start: 315.6, end: 319.23 },
+    { label: "1cn", start: 319.48, end: 323.53 },
+    { label: "1co", start: 323.78, end: 333.79 },
+    { label: "1cp", start: 334.04, end: 336.55 },
+    { label: "1cq", start: 336.8, end: 339.89 },
+    { label: "1cr", start: 340.14, end: 346.07 },
+    { label: "1cs", start: 346.32, end: 349.37 },
+    { label: "1ct", start: 349.62, end: 355.43 },
+    { label: "1cu", start: 355.68, end: 359.99 },
+    { label: "1cv", start: 360.24, end: 363.63 },
+    { label: "1cw", start: 363.88, end: 369.51 },
+    { label: "1cx", start: 369.76, end: 372.53 },
+    { label: "1cy", start: 372.78, end: 374.89 },
+    { label: "1cz", start: 375.14, end: 378.73 },
+    { label: "1da", start: 378.98, end: 380.45 },
+    { label: "1db", start: 380.7, end: 381.97 },
+    { label: "1dc", start: 382.22, end: 383.37 },
+    { label: "1dd", start: 383.62, end: 384.81 },
+    { label: "1de", start: 385.06, end: 386.25 },
+    { label: "1df", start: 386.5, end: 389.71 },
+    { label: "1dg", start: 389.96, end: 393.57 },
+    { label: "1dh", start: 393.82, end: 395.77 },
+    { label: "1di", start: 396.02, end: 397.59 },
+    { label: "1dj", start: 397.84, end: 399.37 },
+    { label: "1dk", start: 399.62, end: 401.03 },
+    { label: "1dl", start: 401.28, end: 402.71 },
+    { label: "1dm", start: 402.96, end: 408.23 },
+    { label: "1dn", start: 408.48, end: 411.93 },
+    { label: "1do", start: 412.18, end: 413.63 },
+    { label: "1dp", start: 413.88, end: 416.49 },
+    { label: "1dq", start: 416.74, end: 419.61 },
+    { label: "1dr", start: 419.86, end: 422.45 },
+    { label: "1ds", start: 422.7, end: 424.47 },
+    { label: "1dt", start: 424.72, end: 427.13 },
+    { label: "1du", start: 427.38, end: 430.61 },
+    { label: "1dv", start: 430.86, end: 432.23 },
+    { label: "1dw", start: 432.48, end: 436.47 },
+    { label: "1dx", start: 436.72, end: 440.75 },
+    { label: "1dy", start: 441, end: 445.65 },
+    { label: "1dz", start: 445.9, end: 448.01 },
+    { label: "1ea", start: 448.26, end: 450.85 },
+    { label: "1eb", start: 451.1, end: 454.09 },
+    { label: "1ec", start: 454.34, end: 458.11 },
+    { label: "1ed", start: 458.36, end: 462.25 },
+    { label: "1ee", start: 462.5, end: 466.83 },
+    { label: "1ef", start: 467.08, end: 469.51 },
+    { label: "1eg", start: 469.76, end: 473.11 },
+    { label: "1eh", start: 473.36, end: 474.37 },
+    { label: "1ei", start: 474.62, end: 476.89 },
+    { label: "1ej", start: 477.14, end: 481.01 },
+    { label: "1ek", start: 481.26, end: 483.21 },
+    { label: "1el", start: 483.46, end: 485.53 },
+    { label: "1em", start: 485.78, end: 487.95 },
+    { label: "1en", start: 488.2, end: 489.69 },
+    { label: "1eo", start: 489.94, end: 494.21 },
+    { label: "1ep", start: 494.46, end: 495.95 },
+    { label: "1eq", start: 496.2, end: 497.89 },
+    { label: "1er", start: 498.14, end: 499.61 },
+    { label: "1es", start: 499.86, end: 503.63 },
+    { label: "1et", start: 503.88, end: 505.91 },
+    { label: "1eu", start: 506.16, end: 508.07 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 508.07;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "14-B014-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='13-B013-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='13-B013-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;2) Les obstacles à la&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B014-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">2) </span><span class="bd">Les obstacles à la communication</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">C'est un triste constat que,</div> <div id="T1c" class="txs">dans tous les pays du monde,</div> <div id="T1d" class="txs">de nombreux couples n'arrivent pas à communiquer au niveau 3 ;</div> <div id="T1e" class="txs">certains n'atteignent même plus le niveau 1.</div></div>
+<div class="m"><div id="T1f" class="txs">Pourquoi cela&nbsp;?</div> <div id="T1g" class="txs">Parce qu'il y a des obstacles à la communication et que beaucoup de couples laissent ces obstacles rompre leur dialogue.</div> <div id="T1h" class="txs">Ces obstacles sont :</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">a) </span><span class="bd">La peur et la méfiance</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1j" class="txs">La Bible dit que la femme doit respecter son mari,</div> <div id="T1k" class="txs">mais non avoir peur de lui.</div></div>
+<div class="m"><div id="T1l" class="txs">Lisez Colossiens 3, 18 à 19.</div></div>
+<div class="m"><div id="T1m" class="txs">Malheureusement,</div> <div id="T1n" class="txs">il y a beaucoup de maris qui agissent de telle sorte que leurs femmes vivent dans la crainte.</div> <div id="T1o" class="txs">La peur a toujours été un obstacle à la communication.</div> <div id="T1p" class="txs">Une femme ne peut pas bien communiquer avec son mari si elle a peur de lui.</div> <div id="T1q" class="txs">Il en est de même pour l’homme à cause des réactions,</div> <div id="T1r" class="txs">de la colère, …</div></div>
+<div class="m"><div id="T1s" class="txs">Un conjoint peut dire de son partenaire par exemple :</div> <div id="T1t" class="txs">«<span class="it"> il veut me contrôler,</span></div> <div id="T1u" class="txs"><span class="it">reprocher…  S’il me dit cela,</span></div> <div id="T1v" class="txs"><span class="it">c’est certainement qu’il veut obtenir quelque chose de moi</span>.</div><div id="T1w" class="txs">&nbsp;»</div></div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">✓</span><span class="bd"> Quels comportements du mari</span><span class="bd"> ou de la </span><span class="bd">femme font peur à son épouse</span><span class="bd"> ou à son </span><span class="bd">époux&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">b</span><span class="bd">) </span><span class="bd">L'absence d'écoute</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1z" class="txs">Un autre obstacle fréquent à la communication,</div> <div id="T1aa" class="txs">c'est de ne pas écouter.</div> <div id="T1ab" class="txs">Il ne peut pas y avoir de communication si nous n'écoutons pas l'autre.</div> <div id="T1ac" class="txs">Ecoutons vraiment&nbsp;!</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs">Il arrive parfois que,</div> <div id="T1ae" class="txs">pendant que mon conjoint parle,</div> <div id="T1af" class="txs">je suis en train de penser à ce que je vais lui répondre.</div> <div id="T1ag" class="txs">J'attends avec impatience qu'il termine sa phrase et je lui lance toutes mes belles idées.</div> <div id="T1ah" class="txs">Mais pendant que j'attendais,</div> <div id="T1ai" class="txs">je ne l'écoutais pas.</div></div>
+<div class="m"><div id="T1aj" class="txs">Lorsque mon conjoint me parle,</div> <div id="T1ak" class="txs">je dois me concentrer sur ce qu'il est en train de dire.</div> <div id="T1al" class="txs">Et si je ne suis pas sûr d’avoir bien compris,</div> <div id="T1am" class="txs">je devrais lui demander.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1an" class="txs"><span class="bd">L’écoute attentive est l’art de chercher à vraiment comprendre l’autre</span>.</div> <div id="T1ao" class="txs">Cela exige un effort,</div> <div id="T1ap" class="txs">mais si on n’écoute pas l'autre attentivement,</div> <div id="T1aq" class="txs">on le décourage dans son désir de communiquer.</div> <div id="T1ar" class="txs">«&nbsp;Dieu nous a créés avec une seule bouche et deux oreilles&nbsp;!</div><div id="T1as" class="txs">&nbsp;» Il faudrait donc écouter deux fois plus que l’on parle&nbsp;!</div></div>
+<div class="m"><div id="T1at" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Lisez Jacques 1</span><span class="bd">,</span></div><div id="T1au" class="txs"><span class="bd">19 :</span></div> <div id="T1av" class="txs"><span class="bd">Quel avantage se trouve dans une bonne écoute</span><span class="bd"> </span><span class="bd">?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aw" class="txs"><span class="bd">c</span><span class="bd">) </span><span class="bd">Un excès d'occupation</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ax" class="txs">Par exemple :</div> <div id="T1ay" class="txs">Un mari dit ceci :</div> <div id="T1az" class="txs">«&nbsp;<span class="it">Ma femme et moi sommes tellement engagés dans les activités de l'église que nous n'avons même pas le temps de nous voir.</span></div> <div id="T1ba" class="txs"><span class="it">Alors comment pouvons-nous communiquer&nbsp;?</span></div><div id="T1bb" class="txs">&nbsp;»</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bc" class="txs">Les deux doivent se poser les questions suivantes :</div> <div id="T1bd" class="txs">«&nbsp;<span class="it">Qu'est-ce qui est le plus important pour nous</span><span class="it"> </span><span class="it">?</span></div> <div id="T1be" class="txs"><span class="it">Si nous sommes occupés au point de ne plus avoir le </span><span class="it">temps de communiquer,</span></div> <div id="T1bf" class="txs"><span class="it">n'en faisons-nous pas plus que ce que Dieu nous demande&nbsp;?</span>»</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bg" class="txs"><span class="bd">d</span><span class="bd">) </span><span class="bd">La honte</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1bh" class="txs">Un mari se dit chrétien et va toujours à l'église avec sa femme.</div> <div id="T1bi" class="txs">Mais chaque fois qu'il a un problème,</div> <div id="T1bj" class="txs">il se dit :</div> <div id="T1bk" class="txs">«&nbsp;<span class="it">Je ne dirai rien à ma femme de mes déceptions de cette journée.</span></div> <div id="T1bl" class="txs"><span class="it">Je suis un homme après tout,</span></div> <div id="T1bm" class="txs"><span class="it">et ma femme ne doit pas croire que je ne peux pas résoudre ce problème</span>.</div><div id="T1bn" class="txs">&nbsp;»</div></div>
+<div class="m"><div id="T1bo" class="txs">Il est clair qu'il n’a pas compris le verset qui dit :</div> <div id="T1bp" class="txs">«&nbsp;<span class="it">Il n'est pas bon que l'homme soit seul,</span></div> <div id="T1bq" class="txs"><span class="it">je lui ferai une aide qui sera son vis à vis</span>&nbsp;» (Genèse 2, 18).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1br" class="txs">Un homme ne doit pas avoir honte de partager ses sentiments avec sa conjointe.</div> <div id="T1bs" class="txs">Elle ne doit pas le mépriser pour cela.</div> <div id="T1bt" class="txs">Au contraire elle doit le respecter.</div> <div id="T1bu" class="txs">De la même manière,</div> <div id="T1bv" class="txs">l’épouse doit avoir la liberté de partager ses propres sentiments avec son mari.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bw" class="txs">Même si le voisinage se moque de lui à cause de sa bonne relation avec son épouse,</div> <div id="T1bx" class="txs">cela ne doit pas bloquer la relation et la communication&nbsp;!</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1by" class="txs"><span class="bd">e</span><span class="bd">) </span><span class="bd">Les préjugés</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1bz" class="txs">Des paroles comme :</div> <div id="T1ca" class="txs">«&nbsp;mon conjoint fait toujours cela...</div><div id="T1cb" class="txs">&nbsp;» emprisonne l’autre dans une boite dont il lui sera difficile de sortir.</div> <div id="T1cc" class="txs">Il ne faut pas avoir des préjugés et laisser une chance à l’autre de changer.</div> <div id="T1cd" class="txs">Les préjugés sont un obstacle à l’écoute car je pense que je sais déjà ce que l’autre va dire avant qu’il ne parle.</div> <div id="T1ce" class="txs">Ils sont aussi un obstacle à la communication car je pense que ça ne vaut pas la peine de parler avec mon conjoint puisque je crois déjà connaître sa réaction.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cf" class="txs"><span class="bd">f</span><span class="bd">) </span><span class="bd">Le manque d’un esprit ouvert et l’autoritarisme</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1cg" class="txs">On n’accepte pas une autre opinion,</div> <div id="T1ch" class="txs">une autre attitude.</div> <div id="T1ci" class="txs">«&nbsp;<span class="it">Ma femme n’a rien à me dire,</span></div> <div id="T1cj" class="txs"><span class="it">je suis le chef&nbsp;!</span></div><div id="T1ck" class="txs">&nbsp;» Si je crois avoir toujours raison et que l’opinion de l’autre n’a pas d’importance,</div> <div id="T1cl" class="txs">je ne vais pas être capable de l’écouter.</div></div>
+<div class="m"><div id="T1cm" class="txs"><span class="bd">g</span><span class="bd">) </span><span class="bd">Les blessures ou les paroles blessantes</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1cn" class="txs">Parmi les plus graves obstacles à la communication,</div> <div id="T1co" class="txs">ce sont les blessures mutuelles.</div> <div id="T1cp" class="txs">Dans le mariage,</div> <div id="T1cq" class="txs">les conjoints peuvent très facilement se blesser l'un l'autre.</div> <div id="T1cr" class="txs">Même des petites paroles blessantes peuvent arrêter la communication.</div> <div id="T1cs" class="txs">Une communication profonde et vraie n’est possible que si je n’ai pas peur d’être blessé et si je peux faire confiance à mon conjoint.</div></div>
+<div class="m"><div id="T1ct" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Comment éviter les paroles blessantes&nbsp;?</span></div> <div id="T1cu" class="txs">Jacques 1, 19 à 20</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cv" class="txs"><span class="bd">3</span><span class="bd">) </span><span class="bd">La transparence et la vérité</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1cw" class="txs">Ephésiens 4, 25 :</div> <div id="T1cx" class="txs">«&nbsp;<span class="it">Rejetez le mensonge et que chacun de vous parle avec vérité à son prochain</span>&nbsp;».</div></div>
+<div class="m"><div id="T1cy" class="txs">Ephésiens 4, 29 :</div> <div id="T1cz" class="txs">«&nbsp;<span class="it">Aucune parole mauvaise ne doit sortir de votre bouche.</span></div> <div id="T1da" class="txs"><span class="it">Dites seulement des paroles utiles qui aident les autres selon leurs besoins,</span></div> <div id="T1db" class="txs"><span class="it">et qui font du bien à ceux qui vous entendent</span>&nbsp;».</div></div>
+<div class="m"><div id="T1dc" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce que ces versets expriment&nbsp;?</span></div></div>
+<div class="m"><div id="T1dd" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelle est la différence entre la transparence et la vérité&nbsp;?</span></div></div>
+<div class="m"><div id="T1de" class="txs"><span class="ul"><span class="it">La transparence</span></span><span class="it"> :</span></div> <div id="T1df" class="txs"><span class="it">c’est la clarté,</span></div> <div id="T1dg" class="txs"><span class="it">la lumière,</span></div> <div id="T1dh" class="txs"><span class="it">l’illumination,</span></div> <div id="T1di" class="txs"><span class="it">l’honnêteté.</span></div> <div id="T1dj" class="txs">Ce n’est pas seulement s’abstenir de mentir,</div> <div id="T1dk" class="txs">mais c’est une qualité de vie dans la lumière,</div> <div id="T1dl" class="txs">sans rien cacher à l’autre.</div></div>
+<div class="m"><div id="T1dm" class="txs"><span class="ul"><span class="it">La vérité</span></span><span class="it"> :</span></div> <div id="T1dn" class="txs"><span class="it">sincérité,</span></div> <div id="T1do" class="txs"><span class="it">authenticité,</span></div> <div id="T1dp" class="txs"><span class="it">régularité</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dq" class="txs"><span class="bd">Ce qu’on dit et ce qu’on fait doit être vrai et conforme&nbsp;!</span></div></div>
+<div class="m"><div id="T1dr" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Pourquoi est-il parfois difficile de dire la vérité&nbsp;?</span></div></div>
+<div class="m"><div id="T1ds" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">En </span><span class="bd">Afrique</span><span class="bd">,</span></div> <div id="T1dt" class="txs"><span class="bd">on a beaucoup de secrets et de tabous.</span></div> <div id="T1du" class="txs"><span class="bd">En existent-ils aussi au sein des couples&nbsp;?</span></div></div>
+<div class="m"><div id="T1dv" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Qu’est-ce qu’il faut faire avec les mensonges,</span></div> <div id="T1dw" class="txs"><span class="bd">les secrets et les tabous&nbsp;?</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1dx" class="txs"><span class="bd">4</span><span class="bd">) </span><span class="bd">La confiance</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1dy" class="txs">La confiance permet une bonne communication dans le couple.</div> <div id="T1dz" class="txs">Et à son tour,</div> <div id="T1ea" class="txs">une bonne communication crée la confiance entre les deux conjoints.</div> <div id="T1eb" class="txs">Si un des deux n'a pas confiance en l’autre,</div> <div id="T1ec" class="txs">comment va-t-il pouvoir dire la vérité ou ce qu'il pense vraiment&nbsp;?</div> <div id="T1ed" class="txs">Il ne va pas se confier à l'autre.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ee" class="txs"><span class="bd">La confiance est une très grande force.</span></div> <div id="T1ef" class="txs"><span class="bd">Mais pour avoir la confiance l'un envers l'autre,</span></div> <div id="T1eg" class="txs"><span class="bd">il faut bien se connaître et faire de bonnes expériences.</span></div> <div id="T1eh" class="txs"><span class="bd">Il faut aussi faire le choix de vivre dans la transparence,</span></div> <div id="T1ei" class="txs"><span class="bd">de dire la vérité et d’être bienveillant envers l’autre.</span></div></div>
+<div class="m"><div id="T1ej" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelle est la base de vos pensées&nbsp;?</span></div></div>
+<div class="m"><div id="T1ek" class="txs">«&nbsp;Est-ce que mon conjoint veut le meilleur pour moi&nbsp;?</div><div id="T1el" class="txs">&nbsp;» Ou bien :</div> <div id="T1em" class="txs">«&nbsp;Est-ce qu’il cherche le mal pour moi&nbsp;?</div><div id="T1en" class="txs">&nbsp;»</div></div>
+<div class="m"><div id="T1eo" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Cherchez les raisons qui détruisent la confiance au sein du couple</span>.</div></div>
+<div class="m"><div id="T1ep" class="txs"><span class="it">Ne pas dire la vérité,</span></div> <div id="T1eq" class="txs"><span class="it">cacher des choses à l’autre,</span></div> <div id="T1er" class="txs"><span class="it">ne pas donner des informations,</span></div> <div id="T1es" class="txs"><span class="it">le non-pardon</span>, …</div></div>
+<div class="m"><div id="T1et" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Cherchez des raisons qui soutiennent la confiance au sein du couple</span>.</div></div>
+<div class="m"><div id="T1eu" class="txs"><span class="it">Parler ensemble, résoudre les conflits, dire la vérité, ne pas raconter négativement des choses de notre mariage aux autres, donner des informations. La communication&nbsp;!!!</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/11 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/11 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/11 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

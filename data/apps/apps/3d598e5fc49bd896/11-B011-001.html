@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>26 LIÈVRE : LE 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.85 },
+    { label: "1b", start: 1.1, end: 2.99 },
+    { label: "1c", start: 3.24, end: 5.39 },
+    { label: "1d", start: 5.64, end: 11.77 },
+    { label: "1e", start: 12.02, end: 25.13 },
+    { label: "1f", start: 25.38, end: 37.79 },
+    { label: "1g", start: 38.04, end: 46.75 },
+    { label: "1h", start: 47, end: 56.35 },
+    { label: "1i", start: 56.6, end: 82.11 },
+    { label: "1j", start: 82.36, end: 91.35 },
+    { label: "1k", start: 91.6, end: 100.97 },
+    { label: "1l", start: 101.22, end: 113.91 },
+    { label: "1m", start: 114.16, end: 130.63 },
+    { label: "1n", start: 130.88, end: 136.05 },
+    { label: "1o", start: 136.3, end: 151.97 },
+    { label: "1p", start: 152.22, end: 164.45 },
+    { label: "1q", start: 164.7, end: 184.31 },
+    { label: "1r", start: 184.56, end: 191.29 },
+    { label: "1s", start: 191.54, end: 200.69 },
+    { label: "1t", start: 200.94, end: 214.69 },
+    { label: "1u", start: 214.94, end: 223.61 },
+    { label: "1v", start: 223.86, end: 245.99 },
+    { label: "1w", start: 246.24, end: 256.87 },
+    { label: "1x", start: 257.12, end: 275.31 },
+    { label: "1y", start: 275.56, end: 284.19 },
+    { label: "1z", start: 284.44, end: 290.29 },
+    { label: "1aa", start: 290.54, end: 295.03 },
+    { label: "1ab", start: 295.28, end: 304.49 },
+    { label: "1ac", start: 304.74, end: 312.01 },
+    { label: "1ad", start: 312.26, end: 318.07 },
+    { label: "1ae", start: 318.32, end: 321.77 },
+    { label: "1af", start: 322.02, end: 327.03 },
+    { label: "1ag", start: 327.28, end: 341.55 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 341.55;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='10-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;26 LIÈVRE : LE&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">26 LIÈVRE :</span></div> <div id="T1b" class="txs"><span class="bd">LE GARDE-BÉBÉS</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">La Vengeance du lièvre</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1d" class="txs">Toute mère a besoin de l'aide d’autrui pour mieux s’occuper de ses enfants.</div> <div id="T1e" class="txs">Le recours à la garde des bébés est loin d’être un phénomène moderne dans la mesure où depuis la vie sauvage, elle était pratiquée.</div> <div id="T1f" class="txs">Mais en la matière, la prudence doit être de mise car le premier venu n’est pas forcément le mieux indiqué.</div></div>
+<div class="m"><div id="T1g" class="txs">Un matin, le lièvre s’est présente chez la lionne comme un spécialiste des gardes bébés.</div> <div id="T1h" class="txs">Il a même proposé gratuitement ses services à la mère lionne qui venait de donner vie à cinq lionceaux.</div></div>
+<div class="m"><div id="T1i" class="txs">Cette proposition faisait bien l’affaire de cette mère qui n’avait personne d’autre pour l’aider, car dans la division sociale du travail à l’intérieur de la jungle, les mères étaient seules à prendre en charge les enfants et les pères avaient pour mission de trouver à manger à la famille.</div></div>
+<div class="m"><div id="T1j" class="txs">La mère lionne passa au test en demandant au lièvre de laver un bébé sous sa haute surveillance.</div> <div id="T1k" class="txs">Ce dernier le fit avec art et précision à telle enseigne que la lionne était ébahie.</div> <div id="T1l" class="txs">Sans plus hésiter, elle accepta la proposition sans même s’interroger encore sur les vraies motivations d’une telle gratuité.</div> <div id="T1m" class="txs">Même si la solidarité' était de rigueur dans ce milieu, on sait bien que nul n’est mobilisé qu’au tour de ses intérêts et un grand pédagogue avait tué la gratuité en disant que :</div> <div id="T1n" class="txs">«&nbsp;<span class="it">T</span><span class="it">out acte qui n’est lié à aucun intérêt est contre nature</span>&nbsp;».</div></div>
+<div class="m"><div id="T1o" class="txs">Après avoir démontré ses prouesses en matière de soins des enfants, lièvre prouva aussi à la lionne qu’il avait des talents culinaires à revendre.</div></div>
+<div class="m"><div id="T1p" class="txs">En un mot, la lionne pouvait désormais vaquer à d’autres occupations que celles qui consistaient à s’occuper des bébés et à préparer à manger.</div> <div id="T1q" class="txs">Depuis une semaine, pour maintenir les compliments qu’on lui faisait sur ses talents culinaires et pour assouvir sa soif de vengeance, lièvre tuait par jour un lionceau pour la sauce de la famille.</div> <div id="T1r" class="txs">Vous vous demanderez comment cela pourrait se faire sans que la maman ne s’en rende compte.</div> <div id="T1s" class="txs">Hélas, quand le moment de laver les lionceaux venait, le lièvre les amenait l’un après l’autre.</div> <div id="T1t" class="txs">Ainsi quand la lionne lavait le premier bébé, le lièvre le replongeait dans la boue pour le ramener jusqu'à ce que le nombre des bébés soit atteint.</div></div>
+<div class="m"><div id="T1u" class="txs">Telle fut la stratégie adoptée par le lièvre pour finir les enfants de son ennemie dans la casserole.</div> <div id="T1v" class="txs">Un soir, quand le moment de laver les enfants arriva, la lionne, après un long moment de patience, fait remarquer au lièvre que l’heure de laver les enfants tend à dépasser et qu’il devait accélérer pour qu’ils le fassent rapidement.</div> <div id="T1w" class="txs">Le garde bébé traînait les pas mais comme la vérité a des courtes pattes, elle finit toujours par se révéler.</div> <div id="T1x" class="txs">Le lièvre sortit derrière la maison et quand la lionne haussa un peu le ton pour inviter une énième fois le garde bébé à apprêter le nécessaire pour les toilettes des enfants, il déclara :</div> <div id="T1y" class="txs">«&nbsp;Vieille mère paresseuse, tu croyais que quelqu’un d’autre allait s’occuper de tes enfants à ta place ?</div> <div id="T1z" class="txs">Mère gourmande, la bonne sauce que tu mangeais venait d’où ?</div> <div id="T1aa" class="txs">Ce sont tes enfants que j’utilisais pour la sauce.</div> <div id="T1ab" class="txs">Tout cela pour me venger de tout le tort que toi et ta famille ont causé à moi et à la mienne.</div> <div id="T1ac" class="txs">Saches que tous tes enfants sont passés à la casserole et tu les as mangés goulûment.</div> <div id="T1ad" class="txs">Au revoir et apprends à ne pas faire confiance aveuglement à quelqu’un d’autre&nbsp;».</div></div>
+<div class="m"><div id="T1ae" class="txs">La lionne rougit de colère.</div> <div id="T1af" class="txs">Le lièvre sauta et disparut dans la nature.</div> <div id="T1ag" class="txs">Elle apprit à ses dépens et au prix de ses enfants que nul ne peut remplacer une mère et que la meilleure façon de prendre soin des enfants, c’est de s’en occuper soi-même.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte 26 le lievre et ses gardes bebe.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

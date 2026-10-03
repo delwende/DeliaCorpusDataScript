@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5E2900">
+<title>Chapitre 1 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Chapitre 1&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">Chapitre 1</span></div>
+<div class="m"><span class="bd">Fais des bons choix</span></div>
+<div class="m">André, David et Moussa observèrent le camion traverser le village.</div>
+<div class="m">«&nbsp;Vous savez&nbsp;», dit André à ses amis, «&nbsp;je souhaiterais un jour avoir un pick-up. J’aimerais conduire à travers toute la région. Je me demande combien de saisons ceci me prendra pour avoir assez d'argent afin d'acheter un camion pour démarrer une affaire&nbsp;».</div>
+<div class="m">«&nbsp;Un camion ne m'intéresse pas&nbsp;», répondit David. «&nbsp;Mon rêve est d'aller à l'Université pour devenir docteur. J'ai observé la façon dont mes parents ont lutté juste pour la nourriture et pour les frais de scolarité. Le les respecte pour leur dur labeur et j'apprécie les sacrifices qu'ils ont consentis pour que nous, petits-enfants, puissions aller à l'école. Mais je ne veux pas passer toute ma vie à travailler comme eux dans les champs. J'aimerais ouvrir une clinique afin d'aider mon pays et du même coup soutenir ma famille.</div>
+<div class="m">«&nbsp;Tout ceci est bien et bon pour toi, David&nbsp;» dit Moussa, «&nbsp;mais je n'aime pas étudier tout le temps. L'année prochaine, lorsque nous aurons terminé les études secondaires, j'en aurai fini les études. Je ne veux pas quitter la ferme familiale. J'aime ces plaines, et c'est là où je veux rester. Mon rêve est d'avoir une belle maison, une femme qui m'aime, six enfants, et un troupeau de bœufs. Si j'avais tout ceci, je serais vraiment heureux&nbsp;».</div>
+<div class="m">«&nbsp;Au juste&nbsp;», continua Moussa, «&nbsp;où est Alexis&nbsp;? le ne l'ai pas vu depuis plusieurs semaines&nbsp;». «&nbsp;N'es-tu donc pas au courant&nbsp;» répliqua André. «&nbsp;Il a abandonné l'école, parce que sa famille ne pouvait plus payer ses frais de scolarité. Son père est malade depuis longtemps, et sa situation s'est soudainement empirée. A présent, la famille utilise tous leurs revenus pour payer les frais médicaux Alexis est vraiment préoccupé par l'avenir qui l'attend. En maths, il était le meilleur de sa classe ; il espérait à la fin du secondaire poursuivre des études en informatique. Ainsi, il pourrait devenir comptable. Mais si son père venait à mourir, il a peur de ne jamais pouvoir retourner à l'école, et la responsabilité de prise en charge de sa mère et de ses frères et sœurs lui incomberait&nbsp;».</div>
+<div class="m"><span class="bd">DISCUSSION DE GROUPE</span></div>
+<div class="m">1) Quels sont les rêves des 4 garçons du récit&nbsp;?</div>
+<div class="m">2) Quels sont certains des choix que chaque garçon pourrait faire pour réaliser ses rêves&nbsp;?</div>
+<div class="m">3) Quels sont certains des choix qu'ils pourraient faire et qui les empêcheraient de réaliser leurs rêves&nbsp;?</div>
+<div class="m">4) Pensez-vous qu'il serait possible pour Alexis de réaliser ses rêves si son père meurt&nbsp;? Si oui, comment&nbsp;?</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

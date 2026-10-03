@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 7</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "7a", start: 936.56, end: 938.01 },
+    { label: "7b", start: 938.26, end: 942.23 },
+    { label: "7c", start: 942.48, end: 944.15 },
+    { label: "7d", start: 944.4, end: 945.25 },
+    { label: "7e", start: 945.5, end: 948.11 },
+    { label: "7f", start: 948.36, end: 949.23 },
+    { label: "7g", start: 949.48, end: 950.11 },
+    { label: "7h", start: 950.36, end: 951.57 },
+    { label: "7i", start: 951.82, end: 956.43 },
+    { label: "7j", start: 956.68, end: 961.11 },
+    { label: "7k", start: 961.36, end: 963.03 },
+    { label: "7l", start: 963.28, end: 965.87 },
+    { label: "7m", start: 966.12, end: 968.25 },
+    { label: "7n", start: 968.5, end: 970.33 },
+    { label: "7o", start: 970.58, end: 974.35 },
+    { label: "7p", start: 974.6, end: 978.37 },
+    { label: "7q", start: 978.62, end: 984.77 },
+    { label: "7r", start: 985.02, end: 988.55 },
+    { label: "7s", start: 988.8, end: 992.35 },
+    { label: "7t", start: 992.6, end: 995.23 },
+    { label: "7u", start: 995.48, end: 997.31 },
+    { label: "7v", start: 997.56, end: 998.11 },
+    { label: "7w", start: 998.36, end: 1001.13 },
+    { label: "7x", start: 1001.38, end: 1004.73 },
+    { label: "7y", start: 1004.98, end: 1006.69 },
+    { label: "7z", start: 1006.94, end: 1009.77 },
+    { label: "7aa", start: 1010.02, end: 1012.43 },
+    { label: "7ab", start: 1012.68, end: 1014.29 },
+    { label: "7ac", start: 1014.54, end: 1017.85 },
+    { label: "7ad", start: 1018.1, end: 1019.87 },
+    { label: "7ae", start: 1020.12, end: 1023.87 },
+    { label: "7af", start: 1024.12, end: 1025.15 },
+    { label: "7ag", start: 1025.4, end: 1029.15 },
+    { label: "7ah", start: 1029.4, end: 1030.71 },
+    { label: "7ai", start: 1030.96, end: 1033.15 },
+    { label: "7aj", start: 1033.4, end: 1035.87 },
+    { label: "7ak", start: 1036.12, end: 1041.17 },
+    { label: "7al", start: 1041.42, end: 1043.95 },
+    { label: "7am", start: 1044.2, end: 1045.71 },
+    { label: "7an", start: 1045.96, end: 1048.61 },
+    { label: "7ao", start: 1048.86, end: 1055.11 },
+    { label: "7ap", start: 1055.36, end: 1057.23 },
+    { label: "7aq", start: 1057.48, end: 1060.45 },
+    { label: "7ar", start: 1060.7, end: 1062.81 },
+    { label: "7as", start: 1063.06, end: 1064.57 },
+    { label: "7at", start: 1064.82, end: 1069.25 },
+    { label: "7au", start: 1069.5, end: 1070.71 },
+    { label: "7av", start: 1070.96, end: 1074.93 },
+    { label: "7aw", start: 1075.18, end: 1078.29 },
+    { label: "7ax", start: 1078.54, end: 1080.29 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 936.56;
+var stopTime  = 1080.29;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-006.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;7&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-008.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image7.jpg" />
+
+<div class="m"><div id="T7a" class="txs"><span class="bd">Le pardon</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T7b" class="txs"><span class="it">En Jésus nous avons la </span><span class="bdit">rémission des péchés</span> (Ephésiens 1, 7)</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T7c" class="txs"><span class="bd">Le pardon,</span></div> <div id="T7d" class="txs"><span class="bd">c’est quoi&nbsp;?</span></div></div>
+<div class="m"><div id="T7e" class="txs">Le mot “pardonner” veut dire tout effacer,</div> <div id="T7f" class="txs">faire table rase,</div> <div id="T7g" class="txs">faire grâce,</div> <div id="T7h" class="txs">annuler une dette.</div> <div id="T7i" class="txs">Le pardon n’est pas accordé parce qu’un coupable mérite d’être pardonné.</div> <div id="T7j" class="txs">Le pardon est une décision de ne garder aucune rancœur envers une personne,</div> <div id="T7k" class="txs">malgré ce qu’elle a fait.</div> <div id="T7l" class="txs">Personne ne mérite d’être pardonné.</div> <div id="T7m" class="txs">Le pardon est un acte d’amour,</div> <div id="T7n" class="txs">de miséricorde et de grâce.</div></div>
+<div class="m"><div id="T7o" class="txs">La Bible nous dit que nous avons tous besoin du pardon de Dieu.</div> <div id="T7p" class="txs">Nous avons tous commis des péchés (1 Jean 1, 8).</div> <div id="T7q" class="txs">Tout péché est essentiellement un acte de rébellion contre Dieu et gâche ma relation avec lui.</div> <div id="T7r" class="txs">Et seulement son pardon peut rétablir cette relation.</div></div>
+<div class="m"><div id="T7s" class="txs">On ne peut pas gagner le pardon le Dieu par des bonnes œuvres.</div> <div id="T7t" class="txs">On ne peut pas acheter le pardon de Dieu.</div> <div id="T7u" class="txs">On ne peut que le recevoir,</div> <div id="T7v" class="txs">par la foi,</div> <div id="T7w" class="txs">à cause de la grâce et la miséricorde de Dieu.</div> <div id="T7x" class="txs">Il suffit de demander à Dieu de te pardonner par Jésus,</div> <div id="T7y" class="txs">en croyant que Jésus est mort,</div> <div id="T7z" class="txs">pour t’offrir ce pardon - et Dieu te pardonnera.</div> <div id="T7aa" class="txs">Le pardon de Dieu est total.</div> <div id="T7ab" class="txs">Après l’avoir accordé,</div> <div id="T7ac" class="txs">le péché qui a causé la rupture de ma relation avec Dieu,</div> <div id="T7ad" class="txs">n’existe plus devant lui.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T7ae" class="txs">Actions pour que le pardon devienne une richesse dans ta vie :</div></div>
+<div class="m"><div id="T7af" class="txs"><span class="ul">-</span><span class="ul"> la prière</span> :</div> <div id="T7ag" class="txs">Demande au Saint-Esprit de te montrer s’il y a des péchés dans ta vie.</div> <div id="T7ah" class="txs">Si tu en trouves,</div> <div id="T7ai" class="txs">demande le pardon de Dieu en Jésus.</div> <div id="T7aj" class="txs">Remercie Dieu pour son pardon.</div> <div id="T7ak" class="txs">Si un ancien péché pour lequel tu as déjà demandé pardon vient te troubler encore,</div> <div id="T7al" class="txs">demande à Dieu de l’enlever de ton esprit. </div></div>
+<div class="m"><div id="T7am" class="txs"><span class="ul">-</span><span class="ul">la lecture biblique :</span></div>  <div id="T7an" class="txs">Lis 1 Jean chapitre 1, 8 au chapitre 2, 2.</div> <div id="T7ao" class="txs">Cherche à exprimer avec tes propres mots ce que l’apôtre Jean dit ici concernant le pardon de nos péchés.</div></div>
+<div class="m"><div id="T7ap" class="txs"><span class="ul">-</span><span class="ul"> réflexion personnelle</span> :</div> <div id="T7aq" class="txs">Fais attention à ne pas abuser du pardon de Dieu.</div> <div id="T7ar" class="txs">Ne dis pas «&nbsp;<span class="it">ce n’est pas</span><span class="it"> grave,</span></div> <div id="T7as" class="txs"><span class="it">Dieu va me</span> pardonner&nbsp;».</div> <div id="T7at" class="txs">Cette attitude montre que tu te moques de Dieu et Dieu a horreur de cela.</div></div>
+<div class="m"><div id="T7au" class="txs"><span class="ul">-</span><span class="ul"> envers les autres</span> :</div> <div id="T7av" class="txs">Rends visite à ceux qui sont tombés dans un péché et accablé par ce qui s’est passé.</div> <div id="T7aw" class="txs">Encourage-les avec des promesses de Dieu,</div> <div id="T7ax" class="txs">soutiens-les dans la prière.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

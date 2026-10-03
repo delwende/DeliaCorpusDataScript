@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>241 Saame ne a wõdɩ fãa y 18</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "18a", start: 376.69, end: 379.45 },
+    { label: "18b", start: 379.7, end: 381.62 },
+    { label: "18c", start: 381.88, end: 383.24 },
+    { label: "18d", start: 383.49, end: 385.47 },
+    { label: "18e", start: 385.72, end: 388.56 },
+    { label: "18f", start: 388.81, end: 391.33 },
+    { label: "18g", start: 391.58, end: 399.48 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 376.69;
+var stopTime  = 399.48;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 40 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-017.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;241 Saame ne a wõdɩ fãa y&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;18&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-019.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Proverbes moore 241 a 280-image18.jpg" />
+
+<div class="m"><div id="T18a" class="txs"><span class="bd">258 </span><span class="bd">Koom</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n ka </span><span class="bd">rɩ</span><span class="bd"> a </span><span class="bd">rugd</span><span class="bd">-a,</span></div> <div id="T18b" class="txs"><span class="bd">a ka </span><span class="bd">rɩt</span><span class="bd">-a </span><span class="bd">gɛt</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T18c" class="txs"><span class="bdit">(En aucun cas,</span></div> <div id="T18d" class="txs"><span class="bdit">celui qui observe un marigot,</span></div> <div id="T18e" class="txs"><span class="bdit">ne va être noyé avant celui qui y nage).</span></div></div>
+<div class="m"><div id="T18f" class="txs"><span class="bd">Koom</span><span class="bd"> </span><span class="bd">sã</span><span class="bd"> n ka </span><span class="bd">rɩ</span><span class="bd"> a </span><span class="bd">rugd</span><span class="bd">-a,</span></div> <div id="T18g" class="txs"><span class="bd">a ka </span><span class="bd">rɩt</span><span class="bd">-a </span><span class="bd">gɛt</span><span class="bd"> </span><span class="bd">ye</span><span class="bd">.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Proverbes moore 241 a 280 avec musique2.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

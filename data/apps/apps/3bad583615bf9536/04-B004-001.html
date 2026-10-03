@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4 Muso fila 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.35 },
+    { label: "1b", start: 0.6, end: 4.01 },
+    { label: "1c", start: 4.26, end: 9.69 },
+    { label: "1d", start: 9.94, end: 14.65 },
+    { label: "1e", start: 14.9, end: 21.45 },
+    { label: "1f", start: 21.7, end: 24.19 },
+    { label: "1g", start: 24.44, end: 27.17 },
+    { label: "1h", start: 27.42, end: 30.17 },
+    { label: "1i", start: 30.42, end: 38.71 },
+    { label: "1j", start: 38.96, end: 43.27 },
+    { label: "1k", start: 43.52, end: 49.51 },
+    { label: "1l", start: 49.76, end: 55.53 },
+    { label: "1m", start: 55.78, end: 63.71 },
+    { label: "1n", start: 63.96, end: 72.25 },
+    { label: "1o", start: 72.5, end: 84.93 },
+    { label: "1p", start: 85.18, end: 88.17 },
+    { label: "1q", start: 88.42, end: 93.29 },
+    { label: "1r", start: 93.54, end: 101.39 },
+    { label: "1s", start: 101.64, end: 104.75 },
+    { label: "1t", start: 105, end: 109.03 },
+    { label: "1u", start: 109.28, end: 112.27 },
+    { label: "1v", start: 112.52, end: 114.21 },
+    { label: "1w", start: 114.46, end: 117.87 },
+    { label: "1x", start: 118.12, end: 125.03 },
+    { label: "1y", start: 125.28, end: 129.97 },
+    { label: "1z", start: 130.22, end: 132.47 },
+    { label: "1aa", start: 132.72, end: 135.51 },
+    { label: "1ab", start: 135.76, end: 138.73 },
+    { label: "1ac", start: 138.98, end: 144.83 },
+    { label: "1ad", start: 145.08, end: 147.79 },
+    { label: "1ae", start: 148.04, end: 150.17 },
+    { label: "1af", start: 150.42, end: 155.41 },
+    { label: "1ag", start: 155.66, end: 156.83 },
+    { label: "1ah", start: 157.08, end: 161.27 },
+    { label: "1ai", start: 161.52, end: 163.35 },
+    { label: "1aj", start: 163.6, end: 169.59 },
+    { label: "1ak", start: 169.84, end: 174.69 },
+    { label: "1al", start: 174.94, end: 178.79 },
+    { label: "1am", start: 179.04, end: 181.17 },
+    { label: "1an", start: 181.42, end: 183.91 },
+    { label: "1ao", start: 184.16, end: 186.37 },
+    { label: "1ap", start: 186.62, end: 188.53 },
+    { label: "1aq", start: 188.78, end: 191.81 },
+    { label: "1ar", start: 192.06, end: 195.89 },
+    { label: "1as", start: 196.14, end: 203.17 },
+    { label: "1at", start: 203.42, end: 206.91 },
+    { label: "1au", start: 207.16, end: 208.13 },
+    { label: "1av", start: 208.38, end: 211.73 },
+    { label: "1aw", start: 211.98, end: 215.99 },
+    { label: "1ax", start: 216.24, end: 220.57 },
+    { label: "1ay", start: 220.82, end: 225.29 },
+    { label: "1az", start: 225.54, end: 228.89 },
+    { label: "1ba", start: 229.14, end: 231.45 },
+    { label: "1bb", start: 231.7, end: 245.03 },
+    { label: "1bc", start: 245.28, end: 248.17 },
+    { label: "1bd", start: 248.42, end: 252.21 },
+    { label: "1be", start: 252.46, end: 255.85 },
+    { label: "1bf", start: 256.1, end: 260.67 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 260.67;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "04-B004-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='03-B003-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;4 Muso fila&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B004-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs">Nsiirin&nbsp;!</div> <div id="T1b" class="txs">nsiirin&nbsp;!</div></div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">N y’a bila </span><span class="bd">muso</span><span class="bd"> fila </span><span class="bd">dɔ</span><span class="bd"> le kan.</span></div></div>
+<div class="m"><div id="T1d" class="txs">Kelen banna k’a deen to a sinamuso fɛ.</div> <div id="T1e" class="txs">Loon o loon muso sanin denmuso  le bi baara bɛɛ kɛ.</div> <div id="T1f" class="txs">N’a yi baara kɛ ka ban,</div> <div id="T1g" class="txs">o bi kolon siri a cɛɛ ra,</div> <div id="T1h" class="txs">ko a ka tag’a dɛndɛ.</div> <div id="T1i" class="txs">Deen nin bi taga a bamuso ka kaburu kan ka dɔnkili la :</div></div>
+<div class="m"><div id="T1j" class="txs">Nma o ko n ka kolon dɛndɛ</div></div>
+<div class="m"><div id="T1k" class="txs">Kolon ti baa ye ko n ka kolon dɛndɛ le</div></div>
+<div class="m"><div id="T1l" class="txs">Kolon ti misi ye ko n ka kolon dɛndɛ le</div></div>
+<div class="m"><div id="T1m" class="txs">A dɛndɛ le n deen mɔgɔ ti diɲɛ labanko lɔn n deen.</div></div>
+<div class="m"><div id="T1n" class="txs">Loon o loon deen nin bi taga nin dɔnkili nin le la o yɔrɔ la.</div></div>
+<div class="m"><div id="T1o" class="txs">A y’a ye ko a bamuso bi bɔra dɔɔnin dɔɔnin a bi banba a ka dɔnkili ma,</div> <div id="T1p" class="txs">foo a bamuso faan bɛɛ nana bɔ.</div> <div id="T1q" class="txs">A y’a bamuso ko ka taga n’a ye soo.</div></div>
+<div class="m"><div id="T1r" class="txs">A bamuso kɛra faamanba ani muso cɛ ɲumannin ye.</div> <div id="T1s" class="txs">A fadenɲɔgɔn musoman dusukasira,</div> <div id="T1t" class="txs">a fana y’a bamuso faga.</div> <div id="T1u" class="txs">A bamuso fitini b’a mina ɲanama,</div> <div id="T1v" class="txs">nga,</div> <div id="T1w" class="txs">a bi kolon siri a yɛrɛ la,</div> <div id="T1x" class="txs">ka tag’a dɔgɔmuso ka dɔnkili la a bamuso ka kaburu kan loon o loon.</div> <div id="T1y" class="txs">Tuma min na a bamuso kungolo bɔra,</div> <div id="T1z" class="txs">a y’a sama k’a tigɛ.</div> <div id="T1aa" class="txs">A tagara n’a ye soo,</div> <div id="T1ab" class="txs">o y’a segi n’a ye.</div></div>
+<div class="m"><div id="T1ac" class="txs">Juguya danmatɛmɛ ani ɲangoya ma ɲi.</div></div>
+<div class="m"><div id="T1ad" class="txs"><span class="it">Écoutez m</span><span class="it">on conte</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1ae" class="txs"><span class="bdit">Il s’agit de</span><span class="bdit"> deux femmes</span></div></div>
+<div class="m"><div id="T1af" class="txs"><span class="it">L’une est décédé</span><span class="it">e</span><span class="it"> et a laissé son enfant à sa coépouse.</span></div> <div id="T1ag" class="txs"><span class="it">Chaque  jour,</span></div> <div id="T1ah" class="txs"><span class="it">la fille dont la mère est décédée fait tous les travaux.</span></div> <div id="T1ai" class="txs"><span class="it">Quand elle finit de travailler,</span></div> <div id="T1aj" class="txs"><span class="it">on lui attache un mortier à la taille et lui demande d’aller faire paître le mortier.</span></div> <div id="T1ak" class="txs"><span class="it">L’enfant va sur la tombe de sa mère et chante </span><span class="it">ceci :</span></div></div>
+<div class="m"><div id="T1al" class="txs"><span class="it">Maman on me dit de faire paître un mortier.</span></div></div>
+<div class="m"><div id="T1am" class="txs"><span class="it">Le mortier n’est pas une chèvre</span><span class="it">,</span></div><div id="T1an" class="txs"><span class="it"> on me dit de le faire paître.</span></div></div>
+<div class="m"><div id="T1ao" class="txs"><span class="it">Le mortier n’est pas un bœuf</span><span class="it">,</span></div><div id="T1ap" class="txs"><span class="it"> on me dit de le faire paître</span><span class="it">.</span></div></div>
+<div class="p_Paragraphedeliste"><div id="T1aq" class="txs"><span class="it">«</span><span class="it">Conduis</span><span class="it">-le donc au pâturage mon enfant,</span></div> <div id="T1ar" class="txs"><span class="it">personne ne </span><span class="it">sait</span><span class="it"> comment le monde va finir mon enfant</span><span class="it">.»</span></div></div>
+<div class="m"><div id="T1as" class="txs"><span class="it">Chaque jour c’est cette chanson que cet enfant va chanter à cet endroit.</span></div></div>
+<div class="m"><div id="T1at" class="txs"><span class="it">Elle s’est rendu compte que sa mère sortait doucement,</span></div> <div id="T1au" class="txs"><span class="it">doucement,</span></div> <div id="T1av" class="txs"><span class="it">elle </span><span class="it">continue</span><span class="it"> de chanter la même ch</span><span class="it">anson</span><span class="it">,</span></div> <div id="T1aw" class="txs"><span class="it">jusqu’à ce que sa mère sorte entièrement.</span></div> <div id="T1ax" class="txs"><span class="it">Elle a lavé sa mère et l’a ramené à la maison.</span></div></div>
+<div class="m"><div id="T1ay" class="txs"><span class="it">Sa mère est </span><span class="it">devenue une femme riche e</span><span class="it">t belle,</span></div> <div id="T1az" class="txs"><span class="it">sa sœur consanguine </span><span class="it">est devenue </span><span class="it">j</span><span class="it">alouse,</span></div> <div id="T1ba" class="txs"><span class="it">elle aussi tua sa mère.</span></div> <div id="T1bb" class="txs"><span class="it">Sa belle-mère (coépouse de sa mère) </span><span class="it">s’occupe bien  d’elle mais elle attache le mortier sur elle et</span><span class="it"> elle</span><span class="it"> va chanter la chanson de sa petite sœur sur la tombe de sa mère chaque jour.</span></div> <div id="T1bc" class="txs"><span class="it">Quand </span><span class="it">la tête de sa mère est sortie,</span></div> <div id="T1bd" class="txs"><span class="it">elle l’a arrachée et l’a ramenée au village.</span></div> <div id="T1be" class="txs"><span class="it">On l’a renvoyée avec la tête dans ses mains.</span></div></div>
+<div class="m"><div id="T1bf" class="txs"><span class="it">La méchanceté et la jalousie ne sont pas de bonnes choses.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/conte 4.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

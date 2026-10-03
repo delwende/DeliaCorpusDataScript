@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Hordhac 9</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "18-B017-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='17-B016-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-008.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Hordhac&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;9&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='18-B017-010.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='19-B018-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B017-image9.jpg" />
+
+<div class="m"><span class="bd">Caqliga</span><span class="bd"> </span><span class="bd">iyo</span><span class="bd"> </span><span class="bd">garashada</span></div>
+<div class="m"><span class="it">Haa</span><span class="it">, </span><span class="it">Ilaahay</span><span class="it"> </span><span class="it">wuxuu</span><span class="it"> </span><span class="it">innagu</span><span class="it"> </span><span class="it">shubay</span><span class="it"> </span><span class="it">nimcooyinkiisa</span><span class="it">. </span><span class="it">Dhammaanteen</span><span class="it"> </span><span class="it">wuxuu</span><span class="it"> </span><span class="it">ina</span><span class="it"> </span><span class="it">siiyey</span><span class="it"> </span><span class="it">xigmad</span><span class="it"> </span><span class="it">iyo</span><span class="it"> </span><span class="it">waxgarasho</span><span class="it">.</span><span class="it"> </span>(Efesos 1, 8).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Waa </span><span class="bd">maxay</span><span class="bd"> </span><span class="bd">xigmadda</span><span class="bd"> </span><span class="bd">iyo</span><span class="bd"> </span><span class="bd">waxgarashada</span><span class="bd">?</span></div>
+<div class="m">Caqliga iyo garaadka salkiisu waa aqoon, taasi waa xog uruurin lagu helo waxbarasho ama khibrad. Waxaa jira kuwa isku khalda aqoonta, garaadka iyo garaadka. Waxay u maleynayaan in aqoontu si toos ah u horseeddo garaadka iyo xitaa xigmadda. Laakiin in loo tixgeliyo in ay caqli badan yihiin, kuma filna in la ururiyo aqoonta; sidoo kale waa inaad fahantaa oo aad taqaanaa sida loo isticmaalo. Taasi waa garaadka. Caqliguna wuu sii socdaa. Inaad caqli yeelato waxay ka dhigan tahay in aad leedahay garashada goorta iyo sida aad u adeegsan lahayd aqoonta aad baratay, iyo in aad u gudbiso aqoontaada iyo garashadaada dadka kale. Erayga Ilaahay waxa uu ina barayaa in Ilaah uu awoodo oo uu ina siin doono garaadka iyo xigmadda, LAAKIIN annagoo ujeeddadiisu tahay inaan ogaanno isaga, Ilaaha nool, oo ah ogaanshaha qorshihiisa badbaadada iyo maalka uu inoo kaydiyey (eeg sidoo kale Efesos 1, 17 20).</div>
+<div class="m"><span class="bd">Tallaabooyinka</span><span class="bd"> </span><span class="bd">lagu</span><span class="bd"> </span><span class="bd">beddelayo</span><span class="bd"> </span><span class="bd">xigmadda</span><span class="bd"> </span><span class="bd">iyo</span><span class="bd"> </span><span class="bd">garaadka</span><span class="bd"> </span><span class="bd">noloshaada</span><span class="bd"> </span><span class="bd">hodantinimo</span><span class="bd">: </span></div>
+<div class="m"><span class="it">- </span><span class="it">Ducada</span><span class="it">: </span>Allaha ku mahad naqo xikmada iyo garashada uu horeba ku siiyay. Weydii inuu ku tuso sida aad ugu isticmaali lahayd aqoonta aad ka heshay dugsiga Baybalka, kaniisadda, shirarka iyo daraasadda shakhsi ahaaneed ee ammaantiisa. Ilaah weydiiso inuu garaadkaaga kuu kordhiyo si aad si wanaagsan u fahanto ereygiisa oo aad aqoontaada ugu gudbiso dadka kale.</div>
+<div class="m"><span class="it">- </span><span class="it">Kitaabka</span><span class="it"> </span><span class="it">Qudduuska</span><span class="it"> ah</span><span class="it">: </span>Akhri 1 Korintos 1, 18 ilaa 25. Erayadan ka yimid Rasuul Bawlos waxay ina xusuusinayaan in xigmadda Ilaah ay ka duwan tahay tan adduunkeenna.</div>
+<div class="m"><span class="it">- </span><span class="it">milicsiga</span><span class="it"> </span><span class="it">shakhsi</span><span class="it"> </span><span class="it">ahaaneed</span><span class="it">: </span>Caqliga iyo garaadka aad baa looga tixgaliyaa loogana raadiyaa adduunkeena. Laakin iska jir: la mid ma aha kan Ilaah. Ku baadh qalbigaaga adigoo kaashanaya Ruuxa Quduuska ah si aad u ogaato waxa kugu dhiirigelinaya doonistaada inaad balaadhiso aqoontaada. Xusuusnow in Ilaah doonayo inaad marka hore doondoonto inaad isaga taqaanid.</div>
+<div class="m"><span class="it">- </span><span class="it">Xagga</span><span class="it"> </span><span class="it">kuwa</span><span class="it"> kale</span>: Ka fiirso waxaad ka baratay usbuucyadii la soo dhaafay kaniisadda ama waqtiyada waxbarashada kale. Qor cashar muhiim ah oo noloshaada isbeddel ku sameeyay lana wadaag xubin qoyskaaga ah ama saaxiib.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.25 },
+    { label: "1b", start: 1.5, end: 7.59 },
+    { label: "1c", start: 7.84, end: 14.41 },
+    { label: "1d", start: 14.66, end: 18.11 },
+    { label: "1e", start: 18.36, end: 19.25 },
+    { label: "1f", start: 19.5, end: 21.73 },
+    { label: "1g", start: 21.98, end: 25.41 },
+    { label: "1h", start: 25.66, end: 26.55 },
+    { label: "1i", start: 26.8, end: 30.45 },
+    { label: "1j", start: 30.7, end: 35.23 },
+    { label: "1k", start: 35.48, end: 37.33 },
+    { label: "1l", start: 37.58, end: 40.47 },
+    { label: "1m", start: 40.72, end: 42.59 },
+    { label: "1n", start: 42.84, end: 45.37 },
+    { label: "1o", start: 45.62, end: 48.05 },
+    { label: "1p", start: 48.3, end: 50.37 },
+    { label: "1q", start: 50.62, end: 52.37 },
+    { label: "1r", start: 52.62, end: 54.13 },
+    { label: "1s", start: 54.38, end: 57.69 },
+    { label: "1t", start: 57.94, end: 62.27 },
+    { label: "1u", start: 62.52, end: 70.49 },
+    { label: "1v", start: 70.74, end: 75.75 },
+    { label: "1w", start: 76, end: 78.35 },
+    { label: "1x", start: 78.6, end: 82.87 },
+    { label: "1y", start: 83.12, end: 86.69 },
+    { label: "1z", start: 86.94, end: 90.65 },
+    { label: "1aa", start: 90.9, end: 93.37 },
+    { label: "1ab", start: 93.62, end: 98.11 },
+    { label: "1ac", start: 98.36, end: 101.73 },
+    { label: "1ad", start: 101.98, end: 106.37 },
+    { label: "1ae", start: 106.62, end: 109.13 },
+    { label: "1af", start: 109.38, end: 112.53 },
+    { label: "1ag", start: 112.78, end: 116.57 },
+    { label: "1ah", start: 116.82, end: 119.91 },
+    { label: "1ai", start: 120.16, end: 124.69 },
+    { label: "1aj", start: 124.94, end: 127.13 },
+    { label: "1ak", start: 127.38, end: 131.03 },
+    { label: "1al", start: 131.28, end: 136.31 },
+    { label: "1am", start: 136.56, end: 144.53 },
+    { label: "1an", start: 144.78, end: 150.01 },
+    { label: "1ao", start: 150.26, end: 152.17 },
+    { label: "1ap", start: 152.42, end: 153.09 },
+    { label: "1aq", start: 153.34, end: 153.83 },
+    { label: "1ar", start: 154.08, end: 154.93 },
+    { label: "1as", start: 155.18, end: 155.73 },
+    { label: "1at", start: 155.98, end: 156.49 },
+    { label: "1au", start: 156.74, end: 158.35 },
+    { label: "1av", start: 158.6, end: 159.43 },
+    { label: "1aw", start: 159.68, end: 160.43 },
+    { label: "1ax", start: 160.68, end: 161.39 },
+    { label: "1ay", start: 161.64, end: 163.41 },
+    { label: "1az", start: 163.66, end: 167.29 },
+    { label: "1ba", start: 167.54, end: 171.21 },
+    { label: "1bb", start: 171.46, end: 179.65 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 179.65;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "01-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-B002-002.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.jpg" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Introduction</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">L'épître aux Ephésiens s'adresse aux chrétiens qui "<span class="it">sont en danger de souffrir de malnutrition spirituelle,</span></div> <div id="T1c" class="txs"><span class="it">parce qu'ils ne tirent pas avantage de l'énorme réserve de nourriture et de biens spirituels qu'ils ont à leur disposition.</span></div> <div id="T1d" class="txs"><span class="it">On a appelé l'épître aux Ephésiens la banque du croyant,</span></div> <div id="T1e" class="txs"><span class="it">le carnet de chèques,</span></div> <div id="T1f" class="txs"><span class="it">la chambre du trésor de la Bible.</span></div> <div id="T1g" class="txs"><span class="it">Cette merveilleuse lettre parle aux chrétiens des grandes richesses,</span></div> <div id="T1h" class="txs"><span class="it">de l'héritage,</span></div> <div id="T1i" class="txs"><span class="it">et de la plénitude qu'ils possèdent en Jésus-Christ et dans son église.</span></div> <div id="T1j" class="txs"><span class="it">Elle leur dit ce qu'ils possèdent et ce qu'ils doivent faire pour se l'approprier</span>."</div> <div id="T1k" class="txs">(John MACARTHUR).</div></div>
+<div class="m"><div id="T1l" class="txs">Il ne s’agit pas d’une richesse matérielle,</div> <div id="T1m" class="txs">mais d’une richesse spirituelle.</div> <div id="T1n" class="txs">Ephèse était une ville très importante,</div> <div id="T1o" class="txs">une des 5 villes clés de l'empire romain.</div> <div id="T1p" class="txs">C'était définitivement la ville,</div> <div id="T1q" class="txs">la plus grande (à part Rome),</div> <div id="T1r" class="txs">que Paul avait visité.</div> <div id="T1s" class="txs">Elle était tellement riche qu’on l’appelait la "banque d'Asie".</div>  <div id="T1t" class="txs">Des commerçants venaient de partout pour acheter et vendre leurs affaires.</div> <div id="T1u" class="txs">Et des touristes visitaient pour admirer surtout un temple dédié à la déesse Artémis qui était une des 7 merveilles du monde de l’époque.</div> <div id="T1v" class="txs">Avec sa lettre l’apôtre Paul voulait certainement montrer aux membres de l’église d’Ephèse,</div> <div id="T1w" class="txs">entourés par une grande richesse matérielle,</div> <div id="T1x" class="txs">que la joie et le contentement d’un chrétien ne repose pas sur le matériel.</div> <div id="T1y" class="txs">Il voulait leur rappeler les vraies richesses que nous avons en Christ,</div> <div id="T1z" class="txs">des richesses qui ne se gâtent pas et que personne ne peut voler&nbsp;!</div></div>
+<div class="m"><div id="T1aa" class="txs">Ce thème est toujours d’actualité.</div> <div id="T1ab" class="txs">Notre monde d’aujourd’hui aime nous faire croire que l’argent donne du bonheur&nbsp;!</div> <div id="T1ac" class="txs">Mais la Parole de Dieu nous dit que c’est un mensonge.</div> <div id="T1ad" class="txs">Bien vrai que l’argent peut nous acheter des choses qui facilitent notre quotidien,</div> <div id="T1ae" class="txs">mais l’argent est impuissant devant les difficultés,</div> <div id="T1af" class="txs">la souffrance et les grands défis de notre vie sur terre.</div></div>
+<div class="m"><div id="T1ag" class="txs">Le verset clé de l’épître aux Ephésiens se trouve tout au début :</div> <div id="T1ah" class="txs"><span class="bdit">Béni soit le Dieu et Père de notre Seigneur Jésus-Christ,</span></div> <div id="T1ai" class="txs"><span class="bdit">qui nous a bénis de toute bénédiction spirituelle dans les lieux célestes en Christ</span><span class="it">.</span></div><div id="T1aj" class="txs">Ephésiens 1, 3</div></div>
+<div class="m"><div id="T1ak" class="txs">En Jésus nous avons TOUTE bénédiction spirituelle&nbsp;!</div> <div id="T1al" class="txs">Et dans les versets suivants Paul nous donne des précisions concernant ces bénédictions.</div> <div id="T1am" class="txs">Dans la version originale de la Bible en langue grecque les versets 3 à 14 du premier chapitre d’Ephésiens sont une seule phrase&nbsp;!</div> <div id="T1an" class="txs">Selon Paul la liste des richesses spirituelles pour ceux qui sont «&nbsp;<span class="it">en Christ</span>&nbsp;» est longue :</div> <div id="T1ao" class="txs"><span class="bd">l’élection et la prédestination ;</span></div> <div id="T1ap" class="txs"><span class="bd">l’adoption ;</span></div> <div id="T1aq" class="txs"><span class="bd">l’amour ;</span></div> <div id="T1ar" class="txs"><span class="bd">la rédemption ;</span></div> <div id="T1as" class="txs"><span class="bd">le pardon ;</span></div> <div id="T1at" class="txs"><span class="bd">la grâce ;</span></div> <div id="T1au" class="txs"><span class="bd">la sagesse et l’intelligence ;</span></div> <div id="T1av" class="txs"><span class="bd">l’héritage ;</span></div> <div id="T1aw" class="txs"><span class="bd">le Saint-Esprit ;</span></div> <div id="T1ax" class="txs"><span class="bd">la puissance ;</span></div> <div id="T1ay" class="txs"><span class="bd">l’espérance et l’église</span>.</div></div>
+<div class="m"><div id="T1az" class="txs">Dans les prochaines pages nous allons étudier ces vérités bibliques,</div> <div id="T1ba" class="txs">mais pas simplement comme doctrines ou connaissances pour notre tête.</div> <div id="T1bb" class="txs">Nous allons plutôt chercher à découvrir comment elles peuvent devenir une vraie richesse pour notre vie quotidienne avec des actions quotidiennes.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Richesse French webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

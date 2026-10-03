@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 4</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-003.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;4&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-005.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image4.jpg" />
+
+<div class="m"><span class="bd">Adozione</span></div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="it">Nel suo amore, Dio ci ha predestinati ad essere suoi figli </span><span class="bdit">adottivi</span><span class="it"> attraverso Gesù Cristo</span><span class="it"> </span>(Efesini 1.5).</div>
+<div class="m"><span class="bd">Cos'è l'adozione?</span></div>
+<div class="m">Al tempo dell’apostolo Paolo, le coppie senza figli spesso adottavano un figlio che diventava il loro erede. Anche se i genitori biologici del figlio adottivo erano ancora vivi, una volta conclusa l'adozione non avevano più alcun diritto su di lui. L'adozione plenaria è un atto giuridico. Il bambino non cambia semplicemente la famiglia. C'è una rottura completa con la vecchia famiglia. Il bambino adottato cambia nome e riceve un nuovo certificato di nascita. Lui o lei non ha più diritto all'eredità della sua famiglia biologica, ma è pienamente integrato nel lignaggio della sua nuova famiglia. La vecchia famiglia non ha più alcun diritto su di lui. In alcuni paesi i genitori biologici non hanno nemmeno più il diritto di vedere i propri figli. Paolo usa questa usanza sociale per insegnare le seguenti verità bibliche:</div>
+<div class="m">- Siamo scelti prima di nascere, ma diventiamo figli di Dio per adozione nel momento in cui accettiamo la salvezza di Dio.</div>
+<div class="m">- Siamo pienamente figli di Dio. La rottura con il passato è totale. La nostra "vecchia famiglia" non ha più alcun potere su di noi.</div>
+<div class="m">- L'adozione è stata resa possibile dalla morte di Cristo. Ha avuto luogo nel momento in cui abbiamo creduto e siamo diventati membri della famiglia di Dio (Romani 8, 15), ma si realizzerà pienamente quando rivestiremo il nostro corpo di risurrezione (Romani 8, 23).</div>
+<div class="m"><span class="bd">Azioni per rendere l'adozione una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera:</span><span class="it"> </span>Grazie a Dio per la tua nuova famiglia spirituale. Pronuncia i nomi di coloro che sono diventati per te veri padri e madri, fratelli e sorelle nella Chiesa. Grazie a Dio per loro.</div>
+<div class="m"><span class="it">- Lettura della Bibbia:</span><span class="it"> </span>Leggi Efesini 4, 17 a 32. Fai un primo elenco dei comportamenti della vecchia famiglia che non sono più ammessi nella nuova famiglia, la famiglia di Dio. Poi fate un secondo elenco di comportamenti che dovete imparare come figli e figlie della famiglia di Dio.</div>
+<div class="m"><span class="it">- Riflessione personale:</span><span class="it"> </span>Esamina la tua vita per vedere se hai ancora qualcuno dei comportamenti della tua vecchia vita. Se è così, cerca di cambiarli, con l’aiuto dello Spirito Santo.</div>
+<div class="m"><span class="it">- verso gli altri:</span><span class="it"> </span>Chiedi a Dio di mostrarti chi nella tua chiesa ha bisogno di un padre o una madre o un fratello o una sorella spirituale. Avvicinatevi a quella persona e accompagnatela nella vita come fareste con un fratello o una sorella della vostra famiglia naturale.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

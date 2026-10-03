@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>23. Intelligence 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 0;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "23-B023-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='22-B022-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='22-B022-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;23. Intelligence&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='24-B024-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='24-B024-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B023-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><span class="bd">23. Intelligence - Expérience</span></div>
+<div class="b">&nbsp;</div>
+<div class="m">23.1 <span class="bd">Quand l’arbre aura grandi, vous y attacherez votre vache</span>. - <span class="it">Ne vous appuyez pas sur des gens sans expérience</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.2 <span class="bd">C'est en voyage qu’on trouve la sagesse</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.3 <span class="bd">Se tromper de chemin. c’est apprendre à connaître son chemin</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.4 <span class="bd">Le mort ne sent pas sa propre odeur</span>. - <span class="it">Le sot ne se connait pas lui-même</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.5 <span class="bd">Une civette ne sent pas sa propre odeur</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.6 <span class="bd">Ce qui a été mouillé par la pluie, ne saurait plus l'être par la brume</span>. - <span class="it">Le vieillard peut faire seul ce dont le jeune est incapable</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.7 <span class="bd">Un homme intelligent n’entretient pas la colère dans son cœur</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.8 <span class="bd">On ne montre de l’or qu’à celui qui le connait; autrement il en ferait une hache</span>. - <span class="it">Ne pas jeter les perles aux pourceaux</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.9 <span class="bd">La jambe est intelligente: elle met l'os devant et la chair derrière</span>. - <span class="it">Le plus fort protège le plus faible</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.10 <span class="bd">Vous ne pouvez savoir si l’eau est froide que si vous la touchez</span>. - <span class="it">L'expérience est le meilleur conseiller</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.11 <span class="bd">Ce que l’œil a vu, le cœur ne l’oublie pas</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.12 <span class="bd">Ce que le chien a vu, il le garde dans son cœur</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.13 <span class="bd">L’enfant qui n'est jamais sorti de sa maison, trouve que c'est sa mère seule qui sait bien assaisonner une sauce</span>. - <span class="it">A chaque oiseau son nid parait meilleur</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.14 <span class="bd">Avec les yeux vous voyez, vous ne mangez pas</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.15 <span class="bd">L’intelligence est un fruit qu’on ramasse dans le jardin de son voisin</span>. - <span class="it">On ne naît pas intelligent, on le devient, si on veut écouter les conseils des autres</span>.</div>
+<div class="b">&nbsp;</div>
+<div class="m">23.16 <span class="bd">Le proverbe est le cheval de la parole; quand la parole se perd, c’est grâce au proverbe qu’on la retrouve</span>.</div>
+<div class="b">&nbsp;</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

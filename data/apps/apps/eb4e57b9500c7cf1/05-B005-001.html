@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 Nem-koaas a ye kibare 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.65 },
+    { label: "1b", start: 1.9, end: 4.85 },
+    { label: "1c", start: 5.1, end: 12.77 },
+    { label: "1d", start: 13.02, end: 22.23 },
+    { label: "1e", start: 22.48, end: 29.23 },
+    { label: "1f", start: 29.48, end: 45.61 },
+    { label: "1g", start: 45.86, end: 53.83 },
+    { label: "1h", start: 54.08, end: 59.13 },
+    { label: "1i", start: 59.38, end: 63.57 },
+    { label: "1j", start: 63.82, end: 66.77 },
+    { label: "1k", start: 67.02, end: 70.27 },
+    { label: "1l", start: 70.52, end: 74.11 },
+    { label: "1m", start: 74.36, end: 76.97 },
+    { label: "1n", start: 77.22, end: 80.17 },
+    { label: "1o", start: 80.42, end: 83.95 },
+    { label: "1p", start: 84.2, end: 86.43 },
+    { label: "1q", start: 86.68, end: 94.35 },
+    { label: "1r", start: 94.6, end: 98.55 },
+    { label: "1s", start: 98.8, end: 100.93 },
+    { label: "1t", start: 101.18, end: 111.75 },
+    { label: "1u", start: 112, end: 116.09 },
+    { label: "1v", start: 116.34, end: 123.25 },
+    { label: "1w", start: 123.5, end: 130.87 },
+    { label: "1x", start: 131.12, end: 134.43 },
+    { label: "1y", start: 134.68, end: 135.91 },
+    { label: "1z", start: 136.16, end: 143.43 },
+    { label: "1aa", start: 143.68, end: 147.01 },
+    { label: "1ab", start: 147.26, end: 148.49 },
+    { label: "1ac", start: 148.74, end: 149.61 },
+    { label: "1ad", start: 149.86, end: 153.87 },
+    { label: "1ae", start: 154.12, end: 156.23 },
+    { label: "1af", start: 156.48, end: 158.93 },
+    { label: "1ag", start: 159.18, end: 160.25 },
+    { label: "1ah", start: 160.5, end: 162.93 },
+    { label: "1ai", start: 163.18, end: 165.03 },
+    { label: "1aj", start: 165.28, end: 166.53 },
+    { label: "1ak", start: 166.78, end: 169.75 },
+    { label: "1al", start: 170, end: 172.73 },
+    { label: "1am", start: 172.98, end: 176.93 },
+    { label: "1an", start: 177.18, end: 179.95 },
+    { label: "1ao", start: 180.2, end: 189.81 },
+    { label: "1ap", start: 190.06, end: 195.79 },
+    { label: "1aq", start: 196.04, end: 205.61 },
+    { label: "1ar", start: 205.86, end: 209.77 },
+    { label: "1as", start: 210.02, end: 212.75 },
+    { label: "1at", start: 213, end: 218.33 },
+    { label: "1au", start: 218.58, end: 222.55 },
+    { label: "1av", start: 222.8, end: 225.59 },
+    { label: "1aw", start: 225.84, end: 231.05 },
+    { label: "1ax", start: 231.3, end: 235.69 },
+    { label: "1ay", start: 235.94, end: 240.71 },
+    { label: "1az", start: 240.96, end: 245.69 },
+    { label: "1ba", start: 245.94, end: 254.05 },
+    { label: "1bb", start: 254.3, end: 256.89 },
+    { label: "1bc", start: 257.14, end: 258.89 },
+    { label: "1bd", start: 259.14, end: 265.71 },
+    { label: "1be", start: 265.96, end: 271.07 },
+    { label: "1bf", start: 271.32, end: 276.51 },
+    { label: "1bg", start: 276.76, end: 277.93 },
+    { label: "1bh", start: 278.18, end: 280.15 },
+    { label: "1bi", start: 280.4, end: 287.07 },
+    { label: "1bj", start: 287.32, end: 301.63 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 301.63;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "05-B005-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='04-B004-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='04-B004-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;5 Nem-koaas a ye kibare&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B005-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">5 Nem-koaas a ye kibare</span><span class="bd">.</span></div></div>
+<div class="p"><div id="T1b" class="txs">Nem-koaas a ye n wa n da naafo.</div> <div id="T1c" class="txs">La, a yãka yam, n yeel t’a ka na n kʋ naafã zõaag sẽn be zĩig ning ye.</div> <div id="T1d" class="txs">La a yikame, n na n kẽn n kẽ we-raoog pʋgẽ ne naafã, n na n bao zĩig ning zõaag sẽn ka be, n kʋ-a.</div></div>
+<div class="p"><div id="T1e" class="txs">La, a bi-bilf yikame, t’a na n tũ-a lame, la, a ba wã tõdgame.</div> <div id="T1f" class="txs">La biigã baoo tompeglem n ning a ba wã korgã pʋgẽ, n yaool n poog võ-bil korgã tẽngre, t’a ba wã sã n na n looge, bɩ a tõog n tũ tompeglmã vũkã, n pʋg-a.</div></div>
+<div class="p"><div id="T1g" class="txs">Rao wã sɩd wa n yikame, n dɩk a korgã n bobe, n pid a naafã wĩiri, n tat n kẽed weoogã.</div> <div id="T1h" class="txs">La, a biigã yikame, n get tompeglmã, n pʋgd a ba wã.</div> <div id="T1i" class="txs">A ba wã wa n wẽnegame, n yã biigã t’a pʋgd-a.</div> <div id="T1j" class="txs">A ka le tõe n yeel biigã t'a lebg n kuil ye.</div> <div id="T1k" class="txs">Bala, b zoe n bee weoogã sʋka.</div> <div id="T1l" class="txs">La, b naaga taab n tar kẽna marsã.</div></div>
+<div class="p"><div id="T1m" class="txs">La rao wã yeela a biigã t’a sã bĩndu.</div> <div id="T1n" class="txs">La biigã sãame tɩ zõosã wa.</div> <div id="T1o" class="txs">Tɩ rao wã  yet tɩ naafã kʋʋb zĩig pa ka ye.</div> <div id="T1p" class="txs">Tɩ b le tar kẽn n tar kẽna.</div> <div id="T1q" class="txs">A le wa n yeela a biigã t’a sã, tɩ biigã sɩd sã, la zõosã yɩɩ wãa… n wa.</div> <div id="T1r" class="txs">La rao wã yeelame, tɩ naafã kʋʋb zĩig nan ka ta ye.</div> <div id="T1s" class="txs">Tɩ b sɩd be taoor sãagre.</div> <div id="T1t" class="txs">A le wa n yeela a biigã t’a sã, tɩ biigã sã, tɩ zõos ka wa ye, t’a yeele, tɩ marsã, naafã kʋʋb zĩig taame.</div></div>
+<div class="p"><div id="T1u" class="txs">B loee naafã n lub n kodg-a ne sʋʋga.</div> <div id="T1v" class="txs">Rao wã yaool n tʋma biigã, t’a kẽng n tɩ mok bugum, n wa tɩ b sẽ naafã sãoore.</div> <div id="T1w" class="txs">Biigã kẽngame n na n mok bugmã, n tɩ  mik tɩ bugmã soab yaa kinkirga, la a sokame :</div> <div id="T1x" class="txs">«Ãnda n wa n kogsd m yẽdga ?».</div> <div id="T1y" class="txs">Tɩ biigã leoke :</div> <div id="T1z" class="txs">«Yaa m ba n tʋm maam, tɩ m wa mok bugum n wa t’a sẽ sãoore ” Tɩ kinkirgã sok-a :</div> <div id="T1aa" class="txs">«M sã n wa, m na n paamame bɩ ?».</div> <div id="T1ab" class="txs">La biigã leok-a lame :</div> <div id="T1ac" class="txs">«N-yẽe !»</div> <div id="T1ad" class="txs">Kinkirgã sẽn kẽng n tɩ ta b zĩigẽ wã, a yeel-b lame :</div> <div id="T1ae" class="txs">«Rɩk-y pʋ-teedã n wa ne».</div> <div id="T1af" class="txs">Tɩ b rɩk n kõ-a t’a reeg n vole.</div> <div id="T1ag" class="txs">N le yeel-ba :</div> <div id="T1ah" class="txs">«Wa-y ne gɛyã ne bãgdã».</div> <div id="T1ai" class="txs">Tɩ b kõ-a t’a reeg n vole.</div> <div id="T1aj" class="txs">N le yeel-b yasa :</div> <div id="T1ak" class="txs">«M data zugã ne gãongã n paase».</div> <div id="T1al" class="txs">Tɩ b rɩk n kõ-a, la b na n zoe.</div> <div id="T1am" class="txs">B zoe n tɩ kẽe roog a ye pʋg n na n solge.</div> <div id="T1an" class="txs">Mik, roogã yaa kinkirgã roogo.</div> <div id="T1ao" class="txs">A sẽn wa n ta, a maaga a meng n wʋb nemdã fãa laag pʋgẽ, n yaool n dɩk a sag-rʋk n na n moe sagbo.</div> <div id="T1ap" class="txs">A sẽn wa n moe n sa, a rɩka laagã ne rɩɩbã, n bĩng a poorẽ wã.</div></div>
+<div class="p"><div id="T1aq" class="txs">La biigã ne a ba wã sẽn da solg pĩirã poorẽ wã, rɩka rɩɩbã n dɩ tɩ yɩ-b noogo, hal tɩ zẽedã wa sa.</div> <div id="T1ar" class="txs">Nemdã yĩnga, zẽedã sɩd yɩɩ noog tɩ looge.</div> <div id="T1as" class="txs">Biigã yikame n na n bõos zẽedã.</div> <div id="T1at" class="txs">T’a ba wã yɩ tao-tao n yeel-a, t’a ra mak, tɩ kinkirgã na n kʋ-b lame.</div> <div id="T1au" class="txs">Tɩ biigã zĩẽ n zĩẽ, n wa kelme, n yeele :</div> <div id="T1av" class="txs">«Pʋg-yãanga, m kota zẽedo!»</div> <div id="T1aw" class="txs">La kinkirgã yikame, n wudg n tɩ tigim we-rũmsã fãa n yeel tɩ :</div> <div id="T1ax" class="txs">«<span class="it">pʋg-yãang-m-kota-zẽed</span> n be m doogẽ wã, n dat n kʋ maam».</div></div>
+<div class="p"><div id="T1ay" class="txs">We-rũmsã fãa wa n naaga taab n wa gũbg roogã, n na n gese.</div> <div id="T1az" class="txs">B yaool n tʋma m ba Yõngr t’a tɩ ges bõe n be roogã pʋgẽ.</div> <div id="T1ba" class="txs">La m ba Yõngr  sẽn wa n tar lamsg n dabd n na n gese, la biigã sẽn yã-a, n wẽ-a n kʋ.</div></div>
+<div class="p"><div id="T1bb" class="txs">Tɩ b yeel m ba Yũug t’a kolg n gese.</div> <div id="T1bc" class="txs">T’a kolg n yaees n lebge.</div> <div id="T1bd" class="txs">Tɩ b le yeele, tɩ m ba Rãaneg kolg marsã, n ges tɩ yẽ yubl n woagem la!</div></div>
+<div class="p"><div id="T1be" class="txs">T’a sɩd yɩ gond-gond n kolge, tɩ biigã fiuuga a yublã ne sʋʋga.</div> <div id="T1bf" class="txs">Tɩ m ba Rãaneg  tar po-tulli, n tɩ rok n lʋɩ zʋko!</div> <div id="T1bg" class="txs">Lebga yelle.</div></div>
+<div class="p"><div id="T1bh" class="txs">Tɩ m ba  Yʋgempend yet tɩ bõe la wã?</div> <div id="T1bi" class="txs">Tɩ m ba Wobg rãmb zoe bilf-bilfu, tɩ bãmb ra wa lʋɩ b nao-bogd pʋsẽ, n pa tõog n yi ye.</div></div>
+<div class="p_berschrift1"><div id="T1bj" class="txs"><span class="bdit">Rẽ wã, n</span><span class="bdit">ed fãa sã n na n saag n mak, n maan bũmbu, bɩ a mag wʋsg la a kos saglgo, sã n pa rẽ, a sẽn na n maanã, wat n tõe n wa nafa ned a to n bas-a.</span></div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/mos-moore/audio/Conte_05_Nem-koaasa.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

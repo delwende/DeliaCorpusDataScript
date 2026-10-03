@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>1) Benvenuto 23</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 33 }];
+var hasIntro = false;
+var baseRef  = "79-B080-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='78-B079-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='79-B080-022.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1) Benvenuto&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;23&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='79-B080-024.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='80-B081-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B080-image23.jpeg" />
+
+<div class="m"><span class="bd">23) COME POSSO CONOSCERE LE PERSONE DI QUESTO PAESE?</span></div>
+<div class="m">Molti europei sono molto impegnati nella vita quotidiana a causa del lavoro e della famiglia, quindi a volte è difficile avviare una conversazione spontanea con le persone. Gli hobby che piacciono anche agli europei sono un buon modo per conoscere persone.</div>
+<div class="m"><span class="bd">GRUPPI E CLUB</span></div>
+<div class="m">Molte persone si incontrano in gruppi e club dopo il lavoro per fare sport o suonare insieme. Ci sono ad esempio cori, gruppi musicali, club sportivi, gruppi di cucina e club informatici. Le persone si conoscono attraverso il loro hobby condiviso. Le informazioni vengono spesso affisse nelle bacheche dei negozi e delle biblioteche. Una panoramica delle attività per il tempo libero si trova anche sulla homepage del rispettivo villaggio.</div>
+<div class="m"><span class="bd">SERVIZI DI CULTO</span></div>
+<div class="m">Le funzioni religiose si svolgono spesso la domenica mattina intorno alle 10:00. In molte chiese è possibile fare due chiacchiere davanti a una tazza di caffè dopo la funzione. Puoi sempre partecipare alle funzioni religiose come ospite. Le informazioni su orari e programmi sono spesso esposte nelle bacheche all'esterno degli edifici ecclesiastici.</div>
+<div class="m"><span class="bd">GRUPPI GIOCO PER FAMIGLIE</span></div>
+<div class="m">Spesso ci sono gruppi di gioco gratuiti per genitori con bambini piccoli nel quartiere o nelle chiese. I genitori con bambini piccoli si incontrano lassù. I bambini possono giocare insieme e i genitori possono parlare tra loro.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

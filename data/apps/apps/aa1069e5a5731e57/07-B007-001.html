@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#083F0E">
+<title>120 Doaag noaag pa 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.35, end: 11.43 },
+    { label: "1b", start: 11.68, end: 19.57 },
+    { label: "1c", start: 19.82, end: 28.99 },
+    { label: "1d", start: 29.24, end: 38.91 },
+    { label: "1e", start: 39.16, end: 48.41 },
+    { label: "1f", start: 48.66, end: 59.34 },
+    { label: "1g", start: 59.59, end: 69.92 },
+    { label: "1h", start: 70.17, end: 80.64 },
+    { label: "1i", start: 80.89, end: 90.06 },
+    { label: "1j", start: 90.31, end: 101.39 },
+    { label: "1k", start: 101.64, end: 111.21 },
+    { label: "1l", start: 111.46, end: 119.65 },
+    { label: "1m", start: 119.9, end: 130.2 },
+    { label: "1n", start: 130.45, end: 141.23 },
+    { label: "1o", start: 141.48, end: 149.4 },
+    { label: "1p", start: 149.65, end: 158.69 },
+    { label: "1q", start: 158.94, end: 167.01 },
+    { label: "1r", start: 167.26, end: 177.38 },
+    { label: "1s", start: 177.63, end: 188.25 },
+    { label: "1t", start: 188.5, end: 198.5 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 3.35;
+var stopTime  = 198.5;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "07-B007-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='06-B006-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='06-B006-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;120 Doaag noaag pa&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='08-B008-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B007-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">120 </span><span class="bd">Doaag noaag pa zẽgemsd ye.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs"><span class="bd">121 </span><span class="bd">Dũni me yaa boto.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1c" class="txs"><span class="bd">122 </span><span class="bd">Dũni sã n sãam me, bĩisim ket n yaa pẽelga.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">123 </span><span class="bd">Dũni yaa raaga, a kẽedame la a yitame.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">124 </span><span class="bd">Dũni yaa wa raaga tɩ f sã n kẽ bɩ f yi.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs"><span class="bd">125 </span><span class="bd">Dũni yaa yʋgemde, a sã n gãand bɩ f pĩnd n zomb-a.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">126 </span><span class="bd">F ba sã tall-f tɩ f yẽn yi, bɩ f tall-a t'a yẽn vigi.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">127 </span><span class="bd">F baaba sã n be pʋɩɩrẽ bɩ f bas lɩkre.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs"><span class="bd">128 </span><span class="bd">F bẽ ki sã n bɩ, bɩ f sak t'a bɩɩme.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">129 </span><span class="bd">F biigã sã n yaa f kur-yĩir piiga, rẽnd a ka na n kaoos n wa ye.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">130 </span><span class="bd">F bõang sã n sut, bɩ f gãd a zʋʋre.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1l" class="txs"><span class="bd">131 </span><span class="bd">F ka tõe wagdr bɩ f tʋk n yãag-a.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1m" class="txs"><span class="bd">132 </span><span class="bd">F kʋʋda nin-kẽem n kong nemdo, f kõn kong yam ye.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">133 </span><span class="bd">F maan neere, f maana f menga, f maam wẽnga, f maana f menga.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">134 </span><span class="bd">F nug sã n be ned noorẽ bɩ f legm-a.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1p" class="txs"><span class="bd">135 </span><span class="bd">F pag ma sã n pa ki, f pa tar pag ye.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1q" class="txs"><span class="bd">136 </span><span class="bd">F pʋg n gõe la f gõe.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1r" class="txs"><span class="bd">137 </span><span class="bd">F pʋgdb sã n tõeem sɩd, bɩ f tõeem deemdo.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">138 </span><span class="bd">F sã n bas f rɩẽ yaoore tãnbeok la f tʋkda.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs"><span class="bd">139 </span><span class="bd">F sã n bas f rɩyẽ yaoore, tanbẽg kɩɩng la f gũuda.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/mos/mosora-audio/07 Sissao a-k avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

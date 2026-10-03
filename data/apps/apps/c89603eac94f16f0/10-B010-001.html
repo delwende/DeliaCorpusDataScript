@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#083F0E">
+<title>286 Nibiyenli kan taa 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 3.44, end: 7.46 },
+    { label: "1b", start: 7.71, end: 11.1 },
+    { label: "1c", start: 11.35, end: 17.5 },
+    { label: "1d", start: 17.75, end: 22.59 },
+    { label: "1e", start: 22.84, end: 29.49 },
+    { label: "1f", start: 29.74, end: 33.64 },
+    { label: "1g", start: 33.89, end: 40.79 },
+    { label: "1h", start: 41.04, end: 46.93 },
+    { label: "1i", start: 47.18, end: 51.95 },
+    { label: "1j", start: 52.2, end: 58.22 },
+    { label: "1k", start: 58.47, end: 64.19 },
+    { label: "1l", start: 64.44, end: 70.19 },
+    { label: "1m", start: 70.44, end: 73.14 },
+    { label: "1n", start: 73.39, end: 79.42 },
+    { label: "1o", start: 79.67, end: 84.24 },
+    { label: "1p", start: 84.49, end: 87.46 },
+    { label: "1q", start: 87.71, end: 91.54 },
+    { label: "1r", start: 91.79, end: 94.25 },
+    { label: "1s", start: 94.5, end: 99.26 },
+    { label: "1t", start: 99.51, end: 104.73 },
+    { label: "1u", start: 104.98, end: 110.28 },
+    { label: "1v", start: 110.53, end: 115.21 },
+    { label: "1w", start: 115.46, end: 121.68 },
+    { label: "1x", start: 121.93, end: 127.27 },
+    { label: "1y", start: 127.52, end: 134.05 },
+    { label: "1z", start: 134.3, end: 137.92 },
+    { label: "1aa", start: 138.17, end: 142.39 },
+    { label: "1ab", start: 142.64, end: 145.34 },
+    { label: "1ac", start: 145.59, end: 151.06 },
+    { label: "1ad", start: 151.31, end: 154.56 },
+    { label: "1ae", start: 154.81, end: 161.32 },
+    { label: "1af", start: 161.57, end: 167.35 },
+    { label: "1ag", start: 167.6, end: 173.45 },
+    { label: "1ah", start: 173.7, end: 179.72 },
+    { label: "1ai", start: 179.97, end: 186.09 },
+    { label: "1aj", start: 186.34, end: 191.55 },
+    { label: "1ak", start: 191.8, end: 195.57 },
+    { label: "1al", start: 195.82, end: 199.31 },
+    { label: "1am", start: 199.56, end: 203.52 },
+    { label: "1an", start: 203.77, end: 208.77 },
+    { label: "1ao", start: 209.02, end: 215.04 },
+    { label: "1ap", start: 215.29, end: 220.02 },
+    { label: "1aq", start: 220.27, end: 226.26 },
+    { label: "1ar", start: 226.51, end: 229.24 },
+    { label: "1as", start: 229.49, end: 236.27 },
+    { label: "1at", start: 236.52, end: 240.77 },
+    { label: "1au", start: 241.02, end: 244.4 },
+    { label: "1av", start: 244.65, end: 248.09 },
+    { label: "1aw", start: 248.34, end: 251.56 },
+    { label: "1ax", start: 251.81, end: 257 },
+    { label: "1ay", start: 257.25, end: 263.02 },
+    { label: "1az", start: 263.27, end: 268.06 },
+    { label: "1ba", start: 268.31, end: 271.26 },
+    { label: "1bb", start: 271.51, end: 276.52 },
+    { label: "1bc", start: 276.77, end: 286.77 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 3.44;
+var stopTime  = 286.77;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "10-B010-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='09-B009-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='09-B009-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;286 Nibiyenli kan taa&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B010-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">286 Nibiyenli kan taa tanbu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Un seul doigt ne peut prendre un caillou.</div></div>
+<div class="m"><div id="T1c" class="txs">Sens et emploi : se dit à quelqu'un qui veut faire un travail seul, alors que ce travail demande d'être plusieurs.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1d" class="txs"><span class="bd">Nibiyenli kan taa tanbu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1e" class="txs"><span class="bd">287 Bi yaa nigidi a puoli a mo n fa a nunga</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1f" class="txs">Si on te frotte le dos, lave-toi le visage.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">Bi yaa nigidi a puoli a mo n fa a nunga</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1h" class="txs"><span class="bd">288 Nigi</span><span class="bd">bi</span><span class="bd">ma kan ñani sidibila u mu nni</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1i" class="txs">Un ver a beau se tortiller, il ne se sortira pas du feu.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1j" class="txs"><span class="bd">Nigi</span><span class="bd">bi</span><span class="bd">ma kan ñani sidibila u mu nni</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1k" class="txs"><span class="bd">289 N kan ñiidi wulo ki ñi kpantajenli</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1l" class="txs">Je ne lâche pas une gueule-tapée pour retenir une pintade à une seule patte.</div></div>
+<div class="m"><div id="T1m" class="txs">Sens : Ne pas lâcher la proie pour l'ombre.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1n" class="txs"><span class="bd">N kan ñiidi wulo ki ñi kpantajenli</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1o" class="txs"><span class="bd">290 Nijigidii tie yianu</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1p" class="txs">Le fait d'être faible n'est pas une maladie.</div></div>
+<div class="m"><div id="T1q" class="txs">Sens : si un homme est maigre, il se peut qu'il soit fort.</div></div>
+<div class="m"><div id="T1r" class="txs">Ne pas juger sur les apparences.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1s" class="txs"><span class="bd">Nijigidii tie yianu</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1t" class="txs"><span class="bd">291 Ninando pumalli balijo</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1u" class="txs">La verge longue et grosse d'un ennemi c'est un fouet de corde avec fer.</div></div>
+<div class="m"><div id="T1v" class="txs">Sens : si tu n'aimes pas quelqu'un, sa verge est considérée comme un fouet pour toi.</div></div>
+<div class="m"><div id="T1w" class="txs">Emploi : si quelqu'un est mon ennemi, je lui dirai cette sentence, et me donnerai ce surnom.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1x" class="txs"><span class="bd">Ninando pumalli balijo</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1y" class="txs"><span class="bd">292</span><span class="bd">a</span><span class="bd"> </span><span class="bd">Ñ</span><span class="bd">insandi yaa maa dieli mangu baa mudi li</span>.</div></div>
+<div class="m"><div id="T1z" class="txs"><span class="bd">292b</span><span class="bd"> Ñinsangu yaa ma diegu , ma</span><span class="bd">nm</span><span class="bd">a yaa baa guli o</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aa" class="txs">Si la salive construit la maison la rosée va la démolir.</div></div>
+<div class="m"><div id="T1ab" class="txs">Sens : Une chose ne vaut que ce qu'elle coûte.</div></div>
+<div class="m"><div id="T1ac" class="txs">Si quelqu'un ose faire ce qu'il ne peut pas, on pourra lui dire ce proverbe.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ad" class="txs"><span class="bd">Ñ</span><span class="bd">insandi yaa maa dieli mangu baa mudi li</span>.</div></div>
+<div class="m"><div id="T1ae" class="txs"><span class="bd">Ñinsangu yaa ma diegu , ma</span><span class="bd">nm</span><span class="bd">a yaa baa guli o</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">293 Foliga nua mala ki nan nua o nabiga n se</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ag" class="txs">La vache du peul a vêlé et elle voit où se trouve son veau.</div></div>
+<div class="m"><div id="T1ah" class="txs">Paroles dites à quelqu'un qui pose une question et connait la réponse.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ai" class="txs"><span class="bd">Foliga nua mala ki nan nua o nabiga n se</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aj" class="txs"><span class="bd">294 Nuami kan yegi len kpiarima</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs">La course n'accompagnera pas le grattage.</div></div>
+<div class="m"><div id="T1al" class="txs">Sens : On ne peut jamais faire deux choses à la fois.</div></div>
+<div class="m"><div id="T1am" class="txs">Emploi : se dit à celui qui veut faire deux choses à la fois.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1an" class="txs"><span class="bd">Nuami kan yegi len kpiarima</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ao" class="txs"><span class="bd">295 A yaa ŋoadi nuanbidi lie telu, a kan cuo o ba</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ap" class="txs">Si tu poursuis deux petits oiseaux tu n'en attraperas aucun.</div></div>
+<div class="m"><div id="T1aq" class="txs">Sens et emploi : se dit à quelqu'un qui veut faire deux travaux à la fois, il ne fera rien de bon.</div></div>
+<div class="m"><div id="T1ar" class="txs">On ne peut poursuivre deux lièvres à la fois.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1as" class="txs"><span class="bd">A yaa ŋoadi nuanbidi lie telu, a kan cuo o ba</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1at" class="txs"><span class="bd">296 Nuanfoagoarigu kan tudi o tiali</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1au" class="txs">L'oiseau qui voyage ne se trompera pas de nid.</div></div>
+<div class="m"><div id="T1av" class="txs">Sens : où qu'un homme aille, il connait où est sa maison.</div></div>
+<div class="m"><div id="T1aw" class="txs">Emploi : se dit à quelqu'un qui dure dans son voyage.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ax" class="txs"><span class="bd">Nuanfoagoarigu kan tudi o tiali</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ay" class="txs"><span class="bd">297 Yua bua tanpoli laabaalo wan buali o nuano</span>.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1az" class="txs">Celui qui veut savoir ce qui se passe dans le ciel, qu'il interroge l'oiseau.</div></div>
+<div class="m"><div id="T1ba" class="txs">Sens : Il faut interroger ceux qui ont l'expérience.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bb" class="txs"><span class="bd">Yua bua tanpoli laabaalo wan buali o nuano</span><span class="bd">.</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1bc" class="txs">.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/10 prov gul vol2.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

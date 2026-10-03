@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>introduzione 7</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "11-B011-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='10-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-006.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;introduzione&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;7&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='11-B011-008.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='12-B012-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B011-image7.jpg" />
+
+<div class="m"><span class="bd">Perdono</span></div>
+<div class="m"><span class="it">In Gesù abbiamo il </span><span class="bdit">perdono</span><span class="it"> dei peccati</span><span class="it"> </span>(Efesini 1, 7).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Cos'è il perdono?</span></div>
+<div class="m">La parola “<span class="it">perdonare</span>” significa cancellare tutto, fare tabula rasa, donare la grazia, cancellare un debito. Il perdono non viene concesso perché una persona colpevole merita di essere perdonata. Il perdono è la decisione di non nutrire rancore nei confronti di qualcuno, nonostante ciò che ha fatto. Nessuno merita di essere perdonato. Il perdono è un atto di amore, misericordia e grazia.</div>
+<div class="m">La Bibbia ci dice che tutti abbiamo bisogno del perdono di Dio. Tutti abbiamo commesso dei peccati (1 Giovanni 1, 8). Ogni peccato è essenzialmente un atto di ribellione contro Dio e rovina il mio rapporto con Lui. E solo il suo perdono può ristabilire quella relazione. Il perdono di Dio non può essere guadagnato attraverso le buone opere. Non puoi comprare il perdono di Dio. Puoi riceverlo solo, per fede, a causa della grazia e della misericordia di Dio. Tutto quello che devi fare è chiedere a Dio di perdonarti attraverso Gesù, credendo che Gesù è morto, di offrirti questo perdono - e Dio ti perdonerà. Il perdono di Dio è totale. Una volta concesso, il peccato che ha rotto il mio rapporto con Dio non esiste più davanti a Lui.</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Azioni per rendere il perdono una ricchezza nella tua vita:</span></div>
+<div class="m"><span class="it">- Preghiera:</span><span class="it"> </span>Chiedi allo Spirito Santo di mostrarti se ci sono peccati nella tua vita. Se ne trovi qualcuno, chiedi perdono a Dio in Gesù. Grazie a Dio per il suo perdono. Se sei ancora turbato da un vecchio peccato per il quale hai già chiesto perdono, chiedi a Dio di rimuoverlo dalla tua mente.</div>
+<div class="m"><span class="it">-Lettura della Bibbia:</span><span class="it"> </span>Leggi 1 Giovanni capitolo 1, 8 fino al capitolo 2, 2. Cerca di esprimere con parole tue ciò che l'apostolo Giovanni sta dicendo qui riguardo al perdono dei nostri peccati.</div>
+<div class="m"><span class="it">- Riflessione personale:</span><span class="it"> </span>Fai attenzione a non abusare del perdono di Dio. Non dire "<span class="it">Va tutto bene, Dio mi perdonerà</span>". Questo atteggiamento dimostra che stai prendendo in giro Dio, e Dio lo odia.</div>
+<div class="m"><span class="it">- Verso gli altri:</span><span class="it"> </span>Visita coloro che sono caduti nel peccato e sono sopraffatti da ciò che è accaduto. Incoraggiateli con le promesse di Dio, sosteneteli nella preghiera.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

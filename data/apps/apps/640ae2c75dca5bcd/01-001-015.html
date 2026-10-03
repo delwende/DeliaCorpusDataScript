@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saa bi duguma seen bi dug 15</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "15a", start: 356.54, end: 357.93 },
+    { label: "15b", start: 358.18, end: 359.45 },
+    { label: "15c", start: 359.7, end: 361.57 },
+    { label: "15d", start: 361.82, end: 363.25 },
+    { label: "15e", start: 363.5, end: 366.26 },
+    { label: "15f", start: 366.51, end: 367.96 },
+    { label: "15g", start: 368.21, end: 374.8 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 356.54;
+var stopTime  = 374.8;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 29 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-014.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Saa bi duguma seen bi dug&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;15&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-016.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Dioula Proverbes 29-image15.jpeg" />
+
+<div class="m"><div id="T15a" class="txs"><span class="bd">N’a</span><span class="bd"> m</span><span class="bd">a</span><span class="bd"> </span><span class="bd">gwan</span><span class="bd">,</span></div><div id="T15b" class="txs"><span class="bd"> </span><span class="bd">a</span><span class="bd"> t</span><span class="bd">i</span><span class="bd"> </span><span class="bd">s</span><span class="bd">u</span><span class="bd">ma.</span></div></div>
+<div class="m"><div id="T15c" class="txs"><span class="it">[</span><span class="it">Si ça ne chauffe pas,</span></div><div id="T15d" class="txs"><span class="it"> ça ne se refroidit pas.</span></div></div>
+<div class="m"><div id="T15e" class="txs"><span class="bdit">Après la pluie vient le beau temps</span><span class="bdit">]</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T15f" class="txs"><span class="bd">N’</span><span class="bd">a</span><span class="bd"> m</span><span class="bd">a</span><span class="bd"> gwan</span><span class="bd">,</span></div><div id="T15g" class="txs"><span class="bd"> a t</span><span class="bd">i</span><span class="bd"> s</span><span class="bd">u</span><span class="bd">ma.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/dioula Prov 01 a 29 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

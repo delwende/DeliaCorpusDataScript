@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 Ngaɗi ngakki 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 7, end: 9.77 },
+    { label: "1b", start: 10.02, end: 11.55 },
+    { label: "1c", start: 11.8, end: 12.63 },
+    { label: "1d", start: 12.88, end: 14.57 },
+    { label: "1e", start: 14.82, end: 15.81 },
+    { label: "1f", start: 16.06, end: 18.75 },
+    { label: "1g", start: 19, end: 25.35 },
+    { label: "1h", start: 25.6, end: 29.25 },
+    { label: "1i", start: 29.5, end: 35.03 },
+    { label: "1j", start: 35.28, end: 38.11 },
+    { label: "1k", start: 38.36, end: 40.99 },
+    { label: "1l", start: 41.24, end: 42.83 },
+    { label: "1m", start: 43.08, end: 44.91 },
+    { label: "1n", start: 45.16, end: 48.19 },
+    { label: "1o", start: 48.44, end: 52.17 },
+    { label: "1p", start: 52.42, end: 53.39 },
+    { label: "1q", start: 53.64, end: 54.97 },
+    { label: "1r", start: 55.22, end: 57.75 },
+    { label: "1s", start: 58, end: 61.59 },
+    { label: "1t", start: 61.84, end: 65.23 },
+    { label: "1u", start: 65.48, end: 67.23 },
+    { label: "1v", start: 67.48, end: 68.35 },
+    { label: "1w", start: 68.6, end: 70.45 },
+    { label: "1x", start: 70.7, end: 71.43 },
+    { label: "1y", start: 71.68, end: 75.31 },
+    { label: "1z", start: 75.56, end: 77.07 },
+    { label: "1aa", start: 77.32, end: 79.53 },
+    { label: "1ab", start: 79.78, end: 82.89 },
+    { label: "1ac", start: 83.14, end: 85.37 },
+    { label: "1ad", start: 85.62, end: 87.97 },
+    { label: "1ae", start: 88.22, end: 91.11 },
+    { label: "1af", start: 91.36, end: 95.35 },
+    { label: "1ag", start: 95.6, end: 96.89 },
+    { label: "1ah", start: 97.14, end: 99.35 },
+    { label: "1ai", start: 99.6, end: 103.19 },
+    { label: "1aj", start: 103.44, end: 106.03 },
+    { label: "1ak", start: 106.28, end: 108.91 },
+    { label: "1al", start: 109.16, end: 111.97 },
+    { label: "1am", start: 112.22, end: 117.15 },
+    { label: "1an", start: 117.4, end: 119.05 },
+    { label: "1ao", start: 119.3, end: 123.13 },
+    { label: "1ap", start: 123.38, end: 126.05 },
+    { label: "1aq", start: 126.3, end: 130.43 },
+    { label: "1ar", start: 130.68, end: 131.81 },
+    { label: "1as", start: 132.06, end: 134.61 },
+    { label: "1at", start: 134.86, end: 137.89 },
+    { label: "1au", start: 138.14, end: 141.69 },
+    { label: "1av", start: 141.94, end: 144.77 },
+    { label: "1aw", start: 145.02, end: 147.93 },
+    { label: "1ax", start: 148.18, end: 151.15 },
+    { label: "1ay", start: 151.4, end: 152.71 },
+    { label: "1az", start: 152.96, end: 154.65 },
+    { label: "1ba", start: 154.9, end: 157.01 },
+    { label: "1bb", start: 157.26, end: 158.71 },
+    { label: "1bc", start: 158.96, end: 159.87 },
+    { label: "1bd", start: 160.12, end: 161.47 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 7;
+var stopTime  = 161.47;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "02-B002-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B001-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='01-B001-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;7 Ngaɗi ngakki&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B002-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">7 Ngaɗi ngakki</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1b" class="txs">Waɗiino e jamaanuuji,</div> <div id="T1c" class="txs">yimɓe ɗiɗo.</div> <div id="T1d" class="txs">Ɓe koolondirɓe.</div> <div id="T1e" class="txs">Ɓe kodduɓe.</div> <div id="T1f" class="txs">Koddal ngal wooɗi faa walaa narndi.</div> <div id="T1g" class="txs">Na ɓe ngorndi noon faa nyannde gom loonde dey gooto maɓɓe yewi.</div> <div id="T1h" class="txs">Keeɗooje ɓottaa paɗɗoowaa nder ngesa ɗiɗaɓo o.</div></div>
+<div class="m"><div id="T1i" class="txs">Na worndi noon faa ɗo tunnguuru fuɗowi nder heeɗoore daande loonde ndeen.</div> <div id="T1j" class="txs">Tunnguuru men lanyi faa wooɗi.</div> <div id="T1k" class="txs">Kaddi ngesa fu yo tunnguuru.</div> <div id="T1l" class="txs">Warowi ndu rimi.</div> <div id="T1m" class="txs">Illa ndu ɓenndi ɓennday,</div> <div id="T1n" class="txs">jom loonde wi'i keeɗooje loondem haajaa.</div> <div id="T1o" class="txs">Jom mbammbaawa wi'i o munya heɓa tunnguuru ɓennda.</div> <div id="T1p" class="txs">So ndu ɓenndii,</div> <div id="T1q" class="txs">ɓe njeɗonndiran paali mayru,</div> <div id="T1r" class="txs">o hewtan heeɗoore daande loonde makko.</div></div>
+<div class="m"><div id="T1s" class="txs">Jom keeɗooje loonde salii ko koddom wi'i.</div> <div id="T1t" class="txs">Tilay hokkitee heeɗoore hunnduko loondem.</div> <div id="T1u" class="txs">O memi o memti,</div> <div id="T1v" class="txs">o hunngorii.</div> <div id="T1w" class="txs">Hoddiraaɓe memi memti,</div> <div id="T1x" class="txs">kunngorii.</div> <div id="T1y" class="txs">Kanko kaa heeɗoore daande loonde makko o haajaa.</div> <div id="T1z" class="txs">Hunnduko loonde du,</div> <div id="T1aa" class="txs">heɓataako so wanaa tunnguuru ɗoofaa.</div> <div id="T1ab" class="txs">Tuunguuru du paalim ɓennday sakko soppete.</div> <div id="T1ac" class="txs">Waande fu ɓuray nih.</div></div>
+<div class="m"><div id="T1ad" class="txs">Heddii tunnguuru soppaa.</div> <div id="T1ae" class="txs">Jom loonde hokkitaa heeɗoore daande loondem.</div> <div id="T1af" class="txs">Jom tunnguuru adi paalim ɓenndi ɓennday liili e naange.</div> <div id="T1ag" class="txs">Fu ɓoomi mbonnii;</div> <div id="T1ah" class="txs">wooturu raw heɓaa sottaa.</div></div>
+<div class="m"><div id="T1ai" class="txs">Ko gorko men sotti tunnguuru ɗum heɓii ceede seeɗa.</div> <div id="T1aj" class="txs">O jooɗii na o lima ɗe.</div> <div id="T1ak" class="txs">Dow ɗoon jaadiiko oon yottii.</div> <div id="T1al" class="txs">Kam e ɓiyum ngondi.</div> <div id="T1am" class="txs">Ɗo ɓe mbaalnorirta jam ɗoon ni ɓiiko turii adi seedere fecci,</div> <div id="T1an" class="txs">moɗi fecco wooto.</div> <div id="T1ao" class="txs">Gorko jom tunnguuru fitti faa hooti dow de laa'ini.</div> <div id="T1ap" class="txs">Wi'i fecco seederem haajaa.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1aq" class="txs">Baaba suka wi'i tewtowan seedere wara hokkita o.</div> <div id="T1ar" class="txs">O wi'i fe,</div> <div id="T1as" class="txs">fecco seedere makko o haajaa.</div> <div id="T1at" class="txs">Baaba suka wi'i walaa no waɗee.</div> <div id="T1au" class="txs">Jom seedere wi'i na woodi no waɗee.</div> <div id="T1av" class="txs">Baaba suka ƴamtinii faa wooɗi.</div> <div id="T1aw" class="txs">O wi'i tilay suka huttee.</div> <div id="T1ax" class="txs">Hoddiraaɓe maɓɓe cawrini kunngi.</div> <div id="T1ay" class="txs">Ni ɓiɗɗo huttaa,</div> <div id="T1az" class="txs">seedere ittaa e reedum.</div> <div id="T1ba" class="txs">Heddii kam kaa mursiraa nih.</div></div>
+<div class="m"><div id="T1bb" class="txs">Ndelle so neɗɗo haɓii,</div> <div id="T1bc" class="txs">ni sawroo.</div></div>
+<div class="m"><div id="T1bd" class="txs">Kummbo Jallo</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/fuh-fulfulde/audio/02 Ful cont Absa.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#006600">
+<title>6) Bu telinmubu 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 3.35 },
+    { label: "1b", start: 3.6, end: 16.03 },
+    { label: "1c", start: 16.28, end: 23.47 },
+    { label: "1d", start: 23.72, end: 32.29 },
+    { label: "1e", start: 32.54, end: 45.59 },
+    { label: "1f", start: 45.84, end: 84.35 },
+    { label: "1g", start: 84.6, end: 94.47 },
+    { label: "1h", start: 94.72, end: 97.43 },
+    { label: "1i", start: 97.68, end: 109.07 },
+    { label: "1j", start: 109.32, end: 114.55 },
+    { label: "1k", start: 114.8, end: 124.39 },
+    { label: "1l", start: 124.64, end: 135.53 },
+    { label: "1m", start: 135.78, end: 164.23 },
+    { label: "1n", start: 164.48, end: 215.89 },
+    { label: "1o", start: 216.14, end: 228.13 },
+    { label: "1p", start: 228.38, end: 265.55 },
+    { label: "1q", start: 265.8, end: 291.39 },
+    { label: "1r", start: 291.64, end: 298.63 },
+    { label: "1s", start: 298.88, end: 298.88 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 298.88;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "06-B006-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='05-B005-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='05-B005-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;6) Bu telinmubu&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='07-B007-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B006-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">6) </span><span class="bd">Bu </span><span class="bd">telinmubu</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs">O pialo leni ki  noanga n den ye ki tie danlinba.</div></div>
+<div class="m"><div id="T1c" class="txs">O pialo ya cua tundi naankani se ki noanga n cua jagini li  kani.</div></div>
+<div class="m"><div id="T1d" class="txs">Bi ki huadi o&nbsp;; lanwani la di ye ca o pialo n ti ban ma.</div></div>
+<div class="m"><div id="T1e" class="txs">Ki ha ki nuanga&nbsp;, ki noanga moko ya yoguni n ban pundi wan teri o teru ki gna mi jenme.</div></div>
+<div class="m"><div id="T1f" class="txs">Lanyoguni yo o pialo n cua ki le u teru ki sua ku hani o po wan yedi ke o ba  padi ki teriga n ña ba mi jenma mo n mudi.</div> <div id="T1g" class="txs">Noangi n cua yedi pialo tin yegi maami nne ka soani nan te&nbsp;!</div> <div id="T1h" class="txs">fini wani nan ji mali.</div></div>
+<div class="m"><div id="T1i" class="txs">N moko bi dia pabi ma yo&nbsp;; han maali a ba yeni kan cedi n mo jibi ma&nbsp;!</div></div>
+<div class="m"><div id="T1j" class="txs">Wan ye&nbsp;; yen de&nbsp;!</div> <div id="T1k" class="txs">Laa didi tie yeni ki noanga n gedi ki ban teri potoe.</div></div>
+<div class="m"><div id="T1l" class="txs">Ki fuari o pialo kani&nbsp;; kali pialo n didi gedi ki cuo ki terigi lu.</div></div>
+<div class="m"><div id="T1m" class="txs">Mi tatama noanga n didi gedi ban teri  pialo n cua ki yadi taana lie ke o ba lu u teru ki sua ke noanga ye lien nni noanga n ye friirii ki ban kua pialo mianu nni&nbsp;;o pialo n yugi ki piebi ki fiani ki fiani lemo nani noanga n ya tabi yi miani gmini o po.</div></div>
+<div class="m"><div id="T1n" class="txs">Lani noanga n yini bu yanbu&nbsp;: n sua n bi teri kpanmoani n le n le n ta , kabima leni kabima po min noanterima n lepi n mo yeri kakuo ki yeri miani solipi lane ke ye kandi bala kandi bala noani yi ya ba ña noano ye o kan n baa li baali yo ki  fuo kopi.</div></div>
+<div class="m"><div id="T1o" class="txs">Piali n yadi ye noama tabu wandi ban sedi nankani wan didi piebi noano mo n ga ki didi yini.</div></div>
+<div class="m"><div id="T1p" class="txs">Ja o pialo n ye liiga tiini leni o biga yen a gbankpara mo ye liiga wan banpundi bi yabi mo n cuo o biga yeni bi na n ta ke o ba mua jama ki ga o biga ba  ye bi ba cuo moko wan yadi bia ki noanga n yugi ña.</div></div>
+<div class="m"><div id="T1q" class="txs"> Hali lani dali yo ke sangbanli ya la pialo leni o biga yegi se wan san ki hoadiba kelima o tuonbiadi po.</div></div>
+<div class="m"><div id="T1r" class="txs">I tundi: bua a lielo nani han bua a yuli maama.</div></div>
+<div class="m"><div id="T1s" class="txs">.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/gux/gux-audio/ora/06 CONTE.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

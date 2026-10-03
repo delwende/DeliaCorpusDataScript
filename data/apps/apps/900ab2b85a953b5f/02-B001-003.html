@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introduction 3</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "3a", start: 310.46, end: 311.95 },
+    { label: "3b", start: 312.2, end: 313.33 },
+    { label: "3c", start: 313.58, end: 319.79 },
+    { label: "3d", start: 320.04, end: 321.95 },
+    { label: "3e", start: 322.2, end: 324.79 },
+    { label: "3f", start: 325.04, end: 327.43 },
+    { label: "3g", start: 327.68, end: 328.71 },
+    { label: "3h", start: 328.96, end: 332.05 },
+    { label: "3i", start: 332.3, end: 334.31 },
+    { label: "3j", start: 334.56, end: 336.97 },
+    { label: "3k", start: 337.22, end: 342.03 },
+    { label: "3l", start: 342.28, end: 344.15 },
+    { label: "3m", start: 344.4, end: 345.07 },
+    { label: "3n", start: 345.32, end: 347.01 },
+    { label: "3o", start: 347.26, end: 348.45 },
+    { label: "3p", start: 348.7, end: 351.47 },
+    { label: "3q", start: 351.72, end: 355.47 },
+    { label: "3r", start: 355.72, end: 356.37 },
+    { label: "3s", start: 356.62, end: 357.53 },
+    { label: "3t", start: 357.78, end: 360.45 },
+    { label: "3u", start: 360.7, end: 364.87 },
+    { label: "3v", start: 365.12, end: 368.37 },
+    { label: "3w", start: 368.62, end: 371.17 },
+    { label: "3x", start: 371.42, end: 373.11 },
+    { label: "3y", start: 373.36, end: 375.81 },
+    { label: "3z", start: 376.06, end: 379.33 },
+    { label: "3aa", start: 379.58, end: 381.79 },
+    { label: "3ab", start: 382.04, end: 388.11 },
+    { label: "3ac", start: 388.36, end: 391.19 },
+    { label: "3ad", start: 391.44, end: 394.95 },
+    { label: "3ae", start: 395.2, end: 396.03 },
+    { label: "3af", start: 396.28, end: 397.31 },
+    { label: "3ag", start: 397.56, end: 402.89 },
+    { label: "3ah", start: 403.14, end: 405.59 },
+    { label: "3ai", start: 405.84, end: 409.59 },
+    { label: "3aj", start: 409.84, end: 410.93 },
+    { label: "3ak", start: 411.18, end: 413.67 },
+    { label: "3al", start: 413.92, end: 419.19 },
+    { label: "3am", start: 419.44, end: 421.01 },
+    { label: "3an", start: 421.26, end: 422.67 },
+    { label: "3ao", start: 422.92, end: 426.81 },
+    { label: "3ap", start: 427.06, end: 430.41 },
+    { label: "3aq", start: 430.66, end: 433.15 },
+    { label: "3ar", start: 433.4, end: 437.35 },
+    { label: "3as", start: 437.6, end: 442.09 },
+    { label: "3at", start: 442.34, end: 443.45 },
+    { label: "3au", start: 443.7, end: 446.07 },
+    { label: "3av", start: 446.32, end: 449.41 },
+    { label: "3aw", start: 449.66, end: 450.55 },
+    { label: "3ax", start: 450.8, end: 454.83 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 310.46;
+var stopTime  = 454.83;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "02-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-B002-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-002.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introduction&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;3&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B001-004.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='03-B003-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image3.jpg" />
+
+<div class="m"><div id="T3a" class="txs"><span class="bd">Predestination</span></div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T3b" class="txs"><span class="it">In his love,</span></div> <div id="T3c" class="txs"><span class="it">God </span><span class="bdit">predestined</span><span class="it"> us to be his adopted children through Jesus Christ</span> (Ephesians 1, 5).</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T3d" class="txs"><span class="bd">What is predestination?</span></div></div>
+<div class="m"><div id="T3e" class="txs">Predestination is linked to election.</div> <div id="T3f" class="txs">While election is more about the past,</div> <div id="T3g" class="txs">what has happened,</div> <div id="T3h" class="txs">what we already know (we are God's chosen ones),</div> <div id="T3i" class="txs">predestination is about the future,</div> <div id="T3j" class="txs">what God has ordained for our lives.</div></div>
+<div class="m"><div id="T3k" class="txs">The word translated "<span class="it">predestine</span>" in the Word of God comes from the Greek word "<span class="it">proorizo</span>",</div> <div id="T3l" class="txs">meaning "<span class="it">to determine beforehand</span>",</div> <div id="T3m" class="txs">"<span class="it">to order</span>",</div> <div id="T3n" class="txs">"<span class="it">to decide in advance</span>".</div> <div id="T3o" class="txs">Like election,</div> <div id="T3p" class="txs">predestination is not easy to understand.</div> <div id="T3q" class="txs">To predestine means to fix one's destiny in advance.</div> <div id="T3r" class="txs">We,</div> <div id="T3s" class="txs">God's elect,</div> <div id="T3t" class="txs">are predestined to become children of God.</div></div>
+<div class="m"><div id="T3u" class="txs">Predestination emphasizes that God has chosen us for something.</div> <div id="T3v" class="txs">God has a plan for the life of each of his children.</div> <div id="T3w" class="txs">He has planned everything in advance.</div> <div id="T3x" class="txs">I don't have to worry.</div> <div id="T3y" class="txs">God is in control of my future.</div> <div id="T3z" class="txs">And his plans for my life are very good plans.</div> <div id="T3aa" class="txs">Much better than I can imagine.</div></div>
+<div class="m"><div id="T3ab" class="txs">Missing out on God's plan for my life doesn't mean that God will abandon me or that I'll lose my salvation,</div> <div id="T3ac" class="txs">but I may miss out on God's great blessings.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T3ad" class="txs"><span class="bd">Actions to make predestination a richness in your life:</span></div></div>
+<div class="m"><div id="T3ae" class="txs"><span class="it">- Prayer</span>:</div> <div id="T3af" class="txs">Before you pray,</div> <div id="T3ag" class="txs">write down everything you'd like to do - short and long term - on a piece of paper.</div> <div id="T3ah" class="txs">Place everything in God's hands.</div> <div id="T3ai" class="txs">Ask him to show you if your plans are also HIS plans.</div></div>
+<div class="m"><div id="T3aj" class="txs"><span class="it">- Bible reading:</span></div> <div id="T3ak" class="txs">Read Psalm 139.</div> <div id="T3al" class="txs">What does this Psalm teach you about God's relationship with you and His future plans for you?</div></div>
+<div class="m"><div id="T3am" class="txs"><span class="it">- personal reflection</span>:</div> <div id="T3an" class="txs">Examine your heart.</div> <div id="T3ao" class="txs">Does all your happiness depend on the success of your plans?</div> <div id="T3ap" class="txs">Remember that God may have another plan for your life.</div> <div id="T3aq" class="txs">Do you trust God with your future?</div> <div id="T3ar" class="txs">Do worries keep you awake at night and unable to work during the day?</div> <div id="T3as" class="txs">Will you be ready to abandon one of your plans if God shows you another way?</div></div>
+<div class="m"><div id="T3at" class="txs"><span class="it">- towards others</span>:</div> <div id="T3au" class="txs">If you're not sure what God's will is for you,</div> <div id="T3av" class="txs">ask a brother or sister in Christ for advice.</div> <div id="T3aw" class="txs">Also,</div> <div id="T3ax" class="txs">seek help for those who have to make important decisions about their future.</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/Riches English webm16.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

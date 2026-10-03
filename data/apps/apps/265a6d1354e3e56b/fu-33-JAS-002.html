@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yaakuuba 2</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1", start: 0, end: 10.93 },
+    { label: "2", start: 11.18, end: 21.03 },
+    { label: "3", start: 21.28, end: 34.07 },
+    { label: "4a", start: 34.32, end: 38.45 },
+    { label: "4b", start: 38.7, end: 42.39 },
+    { label: "5a", start: 42.64, end: 44.87 },
+    { label: "5b", start: 45.12, end: 54.99 },
+    { label: "6a", start: 55.24, end: 58.31 },
+    { label: "6b", start: 58.56, end: 61.61 },
+    { label: "6c", start: 61.86, end: 64.75 },
+    { label: "7", start: 65, end: 69.33 },
+    { label: "8a", start: 69.58, end: 77.21 },
+    { label: "8b", start: 77.46, end: 80.47 },
+    { label: "9a", start: 80.72, end: 84.73 },
+    { label: "9b", start: 84.98, end: 88.25 },
+    { label: "10", start: 88.5, end: 95.11 },
+    { label: "11a", start: 95.36, end: 100.29 },
+    { label: "11b", start: 100.54, end: 105.75 },
+    { label: "12", start: 106, end: 112.81 },
+    { label: "13a", start: 113.06, end: 119.17 },
+    { label: "13b", start: 119.42, end: 123.49 },
+    { label: "14a", start: 123.74, end: 131.71 },
+    { label: "14b", start: 131.96, end: 134.21 },
+    { label: "15", start: 134.46, end: 139.87 },
+    { label: "16a", start: 140.12, end: 141.65 },
+    { label: "16b", start: 141.9, end: 142.77 },
+    { label: "16c", start: 143.02, end: 150.41 },
+    { label: "17a", start: 150.66, end: 153.51 },
+    { label: "17b", start: 153.76, end: 157.91 },
+    { label: "18a", start: 158.16, end: 160.05 },
+    { label: "18b", start: 160.3, end: 167.29 },
+    { label: "18c", start: 167.54, end: 171.77 },
+    { label: "18d", start: 172.02, end: 175.97 },
+    { label: "19a", start: 176.22, end: 178.87 },
+    { label: "19b", start: 179.12, end: 179.83 },
+    { label: "19c", start: 180.08, end: 183.71 },
+    { label: "20a", start: 183.96, end: 185.89 },
+    { label: "20b", start: 186.14, end: 191.33 },
+    { label: "21", start: 191.58, end: 200.25 },
+    { label: "22a", start: 200.5, end: 204.13 },
+    { label: "22b", start: 204.38, end: 207.67 },
+    { label: "23a", start: 207.92, end: 211.03 },
+    { label: "23b", start: 211.28, end: 218.99 },
+    { label: "24", start: 219.24, end: 225.57 },
+    { label: "25a", start: 225.82, end: 229.23 },
+    { label: "25b", start: 229.48, end: 238.73 },
+    { label: "26", start: 238.98, end: 247.75 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+
+// Footnotes and Cross-references
+var footnotes = {
+    "F-0": "<div class=\"footnote-p\"><span class=\"fr\">2:25 </span><span class=\"ft\">Maanaa </span><span class=\"fk\">woykuuru </span><span class=\"ft\">wo pijoowo joɓeteeɗo ceede.</span></div>"
+};
+
+initFootnotes(footnotes);
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 5 }];
+var hasIntro = false;
+var baseRef  = "fu-33-JAS-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='fu-32-HEB-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='fu-33-JAS-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Yaakuuba&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;2&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-33-JAS-003.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='fu-34-1PE-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="s1">No jom jawdi e talkaajo fuu potiri e meeɗen</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">2</div> <div id="T1" class="txs"><span class="v">1</span><span class="vsp">&nbsp;</span>Sakiraaɓe am, onon goonɗinɓe Joomiraaɗo meeɗen Iisaa Almasiihu Jom teddeengal, taa ɓurdinee ɓiɓɓe-Aadama.</div><span id="bookmarks1"></span> <a id="v2"></a><div id="T2" class="txs"><span class="v">2</span><span class="vsp">&nbsp;</span>Si jom jawdi gattuɗo hootonnde kaŋŋe e kaddule lobbe naatii kawrital mon, de talkaajo ɓorniiɗo kaddule tuunɗe kam du naatii, noy ngaɗoton?</div><span id="bookmarks2"></span> <a id="v3"></a><div id="T3" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>Si on teddinii ɓorniiɗo kaddule lobbe oon, on mbi'ii ɗum «Jooɗa, inan joonnde lobbere», de mbi'uɗon talkaajo oon «Dara toon» naa «Jooɗa e leydi ɗakkol koyɗe am»,</div><span id="bookmarks3"></span> <a id="v4"></a><div id="T4a" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>si on ngaɗirii noon fu, wanaa on cenndii hakkunde mooɗon naa?</div> <div id="T4b" class="txs">On laatake sarotooɓe ɓe miilooji bonɗi.</div><span id="bookmarks4"></span> <a id="v5"></a><div id="T5a" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Sakiraaɓe am horsuɓe, kettindee!</div> <div id="T5b" class="txs">Talkaaɓe adunaaru ndu ɓeen, wanaa Laamɗo suɓake ɓe faa ɓe laatoo danyuɓe goonɗinal, ɓe naata e laamu Laamɗo mo Laamɗo aadii hokkude yiɗuɓe ɗum naa?</div><span id="bookmarks5"></span> <a id="v6"></a><div id="T6a" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>De onon kaa, on kuyfinii talkaaɓe ɓeen.</div> <div id="T6b" class="txs">Wanaa joomiraaɓe jawdi ɓeen torrata on naa?</div> <div id="T6c" class="txs">Wanaa kam'en njaarata on yeeso sariya naa?</div><span id="bookmarks6"></span> <a id="v7"></a><div id="T7" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>Wanaa kam'en mbonkotoo Iisaa mo njogiɗon innde muuɗum lobbere oon naa?</div><span id="bookmarks7"></span></div><span id="bookmarks7"></span><a id="v8"></a>
+<div class="p"><div id="T8a" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>Goonga, on ngaɗii ko wooɗi si tawii on njokkii yamiroore laamu Laamɗo mawnde no Binndi mbiiri nde mbi'unoo:</div> <div id="T8b" class="txs">«Njiɗiraa gondo maa no njiɗirɗaa hoore maa ni.»</div><span id="bookmarks8"></span> <a id="v9"></a><div id="T9a" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>Ammaa si on ɓurdinii ɓiɓɓe-Aadama, on ngaɗii hakke.</div> <div id="T9b" class="txs">Yamiroore ndeen du na fela on ko mboofuɗon.</div><span id="bookmarks9"></span> <a id="v10"></a><div id="T10" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Goonga ni, si neɗɗo jokkii jamirooje fuu, de woofi gootel majje tan, luttii jamirooje ɗeen fuu.</div><span id="bookmarks10"></span> <a id="v11"></a><div id="T11a" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>Sabo Laamɗo biiɗo «Taa jeenu», kam wi'i katin «Taa waɗu war-hoore.»</div> <div id="T11b" class="txs">Si a waɗaay jeenu, de a waɗii war-hoore, a laatake boofuɗo jamirooje ɗeen.</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>Ndelle, kaaldon, ngolliron hono no yimɓe sardeteeɓe yamiroore rimɗinoore kaani waɗude ni.</div><span id="bookmarks12"></span> <a id="v13"></a><div id="T13a" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Sabo si goonga, nde Laamɗo sarotoo fu, yurmataako neɗɗo mo hollaay woɓɓe yurmeende.</div> <div id="T13b" class="txs">De jom yurmeende kaa, walaa fuu ko huldata sariya.</div><span id="bookmarks13"></span></div><span id="bookmarks13"></span><a id="v14"></a>
+<div class="p"><div id="T14a" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>Sakiraaɓe am, si goɗɗo wi'ii ina jogii goonɗinal de golle makko hollaay o goonɗinii fu, ɗume ɗum nafata?</div> <div id="T14b" class="txs">Goonɗinal ngaal waawaa hisinde mo.</div><span id="bookmarks14"></span> <a id="v15"></a><div id="T15" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>Si tawii aɗa jogii sakiike gorko naa debbo de wo kolɗo naa wo jolbuɗo,</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16a" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>si gooto mooɗon wi'ii ɗum:</div> <div id="T16b" class="txs">«Yahu e jam!</div> <div id="T16c" class="txs">Laamɗo holtine, nyaamne faa kaaraa,» tawee o hokkaay ɗum ko haajaa ɗuum, ɗume ɗum nafata?</div><span id="bookmarks16"></span> <a id="v17"></a><div id="T17a" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>Goonɗinal e hoore muuɗum du wo noon worri:</div> <div id="T17b" class="txs">si ngal walaa golleeji kollooji ngal fu, ngal waatii.</div><span id="bookmarks17"></span></div><span id="bookmarks17"></span><a id="v18"></a>
+<div class="p"><div id="T18a" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>De si goɗɗo wi'ii ma:</div> <div id="T18b" class="txs">«Aan, wo a jom goonɗinal, miin, mi jom golle», ndeen, mi jaaboto joomum, mi wi'a:</div> <div id="T18c" class="txs">«Hollam goonɗinal maa tawee waldaa e golleeji lobbi si aɗa waawi.</div> <div id="T18d" class="txs">Miin du mi hollirte golle am wo mi goonɗinɗo.»</div><span id="bookmarks18"></span> <a id="v19"></a><div id="T19a" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>Aɗa goonɗini Laamɗo wo gooto naa?</div> <div id="T19b" class="txs">Gasii!</div> <div id="T19c" class="txs">De fay ginnaaji ina ngoonɗini ɗum de na ndiwna kulol!</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20a" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>Aan pamɗuɗo hakkillo!</div> <div id="T20b" class="txs">Aɗa haajaa holleede no goonɗinal ngal waldaa e golle fuu nafataa faa'e.</div><span id="bookmarks20"></span> <a id="v21"></a><div id="T21" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>A miccitaaki no maami en Ibrahiima ndaardiraa wo ponnditiiɗo saabe golle muuɗum, nde yowunoo ɓiyum Isiyaaka e hirsirde ndeen naa?</div><span id="bookmarks21"></span> <a id="v22"></a><div id="T22a" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>A yi'ii goonɗinal Ibrahiima e golle muuɗum fuu ina hawri.</div> <div id="T22b" class="txs">Wooɗi du, golle makko hiɓɓini goonɗinal makko.</div><span id="bookmarks22"></span> <a id="v23"></a><div id="T23a" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>Hono noon Binndi ɗiin tabitiri nde mbi'unoo:</div> <div id="T23b" class="txs">«Ibrahiima goonɗinii Laamɗo, de Laamɗo hiisorii mo saabe majjum wo o ponnditiiɗo», faa o noddiraa giɗo Laamɗo.</div><span id="bookmarks23"></span> <a id="v24"></a><div id="T24" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>Ndelle on nji'ii, wo e golle neɗɗo ndaardetee wo ponnditiiɗo, wanaa e goonɗinal muuɗum tan.</div><span id="bookmarks24"></span> <a id="v25"></a><div id="T25a" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>Hono noon Rahabu, debbo woykuuru oon<span class="footnote selectable" id="F-0"><sup>a</sup></span> du.</div> <div id="T25b" class="txs">O ndaardaa wo o ponnditiiɗo saabe golleeji ɗi o gollunoo, nde o jakkitinoo nulaaɓe ɓeen, de o walli ɗum'en njaltiri laawol gonngol de ndaɗi.</div><span id="bookmarks25"></span> <a id="v26"></a><div id="T26" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>Goonga ni, hono no ɓanndu ndu walaa yonki maayiri noon, goonɗinal ngal walaa golle du waatiri.</div><span id="bookmarks26"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://fcbhabdm.s3.amazonaws.com/mp3audiobibles2/FUHSIMN1DA/B20___02_Jacques_____FUHSIMN1DA.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

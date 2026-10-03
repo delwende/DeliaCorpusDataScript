@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A237E">
+<title>Introdução 10</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 1980.42;
+var stopTime  = 2008.87;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 15 }];
+var hasIntro = false;
+var baseRef  = "15-B015-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='14-B014-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-009.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Introdução&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;10&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='15-B015-011.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='16-B021-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B015-image10.jpg" />
+
+<div class="m"><span class="bd">Herança</span></div>
+<div class="m"><span class="it">Em Cristo </span><span class="it">também</span><span class="it"> </span><span class="it">nos</span><span class="it"> </span><span class="it">tornamos</span><span class="bdit"> </span><span class="bdit">herdeiros</span><span class="it">...</span><span class="it"> </span>(Efésios 1, 11).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">O que é uma herança cristã?</span></div>
+<div class="m">É o bem deixado por uma pessoa falecida aos que ainda vivem, geralmente familiares.</div>
+<div class="m">De acordo com a Palavra de Deus, Deus tem uma herança para nós, seus filhos. É a salvação trazida por Jesus Cristo que nos dá direito a esta herança. Tudo o que estudamos neste livreto faz parte dessa herança. Paulo chama isso de herança de “riquezas gloriosas” (Efésios 1, 18).</div>
+<div class="m">Ser herdeiros significa que ainda não possuímos plena posse dessas riquezas. Mas se vivermos com Deus, se Jesus e o Espírito Santo habitarem em nós, já podemos saborear as riquezas do nosso Pai celestial. Assim como uma criança que vive no seio da família já pode desfrutar até certo ponto dos bens do pai. E a nossa plena aquisição da herança celestial é prometida pelo Espírito Santo (veja o próximo capítulo).</div>
+<div class="b">&nbsp;</div>
+<div class="m"><span class="bd">Ações para tornar a herança uma riqueza em sua vida:</span></div>
+<div class="m"><span class="it">- Oração:</span>Agradeça a Deus pelas riquezas que ele lhe deu. Liste-os um por um. Peça a Deus para ajudá-lo a fazer melhor uso deles.</div>
+<div class="m"><span class="it">- Leitura da Bíblia:</span>Leia Efésios 1 e faça uma lista de todas as suas bênçãos espirituais.</div>
+<div class="m"><span class="it">- reflexão pessoal</span>: Há momentos em que você se sente pobre? Você tem ciúme de outras pessoas que parecem ter mais do que você? Lembre-se de que as riquezas de Deus estão à sua disposição. Lembre-se que são riquezas que ninguém pode roubar e que não estragam.</div>
+<div class="m">No final do dia, reserve um tempo para refletir sobre quais das riquezas de Efésios 1 você conseguiu usar ao longo do dia. Comece um caderninho e anote as bênçãos de Deus todos os dias.</div>
+<div class="m"><span class="it">- para outros:</span>Deus quer que compartilhemos nossa herança espiritual com nossa família e nossos irmãos e irmãs em Cristo. Todas as manhãs, escolha uma das riquezas da sua herança e encontre uma forma de “entregá-la” a alguém que encontrar durante o dia.</div>
+</div>
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

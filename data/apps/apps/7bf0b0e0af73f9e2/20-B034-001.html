@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF5722">
+<title>10) C'est la fête 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 1.93 },
+    { label: "1b", start: 2.18, end: 6.53 },
+    { label: "1c", start: 6.78, end: 11.77 },
+    { label: "1d", start: 12.02, end: 13.39 },
+    { label: "1e", start: 13.64, end: 16.19 },
+    { label: "1f", start: 16.44, end: 19.83 },
+    { label: "1g", start: 20.08, end: 20.39 },
+    { label: "1h", start: 20.64, end: 22.69 },
+    { label: "1i", start: 22.94, end: 26.51 },
+    { label: "1j", start: 26.76, end: 29.47 },
+    { label: "1k", start: 29.72, end: 30.83 },
+    { label: "1l", start: 31.08, end: 31.87 },
+    { label: "1m", start: 32.12, end: 34.29 },
+    { label: "1n", start: 34.54, end: 38.55 },
+    { label: "1o", start: 38.8, end: 41.75 },
+    { label: "1p", start: 42, end: 43.71 },
+    { label: "1q", start: 43.96, end: 46.61 },
+    { label: "1r", start: 46.86, end: 49.35 },
+    { label: "1s", start: 49.6, end: 50.39 },
+    { label: "1t", start: 50.64, end: 51.23 },
+    { label: "1u", start: 51.48, end: 53.77 },
+    { label: "1v", start: 54.02, end: 57.19 },
+    { label: "1w", start: 57.44, end: 59.47 },
+    { label: "1x", start: 59.72, end: 61.35 },
+    { label: "1y", start: 61.6, end: 62.55 },
+    { label: "1z", start: 62.8, end: 63.73 },
+    { label: "1aa", start: 63.98, end: 66.07 },
+    { label: "1ab", start: 66.32, end: 67.35 },
+    { label: "1ac", start: 67.6, end: 70.59 },
+    { label: "1ad", start: 70.84, end: 73.55 },
+    { label: "1ae", start: 73.8, end: 76.11 },
+    { label: "1af", start: 76.36, end: 78.01 },
+    { label: "1ag", start: 78.26, end: 82.89 },
+    { label: "1ah", start: 83.14, end: 86.29 },
+    { label: "1ai", start: 86.54, end: 87.67 },
+    { label: "1aj", start: 87.92, end: 89.01 },
+    { label: "1ak", start: 89.26, end: 91.07 },
+    { label: "1al", start: 91.32, end: 94.45 },
+    { label: "1am", start: 94.7, end: 97.35 },
+    { label: "1an", start: 97.6, end: 99.81 },
+    { label: "1ao", start: 100.06, end: 101.55 },
+    { label: "1ap", start: 101.8, end: 103.11 },
+    { label: "1aq", start: 103.36, end: 107.31 },
+    { label: "1ar", start: 107.56, end: 108.87 },
+    { label: "1as", start: 109.12, end: 113.51 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 113.51;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "20-B034-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='19-B010-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='19-B010-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;10) C'est la fête&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='21-B011-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='21-B011-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B034-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">10) C'est la fête&nbsp;!</span></div></div>
+<div class="m"><div id="T1b" class="txs">De nombreux jours fériés en Europe sont issus de la foi chrétienne.</div> <div id="T1c" class="txs">De nombreux Européens n'appartiennent officiellement plus à aucune église chrétienne.</div> <div id="T1d" class="txs">Malgré cela,</div> <div id="T1e" class="txs">les jours fériés jouent encore un rôle important.</div> <div id="T1f" class="txs">Ils sont souvent célébrés en famille.</div></div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">NOËL :</span></div> <div id="T1h" class="txs"><span class="bd">BOUGIES D'ANNIVERSAIRE POUR JÉSUS</span></div></div>
+<div class="m"><div id="T1i" class="txs">La fête familiale la plus importante en Europe est Noël,</div> <div id="T1j" class="txs">toujours du 24 au 26 décembre.</div> <div id="T1k" class="txs">Les enfants,</div> <div id="T1l" class="txs">en particulier,</div> <div id="T1m" class="txs">s'en réjouissent longtemps à l'avance.</div> <div id="T1n" class="txs">Les quatre semaines précédant Noël s'appellent l'Avent.</div> <div id="T1o" class="txs">Noël est la fête d'anniversaire de Jésus.</div> <div id="T1p" class="txs">Il est né il y a plus de 2000 ans.</div> <div id="T1q" class="txs">Jésus est venu au monde dans une étable,</div> <div id="T1r" class="txs">car tous les autres abris étaient occupés.</div> <div id="T1s" class="txs">Marie,</div> <div id="T1t" class="txs">sa mère,</div> <div id="T1u" class="txs">l'a déposé dans la mangeoire des animaux.</div> <div id="T1v" class="txs">C'est ce qui est représenté sur de nombreuses images :</div> <div id="T1w" class="txs">Le nouveau-né est couché dans la mangeoire,</div> <div id="T1x" class="txs">à côté de Marie et de Joseph,</div> <div id="T1y" class="txs">son mari.</div> <div id="T1z" class="txs">Parfois,</div> <div id="T1aa" class="txs">on montre aussi les animaux de l'étable :</div> <div id="T1ab" class="txs">le bœuf et l'âne.</div></div>
+<div class="m"><div id="T1ac" class="txs">La naissance de Jésus est une occasion joyeuse,</div> <div id="T1ad" class="txs">c'est pourquoi on entend de la musique partout.</div> <div id="T1ae" class="txs">Il y a beaucoup de chants de Noël.</div> <div id="T1af" class="txs">Les maisons sont décorées,</div> <div id="T1ag" class="txs">on se promène sur les marchés de Noël et on peut voir des lumières et des bougies partout.</div> <div id="T1ah" class="txs">Elles sont le signe que Jésus est la lumière.</div> <div id="T1ai" class="txs">Dans la Bible,</div> <div id="T1aj" class="txs">Jésus dit de lui-même :</div> <div id="T1ak" class="txs">"Je suis la lumière du monde.</div> <div id="T1al" class="txs">Celui qui me suit ne marchera pas dans les ténèbres,</div> <div id="T1am" class="txs">mais aura la lumière de la vie" (La Bible.</div> <div id="T1an" class="txs">Jean 8,12).</div> <div id="T1ao" class="txs">La veille de Noël,</div> <div id="T1ap" class="txs">le 24 décembre,</div> <div id="T1aq" class="txs">certaines familles se rendent ensemble au service religieux le soir.</div> <div id="T1ar" class="txs">En général,</div> <div id="T1as" class="txs">un repas de fête spécial est organisé à la maison et tous reçoivent des cadeaux.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/10 Bienvenu francais.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/10 Bienvenu francais.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/10 Bienvenu francais.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

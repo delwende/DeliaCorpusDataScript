@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0D47A1">
+<title>3) Le planning familial 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 2.79 },
+    { label: "1b", start: 3.04, end: 4.91 },
+    { label: "1c", start: 5.16, end: 6.19 },
+    { label: "1d", start: 6.44, end: 8.13 },
+    { label: "1e", start: 8.38, end: 14.09 },
+    { label: "1f", start: 14.34, end: 20.59 },
+    { label: "1g", start: 20.84, end: 23.13 },
+    { label: "1h", start: 23.38, end: 28.27 },
+    { label: "1i", start: 28.52, end: 32.93 },
+    { label: "1j", start: 33.18, end: 41.47 },
+    { label: "1k", start: 41.72, end: 46.89 },
+    { label: "1l", start: 47.14, end: 52.85 },
+    { label: "1m", start: 53.1, end: 57.57 },
+    { label: "1n", start: 57.82, end: 63.59 },
+    { label: "1o", start: 63.84, end: 67.35 },
+    { label: "1p", start: 67.6, end: 72.49 },
+    { label: "1q", start: 72.74, end: 76.53 },
+    { label: "1r", start: 76.78, end: 79.77 },
+    { label: "1s", start: 80.02, end: 86.03 },
+    { label: "1t", start: 86.28, end: 87.21 },
+    { label: "1u", start: 87.46, end: 89.31 },
+    { label: "1v", start: 89.56, end: 92.81 },
+    { label: "1w", start: 93.06, end: 95.57 },
+    { label: "1x", start: 95.82, end: 98.05 },
+    { label: "1y", start: 98.3, end: 101.31 },
+    { label: "1z", start: 101.56, end: 108.65 },
+    { label: "1aa", start: 108.9, end: 114.29 },
+    { label: "1ab", start: 114.54, end: 122.39 },
+    { label: "1ac", start: 122.64, end: 129.15 },
+    { label: "1ad", start: 129.4, end: 135.51 },
+    { label: "1ae", start: 135.76, end: 142.81 },
+    { label: "1af", start: 143.06, end: 145.41 },
+    { label: "1ag", start: 145.66, end: 154.55 },
+    { label: "1ah", start: 154.8, end: 160.75 },
+    { label: "1ai", start: 161, end: 164.93 },
+    { label: "1aj", start: 165.18, end: 168.99 },
+    { label: "1ak", start: 169.24, end: 171.75 },
+    { label: "1al", start: 172, end: 177.77 },
+    { label: "1am", start: 178.02, end: 179.49 },
+    { label: "1an", start: 179.74, end: 182.19 },
+    { label: "1ao", start: 182.44, end: 190.01 },
+    { label: "1ap", start: 190.26, end: 196.37 },
+    { label: "1aq", start: 196.62, end: 200.79 },
+    { label: "1ar", start: 201.04, end: 204.17 },
+    { label: "1as", start: 204.42, end: 212.17 },
+    { label: "1at", start: 212.42, end: 217.43 },
+    { label: "1au", start: 217.68, end: 220.85 },
+    { label: "1av", start: 221.1, end: 234.13 },
+    { label: "1aw", start: 234.38, end: 239.69 },
+    { label: "1ax", start: 239.94, end: 246.03 },
+    { label: "1ay", start: 246.28, end: 250.49 },
+    { label: "1az", start: 250.74, end: 253.13 },
+    { label: "1ba", start: 253.38, end: 255.39 },
+    { label: "1bb", start: 255.64, end: 270.83 },
+    { label: "1bc", start: 271.08, end: 272.37 },
+    { label: "1bd", start: 272.62, end: 277.51 },
+    { label: "1be", start: 277.76, end: 279.05 },
+    { label: "1bf", start: 279.3, end: 284.31 },
+    { label: "1bg", start: 284.56, end: 288.23 },
+    { label: "1bh", start: 288.48, end: 293.17 },
+    { label: "1bi", start: 293.42, end: 301.29 },
+    { label: "1bj", start: 301.54, end: 302.81 },
+    { label: "1bk", start: 303.06, end: 304.35 },
+    { label: "1bl", start: 304.6, end: 306.23 },
+    { label: "1bm", start: 306.48, end: 311.99 },
+    { label: "1bn", start: 312.24, end: 314.35 },
+    { label: "1bo", start: 314.6, end: 318.41 },
+    { label: "1bp", start: 318.66, end: 321.29 },
+    { label: "1bq", start: 321.54, end: 322.37 },
+    { label: "1br", start: 322.62, end: 324.39 },
+    { label: "1bs", start: 324.64, end: 325.35 },
+    { label: "1bt", start: 325.6, end: 330.01 },
+    { label: "1bu", start: 330.26, end: 337.07 },
+    { label: "1bv", start: 337.32, end: 339.27 },
+    { label: "1bw", start: 339.52, end: 341.73 },
+    { label: "1bx", start: 341.98, end: 344.75 },
+    { label: "1by", start: 345, end: 351.25 },
+    { label: "1bz", start: 351.5, end: 354.57 },
+    { label: "1ca", start: 354.82, end: 364.41 },
+    { label: "1cb", start: 364.66, end: 370.67 },
+    { label: "1cc", start: 370.92, end: 373.53 },
+    { label: "1cd", start: 373.78, end: 377.19 },
+    { label: "1ce", start: 377.44, end: 379.73 },
+    { label: "1cf", start: 379.98, end: 384.81 },
+    { label: "1cg", start: 385.06, end: 391.83 },
+    { label: "1ch", start: 392.08, end: 394.73 },
+    { label: "1ci", start: 394.98, end: 399.13 },
+    { label: "1cj", start: 399.38, end: 404.67 },
+    { label: "1ck", start: 404.92, end: 409.83 },
+    { label: "1cl", start: 410.08, end: 413.35 },
+    { label: "1cm", start: 413.6, end: 423.35 },
+    { label: "1cn", start: 423.6, end: 424.51 },
+    { label: "1co", start: 424.76, end: 432.59 },
+    { label: "1cp", start: 432.84, end: 436.67 },
+    { label: "1cq", start: 436.92, end: 439.43 },
+    { label: "1cr", start: 439.68, end: 442.57 },
+    { label: "1cs", start: 442.82, end: 449.57 },
+    { label: "1ct", start: 449.82, end: 460.21 },
+    { label: "1cu", start: 460.46, end: 468.71 },
+    { label: "1cv", start: 468.96, end: 470.99 },
+    { label: "1cw", start: 471.24, end: 473.01 },
+    { label: "1cx", start: 473.26, end: 475.89 },
+    { label: "1cy", start: 476.14, end: 478.71 },
+    { label: "1cz", start: 478.96, end: 483.31 },
+    { label: "1da", start: 483.56, end: 488.25 },
+    { label: "1db", start: 488.5, end: 494.35 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 494.35;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "22-B022-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='21-B021-001.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='21-B021-001.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;3) Le planning familial&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='23-B023-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='23-B023-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B022-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">3) </span><span class="bd">Le planning familial</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1b" class="txs"><span class="it">(Référence :</span></div> <div id="T1c" class="txs"><span class="it">Le planning familial,</span></div> <div id="T1d" class="txs"><span class="it">Mme Lizette Lavoie)</span><span class="it">.</span></div></div>
+<div class="m"><div id="T1e" class="txs">Le planning familial est l’ensemble des moyens utilisés pour contrôler les naissances.</div> <div id="T1f" class="txs">Il permet à une famille de choisir d’avoir un enfant quand elle veut.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1g" class="txs"><span class="bd">a) </span><span class="bd">Les raisons du planning familial</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1h" class="txs">Il y a des avantages évidents attachés à une planification des naissances.</div></div>
+<div class="m"><div id="T1i" class="txs"><span class="ul"><span class="it">1) Pour protéger la vie précieuse d’une femme et mère</span></span> :</div></div>
+<div class="m"><div id="T1j" class="txs">• Les femmes de moins de 17 ans courent le risque de mourir à l’accouchement car leur corps n'est pas complètement développé.</div> <div id="T1k" class="txs">Leurs enfants courent un plus grand risque de mourir durant leur première année.</div></div>
+<div class="m"><div id="T1l" class="txs">• Attendre avant de tomber en grossesse permet aux filles de compléter leur éducation.</div></div>
+<div class="m"><div id="T1m" class="txs">• Les femmes plus âgées courent aussi un plus grand risque à l’accouchement,</div> <div id="T1n" class="txs">surtout si elles ont d’autres problèmes de santé ou si elles ont eu beaucoup d’enfants.</div></div>
+<div class="m"><div id="T1o" class="txs">• En cas de grossesse tardive (mère âgée),</div> <div id="T1p" class="txs">le bébé a aussi plus de risque d’être en mauvaise santé physique et mentale.</div></div>
+<div class="m"><div id="T1q" class="txs">• L’espacement des naissances garde la maman en bonne santé.</div> <div id="T1r" class="txs">Quand une femme a des grossesses trop rapprochées,</div> <div id="T1s" class="txs">son corps s’affaiblit au point qu’elle peut avoir une maladie grave comme la tuberculose,</div> <div id="T1t" class="txs">par exemple.</div></div>
+<div class="m"><div id="T1u" class="txs">• Après plus de 4 enfants,</div> <div id="T1v" class="txs">elle court un plus grand risque de mourir après l’accouchement,</div> <div id="T1w" class="txs">d’hémorragie ou d’autres causes.</div></div>
+<div class="m"><div id="T1x" class="txs"><span class="ul"><span class="it">2) Pour les enfants,</span></div> <div id="T1y" class="txs"><span class="it">afin qu’ils puissent mieux se développer et s’épanouir</span></span> :</div></div>
+<div class="m"><div id="T1z" class="txs">• L’espacement de deux ans rend les enfants forts parce qu'ils peuvent être nourris au sein pendant longtemps.</div></div>
+<div class="m"><div id="T1aa" class="txs">• Un nombre limité d’enfants permet aux parents de mieux nourrir et entretenir chaque enfant.</div></div>
+<div class="m"><div id="T1ab" class="txs">• Un nombre limité d’enfants permet aux parents de mieux éduquer et jouir de chaque enfant ainsi que l’un de l’autre.</div></div>
+<div class="m"><div id="T1ac" class="txs">• L’espacement des naissances permet à chaque enfant d’être un enfant sain et de bien se développer.</div></div>
+<div class="m"><div id="T1ad" class="txs">C’est pourquoi les Eglises en général ne sont pas contre l’espacement et la planification des naissances,</div> <div id="T1ae" class="txs">tout en condamnant certaines méthodes utilisées pour accomplir cet espacement et cette planification.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1af" class="txs"><span class="bd">b) </span><span class="bd">La contraception</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1ag" class="txs">La contraception est l’ensemble des méthodes permettant d’éviter d’une manière temporaire et réversible la survenue d’une grossesse.</div> <div id="T1ah" class="txs">Elle désigne l’emploi de moyens visant à empêcher qu’un rapport sexuel entraine une grossesse.</div></div>
+<div class="m"><div id="T1ai" class="txs">Il y a deux grandes catégories de méthodes contraceptives :</div> <div id="T1aj" class="txs">Les méthodes naturelles et les méthodes artificielles.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ak" class="txs"><span class="bd">c) </span><span class="bd">Les méthodes naturelles</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1al" class="txs">Le moyen de contraception le plus naturel est offert par le corps féminin lui-même :</div> <div id="T1am" class="txs">durant le cycle,</div> <div id="T1an" class="txs">il n’est fécond que pendant quelques jours.</div> <div id="T1ao" class="txs">Les méthodes naturelles ne modifient rien au fonctionnement du corps et n’ont aucun effet secondaire sur la santé.</div> <div id="T1ap" class="txs">Elles reposent sur l’observation des signes donnés par le corps – de la glaire cervicale,</div> <div id="T1aq" class="txs">du calendrier – qui indiquent quels sont les jours fertiles.</div></div>
+<div class="m"><div id="T1ar" class="txs"><span class="bd">1)</span><span class="bd"> </span><span class="bd">La méthode naturelle combinée</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1as" class="txs">Cette méthode exige que la femme connaisse bien son cycle menstruel et son temps fertile chaque mois.</div> <div id="T1at" class="txs">Ce temps peut être connu en utilisant les informations suivantes :</div></div>
+<div class="m"><div id="T1au" class="txs">• La femme produit un ovule chaque mois.</div></div>
+<div class="m"><div id="T1av" class="txs">• L’ovule est libéré de l’ovaire environ 14 jours après le premier jour des dernières règles (c’est-à-dire environ 14 jours avant le début des prochaines règles).</div></div>
+<div class="m"><div id="T1aw" class="txs">• L’ovule vit seulement 24 heures après sa libération de l’ovaire.</div></div>
+<div class="m"><div id="T1ax" class="txs">• Les spermatozoïdes de l’homme peuvent survivre jusqu’à 5 jours dans le corps de la femme.</div></div>
+<div class="m"><div id="T1ay" class="txs">La connaissance du cycle menstruel est donc nécessaire.</div> <div id="T1az" class="txs">Mais qu’est-ce que le cycle menstruel&nbsp;?</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ba" class="txs"><span class="bd">Le cycle menstruel</span><span class="bd">.</span></div></div>
+<div class="m"><div id="T1bb" class="txs">Le cycle menstruel est l’ensemble des phénomènes physiologiques et hormonaux se produisant de façon cyclique dans l’appareil reproducteur féminin et se manifestant par les menstruations (règles).</div></div>
+<div class="m"><div id="T1bc" class="txs">Chez la femme,</div> <div id="T1bd" class="txs">le cycle menstruel dure en moyenne vingt-huit jours mais peut,</div> <div id="T1be" class="txs">selon les femmes,</div> <div id="T1bf" class="txs">être compris entre vingt-quatre et trente-cinq jours,</div> <div id="T1bg" class="txs">et peut également être variable chez une même femme.</div> <div id="T1bh" class="txs">Il apparaît à la puberté et se maintient jusqu’à la ménopause.</div> <div id="T1bi" class="txs">La période de la vie pendant laquelle existent les cycles menstruels correspond à la période de fertilité de la femme.</div></div>
+<div class="m"><div id="T1bj" class="txs">Normalement,</div> <div id="T1bk" class="txs">une fois par mois,</div> <div id="T1bl" class="txs">l’ovulation a lieu.</div> <div id="T1bm" class="txs">Ça veut dire qu’un ovule quitte l’ovaire en se mettant en route vers l’utérus.</div> <div id="T1bn" class="txs">Pour bien pouvoir se déplacer,</div> <div id="T1bo" class="txs">l’ovule comme les spermatozoïdes ont besoin d’humidité.</div> <div id="T1bp" class="txs">Environ trois jours avant l’ovulation,</div> <div id="T1bq" class="txs">un liquide,</div> <div id="T1br" class="txs">qui s’appelle <span class="bd">la glaire cervicale</span>,</div> <div id="T1bs" class="txs">est produit.</div> <div id="T1bt" class="txs">Avec cette glaire qui se répand dans les organes sexuels,</div> <div id="T1bu" class="txs">l’ovule et les spermatozoïdes peuvent bien avancer et se rencontrer dans la trompe.</div> <div id="T1bv" class="txs">Et comme ça une grossesse peut se préparer.</div> <div id="T1bw" class="txs">Pendant le temps de cette production,</div> <div id="T1bx" class="txs">la glaire sort toujours un peu du vagin.</div></div>
+<div class="m"><div id="T1by" class="txs">La méthode combinée associe la glaire cervicale et le calendrier (voir ci-dessous).</div> <div id="T1bz" class="txs">Nous recommandons de combiner ces deux contrôles,</div> <div id="T1ca" class="txs">car ce moyen est beaucoup plus sûr qu'une seule méthode qui permet de prévoir les jours de fertilité du cycle près de l’ovulation.</div></div>
+<div class="m"><div id="T1cb" class="txs">Notez toutes vos observations dans un tableau pour en tirer les enseignements utiles.</div></div>
+<div class="m"><div id="T1cc" class="txs">En respectant des règles précises,</div> <div id="T1cd" class="txs">on peut avoir des rapports sexuels sans protection.</div> <div id="T1ce" class="txs">Pendant son temps de fertilité,</div> <div id="T1cf" class="txs">une femme ne peut avoir que des rapports sexuels sans pénétration,</div> <div id="T1cg" class="txs">ou elle doit recourir à un moyen complémentaire comme le préservatif ou le diaphragme.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ch" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">A qui cette méthode convient-elle&nbsp;?</span></div></div>
+<div class="m"><div id="T1ci" class="txs">Ce type de contraception rend la relation plus intense,</div> <div id="T1cj" class="txs">mais elle exige beaucoup des deux partenaires qui devront beaucoup communiquer.</div>  <div id="T1ck" class="txs">Elle convient aux femmes et aux couples qui sont prêts à parler d'eux-mêmes,</div> <div id="T1cl" class="txs">de leur sexualité et de leur fertilité.</div> <div id="T1cm" class="txs">C’est aussi pour les femmes qui ont un cycle à peu près régulier (entre 25 et 35 jours) et une façon de vivre stable.</div></div>
+<div class="m"><div id="T1cn" class="txs">A l’inverse,</div> <div id="T1co" class="txs">cette méthode peut également être utilisée pour trouver les jours fertiles quand le couple souhaite avoir un enfant.</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1cp" class="txs"><span class="bd">✓</span><span class="bd"> </span><span class="bd">Quelle est la fiabilité de la méthode naturelle combinée&nbsp;?</span></div></div>
+<div class="m"><div id="T1cq" class="txs">Cette méthode peut être fiable,</div> <div id="T1cr" class="txs">mais demande beaucoup des deux conjoints.</div> <div id="T1cs" class="txs">Pour pouvoir appliquer sûrement cette méthode et bien interpréter les signes donnés par le corps,</div> <div id="T1ct" class="txs">il faut prendre le temps de bien observer son propre corps pendant quelques cycles afin de déterminer si cette méthode est applicable pour le couple.</div></div>
+<div class="m"><div id="T1cu" class="txs">Si les rapports sexuels non protégés ont lieu uniquement pendant les jours absolument sûrs qui suivent l’ovulation,</div> <div id="T1cv" class="txs">la fiabilité est grande.</div> <div id="T1cw" class="txs">Pendant le reste du cycle,</div> <div id="T1cx" class="txs">utilisez d’autres moyens de contraception,</div> <div id="T1cy" class="txs">comme le préservatif ou le diaphragme,</div> <div id="T1cz" class="txs">la sécurité étant alors dans le moyen utilisé.</div></div>
+<div class="m"><div id="T1da" class="txs">Les jours non fertiles qui suivent l’ovulation sont faciles à déterminer.</div> <div id="T1db" class="txs">Il est plus difficile de savoir quels sont les jours non fertiles avant l’ovulation.</div></div>
+<div class="b">&nbsp;</div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://media.ipsapps.org/fra/fra-audio/ora/18 Pascal mariage.webm" type="audio/webm" />
+    <source id="audio2" src="https://media.ipsapps.org/fra/fra-audio/ora/18 Pascal mariage.caf" type="audio/x-caf" />
+    <source id="audio3" src="https://media.ipsapps.org/fra/fra-audio/ora/18 Pascal mariage.mp3" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>

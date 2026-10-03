@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 Sisɛ ni Buntenin 1</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "1a", start: 0, end: 0.71 },
+    { label: "1b", start: 0.96, end: 1.31 },
+    { label: "1c", start: 1.56, end: 2.59 },
+    { label: "1d", start: 2.84, end: 4.93 },
+    { label: "1e", start: 5.18, end: 8.61 },
+    { label: "1f", start: 8.86, end: 10.95 },
+    { label: "1g", start: 11.2, end: 13.85 },
+    { label: "1h", start: 14.1, end: 15.73 },
+    { label: "1i", start: 15.98, end: 19.45 },
+    { label: "1j", start: 19.7, end: 21.13 },
+    { label: "1k", start: 21.38, end: 24.51 },
+    { label: "1l", start: 24.76, end: 26.19 },
+    { label: "1m", start: 26.44, end: 29.17 },
+    { label: "1n", start: 29.42, end: 30.61 },
+    { label: "1o", start: 30.86, end: 33.47 },
+    { label: "1p", start: 33.72, end: 37.23 },
+    { label: "1q", start: 37.48, end: 39.99 },
+    { label: "1r", start: 40.24, end: 41.29 },
+    { label: "1s", start: 41.54, end: 45.81 },
+    { label: "1t", start: 46.06, end: 47.71 },
+    { label: "1u", start: 47.96, end: 49.17 },
+    { label: "1v", start: 49.42, end: 50.85 },
+    { label: "1w", start: 51.1, end: 53.39 },
+    { label: "1x", start: 53.64, end: 56.11 },
+    { label: "1y", start: 56.36, end: 57.77 },
+    { label: "1z", start: 58.02, end: 60.99 },
+    { label: "1aa", start: 61.24, end: 62.67 },
+    { label: "1ab", start: 62.92, end: 64.25 },
+    { label: "1ac", start: 64.5, end: 67.87 },
+    { label: "1ad", start: 68.12, end: 69.71 },
+    { label: "1ae", start: 69.96, end: 71.83 },
+    { label: "1af", start: 72.08, end: 73.01 },
+    { label: "1ag", start: 73.26, end: 75.61 },
+    { label: "1ah", start: 75.86, end: 78.89 },
+    { label: "1ai", start: 79.14, end: 80.69 },
+    { label: "1aj", start: 80.94, end: 81.71 },
+    { label: "1ak", start: 81.96, end: 84.89 },
+    { label: "1al", start: 85.14, end: 85.67 },
+    { label: "1am", start: 85.92, end: 88.83 },
+    { label: "1an", start: 89.08, end: 89.77 },
+    { label: "1ao", start: 90.02, end: 91.23 },
+    { label: "1ap", start: 91.48, end: 95.45 },
+    { label: "1aq", start: 95.7, end: 96.85 },
+    { label: "1ar", start: 97.1, end: 100.57 },
+    { label: "1as", start: 100.82, end: 101.53 },
+    { label: "1at", start: 101.78, end: 105.39 },
+    { label: "1au", start: 105.64, end: 106.43 },
+    { label: "1av", start: 106.68, end: 111.51 },
+    { label: "1aw", start: 111.76, end: 116.33 },
+    { label: "1ax", start: 116.58, end: 117.87 },
+    { label: "1ay", start: 118.12, end: 121.87 },
+    { label: "1az", start: 122.12, end: 123.09 },
+    { label: "1ba", start: 123.34, end: 125.05 },
+    { label: "1bb", start: 125.3, end: 126.47 },
+    { label: "1bc", start: 126.72, end: 128.95 },
+    { label: "1bd", start: 129.2, end: 130.99 },
+    { label: "1be", start: 131.24, end: 134.15 },
+    { label: "1bf", start: 134.4, end: 135.43 },
+    { label: "1bg", start: 135.68, end: 137.13 },
+    { label: "1bh", start: 137.38, end: 142.43 },
+    { label: "1bi", start: 142.68, end: 144.25 },
+    { label: "1bj", start: 144.5, end: 146.53 },
+    { label: "1bk", start: 146.78, end: 150.19 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 0;
+var stopTime  = 150.19;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 1 }];
+var hasIntro = false;
+var baseRef  = "01-B001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;1 Sisɛ ni Buntenin&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;1&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='02-B002-001.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/C01-B001-image1.png" />
+
+<div class="b"></div>
+<div class="b"></div>
+<div class="m"><div id="T1a" class="txs"><span class="bd">Sisɛ</span><span class="bd">́</span><span class="bd"> </span><span class="bd">ni</span><span class="bd"> </span><span class="bd">Búntenin</span></div></div>
+<div class="m"><div id="T1b" class="txs">N síírìn&nbsp;!</div> <div id="T1c" class="txs">n síírìn&nbsp;!</div></div>
+<div class="m"><div id="T1d" class="txs"><span class="it">Naamu</span><span class="it">́&nbsp;!</span></div></div>
+<div class="m"><div id="T1e" class="txs">ńy’á lá Sisɛ́ ní Búntenin kán.</div></div>
+<div class="m"><div id="T1f" class="txs"><span class="it">Náamu</span><span class="it">&nbsp;!</span></div></div>
+<div class="m"><div id="T1g" class="txs">Sisɛ́ ni Búntenin tun yé sìnàmúsóẁ yé</div></div>
+<div class="m"><div id="T1h" class="txs"><span class="it">Náamu</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1i" class="txs">Lóon dɔ́ sisɛ́ ní búntenin kɛlɛrá.</div></div>
+<div class="m"><div id="T1j" class="txs"><span class="it">Náamu</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1k" class="txs">Sisɛ́ yé búntenin sɔgɔ a juú rá.</div></div>
+<div class="m"><div id="T1l" class="txs"><span class="it">Náamu</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1m" class="txs">Búntenin yé sisɛ́ cin a seén na.</div></div>
+<div class="m"><div id="T1n" class="txs"><span class="it">Náamu</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1o" class="txs">A fírinfirinna ka ben,</div> <div id="T1p" class="txs">ka lá dugumá n’á bí kúle.</div></div>
+<div class="m"><div id="T1q" class="txs">Ó cɛɛ́ nána don kó :</div></div>
+<div class="m"><div id="T1r" class="txs"><span class="it">Náamu</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1s" class="txs">«A kɛ́ra di sisɛ́ lára dugumà n’ábí kúle»?</div></div>
+<div class="m"><div id="T1t" class="txs"><span class="it">Náamu</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1u" class="txs">Búntenin kó :</div></div>
+<div class="m"><div id="T1v" class="txs"><span class="it">Náamu</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1w" class="txs">A yé ń cin n juu ra,</div> <div id="T1x" class="txs">ń y’á sɔgɔ a seén ná,</div></div>
+<div class="m"><div id="T1y" class="txs">Náamu&nbsp;!</div></div>
+<div class="m"><div id="T1z" class="txs">A lára dugumá n’á bí kúle.</div></div>
+<div class="m"><div id="T1aa" class="txs"><span class="it">Náamu</span><span class="it"> </span><span class="it">!</span></div></div>
+<div class="m"><div id="T1ab" class="txs">O le y’á tó,</div> <div id="T1ac" class="txs">o kó án kána mɔgɔ́ yé fítinin ka jɔn a rá.</div></div>
+<div class="m"><div id="T1ad" class="txs">Ń y’á ta yɔ́rɔ min,</div> <div id="T1ae" class="txs">ń y’á bila o yɔ́rɔ lá.</div></div>
+<div class="m"><div id="T1af" class="txs"><span class="it">Í </span><span class="it">dánsɛ</span><span class="it">̀!</span></div></div>
+<div class="m"><div id="T1ag" class="txs">ǹsee</div></div>
+<div class="b">&nbsp;</div>
+<div class="m"><div id="T1ah" class="txs"><span class="bd">La</span><span class="bd"> </span><span class="bd">poule</span><span class="bd"> </span><span class="bd">et</span><span class="bd"> </span><span class="bd">le</span><span class="bd"> </span><span class="bd">scorpion</span></div></div>
+<div class="m"><div id="T1ai" class="txs">Écoutez mon conte&nbsp;!</div></div>
+<div class="m"><div id="T1aj" class="txs"><span class="it">Oui&nbsp;!</span></div></div>
+<div class="m"><div id="T1ak" class="txs">Il s’agit de la poule et du scorpion (femelle).</div></div>
+<div class="m"><div id="T1al" class="txs"><span class="it">oui</span><span class="it">&nbsp;!</span></div></div>
+<div class="m"><div id="T1am" class="txs">La  poule et le scorpion (femelle) étaient des coépouses</div></div>
+<div class="m"><div id="T1an" class="txs"><span class="it">oui</span><span class="it">&nbsp;!</span></div></div>
+<div class="m"><div id="T1ao" class="txs">Un jour,</div> <div id="T1ap" class="txs">la  poule et le scorpion (femelle) se sont disputés.</div></div>
+<div class="m"><div id="T1aq" class="txs"><span class="it">oui</span><span class="it">&nbsp;!</span></div></div>
+<div class="m"><div id="T1ar" class="txs">La  poule a piqué  le scorpion (femelle) à la fesse.</div></div>
+<div class="m"><div id="T1as" class="txs">oui&nbsp;!</div></div>
+<div class="m"><div id="T1at" class="txs">Le scorpion (femelle) a mordu  la poule au pied.</div></div>
+<div class="m"><div id="T1au" class="txs"><span class="it">oui</span><span class="it">&nbsp;!</span></div></div>
+<div class="m"><div id="T1av" class="txs">Elle a gigoté et s’est couchée à terre en criant.</div></div>
+<div class="m"><div id="T1aw" class="txs">Leur mari est rentré et a dit que:</div></div>
+<div class="m"><div id="T1ax" class="txs"><span class="it">oui</span><span class="it">&nbsp;!</span></div></div>
+<div class="m"><div id="T1ay" class="txs">Comment se fait-il que la poule est couchée à terre et crie?</div></div>
+<div class="m"><div id="T1az" class="txs"><span class="it">oui</span><span class="it">&nbsp;!</span></div></div>
+<div class="m"><div id="T1ba" class="txs">Le scorpion (femelle) dit que :</div></div>
+<div class="m"><div id="T1bb" class="txs"><span class="it">oui</span><span class="it">&nbsp;!</span></div></div>
+<div class="m"><div id="T1bc" class="txs">Elle m’a mordu à la fesse,</div> <div id="T1bd" class="txs">je l’ai piquée au pied,</div></div>
+<div class="m"><div id="T1be" class="txs">elle s’est couchée à terre en criant.</div></div>
+<div class="m"><div id="T1bf" class="txs"><span class="it">oui</span><span class="it">&nbsp;!</span></div></div>
+<div class="m"><div id="T1bg" class="txs">C’est pourquoi,</div> <div id="T1bh" class="txs">on dit que l’on ne doit pas juger quelqu’un par sa petite taille.</div></div>
+<div class="m"><div id="T1bi" class="txs"><span class="bd">Morale</span><span class="bd">  </span></div></div>
+<div class="m"><div id="T1bj" class="txs"><span class="bd">«&nbsp;L’habit ne fait le moine&nbsp;»&nbsp;!</span></div></div>
+<div class="m"><div id="T1bk" class="txs"><span class="bd">«&nbsp;</span><span class="bd">I</span><span class="bd">l ne faut pas se fier à l’apparence&nbsp;»</span>&nbsp;!</div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/conte 1.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

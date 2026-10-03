@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saa bi duguma seen bi dug 8</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="css/rab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "8a", start: 187.42, end: 189.56 },
+    { label: "8b", start: 189.81, end: 191.42 },
+    { label: "8c", start: 191.67, end: 195.59 },
+    { label: "8d", start: 195.84, end: 197.94 },
+    { label: "8e", start: 198.19, end: 199.5 },
+    { label: "8f", start: 199.75, end: 202.12 },
+    { label: "8g", start: 202.38, end: 209.74 },
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+// Audio start and stop times
+var startTime = 187.42;
+var stopTime  = 209.74;
+
+var audio = document.getElementById("audio");
+audio.addEventListener('canplaythrough', function() {
+   if (this.currentTime < startTime) {
+      this.currentTime = startTime;
+   }
+});
+
+audio.addEventListener('timeupdate', function() {
+   if (this.currentTime > stopTime) {
+      this.pause();
+      this.currentTime = startTime;
+   }
+});
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 29 }];
+var hasIntro = false;
+var baseRef  = "01-001-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='01-001-007.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector">&nbsp;&nbsp;Saa bi duguma seen bi dug&nbsp;&nbsp;</span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;8&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='01-001-009.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+<img src="images/Dioula Proverbes 29-image8.jpeg" />
+
+<div class="m"><div id="T8a" class="txs"><span class="bd">Tagafe ka fɛgɛ yɔrɔ min na,</span></div> <div id="T8b" class="txs"><span class="bd">a bi sɔgɔ o yɔrɔ le la.</span></div></div>
+<div class="m"><div id="T8c" class="txs"><span class="it">[</span><span class="it">Le pagne se </span><span class="it">trou</span><span class="it">e</span><span class="it"> là où il est léger.</span></div></div>
+<div class="m"><div id="T8d" class="txs"><span class="bdit">En toute chose,</span></div> <div id="T8e" class="txs"><span class="bdit">il y a de la logique</span><span class="bdit">]</span><span class="bdit">.</span></div></div>
+<div class="m"><div id="T8f" class="txs"><span class="bd">Tagafe ka fɛgɛ yɔrɔ min na,</span></div> <div id="T8g" class="txs"><span class="bd">a bi sɔgɔ o yɔrɔ le la.</span></div></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://storage.googleapis.com/dyu-dioula/audio/dioula Prov 01 a 29 avec musique.mp3" />
+  </audio>
+</div>
+</div>
+
+</body>
+</html>

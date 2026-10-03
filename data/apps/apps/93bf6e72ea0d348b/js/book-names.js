@@ -1,0 +1,18 @@
+var books = [
+  { name: "Pourquoi prier pour les", ref: "01-B001-001.html" },
+  { name: "La guérison d’un malade", ref: "02-B002-001.html" },
+  { name: "1 L’amertume", ref: "03-B003-001.html" },
+  { name: "2 La colère", ref: "04-B004-001.html" },
+  { name: "3 La convoitise", ref: "05-B005-001.html" },
+  { name: "4 Le découragement et la", ref: "06-B006-001.html" },
+  { name: "5 La dispute ", ref: "07-B007-001.html" },
+  { name: "6 La haine", ref: "08-B008-001.html" },
+  { name: "7 L’immoralité sexuelle", ref: "09-B009-001.html" },
+  { name: "8 La jalousie", ref: "10-B010-001.html" },
+  { name: "9 La médisance", ref: "11-B011-001.html" },
+  { name: "10 Le mensonge", ref: "12-B012-001.html" },
+  { name: "11 L’orgueil", ref: "13-B013-001.html" },
+  { name: "12 L’incapacité de", ref: "14-B014-001.html" },
+  { name: "13 La peur et les soucis", ref: "15-B015-001.html" },
+  { name: "Table de matières ", ref: "16-B016-001.html" },
+];

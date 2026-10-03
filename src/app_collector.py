@@ -58,6 +58,9 @@ MEDIA_EXTS = {
 OTHER_STATIC_EXTS = {".woff", ".woff2", ".ttf", ".eot", ".ico", ".pdf", ".zip"}
 STATIC_EXTS = TEXT_EXTS | MEDIA_EXTS | OTHER_STATIC_EXTS
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"}
+AUDIO_EXTS = {".mp3", ".wav", ".ogg", ".m4a", ".aac", ".flac", ".opus", ".webm"}
+# Many apps stream their narration from the publisher's cloud buckets rather than media.ipsapps.org.
+DEFAULT_AUDIO_HOSTS = ["storage.googleapis.com"]
 TEXT_KINDS = {"html", "javascript", "json", "xml", "css", "text"}
 
 # ISO-ish URL codes observed/expected in IPS app paths.
@@ -187,7 +190,10 @@ def make_session(user_agent: str, retries: int) -> requests.Session:
 def local_rel_path(app_id: str, url: str, prefix: str, content_type: str = "") -> Path:
     parsed = urlparse(url)
     pfx = urlparse(prefix).path
-    if parsed.path.startswith(pfx):
+    if parsed.netloc.lower() != urlparse(prefix).netloc.lower():
+        # Audio from an allowed external host: keep the host so paths cannot collide.
+        rel = f"_external/{parsed.netloc.lower()}/" + unquote(parsed.path).lstrip("/")
+    elif parsed.path.startswith(pfx):
         rel = unquote(parsed.path[len(pfx):])
     else:
         # Shared static asset outside the app prefix: preserve enough host path to avoid collisions.
@@ -260,7 +266,8 @@ class Seed:
 
 class Collector:
     def __init__(self, out: Path, timeout: float, delay: float, max_files: int, max_file_bytes: int | None,
-                 session_factory, workers: int = 1, skip_images: bool = False):
+                 session_factory, workers: int = 1, skip_images: bool = False,
+                 audio_hosts: Iterable[str] = ()):
         self.out = out
         self.timeout = timeout
         self.delay = delay
@@ -269,6 +276,7 @@ class Collector:
         self.session_factory = session_factory
         self.workers = max(1, workers)
         self.skip_images = skip_images
+        self.audio_hosts = {h.lower() for h in audio_hosts}
         self._local = threading.local()
         self.rows: list[dict[str, str]] = []
         self.errors: list[dict[str, str]] = []
@@ -383,7 +391,8 @@ class Collector:
                         # HTML/routes are sandboxed to the app directory so we never crawl the entire host.
                         # Static assets/data discovered by the app may live in shared parent directories.
                         if not inside:
-                            if not same_host or cext not in STATIC_EXTS or cext in {".html", ".htm"}:
+                            external_audio = urlparse(child).netloc.lower() in self.audio_hosts and cext in AUDIO_EXTS
+                            if not external_audio and (not same_host or cext not in STATIC_EXTS or cext in {".html", ".htm"}):
                                 continue
                         if cext and cext not in STATIC_EXTS:
                             continue
@@ -443,6 +452,8 @@ def main() -> None:
     ap.add_argument("--user-agent", default="AI-KING-LanguageCorpus/1.1")
     ap.add_argument("--workers", type=int, default=1, help="Concurrent downloads per app")
     ap.add_argument("--skip-images", action="store_true", help="Do not download image files")
+    ap.add_argument("--audio-host", action="append", dest="audio_hosts", default=None,
+                    help=f"External host allowed for audio files; repeatable (default: {', '.join(DEFAULT_AUDIO_HOSTS)})")
     args = ap.parse_args()
 
     out = Path(args.out)
@@ -455,7 +466,8 @@ def main() -> None:
     max_bytes = None if args.max_file_mb <= 0 else int(args.max_file_mb * 1024 * 1024)
     collector = Collector(out, args.timeout, args.delay, args.max_files_per_app, max_bytes,
                           lambda: make_session(args.user_agent, args.retries),
-                          workers=args.workers, skip_images=args.skip_images)
+                          workers=args.workers, skip_images=args.skip_images,
+                          audio_hosts=DEFAULT_AUDIO_HOSTS if args.audio_hosts is None else args.audio_hosts)
 
     def write_manifests() -> None:
         rows = sorted(collector.rows, key=lambda r: (r["app_url"], r["url"]))

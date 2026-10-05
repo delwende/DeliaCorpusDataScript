@@ -102,7 +102,7 @@ Le moteur produit notamment :
 python src/export_corpus.py --aligned data/aligned --raw data/raw --apps data/apps --out corpus
 ```
 
-Produit `corpus/`, organisé par langue — langues du Burkina, mais aussi le français et l'anglais présents sur le site (les paires de traduction vont toujours de la langue locale vers fr/en) : segments audio ↔ transcription par langue (`speech/<lang>/segments.csv` + `audio/`), mots enregistrés, paires de traduction, lexiques et texte monolingue. Les lignes françaises lues dans les applications de proverbes sont détectées et classées en `fr` (et non dans l'audio local) ; sur les pages strictement alternées, elles deviennent des paires de traduction. Les devinettes sont aussi exportées en enregistrements structurés (`riddles/<lang>.jsonl`). Voir `corpus/README.md` pour les volumes par langue.
+Produit `corpus/`, organisé par langue — langues du Burkina, mais aussi le français et l'anglais présents sur le site (les paires de traduction vont toujours de la langue locale vers fr/en) : segments audio ↔ transcription par langue (`speech/<lang>/segments.csv` + `audio/`), mots enregistrés, paires de traduction, lexiques et texte monolingue. Les lignes françaises lues dans les applications de proverbes sont détectées et classées en `fr` (et non dans l'audio local) ; sur les pages strictement alternées, elles deviennent des paires de traduction. Les devinettes sont aussi exportées en enregistrements structurés (`riddles/<lang>.jsonl`). Voir `corpus/README.md` pour les volumes par langue. `corpus/SOURCES.csv` liste chaque source (application, pages, PDF), ses droits connus et ce qu'elle apporte au corpus ; `corpus/LICENSES.md` en fait la synthèse.
 
 ## Langues
 

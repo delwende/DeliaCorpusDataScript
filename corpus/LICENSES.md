@@ -10,7 +10,7 @@ Généré par `src/export_corpus.py`. Détail par source : `SOURCES.csv` (ce que
 - Les seules mentions trouvées sur le site concernent des vidéos bibliques intégrées (non collectées), p. ex. :
   « Bible Text in Gulmancema © 2003 Alliance Biblique du Burkina Faso, Audio ℗ 2007 Hosanna » et
   « © 2005 Wycliffe Bible Translators… Audio ℗ 2016 Hosanna ».
-- Bible : l'audio (Faith Comes By Hearing, `fcbhabdm.s3.amazonaws.com`) n'est pas collecté. Le texte des applications bibliques (fuh/osa/bible/, mos2/osa/, 23431 lignes) est actuellement inclus dans `text/` : décision en attente (droits des sociétés bibliques).
+- Bible : l'audio (Faith Comes By Hearing, `fcbhabdm.s3.amazonaws.com`) n'est pas collecté. Le texte des applications bibliques (fuh/osa/bible/, mos2/osa/, 23431 lignes) est conservé dans `text/` par décision du projet ; ses droits appartiennent aux sociétés bibliques (à vérifier avant tout usage commercial).
 
 ## Usage
 

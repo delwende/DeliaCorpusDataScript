@@ -160,7 +160,7 @@ def write_sources(out: Path, credits: dict, source_langs: dict, apps: Path, inve
         row.update({m: (f"{c[m]:.2f}" if m.endswith("hours") else str(int(c[m]))) for m in METRICS})
         if "/osa/" in key:
             row["kind"] = "scripture app"
-            row["licence_status"] = SCRIPTURE_STATUS + ("; its text is currently in the corpus (decision pending)" if c else "")
+            row["licence_status"] = SCRIPTURE_STATUS + ("; its text is kept in the corpus (project decision)" if c else "")
         rows.append(row)
     # Scripture is deliberately not collected (third-party Bible translations and recordings).
     seen = set()
@@ -193,8 +193,8 @@ def write_sources(out: Path, credits: dict, source_langs: dict, apps: Path, inve
         "  « © 2005 Wycliffe Bible Translators… Audio ℗ 2016 Hosanna ».",
         "- Bible : l'audio (Faith Comes By Hearing, `fcbhabdm.s3.amazonaws.com`) n'est pas collecté."
         + (" Le texte des applications bibliques (" + ", ".join(r["source"].split("org/")[-1] for r in scripture_text)
-           + f", {sum(int(r['text_lines']) for r in scripture_text)} lignes) est actuellement inclus dans `text/` : "
-             "décision en attente (droits des sociétés bibliques)." if scripture_text else ""), "",
+           + f", {sum(int(r['text_lines']) for r in scripture_text)} lignes) est conservé dans `text/` par décision du projet ; "
+             "ses droits appartiennent aux sociétés bibliques (à vérifier avant tout usage commercial)." if scripture_text else ""), "",
         "## Usage", "",
         "Pour un usage commercial, obtenir l'accord des propriétaires des sources marquées « unknown » "
         "(contact : https://mooreburkina.com). `SOURCES.csv` indique ce que chaque source apporte, ce qui "

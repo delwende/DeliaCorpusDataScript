@@ -122,6 +122,8 @@ Une ressource téléchargée n'est pas automatiquement considérée comme align�
 
 - **Contes avec version française** (ex. `mos/ora/vol5`, `dyu/ora/c04`) : une page en langue locale (avec audio) suivie de sa version française. Chaque conte devient une paire au niveau du conte (`parallel_stories/<lang>-fr.jsonl`). Les versions françaises étant des traductions libres (paragraphes découpés autrement), aucune paire phrase à phrase n'en est tirée.
 
+- **Dictionnaires PDF** (`src/lexique_pdf.py`, exports Lexique Pro en deux colonnes) : la typographie donne la structure (vedette, gloses fr/en/de, exemples). Utilisés surtout pour le mooré, qui n'a pas d'application dictionnaire. Pour le dioula et le fulfulde, l'application (HTML) est prioritaire ; le PDF n'ajoute que les vedettes absentes et les phrases d'exemple traduites (absentes de l'application). Les doublons entre dictionnaire principal et lexiques thématiques sont supprimés. Les sites Webonary ne sont pas collectés : ils bloquent l'accès automatisé (Cloudflare).
+
 La langue d'une application est déduite du code de dossier (`mos`, `dyu`, `fuh`, `fra`…), sauf si le nom du fichier audio indique une autre langue.
 
 ### Collecte des applications : reprise et vitesse

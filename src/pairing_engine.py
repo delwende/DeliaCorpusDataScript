@@ -1196,6 +1196,58 @@ def collect_corpus_page_units(corpus: Path, idx: AssetIndex) -> list[Unit]:
     return out
 
 
+# PDF dictionaries name their language in the file name; the crawler's page-level guess is noisy.
+PDF_LANG_HINTS = [("bambara", "bam"), ("moore", "mos"), ("mooré", "mos"), ("dioula", "dyu"), ("jula", "dyu"),
+                  ("fulfulde", "ful"), ("gulmancema", "gux"), ("gulimancema", "gux")]
+
+
+def pdf_language(name: str) -> str:
+    low = unquote(name).lower()
+    return next((code for hint, code in PDF_LANG_HINTS if hint in low), "")
+
+
+def collect_pdf_dictionary_units(corpus: Path) -> list[Unit]:
+    """Lexique Pro dictionary PDFs (Mooré has no dictionary app): one unit per sense and per
+    translated example sentence. Other PDFs are left to the text extraction step."""
+    try:
+        import lexique_pdf
+    except ImportError:
+        return []
+    units: list[Unit] = []
+    for r in read_csv(corpus / "metadata" / "download_manifest.csv"):
+        rel = (r.get("local_path") or "").split(";")[0]
+        if r.get("resource_type") != "pdf" or not rel.lower().endswith(".pdf") or not (corpus / rel).exists():
+            continue
+        lang = pdf_language(Path(rel).name) or pdf_language(r.get("source_url", ""))
+        if not lang:
+            continue
+        try:
+            entries = lexique_pdf.parse_pdf(corpus / rel)
+        except Exception as exc:  # a broken PDF should not stop the run
+            print(f"PDF dictionary skipped ({type(exc).__name__}): {rel}")
+            continue
+        common = dict(language=lang, source_page=r.get("source_url", ""), source_file=rel)
+        for order, e in enumerate(entries, 1):
+            extra = {k: v for k, v in (("phonetic", e.phonetic), ("category", e.fields.get("category", "")),
+                                       ("dialects", e.fields.get("dialects", ""))) if v}
+            for i, sense in enumerate(e.senses, 1):
+                units.append(Unit(record_order=f"{order}.{i}", headword=e.headword, text=e.headword,
+                                  part_of_speech=e.part_of_speech, translation_fr=sense.get("fr", ""),
+                                  translation_en=sense.get("en", ""), collection="dictionary",
+                                  translations_json=json.dumps({**extra, **({"de": sense["de"]} if sense.get("de") else {})},
+                                                               ensure_ascii=False),
+                                  evidence="lexique_pro_pdf_entry", confidence=0.9, **common).finalize())
+            for j, ex in enumerate(e.examples, 1):
+                if ex.get("fr") or ex.get("en"):
+                    units.append(Unit(record_order=f"{order}.x{j}", headword=e.headword, text=ex["local"],
+                                      translation_fr=ex.get("fr", ""), translation_en=ex.get("en", ""),
+                                      collection="dictionary_example",
+                                      translations_json=json.dumps({"de": ex["de"]} if ex.get("de") else {},
+                                                                   ensure_ascii=False),
+                                      evidence="lexique_pro_pdf_example", confidence=0.9, **common).finalize())
+    return units
+
+
 def enrich_by_exact_stem(units: list[Unit], idx: AssetIndex) -> None:
     for u in units:
         # If a source unit refers to one media type, exact stem can add companion media.
@@ -1286,6 +1338,7 @@ def main() -> None:
         units.extend(collect_app_units(apps_opt, idx))
     if corpus_opt:
         units.extend(collect_corpus_page_units(corpus_opt, idx))
+        units.extend(collect_pdf_dictionary_units(corpus_opt))
     enrich_by_exact_stem(units, idx)
     units = dedupe_units([u for u in units if u.confidence >= args.min_confidence and (u.text or u.translation_fr or u.translation_en or u.audio or u.image)])
     outputs(units, Path(args.out))

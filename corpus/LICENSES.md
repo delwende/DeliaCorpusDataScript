@@ -4,7 +4,7 @@ Généré par `src/export_corpus.py`. Détail par source : `SOURCES.csv` (ce que
 
 ## Constat
 
-- 69 sources contribuent au corpus : les pages et PDF de mooreburkina.com et les applications linguistiques qu'il intègre (media.ipsapps.org, audio sur storage.googleapis.com).
+- 99 sources contribuent au corpus : les pages et PDF de mooreburkina.com et les applications linguistiques qu'il intègre (media.ipsapps.org, audio sur storage.googleapis.com).
 - Aucune de ces sources n'affiche de mention de licence ou de droits d'auteur.
   Sans licence explicite, les droits sont réservés par défaut : statut « unknown » dans `SOURCES.csv`.
 - Les seules mentions trouvées sur le site concernent des vidéos bibliques intégrées (non collectées), p. ex. :
@@ -20,6 +20,8 @@ Pour un usage commercial, obtenir l'accord des propriétaires des sources marqu�
 
 | Source | Langues | Audio (h) | Mots enregistrés | Paires fr | Lexique | Lignes texte |
 |---|---|---|---|---|---|---|
+| mooreburkina.com/sites/www.mooreburkina.com/files/pdf-files/Bambara%20Lexique.pdf | bam | 0.00 | 0 | 22302 | 22334 | 0 |
+| mooreburkina.com/sites/www.mooreburkina.com/files/pdf-files/01%20Dictionnaire%20Moor%C3%A9%20-%20%20fran%C3%A7ais%20-%20English.pdf | mos | 0.00 | 0 | 15194 | 12126 | 3091 |
 | media.ipsapps.org/fuh/oda/ | ful | 0.00 | 6879 | 13530 | 13581 | 7 |
 | media.ipsapps.org/dyu/oda/ | dyu | 0.00 | 0 | 12364 | 12375 | 8 |
 | media.ipsapps.org/fuh/osa/bible/ | ful | 0.00 | 0 | 0 | 0 | 15474 |
@@ -27,9 +29,11 @@ Pour un usage commercial, obtenir l'accord des propriétaires des sources marqu�
 | media.ipsapps.org/fra/ora/bienvenu/ | fr | 1.65 | 0 | 0 | 0 | 10466 |
 | media.ipsapps.org/mos2/osa/ | mos | 0.00 | 0 | 0 | 0 | 7957 |
 | media.ipsapps.org/fra/ora/richesses/ | en;fr | 1.05 | 0 | 0 | 0 | 4754 |
+| mooreburkina.com/sites/www.mooreburkina.com/files/pdf-files/02%20Dictionnaire%20Dioula%20-%20fran%C3%A7ais%20-%20English%20-%20Deutsch.pdf | dyu | 0.00 | 0 | 1942 | 4 | 1957 |
 | media.ipsapps.org/fra/ora/evangile/ | fr | 1.59 | 0 | 0 | 0 | 2109 |
 | media.ipsapps.org/mos/ora/vol5/ | fr;mos | 1.46 | 0 | 0 | 0 | 2308 |
 | media.ipsapps.org/fra/ora/conseils/ | fr | 1.64 | 0 | 0 | 0 | 1678 |
+| mooreburkina.com/sites/www.mooreburkina.com/files/pdf-files/03%20Dictionnaire%20fulfulde%20-%20francais%20%20English.pdf | ful | 0.00 | 0 | 1613 | 6 | 1607 |
 | media.ipsapps.org/mos/ora/devin/ | fr;mos | 1.73 | 0 | 2 | 0 | 595 |
 | media.ipsapps.org/mos/ora/vol3/ | fr;mos | 1.19 | 0 | 0 | 0 | 1621 |
 | media.ipsapps.org/fuh/ora/co8/ | ful | 1.11 | 0 | 0 | 0 | 1755 |
@@ -41,7 +45,3 @@ Pour un usage commercial, obtenir l'accord des propriétaires des sources marqu�
 | media.ipsapps.org/mos/ora/co-fr1/ | fr;mos | 1.37 | 0 | 0 | 0 | 584 |
 | media.ipsapps.org/fuh/ora/co1/ | fr;ful | 1.14 | 0 | 0 | 0 | 885 |
 | media.ipsapps.org/mos/ora/vol4/ | fr;mos | 1.22 | 0 | 0 | 0 | 515 |
-| media.ipsapps.org/fuh/ora/co7/ | ful | 0.83 | 0 | 0 | 0 | 1261 |
-| media.ipsapps.org/fuh/ora/co5/ | ful | 0.85 | 0 | 0 | 0 | 1092 |
-| media.ipsapps.org/mos/ora/co-fr2/ | fr;mos | 1.15 | 0 | 0 | 0 | 488 |
-| media.ipsapps.org/fuh/ora/co4/ | ful | 0.79 | 0 | 0 | 0 | 950 |

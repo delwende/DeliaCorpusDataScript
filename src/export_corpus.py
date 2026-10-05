@@ -23,6 +23,7 @@ import csv
 import json
 import re
 import shutil
+import unicodedata
 import subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -120,7 +121,13 @@ METRICS = ["speech_hours", "speech_segments", "long_form_hours", "word_recording
 
 
 def source_key(u: dict) -> str:
+    if u.get("evidence", "").startswith("lexique_pro_pdf") and u.get("source_page"):
+        return u["source_page"]  # each PDF dictionary is its own source
     return u.get("app_url") or SITE_PAGES
+
+
+def norm_key(text: str) -> str:
+    return re.sub(r"[\W_]+", " ", unicodedata.normalize("NFC", text).lower()).strip()
 
 
 def copyright_notice(folder: Path) -> str:
@@ -266,12 +273,27 @@ def main() -> None:
         credits[key][metric] += amount
         source_langs[key].add(u["language"])
 
+    # Dictionaries: app (HTML) entries win; PDF senses only add headwords the app lacks, and a
+    # sense/example repeated across PDFs (main dictionary + thematic lexicons) is kept once.
+    app_headwords = {(u["language"], norm_key(u["headword"])) for u in units if u["evidence"].startswith("lexique_pro_entry")}
+    seen_pdf: set[tuple] = set()
+
     for u in units:
         lang = u["language"]
         src = u["text"].strip()
         if not src:
             continue
         origin = u["evidence"].split("+", 1)[0]
+        if origin == "lexique_pro_pdf_entry":
+            key = (lang, norm_key(u["headword"]), norm_key(u["translation_fr"]), norm_key(u["translation_en"]))
+            if (lang, norm_key(u["headword"])) in app_headwords or key in seen_pdf:
+                continue
+            seen_pdf.add(key)
+        elif origin == "lexique_pro_pdf_example":
+            key = (lang, "example", norm_key(src))
+            if key in seen_pdf:
+                continue
+            seen_pdf.add(key)
         if origin == "page_audio_transcript":
             rel = copier.copy(lang, u["audio"])
             if rel:
@@ -311,13 +333,13 @@ def main() -> None:
                 credit(u, "speech_hours", float(segments[lang][-1]["duration"]) / 3600)
             else:
                 missing_audio += 1
-        if origin == "lexique_pro_entry":
+        if origin in {"lexique_pro_entry", "lexique_pro_pdf_entry"}:
             extra = json.loads(u["translations_json"] or "{}")
             lexicon[lang].append({
                 "headword": u["headword"], "part_of_speech": u["part_of_speech"],
                 "fr": u["translation_fr"], "en": u["translation_en"], "de": extra.get("de", ""),
                 "phonetic": extra.get("phonetic", ""), "dialects": extra.get("dialects", ""),
-                "category": extra.get("category", ""), "app_url": u["app_url"],
+                "category": extra.get("category", ""), "app_url": u["app_url"] or u["source_page"],
             })
             credit(u, "lexicon_senses")
             if u["audio"]:

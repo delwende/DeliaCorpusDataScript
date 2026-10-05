@@ -957,8 +957,11 @@ def parse_html_file(path: Path, meta: dict[str, str], idx: AssetIndex, rel_sourc
             lang = app_language(meta, src)
             if sum(is_french(t) for t in paras) / len(paras) > 0.5:
                 lang = "fr" if lang not in {"en"} else lang
+            # The leading tale number is a page heading, not part of the reading.
+            paras = [re.sub(r"^\d+\s*[.)]?\s+", "", paras[0])] + paras[1:]
             units.append(Unit(language=lang, variant=meta.get("variant", ""), collection=meta.get("collection", ""),
                               text=" ".join(paras), audio=idx.resolve(src, rel_source),
+                              translations_json=json.dumps({"paragraphs": paras}, ensure_ascii=False),
                               source_page=meta.get("source_page", ""), app_url=meta.get("app_url", ""),
                               source_file=rel_source, evidence="page_audio_transcript", confidence=0.85,
                               notes=paras[0]).finalize())

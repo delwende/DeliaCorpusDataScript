@@ -277,6 +277,8 @@ def main() -> None:
             if rel:
                 long_form[lang].append({"audio": rel, "duration": f"{audio_seconds(copier.out / 'speech' / lang / rel):.2f}",
                                         "text": src, "title": u["notes"], "collection": u["collection"],
+                                        "paragraphs": json.dumps(json.loads(u["translations_json"] or "{}").get("paragraphs", []),
+                                                                 ensure_ascii=False),
                                         "source_file": u["source_file"], "app_url": u["app_url"]})
                 credit(u, "long_form_hours", float(long_form[lang][-1]["duration"]) / 3600)
             else:
@@ -348,7 +350,7 @@ def main() -> None:
         write_csv(out / "speech" / lang / "segments.csv", rows, seg_fields)
     for lang, rows in long_form.items():
         write_csv(out / "speech" / lang / "long_form.csv", rows,
-                  ["audio", "duration", "text", "title", "collection", "source_file", "app_url"])
+                  ["audio", "duration", "text", "paragraphs", "title", "collection", "source_file", "app_url"])
     for lang, rows in words.items():
         write_csv(out / "speech" / lang / "words.csv", rows, ["audio", "text", "fr", "en", "app_url"])
     for lang, rows in lexicon.items():
@@ -410,7 +412,8 @@ def main() -> None:
                      f"{s['lexicon_senses']} | {tp.get('fr', 0)} | {tp.get('en', 0)} | {s['parallel_stories_fr']} | {s['riddles']} | {s['text_lines']} |")
     lines += ["", "- `speech/<lang>/segments.csv` : `audio` (relatif au dossier de la langue), `start`/`end` en secondes, `text` = transcription.",
               "- `speech/<lang>/long_form.csv` : enregistrement entier avec la transcription complète de la page "
-              "(pages sans découpage en phrases ; à aligner plus tard si besoin).",
+              "(pages sans découpage en phrases ; à aligner plus tard si besoin). La colonne `paragraphs` "
+              "garde les paragraphes de la page (liste JSON), utile pour un alignement par paragraphe.",
               "- `speech/<lang>/words.csv` : enregistrement de prononciation d'un mot du dictionnaire.",
               "- `translation/<lang>-<fr|en>.csv` : paires `source` (langue locale) → `target`.",
               "- `lexicon/<lang>.csv` : sens de dictionnaire (gloses fr/en/de, phonétique, dialectes, catégorie).",

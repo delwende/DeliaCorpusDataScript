@@ -23,6 +23,7 @@ import csv
 import json
 import re
 import shutil
+import subprocess
 from collections import defaultdict
 from pathlib import Path
 
@@ -99,6 +100,18 @@ class AudioCopier:
         return rel
 
 
+def audio_seconds(path: Path) -> float:
+    """Duration via ffprobe; 0 when unavailable."""
+    if not shutil.which("ffprobe"):
+        return 0.0
+    res = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
+                         capture_output=True, text=True)
+    try:
+        return float(res.stdout.strip())
+    except ValueError:
+        return 0.0
+
+
 def riddle_records(rows: list[dict]) -> list[dict]:
     """Devinettes as structured records from consecutive timed segments of one page:
     "1 M sũm ne sare." (riddle) / "- M zɩ-a." (traditional reply) / "- Yar-bi …" (answer)."""
@@ -145,6 +158,7 @@ def main() -> None:
     parallel: dict[tuple[str, str], list[dict]] = defaultdict(list)
     text: dict[str, dict[str, None]] = defaultdict(dict)
     stories: dict[str, list[dict]] = defaultdict(list)
+    long_form: dict[str, list[dict]] = defaultdict(list)
     missing_audio = 0
 
     for u in units:
@@ -153,6 +167,15 @@ def main() -> None:
         if not src:
             continue
         origin = u["evidence"].split("+", 1)[0]
+        if origin == "page_audio_transcript":
+            rel = copier.copy(lang, u["audio"])
+            if rel:
+                long_form[lang].append({"audio": rel, "duration": f"{audio_seconds(copier.out / 'speech' / lang / rel):.2f}",
+                                        "text": src, "title": u["notes"], "collection": u["collection"],
+                                        "source_file": u["source_file"], "app_url": u["app_url"]})
+            else:
+                missing_audio += 1
+            continue
         if origin == "parallel_story":
             # Whole tale + its French version: document-level pair, kept out of the sentence CSVs.
             paras = json.loads(u["translations_json"] or "{}")
@@ -210,6 +233,9 @@ def main() -> None:
     seg_fields = ["audio", "start", "end", "duration", "text", "collection", "title", "source_file", "app_url"]
     for lang, rows in segments.items():
         write_csv(out / "speech" / lang / "segments.csv", rows, seg_fields)
+    for lang, rows in long_form.items():
+        write_csv(out / "speech" / lang / "long_form.csv", rows,
+                  ["audio", "duration", "text", "title", "collection", "source_file", "app_url"])
     for lang, rows in words.items():
         write_csv(out / "speech" / lang / "words.csv", rows, ["audio", "text", "fr", "en", "app_url"])
     for lang, rows in lexicon.items():
@@ -238,7 +264,7 @@ def main() -> None:
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-    langs = sorted(set(segments) | set(words) | set(lexicon) | set(text) | {l for l, _ in parallel})
+    langs = sorted(set(segments) | set(long_form) | set(words) | set(lexicon) | set(text) | {l for l, _ in parallel})
     summary = {"languages": {}, "missing_audio_refs": missing_audio}
     for lang in langs:
         audio_dir = out / "speech" / lang / "audio"
@@ -246,6 +272,8 @@ def main() -> None:
             "name": LANG_NAMES.get(lang, lang),
             "speech_segments": len(segments[lang]),
             "speech_hours": round(sum(float(r["duration"]) for r in segments[lang]) / 3600, 2),
+            "long_form_recordings": len(long_form[lang]),
+            "long_form_hours": round(sum(float(r["duration"]) for r in long_form[lang]) / 3600, 2),
             "word_recordings": len(words[lang]),
             "audio_files": len(list(audio_dir.iterdir())) if audio_dir.exists() else 0,
             "audio_mb": round(sum(f.stat().st_size for f in audio_dir.iterdir()) / 1048576, 1) if audio_dir.exists() else 0,
@@ -260,13 +288,15 @@ def main() -> None:
 
     lines = ["# Corpus — langues du Burkina Faso (et contenus en français/anglais)", "",
              "Généré par `src/export_corpus.py` à partir de `data/aligned/master_units.csv`.", "",
-             "| Langue | Segments audio | Heures | Mots enregistrés | Entrées lexique | Paires → fr | Paires → en | Contes ↔ fr | Devinettes | Lignes texte |",
-             "|---|---|---|---|---|---|---|---|---|---|"]
+             "| Langue | Segments audio | Heures | Audio long (h) | Mots enregistrés | Entrées lexique | Paires → fr | Paires → en | Contes ↔ fr | Devinettes | Lignes texte |",
+             "|---|---|---|---|---|---|---|---|---|---|---|"]
     for lang, s in summary["languages"].items():
         tp = s["translation_pairs"]
-        lines.append(f"| {s['name']} (`{lang}`) | {s['speech_segments']} | {s['speech_hours']} | {s['word_recordings']} | "
+        lines.append(f"| {s['name']} (`{lang}`) | {s['speech_segments']} | {s['speech_hours']} | {s['long_form_hours']} | {s['word_recordings']} | "
                      f"{s['lexicon_senses']} | {tp.get('fr', 0)} | {tp.get('en', 0)} | {s['parallel_stories_fr']} | {s['riddles']} | {s['text_lines']} |")
     lines += ["", "- `speech/<lang>/segments.csv` : `audio` (relatif au dossier de la langue), `start`/`end` en secondes, `text` = transcription.",
+              "- `speech/<lang>/long_form.csv` : enregistrement entier avec la transcription complète de la page "
+              "(pages sans découpage en phrases ; à aligner plus tard si besoin).",
               "- `speech/<lang>/words.csv` : enregistrement de prononciation d'un mot du dictionnaire.",
               "- `translation/<lang>-<fr|en>.csv` : paires `source` (langue locale) → `target`.",
               "- `lexicon/<lang>.csv` : sens de dictionnaire (gloses fr/en/de, phonétique, dialectes, catégorie).",

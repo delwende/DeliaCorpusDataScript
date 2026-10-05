@@ -782,7 +782,7 @@ def split_variants(text: str) -> dict[str, str]:
     return out
 
 
-def parse_untimed_app_page(html: str, meta: dict[str, str], rel_source: str) -> list[Unit]:
+def parse_untimed_app_page(html: str, meta: dict[str, str], rel_source: str, idx: "AssetIndex | None" = None) -> list[Unit]:
     """Reading App Builder pages without audio: records separated by blank (div.b) lines.
 
     Proverb collections such as mos/ora/prv-v12 give, per record: the local proverb (bold),
@@ -949,7 +949,20 @@ def parse_html_file(path: Path, meta: dict[str, str], idx: AssetIndex, rel_sourc
         # Lexique Pro index/category pages only point back to entries parsed above.
         return []
     if 'id="content"' in text and 'class="m"' in text:
-        return parse_untimed_app_page(text, meta, rel_source)
+        units = parse_untimed_app_page(text, meta, rel_source, idx)
+        paras, src = page_paragraphs(text)
+        if src and paras and "/osa/" not in meta.get("app_url", ""):
+            # Audio without phrase timings: the whole recording with the whole page as transcript
+            # (long-form speech data; can be force-aligned later).
+            lang = app_language(meta, src)
+            if sum(is_french(t) for t in paras) / len(paras) > 0.5:
+                lang = "fr" if lang not in {"en"} else lang
+            units.append(Unit(language=lang, variant=meta.get("variant", ""), collection=meta.get("collection", ""),
+                              text=" ".join(paras), audio=idx.resolve(src, rel_source),
+                              source_page=meta.get("source_page", ""), app_url=meta.get("app_url", ""),
+                              source_file=rel_source, evidence="page_audio_transcript", confidence=0.85,
+                              notes=paras[0]).finalize())
+        return units
     soup = BeautifulSoup(text, "html.parser")
     for x in soup.find_all(["script", "style", "noscript", "nav", "footer"]):
         # Keep scripts outside DOM extraction; JS files are handled separately.

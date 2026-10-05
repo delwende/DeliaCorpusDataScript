@@ -157,13 +157,21 @@ class Blocked(RuntimeError):
     pass
 
 
+# Query parameters that do not change the page content ("totalEntries" is just a count shown in
+# pagination links); ignoring them keeps one URL, and one saved file, per page.
+IGNORED_PARAMS = {"totalEntries"}
+
+
 def canonical(url: str) -> str:
     p = urlparse(url)
-    return p._replace(query=urlencode(sorted(parse_qsl(p.query))), fragment="").geturl()
+    params = sorted((k, v) for k, v in parse_qsl(p.query) if k not in IGNORED_PARAMS)
+    # Page 1 is the same with or without "pagenr=1".
+    params = [(k, v) for k, v in params if not (k == "pagenr" and v == "1")]
+    return p._replace(query=urlencode(params), fragment="").geturl()
 
 
 def page_filename(url: str) -> str:
-    params = [(k, v) for k, v in sorted(parse_qsl(urlparse(url).query)) if k != "key"]
+    params = [(k, v) for k, v in sorted(parse_qsl(urlparse(canonical(url)).query)) if k != "key"]
     name = "_".join(f"{k}-{v}" for k, v in params) or "index"
     return re.sub(r"[^\w.-]+", "_", name) + ".html"
 

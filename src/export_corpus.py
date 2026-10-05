@@ -121,7 +121,7 @@ METRICS = ["speech_hours", "speech_segments", "long_form_hours", "word_recording
 
 
 def source_key(u: dict) -> str:
-    if u.get("evidence", "").startswith("lexique_pro_pdf") and u.get("source_page"):
+    if u.get("evidence", "").startswith(("lexique_pro_pdf", "pdf_")) and u.get("source_page"):
         return u["source_page"]  # each PDF dictionary is its own source
     return u.get("app_url") or SITE_PAGES
 

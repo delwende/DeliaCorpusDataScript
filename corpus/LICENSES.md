@@ -4,7 +4,7 @@ Généré par `src/export_corpus.py`. Détail par source : `SOURCES.csv` (ce que
 
 ## Constat
 
-- 99 sources contribuent au corpus : les pages et PDF de mooreburkina.com et les applications linguistiques qu'il intègre (media.ipsapps.org, audio sur storage.googleapis.com).
+- 103 sources contribuent au corpus : les pages et PDF de mooreburkina.com et les applications linguistiques qu'il intègre (media.ipsapps.org, audio sur storage.googleapis.com).
 - Aucune de ces sources n'affiche de mention de licence ou de droits d'auteur.
   Sans licence explicite, les droits sont réservés par défaut : statut « unknown » dans `SOURCES.csv`.
 - Les seules mentions trouvées sur le site concernent des vidéos bibliques intégrées (non collectées), p. ex. :
@@ -44,4 +44,4 @@ Pour un usage commercial, obtenir l'accord des propriétaires des sources marqu�
 | media.ipsapps.org/mos/ora/prv-v11/ | fr;mos | 1.15 | 0 | 240 | 0 | 569 |
 | media.ipsapps.org/mos/ora/co-fr1/ | fr;mos | 1.37 | 0 | 0 | 0 | 584 |
 | media.ipsapps.org/fuh/ora/co1/ | fr;ful | 1.14 | 0 | 0 | 0 | 885 |
-| media.ipsapps.org/mos/ora/vol4/ | fr;mos | 1.22 | 0 | 0 | 0 | 515 |
+| media.ipsapps.org/mos/ora/vol4/ | fr;mos | 1.22 | 0 | 0 | 0 | 518 |

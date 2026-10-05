@@ -88,7 +88,8 @@ FRENCH_WORDS = {
     "notre", "très", "bien", "peut", "faut", "celui", "jamais", "rien", "autre", "même", "sans", "chez",
     "par", "où", "ne", "se", "à",
 }
-LOCAL_LETTERS_RE = re.compile("[ɛɔŋɲɓɗƴʋɩãẽĩõũƐƆŊƝƁƊƳ]")
+# Includes macron vowels (older Mooré spelling: "wān", "sōng"), which French/English never use.
+LOCAL_LETTERS_RE = re.compile("[ɛɔŋɲɓɗƴʋɩãẽĩõũāēīōūƐƆŊƝƁƊƳ]")
 FRENCH_ACCENT_RE = re.compile("[éèêàçùâîôûœ]")
 # Longest local/French block (in timed lines) paired as one proverb/translation.
 MAX_PAIR_LINES = 4
@@ -760,7 +761,8 @@ def parse_timed_audio_page(html: str, meta: dict[str, str], idx: AssetIndex, rel
     return units
 
 
-ENGLISH_WORDS = {"the", "is", "of", "and", "to", "in", "that", "it", "you", "he", "she", "his", "her", "a", "an",
+# "a"/"an" are left out: they are also frequent Mooré/Dioula words.
+ENGLISH_WORDS = {"the", "is", "of", "and", "to", "in", "that", "it", "you", "he", "she", "his", "her",
                  "not", "be", "with", "for", "who", "does", "if", "when", "one", "your", "are", "has", "have"}
 MAX_RECORD_CHARS = 400
 LABEL_RE = re.compile(r"^\s*(bilgri|signification|sens|meaning|explication|explanation|emploi|usage)\s*:\s*", re.I)
@@ -1248,6 +1250,41 @@ def collect_pdf_dictionary_units(corpus: Path) -> list[Unit]:
     return units
 
 
+def collect_pdf_text_units(corpus: Path) -> list[Unit]:
+    """Non-dictionary PDFs (books): bilingual two-column pages as pairs, other text as sentences."""
+    try:
+        import lexique_pdf
+        import pdf_text
+        import pymupdf
+    except ImportError:
+        return []
+    units: list[Unit] = []
+    for r in read_csv(corpus / "metadata" / "download_manifest.csv"):
+        rel = (r.get("local_path") or "").split(";")[0]
+        path = corpus / rel
+        if r.get("resource_type") != "pdf" or not rel.lower().endswith(".pdf") or not path.exists():
+            continue
+        if pdf_text.SKIP_NAME_RE.search(Path(rel).name):
+            continue
+        try:
+            if lexique_pdf.is_lexique_pro_pdf(pymupdf.open(path)):
+                continue  # dictionaries are handled by collect_pdf_dictionary_units
+            lang = pdf_language(Path(rel).name) or canon_lang(r.get("language", ""))
+            pairs, sentences = pdf_text.extract(path, lang)
+        except Exception as exc:
+            print(f"PDF text skipped ({type(exc).__name__}): {rel}")
+            continue
+        common = dict(source_page=r.get("source_url", ""), source_file=rel)
+        for p in pairs:
+            units.append(Unit(language=lang, record_order=str(p["page"]), text=p["local"], translation_fr=p["fr"],
+                              collection="book", evidence="pdf_bilingual_page", confidence=0.85,
+                              **common).finalize())
+        for i, p in enumerate(sentences, 1):
+            units.append(Unit(language=p["language"], record_order=f"{p['page']}.{i}", text=p["text"],
+                              collection="book", evidence="pdf_text", confidence=0.8, **common).finalize())
+    return units
+
+
 def enrich_by_exact_stem(units: list[Unit], idx: AssetIndex) -> None:
     for u in units:
         # If a source unit refers to one media type, exact stem can add companion media.
@@ -1339,6 +1376,7 @@ def main() -> None:
     if corpus_opt:
         units.extend(collect_corpus_page_units(corpus_opt, idx))
         units.extend(collect_pdf_dictionary_units(corpus_opt))
+        units.extend(collect_pdf_text_units(corpus_opt))
     enrich_by_exact_stem(units, idx)
     units = dedupe_units([u for u in units if u.confidence >= args.min_confidence and (u.text or u.translation_fr or u.translation_en or u.audio or u.image)])
     outputs(units, Path(args.out))

@@ -26,6 +26,8 @@ import shutil
 from collections import defaultdict
 from pathlib import Path
 
+from pairing_engine import is_french
+
 NON_CORPUS_LANGS = {"fr", "en", "ar", "de", ""}
 # Timings outside this range are broken (zero/negative length, or one phrase spanning minutes).
 MIN_SEGMENT_S, MAX_SEGMENT_S = 0.3, 30.0
@@ -150,11 +152,13 @@ def main() -> None:
                     missing_audio += 1
         else:
             text[lang][src] = None
+        # A pair needs a local-language source; website navigation tables are not translations.
+        pairable = origin != "html_table_row" and not is_french(src)
         for col, tgt in (("translation_fr", "fr"), ("translation_en", "en")):
             target = u[col].strip()
-            if target:
+            if target and pairable:
                 source = src
-                if origin == "adjacent_french_segment":
+                if origin in {"adjacent_french_segment", "app_record_translation"}:
                     # Proverb apps number each line and parenthesize the translation.
                     source = re.sub(r"^\d+\s*[.)]?\s+", "", source)
                     target = re.sub(r"^\((.*)\)\s*\.?$", r"\1", target).strip()

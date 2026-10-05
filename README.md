@@ -115,6 +115,9 @@ Une ressource téléchargée n'est pas automatiquement considérée comme align�
 - **Reading App Builder (SIL)** : pages avec table de synchronisation `var timings`. Chaque segment produit une ligne `speech.csv` avec `audio`, `audio_start` et `audio_end` (secondes) : extrait audio ↔ transcription au niveau de la phrase.
 - **Lexique Pro (SIL)** : pages `lexicon/*.htm`. Une ligne par sens avec `headword`, `part_of_speech`, gloses `translation_fr` / `translation_en`, et dans `translations_json` l'allemand, la phonétique, les dialectes et la catégorie. L'enregistrement de prononciation, s'il existe, est dans `audio`. Les pages d'index inversé sont ignorées (doublons).
 
+- **Pages sans audio** (ex. `mos/ora/prv-v12`) : enregistrements séparés par des lignes vides ; proverbe en langue locale, `Bilgri` (explication), puis en italique la traduction française (`Signification`) et anglaise (`Meaning`). Les variantes `a)` / `b)` donnent une paire chacune. Les pages sans traduction deviennent du texte monolingue ; les pages majoritairement françaises (versions françaises des contes) sont ignorées.
+- **Proverbes avec audio** : chaque bloc de lignes locales est apparié au bloc français (en italique ou entre parenthèses) qui le suit ; ces paires sont marquées `needs_review`.
+
 La langue d'une application est déduite du code de dossier (`mos`, `dyu`, `fuh`, `fra`…), sauf si le nom du fichier audio indique une autre langue.
 
 ### Collecte des applications : reprise et vitesse

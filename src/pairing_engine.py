@@ -42,6 +42,7 @@ import re
 import unicodedata
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
+from itertools import groupby
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any, Iterable
@@ -89,6 +90,8 @@ FRENCH_WORDS = {
 }
 LOCAL_LETTERS_RE = re.compile("[ɛɔŋɲɓɗƴʋɩãẽĩõũƐƆŊƝƁƊƳ]")
 FRENCH_ACCENT_RE = re.compile("[éèêàçùâîôûœ]")
+# Longest local/French block (in timed lines) paired as one proverb/translation.
+MAX_PAIR_LINES = 4
 FRENCH_ELISION_RE = re.compile(r"\b(l|d|qu|c|n|s|j|m|t|jusqu|lorsqu)['’]\w", re.I)
 # A language named in a media filename beats the app folder code (e.g. English audio under /fra/).
 FILENAME_LANG_RE = re.compile(r"(english|anglais|fran[cç]ais|french|moor[eé]|dioula|jula|fulfulde)", re.I)
@@ -662,6 +665,17 @@ def app_language(meta: dict[str, str], media_name: str = "") -> str:
     return canon_lang(meta.get("language", ""))
 
 
+def has_french_hint(text: str) -> bool:
+    """Weak evidence (one French function word, accent or elision, no local letters); only used
+    together with layout cues such as italics or parentheses."""
+    if LOCAL_LETTERS_RE.search(text):
+        return False
+    low = text.lower()
+    toks = [w for w in re.split(r"[^\w]+", low) if w]
+    return bool(toks) and (any(w in FRENCH_WORDS for w in toks) or bool(FRENCH_ACCENT_RE.search(low))
+                           or bool(FRENCH_ELISION_RE.search(low)))
+
+
 def is_french(text: str) -> bool:
     if LOCAL_LETTERS_RE.search(text):
         return False
@@ -674,6 +688,8 @@ def is_french(text: str) -> bool:
         return accents > 0
     ratio = sum(w in FRENCH_WORDS for w in toks) / len(toks)
     elisions = bool(FRENCH_ELISION_RE.search(low))
+    if text.lstrip().startswith("(") and has_french_hint(text):
+        return True  # proverb apps parenthesize the French translation
     return ratio >= 0.3 or (ratio >= 0.12 and (accents > 0 or elisions)) or accents >= 2 or (elisions and accents > 0)
 
 
@@ -691,6 +707,7 @@ def parse_timed_audio_page(html: str, meta: dict[str, str], idx: AssetIndex, rel
     if sel:
         title = norm_space(sel.get_text(" "))
     units = []
+    italics: list[bool] = []
     for order, (label, start, end) in enumerate(TIMING_RE.findall(html), 1):
         node = soup.find(id=f"T{label}")
         if node is None:
@@ -699,6 +716,8 @@ def parse_timed_audio_page(html: str, meta: dict[str, str], idx: AssetIndex, rel
         text = norm_space(node.get_text(""))
         if not text:
             continue
+        italic_chars = sum(len(sp.get_text("")) for sp in node.find_all(class_=re.compile(r"^(it|bdit)$")))
+        italics.append(italic_chars >= 0.6 * len(text))
         units.append(Unit(
             language=lang, variant=meta.get("variant", ""), collection=meta.get("collection", ""),
             record_order=str(order), text=text, audio=audio, audio_start=start, audio_end=end,
@@ -706,21 +725,147 @@ def parse_timed_audio_page(html: str, meta: dict[str, str], idx: AssetIndex, rel
             evidence="timed_audio_segment", confidence=0.95, notes=title,
         ).finalize())
     if lang not in {"fr", "en"}:
-        french = [is_french(u.text) for u in units]
+        # Translations are set in italics; italics plus any French hint is decisive.
+        french = [is_french(u.text) or (it and has_french_hint(u.text)) for u, it in zip(units, italics)]
+        # A parenthesized translation can open with words that carry no French signal
+        # ("(Deux personnes,") — it belongs with the French line that follows.
+        for i in range(len(units) - 2, -1, -1):
+            if not french[i] and french[i + 1] and units[i].text.lstrip().startswith("("):
+                french[i] = True
         for u, fr in zip(units, french):
             if fr:
                 u.language = "fr"
-        # Strictly alternating pages (local, French, local, French…) read each line then its
-        # translation; pair them as separate text units, kept for review.
-        if any(french) and all(a != b for a, b in zip(french, french[1:])):
-            for prev, cur, fr in zip(units, units[1:], french[1:]):
-                if fr:
-                    units.append(Unit(
-                        language=prev.language, variant=prev.variant, collection=prev.collection,
-                        record_order=prev.record_order, text=prev.text, translation_fr=cur.text,
-                        source_page=prev.source_page, app_url=prev.app_url, source_file=rel_source,
-                        evidence="adjacent_french_segment", confidence=0.75, notes=title,
-                    ).finalize())
+        # Proverb pages read a local block (often split over 2-3 timed lines), then its French
+        # translation block, then the local block again. Pair each short local run with the
+        # French run that follows it. French-dominated pages (French versions of tales) and long
+        # runs (story paragraphs with a stray French line) are skipped; pairs are kept for review.
+        if any(french) and sum(french) / len(french) <= 0.7:
+            runs = [(fr, [u for u, _ in grp]) for fr, grp in groupby(zip(units, french), key=lambda x: x[1])]
+            for (fr_a, local), (fr_b, trans) in zip(runs, runs[1:]):
+                # The repeated reading of the previous proverb can run into the next numbered
+                # one ("… zĩigẽ. 216 Ninsaal …"): start the block at its last numbered line.
+                starts = [i for i, u in enumerate(local) if re.match(r"^\d+\s*[.)]?\s", u.text)]
+                if starts:
+                    local = local[starts[-1]:]
+                if fr_a or not fr_b or len(local) > MAX_PAIR_LINES or len(trans) > MAX_PAIR_LINES:
+                    continue
+                first = local[0]
+                units.append(Unit(
+                    language=first.language, variant=first.variant, collection=first.collection,
+                    record_order=first.record_order, text=" ".join(u.text for u in local),
+                    translation_fr=" ".join(u.text for u in trans),
+                    source_page=first.source_page, app_url=first.app_url, source_file=rel_source,
+                    evidence="adjacent_french_segment", confidence=0.75, notes=title,
+                ).finalize())
+    return units
+
+
+ENGLISH_WORDS = {"the", "is", "of", "and", "to", "in", "that", "it", "you", "he", "she", "his", "her", "a", "an",
+                 "not", "be", "with", "for", "who", "does", "if", "when", "one", "your", "are", "has", "have"}
+MAX_RECORD_CHARS = 400
+LABEL_RE = re.compile(r"^\s*(bilgri|signification|sens|meaning|explication|explanation|emploi|usage)\s*:\s*", re.I)
+
+
+def is_english(text: str) -> bool:
+    toks = [w for w in re.split(r"[^\w']+", text.lower()) if w]
+    return len(toks) >= 3 and sum(w in ENGLISH_WORDS for w in toks) / len(toks) >= 0.2 and not is_french(text)
+
+
+def split_variants(text: str) -> dict[str, str]:
+    """Split "a) first b) second" into {"a": "first", "b": "second"}; {} when unlettered."""
+    marks = list(re.finditer(r"(?:^|\s)([a-e])\)\s+", text))
+    if len(marks) < 2 or marks[0].group(1) != "a":
+        return {}
+    out = {}
+    for m, nxt in zip(marks, marks[1:] + [None]):
+        out[m.group(1)] = text[m.end(): nxt.start() if nxt else len(text)].strip()
+    return out
+
+
+def parse_untimed_app_page(html: str, meta: dict[str, str], rel_source: str) -> list[Unit]:
+    """Reading App Builder pages without audio: records separated by blank (div.b) lines.
+
+    Proverb collections such as mos/ora/prv-v12 give, per record: the local proverb (bold),
+    an optional local explanation ("Bilgri :"), then in italics the French proverb and its
+    "Signification", the English proverb and its "Meaning". Records without any translation
+    become plain local text (e.g. tales without audio).
+    """
+    if "/osa/" in meta.get("app_url", ""):
+        return []  # scripture apps: third-party texts, kept out like their audio
+    content = BeautifulSoup(html, "html.parser").find(id="content")
+    if content is None:
+        return []
+    lang = app_language(meta)
+    if lang in {"fr", "en", ""}:
+        return []
+    records: list[list[Tag]] = [[]]
+    for div in content.find_all("div", recursive=False):
+        classes = div.get("class") or []
+        if "b" in classes:
+            if records[-1]:
+                records.append([])
+        elif div.get_text(strip=True):
+            records[-1].append(div)
+    lines = [norm_space(d.get_text("")) for r in records for d in r]
+    if lines and sum(is_french(t) for t in lines) / len(lines) > 0.5:
+        return []  # French version of a local text (e.g. "contes avec français"), not a translation pair
+    title = ""
+    units: list[Unit] = []
+    for order, rec in enumerate((r for r in records if r), 1):
+        local, local_expl, fr, fr_expl, en, en_expl = [], [], [], [], [], []
+        parts = []
+        for div in rec:
+            # One div can hold several lines separated by <br> (e.g. English proverb + "Meaning:").
+            italic = div.find(class_=re.compile(r"^(it|bdit)$")) is not None and not div.find(class_="bd")
+            for br in div.find_all("br"):
+                br.replace_with("\n")
+            parts.extend((norm_space(line), italic) for line in div.get_text("").split("\n") if line.strip())
+        for text, italic in parts:
+            m = LABEL_RE.match(text)
+            label = m.group(1).lower() if m else ""
+            body = text[m.end():].strip() if m else text
+            if label == "bilgri":
+                local_expl.append(body)
+            elif label in {"signification", "sens", "explication"}:
+                fr_expl.append(body)
+            elif label in {"meaning", "explanation"}:
+                en_expl.append(body)
+            elif label:
+                continue
+            elif is_french(text) or (italic and not fr and has_french_hint(text)):
+                fr.append(text)
+            elif is_english(text) or (italic and fr):
+                en.append(text)
+            else:
+                local.append(text)
+        if not local:
+            continue
+        common = dict(language=lang, variant=meta.get("variant", ""), collection=meta.get("collection", ""),
+                      source_page=meta.get("source_page", ""), app_url=meta.get("app_url", ""),
+                      source_file=rel_source, notes=title)
+        # Proverb-sized records only: a story paragraph next to a French line is not a pair.
+        if (fr or en) and len(" ".join(local)) <= MAX_RECORD_CHARS and len(" ".join(fr)) <= MAX_RECORD_CHARS:
+            src = re.sub(r"^\d+\s*[.)]?\s+", "", " ".join(local))
+            variants = split_variants(src)
+            fr_v, en_v = split_variants(" ".join(fr)), split_variants(" ".join(en))
+            if len(variants) > 1 and set(variants) == set(fr_v):
+                # "a) … b) …": one pair per variant, matched by letter.
+                for letter, text in variants.items():
+                    units.append(Unit(record_order=f"{order}{letter}", text=text, translation_fr=fr_v[letter],
+                                      translation_en=en_v.get(letter, ""), evidence="app_record_translation",
+                                      confidence=0.9, **common).finalize())
+            else:
+                units.append(Unit(record_order=str(order), text=src, translation_fr=" ".join(fr),
+                                  translation_en=" ".join(en), evidence="app_record_translation",
+                                  confidence=0.9, **common).finalize())
+            if local_expl and (fr_expl or en_expl):
+                units.append(Unit(record_order=f"{order}.1", text=" ".join(local_expl),
+                                  translation_fr=" ".join(fr_expl), translation_en=" ".join(en_expl),
+                                  evidence="app_record_translation", confidence=0.9, **common).finalize())
+        else:
+            for i, line in enumerate(local + local_expl, 1):
+                units.append(Unit(record_order=f"{order}.{i}", text=line, evidence="app_page_text",
+                                  confidence=0.85, **common).finalize())
     return units
 
 
@@ -797,6 +942,8 @@ def parse_html_file(path: Path, meta: dict[str, str], idx: AssetIndex, rel_sourc
     if "lpLexEntryName" in text:
         # Lexique Pro index/category pages only point back to entries parsed above.
         return []
+    if 'id="content"' in text and 'class="m"' in text:
+        return parse_untimed_app_page(text, meta, rel_source)
     soup = BeautifulSoup(text, "html.parser")
     for x in soup.find_all(["script", "style", "noscript", "nav", "footer"]):
         # Keep scripts outside DOM extraction; JS files are handled separately.

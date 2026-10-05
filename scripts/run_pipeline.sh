@@ -11,6 +11,8 @@ MAX_PAGES="${MAX_PAGES:-10000}"
 python src/crawler.py --out "$INVENTORY_DIR" --max-pages "$MAX_PAGES"
 python src/downloader.py --inventory "$INVENTORY_DIR" --out "$RAW_DIR"
 python src/app_collector.py --inventory "$INVENTORY_DIR" --out "$APPS_DIR" --workers 6 --skip-images
+# Webonary blocks automated access: pages are saved by hand into data/webonary/<site>/ (optional).
+if [ -d data/webonary ]; then python src/webonary_import.py --root data/webonary --audio; fi
 python src/pairing_engine.py --corpus "$RAW_DIR" --apps "$APPS_DIR" --out "$ALIGNED_DIR"
 python src/export_corpus.py --aligned "$ALIGNED_DIR" --raw "$RAW_DIR" --apps "$APPS_DIR" --out "$CORPUS_DIR"
 

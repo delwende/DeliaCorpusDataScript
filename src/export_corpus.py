@@ -70,6 +70,8 @@ class AudioCopier:
         self.used: dict[str, set[str]] = defaultdict(set)
 
     def locate(self, ref: str) -> Path | None:
+        if ref and Path(ref).is_file():  # paths already relative to the repo (data/webonary/...)
+            return Path(ref)
         for root in self.roots:
             p = root / ref
             if p.is_file():
@@ -121,6 +123,8 @@ METRICS = ["speech_hours", "speech_segments", "long_form_hours", "word_recording
 
 
 def source_key(u: dict) -> str:
+    if u.get("evidence", "").startswith("webonary"):
+        return "https://www.webonary.org/" + u["source_file"].split("/")[-2] + "/"
     if u.get("evidence", "").startswith(("lexique_pro_pdf", "pdf_")) and u.get("source_page"):
         return u["source_page"]  # each PDF dictionary is its own source
     return u.get("app_url") or SITE_PAGES
@@ -273,10 +277,13 @@ def main() -> None:
         credits[key][metric] += amount
         source_langs[key].add(u["language"])
 
-    # Dictionaries: app (HTML) entries win; PDF senses only add headwords the app lacks, and a
-    # sense/example repeated across PDFs (main dictionary + thematic lexicons) is kept once.
-    app_headwords = {(u["language"], norm_key(u["headword"])) for u in units if u["evidence"].startswith("lexique_pro_entry")}
+    # Dictionaries, by priority: Webonary (newest, with audio) > app (HTML) > PDF. A lower source
+    # only adds headwords the higher ones lack; examples repeated across sources are kept once.
+    web_headwords = {(u["language"], norm_key(u["headword"])) for u in units if u["evidence"] == "webonary_entry"}
+    app_headwords = web_headwords | {(u["language"], norm_key(u["headword"]))
+                                     for u in units if u["evidence"].startswith("lexique_pro_entry")}
     seen_pdf: set[tuple] = set()
+    seen_examples = {(u["language"], "example", norm_key(u["text"])) for u in units if u["evidence"] == "webonary_example"}
 
     for u in units:
         lang = u["language"]
@@ -284,6 +291,8 @@ def main() -> None:
         if not src:
             continue
         origin = u["evidence"].split("+", 1)[0]
+        if origin == "lexique_pro_entry" and (lang, norm_key(u["headword"])) in web_headwords:
+            continue
         if origin == "lexique_pro_pdf_entry":
             key = (lang, norm_key(u["headword"]), norm_key(u["translation_fr"]), norm_key(u["translation_en"]))
             if (lang, norm_key(u["headword"])) in app_headwords or key in seen_pdf:
@@ -291,7 +300,7 @@ def main() -> None:
             seen_pdf.add(key)
         elif origin == "lexique_pro_pdf_example":
             key = (lang, "example", norm_key(src))
-            if key in seen_pdf:
+            if key in seen_pdf or key in seen_examples:
                 continue
             seen_pdf.add(key)
         if origin == "page_audio_transcript":
@@ -333,7 +342,7 @@ def main() -> None:
                 credit(u, "speech_hours", float(segments[lang][-1]["duration"]) / 3600)
             else:
                 missing_audio += 1
-        if origin in {"lexique_pro_entry", "lexique_pro_pdf_entry"}:
+        if origin in {"lexique_pro_entry", "lexique_pro_pdf_entry", "webonary_entry"}:
             extra = json.loads(u["translations_json"] or "{}")
             lexicon[lang].append({
                 "headword": u["headword"], "part_of_speech": u["part_of_speech"],

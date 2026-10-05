@@ -1250,6 +1250,37 @@ def collect_pdf_dictionary_units(corpus: Path) -> list[Unit]:
     return units
 
 
+def collect_webonary_units(root: Path) -> list[Unit]:
+    """Entries imported by webonary_import.py (data/webonary/<site>/entries.jsonl)."""
+    from webonary_import import SITE_LANGUAGES
+    units: list[Unit] = []
+    for path in sorted(root.glob("*/entries.jsonl")) if root.exists() else []:
+        site = path.parent.name
+        lang = SITE_LANGUAGES.get(site, site)
+        for order, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            e = json.loads(line)
+            common = dict(language=lang, source_page=f"https://www.webonary.org/{site}/{e.get('guid', '')}",
+                          source_file=path.as_posix(), collection="dictionary")
+            extra = {k: e[k] for k in ("homonym", "tones", "plural", "singular", "variants", "imperfective",
+                                       "verbal_noun", "loan_from", "scientific_name") if e.get(k)}
+            for i, sense in enumerate(e["senses"], 1):
+                info = dict(extra, **({"domains": ", ".join(d for d in sense["domains"] if d)} if any(sense["domains"]) else {}),
+                            **({"relations": sense["relations"]} if sense["relations"] else {}))
+                if sense["fr"] or sense["en"]:
+                    units.append(Unit(record_order=f"{order}.{i}", headword=e["headword"], text=e["headword"],
+                                      part_of_speech=sense["pos"], translation_fr=sense["fr"], translation_en=sense["en"],
+                                      translations_json=json.dumps(info, ensure_ascii=False),
+                                      audio=e.get("audio", ""), evidence="webonary_entry", confidence=0.95,
+                                      **common).finalize())
+                for j, ex in enumerate(sense["examples"], 1):
+                    if ex["fr"] or ex["en"]:
+                        units.append(Unit(record_order=f"{order}.{i}.x{j}", headword=e["headword"], text=ex["local"],
+                                          translation_fr=ex["fr"], translation_en=ex["en"],
+                                          evidence="webonary_example", confidence=0.95,
+                                          **dict(common, collection="dictionary_example")).finalize())
+    return units
+
+
 def collect_pdf_text_units(corpus: Path) -> list[Unit]:
     """Non-dictionary PDFs (books): bilingual two-column pages as pairs, other text as sentences."""
     try:
@@ -1359,6 +1390,7 @@ def main() -> None:
     ap.add_argument("--corpus", default="MooreBurkinaCorpus", help="Raw corpus produced by downloader")
     ap.add_argument("--apps", default="MooreBurkinaApps", help="Static IPS apps produced by app collector")
     ap.add_argument("--out", default="MooreBurkinaAligned")
+    ap.add_argument("--webonary", default="data/webonary", help="Webonary pages imported by webonary_import.py")
     ap.add_argument("--min-confidence", type=float, default=0.0, help="Drop units below this score; default keeps them in review")
     args = ap.parse_args()
 
@@ -1377,6 +1409,7 @@ def main() -> None:
         units.extend(collect_corpus_page_units(corpus_opt, idx))
         units.extend(collect_pdf_dictionary_units(corpus_opt))
         units.extend(collect_pdf_text_units(corpus_opt))
+    units.extend(collect_webonary_units(Path(args.webonary)))
     enrich_by_exact_stem(units, idx)
     units = dedupe_units([u for u in units if u.confidence >= args.min_confidence and (u.text or u.translation_fr or u.translation_en or u.audio or u.image)])
     outputs(units, Path(args.out))

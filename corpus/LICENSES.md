@@ -4,7 +4,7 @@ Généré par `src/export_corpus.py`. Détail par source : `SOURCES.csv` (ce que
 
 ## Constat
 
-- 103 sources contribuent au corpus : les pages et PDF de mooreburkina.com et les applications linguistiques qu'il intègre (media.ipsapps.org, audio sur storage.googleapis.com).
+- 118 sources contribuent au corpus : les pages et PDF de mooreburkina.com et les applications linguistiques qu'il intègre (media.ipsapps.org, audio sur storage.googleapis.com).
 - Aucune de ces sources n'affiche de mention de licence ou de droits d'auteur.
   Sans licence explicite, les droits sont réservés par défaut : statut « unknown » dans `SOURCES.csv`.
 - Les seules mentions trouvées sur le site concernent des vidéos bibliques intégrées (non collectées), p. ex. :

@@ -1220,6 +1220,8 @@ def collect_pdf_dictionary_units(corpus: Path) -> list[Unit]:
         rel = (r.get("local_path") or "").split(";")[0]
         if r.get("resource_type") != "pdf" or not rel.lower().endswith(".pdf") or not (corpus / rel).exists():
             continue
+        if r.get("status") == "duplicate":
+            continue  # same file as another manifest row
         lang = pdf_language(Path(rel).name) or pdf_language(r.get("source_url", ""))
         if not lang:
             continue
@@ -1293,7 +1295,8 @@ def collect_pdf_text_units(corpus: Path) -> list[Unit]:
     for r in read_csv(corpus / "metadata" / "download_manifest.csv"):
         rel = (r.get("local_path") or "").split(";")[0]
         path = corpus / rel
-        if r.get("resource_type") != "pdf" or not rel.lower().endswith(".pdf") or not path.exists():
+        if r.get("resource_type") != "pdf" or not rel.lower().endswith(".pdf") or not path.exists() \
+                or r.get("status") == "duplicate":
             continue
         if pdf_text.SKIP_NAME_RE.search(Path(rel).name):
             continue

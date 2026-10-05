@@ -437,6 +437,24 @@ class Downloader:
         return base
 
 
+def dedupe_identical_files(root: Path, rows: list[dict[str, str]]) -> None:
+    """The site serves some files from two folders (e.g. /files/ and /files/pdf-files/). Keep one
+    copy per content hash: later copies are deleted and point to the kept file."""
+    kept: dict[str, str] = {}
+    for row in rows:
+        if row.get("item_kind") != "asset" or row.get("status") not in {"downloaded", "already_present"}:
+            continue
+        digest, path = row.get("sha256", ""), (row.get("local_path") or "").split(";")[0]
+        if not digest or not path:
+            continue
+        if digest not in kept:
+            kept[digest] = path
+            continue
+        if path != kept[digest]:
+            (root / path).unlink(missing_ok=True)
+        row.update(status="duplicate", local_path=kept[digest], error=f"same content as {kept[digest]}")
+
+
 def summarize(rows: list[dict[str, str]]) -> dict:
     def counts(field: str) -> dict[str, int]:
         d: dict[str, int] = {}
@@ -559,7 +577,7 @@ def main() -> None:
     for i, row in enumerate(selected_assets, start=1):
         key = f"asset::{row.get('resource_id','')}"
         prev = previous.get(key)
-        if prev and prev.get("status") in {"downloaded", "already_present"}:
+        if prev and prev.get("status") in {"downloaded", "already_present", "duplicate"}:
             pfield = (prev.get("local_path") or "").split(";", 1)[0]
             if pfield and (root / pfield).exists():
                 results.append(prev)
@@ -573,7 +591,7 @@ def main() -> None:
     for i, row in enumerate(selected_pages, start=1):
         key = f"page::{row.get('page_id','')}"
         prev = previous.get(key)
-        if prev and prev.get("status") in {"downloaded", "already_present"}:
+        if prev and prev.get("status") in {"downloaded", "already_present", "duplicate"}:
             first = (prev.get("local_path") or "").split(";", 1)[0]
             if first and (root / first).exists():
                 results.append(prev)
@@ -600,6 +618,7 @@ def main() -> None:
         refs_path.write_text("", encoding="utf-8")
 
     results.sort(key=lambda r: (r.get("item_kind", ""), r.get("language", ""), r.get("resource_type", ""), r.get("source_url", "")))
+    dedupe_identical_files(root, results)
     write_manifest_csv(manifest_path, results)
     write_manifest_jsonl(root / "metadata" / "download_manifest.jsonl", results)
     summary = summarize(results)

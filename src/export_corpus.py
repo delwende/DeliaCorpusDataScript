@@ -114,6 +114,7 @@ def main() -> None:
     lexicon: dict[str, list[dict]] = defaultdict(list)
     parallel: dict[tuple[str, str], list[dict]] = defaultdict(list)
     text: dict[str, dict[str, None]] = defaultdict(dict)
+    stories: dict[str, list[dict]] = defaultdict(list)
     missing_audio = 0
 
     for u in units:
@@ -122,6 +123,17 @@ def main() -> None:
         if not src:
             continue
         origin = u["evidence"].split("+", 1)[0]
+        if origin == "parallel_story":
+            # Whole tale + its French version: document-level pair, kept out of the sentence CSVs.
+            paras = json.loads(u["translations_json"] or "{}")
+            stories[lang].append({
+                "title": u["notes"], "tale_number": u["record_order"],
+                "local_paragraphs": paras.get("local_paragraphs", []),
+                "fr_paragraphs": paras.get("fr_paragraphs", []),
+                "audio": f"../speech/{lang}/{copier.copy(lang, u['audio'])}" if u["audio"] and copier.copy(lang, u["audio"]) else "",
+                "source_file": u["source_file"], "app_url": u["app_url"],
+            })
+            continue
         # Timed segments that are only punctuation mark music/pauses, not speech.
         if (u["audio"] and u["audio_start"] and sum(ch.isalpha() for ch in src) >= 2
                 and MIN_SEGMENT_S <= float(u["audio_end"]) - float(u["audio_start"]) <= MAX_SEGMENT_S):
@@ -175,6 +187,12 @@ def main() -> None:
                   ["headword", "part_of_speech", "fr", "en", "de", "phonetic", "dialects", "category", "app_url"])
     for (lang, tgt), rows in parallel.items():
         write_csv(out / "translation" / f"{lang}-{tgt}.csv", rows, ["source", "target", "origin", "source_file"])
+    for lang, rows in stories.items():
+        p = out / "parallel_stories" / f"{lang}-fr.jsonl"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        with p.open("w", encoding="utf-8") as f:
+            for r in sorted(rows, key=lambda r: int(r["tale_number"]) if r["tale_number"].isdigit() else 0):
+                f.write(json.dumps(r, ensure_ascii=False) + "\n")
     for lang, lines in text.items():
         p = out / "text" / f"{lang}.txt"
         p.parent.mkdir(parents=True, exist_ok=True)
@@ -194,22 +212,26 @@ def main() -> None:
             "lexicon_senses": len(lexicon[lang]),
             "translation_pairs": {t: len(parallel[(lang, t)]) for t in ("fr", "en") if parallel[(lang, t)]},
             "text_lines": len(text[lang]),
+            "parallel_stories_fr": len(stories[lang]),
         }
     out.mkdir(parents=True, exist_ok=True)
     (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 
     lines = ["# Corpus — langues du Burkina Faso", "",
              "Généré par `src/export_corpus.py` à partir de `data/aligned/master_units.csv`.", "",
-             "| Langue | Segments audio | Heures | Mots enregistrés | Entrées lexique | Paires → fr | Paires → en | Lignes texte |",
-             "|---|---|---|---|---|---|---|---|"]
+             "| Langue | Segments audio | Heures | Mots enregistrés | Entrées lexique | Paires → fr | Paires → en | Contes ↔ fr | Lignes texte |",
+             "|---|---|---|---|---|---|---|---|---|"]
     for lang, s in summary["languages"].items():
         tp = s["translation_pairs"]
         lines.append(f"| {s['name']} (`{lang}`) | {s['speech_segments']} | {s['speech_hours']} | {s['word_recordings']} | "
-                     f"{s['lexicon_senses']} | {tp.get('fr', 0)} | {tp.get('en', 0)} | {s['text_lines']} |")
+                     f"{s['lexicon_senses']} | {tp.get('fr', 0)} | {tp.get('en', 0)} | {s['parallel_stories_fr']} | {s['text_lines']} |")
     lines += ["", "- `speech/<lang>/segments.csv` : `audio` (relatif au dossier de la langue), `start`/`end` en secondes, `text` = transcription.",
               "- `speech/<lang>/words.csv` : enregistrement de prononciation d'un mot du dictionnaire.",
               "- `translation/<lang>-<fr|en>.csv` : paires `source` (langue locale) → `target`.",
               "- `lexicon/<lang>.csv` : sens de dictionnaire (gloses fr/en/de, phonétique, dialectes, catégorie).",
+              "- `parallel_stories/<lang>-fr.jsonl` : conte entier en langue locale avec sa version française "
+              "(paragraphes de chaque version, audio de la version locale). Les versions françaises sont des "
+              "traductions libres : l'alignement est au niveau du conte, pas de la phrase.",
               "- `text/<lang>.txt` : phrases uniques, une par ligne.", ""]
     (out / "README.md").write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))

@@ -1033,6 +1033,92 @@ def collect_app_units(apps: Path, idx: AssetIndex) -> list[Unit]:
                 app_url=meta.get("app_url", ""), source_file=rel, evidence="parser_error", confidence=0.0,
                 notes=f"{type(exc).__name__}: {exc}",
             ).finalize())
+    units.extend(collect_parallel_pages(apps, by_local, idx))
+    return units
+
+
+def page_paragraphs(html: str) -> tuple[list[str], str]:
+    """Top-level text paragraphs of a Reading App Builder page, plus its audio src (if any)."""
+    soup = BeautifulSoup(html, "html.parser")
+    content = soup.find(id="content")
+    if content is None:
+        return [], ""
+    paras = []
+    for div in content.find_all("div", recursive=False):
+        if "b" in (div.get("class") or []):
+            continue
+        text = norm_space(div.get_text(""))
+        if text:
+            paras.append(text)
+    srcs = [str(x.get("src")) for x in soup.select("audio source, audio[src]") if x.get("src")]
+    src = next((x for x in srcs if x.lower().split("?")[0].endswith(".mp3")), srcs[0] if srcs else "")
+    return paras, src
+
+
+def paragraphs_align(local: list[str], french: list[str]) -> bool:
+    """Same paragraph count is not enough: the French version often splits/merges differently.
+    Require every substantial paragraph to keep the story's overall French/local length ratio."""
+    ratio = sum(map(len, french)) / max(1, sum(map(len, local)))
+    for a, b in zip(local, french):
+        if max(len(a), len(b)) < 25:
+            continue  # titles and one-liners carry no length signal
+        r = (len(b) / max(1, len(a))) / ratio
+        if not 0.6 <= r <= 1.67:
+            return False
+    return True
+
+
+def collect_parallel_pages(apps: Path, by_local: dict[str, dict[str, str]], idx: AssetIndex) -> list[Unit]:
+    """Local-language page followed by its French version (e.g. "Contes vol. 5 avec français").
+
+    Pages are consecutive in app order and open with the same tale number ("1 Yõens yelle" /
+    "1 Problème des Souris"). Emits one whole-story unit per tale (evidence parallel_story, with
+    the local page's audio) and, when both versions have the same number of paragraphs,
+    paragraph-level pairs (evidence parallel_paragraph).
+    """
+    pages: dict[str, list[tuple[str, dict[str, str]]]] = defaultdict(list)
+    for rel, meta in by_local.items():
+        if rel.lower().endswith((".html", ".htm")) and Path(rel).name != "index.html" and Path(rel).parent.name == meta.get("app_id"):
+            pages[meta.get("app_id", "")].append((rel, meta))
+    units: list[Unit] = []
+    for app_pages in pages.values():
+        app_pages.sort(key=lambda x: Path(x[0]).name)
+        info = []
+        for rel, meta in app_pages:
+            try:
+                paras, src = page_paragraphs((apps / rel).read_text(encoding="utf-8", errors="replace"))
+            except OSError:
+                continue
+            french = sum(is_french(t) for t in paras) / len(paras) > 0.5 if paras else False
+            num = re.match(r"^(\d+)\b", paras[0]) if paras else None
+            info.append((rel, meta, paras, src, french, num.group(1) if num else None))
+        # Apps that strictly alternate local page / French page pair by position even when the
+        # local page opens with a song instead of the tale number (dyu/ora/c04: "landa donkili").
+        flags = [x[4] for x in info]
+        alternating = len(flags) >= 2 and not flags[0] and all(a != b for a, b in zip(flags, flags[1:]))
+        for (rel_a, meta, loc, src, fr_a, num_a), (rel_b, _, fra, _, fr_b, num_b) in zip(info, info[1:]):
+            if fr_a or not fr_b:
+                continue
+            if not (alternating or (num_a is not None and num_a == num_b)):
+                continue
+            num_a = num_a or num_b or str(len(units) + 1)
+            lang = app_language(meta, src)
+            if lang in {"fr", "en", ""}:
+                continue
+            strip_num = lambda t: re.sub(r"^\d+\s*[.)]?\s*", "", t)
+            loc, fra = [strip_num(loc[0])] + loc[1:], [strip_num(fra[0])] + fra[1:]
+            common = dict(language=lang, variant=meta.get("variant", ""), collection=meta.get("collection", ""),
+                          source_page=meta.get("source_page", ""), app_url=meta.get("app_url", ""),
+                          source_file=f"{rel_a}|{rel_b}", notes=loc[0])
+            units.append(Unit(record_order=num_a, text=" ".join(loc), translation_fr=" ".join(fra),
+                              translations_json=json.dumps({"local_paragraphs": loc, "fr_paragraphs": fra},
+                                                           ensure_ascii=False),
+                              audio=idx.resolve(src, rel_a) if src else "", evidence="parallel_story",
+                              confidence=0.9, **common).finalize())
+            if len(loc) == len(fra) and paragraphs_align(loc, fra):
+                for i, (a, b) in enumerate(zip(loc, fra), 1):
+                    units.append(Unit(record_order=f"{num_a}.{i}", text=a, translation_fr=b,
+                                      evidence="parallel_paragraph", confidence=0.8, **common).finalize())
     return units
 
 

@@ -23,7 +23,7 @@ import re
 import time
 from collections import Counter, deque
 from pathlib import Path
-from urllib.parse import urljoin, urlparse, urldefrag, unquote
+from urllib.parse import parse_qs, urljoin, urlparse, urldefrag, unquote
 
 import requests
 from bs4 import BeautifulSoup
@@ -253,6 +253,11 @@ def crawl(out_dir: Path, max_pages: int, delay: float, timeout: float) -> None:
                     continue
                 anchor = text_clean(tag.get_text(" ", strip=True) or attrs.get("alt") or attrs.get("title") or "")
                 candidates.append((tag.name, absolute, anchor, attrs))
+                # Documents shown in the site's PDF viewer (iframe/link to ".../viewer.html?file=/sites/...pdf")
+                # are only reachable through the viewer's "file" parameter.
+                viewer_file = parse_qs(urlparse(absolute).query).get("file", [""])[0]
+                if viewer_file and extension(viewer_file):
+                    candidates.append(("a", normalize_url(viewer_file, absolute), anchor, {}))
 
             for tag_name, link, anchor, attrs in candidates:
                 ext = extension(link)

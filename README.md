@@ -71,6 +71,8 @@ python src/crawler.py --out inventory --max-pages 10000
 python src/downloader.py --inventory inventory --out data/raw
 ```
 
+Par défaut, les vidéos, les images et les applications Android (`.apk`) ne sont pas téléchargées : elles ne servent pas au corpus texte/audio et pèsent plusieurs Go. Elles restent listées dans `metadata/external_and_reference_urls.csv` (statut `skipped_type`). `--skip-type <type>` choisit les types ignorés ; `--all-types` télécharge tout.
+
 ### 3. Applications interactives IPS
 
 ```bash

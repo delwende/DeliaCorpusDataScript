@@ -47,6 +47,8 @@ DIRECT_TYPES = {
     "data", "app", "archive", "ebook", "external_interactive",
 }
 NON_DIRECT_TYPES = {"external_video", "app_store", "video_or_embed", "link"}
+# Not needed for the text/audio language corpus: several GB of video and images, plus Android APKs.
+DEFAULT_SKIP_TYPES = {"video", "image", "app"}
 
 MANIFEST_FIELDS = [
     "item_kind", "resource_id", "source_url", "source_page", "page_title",
@@ -467,6 +469,9 @@ def main() -> None:
     ap.add_argument("--out", default="MooreBurkinaCorpus", help="Corpus output directory")
     ap.add_argument("--language", action="append", default=[], help="Language filter; repeat as needed, e.g. --language moore --language dioula")
     ap.add_argument("--type", action="append", default=[], dest="types", help="Resource type filter; repeat as needed, e.g. --type audio --type pdf")
+    ap.add_argument("--skip-type", action="append", default=None, dest="skip_types",
+                    help=f"Resource type not to download; repeatable (default: {', '.join(sorted(DEFAULT_SKIP_TYPES))})")
+    ap.add_argument("--all-types", action="store_true", help="Download every resource type (disables the default skips)")
     ap.add_argument("--limit", type=int, default=0, help="Max assets to process after filtering; 0 = unlimited")
     ap.add_argument("--page-limit", type=int, default=0, help="Max HTML pages to process; 0 = unlimited")
     ap.add_argument("--skip-pages", action="store_true", help="Do not download/save HTML pages and extracted text")
@@ -494,6 +499,9 @@ def main() -> None:
     pages = read_csv(pages_path)
     languages = {x.strip().lower() for x in args.language if x.strip()}
     types = {x.strip().lower() for x in args.types if x.strip()}
+    skip_types = set() if args.all_types else (
+        DEFAULT_SKIP_TYPES if args.skip_types is None else {x.strip().lower() for x in args.skip_types if x.strip()})
+    skip_types -= types  # an explicit --type always wins
 
     selected_assets: list[dict[str, str]] = []
     references: list[dict[str, str]] = []
@@ -510,6 +518,11 @@ def main() -> None:
         if rtype in NON_DIRECT_TYPES:
             ref = dict(row)
             ref["download_status"] = "reference_only"
+            references.append(ref)
+            continue
+        if rtype in skip_types:
+            ref = dict(row)
+            ref["download_status"] = "skipped_type"
             references.append(ref)
             continue
         selected_assets.append(row)

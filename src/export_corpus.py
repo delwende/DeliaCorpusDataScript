@@ -28,12 +28,16 @@ from pathlib import Path
 
 from pairing_engine import is_french
 
-NON_CORPUS_LANGS = {"fr", "en", "ar", "de", ""}
+# French/English are kept as corpus languages too (speech and text); pairs always go
+# local language → fr/en, never fr → fr.
+NON_CORPUS_LANGS = {""}
+TARGET_LANGS = {"fr", "en", "ar", "de"}
 # Timings outside this range are broken (zero/negative length, or one phrase spanning minutes).
 MIN_SEGMENT_S, MAX_SEGMENT_S = 0.3, 30.0
 LANG_NAMES = {
     "mos": "Mooré", "dyu": "Dioula", "ful": "Fulfulde", "gux": "Gulmancema", "bam": "Bambara",
     "lob": "Lobiri", "xsm": "Kassem", "dag": "Dagbani", "kus": "Kusaal", "maw": "Mampruli",
+    "fr": "Français", "en": "English",
 }
 
 
@@ -93,6 +97,32 @@ class AudioCopier:
         rel = f"audio/{name}"
         self.done[key] = rel
         return rel
+
+
+def riddle_records(rows: list[dict]) -> list[dict]:
+    """Devinettes as structured records from consecutive timed segments of one page:
+    "1 M sũm ne sare." (riddle) / "- M zɩ-a." (traditional reply) / "- Yar-bi …" (answer)."""
+    out: list[dict] = []
+    cur: dict | None = None
+    for r in rows:
+        m = re.match(r"^(\d+)\s*[.)]?\s+(.*)$", r["text"])
+        if m:
+            cur = {"number": m.group(1), "riddle": m.group(2), "reply": "", "answer": "", "audio": r["audio"],
+                   "riddle_start": r["start"], "riddle_end": r["end"], "answer_start": "", "answer_end": "",
+                   "source_file": r["source_file"]}
+            out.append(cur)
+            continue
+        if cur is None or r["source_file"] != cur["source_file"] or r["audio"] != cur["audio"]:
+            cur = None
+            continue
+        line = re.sub(r"^[-–—]\s*", "", r["text"]).strip()
+        if not cur["reply"] and r["text"].lstrip().startswith(("-", "–", "—")) and not cur["answer"]:
+            cur["reply"] = line
+        else:
+            cur["answer"] = f"{cur['answer']} {line}".strip()
+            cur["answer_start"] = cur["answer_start"] or r["start"]
+            cur["answer_end"] = r["end"]
+    return [r for r in out if r["answer"]]
 
 
 def main() -> None:
@@ -165,7 +195,7 @@ def main() -> None:
         else:
             text[lang][src] = None
         # A pair needs a local-language source; website navigation tables are not translations.
-        pairable = origin != "html_table_row" and not is_french(src)
+        pairable = origin != "html_table_row" and lang not in TARGET_LANGS and not is_french(src)
         for col, tgt in (("translation_fr", "fr"), ("translation_en", "en")):
             target = u[col].strip()
             if target and pairable:
@@ -187,6 +217,16 @@ def main() -> None:
                   ["headword", "part_of_speech", "fr", "en", "de", "phonetic", "dialects", "category", "app_url"])
     for (lang, tgt), rows in parallel.items():
         write_csv(out / "translation" / f"{lang}-{tgt}.csv", rows, ["source", "target", "origin", "source_file"])
+    riddles: dict[str, list[dict]] = {}
+    for lang, rows in segments.items():
+        recs = riddle_records([r for r in rows if r["collection"] == "riddle" or "/devin" in r["app_url"]])
+        if recs:
+            riddles[lang] = recs
+            p = out / "riddles" / f"{lang}.jsonl"
+            p.parent.mkdir(parents=True, exist_ok=True)
+            with p.open("w", encoding="utf-8") as f:
+                for r in recs:
+                    f.write(json.dumps(r, ensure_ascii=False) + "\n")
     for lang, rows in stories.items():
         p = out / "parallel_stories" / f"{lang}-fr.jsonl"
         p.parent.mkdir(parents=True, exist_ok=True)
@@ -213,18 +253,19 @@ def main() -> None:
             "translation_pairs": {t: len(parallel[(lang, t)]) for t in ("fr", "en") if parallel[(lang, t)]},
             "text_lines": len(text[lang]),
             "parallel_stories_fr": len(stories[lang]),
+            "riddles": len(riddles.get(lang, [])),
         }
     out.mkdir(parents=True, exist_ok=True)
     (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    lines = ["# Corpus — langues du Burkina Faso", "",
+    lines = ["# Corpus — langues du Burkina Faso (et contenus en français/anglais)", "",
              "Généré par `src/export_corpus.py` à partir de `data/aligned/master_units.csv`.", "",
-             "| Langue | Segments audio | Heures | Mots enregistrés | Entrées lexique | Paires → fr | Paires → en | Contes ↔ fr | Lignes texte |",
-             "|---|---|---|---|---|---|---|---|---|"]
+             "| Langue | Segments audio | Heures | Mots enregistrés | Entrées lexique | Paires → fr | Paires → en | Contes ↔ fr | Devinettes | Lignes texte |",
+             "|---|---|---|---|---|---|---|---|---|---|"]
     for lang, s in summary["languages"].items():
         tp = s["translation_pairs"]
         lines.append(f"| {s['name']} (`{lang}`) | {s['speech_segments']} | {s['speech_hours']} | {s['word_recordings']} | "
-                     f"{s['lexicon_senses']} | {tp.get('fr', 0)} | {tp.get('en', 0)} | {s['parallel_stories_fr']} | {s['text_lines']} |")
+                     f"{s['lexicon_senses']} | {tp.get('fr', 0)} | {tp.get('en', 0)} | {s['parallel_stories_fr']} | {s['riddles']} | {s['text_lines']} |")
     lines += ["", "- `speech/<lang>/segments.csv` : `audio` (relatif au dossier de la langue), `start`/`end` en secondes, `text` = transcription.",
               "- `speech/<lang>/words.csv` : enregistrement de prononciation d'un mot du dictionnaire.",
               "- `translation/<lang>-<fr|en>.csv` : paires `source` (langue locale) → `target`.",
@@ -232,7 +273,11 @@ def main() -> None:
               "- `parallel_stories/<lang>-fr.jsonl` : conte entier en langue locale avec sa version française "
               "(paragraphes de chaque version, audio de la version locale). Les versions françaises sont des "
               "traductions libres : l'alignement est au niveau du conte, pas de la phrase.",
-              "- `text/<lang>.txt` : phrases uniques, une par ligne.", ""]
+              "- `riddles/<lang>.jsonl` : devinettes structurées (devinette, réplique rituelle, réponse) avec l'audio "
+              "et les temps de début/fin de la devinette et de la réponse.",
+              "- `text/<lang>.txt` : phrases uniques, une par ligne.",
+              "- `fr` / `en` : contenus en français ou en anglais (applications françaises, versions françaises "
+              "des contes, lignes françaises lues dans les applications de proverbes).", ""]
     (out / "README.md").write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 

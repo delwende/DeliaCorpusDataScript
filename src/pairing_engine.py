@@ -796,7 +796,7 @@ def parse_untimed_app_page(html: str, meta: dict[str, str], rel_source: str) -> 
     if content is None:
         return []
     lang = app_language(meta)
-    if lang in {"fr", "en", ""}:
+    if not lang:
         return []
     records: list[list[Tag]] = [[]]
     for div in content.find_all("div", recursive=False):
@@ -807,8 +807,14 @@ def parse_untimed_app_page(html: str, meta: dict[str, str], rel_source: str) -> 
         elif div.get_text(strip=True):
             records[-1].append(div)
     lines = [norm_space(d.get_text("")) for r in records for d in r]
-    if lines and sum(is_french(t) for t in lines) / len(lines) > 0.5:
-        return []  # French version of a local text (e.g. "contes avec français"), not a translation pair
+    if lang in {"fr", "en"} or (lines and sum(is_french(t) for t in lines) / len(lines) > 0.5):
+        # French/English pages (French apps, French versions of tales): monolingual text.
+        page_lang = lang if lang in {"fr", "en"} else "fr"
+        return [Unit(language=page_lang, variant=meta.get("variant", ""), collection=meta.get("collection", ""),
+                     record_order=str(i), text=line, source_page=meta.get("source_page", ""),
+                     app_url=meta.get("app_url", ""), source_file=rel_source, evidence="app_page_text",
+                     confidence=0.85).finalize()
+                for i, line in enumerate(lines, 1) if line]
     title = ""
     units: list[Unit] = []
     for order, rec in enumerate((r for r in records if r), 1):

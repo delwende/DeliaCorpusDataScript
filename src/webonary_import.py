@@ -9,6 +9,14 @@ downloads each entry's pronunciation recording (public files on Webonary's cloud
 Output per site: data/webonary/<site>/entries.jsonl (+ audio/ when --audio is given).
 
   python src/webonary_import.py --root data/webonary --audio
+
+--fetch saves the browse pages itself, for use from a connection Webonary does not block (e.g. a
+home connection; it blocks data-centre addresses). It is deliberately polite: it obeys robots.txt,
+waits between pages, identifies itself, and stops at the first block or Cloudflare challenge
+instead of trying to get around it. Start from one browse page; letter and page links are
+discovered from the pages themselves. Pages already saved are skipped, so a run can be resumed.
+
+  python src/webonary_import.py --fetch "https://www.webonary.org/moore/en/browse/browse-vernacular-english/?key=mos&letter=a" --audio
 """
 from __future__ import annotations
 
@@ -17,7 +25,9 @@ import json
 import re
 import time
 from pathlib import Path
-from urllib.parse import unquote, urlparse
+from collections import deque
+from urllib.parse import parse_qsl, unquote, urlencode, urljoin, urlparse
+from urllib.robotparser import RobotFileParser
 
 import requests
 from bs4 import BeautifulSoup, Tag
@@ -139,13 +149,91 @@ def import_site(site_dir: Path, audio: bool, delay: float) -> dict:
     return stats
 
 
+USER_AGENT = "DeliaCorpusDataScript/1.0 (language corpus for Burkina Faso languages; github.com/delwende/DeliaCorpusDataScript)"
+BLOCK_MARKERS = ("cf-chl", "Just a moment", "Attention Required", "cf-browser-verification")
+
+
+class Blocked(RuntimeError):
+    pass
+
+
+def canonical(url: str) -> str:
+    p = urlparse(url)
+    return p._replace(query=urlencode(sorted(parse_qsl(p.query))), fragment="").geturl()
+
+
+def page_filename(url: str) -> str:
+    params = [(k, v) for k, v in sorted(parse_qsl(urlparse(url).query)) if k != "key"]
+    name = "_".join(f"{k}-{v}" for k, v in params) or "index"
+    return re.sub(r"[^\w.-]+", "_", name) + ".html"
+
+
+def browse_links(html: str, page_url: str, start: str) -> set[str]:
+    """Letter and pagination links that stay on the same browse view of the same dictionary."""
+    base = urlparse(start)
+    out = set()
+    for a in BeautifulSoup(html, "html.parser").find_all("a", href=True):
+        url = urljoin(page_url, a["href"])
+        p = urlparse(url)
+        if p.netloc == base.netloc and p.path == base.path and "letter" in dict(parse_qsl(p.query)):
+            out.add(canonical(url))
+    return out
+
+
+def fetch_site(start: str, out_dir: Path, delay: float, max_pages: int) -> dict:
+    """Save a dictionary's browse pages; stops (raises Blocked) at the first refusal."""
+    session = requests.Session()
+    session.headers["User-Agent"] = USER_AGENT
+    base = urlparse(start)
+    robots = RobotFileParser()
+    resp = session.get(f"{base.scheme}://{base.netloc}/robots.txt", timeout=60)
+    if resp.status_code != 200 or any(m in resp.text for m in BLOCK_MARKERS):
+        raise Blocked(f"robots.txt not readable (HTTP {resp.status_code}): access is blocked from this connection")
+    robots.parse(resp.text.splitlines())
+    if not robots.can_fetch(USER_AGENT, start):
+        raise Blocked("robots.txt disallows these pages for automated clients")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    queue, seen, fetched, reused = deque([canonical(start)]), {canonical(start)}, 0, 0
+    while queue and fetched + reused < max_pages:
+        url = queue.popleft()
+        dest = out_dir / page_filename(url)
+        if dest.exists():
+            html = dest.read_text(encoding="utf-8", errors="replace")
+            reused += 1
+        else:
+            if not robots.can_fetch(USER_AGENT, url):
+                continue
+            time.sleep(delay)
+            resp = session.get(url, timeout=60)
+            if resp.status_code != 200 or any(m in resp.text for m in BLOCK_MARKERS):
+                raise Blocked(f"stopped at {url}: HTTP {resp.status_code}"
+                              + (" (Cloudflare challenge)" if any(m in resp.text for m in BLOCK_MARKERS) else ""))
+            html = resp.text
+            dest.write_text(html, encoding="utf-8")
+            fetched += 1
+            print(f"saved {dest.name} ({len(parse_page(html))} entries)", flush=True)
+        for link in sorted(browse_links(html, url, start) - seen):
+            seen.add(link)
+            queue.append(link)
+    return {"pages_fetched": fetched, "pages_already_saved": reused, "pages_left": len(queue)}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n", 1)[0])
     ap.add_argument("--root", default="data/webonary", help="Folder with one sub-folder of saved pages per site")
     ap.add_argument("--audio", action="store_true", help="Download each entry's pronunciation recording")
     ap.add_argument("--delay", type=float, default=0.3, help="Seconds between audio downloads")
+    ap.add_argument("--fetch", metavar="BROWSE_URL", help="Save a dictionary's browse pages, starting from this page")
+    ap.add_argument("--page-delay", type=float, default=3.0, help="Seconds between page requests with --fetch")
+    ap.add_argument("--max-pages", type=int, default=3000, help="Safety limit on pages per --fetch run")
     args = ap.parse_args()
     root = Path(args.root)
+    if args.fetch:
+        site = urlparse(args.fetch).path.strip("/").split("/")[0]
+        try:
+            print(site, json.dumps(fetch_site(args.fetch, root / site, args.page_delay, args.max_pages)))
+        except Blocked as exc:
+            print(f"{site}: {exc}. Saved pages are kept; save the rest by hand or ask the owners for an export.")
     for site_dir in sorted(p for p in root.iterdir() if p.is_dir()) if root.exists() else []:
         print(site_dir.name, json.dumps(import_site(site_dir, args.audio, args.delay)))
 

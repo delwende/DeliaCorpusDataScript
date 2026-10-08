@@ -4,6 +4,8 @@ Pipeline de collecte et de structuration de données linguistiques à partir de 
 
 > Le pipeline est multi-langue et le nom du dépôt peut encore évoluer sans impact sur l'architecture.
 
+> **Usage non commercial uniquement.** No commercial use.
+
 ## Objectif
 
 Le pipeline ne se limite pas au téléchargement. Il vise à produire des unités exploitables pour l'IA :

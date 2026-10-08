@@ -1,5 +1,7 @@
 # DeliaCorpusDataScript
 
+> **Usage non commercial uniquement.** No commercial use.
+
 Pipeline de collecte et de structuration de données linguistiques à partir de MooreBurkina.
 
 > Le pipeline est multi-langue et le nom du dépôt peut encore évoluer sans impact sur l'architecture.

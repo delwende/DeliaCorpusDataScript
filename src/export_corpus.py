@@ -149,7 +149,7 @@ def copyright_notice(folder: Path) -> str:
 
 
 def write_sources(out: Path, credits: dict, source_langs: dict, apps: Path, inventory: Path) -> None:
-    """corpus/SOURCES.csv + LICENSES.md: every source, its rights status and what it contributed."""
+    """corpus/SOURCES.csv: every source, its rights status and what it contributed."""
     manifest = read_csv(apps / "app_manifest.csv") if (apps / "app_manifest.csv").exists() else []
     app_ids, hosts = {}, defaultdict(set)
     for r in manifest:
@@ -186,38 +186,6 @@ def write_sources(out: Path, credits: dict, source_langs: dict, apps: Path, inve
                          "in_corpus": "no (excluded)", **{m: "0" for m in METRICS}})
     write_csv(out / "SOURCES.csv", rows, ["source", "kind", "languages", "hosted_on", "in_corpus", "licence_status",
                                           "notice"] + METRICS)
-    used = [r for r in rows if r["in_corpus"] == "yes"]
-    noticed = [r for r in used if r["notice"]]
-    scripture_text = [r for r in used if r["kind"] == "scripture app"]
-    lines = [
-        "# Sources et droits", "",
-        "Généré par `src/export_corpus.py`. Détail par source : `SOURCES.csv` (ce que chaque source apporte au corpus).", "",
-        "## Constat", "",
-        f"- {len(used)} sources contribuent au corpus : les pages et PDF de mooreburkina.com et les applications "
-        "linguistiques qu'il intègre (media.ipsapps.org, audio sur storage.googleapis.com).",
-        ("- Aucune de ces sources n'affiche de mention de licence ou de droits d'auteur."
-         if not noticed else f"- {len(noticed)} de ces sources affichent une mention de droits (voir `SOURCES.csv`) ; "
-                             "les autres n'en affichent aucune."),
-        "  Sans licence explicite, les droits sont réservés par défaut : statut « unknown » dans `SOURCES.csv`.",
-        "- Les seules mentions trouvées sur le site concernent des vidéos bibliques intégrées (non collectées), p. ex. :",
-        "  « Bible Text in Gulmancema © 2003 Alliance Biblique du Burkina Faso, Audio ℗ 2007 Hosanna » et",
-        "  « © 2005 Wycliffe Bible Translators… Audio ℗ 2016 Hosanna ».",
-        "- Bible : l'audio (Faith Comes By Hearing, `fcbhabdm.s3.amazonaws.com`) n'est pas collecté."
-        + (" Le texte des applications bibliques (" + ", ".join(r["source"].split("org/")[-1] for r in scripture_text)
-           + f", {sum(int(r['text_lines']) for r in scripture_text)} lignes) est conservé dans `text/` par décision du projet ; "
-             "ses droits appartiennent aux sociétés bibliques (à vérifier avant tout usage commercial)." if scripture_text else ""), "",
-        "## Usage", "",
-        "Pour un usage commercial, obtenir l'accord des propriétaires des sources marquées « unknown » "
-        "(contact : https://mooreburkina.com). `SOURCES.csv` indique ce que chaque source apporte, ce qui "
-        "permet de retirer une source précise du corpus si un propriétaire le demande.", "",
-        "## Principales sources (par contribution)", "",
-        "| Source | Langues | Audio (h) | Mots enregistrés | Paires fr | Lexique | Lignes texte |", "|---|---|---|---|---|---|---|"]
-    for r in sorted(used, key=lambda r: -(float(r["speech_hours"]) + float(r["long_form_hours"]) + int(r["pairs_fr"]) / 1000
-                                         + int(r["lexicon_senses"]) / 1000 + int(r["text_lines"]) / 2000))[:25]:
-        lines.append(f"| {r['source'].replace('https://', '')} | {r['languages']} | "
-                     f"{float(r['speech_hours']) + float(r['long_form_hours']):.2f} | {r['word_recordings']} | {r['pairs_fr']} | "
-                     f"{r['lexicon_senses']} | {r['text_lines']} |")
-    (out / "LICENSES.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def riddle_records(rows: list[dict]) -> list[dict]:
